@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		
+		<link rel="stylesheet" type="text/css" href="a_propos_about_halfcreative_games.css">
+		<meta charset="utf-8"></meta>
+		<title>Half-Creative Games</title>
+
+			<style type="text/css">
+				a:link
+				{
+					text-decoration: none;
+				}
+			</style>
+
+	</head>
+	
+		<body>
+
+			<div id="en_tete">
+
+				<div class="website_name"><a href="../pages/accueil_halfcreative_games.html">Half-Creative Games</a></div>
+
+					<div class="language"><a href="../pages/a_propos_halfcreative_games.html" title="Français">Fr</a></div>
+
+					<div class="language"><a href="../pages/about_halfcreative_games.html" title="English">Eng</a></div>
+
+			</div>
+
+				<div id="under_en_tete">
+					
+					<div class="other_page"><a href="../pages/a_propos_halfcreative_games.html">A propos</a></div>
+
+					<div class="other_page"><a href="../pages/jeux_halfcreative_games.html">Jeux</a></div>
+
+					<div class="other_page"><a href="../pages/forum_halfcreative_games_fr.html">Forum</a></div>
+
+					<div class="other_page"><a href="../pages/contact_halfcreative_games_fr.html">Contact</a></div>
+
+				</div>
+		
+					<div id="activity_block">
+						
+						<div class="titre">A propos</div>
+
+						<div class="texte"><span class="italic"><em>Half-Creative Games</em></span> développe aucun jeux
+						 PC basés sur la vie de FANO. Ici, l'imagination et l'ambition sont présents et Half-Creative Games est prêt à tout pour faire plaisir aux joueurs ! Pour le moment, 1 seul développeur est actif et aucun jeu n'est disponible sur le site. Un projet de jeu du nom de "<span class="italic"><em>War Aftermath</em></span>" est en cours de réalisation et apparaîtra d'ici un an ou deux... </div>
+
+					</div>
+
+		</body>
+
+</html>

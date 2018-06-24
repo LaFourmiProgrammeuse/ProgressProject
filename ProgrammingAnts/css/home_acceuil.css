@@ -29,7 +29,6 @@ body {
 	}
 
 		.website_name {
-			color: #df4f48;
 			font-size: 45px;
 			font-family: Arial Black;
 			margin-left: 50px;
@@ -37,13 +36,24 @@ body {
 			text-shadow: 3px 2px 5px #d2d2d2;
 		}
 
+			h1 a {
+				color: #df4f48
+			}
+
+				.programming_ants_logo {
+					width: 60px;
+					height: 60px;
+					margin-top: 10px;
+					margin-left: 10px;
+				}
+
 	/* SECTION */
 
 	section {
 		display: flex;
 		background-color: white;
 		margin-top: 50px;
-		border: 3px solid;
+		border: 1px solid;
 		border-color: #df4f48;
 		border-radius: 15px;
 		margin-left: 230px;
@@ -61,9 +71,9 @@ body {
 			margin-top: 50px;
 			height: 500px;
 			width: 150px;
-			border-top: 3px solid;
-			border-right: 3px solid;
-			border-bottom: 3px solid;
+			border-top: 1px solid;
+			border-right: 1px solid;
+			border-bottom: 1px solid;
 			border-color: #df4f48;
 			border-top-right-radius: 15px;
 			border-bottom-right-radius: 15px;
@@ -86,7 +96,6 @@ body {
 					border-bottom-right-radius: 5px;
 					border: 1px groove;	
 					border-color: black;
-					font-style: bold;
 				}
 
 	/* NAV */
@@ -95,8 +104,8 @@ body {
 			display: flex;
 			justify-content: space-between;
 			background-color: #24252f;
-			border-top-left-radius: 11px;
-			border-top-right-radius: 11px;
+			border-top-left-radius: 14px;
+			border-top-right-radius: 14px;
 			width: 1134px;
 			max-height: 45px;
 		}

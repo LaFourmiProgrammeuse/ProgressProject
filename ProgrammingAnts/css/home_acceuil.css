@@ -1,4 +1,4 @@
-/* Tu definis la couleur rouge pour les liens
+﻿/* Tu definis la couleur rouge pour les liens
 plus loins pourquoi la definir en blanc là ?*/
 a {
 	color: white;
@@ -33,7 +33,7 @@ body {
 		.website_name {
 			font-size: 23px;
 			display: flex;
-			font-family: Arial Black;
+			font-family: Arial_Black;
 			margin-left: 50px;
 			line-height: 13px;
 		}
@@ -78,7 +78,7 @@ body {
 							}
 
 							.log_in{
-								#color: #df4f48;
+								color: #df4f48;
 							}
 
 	/* SECTION */

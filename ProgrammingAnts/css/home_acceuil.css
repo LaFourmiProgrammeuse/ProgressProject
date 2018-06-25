@@ -1,3 +1,5 @@
+/* Tu definis la couleur rouge pour les liens
+plus loins pourquoi la definir en blanc là ?*/
 a {
 	color: white;
 }
@@ -64,11 +66,19 @@ body {
 							color: #df4f48;
 							border: 2px solid;
 							border-color: #df4f48;
-							border-radius: 50px;													
+							border-radius: 50px;
 						}
 
 							.identification:nth-child(1) {
 								margin-right: 25px;
+							}
+
+							.sign_in{
+								color: #df4f48;
+							}
+
+							.log_in{
+								#color: #df4f48;
 							}
 
 	/* SECTION */
@@ -87,7 +97,7 @@ body {
 	}
 
 	/* ASIDE */
-		
+
 		aside {
 			position: absolute;
 			display: flex;
@@ -117,7 +127,7 @@ body {
 					width: 120px;
 					border-top-right-radius: 5px;
 					border-bottom-right-radius: 5px;
-					border: 1px groove;	
+					border: 1px groove;
 					border-color: black;
 				}
 
@@ -182,7 +192,7 @@ body {
 
 			#article {
 
-			}	
+			}
 
 	/* FOOTER */
 

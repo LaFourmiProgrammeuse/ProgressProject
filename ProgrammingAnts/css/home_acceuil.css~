@@ -1,6 +1,4 @@
-﻿/* Tu definis la couleur rouge pour les liens
-plus loins pourquoi la definir en blanc là ?*/
-a {
+﻿a {
 	color: white;
 }
 
@@ -34,14 +32,10 @@ body {
 			font-size: 23px;
 			color: #df4f48;
 			display: flex;
-			font-family: Arial Black;
+			font-family: Arial_Black; 
 			margin-left: 50px;
 			line-height: 13px;
 		}
-
-			h1 a {
-				color: #df4f48
-			}
 
 				.programming_ants_logo {
 					width: 60px;
@@ -127,7 +121,7 @@ body {
 			margin-left: 93px;
 			margin-top: 45px;
 			width: 950px;
-			height: 453px;
+			height: 452px;
 			border: 1px solid;
 			border-color: #bdb7b7;
 		}

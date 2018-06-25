@@ -1,6 +1,26 @@
+<?php
+	try{
+		 //'INSERT INTO users (id, identifiant, mot_de_passe, mail) VALUES (:id, :identifiant, :mdp, :mail)'
+
+		$bdd = new PDO('mysql:host=localhost;dbname=site_project_database;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+		$rep = $bdd->query('SELECT * FROM users');
+
+	}
+	catch(Exception $e){
+		echo $e;
+	}
+	echo '<ul>';
+	$iteration = 0;
+			while($donnees = $rep->fetch()){
+				echo '<li>' . $donnees['identifiant'] . '</li>';
+			}
+	echo '</ul>';
+ ?>
+
 <!DOCTYPE html>
 <html>
-	
+
 	<head>
 
 		<link rel="stylesheet" type="text/css" href="../css/home_acceuil.css">
@@ -22,7 +42,7 @@
 				<img src="../images/programming_ants.png" class="programming_ants_logo" />
 
 					<div id="account">
-						
+
 						<div class="identification"><a href="Login_page.html">Sign In</a></div>
 						<div class="identification"><a href="Register_page.html">Sign Up</a></div>
 
@@ -31,22 +51,22 @@
 
 			<section>
 				<nav>
-				
+
 					<div id="top_menu">
-					
+
 						<div class="shortcut"><h3><a href="projects.html">Projects</a></h3></div>
 							<div class="shortcut"><h3><a href="forum.html">Forum</a></h3></div>
 								<div class="shortcut"><h3><a href="about.html">About</a></h3></div>
 									<div class="shortcut"><h3><a href="contact.html">Contact</a></h3></div>
-				
-					</div>			
+
+					</div>
 				</nav>
 
 				<article>
-					
+
 					<div id="article">
-						
-						
+
+
 
 					</div>
 
@@ -54,8 +74,8 @@
 			</section>
 
 			<footer>
-				
-				
+
+
 
 			</footer>
 

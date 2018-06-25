@@ -92,7 +92,7 @@ body {
 			position: absolute;
 			display: flex;
 			background-color: white;
-			height: 218px;
+			height: 219px;
 			width: 150px;
 			margin-top: 50px;
 			border-top: 1px solid;

@@ -5,7 +5,7 @@ session_start();
 try{
 $bdd = new PDO('mysql:host=localhost;dbname=site_project_database;charset=utf8', 'root', '');
 $req = $bdd->prepare('INSERT INTO Users (id, identifiant, mot_de_passe, mail) VALUES(:id, :identifiant, :mdp, :mail)');
-$req->execute(array('id' => '1', 'identifiant' => 'antoine', 'mdp' => '151172', 'mail' => 'antoinegggg'));
+$req->execute(array('id' => 1, 'identifiant' => 'antoine', 'mdp' => '151172', 'mail' => 'antoinegggg'));
 }
 catch(Exception $e){
 	echo 'Erreur : ' . $e.getMessage();

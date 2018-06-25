@@ -1,8 +1,7 @@
-<<<<<<< HEAD
+﻿
 ﻿/* Tu definis la couleur rouge pour les liens
 plus loins pourquoi la definir en blanc là ?*/
-=======
->>>>>>> f0adb9f0c86cfda0e68a68aba82a36fb27ea58ac
+
 a {
 	color: white;
 }
@@ -76,7 +75,6 @@ body {
 								margin-right: 25px;
 							}
 
-<<<<<<< HEAD
 							.sign_in{
 								color: #df4f48;
 							}
@@ -85,8 +83,7 @@ body {
 								color: #df4f48;
 							}
 
-=======
->>>>>>> f0adb9f0c86cfda0e68a68aba82a36fb27ea58ac
+
 	/* SECTION */
 
 	section {

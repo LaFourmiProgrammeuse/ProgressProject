@@ -1,4 +1,4 @@
-a {
+﻿a {
 	color: white;
 }
 
@@ -30,15 +30,12 @@ body {
 
 		.website_name {
 			font-size: 23px;
+			color: #df4f48;
 			display: flex;
-			font-family: Arial Black;
+			font-family: Arial_Black; 
 			margin-left: 50px;
 			line-height: 13px;
 		}
-
-			h1 a {
-				color: #df4f48
-			}
 
 				.programming_ants_logo {
 					width: 60px;
@@ -64,87 +61,35 @@ body {
 							color: #df4f48;
 							border: 2px solid;
 							border-color: #df4f48;
-							border-radius: 50px;													
+							border-radius: 50px;
 						}
 
 							.identification:nth-child(1) {
 								margin-right: 25px;
 							}
 
+							.sign_in{
+								color: #df4f48;
+							}
+
+							.log_in{
+								color: #df4f48;
+							}
+
 	/* SECTION */
 
 	section {
 		display: flex;
-		background-color: white;
+		background-color: #df4f48;
 		margin-top: 50px;
 		border: 2px solid;
 		border-color: #df4f48;
 		border-radius: 15px;
-		margin-left: 230px;
+		margin-left: 105px;
 		height: 500px;
 		width: 1134px;
 		box-shadow: 10px 10px 5px #d2d2d2;
 	}
-
-	/* ASIDE */
-		
-		aside {
-			position: absolute;
-			display: flex;
-			background-color: white;
-			height: 80px;
-			width: 150px;
-			margin-top: 50px;
-			border-top: 1px solid;
-			border-right: 1px solid;
-			border-bottom: 1px solid;
-			border-color: #df4f48;
-			border-top-right-radius: 5px;
-			border-bottom-right-radius: 5px;
-		}
-
-			#side_menu {
-
-			}
-
-				.bookmark {
-					color: black;
-					font-family: Arial;
-					font-size: 16px;
-					background-color: #e3e5e2;
-					margin-top: 110px;
-					padding: 5px;
-					width: 120px;
-					border-top-right-radius: 5px;
-					border-bottom-right-radius: 5px;
-					border: 1px groove;	
-					border-color: black;
-				}
-
-					.bookmark:nth-child(1) {
-						margin-top: 6px;
-					}
-
-					.bookmark:nth-child(2) {
-						margin-top: 6px;
-						margin-left: 5px;
-					}
-
-					.bookmark:nth-child(3) {
-						margin-top: 5px;
-					}
-
-					.bookmark:nth-child(4) {
-						margin-top: 5px;
-					}
-
-					.bookmark:nth-child(5) {
-						margin-top: 5px;
-					}
-
-					.bookmark:nth-child(6) {
-						margin-top: 5px;
-					}
 
 	/* NAV */
 
@@ -172,17 +117,18 @@ body {
 		article {
 			display: flex;
 			position: absolute;
-			background-color: #e3e5e2;
+			background-color: white;
 			margin-left: 93px;
-			margin-top: 100px;
+			margin-top: 45px;
 			width: 950px;
-			height: 340px;
-			box-shadow: 1px 1px 20px #d2d2d2, inset 8px 8px 35px #d2d2d2, inset -8px -8px 35px #d2d2d2;
+			height: 452px;
+			border: 1px solid;
+			border-color: #bdb7b7;
 		}
 
 			#article {
 
-			}	
+			}
 
 	/* FOOTER */
 
@@ -192,11 +138,11 @@ body {
 			border-top: 1px solid;
 			border-right: 1px solid;
 			border-left: 1px solid;
-			border-color: #df4f48;
+			border-color: #bdb7b7;
 			border-top-right-radius: 5px;
 			border-top-left-radius: 5px;
 			margin-top: 50px;
-			margin-left: 200px;
-			margin-right: 25px;
-			height: 125px;
+			margin-left: 80px;
+			margin-right: 80px;
+			height: 130px;
 		}

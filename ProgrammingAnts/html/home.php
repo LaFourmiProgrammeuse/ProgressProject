@@ -1,21 +1,28 @@
 <?php
-	try{
+
+	/*try{
 		 //'INSERT INTO users (id, identifiant, mot_de_passe, mail) VALUES (:id, :identifiant, :mdp, :mail)'
 
 		$bdd = new PDO('mysql:host=localhost;dbname=site_project_database;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 		$rep = $bdd->query('SELECT * FROM users');
+		$qprepare = $bdd->prepare('INSERT INTO users (id, identifiant, mot_de_passe, mail) VALUES (:id, :identifiant, :mdp, :mail)');
+		$qprepare->execute(array('id' => '3', 'identifiant' => $_POST[nickname], 'mdp' => $_POST[pass], 'mail' => $_POST[e-mail]));
 
 	}
 	catch(Exception $e){
 		echo $e;
 	}
+
 	echo '<ul>';
-	$iteration = 0;
+
 			while($donnees = $rep->fetch()){
 				echo '<li>' . $donnees['identifiant'] . '</li>';
 			}
 	echo '</ul>';
+
+*/
+
  ?>
 
 <!DOCTYPE html>

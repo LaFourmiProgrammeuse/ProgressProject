@@ -48,9 +48,11 @@ CREATE TABLE `users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `identifiant` varchar(30) NOT NULL,
   `mot_de_passe` varchar(30) NOT NULL,
-  `mail` varchar(40) DEFAULT NULL,
+  `mail` varchar(40) NOT NULL,
+  `keep_connected` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `mail` (`mail`)
+  UNIQUE KEY `mail` (`mail`),
+  UNIQUE KEY `mail_2` (`mail`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -60,7 +62,6 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'antoine','151172','antoine.sauzeau@gmail.com');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -73,4 +74,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-25 20:00:35
+-- Dump completed on 2018-06-25 21:07:30

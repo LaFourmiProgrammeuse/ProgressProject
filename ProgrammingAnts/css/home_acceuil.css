@@ -1,3 +1,4 @@
+﻿a {
 	color: white;
 }
 
@@ -31,6 +32,7 @@ body {
 			font-size: 23px;
 			color: #df4f48;
 			display: flex;
+			font-family: Arial Black; 
 			margin-left: 50px;
 			line-height: 13px;
 		}

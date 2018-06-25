@@ -1,14 +1,20 @@
 ﻿a {
 	color: #df4f48;
+	text-decoration: none;
 }
 
-	.shortcut a:hover {
-		color: #df4f48;
+	.shortcut a {
+		color: white;
 	}
+
+		.shortcut a:hover {
+			color: #df4f48;
+		}
 
 body {
 	background-color: #e3e5e2;
 	margin: 0;
+	padding: 0;
 }
 
 	/* HEADER */
@@ -32,7 +38,7 @@ body {
 			font-size: 23px;
 			color: #df4f48;
 			display: flex;
-			font-family: Arial_Black; 
+			font-family: Arial Black; 
 			margin-left: 50px;
 			line-height: 13px;
 		}

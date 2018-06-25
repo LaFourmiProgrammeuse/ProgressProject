@@ -7,13 +7,6 @@
 		<meta charset="utf-8"></meta>
 		<title></title>
 
-			<style type="text/css">
-				a:link
-				{
-					text-decoration: none;
-				}
-			</style>
-
 	</head>
 
 		<body>

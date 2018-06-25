@@ -1,0 +1,66 @@
+a {
+	color: #df4f48;
+	text-decoration: none;
+}
+
+body {
+	background-color: #e3e5e2;
+	margin: 0;
+	padding: 0;
+}
+
+	.website_name {
+		display: flex;
+		position: absolute;
+		font-size: 30px;
+		font-family: Arial Black;
+		position: absolute;
+		margin-top: 15px;
+		margin-left: 60px;
+	}
+
+	/* CENTER WINDOW */
+
+	section {
+		display: flex;
+		background-color: white;
+		box-shadow: inset 5px 5px 12px #d2d2d2, inset -5px -5px 12px #d2d2d2;
+		margin-top: 140px;
+		height: 400px;
+		margin-left: 480px;
+		margin-right: 480px;
+		border: 2px solid;
+		border-color: #df4f48;
+		border-radius: 50px;
+	}
+
+		.programming_ants_logo {
+			height: 50px;
+			width: 50px;
+			margin-top: 15px;
+			margin-left: 365px;
+		}
+
+			/* ==> FIELDSET */
+
+			fieldset {
+				display: flex;
+				position: absolute;
+				margin-left: 73px;
+				margin-top: 80px;
+				height: 180px;
+				border: 2px solid;
+				border-color: red;
+			}
+
+				legend {
+					color: #df4f48;
+					font-family: Arial;
+					font-size: 20px;
+				}
+
+					label {
+						color: #df4f48;
+						font-family: Arial;
+						font-size: 15px; 
+					}

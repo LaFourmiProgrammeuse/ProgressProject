@@ -3,6 +3,8 @@
 	
 	<head>
 		
+		<link rel="stylesheet" type="text/css" href="../css/register_page.css">
+		<meta charset="utf-8">
 		<title></title>
 
 	</head>
@@ -12,9 +14,10 @@
 			<section>
 				
 				<span class="website_name"><a href="../html/home.php">ProgrammingAnts</a></span>
-				<img src="../images/programming_ants.png" />
-				<span class="introducer">Join us !</span>
+				<img src="../images/programming_ants.png" class="programming_ants_logo" />
 
+				<fieldset>
+					<legend>Join us!</legend>	
 					<form method="post" action="#">
 						<p>
 							<label for="nickname">Nickname</label>  
@@ -28,8 +31,11 @@
 						<br>
 							<label for="post">E-mail</label>
 							<input type="e-mail" name="e-mail" id="e-mail">
+						<br>
+							<input type="submit" value="Send" />
 						</p>
 					</form>
+				</fieldset>
 
 			</section>
 

@@ -1,5 +1,5 @@
 ﻿a {
-	color: #df4f48;
+	color: white;
 }
 
 	.shortcut a:hover {
@@ -68,22 +68,13 @@ body {
 								margin-right: 25px;
 							}
 
-								.identification:nth-child(1):hover a {
-									color: white;
-								}
+							.sign_in{
+								color: #df4f48;
+							}
 
-								.identification:nth-child(1):hover {
-									background-color: #df4f48;
-								}
-
-
-									.identification:nth-child(2):hover a {
-										color: white;
-									}
-
-									.identification:nth-child(2):hover {
-										background-color: #df4f48;
-									}
+							.log_in{
+								color: #df4f48;
+							}
 
 	/* SECTION */
 
@@ -94,7 +85,7 @@ body {
 		border: 2px solid;
 		border-color: #df4f48;
 		border-radius: 15px;
-		margin-left: 140px;
+		margin-left: 105px;
 		height: 500px;
 		width: 1134px;
 		box-shadow: 10px 10px 5px #d2d2d2;
@@ -155,5 +146,3 @@ body {
 			margin-right: 80px;
 			height: 130px;
 		}
-
-/* LOLOLLLOLO */

@@ -1,6 +1,22 @@
+<?php
+
+session_start();
+try{
+	echo 'tttttttt';
+$bdd = new PDO('mysql:host=localhost;dbname=site_project_database;charset=utf8', 'root', '');
+}
+catch(Exception $e){
+	echo 'Erreur : ' . $e.getMessage();
+}
+
+
+$_SESSION['bdd'] = $bdd;
+
+?>
+
 <!DOCTYPE html>
 <html>
-	
+
 	<head>
 
 		<link rel="stylesheet" type="text/css" href="../css/home_acceuil.css">
@@ -22,7 +38,7 @@
 				<img src="../images/programming_ants.png" class="programming_ants_logo" />
 
 					<div id="account">
-						
+
 						<div class="identification">Sign In</div>
 						<div class="identification">Sign Up</div>
 
@@ -31,22 +47,22 @@
 
 			<section>
 				<nav>
-				
+
 					<div id="top_menu">
-					
+
 						<div class="shortcut"><h3><a href="projects.html">Projects</a></h3></div>
 							<div class="shortcut"><h3><a href="forum.html">Forum</a></h3></div>
 								<div class="shortcut"><h3><a href="about.html">About</a></h3></div>
 									<div class="shortcut"><h3><a href="contact.html">Contact</a></h3></div>
-				
-					</div>			
+
+					</div>
 				</nav>
 
 				<article>
-					
+
 					<div id="article">
-						
-						
+
+
 
 					</div>
 
@@ -54,10 +70,10 @@
 			</section>
 
 			<footer>
-				
+
 				<div id="bottom">
-					
-					
+
+
 
 				</div>
 

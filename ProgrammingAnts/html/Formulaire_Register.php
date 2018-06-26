@@ -45,4 +45,6 @@
   $_SESSION['identifiant'] = $nickname;
   $_SESSION['mdp'] = $pass;
 
+  header('Location: home.php');
+
 ?>

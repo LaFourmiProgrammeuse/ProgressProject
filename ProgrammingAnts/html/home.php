@@ -39,6 +39,10 @@
 									echo '<form method="post" action="">';
 
 									echo '<inset type="submit" value="Disconnect">';
+									
+										echo '<p>';
+											echo '<inset type="submit" value="Disconnect" />';
+										echo '</p>';
 
 									echo '</form>';
 								}

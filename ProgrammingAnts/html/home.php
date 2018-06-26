@@ -1,27 +1,12 @@
 <?php
+	//Ne pas mettre de code html avant cette ligne !
+	session_start();
 
-	/*try{
-		 //'INSERT INTO users (id, identifiant, mot_de_passe, mail) VALUES (:id, :identifiant, :mdp, :mail)'
-
-		$bdd = new PDO('mysql:host=localhost;dbname=site_project_database;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-
-		$rep = $bdd->query('SELECT * FROM users');
-		$qprepare = $bdd->prepare('INSERT INTO users (id, identifiant, mot_de_passe, mail) VALUES (:id, :identifiant, :mdp, :mail)');
-		$qprepare->execute(array('id' => '3', 'identifiant' => $_POST[nickname], 'mdp' => $_POST[pass], 'mail' => $_POST[e-mail]));
-
+	if(!isset($_SESSION['connected'])){
+		$_SESSION['connected'] = 'false';
 	}
-	catch(Exception $e){
-		echo $e;
-	}
+		echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
-	echo '<ul>';
-
-			while($donnees = $rep->fetch()){
-				echo '<li>' . $donnees['identifiant'] . '</li>';
-			}
-	echo '</ul>';
-
-*/
 
  ?>
 
@@ -41,12 +26,17 @@
 				<span class="website_name"><h1>ProgrammingAnts</h1></span>
 				<img src="../images/programming_ants.png" class="programming_ants_logo" />
 
-					<div id="account">
 
-						<div class="identification"><a href="Login_page.html">Sign In</a></div>
-						<div class="identification"><a href="Register_page.html">Sign Up</a></div>
+								<?php
+								if($_SESSION['connected'] == 'false'){
+									echo '<div id="account">';
 
-					</div>
+										echo '<div class="identification"><a href="Login_page.html">Sign In</a></div>';
+										echo '<div class="identification"><a href="Register_page.html">Sign Up</a></div>';
+
+									echo '</div>';
+								}
+								?>
 			</header>
 
 			<section>

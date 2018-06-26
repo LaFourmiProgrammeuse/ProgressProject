@@ -37,13 +37,15 @@
 								}
 								else{
 									echo '<form method="post" action="">';
-
-									echo '<inset type="submit" value="Disconnect" name="disconnect">';
+									
+										echo '<p>';
+											echo '<inset type="submit" value="Disconnect" />';
+										echo '</p>';
 
 									echo '</form>';
 								}
 								?>
-								
+
 			</header>
 
 			<section>

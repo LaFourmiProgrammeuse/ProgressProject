@@ -36,9 +36,14 @@
 									echo '</div>';
 								}
 								else{
-									
+									echo '<form method="post" action="">';
+
+									echo '<inset type="submit" value="Disconnect" name="disconnect">';
+
+									echo '</form>';
 								}
 								?>
+								
 			</header>
 
 			<section>

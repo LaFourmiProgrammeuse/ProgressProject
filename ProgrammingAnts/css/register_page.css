@@ -4,7 +4,7 @@ a {
 }
 
 body {
-	background-color: #e3e5e2;
+	background-color: #e5e5e5;
 	margin: 0;
 	padding: 0;
 }
@@ -31,7 +31,8 @@ body {
 		margin-right: 480px;
 		border: 2px solid;
 		border-color: #df4f48;
-		border-radius: 50px;
+		border-bottom-left-radius: 25px;
+		border-bottom-right-radius: 25px;
 	}
 
 		.programming_ants_logo {

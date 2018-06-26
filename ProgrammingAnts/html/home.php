@@ -37,9 +37,9 @@
 								}
 								else{
 									echo '<form method="post" action="">';
-									
+
 										echo '<p>';
-											echo '<inset type="submit" value="Disconnect" />';
+										echo '<inset type="submit" value="Disconnect" />';
 										echo '</p>';
 
 									echo '</form>';

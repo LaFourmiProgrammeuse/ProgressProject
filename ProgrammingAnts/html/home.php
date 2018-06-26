@@ -38,11 +38,14 @@
 								else{
 									echo '<form method="post" action="">';
 
+<<<<<<< HEAD
+=======
 									echo '<inset type="submit" value="Disconnect">';
 
 									
+>>>>>>> b523375f28f7a00d9db3ba29ee9d13c5b3216567
 										echo '<p>';
-											echo '<inset type="submit" value="Disconnect" />';
+										echo '<inset type="submit" value="Disconnect" />';
 										echo '</p>';
 
 									echo '</form>';

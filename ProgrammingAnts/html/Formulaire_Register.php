@@ -45,8 +45,4 @@
   $_SESSION['identifiant'] = $nickname;
   $_SESSION['mdp'] = $pass;
 
-  if($_SESSION['connected'] == 'true'){
-    echo $_SESSION['connected'];
-  }
-
 ?>

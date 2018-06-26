@@ -26,7 +26,6 @@
 				<span class="website_name"><h1>ProgrammingAnts</h1></span>
 				<img src="../images/programming_ants.png" class="programming_ants_logo" />
 
-
 								<?php
 								if($_SESSION['connected'] == 'false'){
 									echo '<div id="account">';
@@ -35,6 +34,9 @@
 										echo '<div class="identification"><a href="Register_page.html">Sign Up</a></div>';
 
 									echo '</div>';
+								}
+								else{
+									
 								}
 								?>
 			</header>

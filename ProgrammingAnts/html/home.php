@@ -1,12 +1,26 @@
 <?php
+
 	//Ne pas mettre de code html avant cette ligne !
 	session_start();
 
+	$script = 'Background_Task.php';
+
+	$fp = fsockopen('localhost', 80, $errno, $errstr, 10);
+	 stream_set_blocking ($fp, false);
+	 $header  = "GET $script HTTP /1.1\r\n";
+	 $header .= "User-Agent: monScriptPHP\r\n";
+	 $header .= "Connection: Close\r\n\r\n";
+	 fputs($fp, $header);
+	 fclose($fp);
+
+
 	if(!isset($_SESSION['connected'])){
+		//Regarder ici si keep_connected = true dans la base de données selon les identifiants des cookies
+		$bdd = new PDO('mysql:host=localhost;dbname=site_project_database;charset=utf8', 'root', '');
+
 		$_SESSION['connected'] = 'false';
 	}
 		echo 'connected = ' . $_SESSION['connected'] . '<br/>';
-
 
  ?>
 

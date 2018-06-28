@@ -24,7 +24,8 @@ DROP TABLE IF EXISTS `divers`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `divers` (
   `visitor` int(11) DEFAULT NULL,
-  `visitor_now` int(11) DEFAULT NULL
+  `visitor_now` int(11) DEFAULT NULL,
+  `background_task` tinyint(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -34,6 +35,7 @@ CREATE TABLE `divers` (
 
 LOCK TABLES `divers` WRITE;
 /*!40000 ALTER TABLE `divers` DISABLE KEYS */;
+INSERT INTO `divers` VALUES (0,0,0);
 /*!40000 ALTER TABLE `divers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -53,7 +55,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `mail` (`mail`),
   UNIQUE KEY `mail_2` (`mail`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,6 +64,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (2,'xcxwc','xcxw','dwcx',0);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -74,4 +77,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-26 18:19:15
+-- Dump completed on 2018-06-26 19:51:13

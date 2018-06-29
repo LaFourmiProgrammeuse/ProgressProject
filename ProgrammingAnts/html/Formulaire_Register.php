@@ -2,6 +2,8 @@
 
   session_start();
 
+
+
   try{
 
     $bdd = new PDO('mysql:host=localhost;dbname=site_project_database;charset=utf8', 'root', ''/*, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)*/);
@@ -42,8 +44,6 @@
   $_SESSION['connected'] = 'true';
   $_SESSION['identifiant'] = $nickname;
   $_SESSION['mdp'] = $pass;
-
-  exec ('Background_Task.php');
 
   header('Location: home.php');
 

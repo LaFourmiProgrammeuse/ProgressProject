@@ -1,7 +1,6 @@
 <?php
-//Ne pas mettre de code html avant cette ligne !
-session_start();
 
+//Ne pas mettre de code html avant cette ligne !
 require 'Session_Control.php';
 
 echo 'connected = ' . $_SESSION['connected'] . '<br/>';
@@ -11,73 +10,76 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 <!DOCTYPE html>
 <html>
 
-	<head>
+<head>
 
-		<link rel="stylesheet" type="text/css" href="../css/home_acceuil.css">
-		<meta charset="utf-8"></meta>
-		<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/home_acceuil.css">
+	<meta charset="utf-8"></meta>
+	<title></title>
 
-	</head>
+</head>
 
-		<body>
-			<header>
-				<span class="website_name"><h1>ProgrammingAnts</h1></span>
-				<img src="../images/programming_ants.png" class="programming_ants_logo" />
+	<body>
+		<header>
+			<span class="website_name"><h1>ProgrammingAnts</h1></span>
+			<img src="../images/programming_ants.png" class="programming_ants_logo" />
 
-								<?php
-								if($_SESSION['connected'] == 'false'){
-									echo '<div id="account">';
+							<?php
+							if($_SESSION['connected'] == 'false'){
+								echo '<div id="account">';
 
-										echo '<div class="identification"><a href="Login_page.html">Sign In</a></div>';
-										echo '<div class="identification"><a href="Register_page.html">Sign Up</a></div>';
+									echo '<div class="identification"><a href="Login_page.html">Sign In</a></div>';
+									echo '<div class="identification"><a href="Register_page.html">Sign Up</a></div>';
 
-									echo '</div>';
-								}
-								else{
-									echo '<form method="post" action="">';
+								echo '</div>';
+							}
+							else{
+                                echo '<div id="account">';
+                                    echo '<div class="identification">';
 
-									echo '<inset type="submit" value="Disconnect">';
+                                        echo '<p>Disconnect</p>';
 
-										echo '<p>';
-										echo '<inset type="submit" value="Disconnect" />';
-										echo '</p>';
+								        echo '<form method="post" action="">';
 
-									echo '</form>';
-								}
-								?>
+								            echo '<inset type="submit" value="Disconnect" name="Disconnect">';
 
-			</header>
+								        echo '</form>';
+                                    echo '</div>';
+                                echo '</div>';
+							}
+							?>
 
-			<section>
-				<nav>
+		</header>
 
-					<div id="top_menu">
+		<section>
+			<nav>
 
-						<div class="shortcut"><h3><a href="projects.html">Projects</a></h3></div>
-							<div class="shortcut"><h3><a href="forum.html">Forum</a></h3></div>
-								<div class="shortcut"><h3><a href="about.html">About</a></h3></div>
-									<div class="shortcut"><h3><a href="contact.html">Contact</a></h3></div>
+				<div id="top_menu">
 
-					</div>
-				</nav>
+					<div class="shortcut"><h3><a href="projects.html">Projects</a></h3></div>
+						<div class="shortcut"><h3><a href="forum.html">Forum</a></h3></div>
+							<div class="shortcut"><h3><a href="about.html">About</a></h3></div>
+								<div class="shortcut"><h3><a href="contact.html">Contact</a></h3></div>
 
-				<article>
+				</div>
+			</nav>
 
-					<div id="article">
+			<article>
 
-
-
-					</div>
-
-				</article>
-			</section>
-
-			<footer>
+				<div id="article">
 
 
 
-			</footer>
+				</div>
 
-		</body>
+			</article>
+		</section>
+
+		<footer>
+
+
+
+		</footer>
+
+	</body>
 
 </html>

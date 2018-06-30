@@ -35,14 +35,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 							else{
                                 echo '<div id="account">';
                                     echo '<div class="identification">';
-
-                                        echo '<p>Disconnect</p>';
-
-								        echo '<form method="post" action="">';
-
-								            echo '<inset type="submit" value="Disconnect" name="Disconnect">';
-
-								        echo '</form>';
+                                        echo '<a href="Register_page.html">Se deconnecter</a>';
                                     echo '</div>';
                                 echo '</div>';
 							}

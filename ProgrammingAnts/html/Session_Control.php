@@ -99,17 +99,6 @@ if(isset($_SESSION['timeout'])){
             die('Echec de la requete');
         }
 
-        if($_COOKIE['keep_connected'] == 'true'){
-
-            //On verifie dans la bdd les informations de connexion de l'user
-            $_SESSION['connected'] = 'true';
-
-        }else{
-
-            //L'user ne souhaite pas a etre reconnecter automatiquement selon la bdd
-            $_SESSION['connected'] = 'false';
-        }
-
     }else{
 
         //Pas de cookie pour connaitre l'identite de l'user, on ne le connecte pas

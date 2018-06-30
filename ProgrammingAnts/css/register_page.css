@@ -46,7 +46,7 @@ body {
 
 			fieldset {
 				display: flex;
-				position: absolute;
+				position: fixed;
 				margin-left: 73px;
 				margin-top: 80px;
 				height: 180px;

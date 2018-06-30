@@ -4,7 +4,11 @@ a {
 }
 
 body {
+<<<<<<< HEAD
 	background-color: white;
+=======
+	background-color: #e3e5e2;
+>>>>>>> 539d15c74492120bc1e7c868a5e3a7fa980ecd45
 	margin: 0;
 	padding: 0;
 }
@@ -59,6 +63,7 @@ body {
 					label {
 						color: #df4f48;
 						font-family: Arial;
+<<<<<<< HEAD
 						font-size: 15px; 
 					}
 
@@ -82,3 +87,7 @@ body {
 							border-color: #df4f48;
 							border-radius: 50px;
 						}
+=======
+						font-size: 15px;
+					}
+>>>>>>> 539d15c74492120bc1e7c868a5e3a7fa980ecd45

@@ -7,35 +7,40 @@
 		<meta charset="utf-8">
 		<title></title>
 
-	</head>
-
 		<body>
+				
+				<section>
 
-			<section>
+					<span class="website_name"><a href="../html/home.php">ProgrammingAnts</a></span>
+					<img src="../images/programming_ants.png" class="programming_ants_logo" />
 
-				<span class="website_name"><a href="../html/home.php">ProgrammingAnts</a></span>
-				<img src="../images/programming_ants.png" class="programming_ants_logo" />
+					<fieldset>
+						<legend>Join us!</legend>
+						
+						<form method="post" action="Formulaire_Register.php">
+							<p>
+								<label for="nickname">Nickname</label>
+								<input type="text" name="nickname" id="nickname">
+							<br>
+								<label for="pass">Password</label>
+								<input type="password" name="pass" id="pass">
+							<br>
+								<label for="pass">Confirm password</label>
+								<input type="password" name="confimation_password" id="confimation_password">
+							<br>
+								<label for="post">E-mail</label>
+								<input type="e-mail" name="email" id="email">
+							<br>
+													
+							</p>
+						</form>
+					</fieldset>
 
-				<fieldset>
-					<legend>Join us!</legend>
-					<form method="post" action="Formulaire_Register.php">
-						<p>
-							<label for="nickname">Nickname</label>
-							<input type="text" name="nickname" id="nickname">
-						<br>
-							<label for="pass">Password</label>
-							<input type="password" name="pass" id="pass">
-						<br>
-							<label for="pass">Confirm password</label>
-							<input type="password" name="confimation_password" id="confimation_password">
-						<br>
-							<label for="post">E-mail</label>
-							<input type="e-mail" name="email" id="email">
-						<br>
-							<input type="submit" value="Send" />
-						</p>
-					</form>
-				</fieldset>
+						<form method="post" action="Formulaire_Register.php">
+							<p>
+								<input type="submit" value="Send" id="send" class="send" />
+							</p>
+						</form>
 
 			</section>
 

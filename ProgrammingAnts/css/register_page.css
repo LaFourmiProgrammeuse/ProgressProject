@@ -4,7 +4,7 @@ a {
 }
 
 body {
-	background-color: red;
+	background-color: white;
 	margin: 0;
 	padding: 0;
 }
@@ -23,16 +23,10 @@ body {
 
 	section {
 		display: flex;
-		background-color: white;
-		box-shadow: inset 5px 5px 12px #d2d2d2, inset -5px -5px 12px #d2d2d2;
 		margin-top: 140px;
 		height: 400px;
-		margin-left: 480px;
-		margin-right: 480px;
-		border: 2px solid;
-		border-color: #df4f48;
-		border-bottom-left-radius: 25px;
-		border-bottom-right-radius: 25px;
+		margin-left: 32.5%;
+		margin-right: 35%;
 	}
 
 		.programming_ants_logo {
@@ -47,11 +41,13 @@ body {
 			fieldset {
 				display: flex;
 				position: absolute;
-				margin-left: 73px;
+				margin-left: 3.1%;
 				margin-top: 80px;
+				width: 25%;
 				height: 180px;
 				border: 2px solid;
-				border-color: red;
+				border-color: #df4f48;
+				border-radius: 20px;
 			}
 
 				legend {
@@ -65,3 +61,24 @@ body {
 						font-family: Arial;
 						font-size: 15px; 
 					}
+
+				/* SEND */
+
+					#send {
+						position: absolute;
+						margin-top: 280px;
+						margin-left: 1%;
+					}	
+
+						.send {
+							background-color: white;
+							padding-top: 5px;
+							padding-bottom: 5px;
+							padding-left: 20px;
+							padding-right: 20px;
+							height: 20px;
+							color: #df4f48;
+							border: 2px solid;
+							border-color: #df4f48;
+							border-radius: 50px;
+						}

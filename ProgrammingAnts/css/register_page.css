@@ -63,7 +63,6 @@ body {
 					label {
 						color: #df4f48;
 						font-family: Arial;
-<<<<<<< HEAD
 						font-size: 15px; 
 					}
 
@@ -82,12 +81,9 @@ body {
 							padding-left: 20px;
 							padding-right: 20px;
 							height: 20px;
+							font-size: 15px;
 							color: #df4f48;
 							border: 2px solid;
 							border-color: #df4f48;
 							border-radius: 50px;
 						}
-=======
-						font-size: 15px;
-					}
->>>>>>> 539d15c74492120bc1e7c868a5e3a7fa980ecd45

@@ -23,7 +23,7 @@ body {
 		display: flex;
         position: absolute;
 		background-color: white;
-		height: 10%;
+		height: 82px;
 		width: 90%;
 		border-top: 3px solid;
 		border-right: 3px solid;
@@ -53,7 +53,7 @@ body {
 						display: flex;
                         position: absolute;
 						justify-content: space-between;
-						margin-top: 2%;
+						margin-top: 25px;
                         margin-bottom: 2%;
 						left: 70%;
 					}
@@ -98,7 +98,7 @@ body {
 		display: flex;
         position: absolute;
 		background-color: #df4f48;
-		top: 20%;
+		top: 170px;
 		border: 2px solid;
 		border-color: #df4f48;
 		border-radius: 15px;
@@ -127,8 +127,8 @@ body {
 				font-family: Arial;
 				font-size: 15px;
 				line-height: 10px;
-                margin-right: 20px;
-                margin-left: 20px;
+                margin-right: 40px;
+                margin-left: 40px;
 
 			}
 

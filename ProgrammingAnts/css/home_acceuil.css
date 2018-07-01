@@ -23,8 +23,7 @@ body {
 		display: flex;
         position: absolute;
 		background-color: white;
-		height: 80px;
-		margin-top: 20px;
+		height: 10%;
 		width: 90%;
 		border-top: 3px solid;
 		border-right: 3px solid;
@@ -36,7 +35,7 @@ body {
 	}
 
 		.website_name {
-			font-size: 23px;
+			font-size: 24px;
 			color: #df4f48;
 			display: flex;
 			font-family: Arial Black;
@@ -47,15 +46,15 @@ body {
 				.programming_ants_logo {
 					width: 60px;
 					height: 60px;
-					margin-top: 10px;
-					margin-left: 10px;
+
 				}
 
 					#account {
 						display: flex;
                         position: absolute;
 						justify-content: space-between;
-						margin-top: 22px;
+						margin-top: 2%;
+                        margin-bottom: 2%;
 						left: 70%;
 					}
 

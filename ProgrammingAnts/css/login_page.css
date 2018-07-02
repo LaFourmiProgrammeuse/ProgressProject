@@ -9,8 +9,105 @@ body {
 	padding: 0;
 }
 
-section {
-    position: absolute;
-    width: 10%;
-    left: 45%;
-}
+	.website_name {
+		display: flex;
+		position: absolute;
+		font-size: 30px;
+		font-family: Arial Black;
+		position: absolute;
+		margin-top: 15px;
+		margin-left: 73px;
+	}
+
+	/* CENTER WINDOW */
+
+	section {
+		display: flex;
+		margin-top: 140px;
+		height: 400px;
+		margin-left: 32.5%;
+        margin-right: 29%;
+
+	}
+
+		.programming_ants_logo {
+            position: absolute;
+			height: 50px;
+			width: 50px;
+			margin-top: 15px;
+			margin-left: 380px;
+		}
+
+			/* ==> FIELDSET */
+
+			fieldset {
+				display: flex;
+				position: absolute;
+				margin-left: 3.1%;
+				margin-top: 80px;
+				width: 400px;
+				height: 180px;
+				border: 2px solid;
+				border-color: #df4f48;
+				border-radius: 20px;
+			}
+
+				legend {
+					color: #df4f48;
+					font-family: Arial;
+					font-size: 20px;
+				}
+
+					label {
+						color: #df4f48;
+						font-family: Arial;
+						font-size: 15px;
+					}
+
+                    /* FORMULAIRE */
+
+                    #nickname{
+                        position: absolute;
+                        left: 170px;
+                        top: 38px;
+                        width: 200px;
+
+                    }
+                    #nickname_label{
+                        position: absolute;
+                        left: 30px;
+                        top: 40px;
+                    }
+
+                    #pass{
+                        position: absolute;
+                        left: 170px;
+                        top: 78px;
+                        width: 200px;
+                    }
+                    #pass_label{
+                        position: absolute;
+                        left: 30px;
+                        top: 80px;
+                    }
+
+
+				/* SEND */
+
+					#send {
+						position: absolute;
+						margin-top: 280px;
+						margin-left: 365px;
+					}
+
+						.send {
+							background-color: white;
+							padding-left: 20px;
+							padding-right: 20px;
+							height: 20px;
+							font-size: 15px;
+							color: #df4f48;
+							border: 2px solid;
+							border-color: #df4f48;
+							border-radius: 50px;
+						}

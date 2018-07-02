@@ -91,6 +91,18 @@ body {
                         top: 80px;
                     }
 
+                    #keep_connected{
+                        position: absolute;
+                        left: 170px;
+                        top: 141px;
+                        width: 200px;
+                    }
+                    #keep_connected_label{
+                         position: absolute;
+                         left: 30px;
+                         top: 143px;
+                    }
+
 
 				/* SEND */
 

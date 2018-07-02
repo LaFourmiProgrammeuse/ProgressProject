@@ -35,27 +35,28 @@ body {
 	}
 
 		.website_name {
-			font-size: 24px;
+			position: absolute;
+			font-size: 22px;
 			color: #df4f48;
 			display: flex;
 			font-family: Arial Black;
-			margin-left: 50px;
-			line-height: 13px;
+			left: 3%;
+			line-height: 16px;
 		}
 
 				.programming_ants_logo {
-					width: 60px;
-					height: 60px;
-
+					position: absolute;
+					width: 55px;
+					height: 55px;
+					left: 38%;
+					top: 15px;
 				}
 
 					#account {
 						display: flex;
                         position: absolute;
-						justify-content: space-between;
-						margin-top: 25px;
-                        margin-bottom: 2%;
-						left: 70%;
+						top: 24px;
+						left: 80%;
 					}
 
 						.identification {
@@ -92,6 +93,21 @@ body {
 										background-color: #df4f48;
 									}
 
+										.disconnect {
+											position: absolute;
+											left: 95;
+											background-color: white;
+											padding-top: 5px;
+											padding-bottom: 5px;
+											padding-left: 20px;
+											padding-right: 20px;
+											height: 20px;
+											color: #df4f48;
+											border: 2px solid;
+											border-color: #df4f48;
+											border-radius: 50px;
+										}
+
 	/* SECTION */
 
 	section {
@@ -102,9 +118,9 @@ body {
 		border: 2px solid;
 		border-color: #df4f48;
 		border-radius: 15px;
-		left: 20%;
+		left: 15%;
 		height: 500px;
-		width: 60%;
+		width: 70%;
 		box-shadow: 10px 10px 5px #d2d2d2;
 	}
 
@@ -141,14 +157,10 @@ body {
 			left: 10%;
 			margin-top: 45px;
 			width: 80%;
-			height: 90%;
+			height: 90.3%;
 			border: 1px solid;
 			border-color: #bdb7b7;
 		}
-
-			#article {
-
-			}
 
 	/* FOOTER */
 
@@ -162,11 +174,8 @@ body {
 			border-color: #bdb7b7;
 			border-top-right-radius: 5px;
 			border-top-left-radius: 5px;
-			margin-top: 50px;
-			height: 10%;
-            bottom: 20px;
+			top: 745px;
+			height: 15%;
             width: 80%;
             left: 10%;
-
-
 		}

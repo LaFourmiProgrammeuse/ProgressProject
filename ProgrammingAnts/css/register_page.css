@@ -16,7 +16,7 @@ body {
 		font-family: Arial Black;
 		position: absolute;
 		margin-top: 15px;
-		margin-left: 60px;
+		margin-left: 73px;
 	}
 
 	/* CENTER WINDOW */
@@ -26,14 +26,16 @@ body {
 		margin-top: 140px;
 		height: 400px;
 		margin-left: 32.5%;
-		margin-right: 35%;
+        margin-right: 29%;
+
 	}
 
 		.programming_ants_logo {
+            position: absolute;
 			height: 50px;
 			width: 50px;
 			margin-top: 15px;
-			margin-left: 365px;
+			margin-left: 380px;
 		}
 
 			/* ==> FIELDSET */
@@ -43,7 +45,7 @@ body {
 				position: absolute;
 				margin-left: 3.1%;
 				margin-top: 80px;
-				width: 25%;
+				width: 400px;
 				height: 180px;
 				border: 2px solid;
 				border-color: #df4f48;
@@ -62,18 +64,69 @@ body {
 						font-size: 15px;
 					}
 
+                    /*Formulaire*/
+                    #nickname{
+                        position: absolute;
+                        left: 170px;
+                        top: 38px;
+                        width: 200px;
+
+                    }
+                    #nickname_label{
+                        position: absolute;
+                        left: 30px;
+                        top: 38px;
+                    }
+
+                    #pass{
+                        position: absolute;
+                        left: 170px;
+                        top: 78px;
+                        width: 200px;
+                    }
+                    #pass_label{
+                        position: absolute;
+                        left: 30px;
+                        top: 78px;
+                    }
+
+                    #confirmation_password{
+                        position: absolute;
+                        left: 170px;
+                        top: 103px;
+                        width: 200px;
+                    }
+                    #confirmation_password_label{
+                         position: absolute;
+                         left: 30px;
+                        top: 103px;
+                    }
+
+                    #email{
+                        position: absolute;
+                        left: 170px;
+                        top: 141px;
+                        width: 200px;
+                    }
+                    #email_label{
+                         position: absolute;
+                         left: 30px;
+                         top: 141px;
+                    }
+
+
 				/* SEND */
 
 					#send {
 						position: absolute;
 						margin-top: 280px;
-						margin-left: 1%;
+						margin-left: 365px;
 					}
 
 						.send {
 							background-color: white;
 							padding-top: 5px;
-							padding-bottom: 5px;
+							padding-bottom: 10px;
 							padding-left: 20px;
 							padding-right: 20px;
 							height: 20px;

@@ -1,0 +1,16 @@
+a {
+	color: #df4f48;
+	text-decoration: none;
+}
+
+body {
+	background-color: #e3e5e2;
+	margin: 0;
+	padding: 0;
+}
+
+section {
+    position: absolute;
+    width: 10%;
+    left: 45%;
+}

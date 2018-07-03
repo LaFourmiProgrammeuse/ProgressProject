@@ -15,7 +15,7 @@
 					<img src="../images/programming_ants.png" class="programming_ants_logo" />
 
 					<fieldset>
-						<legend>Join us!</legend>
+						<legend>Log in</legend>
 
 						<form method="post" action="Formulaire_Register.php">
 							<p>
@@ -23,16 +23,19 @@
 								<input type="text" name="nickname" id="nickname">
 							<br>
 								<label for="pass">Password</label>
-								<input type="password" name="pass" id="pass">
-							<br>
-								<input type="submit" value="Send" id="send" class="send" />
-							</p>
-
-                            <br>
-                                <label id="keep_connected_label" for="keep_connected">Keep Connected</label>
-                                <input type="checkbox" name="keep_connected" id="keep_connected">
+								<input type="password" name="pass" id="pass">								
+							</p>                                
 						</form>
 					</fieldset>
+								
+						<form method="post" action="Formulaire_Register.php">
+							<p>
+								<label id="stay_connected_label" for="stay_connected">Stay connected to our website</label>
+	                            <input type="checkbox" name="stay_connected" id="stay_connected">
+	                        <br>
+	                        	<input type="submit" value="Send" id="send" class="send" />
+							</p>	
+						</form>	
 
 			</section>
 

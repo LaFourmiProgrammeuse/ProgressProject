@@ -46,7 +46,7 @@ body {
 				margin-left: 3.1%;
 				margin-top: 80px;
 				width: 400px;
-				height: 180px;
+				height: 120px;
 				border: 2px solid;
 				border-color: #df4f48;
 				border-radius: 20px;
@@ -68,50 +68,52 @@ body {
 
                     #nickname{
                         position: absolute;
-                        left: 170px;
-                        top: 38px;
+                        left: 35%;
+                        top: 40px;
                         width: 200px;
-
+                        height: 20px;
                     }
 
                     #nickname_label{
                         position: absolute;
-                        left: 30px;
+                        left: 50%;
                         top: 40px;
                     }
 
                     #pass{
                         position: absolute;
-                        left: 170px;
-                        top: 78px;
+                        left: 35%;
+                        top: 80px;
                         width: 200px;
+                        height: 20px;
                     }
 
                     #pass_label{
                         position: absolute;
-                        left: 30px;
+                        left: 80px;
                         top: 80px;
                     }
-                    
-                    #keep_connected{
+
+                    #stay_connected{
                         position: absolute;
-                        left: 170px;
-                        top: 141px;
+                        left: 32.5%;
+                        top: 381px;
                         width: 200px;
+                        height: 20px;
                     }
                     
-                    #keep_connected_label{
+                    #stay_connected_label{
                          position: absolute;
-                         left: 30px;
-                         top: 143px;
+                         left: 41%;
+                         top: 385px;
                     }
 
 				/* SEND */
 
 					#send {
 						position: absolute;
-						top: 435px;
-						left: 510px;
+						top: 375px;
+						left: 57.5%;
 					}
 
 						.send {

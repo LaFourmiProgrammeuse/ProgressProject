@@ -25,7 +25,10 @@ body {
 		display: flex;
 		margin-top: 140px;
 		height: 400px;
-		margin-left: 32.5%;	}
+		width: 530px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
 		.programming_ants_logo {
             position: absolute;

@@ -40,7 +40,7 @@ body {
 			color: #df4f48;
 			display: flex;
 			font-family: Arial Black;
-			left: 3%;
+			left: 30px;
 			line-height: 16px;
 		}
 
@@ -48,7 +48,7 @@ body {
 					position: absolute;
 					width: 55px;
 					height: 55px;
-					left: 38%;
+					left: 480px;
 					top: 15px;
 				}
 
@@ -56,7 +56,7 @@ body {
 						display: flex;
                         position: absolute;
 						top: 24px;
-						left: 80%;
+						left: 75%;
 					}
 
 						.identification {

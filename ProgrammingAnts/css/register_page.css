@@ -16,7 +16,7 @@ body {
 		font-family: Arial Black;
 		position: absolute;
 		margin-top: 15px;
-		margin-left: 73px;
+		margin-left: 85px;
 	}
 
 	/* CENTER WINDOW */
@@ -35,7 +35,7 @@ body {
 			height: 50px;
 			width: 50px;
 			margin-top: 15px;
-			margin-left: 380px;
+			margin-left: 395px;
 		}
 
 			/* ==> FIELDSET */
@@ -43,7 +43,7 @@ body {
 			fieldset {
 				display: flex;
 				position: absolute;
-				margin-left: 3.1%;
+				margin-left: 50px;
 				margin-top: 80px;
 				width: 400px;
 				height: 180px;
@@ -127,7 +127,7 @@ body {
 					#send {
 						position: absolute;
 						top: 435px;
-						left: 510px;
+						margin-left: 400px;
 					}
 
 						.send {

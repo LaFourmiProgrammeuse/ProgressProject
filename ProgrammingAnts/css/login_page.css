@@ -94,24 +94,16 @@ body {
                         top: 80px;
                     }
 
-<<<<<<< HEAD
                     #stay_connected{
-=======
-                    #keep_connected{
->>>>>>> 8f04a0c37411a1e50424fc3e9429432d1535268f
                         position: absolute;
                         left: 32.5%;
                         top: 381px;
                         width: 200px;
                         height: 20px;
                     }
-<<<<<<< HEAD
-                    
-                    #stay_connected_label{
-=======
 
-                    #keep_connected_label{
->>>>>>> 8f04a0c37411a1e50424fc3e9429432d1535268f
+
+                    #stay_connected_label{
                          position: absolute;
                          left: 41%;
                          top: 385px;

@@ -27,7 +27,6 @@ body {
 		height: 400px;
 		margin-left: 32.5%;
         margin-right: 29%;
-
 	}
 
 		.programming_ants_logo {
@@ -64,7 +63,8 @@ body {
 						font-size: 15px;
 					}
 
-                    /*Formulaire*/
+                    /* FORMULAIRE */
+
                     #nickname{
                         position: absolute;
                         left: 170px;

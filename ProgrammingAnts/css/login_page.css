@@ -46,7 +46,7 @@ body {
 				margin-left: 3.1%;
 				margin-top: 80px;
 				width: 400px;
-				height: 140px;
+				height: 180px;
 				border: 2px solid;
 				border-color: #df4f48;
 				border-radius: 20px;
@@ -68,38 +68,52 @@ body {
 
                     #nickname{
                         position: absolute;
-                        left: 150px;
-                        top: 36px;
+                        left: 170px;
+                        top: 38px;
                         width: 200px;
-                        height: 20px;
+
                     }
 
                     #nickname_label{
                         position: absolute;
-                        left: 77px;
+                        left: 30px;
                         top: 40px;
                     }
 
                     #pass{
                         position: absolute;
-                        left: 150px;
-                        top: 76px;
+                        left: 170px;
+                        top: 78px;
                         width: 200px;
-                        height: 20px;
                     }
 
                     #pass_label{
                         position: absolute;
-                        left: 77px;
+                        left: 30px;
                         top: 80px;
                     }
 
+<<<<<<< HEAD
+=======
+                    #keep_connected{
+                        position: absolute;
+                        left: 170px;
+                        top: 141px;
+                        width: 200px;
+                    }
+                    
+                    #keep_connected_label{
+                         position: absolute;
+                         left: 30px;
+                         top: 143px;
+                    }
+>>>>>>> parent of 3757902... 03/07/2018
 
 				/* SEND */
 
 					#send {
 						position: absolute;
-						top: 395px;
+						top: 435px;
 						left: 510px;
 					}
 

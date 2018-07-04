@@ -1,0 +1,59 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #383838;
+}
+
+header {
+	display: flex;
+	position: absolute;
+	margin-top: 50px;
+	background-color: #202020;
+	width: 60%;
+	height: 70px;
+	left: 20%;
+}
+
+.programming_ants_name {
+	position: absolute;
+	font-family: Arial Black;
+	font-size: 20px;
+	left: 2.5%;
+}
+
+header a {
+	color: #df4f48;
+	text-decoration: none;
+}
+
+.programming_ants_logo {
+	position: absolute;
+	top: 10px;
+	left: 37.5%;
+	width: 50px;
+	height: 50px;
+}
+
+.programming_ants_expansion {
+	position: absolute;
+	font-size: 20px;
+	font-family: Arial;
+	color: #1e9fd0;
+	left: 43.5%;
+	top: 28px;
+}
+
+#searching_bar {
+	position: absolute;
+	top: 23px;
+	left: 75%;
+	width: 150px;
+	height: 25px;
+}
+
+#ok {
+	position: absolute;
+	height: 25px;
+	top: 23px;
+	left: 92.5%;
+}

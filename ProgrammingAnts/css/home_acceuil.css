@@ -37,7 +37,7 @@ body {
 		.website_name {
 			position: absolute;
 			font-size: 22px;
-			color: #df4f48;
+			color: #24252f;
 			display: flex;
 			font-family: Arial Black;
 			left: 30px;
@@ -46,10 +46,10 @@ body {
 
 				.programming_ants_logo {
 					position: absolute;
-					width: 55px;
-					height: 55px;
-					left: 480px;
-					top: 15px;
+					width: 60px;
+					height: 60px;
+					left: 470px;
+					top: 12px;
 				}
 
 					#account {
@@ -65,6 +65,7 @@ body {
 							padding-bottom: 5px;
 							padding-left: 20px;
 							padding-right: 20px;
+							width: 53px;
 							height: 20px;
 							color: #df4f48;
 							border: 2px solid;
@@ -156,7 +157,13 @@ body {
 
 	/* ARTICLE */
 
-
+		.working {
+			position: absolute;
+			width: 500px;
+			height: 500px;
+			left: 25%;
+			top: 40px;
+		}
 
 	/* FOOTER */
 

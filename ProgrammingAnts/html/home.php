@@ -59,11 +59,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
 			<article>
 
-				<div id="article">
-
-
-
-				</div>
+				<img src="../images/working.png" class="working" />
 
 			</article>
 		</section>

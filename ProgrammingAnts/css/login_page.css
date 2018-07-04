@@ -1,5 +1,5 @@
 a {
-	color: #df4f48;
+	color: #24252f;
 	text-decoration: none;
 }
 
@@ -16,7 +16,7 @@ body {
 		font-family: Arial Black;
 		position: absolute;
 		margin-top: 15px;
-		margin-left: 73px;
+		margin-left: 80px;
 	}
 
 	/* CENTER WINDOW */
@@ -96,8 +96,9 @@ body {
 
                     #stay_connected_label{
                          position: absolute;
-                         left: 85px;
+                         left: 83px;
                          top: 161px;
+                         color: #24252f;
                     }
 
                     #stay_connected{

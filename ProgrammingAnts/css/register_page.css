@@ -1,5 +1,5 @@
 a {
-	color: #df4f48;
+	color: #24252f;
 	text-decoration: none;
 }
 
@@ -16,7 +16,7 @@ body {
 		font-family: Arial Black;
 		position: absolute;
 		margin-top: 15px;
-		margin-left: 85px;
+		margin-left: 80px;
 	}
 
 	/* CENTER WINDOW */
@@ -36,7 +36,7 @@ body {
 			height: 50px;
 			width: 50px;
 			margin-top: 15px;
-			margin-left: 395px;
+			margin-left: 380px;
 		}
 
 			/* ==> FIELDSET */

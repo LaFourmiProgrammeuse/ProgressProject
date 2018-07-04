@@ -37,6 +37,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
                                     echo '<div class="disconnect">';
                                         echo '<a href="Disconnect.php">Disconnect</a>';
                                     echo '</div>';
+                                    echo '<img src="../images/programming_ants.png" class="user_image" />';
                                 echo '</div>';
 							}
 							?>

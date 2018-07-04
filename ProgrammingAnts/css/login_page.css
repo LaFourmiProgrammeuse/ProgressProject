@@ -65,7 +65,7 @@ body {
 					}
 
                     /* FORMULAIRE */
-					
+
 					#nickname_label{
                         position: absolute;
                         left: 70px;
@@ -79,7 +79,7 @@ body {
                         width: 200px;
                         height: 20px;
                     }
-           					
+
 					#pass_label{
                         position: absolute;
                         left: 70px;
@@ -93,27 +93,27 @@ body {
                         width: 200px;
                         height: 20px;
                     }
-                    
+
                     #stay_connected_label{
                          position: absolute;
-                         left: 41%;
-                         top: 385px;
+                         left: 117px;
+                         top: 161px;
                     }
 
                     #stay_connected{
                         position: absolute;
-                        left: 32.5%;
-                        top: 381px;
-                        width: 200px;
-                        height: 20px;
+                        left: 55px;
+                        top: 159px;
+                        width: 16px;
+                        height: 16px;
                     }
-                    
+
 				/* SEND */
 
 					#send {
 						position: absolute;
-						top: 375px;
-						left: 57.5%;
+						top: 152px;
+						left: 350px;
 					}
 
 						.send {

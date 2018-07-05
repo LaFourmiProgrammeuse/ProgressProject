@@ -157,12 +157,19 @@ body {
 
 	/* ARTICLE */
 
+        article{
+            position: absolute;
+            height: 500px;
+    		width: 100%;
+        }
+
 		.working {
-			position: absolute;
-			width: 500px;
+            position: absolute;
+			width: 40%;
 			height: 500px;
-			left: 25%;
 			top: 40px;
+            margin-left: 30%;
+            margin-right: 30%;
 		}
 
 	/* FOOTER */

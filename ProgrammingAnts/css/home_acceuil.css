@@ -163,14 +163,23 @@ body {
     		width: 100%;
         }
 
-		.working {
-            position: absolute;
-			width: 40%;
-			height: 500px;
-			top: 40px;
-            margin-left: 30%;
-            margin-right: 30%;
-		}
+		    .working {
+                position: absolute;
+			    width: 40%;
+			    height: 500px;
+			    top: 40px;
+                margin-left: 30%;
+                margin-right: 30%;
+		    }
+
+            #message_connection {
+                position: absolute;
+                color: white;
+                background-color: green;
+                bottom: 130px;
+                left: 30px;
+                display: none;
+            }
 
 	/* FOOTER */
 

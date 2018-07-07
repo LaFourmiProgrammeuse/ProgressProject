@@ -178,7 +178,7 @@ body {
                 background-color: green;
                 bottom: 130px;
                 left: 30px;
-                display: none;
+                display: block;
             }
 
 	/* FOOTER */

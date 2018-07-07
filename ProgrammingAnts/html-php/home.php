@@ -9,16 +9,18 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
 <!DOCTYPE html>
 <html>
-
 <head>
 
 	<link rel="stylesheet" type="text/css" href="../css/home_acceuil.css">
-	<meta charset="utf-8"></meta>
+	<meta charset="utf-8"/>
 	<title></title>
+    <script type="text/javascript" src="home.js"></script>
+    <p>Test</p>
 
 </head>
 
 	<body>
+        <h3>Test1</h3>
 		<header>
 			<span class="website_name"><h1>ProgrammingAnts</h1></span>
 			<img src="../images/programming_ants.png" class="programming_ants_logo" />

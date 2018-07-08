@@ -64,9 +64,15 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 			</article>
 		</section>
 
-        <div id="message_connection">
-            <p>Good to meet you again :)</p>
-        </div>
+    <aside>
+
+			<div id="reconnection">
+				<div class="message"><img src="../images/exit.png" class="exit"/></div>
+				<div class="message">Welcome back</div>
+				<div class="message">Username</div>
+			</div>
+
+		</aside>
 
 		<footer>
 

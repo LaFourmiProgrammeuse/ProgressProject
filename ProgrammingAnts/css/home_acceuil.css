@@ -213,10 +213,10 @@ body {
 
 		#reconnection {
 			display: flex;
-			position: absolute;
+			position: fixed;
 			right: 0%;
 			background-color: white;
-			height: 42px;
+			height: 60px;
 			width: 12.5%;
 			top: 175px;
 			border-left: 1px solid #36393e;
@@ -224,6 +224,7 @@ body {
 			border-bottom: 1px solid #36393e;
 			border-bottom-left-radius: 15px;
 			border-top-left-radius: 15px;
+			min-width: 180px;
 		}
 
 			.message {
@@ -231,7 +232,7 @@ body {
 				color: #36393e;
 				font-size: 20px;
 				font-family: Arial;
-				top: 25%;
+				top: 15%;
 				left: 5%;
 			}
 

@@ -14,6 +14,8 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 	<link rel="stylesheet" type="text/css" href="../css/home_acceuil.css">
 	<meta charset="utf-8"/>
 	<title>ProgrammingAnts</title>
+
+    <script type="text/javascript" src="../javascript/framework/jquery.js"></script>
     <script type="text/javascript" src="../javascript/home.js"></script>
 
 </head>
@@ -34,10 +36,20 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 							}
 							else{
                                 echo '<div id="account">';
-                                    echo '<div class="disconnect">';
+                                    echo '<div class="identification disconnect">';
                                         echo '<a href="Disconnect.php">Disconnect</a>';
                                     echo '</div>';
-                                    echo '<img src="../images/programming_ants.png" class="user_image" />';
+<<<<<<< HEAD
+																echo '</div>';
+																echo '<div id="user">';
+																		echo '<div class="user_image">';
+                                    		echo '<img src="../images/user_image.png" class="user_image" />';
+																		echo '</div>';
+																		echo '<div class="username">';
+																				echo '<a href="#">Username</a>';
+																		echo '</div>';
+=======
+>>>>>>> 2e54419ce298fc9f2ba1320fe4aeb9ae13b36de2
                                 echo '</div>';
 							}
 							?>

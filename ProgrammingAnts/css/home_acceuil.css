@@ -21,7 +21,7 @@ body {
 
 	header {
 		display: flex;
-    position: absolute;
+        position: absolute;
 		background-color: white;
 		height: 82px;
 		width: 90%;
@@ -54,9 +54,9 @@ body {
 
 					#account {
 						display: flex;
-            position: absolute;
+                        position: absolute;
 						top: 24px;
-						left: 75%;
+						right: 150px;
 					}
 
 						.identification {
@@ -94,18 +94,7 @@ body {
 									}
 
 										.disconnect {
-											position: absolute;
-											left: 95;
-											background-color: white;
-											padding-top: 5px;
-											padding-bottom: 5px;
-											padding-left: 20px;
-											padding-right: 20px;
-											height: 20px;
-											color: #df4f48;
-											border: 2px solid;
-											border-color: #df4f48;
-											border-radius: 50px;
+											width: 70px;
 										}
 
                                         .user_image {
@@ -213,13 +202,13 @@ body {
 					height: 25px;
 				}
 
-					
+
 
 	/* FOOTER */
 
 		footer {
 			display: flex;
-      position: absolute;
+            position: fixed;
 			background-color: #24252f;
 			width: 100%;
 			height: 130px;

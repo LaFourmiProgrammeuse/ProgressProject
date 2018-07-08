@@ -39,6 +39,10 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
                                     echo '<div class="identification disconnect">';
                                         echo '<a href="Disconnect.php">Disconnect</a>';
                                     echo '</div>';
+<<<<<<< HEAD
+=======
+
+>>>>>>> fd81e80edc8b4d495553365273b6028e91f66685
 																echo '</div>';
 																echo '<div id="user">';
 																		echo '<div class="user_image">';
@@ -47,6 +51,10 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 																		echo '<div class="username">';
 																				echo '<a href="#">Username</a>';
 																		echo '</div>';
+<<<<<<< HEAD
+=======
+
+>>>>>>> fd81e80edc8b4d495553365273b6028e91f66685
                                 echo '</div>';
 							}
 							?>

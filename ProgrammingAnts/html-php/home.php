@@ -39,7 +39,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
                                     echo '<div class="identification disconnect">';
                                         echo '<a href="Disconnect.php">Disconnect</a>';
                                     echo '</div>';
-<<<<<<< HEAD
+
 																echo '</div>';
 																echo '<div id="user">';
 																		echo '<div class="user_image">';
@@ -48,8 +48,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 																		echo '<div class="username">';
 																				echo '<a href="#">Username</a>';
 																		echo '</div>';
-=======
->>>>>>> 2e54419ce298fc9f2ba1320fe4aeb9ae13b36de2
+
                                 echo '</div>';
 							}
 							?>

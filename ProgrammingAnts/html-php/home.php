@@ -50,10 +50,10 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
 				<div id="top_menu">
 
-					<div class="shortcut"><h3><a href="projects.html">Projects</a></h3></div>
+					<div class="shortcut"><h3><a href="#">Projects</a></h3></div>
 						<div class="shortcut"><h3><a href="forum.html">Forum</a></h3></div>
-							<div class="shortcut"><h3><a href="about.html">About</a></h3></div>
-								<div class="shortcut"><h3><a href="contact.html">Contact</a></h3></div>
+							<div class="shortcut"><h3><a href="#">About</a></h3></div>
+								<div class="shortcut"><h3><a href="#">Contact</a></h3></div>
 
 				</div>
 			</nav>

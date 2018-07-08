@@ -81,6 +81,14 @@ body {
                         top: 33px;
                     }
 
+                    #validation_nickname {
+                        position: absolute;
+                        left: 385px;
+                        top: 30px;
+                        width: 25px;
+                        height: 25px;
+                    }
+
                     #pass{
                         position: absolute;
                         left: 170px;
@@ -95,6 +103,14 @@ body {
                         top: 73px;
                     }
 
+                    #validation_pass {
+                        position: absolute;
+                        left: 385px;
+                        top: 73px;
+                        width: 25px;
+                        height: 25px;
+                    }
+
                     #confirmation_password{
                         position: absolute;
                         left: 170px;
@@ -104,9 +120,17 @@ body {
                     }
 
                     #confirmation_password_label{
-                         position: absolute;
-                         left: 42px;
+                        position: absolute;
+                        left: 42px;
                         top: 113px;
+                    }
+
+                    #validation_confirmation_password {
+                        position: absolute;
+                        left: 385px;
+                        top: 113px;
+                        width: 25px;
+                        height: 25px;
                     }
 
                     #email{
@@ -121,6 +145,14 @@ body {
                          position: absolute;
                          left: 120px;
                          top: 153px;
+                    }
+
+                    #validation_email {
+                        position: absolute;
+                        left: 385px;
+                        top: 153px;
+                        width: 25px;
+                        height: 25px;
                     }
 
 

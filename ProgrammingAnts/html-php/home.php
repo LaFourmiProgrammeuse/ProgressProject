@@ -60,8 +60,9 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
 					<div class="shortcut"><h3><a href="#">Projects</a></h3></div>
 						<div class="shortcut"><h3><a href="forum.html">Forum</a></h3></div>
-							<div class="shortcut"><h3><a href="#">About</a></h3></div>
-								<div class="shortcut"><h3><a href="#">Contact</a></h3></div>
+							<div class="shortcut"><h3><a href="#">Blog</a></h3></div>
+								<div class="shortcut"><h3><a href="#">About</a></h3></div>
+									<div class="shortcut"><h3><a href="#">Contact</a></h3></div>
 
 				</div>
 			</nav>

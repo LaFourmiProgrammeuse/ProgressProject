@@ -6,59 +6,108 @@ body {
 
 	/* HEADER */
 
-	header {
-		display: flex;
-		background-color: #131313;
-		height: 60px;
-		box-shadow: 1px 1px 10px black;
-	}
-
-		.programming_ants_name {
-			position: absolute;
-			font-family: Arial Black;
-			font-size: 20px;
-			left: 2.5%;
+		header {
+			display: flex;
+			background-color: #131313;
+			height: 65px;
+			box-shadow: 0px 0px 3px black;
 		}
 
-			header a {
-				color: #df4f48;
-				text-decoration: none;
-			}
+		header a {
+			color: #e7e7e7;
+			text-decoration: none;
+		}
 
 			.programming_ants_logo {
 				position: absolute;
-				top: 10px;
-				left: 37.5%;
+				top: 7px;
+				left: 10%;
 				width: 50px;
 				height: 50px;
 			}
 
-				.programming_ants_expansion {
+			.programming_ants_name {
+				position: absolute;
+				font-family: Helvetica, Arial;
+				font-size: 20px;
+				font-weight: bold;
+				top: -8px;
+				left: 13.5%;
+			}
+
+			.programming_ants_extension {
+				position: absolute;
+				font-size: 20px;
+				font-family: Arial;
+				color: #1e9fd0;
+				left: 32%;
+				top: 25px;
+			}
+
+				#account {
+					display: flex;
 					position: absolute;
-					font-size: 20px;
-					font-family: Arial;
-					color: #1e9fd0;
-					left: 43.5%;
-					top: 28px;
+					top: 20px;
+					left: 66%;
 				}
 
-					#search {
-						background-color: white;
+				.identification {
+					padding-top: 3px;
+					padding-bottom: 5px;
+					padding-left: 10px;
+					padding-right: 10px;
+					width: 53px;
+					height: 15px;
+					border: 2px solid;
+					border-color: #1e9fd0;
+					border-radius: 50px;
+				}
+
+				.identification a {
+					color: #1e9fd0;
+				}
+
+				.identification:hover a {
+					color: #131313;
+				}
+
+				.identification:hover {
+					border-color: #1e9fd0;
+					background-color: #1e9fd0;
+				}
+
+				.identification:nth-child(1) {
+					margin-right: 25px;
+				}
+
+
+					#searching_bar {
+						position: absolute;
+						background-color: #272525;
+						left: 80%;
+						top: 20px;
+						width: 150px;
+						height: 30px;
+						border: 1px solid;
+						border-color: #2b2b2b;
 					}
 
-						#searching_bar {
-							position: absolute;
-							background: black;
-							left: 80%;
-							top: 20px;
-							width: 150px;
-							height: 25px;
+					#ok {
+						position: absolute;
+						height: 30px;
+						width: 30px;
+						top: 20px;
+						left: 91%;
+					}
+
+						#top_menu {
+
 						}
 
-							#ok {
-								position: absolute;
-								height: 30px;
-								width: 30px;
-								top: 20px;
-								left: 95%;
-							}
+						.menu img {
+							position: absolute;
+							width: 35px;
+							height: 35px;
+							top: 17px;
+							left: 94%;
+						}

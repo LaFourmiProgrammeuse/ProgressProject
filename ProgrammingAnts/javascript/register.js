@@ -37,11 +37,11 @@ function PassValidation(){
     }
     else if(pass_value.length < character_needed || !hasSpecialCharacter(pass_value)){
         console.log("2");
-        $("#validation_pass").src = "../images/wrong.png";
+        $("#validation_pass").attr("src", "../images/wrong.png");
     }
     else{
         console.log("3");
-        $("#validation_pass").src = "../images/check.png?"+new Date().getMilliseconds();
+        $("#validation_pass").attr("src", "../images/check.png");
     }
 }
 

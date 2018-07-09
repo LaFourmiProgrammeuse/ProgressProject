@@ -78,6 +78,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 			<div id="reconnection">
 				<div class="message"><img src="../images/exit.png" class="exit"/></div>
 				<div class="message">Welcome back !</div>
+                <div class="message" id="message_user"><p align="center">Pseudo<p></div>
 			</div>
 
 		</aside>

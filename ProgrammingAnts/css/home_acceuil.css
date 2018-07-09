@@ -10,6 +10,9 @@
 		.shortcut a:hover {
 			color: #df4f48;
 		}
+p {
+ margin: 0px;
+}
 
 body {
 	background-color: white;
@@ -235,6 +238,14 @@ body {
 				top: 15%;
 				left: 5%;
 			}
+            #message_user {
+                top: 54%;
+                width: 80%;
+                margin-left: 10%;
+                margin-right: 10%;
+                align: center;
+                height: 60px;
+            }
 
 				.exit {
 					position: absolute;

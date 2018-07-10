@@ -1,113 +1,173 @@
+a {
+	text-decoration: none;
+}
+
 body {
 	margin: 0;
 	padding: 0;
 	background-color: #272525;
 }
 
-	/* HEADER */
+/* HEADER */
 
-		header {
-			display: flex;
+	header {
+		display: flex;
+		background-color: #131313;
+		height: 65px;
+		box-shadow: 0px 0px 3px black;
+	}
+
+	header a {
+		color: #e7e7e7;
+		text-decoration: none;
+	}
+
+		.programming_ants_logo {
+			position: absolute;
+			top: 7px;
+			left: 145px;
+			width: 50px;
+			height: 50px;
+		}
+
+		.programming_ants_name {
+			position: absolute;
+			font-family: Helvetica, Arial;
+			font-size: 20px;
+			font-weight: bold;
+			top: -8px;
+			left: 195px;
+		}
+
+		.programming_ants_extension {
+			position: absolute;
+			font-size: 20px;
+			font-family: Arial;
+			color: #1e9fd0;
+			left: 460px;
+			top: 25px;
+		}
+
+			#account {
+				display: flex;
+				position: absolute;
+				top: 20px;
+				left: 950px;
+			}
+
+			.identification {
+				padding-top: 3px;
+				padding-bottom: 5px;
+				padding-left: 10px;
+				padding-right: 10px;
+				width: 53px;
+				height: 15px;
+				border: 2px solid;
+				border-color: #1e9fd0;
+				border-radius: 50px;
+			}
+
+			.identification a {
+				color: #1e9fd0;
+			}
+
+			.identification:hover a {
+				color: #131313;
+			}
+
+			.identification:hover {
+				border-color: #1e9fd0;
+				background-color: #1e9fd0;
+			}
+
+			.identification:nth-child(1) {
+				margin-right: 25px;
+			}
+
+				#drop-down_menu {
+
+				}
+
+				.drop-down img {
+					position: absolute;
+					width: 35px;
+					height: 35px;
+					top: 15px;
+					left: 1150px;
+				}
+
+	/* NAV */
+
+		nav {
+			position: absolute;
 			background-color: #131313;
-			height: 65px;
+			top: 135px;
+			width: 65%;
+			height: 50px;
+			left: 250px;
 			box-shadow: 0px 0px 3px black;
 		}
 
-		header a {
-			color: #e7e7e7;
-			text-decoration: none;
-		}
-
-			.programming_ants_logo {
+			#top_menu {
 				position: absolute;
+				display: flex;
+				justify-content: space-between;
+				background-color: #272525;
 				top: 7px;
-				left: 10%;
-				width: 50px;
-				height: 50px;
+				width: 30%;
+				height: 35px;
+				left: 10px;
+				padding-left: 25px;
+				padding-right: 40px;
+				border-left: 25px solid #1e9fd0;
+				border-right: 2px solid #1e9fd0;
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
 			}
 
-			.programming_ants_name {
-				position: absolute;
-				font-family: Helvetica, Arial;
-				font-size: 20px;
-				font-weight: bold;
-				top: -8px;
-				left: 13.5%;
-			}
-
-			.programming_ants_extension {
-				position: absolute;
-				font-size: 20px;
+			.option {
+				padding-top: 8px;
+				font-size: 18px;
 				font-family: Arial;
-				color: #1e9fd0;
-				left: 32%;
-				top: 25px;
 			}
 
-				#account {
-					display: flex;
+			.option a {
+				color: #8b8b8b;
+			}
+
+			.option img {
+				position: absolute;
+				height: 20px;
+				width: 20px;
+			}
+
+			.option:nth-child(2):hover a {
+				color: #1e9fd0;
+			}
+
+			.option:nth-child(3):hover a {
+				color: #1e9fd0;
+			}
+
+			.option:nth-child(4):hover a {
+				color: #1e9fd0;
+			}
+
+				#searching_bar {
 					position: absolute;
-					top: 20px;
-					left: 66%;
+					background-color: #272525;
+					left: 710px;
+					top: 10px;
+					width: 150px;
+					height: 30px;
+					border: 1px solid;
+					border-color: #2b2b2b;
 				}
 
-				.identification {
-					padding-top: 3px;
-					padding-bottom: 5px;
-					padding-left: 10px;
-					padding-right: 10px;
-					width: 53px;
-					height: 15px;
-					border: 2px solid;
-					border-color: #1e9fd0;
-					border-radius: 50px;
+				#ok {
+					position: absolute;
+					height: 30px;
+					width: 30px;
+					top: 10px;
+					left: 870px;
 				}
-
-				.identification a {
-					color: #1e9fd0;
-				}
-
-				.identification:hover a {
-					color: #131313;
-				}
-
-				.identification:hover {
-					border-color: #1e9fd0;
-					background-color: #1e9fd0;
-				}
-
-				.identification:nth-child(1) {
-					margin-right: 25px;
-				}
-
-
-					#searching_bar {
-						position: absolute;
-						background-color: #272525;
-						left: 80%;
-						top: 20px;
-						width: 150px;
-						height: 30px;
-						border: 1px solid;
-						border-color: #2b2b2b;
-					}
-
-					#ok {
-						position: absolute;
-						height: 30px;
-						width: 30px;
-						top: 20px;
-						left: 91%;
-					}
-
-						#top_menu {
-
-						}
-
-						.menu img {
-							position: absolute;
-							width: 35px;
-							height: 35px;
-							top: 17px;
-							left: 94%;
-						}

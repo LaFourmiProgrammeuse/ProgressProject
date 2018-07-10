@@ -87,6 +87,7 @@ body {
                         top: 30px;
                         width: 25px;
                         height: 25px;
+                        visibility: hidden;
                     }
 
                     #pass{
@@ -109,6 +110,7 @@ body {
                         top: 73px;
                         width: 25px;
                         height: 25px;
+                        visibility: hidden;
                     }
 
                     #confirmation_password{
@@ -131,6 +133,7 @@ body {
                         top: 113px;
                         width: 25px;
                         height: 25px;
+                        visibility: hidden;
                     }
 
                     #email{
@@ -153,6 +156,7 @@ body {
                         top: 153px;
                         width: 25px;
                         height: 25px;
+                        visibility: hidden;
                     }
 
 

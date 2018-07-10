@@ -236,7 +236,7 @@ $("#confirmation_password").keyup(function(){
 
 $("#email").keyup(function(){
 
-    //EmailValidation();
+    EmailValidation();
 });
 
 });

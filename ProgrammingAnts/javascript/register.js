@@ -1,5 +1,6 @@
 var special_character = new Array('&', '@', '#', '*', '$');
 var number = new Array('1', '2', '3', '4', '5', '6', '7', '8', '9');
+var character_alphanumeric = new Array('a', 'b','c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
 
 var pass_special_character_needed = 2;
 var pass_number_needed = 2;
@@ -66,8 +67,47 @@ function hasNumber(string, number_to_found){
     return false;
 }
 
-function isValidMail(string){
+function isValidMail(mail){
 
+    var arobase = false;
+    var point = false;
+
+    for(var i = 0; i < mail.length; i++){
+
+        if(mail[i] == '@'){
+
+            if(arobase == true){
+                return false;
+            }
+            else{
+                arobase = true;
+                continue;
+            }
+        }
+        else if(mail[i] == '.'){
+
+            if(arobase == true){
+                point = true;
+                continue;
+            }
+        }
+
+        for(var e = 0; e < character_alphanumeric.length; e++){
+
+            if(mail[i] == character_alphanumeric[e] || mail[i] == '.'){
+                break;
+            }
+            else if(e == (character_alphanumeric.length-1)){
+                return false;
+            }
+        }
+    }
+
+    if(arobase == false || point == false){
+        return false;
+    }
+
+    return true;
 }
 
 function PassValidation(){
@@ -151,6 +191,29 @@ function PassConfirmValidation(){
 
 function EmailValidation(){
 
+    var email_value = $("#email").val();
+
+    if(email_value.length == 0){
+
+        console.log("1");
+        $("#validation_email").css("visibility", "hidden");
+
+    }
+    else if(!isValidMail(email_value)){
+
+        console.log("2");
+        $("#validation_email").attr("src", "../images/wrong.png");
+        $("#validation_email").css("visibility", "visible");
+
+    }
+    else{
+
+        console.log("3");
+        $("#validation_email").attr("src", "../images/check.png");
+        $("#validation_email").css("visibility", "visible");
+
+    }
+
 }
 
 //On initialise les evênements lorque la page est chargée
@@ -173,7 +236,7 @@ $("#confirmation_password").keyup(function(){
 
 $("#email").keyup(function(){
 
-    EmailValidation();
+    //EmailValidation();
 });
 
 });

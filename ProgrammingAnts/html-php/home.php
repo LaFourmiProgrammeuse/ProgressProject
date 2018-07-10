@@ -45,7 +45,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
                                     		echo '<img src="../images/user_image.png" class="user_image" />';
 																		echo '</div>';
 																		echo '<div class="username">';
-																				echo '<a href="#">Username</a>';
+																				echo '<a href="#">' . $_SESSION["identifiant"] . '</a>';
 																		echo '</div>';
                                 echo '</div>';
 							}

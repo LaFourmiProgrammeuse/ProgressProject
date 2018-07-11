@@ -7,7 +7,7 @@ var pass_number_needed = 2;
 var pass_character_needed = 8;
 
 var nickname_character_needed = 6;
-var nickname_character_max = 13;
+var nickname_character_max = 11;
 
 //For icon clear IE/EDGE
 var nickname_old_value = "";
@@ -124,6 +124,8 @@ function PassValidation(){
         console.log("1");
         $("#validation_pass").css("visibility", "hidden");
 
+        return false;
+
     }
     else if(pass_value.length < pass_character_needed || !hasSpecialCharacter(pass_value, pass_special_character_needed) || !hasNumber(pass_value, pass_number_needed)){
 
@@ -131,12 +133,16 @@ function PassValidation(){
         $("#validation_pass").attr("src", "../images/wrong.png");
         $("#validation_pass").css("visibility", "visible");
 
+        return false;
+
     }
     else{
 
         console.log("3");
         $("#validation_pass").attr("src", "../images/check.png");
         $("#validation_pass").css("visibility", "visible");
+
+        return true;
 
     }
 }
@@ -150,12 +156,16 @@ function NicknameValidation(){
         console.log("1");
         $("#validation_nickname").css("visibility", "hidden");
 
+        return false;
+
     }
-    else if(nickname_value.length < nickname_character_needed || hasSpecialCharacter(nickname_value, 0) || nickname_value > nickname_character_max){
+    else if(nickname_value.length < nickname_character_needed || hasSpecialCharacter(nickname_value, 0) || nickname_value.length > nickname_character_max){
 
         console.log("2");
         $("#validation_nickname").attr("src", "../images/wrong.png");
         $("#validation_nickname").css("visibility", "visible");
+
+        return false;
 
     }
     else{
@@ -163,6 +173,8 @@ function NicknameValidation(){
         console.log("3");
         $("#validation_nickname").attr("src", "../images/check.png");
         $("#validation_nickname").css("visibility", "visible");
+
+        return true;
 
     }
 }
@@ -177,6 +189,8 @@ function PassConfirmValidation(){
         console.log("1");
         $("#validation_confirmation_password").css("visibility", "hidden");
 
+        return false;
+
     }
     else if(pass_confirm_value != pass_value){
 
@@ -184,12 +198,16 @@ function PassConfirmValidation(){
         $("#validation_confirmation_password").attr("src", "../images/wrong.png");
         $("#validation_confirmation_password").css("visibility", "visible");
 
+        return false;
+
     }
     else{
 
         console.log("3");
         $("#validation_confirmation_password").attr("src", "../images/check.png");
         $("#validation_confirmation_password").css("visibility", "visible");
+
+        return true;
 
     }
 }
@@ -203,12 +221,16 @@ function EmailValidation(){
         console.log("1");
         $("#validation_email").css("visibility", "hidden");
 
+        return false;
+
     }
     else if(!isValidMail(email_value)){
 
         console.log("2");
         $("#validation_email").attr("src", "../images/wrong.png");
         $("#validation_email").css("visibility", "visible");
+
+        return false;
 
     }
     else{
@@ -217,8 +239,20 @@ function EmailValidation(){
         $("#validation_email").attr("src", "../images/check.png");
         $("#validation_email").css("visibility", "visible");
 
+        return true;
+
     }
 
+}
+
+function Validation(){
+
+    if(NicknameValidation() == true && PassValidation() == true && PassConfirmValidation() == true && EmailValidation() == true){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
 
 //On initialise les evênements lorque la page est chargée
@@ -285,6 +319,13 @@ $("#email").mouseup(function(){
         }
     }, 30);
 
+});
+
+$("#send").click(function(){
+
+    if(Validation()){
+        $("form").submit();
+    }
 });
 
 });

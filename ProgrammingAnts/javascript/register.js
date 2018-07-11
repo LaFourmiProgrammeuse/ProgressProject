@@ -4,9 +4,14 @@ var character_alphanumeric = new Array('a', 'b','c', 'd', 'e', 'f', 'g', 'h', 'i
 
 var pass_special_character_needed = 2;
 var pass_number_needed = 2;
-
 var pass_character_needed = 8;
+
 var nickname_character_needed = 6;
+var nickname_character_max = 13;
+
+//For icon clear IE/EDGE
+var nickname_old_value = "";
+var email_old_value = "";
 
 function hasSpecialCharacter(string, number_special_character_to_found){
 
@@ -146,7 +151,7 @@ function NicknameValidation(){
         $("#validation_nickname").css("visibility", "hidden");
 
     }
-    else if(nickname_value.length < nickname_character_needed || hasSpecialCharacter(nickname_value, 0)){
+    else if(nickname_value.length < nickname_character_needed || hasSpecialCharacter(nickname_value, 0) || nickname_value > nickname_character_max){
 
         console.log("2");
         $("#validation_nickname").attr("src", "../images/wrong.png");
@@ -224,9 +229,36 @@ $("#pass").keyup(function(){
     PassValidation();
 });
 
-$("#nickname").keyup(function(){
+$("#nickname").change(function(){
+
+    console.log("Nickname old value setted");
+
+    nickname_old_value = $("#nickname").val();
 
     NicknameValidation();
+});
+
+$("#nickname").keyup(function(){
+
+    console.log("Nickname old value setted");
+
+    nickname_old_value = $("#nickname").val();
+
+    NicknameValidation();
+});
+
+$("#nickname").mouseup(function(){
+
+    setTimeout(function(){
+
+        var nickname_new_value = $("#nickname").val();
+
+        if(nickname_new_value == "" && nickname_old_value != ""){
+
+            NicknameValidation();
+        }
+    }, 30);
+
 });
 
 $("#confirmation_password").keyup(function(){
@@ -236,7 +268,23 @@ $("#confirmation_password").keyup(function(){
 
 $("#email").keyup(function(){
 
+    email_old_value = $("#email").val();
+
     EmailValidation();
+});
+
+$("#email").mouseup(function(){
+
+    setTimeout(function(){
+
+        var email_new_value = $("#email").val();
+
+        if(email_new_value == "" && email_old_value != ""){
+
+            EmailValidation();
+        }
+    }, 30);
+
 });
 
 });

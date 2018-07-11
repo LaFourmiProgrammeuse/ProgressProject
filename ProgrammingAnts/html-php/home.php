@@ -39,10 +39,11 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
                                     echo '<div class="identification disconnect">';
                                         echo '<a href="Disconnect.php">Disconnect</a>';
                                     echo '</div>';
-																echo '</div>';
+								echo '</div>';
+                                                            //image de profil et pseudo de l'utilisateur connecter (header)
 																echo '<div id="user">';
-																		echo '<div class="user_image">';
-                                    		echo '<img src="../images/user_image.png" class="user_image" />';
+																	echo '<div class="user_image">';
+                                    		                            echo '<img src="../images/user_image.png" class="user_image" />';
 																		echo '</div>';
 																		echo '<div class="username">';
 																				echo '<p><a href="#">' . $_SESSION["identifiant"] . '</a></p>';
@@ -79,7 +80,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 			<div id="reconnection">
 				<div class="message"><img src="../images/exit.png" class="exit"/></div>
 				<div class="message">Welcome back !</div>
-                <div class="message" id="message_user"><p align="center">Pseudo<p></div>
+                <div class="message" id="message_user"><p>Pseudo<p></div>
 			</div>
 
 		</aside>

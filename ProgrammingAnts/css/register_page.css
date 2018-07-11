@@ -16,7 +16,7 @@ body {
 		font-family: Arial Black;
 		position: absolute;
 		margin-top: 15px;
-		margin-left: 80px;
+		margin-left: 90px;
 	}
 
 	/* CENTER WINDOW */
@@ -36,7 +36,7 @@ body {
 			height: 50px;
 			width: 50px;
 			margin-top: 15px;
-			margin-left: 380px;
+			margin-left: 390px;
 		}
 
 			/* ==> FIELDSET */
@@ -180,3 +180,31 @@ body {
 							border-color: #df4f48;
 							border-radius: 50px;
 						}
+
+                /* FORMULAIRE ERROR */
+
+                    .text_error{ /* Modifie le formatage du texte des erreurs */
+                        padding-left: 5px;
+                        padding-right: 5px;
+                    }
+
+                    .message_error{ /*Ce qu'il faut appliquer a tout les messages d'erreurs */
+                        width: 250px;
+                        height: 50px;
+                        background-color: #fb7777;
+                        border: solid 1px black;
+                    }
+
+                    #message_error_bad_filled{
+                        position: relative;
+                        top: 350px;
+                        left: -95px;
+                        visibility: hidden;
+                    }
+
+                    #message_error_nickname{ /*Ce qu'il faut appliquer individuellement */
+                        position: relative;
+                        top: 100px;
+                        left: 500px;
+                        visibility: hidden;
+                    }

@@ -326,6 +326,9 @@ $("#send").click(function(){
     if(Validation()){
         $("form").submit();
     }
+    else{
+        $("#message_error_bad_filled").css("visibility", "visible");
+    }
 });
 
 });

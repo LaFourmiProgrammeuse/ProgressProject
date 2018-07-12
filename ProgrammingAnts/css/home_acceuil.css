@@ -16,7 +16,7 @@ body {
 
 		header {
 			display: flex;
-    	    position: absolute;
+    	position: absolute;
 			background-color: white;
 			height: 82px;
 			width: 90%;
@@ -35,38 +35,43 @@ body {
 				font-size: 22px;
 				color: #24252f;
 				display: flex;
-				font-family: Arial Black;
-				left: 30px;
-				line-height: 16px;
+				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+				font-style: italic;
+				text-shadow: 1px 1px 2px black;
+				left: 50px;
+				line-height: 21px;
 			}
 
 			.programming_ants_logo {
 				position: absolute;
 				width: 60px;
 				height: 60px;
-				left: 470px;
+				left: 450px;
 				top: 12px;
 			}
 
 				#account {
 					display: flex;
-                    position: absolute;
+          position: absolute;
 					top: 24px;
 					right: 50px;
 				}
 
 				.identification {
+					font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+					font-size: 14px;
+					text-align: center;
 					background-color: white;
-					padding-top: 5px;
-					padding-bottom: 5px;
-					padding-left: 20px;
-					padding-right: 20px;
-					width: 53px;
-					height: 20px;
 					color: #df4f48;
 					border: 2px solid;
 					border-color: #df4f48;
 					border-radius: 50px;
+					height: 20px;
+					width: 50px;
+					padding-top: 5px;
+					padding-bottom: 2px;
+					padding-left: 7px;
+					padding-right: 7px;
 				}
 
 				.identification a {
@@ -75,6 +80,7 @@ body {
 
 				.identification:nth-child(1) {
 					margin-right: 25px;
+					padding-left: 6px;
 				}
 
 				.identification:nth-child(1):hover a {
@@ -116,10 +122,10 @@ body {
 					}
 
             #user {
-                position: absolute;
-			    top: 13px;
-                width: 150px;
-                height: 55px;
+              position: absolute;
+			    		top: 13px;
+              width: 150px;
+              height: 55px;
             	right: 180px;
             }
 
@@ -135,12 +141,12 @@ body {
 
 							.username {
 								position: absolute;
-								font-family: Arial;
+								font-family: Helvetica, Arial, Tahoma;
 								font-size: 20px;
 								top: 15px;
 								left: 40%;
-                                width: 92px;
-                                text-align: center;
+                width: 92px;
+                text-align: center;
 							}
 
 	/* SECTION */
@@ -164,23 +170,23 @@ body {
 
 		#top_menu {
 			display: flex;
-            position: absolute;
+      position: absolute;
 			justify-content: space-between;
 			background-color: #24252f;
 			border-top-left-radius: 14px;
 			border-top-right-radius: 14px;
-            height: 10%;
-            width: 100%;
+      height: 10%;
+      width: 100%;
 			max-height: 45px;
 		}
 
 		.option {
 			color: white;
-			font-family: Arial;
-			font-size: 15px;
-			line-height: 10px;
-            margin-right: 40px;
-            margin-left: 40px;
+			font-family: Verdana, "DejaVu Sans", "Bitstream Vera Sans", Geneva, sans-serif;
+			font-size: 14px;
+			line-height: 9px;
+      margin-right: 40px;
+      margin-left: 40px;
 		}
 
 		.option a {
@@ -194,28 +200,28 @@ body {
 	/* ARTICLE */
 
         article{
-            position: absolute;
-			top: 9%;
+          position: absolute;
+					top: 9%;
         	height: 455px;
-    		width: 100%;
+    			width: 100%;
         }
 
 		    .working {
-                position: absolute;
+          position: absolute;
 			    width: 42.5%;
 			    height: 450px;
 			    top: 30px;
-                margin-left: 30%;
-                margin-right: 30%;
+          margin-left: 30%;
+          margin-right: 30%;
 		    }
 
             #message_connection {
-                position: absolute;
-                color: white;
-                background-color: green;
-                bottom: 130px;
-                left: 30px;
-                display: block;
+              position: absolute;
+              color: white;
+              background-color: green;
+              bottom: 130px;
+              left: 30px;
+              display: block;
             }
 
 	/* ASIDE */
@@ -240,18 +246,18 @@ body {
 			position: absolute;
 			color: #36393e;
 			font-size: 20px;
-			font-family: Arial;
+			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 			top: 15%;
 			left: 5%;
 		}
 
 		#message_user {
-            top: 54%;
-            width: 80%;
-            margin-left: 10%;
-            margin-right: 10%;
-            align: center;
-            height: 60px;
+      top: 54%;
+      width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
+      align: center;
+      height: 60px;
     }
 
 		.exit {
@@ -265,7 +271,7 @@ body {
 
 		footer {
 			display: flex;
-            position: absolute;
+      position: absolute;
 			background-color: #24252f;
 			width: 100%;
 			height: 130px;

@@ -32,7 +32,7 @@ body {
 
 		.programming_ants_name {
 			position: absolute;
-			font-family: Helvetica, Arial;
+			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 			font-size: 20px;
 			font-weight: bold;
 			top: -8px;
@@ -42,7 +42,7 @@ body {
 		.programming_ants_extension {
 			position: absolute;
 			font-size: 20px;
-			font-family: Arial;
+			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 			color: #1e9fd0;
 			left: 460px;
 			top: 25px;
@@ -56,10 +56,13 @@ body {
 			}
 
 			.identification {
+				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+				font-size: 14px;
 				padding-top: 3px;
 				padding-bottom: 5px;
-				padding-left: 10px;
-				padding-right: 10px;
+				padding-left: 7px;
+				padding-right: 7px;
+				text-align: center;
 				width: 53px;
 				height: 15px;
 				border: 2px solid;
@@ -128,7 +131,7 @@ body {
 			.option {
 				padding-top: 8px;
 				font-size: 18px;
-				font-family: Arial;
+				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 			}
 
 			.option a {

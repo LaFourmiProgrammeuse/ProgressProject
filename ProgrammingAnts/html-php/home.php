@@ -43,7 +43,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
                                                             //image de profil et pseudo de l'utilisateur connecter (header)
 																echo '<div id="user">';
 																	echo '<div class="user_image">';
-                                    		                            echo '<img src="../images/user_image.png" class="user_image" />';
+                                    		                            echo '<img src="../images/no_user_image.png" class="user_image" />';
 																		echo '</div>';
 																		echo '<div class="username">';
 																				echo '<p><a href="#">' . $_SESSION["identifiant"] . '</a></p>';

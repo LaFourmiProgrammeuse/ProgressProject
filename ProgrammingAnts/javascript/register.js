@@ -21,6 +21,20 @@ function Show_Nickname_Error(){
 
     if(!NicknameValidation() && $("#nickname").val() != ""){
 
+        var error = "The nickname is not valid because :<br/><ul>";
+
+        var nickname_value = $("#nickname").val();
+        if(nickname_value.length < nickname_character_needed){
+            error = error+"<li>The nickname must be at least 6 characters !</li>";
+        }
+        else if(nickname_value.length > nickname_character_needed){
+            error = error+"<li>The nickname must be at max 11 characters !</li>";
+        }
+
+        arror = error+"</ul>";
+
+        $("#message_error_nickname p").html(error);
+
         $("#message_error_nickname").css("visibility", "visible");
 
     }
@@ -40,11 +54,11 @@ function Show_Pass_Error(){
         var error = "The password is not valid because :<br/><ul>";
 
         var pass_value = $("#pass").val();
-        if(pass_value.length < nickname_character_needed){
-            error = error+"<li>The password must be at least 6 characters !</li>";
+        if(pass_value.length < pass_character_needed){
+            error = error+"<li>The password must be at least 8 characters !</li>";
         }
         if(!hasSpecialCharacter(pass_value, 2)){
-            error = error+"<li>The password must be at least 6 specials characters !</li>";
+            error = error+"<li>The password must be at least 2 specials characters !</li>";
         }
 
         error = error+"</ul>";

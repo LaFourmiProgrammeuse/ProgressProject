@@ -13,6 +13,88 @@ var nickname_character_max = 11;
 var nickname_old_value = "";
 var email_old_value = "";
 
+function Show_Nickname_Error(){
+
+    $("#message_error_password").css("visibility", "hidden");
+    $("#message_error_password_confirm").css("visibility", "hidden");
+    $("#message_error_email").css("visibility", "hidden");
+
+    if(!NicknameValidation() && $("#nickname").val() != ""){
+
+        $("#message_error_nickname").css("visibility", "visible");
+
+    }
+    else{
+        $("#message_error_nickname").css("visibility", "hidden");
+    }
+}
+
+function Show_Pass_Error(){
+
+    $("#message_error_nickname").css("visibility", "hidden");
+    $("#message_error_password_confirm").css("visibility", "hidden");
+    $("#message_error_email").css("visibility", "hidden");
+
+    if(!PassValidation() && $("#pass").val() != ""){
+
+        var error = "The password is not valid because :<br/><ul>";
+
+        var pass_value = $("#pass").val();
+        if(pass_value.length < nickname_character_needed){
+            error = error+"<li>The password must be at least 6 characters !</li>";
+        }
+        if(!hasSpecialCharacter(pass_value, 2)){
+            error = error+"<li>The password must be at least 6 specials characters !</li>";
+        }
+
+        error = error+"</ul>";
+
+        $("#message_error_password p").html(error);
+
+        $("#message_error_password").css("visibility", "visible");
+
+    }
+    else{
+        $("#message_error_password").css("visibility", "hidden");
+    }
+}
+
+function Show_Pass_Confirm_Error(){
+
+    var error = "The confirmation password needs :<br/>";
+
+    $("#message_error_nickname").css("visibility", "hidden");
+    $("#message_error_password").css("visibility", "hidden");
+    $("#message_error_email").css("visibility", "hidden");
+
+    if(!PassConfirmValidation() && $("#confirmation_password").val() != ""){
+
+        $("#message_error_password_confirm").css("visibility", "visible");
+
+    }
+    else{
+        $("#message_error_password_confirm").css("visibility", "hidden");
+    }
+}
+
+function Show_Email_Error(){
+
+    var error = "The password needs :<br/>";
+
+    $("#message_error_nickname").css("visibility", "hidden");
+    $("#message_error_password_confirm").css("visibility", "hidden");
+    $("#password").css("visibility", "hidden");
+
+    if(!EmailValidation() && $("#email").val() != ""){
+
+        $("#message_error_email").css("visibility", "visible");
+
+    }
+    else{
+         $("#message_error_email").css("visibility", "hidden");
+    }
+}
+
 function hasSpecialCharacter(string, number_special_character_to_found){
 
     var special_character_found = 0;
@@ -258,18 +340,12 @@ function Validation(){
 //On initialise les evênements lorque la page est chargée
 $(document).ready(function(){
 
-$("#pass").keyup(function(){
-
-    PassValidation();
-});
-
 $("#nickname").change(function(){
-
-    console.log("Nickname old value setted");
 
     nickname_old_value = $("#nickname").val();
 
     NicknameValidation();
+    Show_Nickname_Error();
 });
 
 $("#nickname").keyup(function(){
@@ -279,6 +355,7 @@ $("#nickname").keyup(function(){
     nickname_old_value = $("#nickname").val();
 
     NicknameValidation();
+    Show_Nickname_Error();
 });
 
 $("#nickname").mouseup(function(){
@@ -295,9 +372,37 @@ $("#nickname").mouseup(function(){
 
 });
 
+$("#nickname").focus(function(){
+
+    Show_Nickname_Error();
+
+});
+
+$("#pass").keyup(function(){
+
+    PassValidation();
+    Show_Pass_Error();
+
+});
+
+$("#pass").focus(function(){
+
+    Show_Pass_Error();
+
+});
+
 $("#confirmation_password").keyup(function(){
 
     PassConfirmValidation();
+});
+
+$("#email").change(function(){
+
+    email_old_value = $("#email").val();
+
+    EmailValidation();
+    Show_Email_Error();
+
 });
 
 $("#email").keyup(function(){
@@ -305,6 +410,8 @@ $("#email").keyup(function(){
     email_old_value = $("#email").val();
 
     EmailValidation();
+    Show_Email_Error();
+
 });
 
 $("#email").mouseup(function(){

@@ -22,6 +22,7 @@ body {
 	/* CENTER WINDOW */
 
 	section {
+        position: relative;
 		display: flex;
 		margin-top: 140px;
 		height: 400px;
@@ -184,13 +185,14 @@ body {
                 /* FORMULAIRE ERROR */
 
                     .text_error{ /* Modifie le formatage du texte des erreurs */
+                        width: 300px;
                         padding-left: 5px;
                         padding-right: 5px;
+                        word-wrap: break-word;
                     }
 
                     .message_error{ /*Ce qu'il faut appliquer a tout les messages d'erreurs */
-                        width: 250px;
-                        height: 50px;
+                        padding-bottom: auto;
                         background-color: #fb7777;
                         border: solid 1px black;
                     }
@@ -198,13 +200,27 @@ body {
                     #message_error_bad_filled{
                         position: relative;
                         top: 350px;
-                        left: -95px;
+                        left: -160px;
+                        height: 65px;
                         visibility: hidden;
                     }
 
+                    #text_error_bad_filled{
+                        text-align: center;
+                    }
+
                     #message_error_nickname{ /*Ce qu'il faut appliquer individuellement */
-                        position: relative;
+                        width: auto;
+                        height: auto;
+                        position: absolute;
                         top: 100px;
+                        left: 500px;
+                        visibility: hidden;
+                    }
+
+                    #message_error_password{
+                        width:auto; height:auto; position: absolute;
+                        top: 140px;
                         left: 500px;
                         visibility: hidden;
                     }

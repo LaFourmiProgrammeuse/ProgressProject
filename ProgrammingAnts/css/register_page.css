@@ -219,8 +219,28 @@ body {
                     }
 
                     #message_error_password{
-                        width:auto; height:auto; position: absolute;
+                        width:auto;
+                        height:auto;
+                        position: absolute;
                         top: 140px;
+                        left: 500px;
+                        visibility: hidden;
+                    }
+
+                    #message_error_confirmation_password{
+                        width:auto;
+                        height:auto;
+                        position: absolute;
+                        top: 180px;
+                        left: 500px;
+                        visibility: hidden;
+                    }
+
+                    #message_error_email{
+                        width:auto;
+                        height:auto;
+                        position: absolute;
+                        top: 220px;
                         left: 500px;
                         visibility: hidden;
                     }

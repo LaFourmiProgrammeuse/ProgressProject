@@ -16,7 +16,7 @@ var email_old_value = "";
 function Show_Nickname_Error(){
 
     $("#message_error_password").css("visibility", "hidden");
-    $("#message_error_password_confirm").css("visibility", "hidden");
+    $("#message_error_confirmation_password").css("visibility", "hidden");
     $("#message_error_email").css("visibility", "hidden");
 
     if(!NicknameValidation() && $("#nickname").val() != ""){
@@ -27,8 +27,11 @@ function Show_Nickname_Error(){
         if(nickname_value.length < nickname_character_needed){
             error = error+"<li>The nickname must be at least 6 characters !</li>";
         }
-        else if(nickname_value.length > nickname_character_needed){
+        else if(nickname_value.length > nickname_character_max){
             error = error+"<li>The nickname must be at max 11 characters !</li>";
+        }
+        if(hasSpecialCharacter(nickname_value, 0)){
+            error = error+"<li>The nickname can't be composed by special characters !</li>";
         }
 
         arror = error+"</ul>";
@@ -46,7 +49,7 @@ function Show_Nickname_Error(){
 function Show_Pass_Error(){
 
     $("#message_error_nickname").css("visibility", "hidden");
-    $("#message_error_password_confirm").css("visibility", "hidden");
+    $("#message_error_confirmation_password").css("visibility", "hidden");
     $("#message_error_email").css("visibility", "hidden");
 
     if(!PassValidation() && $("#pass").val() != ""){
@@ -58,7 +61,7 @@ function Show_Pass_Error(){
             error = error+"<li>The password must be at least 8 characters !</li>";
         }
         if(!hasSpecialCharacter(pass_value, 2)){
-            error = error+"<li>The password must be at least 2 specials characters !</li>";
+            error = error+"<li>The password must be at least 2 specials characters ! (as : &, @, #, *, $)</li>";
         }
 
         error = error+"</ul>";
@@ -75,31 +78,42 @@ function Show_Pass_Error(){
 
 function Show_Pass_Confirm_Error(){
 
-    var error = "The confirmation password needs :<br/>";
-
     $("#message_error_nickname").css("visibility", "hidden");
     $("#message_error_password").css("visibility", "hidden");
     $("#message_error_email").css("visibility", "hidden");
 
     if(!PassConfirmValidation() && $("#confirmation_password").val() != ""){
 
-        $("#message_error_password_confirm").css("visibility", "visible");
+        var error = "The confirmation password is not valid because :<br/><ul>";
+
+        var confirmation_password_value = $("#confirmation_password").val();
+        if($("#pass").val() != confirmation_password_value){
+            error = error+"<li>The confirmation password does not match the password !</li>";
+        }
+
+        error = error+"</ul>";
+
+        $("#message_error_confirmation_password p").html(error);
+
+        $("#message_error_confirmation_password").css("visibility", "visible");
 
     }
     else{
-        $("#message_error_password_confirm").css("visibility", "hidden");
+        $("#message_error_confirmation_password").css("visibility", "hidden");
     }
 }
 
 function Show_Email_Error(){
 
-    var error = "The password needs :<br/>";
-
     $("#message_error_nickname").css("visibility", "hidden");
-    $("#message_error_password_confirm").css("visibility", "hidden");
+    $("#message_error_confirmation_password").css("visibility", "hidden");
     $("#password").css("visibility", "hidden");
 
     if(!EmailValidation() && $("#email").val() != ""){
+
+        var error = "The email is not valid";
+
+        $("#message_error_email p").html(error);
 
         $("#message_error_email").css("visibility", "visible");
 
@@ -408,6 +422,14 @@ $("#pass").focus(function(){
 $("#confirmation_password").keyup(function(){
 
     PassConfirmValidation();
+    Show_Pass_Confirm_Error();
+
+});
+
+$("#confirmation_password").focus(function(){
+
+    Show_Pass_Confirm_Error();
+
 });
 
 $("#email").change(function(){

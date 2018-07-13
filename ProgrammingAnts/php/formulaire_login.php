@@ -1,6 +1,6 @@
 <?php
 
-require 'Session_Control.php';
+require 'session_control.php';
 
 try{
 
@@ -11,12 +11,9 @@ catch(Exception $e){
     die('Erreur : ' . $e->getMessage());
 }
 
-$nickname = $_POST['nickname'];
-$pass = $_POST['pass'];
-$email = $_POST['email'];
-
-$qprepare = $bdd->prepare('INSERT INTO users (id, identifiant, mot_de_passe, mail, keep_connected) VALUES (:id, :identifiant, :mdp, :mail, :keep_connected)');
-$qprepare->execute(array('id' => '0', 'identifiant' => $nickname, 'mdp' => $pass, 'mail' => $email, 'keep_connected' => '0'));
+$nickname = $_POST["nickname"];
+$pass = $_POST["pass"];
+$stay_connected = $_POST["stay_connected"];
 
 if(isset($_COOKIE['identifiant']) AND isset($_COOKIE['mdp'])){
     echo 'Tout les cookies existent';
@@ -35,15 +32,6 @@ $_SESSION['connected'] = 'true';
 $_SESSION['identifiant'] = $nickname;
 $_SESSION['mdp'] = $pass;
 
-header('Location: home.php');
-
-echo '<br>Vous vous êtes inscrit avec ces informations : ';
-echo '<ul>';
-echo '<li>' . $nickname . '</li>';
-echo '<li>' . $pass . '</li>';
-echo '<li>' . $email . '</li>';
-echo '</ul>';
-echo '<a href="home.php">Retour</a>';
-
+header('Location: ../html-php/home.php');
 
 ?>

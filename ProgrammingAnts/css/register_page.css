@@ -215,7 +215,6 @@ body {
                         position: absolute;
                         top: 100px;
                         left: 500px;
-                        visibility: hidden;
                     }
 
                     #message_error_password{
@@ -224,7 +223,6 @@ body {
                         position: absolute;
                         top: 140px;
                         left: 500px;
-                        visibility: hidden;
                     }
 
                     #message_error_confirmation_password{
@@ -233,7 +231,6 @@ body {
                         position: absolute;
                         top: 180px;
                         left: 500px;
-                        visibility: hidden;
                     }
 
                     #message_error_email{
@@ -242,5 +239,4 @@ body {
                         position: absolute;
                         top: 220px;
                         left: 500px;
-                        visibility: hidden;
                     }

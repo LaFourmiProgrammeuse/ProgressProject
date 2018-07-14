@@ -12,12 +12,17 @@ var nickname_character_max = 11;
 //For icon clear IE/EDGE
 var nickname_old_value = "";
 var email_old_value = "";
+var event_now = false;
+
+
+        /*ERROR*/
+
 
 function Show_Nickname_Error(){
 
-    $("#message_error_password").css("visibility", "hidden");
-    $("#message_error_confirmation_password").css("visibility", "hidden");
-    $("#message_error_email").css("visibility", "hidden");
+    $("#message_error_password").hide(500);
+    $("#message_error_confirmation_password").hide(500);
+    $("#message_error_email").hide(500);
 
     if(!NicknameValidation() && $("#nickname").val() != ""){
 
@@ -39,20 +44,19 @@ function Show_Nickname_Error(){
         $("#message_error_nickname p").html(error);
 
         $("#message_error_nickname").show(1000);
-        $("#message_error_nickname").css("visibility", "visible");
 
     }
     else{
         $("#message_error_nickname").hide(1000);
-        //$("#message_error_nickname").css("visibility", "hidden");
+
     }
 }
 
 function Show_Pass_Error(){
 
-    $("#message_error_nickname").css("visibility", "hidden");
-    $("#message_error_confirmation_password").css("visibility", "hidden");
-    $("#message_error_email").css("visibility", "hidden");
+    $("#message_error_nickname").hide(500);
+    $("#message_error_confirmation_password").hide(500);
+    $("#message_error_email").hide(500);
 
     if(!PassValidation() && $("#pass").val() != ""){
 
@@ -71,21 +75,19 @@ function Show_Pass_Error(){
         $("#message_error_password p").html(error);
 
         $("#message_error_password").show(1000);
-        $("#message_error_password").css("visibility", "visible");
 
     }
     else{
 
         $("#message_error_password").hide(1000);
-        //$("#message_error_password").css("visibility", "hidden");
     }
 }
 
 function Show_Pass_Confirm_Error(){
 
-    $("#message_error_nickname").css("visibility", "hidden");
-    $("#message_error_password").css("visibility", "hidden");
-    $("#message_error_email").css("visibility", "hidden");
+    $("#message_error_nickname").hide(500);
+    $("#message_error_password").hide(500);
+    $("#message_error_email").hide(500);
 
     if(!PassConfirmValidation() && $("#confirmation_password").val() != ""){
 
@@ -101,21 +103,20 @@ function Show_Pass_Confirm_Error(){
         $("#message_error_confirmation_password p").html(error);
 
         $("#message_error_confirmation_password").show(1000);
-        $("#message_error_confirmation_password").css("visibility", "visible");
 
     }
     else{
 
         $("#message_error_confirmation_password").hide(1000);
-        //$("#message_error_confirmation_password").css("visibility", "hidden");
+
     }
 }
 
 function Show_Email_Error(){
 
-    $("#message_error_nickname").css("visibility", "hidden");
-    $("#message_error_confirmation_password").css("visibility", "hidden");
-    $("#password").css("visibility", "hidden");
+    $("#message_error_nickname").hide(500);
+    $("#message_error_confirmation_password").hide(500);
+    $("#password").hide(500);
 
     if(!EmailValidation() && $("#email").val() != ""){
 
@@ -124,15 +125,17 @@ function Show_Email_Error(){
         $("#message_error_email p").html(error);
 
         $("#message_error_email").show(1000);
-        $("#message_error_email").css("visibility", "visible");
 
     }
     else{
 
         $("#message_error_email").hide(1000);
-        //$("#message_error_email").css("visibility", "hidden");
     }
 }
+
+
+        /* UTILS */
+
 
 function hasSpecialCharacter(string, number_special_character_to_found){
 
@@ -235,6 +238,10 @@ function isValidMail(mail){
 
     return true;
 }
+
+
+    /* VALIDATION */
+
 
 function PassValidation(){
 
@@ -376,9 +383,16 @@ function Validation(){
     }
 }
 
-//On initialise les evênements lorque la page est chargée
+    /* EVENTS */
+
 $(document).ready(function(){
 
+    $("#message_error_password").hide();
+    $("#message_error_confirmation_password").hide();
+    $("#message_error_email").hide();
+    $("#message_error_nickname").hide();
+
+/* NICKNAME INPUT */
 $("#nickname").change(function(){
 
     nickname_old_value = $("#nickname").val();
@@ -417,6 +431,8 @@ $("#nickname").focus(function(){
 
 });
 
+
+/* PASSWORD INPUT */
 $("#pass").keyup(function(){
 
     PassValidation();
@@ -430,6 +446,8 @@ $("#pass").focus(function(){
 
 });
 
+
+/* CONFIRMATION PASSWORD INPUT */
 $("#confirmation_password").keyup(function(){
 
     PassConfirmValidation();
@@ -443,6 +461,8 @@ $("#confirmation_password").focus(function(){
 
 });
 
+
+/* EMAIL INPUT */
 $("#email").change(function(){
 
     email_old_value = $("#email").val();
@@ -475,13 +495,15 @@ $("#email").mouseup(function(){
 
 });
 
+
+/* BUTTON SEND */
 $("#send").click(function(){
 
     if(Validation()){
         $("form").submit();
     }
     else{
-        $("#message_error_bad_filled").css("visibility", "visible");
+        $("#message_error_bad_filled").show();
     }
 });
 

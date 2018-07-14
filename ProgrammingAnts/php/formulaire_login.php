@@ -11,9 +11,11 @@ catch(Exception $e){
     die('Erreur : ' . $e->getMessage());
 }
 
+$qprepare = $bdd->prepare("SELECT * FROM users WHEN identifiant=? && mot_de_passe=?");
+$qrep = $qprepare->execute(array("d", "d"));
+
 $nickname = $_POST["nickname"];
 $pass = $_POST["pass"];
-$stay_connected = $_POST["stay_connected"];
 
 if(isset($_COOKIE['identifiant']) AND isset($_COOKIE['mdp'])){
     echo 'Tout les cookies existent';
@@ -24,8 +26,8 @@ if(isset($_COOKIE['identifiant']) AND isset($_COOKIE['mdp'])){
 else{
     echo 'Un ou plusieurs cookie(s) n\'existent pas !';
 
-    setcookie('identifiant',  $nickname, time() + 365*24*3600);
-    setcookie('mdp',  $pass, time() + 365*24*3600);
+    setcookie('identifiant',  $nickname, time() + 365*24*3600, null, null, false, true);
+    setcookie('mdp',  $pass, time() + 365*24*3600, null, null, false, true);
 }
 
 $_SESSION['connected'] = 'true';

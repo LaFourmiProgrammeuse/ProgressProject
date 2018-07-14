@@ -392,6 +392,8 @@ $(document).ready(function(){
     $("#message_error_email").hide();
     $("#message_error_nickname").hide();
 
+    $("#message_error_bad_filled").hide();
+
 /* NICKNAME INPUT */
 $("#nickname").change(function(){
 

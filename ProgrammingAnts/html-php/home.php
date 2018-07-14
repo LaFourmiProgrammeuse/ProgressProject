@@ -37,7 +37,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 							else{
                                 echo '<div id="account">';
                                     echo '<div class="identification disconnect">';
-                                        echo '<a href="Disconnect.php">Disconnect</a>';
+                                        echo '<a href="Disconnect.php">Sign Out</a>';
                                     echo '</div>';
 								echo '</div>';
                                                             //image de profil et pseudo de l'utilisateur connecter (header)

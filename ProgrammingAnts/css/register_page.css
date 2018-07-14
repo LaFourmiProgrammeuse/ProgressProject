@@ -1,5 +1,4 @@
 a {
-	color: #24252f;
 	text-decoration: none;
 }
 
@@ -19,21 +18,24 @@ body {
 		margin-left: 90px;
 	}
 
+	.website_name a {
+		color: #24252f;
+	}
+
 	/* CENTER WINDOW */
 
 	section {
-        position: relative;
+    position: relative;
 		display: flex;
 		margin-top: 140px;
 		height: 400px;
 		margin-left: auto;
-        margin-right: auto;
-        width: 530px;
-
+    margin-right: auto;
+    width: 530px;
 	}
 
 		.programming_ants_logo {
-            position: absolute;
+      position: absolute;
 			height: 50px;
 			width: 50px;
 			margin-top: 15px;
@@ -193,15 +195,16 @@ body {
 
                     .message_error{ /*Ce qu'il faut appliquer a tout les messages d'erreurs */
                         padding-bottom: auto;
-                        background-color: #fb7777;
-                        border: solid 1px black;
+												font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+                        border: 2px dotted #df4f48;
+												color: #df4f48;
                     }
 
                     #message_error_bad_filled{
                         position: relative;
                         top: 350px;
                         left: 110px;
-                        height: 65px;
+                        height: 40px;
                     }
 
                     #text_error_bad_filled{

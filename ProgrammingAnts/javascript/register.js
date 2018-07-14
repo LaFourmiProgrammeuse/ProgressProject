@@ -38,11 +38,13 @@ function Show_Nickname_Error(){
 
         $("#message_error_nickname p").html(error);
 
+        $("#message_error_nickname").show(1000);
         $("#message_error_nickname").css("visibility", "visible");
 
     }
     else{
-        $("#message_error_nickname").css("visibility", "hidden");
+        $("#message_error_nickname").hide(1000);
+        //$("#message_error_nickname").css("visibility", "hidden");
     }
 }
 
@@ -68,11 +70,14 @@ function Show_Pass_Error(){
 
         $("#message_error_password p").html(error);
 
+        $("#message_error_password").show(1000);
         $("#message_error_password").css("visibility", "visible");
 
     }
     else{
-        $("#message_error_password").css("visibility", "hidden");
+
+        $("#message_error_password").hide(1000);
+        //$("#message_error_password").css("visibility", "hidden");
     }
 }
 
@@ -95,11 +100,14 @@ function Show_Pass_Confirm_Error(){
 
         $("#message_error_confirmation_password p").html(error);
 
+        $("#message_error_confirmation_password").show(1000);
         $("#message_error_confirmation_password").css("visibility", "visible");
 
     }
     else{
-        $("#message_error_confirmation_password").css("visibility", "hidden");
+
+        $("#message_error_confirmation_password").hide(1000);
+        //$("#message_error_confirmation_password").css("visibility", "hidden");
     }
 }
 
@@ -115,11 +123,14 @@ function Show_Email_Error(){
 
         $("#message_error_email p").html(error);
 
+        $("#message_error_email").show(1000);
         $("#message_error_email").css("visibility", "visible");
 
     }
     else{
-         $("#message_error_email").css("visibility", "hidden");
+
+        $("#message_error_email").hide(1000);
+        //$("#message_error_email").css("visibility", "hidden");
     }
 }
 

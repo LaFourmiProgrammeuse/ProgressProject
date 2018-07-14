@@ -37,7 +37,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 							else{
                                 echo '<div id="account">';
                                     echo '<div class="identification disconnect">';
-                                        echo '<a href="Disconnect.php">Sign Out</a>';
+                                        echo '<a href="disconnect.php">Sign Out</a>';
                                     echo '</div>';
 								echo '</div>';
                                                             //image de profil et pseudo de l'utilisateur connecter (header)
@@ -55,42 +55,66 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 		</header>
 
 		<section>
+
 			<nav>
-
 				<div id="top_menu">
-
 					<div class="option"><h3><a href="#">Projects</a></h3></div>
 						<div class="option"><h3><a href="forum.html">Forum</a></h3></div>
 							<div class="option"><h3><a href="#">Blog</a></h3></div>
 								<div class="option"><h3><a href="#">About</a></h3></div>
 									<div class="option"><h3><a href="#">Contact</a></h3></div>
-
 				</div>
 			</nav>
 
-			<article>
+				<article>
+					<div id="articles">
+						<div class="article">
+							<h2>Projects</h2>
+							<p><img src="../images/terminal.png" class="test_image" title="A terminal image"/></p>
+							<p>This is a test ! Don't care about it... This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...</p>
+						</div>
 
-				<img src="../images/working.png" class="working" />
+						<div class="article">
+							<h2>Forum</h2>
+							<p>Click on this link : <a href="https://www.hackthis.co.uk/" title="Join the Hacker's clan" >https://www.hackthis.co.uk/</a></p>
+						</div>
 
-			</article>
+						<div class="article">
+							<h2>Blog</h2>
+							<p>This is a test ! Don't care about it... This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...
+								This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...
+								This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...</p>
+						</div>
+
+						<div class="article">
+							<h2>About</h2>
+							<p>This is a test ! Don't care about it... This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...
+								This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...
+								This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...</p>
+						</div>
+
+						<div class="article">
+							<h2>Contact Us</h2>
+							<p>This is a test ! Don't care about it... This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...
+								This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...
+								This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...</p>
+						</div>
+					</div>
+				</article>
+
 		</section>
 
     <aside>
-
 			<div id="reconnection">
 				<div class="message"><img src="../images/exit.png" class="exit"/></div>
 				<div class="message">Welcome back !</div>
         <div class="message" id="message_user"><p>Pseudo<p></div>
 			</div>
-
 		</aside>
 
 		<footer>
 
-
-
 		</footer>
-
 	</body>
 
 </html>

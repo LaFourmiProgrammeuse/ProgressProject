@@ -3,8 +3,6 @@
 //Ne pas mettre de code html avant cette ligne !
 require '../php/session_control.php';
 
-    header("Content-Type: text/plain");
-
     if(isset($_POST['message'])){
         echo $_POST['message'];
     }

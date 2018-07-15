@@ -49,9 +49,11 @@ body {
 			}
 
 				#account {
-          position: absolute;
-					top: 52px;
-					right: 50px;
+                    display: flex;
+                    position: absolute;
+					top: 53px;
+					right: 15%;
+                    width: 162px;
 				}
 
 				.identification {

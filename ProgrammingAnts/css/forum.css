@@ -11,7 +11,6 @@ body {
 /* HEADER */
 
 	header {
-		display: flex;
 		background-color: #131313;
 		height: 65px;
 		box-shadow: 0px 0px 3px black;
@@ -25,7 +24,7 @@ body {
 		.programming_ants_logo {
 			position: absolute;
 			top: 7px;
-			left: 145px;
+			left: 25px;
 			width: 50px;
 			height: 50px;
 		}
@@ -36,7 +35,7 @@ body {
 			font-size: 20px;
 			font-weight: bold;
 			top: -8px;
-			left: 195px;
+			left: 75px;
 		}
 
 		.programming_ants_extension {
@@ -44,7 +43,7 @@ body {
 			font-size: 20px;
 			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 			color: #1e9fd0;
-			left: 460px;
+			left: 340px;
 			top: 25px;
 		}
 
@@ -52,7 +51,7 @@ body {
 				display: flex;
 				position: absolute;
 				top: 20px;
-				left: 950px;
+				left: 70%;
 			}
 
 			.identification {
@@ -96,30 +95,27 @@ body {
 					width: 35px;
 					height: 35px;
 					top: 15px;
-					left: 1150px;
+					left: 85%;
 				}
 
 	/* NAV */
 
 		nav {
-			position: absolute;
 			background-color: #131313;
-			top: 135px;
 			width: 65%;
 			height: 50px;
-			left: 250px;
+			margin-top: 80px;
+			margin-left: auto;
+			margin-right: auto;
 			box-shadow: 0px 0px 3px black;
 		}
 
 			#top_menu {
-				position: absolute;
 				display: flex;
 				justify-content: space-between;
 				background-color: #272525;
-				top: 7px;
 				width: 30%;
 				height: 35px;
-				left: 10px;
 				padding-left: 25px;
 				padding-right: 40px;
 				border-left: 25px solid #1e9fd0;
@@ -157,10 +153,7 @@ body {
 			}
 
 				#searching_bar {
-					position: absolute;
 					background-color: #272525;
-					left: 710px;
-					top: 10px;
 					width: 150px;
 					height: 30px;
 					border: 1px solid;
@@ -168,9 +161,6 @@ body {
 				}
 
 				#ok {
-					position: absolute;
 					height: 30px;
 					width: 30px;
-					top: 10px;
-					left: 870px;
 				}

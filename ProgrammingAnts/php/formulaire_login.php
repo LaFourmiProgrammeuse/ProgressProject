@@ -1,6 +1,6 @@
 <?php
 
-require 'session_control.php';
+require '../php/session_control.php';
 
 try{
 

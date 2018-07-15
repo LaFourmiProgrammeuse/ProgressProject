@@ -15,7 +15,66 @@ var email_old_value = "";
 var event_now = false;
 
 
-        /*ERROR*/
+
+        /* AJAX */
+
+
+function getXmlHttpRequest(){
+
+    var xhr = null;
+
+    if(window.XMLHttpRequest || window.ActiveXObject){
+
+        if(window.ActiveXObject){
+
+            try{
+                xhr = new XMLHttpRequest("Msxml12.XMLHTTP");
+            }catch(e){
+                xhr = new XMLHttpRequest("Microsoft.XMLHTTP");
+            }
+        }
+        else{
+            xhr = new XMLHttpRequest();
+        }
+    }
+    else{
+        alert("Votre naviguateur ne supporte pas l'objet XMLHttpRequest");
+        return null;
+    }
+
+    return xhr;
+
+}
+
+function readDataName(data){
+    alert(data);
+}
+
+function requestValidationNickname(){
+
+    var nickname = $("#nickname").val();
+
+    console.log(nickname);
+
+    var xhr = getXmlHttpRequest();
+
+    xhr.onreadystatechange = function(){
+
+    if(xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)){
+
+        readDataName(xhr.responseText);
+    }
+
+    }
+
+    xhr.open("POST", "../php/verif_name.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.send("nickname="+nickname);
+
+}
+
+
+        /* ERROR */
 
 
 function Show_Nickname_Error(){
@@ -505,6 +564,7 @@ $("#send").click(function(){
         $("form").submit();
     }
     else{
+        requestValidationNickname();
         $("#message_error_bad_filled").show();
     }
 });

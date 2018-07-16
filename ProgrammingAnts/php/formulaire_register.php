@@ -37,13 +37,5 @@ $_SESSION['mdp'] = $pass;
 
 header('Location: ../html-php/home.php');
 
-echo '<br>Vous vous êtes inscrit avec ces informations : ';
-echo '<ul>';
-echo '<li>' . $nickname . '</li>';
-echo '<li>' . $pass . '</li>';
-echo '<li>' . $email . '</li>';
-echo '</ul>';
-echo '<a href="home.php">Retour</a>';
-
 
 ?>

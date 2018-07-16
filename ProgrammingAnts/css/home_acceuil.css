@@ -49,17 +49,11 @@ body {
 			}
 
 				#account {
-<<<<<<< HEAD
-          display: flex;
-          position: absolute;
-					top: 53px;
-=======
                     display: flex;
                     position: absolute;
 					top: 54px;
->>>>>>> 888989183dfbd1c9e3e87685cb8ce6a7751c6d2e
 					right: 15%;
-          width: 162px;
+                    width: 162px;
 				}
 
 				.identification {

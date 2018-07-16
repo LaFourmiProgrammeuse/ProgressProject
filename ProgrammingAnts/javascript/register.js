@@ -47,7 +47,16 @@ function getXmlHttpRequest(){
 }
 
 function readDataName(data){
-    alert(data);
+
+    console.log(data);
+
+    if(data == "true"){
+
+        Show_Nickname_Error(true);
+    }
+    else{
+        Show_Nickname_Error(false);
+    }
 }
 
 function requestValidationNickname(){
@@ -77,7 +86,7 @@ function requestValidationNickname(){
         /* ERROR */
 
 
-function Show_Nickname_Error(){
+function Show_Nickname_Error(nickname_use){
 
     $("#message_error_password").hide(500);
     $("#message_error_confirmation_password").hide(500);
@@ -96,9 +105,13 @@ function Show_Nickname_Error(){
         }
         if(hasSpecialCharacter(nickname_value, 0)){
             error = error+"<li>The nickname can't be composed by special characters !</li>";
+        } alert(nickname_use);
+        if(nickname_use == true){
+            console.log("bip");
+            error = error+"<li>The nickname is already used !</li>";
         }
 
-        arror = error+"</ul>";
+        error = error+"</ul>";
 
         $("#message_error_nickname p").html(error);
 
@@ -459,7 +472,20 @@ $("#nickname").change(function(){
     nickname_old_value = $("#nickname").val();
 
     NicknameValidation();
-    Show_Nickname_Error();
+
+    if(NicknameValidation()){
+
+    /* A l'issue de cette fonction quelque
+       que soit le résultat final la fonction
+       Show_Nickname_Error sera executer avec
+       comme param le resultatde cette requete
+       Http */
+
+        requestValidationNickname();
+    }
+    else{
+        Show_Nickname_Error();
+    }
 });
 
 $("#nickname").keyup(function(){
@@ -468,8 +494,19 @@ $("#nickname").keyup(function(){
 
     nickname_old_value = $("#nickname").val();
 
-    NicknameValidation();
-    Show_Nickname_Error();
+    if(NicknameValidation()){
+
+    /* A l'issue de cette fonction quelque
+       que soit le résultat final la fonction
+       Show_Nickname_Error sera executer avec
+       comme param le resultatde cette requete
+       Http */
+
+        requestValidationNickname();
+    }
+    else{
+        Show_Nickname_Error();
+    }
 });
 
 $("#nickname").mouseup(function(){
@@ -564,7 +601,6 @@ $("#send").click(function(){
         $("form").submit();
     }
     else{
-        requestValidationNickname();
         $("#message_error_bad_filled").show();
     }
 });

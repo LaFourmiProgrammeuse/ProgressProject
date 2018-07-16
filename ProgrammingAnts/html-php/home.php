@@ -3,10 +3,6 @@
 //Ne pas mettre de code html avant cette ligne !
 require '../php/session_control.php';
 
-    if(isset($_POST['message'])){
-        echo $_POST['message'];
-    }
-
 echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
 ?>
@@ -41,7 +37,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 							else{
                                 echo '<div id="account">';
                                     echo '<div class="identification disconnect">';
-                                        echo '<a href="disconnect.php">Sign Out</a>';
+                                        echo '<a href="../php/disconnect.php">Sign Out</a>';
                                     echo '</div>';
 								echo '</div>';
                                                             //image de profil et pseudo de l'utilisateur connecter (header)

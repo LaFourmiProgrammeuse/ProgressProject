@@ -52,7 +52,7 @@ body {
                     display: flex;
                     position: absolute;
 					top: 54px;
-					right: 15%;
+					right: 17%;
                     width: 162px;
 				}
 
@@ -122,11 +122,11 @@ body {
 					}
 
             #user {
-              position: absolute;
-			    		top: 14px;
-              width: 150px;
-              height: 55px;
-            	right: 180px;
+                position: absolute;
+			    top: 40px;
+                width: 150px;
+                height: 52px;
+            	right: 12%;
             }
 
 						#user img {
@@ -174,8 +174,8 @@ body {
 				background-color: #24252f;
 				border-top-left-radius: 13px;
 				border-top-right-radius: 13px;
-      	height: 45px;
-      	width: 100%;
+      	        height: 45px;
+      	        width: 100%;
 			}
 
 			.option {
@@ -183,8 +183,8 @@ body {
 				font-family: Verdana, "DejaVu Sans", "Bitstream Vera Sans", Geneva, sans-serif;
 				font-size: 14px;
 				line-height: 9px;
-      	margin-right: auto;
-      	margin-left: auto;
+      	        margin-right: auto;
+      	        margin-left: auto;
 			}
 
 			.option a {
@@ -198,15 +198,16 @@ body {
 	/* ARTICLE */
 
     article{
-      display: block;
-			border-top: 2px solid #24252f;
-			border-bottom: 2px solid #24252f;
-			margin-left: auto;
-			margin-right: auto;
-			margin-top: 15px;
-      height: auto;
+        display: block;
+		border-top: 2px solid #24252f;
+		border-bottom: 2px solid #24252f;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 15px;
+        margin-bottom: 15px;
+        height: auto;
     	width: 90%;
-			box-shadow: 0px 0px 5px black;
+		box-shadow: 0px 0px 5px black;
     }
 
 			#articles {
@@ -219,6 +220,7 @@ body {
 			.article {
 				border: 2px solid #24252f;
 				margin-top: 20px;
+                margin-bottom: 20px;
 				width: 95%;
 				border-bottom-right-radius: 45px;
 				border-top-left-radius: 45px;

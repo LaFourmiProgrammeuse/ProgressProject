@@ -12,16 +12,14 @@ var nickname_character_max = 11;
 //For icon clear IE/EDGE
 var nickname_old_value = "";
 var email_old_value = "";
-var event_now = false;
 
+var xhr = null;
 
 
         /* AJAX */
 
 
 function getXmlHttpRequest(){
-
-    var xhr = null;
 
     if(window.XMLHttpRequest || window.ActiveXObject){
 
@@ -63,7 +61,11 @@ function requestValidationNickname(){
 
     var nickname = $("#nickname").val();
 
-    console.log(nickname);
+    console.log("requestValidationNickname : "+nickname);
+
+    if(xhr && xhr.readyState != 0){
+        return;
+    }
 
     var xhr = getXmlHttpRequest();
 
@@ -92,7 +94,7 @@ function Show_Nickname_Error(nickname_use){
     $("#message_error_confirmation_password").hide(500);
     $("#message_error_email").hide(500);
 
-    if(!NicknameValidation() && $("#nickname").val() != ""){
+    if(!NicknameValidation(nickname_use) && $("#nickname").val() != ""){
 
         var error = "The nickname is not valid because :<br/><ul>";
 
@@ -105,9 +107,10 @@ function Show_Nickname_Error(nickname_use){
         }
         if(hasSpecialCharacter(nickname_value, 0)){
             error = error+"<li>The nickname can't be composed by special characters !</li>";
-        } alert(nickname_use);
+        } console.log("Show_Nickname_Error : "+nickname_use);
+
         if(nickname_use == true){
-            console.log("bip");
+
             error = error+"<li>The nickname is already used !</li>";
         }
 
@@ -119,6 +122,7 @@ function Show_Nickname_Error(nickname_use){
 
     }
     else{
+
         $("#message_error_nickname").hide(1000);
 
     }
@@ -347,7 +351,7 @@ function PassValidation(){
     }
 }
 
-function NicknameValidation(){
+function NicknameValidation(nickname_use){
 
     var nickname_value = $("#nickname").val();
 
@@ -359,7 +363,7 @@ function NicknameValidation(){
         return false;
 
     }
-    else if(nickname_value.length < nickname_character_needed || hasSpecialCharacter(nickname_value, 0) || nickname_value.length > nickname_character_max){
+    else if(nickname_value.length < nickname_character_needed || hasSpecialCharacter(nickname_value, 0) || nickname_value.length > nickname_character_max || nickname_use == true){
 
         console.log("2");
         $("#validation_nickname").attr("src", "../images/wrong.png");
@@ -457,6 +461,15 @@ function Validation(){
 
     /* EVENTS */
 
+    /* -change pour gerer le copier coller
+       -click pour gerer le retour depuis
+       un autre champ
+       -keyup pour gerer le changement de
+       texte
+       -mouseup pour gerer la croix de
+       delete
+    */
+
 $(document).ready(function(){
 
     $("#message_error_password").hide();
@@ -523,7 +536,7 @@ $("#nickname").mouseup(function(){
 
 });
 
-$("#nickname").focus(function(){
+$("#nickname").click(function(){
 
     Show_Nickname_Error();
 
@@ -538,7 +551,7 @@ $("#pass").keyup(function(){
 
 });
 
-$("#pass").focus(function(){
+$("#pass").click(function(){
 
     Show_Pass_Error();
 
@@ -553,7 +566,7 @@ $("#confirmation_password").keyup(function(){
 
 });
 
-$("#confirmation_password").focus(function(){
+$("#confirmation_password").click(function(){
 
     Show_Pass_Confirm_Error();
 
@@ -590,6 +603,12 @@ $("#email").mouseup(function(){
             EmailValidation();
         }
     }, 30);
+
+});
+
+$("#email").click(function(){
+
+    Show_Email_Error();
 
 });
 

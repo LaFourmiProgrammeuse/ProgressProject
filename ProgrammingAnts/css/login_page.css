@@ -109,6 +109,40 @@ body {
                         height: 16px;
                     }
 
+                    /* ERROR */
+
+                    .text_error{ /* Modifie le formatage du texte des erreurs */
+                        width: 300px;
+                        padding-left: 5px;
+                        padding-right: 5px;
+                        word-wrap: break-word;
+                    }
+
+                    .message_error{ /*Ce qu'il faut appliquer a tout les messages d'erreurs */
+                        padding-bottom: auto;
+						font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+                        border: 2px dotted #df4f48;
+					    color: #df4f48;
+                    }
+
+                    #message_error_bad_filled{
+                        position: relative;
+                        top: 300px;
+                        left: 110px;
+                        height: 50px;
+                    }
+
+                    #text_error_bad_filled{
+                        text-align: center;
+                    }
+
+                    #message_error_bad_credentials{
+                        position: relative;
+                        top: 300px;
+                        left: 110px;
+                        height: 67px;
+                    }
+
 				/* SEND */
 
 					#send {

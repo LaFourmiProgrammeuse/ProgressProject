@@ -15,7 +15,7 @@
             die('Erreur : ' . $e->getMessage());
         }
 
-        $qprepare = $bdd->prepare("SELECT identifiant FROM users WHERE identifiant=?");
+        $qprepare = $bdd->prepare("SELECT username FROM users WHERE username=?");
         $qprepare->execute(array($nickname));
 
         if(!$qprepare->fetch(PDO::FETCH_NUM)){

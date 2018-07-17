@@ -14,6 +14,7 @@ var nickname_old_value = "";
 var email_old_value = "";
 
 var xhr = null;
+var nickname_use_now = false;
 
 
         /* AJAX */
@@ -44,17 +45,11 @@ function getXmlHttpRequest(){
 
 }
 
-function readDataName(data){
+function readData(data){
 
     console.log(data);
 
-    if(data == "true"){
-
-        Show_Nickname_Error(true);
-    }
-    else{
-        Show_Nickname_Error(false);
-    }
+    
 }
 
 function requestValidationNickname(){
@@ -73,7 +68,7 @@ function requestValidationNickname(){
 
     if(xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)){
 
-        readDataName(xhr.responseText);
+        readData(xhr.responseText);
     }
 
     }

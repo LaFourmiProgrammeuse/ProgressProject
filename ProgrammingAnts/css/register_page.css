@@ -195,9 +195,9 @@ body {
 
                     .message_error{ /*Ce qu'il faut appliquer a tout les messages d'erreurs */
                         padding-bottom: auto;
-												font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+						font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
                         border: 2px dotted #df4f48;
-												color: #df4f48;
+					    color: #df4f48;
                     }
 
                     #message_error_bad_filled{

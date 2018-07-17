@@ -14,26 +14,26 @@ catch(Exception $e){
 $qprepare = $bdd->prepare("SELECT * FROM users WHEN identifiant=? && mot_de_passe=?");
 $qrep = $qprepare->execute(array("d", "d"));
 
-$nickname = $_POST["nickname"];
-$pass = $_POST["pass"];
+$username = $_POST["nickname"];
+$password = $_POST["pass"];
 
-if(isset($_COOKIE['identifiant']) AND isset($_COOKIE['mdp'])){
+if(isset($_COOKIE['username']) AND isset($_COOKIE['password'])){
     echo 'Tout les cookies existent';
 
-    setcookie('identifiant',  $nickname, time() + 365*24*3600, null, null, false, true);
-    setcookie('mdp',  $pass, time() + 365*24*3600, null, null, false, true);
+    setcookie('username',  $username, time() + 365*24*3600, null, null, false, true);
+    setcookie('password',  $password, time() + 365*24*3600, null, null, false, true);
 }
 else{
     echo 'Un ou plusieurs cookie(s) n\'existent pas !';
 
-    setcookie('identifiant',  $nickname, time() + 365*24*3600, null, null, false, true);
-    setcookie('mdp',  $pass, time() + 365*24*3600, null, null, false, true);
+    setcookie('username',  $username, time() + 365*24*3600, null, null, false, true);
+    setcookie('password',  $password, time() + 365*24*3600, null, null, false, true);
 }
 
 $_SESSION['connected'] = 'true';
-$_SESSION['identifiant'] = $nickname;
-$_SESSION['mdp'] = $pass;
+$_SESSION['username'] = $username;
+$_SESSION['password'] = $password;
 
-header('Location: ../html-php/home.php');
+//header('Location: ../html-php/home.php');
 
 ?>

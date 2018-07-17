@@ -1,6 +1,6 @@
 <?php
 
-$timeout = 60; //Temps avant destruction d'une session en seconde
+$timeout = 7; //Temps avant destruction d'une session en seconde
 
 session_start();
 
@@ -10,7 +10,7 @@ try{
 
 }catch(Exception $e){
 
-    die('Erreur : ' . $e);
+    //die('Erreur : ' . $e);
 
 }
 
@@ -29,17 +29,25 @@ if(isset($_SESSION['timeout'])){
         //On recrée la page donc on reset donc le temps a 0;
         $_SESSION['timeout'] = time();
 
-        if(isset($_COOKIE['identifiant']) AND isset($_COOKIE['mdp'])){
+        if(isset($_COOKIE['username']) && isset($_COOKIE['password'])){
 
-            $qprepare = $bdd->prepare("SELECT keep_connected FROM users WHERE identifiant = :identifiant && mot_de_passe = :mdp");
-            $qprepare->execute(array('identifiant' => $_COOKIE['identifiant'], 'mdp' => $_COOKIE['mdp']));
+            $_SESSION['username'] = $_COOKIE['username'];
+            $_SESSION['password'] = $_COOKIE['password'];
+
+            time();
+
+            $qprepare = $bdd->prepare("SELECT keep_connected FROM users WHERE username = :username && password = :password");
+            $qprepare->execute(array('username' => $_COOKIE['username'], 'password' => $_COOKIE['password']));
 
             if($qprepare){
+
+                time();
                 $qrep = $qprepare->fetch();
 
                 if($qrep['keep_connected'] == '0'){
 
                     $_SESSION['connected'] = 'false';
+                    time();
 
                 }else if($qrep['keep_connected'] == '1'){
 
@@ -75,10 +83,13 @@ if(isset($_SESSION['timeout'])){
 
     $_SESSION['timeout'] = time();
 
-    if(isset($_COOKIE['identifiant']) AND isset($_COOKIE['mdp'])){
+    if(isset($_COOKIE['username']) AND isset($_COOKIE['password'])){
 
-        $qprepare = $bdd->prepare("SELECT keep_connected FROM users WHERE identifiant = :identifiant && mot_de_passe = :mdp");
-        $qprepare->execute(array('identifiant' => $_COOKIE['identifiant'], 'mdp' => $_COOKIE['mdp']));
+        $_SESSION['username'] = $_COOKIE['username'];
+        $_SESSION['password'] = $_COOKIE['password'];
+
+        $qprepare = $bdd->prepare("SELECT keep_connected FROM users WHERE username = :username && password = :password");
+        $qprepare->execute(array('username' => $_COOKIE['username'], 'password' => $_COOKIE['password']));
 
         if($qprepare){
             $qrep = $qprepare->fetch();

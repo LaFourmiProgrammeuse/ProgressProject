@@ -48,14 +48,14 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `identifiant` varchar(30) NOT NULL,
-  `mot_de_passe` varchar(30) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(30) NOT NULL,
   `mail` varchar(40) NOT NULL,
   `keep_connected` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `mail` (`mail`),
   UNIQUE KEY `mail_2` (`mail`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,7 +64,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (2,'xcxwc','xcxw','dwcx',0),(3,'a','a','a',0),(4,'e','e','e',0),(1,'Florian','5789','florian@gmail.com',0),(5,'Antoine','5789','antoine@gmail.com',0);
+INSERT INTO `users` VALUES (2,'xcxwc','xcxw','dwcx',0),(3,'a','a','a',0),(4,'e','e','e',0),(1,'Florian','5789','florian@gmail.com',0),(5,'Antoine','5789','antoine@gmail.com',0),(6,'Antoinnette','zzzz@@22','antoine.sauzeau@gmail.com',0);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -77,4 +77,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-07-15 23:05:40
+-- Dump completed on 2018-07-16 12:40:36

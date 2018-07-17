@@ -49,7 +49,13 @@ function readData(data){
 
     console.log(data);
 
-    
+    if(data == "true"){
+
+        Show_Nickname_Error(true);
+    }
+    else{
+        Show_Nickname_Error(false);
+    }
 }
 
 function requestValidationNickname(){

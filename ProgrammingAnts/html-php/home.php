@@ -25,32 +25,27 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 			<span class="website_name"><h1>ProgrammingAnts</h1></span>
 			<img src="../images/programming_ants.png" class="programming_ants_logo" />
 
-							<?php
-							if($_SESSION['connected'] == 'false'){
-								echo '<div id="account">';
+								<div id="account">
 
-									echo '<div class="identification"><a href="Login_page.html">Sign In</a></div>';
-									echo '<div class="identification"><a href="Register_page.html">Sign Up</a></div>';
+									<div class="identification"><a href="Login_page.html">Sign In</a></div>
+									<div class="identification"><a href="Register_page.html">Sign Up</a></div>
+                                     <div class="identification disconnect">
+                                        <a href="../php/disconnect.php">Sign Out</a>
+                                    </div>
+								</div>
 
-								echo '</div>';
-							}
-							else{
-                                echo '<div id="account">';
-                                    echo '<div class="identification disconnect">';
-                                        echo '<a href="../php/disconnect.php">Sign Out</a>';
-                                    echo '</div>';
-								echo '</div>';
-                                                            //image de profil et pseudo de l'utilisateur connecter (header)
-																echo '<div id="user">';
-																	echo '<div class="user_image">';
-                                    		                            echo '<img src="../images/no_user_image.png" class="user_image" />';
-																		echo '</div>';
-																		echo '<div class="username">';
-																				echo '<p><a href="#">' . $_SESSION["identifiant"] . '</a></p>';
-																		echo '</div>';
-                                echo '</div>';
-							}
-							?>
+
+                              
+                                                            <!--image de profil et pseudo de l'utilisateur connecter (header)-->
+																<div id="user">
+																	<div class="user_image">
+                                    		                            <img src="../images/no_user_image.png" class="user_image" />
+																		</div>
+																		<div class="username">
+																				<p><a href="#"></a></p>
+																		</div>
+                                </div>
+
 
 		</header>
 

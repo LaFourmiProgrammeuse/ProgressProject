@@ -1,64 +1,48 @@
-var session_nickname;
+var session_username;
+var connected;
 
-function getXmlHttpRequest(){
+function readDataSession(xml_data){
 
-    if(window.XMLHttpRequest || window.ActiveXObject){
+    connected = $(xml_data).find("connected").text();
 
-        if(window.ActiveXObject){
+    if(connected == "true"){
 
-            try{
-                xhr = new XMLHttpRequest("Msxml12.XMLHTTP");
-            }catch(e){
-                xhr = new XMLHttpRequest("Microsoft.XMLHTTP");
-            }
-        }
-        else{
-            xhr = new XMLHttpRequest();
-        }
+        session_username = $(xml_data).find("username").text();
+
+        $(".disconnect").show();
+
+        $(".username").html(session_username);
+        $("#user").show();
+
+    }else{
+
+        $(".identification").show();
+         $(".disconnect").hide();
     }
-    else{
-        alert("Votre naviguateur ne supporte pas l'objet XMLHttpRequest");
-        return null;
-    }
 
-    return xhr;
-
-}
-
-function readDataSession(data){
-
-    console.log(data);
-
-    console.log(data.getElementsByTagName("connected"));
-
+    console.log(connected);
+    console.log(session_username);
 
 }
 
 function requestSessionData(){
 
-    var nickname = $("#nickname").val();
-
-    if(xhr && xhr.readyState != 0){
-        return;
-    }
-
-    var xhr = getXmlHttpRequest();
-
-    xhr.onreadystatechange = function(){
-
-        if(xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)){
-
-            readDataSession(xhr.responseXML);
-        }
-    }
-
-    xhr.open("GET", "../php/session_control_for_javascript.php", true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.send(null);
+    $.ajax({
+            type: "GET",
+            url: "../php/session_control_for_javascript.php",
+            dataType: "xml",
+            success: function(xml){
+                readDataSession(xml);
+            }
+    });
 
 }
 
 $(document).ready(function(){
+
+    $(".identification").hide();
+    $(".identification disconnect").hide();
+    $("#user").hide();
 
     requestSessionData();
 

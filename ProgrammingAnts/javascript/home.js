@@ -1,6 +1,11 @@
 var session_username;
 var connected;
 
+function hideMessageConnection(){
+    console.log("sdqdqdsqdq");
+    $("#reconnection").animate({right: '-=200'}, 2000);
+}
+
 function readDataSession(xml_data){
 
     connected = $(xml_data).find("connected").text();
@@ -14,9 +19,15 @@ function readDataSession(xml_data){
         $(".username").html(session_username);
         $("#user").show();
 
+        $("#account").css("right", "19%");
+
         if($(xml_data).find("connection_from_register").text() == "false"){
+
+             $("#message_user p").text(session_username);
+
             $("#reconnection").show();
             $("#reconnection").animate({right: '+=200'}, 2000);
+            setTimeout(hideMessageConnection(), 10000);
         }
 
     }else{
@@ -40,10 +51,6 @@ function requestSessionData(){
                 readDataSession(xml);
             }
     });
-
-}
-
-function hideMessageConnection(){
 
 }
 

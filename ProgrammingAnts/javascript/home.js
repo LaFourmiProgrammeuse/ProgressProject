@@ -14,6 +14,11 @@ function readDataSession(xml_data){
         $(".username").html(session_username);
         $("#user").show();
 
+        if($(xml_data).find("connection_from_register").text() == "false"){
+            $("#reconnection").show();
+            $("#reconnection").animate({right: '+=200'}, 2000);
+        }
+
     }else{
 
         $(".identification").show();
@@ -38,11 +43,16 @@ function requestSessionData(){
 
 }
 
+function hideMessageConnection(){
+
+}
+
 $(document).ready(function(){
 
     $(".identification").hide();
     $(".identification disconnect").hide();
     $("#user").hide();
+    $("#reconnection").hide();
 
     requestSessionData();
 

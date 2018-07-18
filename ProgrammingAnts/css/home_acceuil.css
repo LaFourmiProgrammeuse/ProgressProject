@@ -262,10 +262,10 @@ body {
 		#reconnection {
 			display: flex;
 			position: fixed;
-			right: 0%;
+			right: -200px;
 			background-color: white;
 			height: 60px;
-			width: 12.5%;
+			width: 200px;
 			top: 175px;
 			border-left: 1px solid #36393e;
 			border-top: 1px solid #36393e;

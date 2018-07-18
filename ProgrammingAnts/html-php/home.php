@@ -17,6 +17,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
     <script type="text/javascript" src="../javascript/framework/jquery.js"></script>
     <script type="text/javascript" src="../javascript/home.js"></script>
+    <script type="text/javascript" src ="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
 
 </head>
 
@@ -35,7 +36,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 								</div>
 
 
-                              
+
                                                             <!--image de profil et pseudo de l'utilisateur connecter (header)-->
 																<div id="user">
 																	<div class="user_image">

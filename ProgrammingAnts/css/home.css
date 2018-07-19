@@ -176,7 +176,7 @@ body {
 
 			.article {
 				margin-top: 5px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
 				width: 100%;
 			}
 
@@ -205,15 +205,23 @@ body {
 				color: #495969;
 			}
 
-			.article a {
-				color: #2571bd;
+			.article:nth-child(1) img {
+				width: 55%;
 			}
 
-			.test_image {
-				height: 80px;
-				width: 80px;
-				float: left;
-				margin-right: 5px;
+			.article:nth-child(2) a {
+				background-color: #495969;
+				color: white;
+				text-align: center;
+				padding: 5px;
+				box-shadow: 1px 1px 5px grey;
+				border-radius: 10px;
+			}
+
+			.article:nth-child(3) img {
+				display: flex;
+				width: 22.5%;
+				margin: auto;
 			}
 
 	/* ASIDE */

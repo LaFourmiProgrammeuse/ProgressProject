@@ -59,20 +59,18 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 					<div id="articles">
 						<div class="article">
 							<h2>Projects</h2>
-							<p><img src="../images/terminal.png" class="test_image" title="A terminal image"/></p>
-							<p>This is a test ! Don't care about it... This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...</p>
+							<p><img src="../images/progress.png" title="Still progressing on it !"/></p>
+							<p>Hey there, we still working on our website to make a great and beautiful anthill to welcome the incoming projects... Come back later ! :D </p>
 						</div>
 
 						<div class="article">
 							<h2>Forum</h2>
-							<p>Click on this link : <a href="https://www.hackthis.co.uk/" title="Join the Hacker's clan" >https://www.hackthis.co.uk/</a></p>
+							<p><a href="forum.html" title="Here is the Forum !" >Here is the forum</a></p>
 						</div>
 
 						<div class="article">
 							<h2>Blog</h2>
-							<p>This is a test ! Don't care about it... This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...
-								This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...
-								This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...This is a test ! Don't care about it...</p>
+							<img src="../images/not_available.png" class="Not available" />
 						</div>
 
 						<div class="article">

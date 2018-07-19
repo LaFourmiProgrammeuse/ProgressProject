@@ -121,6 +121,9 @@ body {
 						background-color: #df4f48;
 					}
 
+
+            /* Pseudo et image de l'utilisateur connected dans le header */
+
             #user {
                 position: absolute;
 			    top: 40px;

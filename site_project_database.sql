@@ -52,6 +52,8 @@ CREATE TABLE `users` (
   `password` varchar(30) NOT NULL,
   `mail` varchar(40) NOT NULL,
   `keep_connected` tinyint(1) NOT NULL,
+  `rank` tinyint(4) NOT NULL,
+  `prefered_language` char(2) NOT NULL DEFAULT 'en',
   PRIMARY KEY (`id`),
   UNIQUE KEY `mail` (`mail`),
   UNIQUE KEY `mail_2` (`mail`)
@@ -64,7 +66,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (2,'xcxwc','xcxw','dwcx',0),(3,'a','a','a',0),(4,'e','e','e',0),(1,'Florian','5789','florian@gmail.com',0),(5,'Antoine','5789','antoine@gmail.com',0),(6,'Antoinnette','zzzz@@22','antoine.sauzeau@gmail.com',0);
+INSERT INTO `users` VALUES (2,'xcxwc','xcxw','dwcx',0,0,'en'),(3,'a','a','a',0,0,'en'),(4,'e','e','e',0,0,'en'),(1,'Florian','5789','florian@gmail.com',0,0,'en'),(5,'Antoine','5789','antoine@gmail.com',0,0,'en'),(6,'Antoinnette','zzzz@@22','antoine.sauzeau@gmail.com',0,0,'en');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -77,4 +79,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-07-16 12:40:36
+-- Dump completed on 2018-07-19 10:43:38

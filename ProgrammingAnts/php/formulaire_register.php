@@ -30,8 +30,8 @@ catch(Exception $e){
     die('Erreur : ' . $e->getMessage());
 }
 
-$qprepare = $bdd->prepare('INSERT INTO users (id, username, password, mail, keep_connected) VALUES (:id, :username, :password, :mail, :keep_connected)');
-$qprepare->execute(array('id' => '0', 'username' => $username, 'password' => $password, 'mail' => $email, 'keep_connected' => '1'));
+$qprepare = $bdd->prepare('INSERT INTO users (id, username, password, mail, keep_connected, rank, prefered_language) VALUES (:id, :username, :password, :mail, :keep_connected, :rank, :prefered_language)');
+$qprepare->execute(array('id' => '0', 'username' => $username, 'password' => $password, 'mail' => $email, 'keep_connected' => '1', 'rank' => '0', 'prefered_language' => 'en'));
 
 $_SESSION['connected'] = 'true';
 $_SESSION['username'] = $username;

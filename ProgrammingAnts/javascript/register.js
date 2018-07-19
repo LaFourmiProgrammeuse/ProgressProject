@@ -52,9 +52,13 @@ function readData(data){
     if(data == "true"){
 
         Show_Nickname_Error(true);
+
+        nickname_use_now = true;
     }
     else{
         Show_Nickname_Error(false);
+
+        nickname_use_now = false;
     }
 }
 
@@ -89,13 +93,13 @@ function requestValidationNickname(){
         /* ERROR */
 
 
-function Show_Nickname_Error(nickname_use){
+function Show_Nickname_Error(nickname_use_now){
 
     $("#message_error_password").hide(500);
     $("#message_error_confirmation_password").hide(500);
     $("#message_error_email").hide(500);
 
-    if(!NicknameValidation(nickname_use) && $("#nickname").val() != ""){
+    if(!NicknameValidation(nickname_use_now) && $("#nickname").val() != ""){
 
         var error = "The nickname is not valid because :<br/><ul>";
 
@@ -108,9 +112,9 @@ function Show_Nickname_Error(nickname_use){
         }
         if(hasSpecialCharacter(nickname_value, 0)){
             error = error+"<li>The nickname can't be composed by special characters !</li>";
-        } console.log("Show_Nickname_Error : "+nickname_use);
+        } console.log("Show_Nickname_Error : "+nickname_use_now);
 
-        if(nickname_use == true){
+        if(nickname_use_now == true){
 
             error = error+"<li>The nickname is already used !</li>";
         }
@@ -508,8 +512,6 @@ $("#nickname").keyup(function(){
 
     nickname_old_value = $("#nickname").val();
 
-    if(NicknameValidation()){
-
     /* A l'issue de cette fonction quelque
        que soit le résultat final la fonction
        Show_Nickname_Error sera executer avec
@@ -517,10 +519,7 @@ $("#nickname").keyup(function(){
        Http */
 
         requestValidationNickname();
-    }
-    else{
-        Show_Nickname_Error();
-    }
+
 });
 
 $("#nickname").mouseup(function(){
@@ -539,7 +538,13 @@ $("#nickname").mouseup(function(){
 
 $("#nickname").click(function(){
 
-    Show_Nickname_Error();
+   /* A l'issue de cette fonction quelque
+      que soit le résultat final la fonction
+      Show_Nickname_Error sera executer avec
+      comme param le resultatde cette requete
+      Http */
+
+       requestValidationNickname();
 
 });
 
@@ -616,6 +621,11 @@ $("#email").click(function(){
 
 /* BUTTON SEND */
 $("#send").click(function(){
+
+    if(nickname_use_now == true){
+        $("#message_error_bad_filled").show();
+        return;
+    }
 
     if(Validation()){
         $("form").submit();

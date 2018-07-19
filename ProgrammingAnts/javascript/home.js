@@ -21,7 +21,7 @@ function readDataSession(xml_data){
 
         $("#account").css("right", "19%");
 
-        if($(xml_data).find("connection_from_register").text() == "false"){
+        if($(xml_data).find("animation_connection").text() == "true"){
 
              $("#message_user p").text(session_username);
 

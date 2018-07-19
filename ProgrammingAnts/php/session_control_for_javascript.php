@@ -6,8 +6,8 @@
     echo "<?xml version =\"1.0\" encoding=\"utf-8\"?>";
     echo "<session>";
 
-    if(isset($_SESSION['connection_from_register'])){
-        echo "<connection_from_register>" . $_SESSION["connection_from_register"] ."</connection_from_register>";
+    if(isset($_SESSION['animation_connection'])){
+        echo "<animation_connection>" . $_SESSION["animation_connection"] ."</animation_connection>";
     }
     echo "<connected>" . $_SESSION["connected"] ."</connected>";
 

@@ -24,18 +24,26 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 	<body>
 		<header>
 			<div id="main">
-				<div class="main_element"><img src="../images/programming_ants.png" title="ProgramminAnts Logo"/></div>
+				<div id="main_items1">
+					<div class="main_element"><img src="../images/programming_ants.png" title="ProgramminAnts Logo"/></div>
 					<div class="main_element"><h1>ProgrammingAnts</h1></div>
+				</div>
+
+					<div id="main_items2">
 						<div id="account">
 							<div class="identification"><a href="Login_page.html">Sign In</a></div>
 							<div class="identification"><a href="Register_page.html">Sign Up</a></div>
-          		<div class="identification disconnect"><a href="../php/disconnect.php">Sign Out</a></div>
+							<div class="identification disconnect"><a href="../php/disconnect.php">Sign Out</a></div>
 						</div>
-						<div id="user">
-							<div class="user_image"><img src="../images/no_user_image.png" class="user_image" /></div>
-							<div class="username"><a href="#"></a></div>
-            </div>
+
+							<div id="user">
+								<div class="user_image"><img src="../images/no_user_image.png" /></div>
+								<div class="username"><a href="#"></a></div>
+							</div>
+					</div>
 			</div>
+
+
 		</header>
 
 		<section>

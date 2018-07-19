@@ -19,8 +19,6 @@ function readDataSession(xml_data){
         $(".username").html(session_username);
         $("#user").show();
 
-        $("#account").css("right", "19%");
-
         if($(xml_data).find("animation_connection").text() == "true"){
 
              $("#message_user p").text(session_username);
@@ -60,6 +58,9 @@ $(document).ready(function(){
     $(".identification disconnect").hide();
     $("#user").hide();
     $("#reconnection").hide();
+
+    $("#users").css("order", "1");
+    $("#account").css("order", "2");
 
     requestSessionData();
 

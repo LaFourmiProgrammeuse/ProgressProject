@@ -61,6 +61,7 @@ $(document).ready(function(){
 
     $("#users").css("order", "1");
     $("#account").css("order", "2");
+    $("#account").css("margin-left", "20px");
 
     requestSessionData();
 

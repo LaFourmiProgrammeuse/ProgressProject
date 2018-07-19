@@ -11,7 +11,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 <html>
 <head>
 
-	<link rel="stylesheet" type="text/css" href="../css/home_acceuil.css">
+	<link rel="stylesheet" type="text/css" href="../css/home.css">
 	<meta charset="utf-8"/>
 	<title>ProgrammingAnts</title>
 
@@ -23,31 +23,19 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
 	<body>
 		<header>
-			<span class="website_name"><h1>ProgrammingAnts</h1></span>
-			<img src="../images/programming_ants.png" class="programming_ants_logo" />
-
-								<div id="account">
-
-									<div class="identification"><a href="Login_page.html">Sign In</a></div>
-									<div class="identification"><a href="Register_page.html">Sign Up</a></div>
-                                     <div class="identification disconnect">
-                                        <a href="../php/disconnect.php">Sign Out</a>
-                                    </div>
-								</div>
-
-
-
-                                                            <!--image de profil et pseudo de l'utilisateur connecter (header)-->
-																<div id="user">
-																	<div class="user_image">
-                                    		                            <img src="../images/no_user_image.png" class="user_image" />
-																		</div>
-																		<div class="username">
-																				<p><a href="#"></a></p>
-																		</div>
-                                </div>
-
-
+			<div id="main">
+				<div class="main_element"><img src="../images/programming_ants.png" title="ProgramminAnts Logo"/></div>
+					<div class="main_element"><h1>ProgrammingAnts</h1></div>
+						<div id="account">
+							<div class="identification"><a href="Login_page.html">Sign In</a></div>
+							<div class="identification"><a href="Register_page.html">Sign Up</a></div>
+          		<div class="identification disconnect"><a href="../php/disconnect.php">Sign Out</a></div>
+						</div>
+						<div id="user">
+							<div class="user_image"><img src="../images/no_user_image.png" class="user_image" /></div>
+							<div class="username"><a href="#"></a></div>
+            </div>
+			</div>
 		</header>
 
 		<section>

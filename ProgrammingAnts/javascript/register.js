@@ -554,6 +554,7 @@ $("#pass").keyup(function(){
 
     PassValidation();
     Show_Pass_Error();
+    PassConfirmValidation();
 
 });
 

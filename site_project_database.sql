@@ -51,7 +51,7 @@ CREATE TABLE `users` (
   `username` varchar(20) NOT NULL,
   `password` varchar(30) NOT NULL,
   `mail` varchar(40) NOT NULL,
-  `keep_connected` tinyint(1) NOT NULL,
+  `stay_connected` tinyint(4) NOT NULL,
   `rank` tinyint(4) NOT NULL,
   `prefered_language` char(2) NOT NULL DEFAULT 'en',
   PRIMARY KEY (`id`),
@@ -79,4 +79,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-07-19 10:43:38
+-- Dump completed on 2018-07-19 11:40:09

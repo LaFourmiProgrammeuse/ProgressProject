@@ -10,7 +10,7 @@ try{
 
 }catch(Exception $e){
 
-    //die('Erreur : ' . $e);
+    die('Erreur : ' . $e);
 
 }
 
@@ -36,7 +36,7 @@ if(isset($_SESSION['timeout'])){
 
             time();
 
-            $qprepare = $bdd->prepare("SELECT keep_connected FROM users WHERE username = :username && password = :password");
+            $qprepare = $bdd->prepare("SELECT stay_connected FROM users WHERE username = :username && password = :password");
             $qprepare->execute(array('username' => $_COOKIE['username'], 'password' => $_COOKIE['password']));
 
             if($qprepare){
@@ -44,12 +44,12 @@ if(isset($_SESSION['timeout'])){
                 time();
                 $qrep = $qprepare->fetch();
 
-                if($qrep['keep_connected'] == '0'){
+                if($qrep['stay_connected'] == '0'){
 
                     $_SESSION['connected'] = 'false';
                     time();
 
-                }else if($qrep['keep_connected'] == '1'){
+                }else if($qrep['stay_connected'] == '1'){
 
                     $_SESSION['connected'] = 'true';
 
@@ -94,11 +94,11 @@ if(isset($_SESSION['timeout'])){
         if($qprepare){
             $qrep = $qprepare->fetch();
 
-            if($qrep['keep_connected'] == '0'){
+            if($qrep['stay_connected'] == '0'){
 
                 $_SESSION['connected'] = 'false';
 
-            }else if($qrep['keep_connected'] == '1'){
+            }else if($qrep['stay_connected'] == '1'){
 
                 $_SESSION['connected'] = 'true';
 

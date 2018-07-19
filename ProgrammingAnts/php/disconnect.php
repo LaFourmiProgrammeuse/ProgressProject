@@ -12,8 +12,8 @@
 
     }
 
-    $qprepare = $bdd->prepare("UPDATE users SET keep_connected=\'0\' WHERE username=?");
-    $qprepare->execute(array($_SESSION['username']));
+    $qprepare = $bdd->prepare("UPDATE users SET stay_connected=? WHERE username=?");
+    $qprepare->execute(array('0', $_SESSION['username']));
 
     session_destroy();
 

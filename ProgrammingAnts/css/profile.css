@@ -1,0 +1,43 @@
+a {
+	text-decoration: none;
+}
+
+p {
+ margin: 0px;
+}
+
+body {
+	background-color: white;
+	margin: 0;
+	padding: 0;
+}
+
+  /* HEADER */
+
+	#top {
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+		background-color: red;
+	}
+
+		.top_element:nth-child(1) {
+			color: red;
+		}
+
+	/* ASIDE */
+
+	#side_nav {
+		display: flex;
+		background-color: pink;
+	}
+
+	/* SECTION */
+
+	section {
+		display: flex;
+		background-color: blue;
+		width: 50px;
+		height: 50px;
+	}

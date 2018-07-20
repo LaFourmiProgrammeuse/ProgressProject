@@ -37,7 +37,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
 						<div id="user">
 							<div class="user_image"><img src="../images/no_user_image.png" /></div>
-							<div class="username"><a href="#"></a></div>
+							<div class="username"><a href="profile.html"></a></div>
 						</div>
 				</div>
 		</div>

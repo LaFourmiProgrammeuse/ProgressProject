@@ -268,3 +268,12 @@ body {
 		}
 
 	/* FOOTER */
+    footer{
+    position: absolute;
+    height: 75px;
+    width: 100%;
+    margin-top: 20px;
+    background-color: rgb(32,32,32);
+    align-content: center;
+    color: white;
+    }

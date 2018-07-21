@@ -100,7 +100,9 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 		</aside>
 
 		<footer>
-
+            <p align="center" padding="30px">
+                © 2018 ProgrammingAnts, Inc.
+            </p>
 		</footer>
 	</body>
 

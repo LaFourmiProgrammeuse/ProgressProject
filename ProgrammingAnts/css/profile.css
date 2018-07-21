@@ -154,10 +154,16 @@ body {
       padding-left: 8px;
 			padding-right: 8px;
 			line-height: 25px;
-			margin-top: 20px;
 			margin-left: 5px;
 			margin-right: 5px;
     }
+
+		#user_stats_forum h4 {
+			color: #24252f;
+			font-size: 15px;
+			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+			height: 5px;
+		}
 
 	/* FOOTER */
 

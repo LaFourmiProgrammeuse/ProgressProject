@@ -81,8 +81,24 @@ body {
     #information_user_forum{
         position: relative;
         height: 75px;
-        width: 250px;
+        width: 230px;
         border: 1px solid grey;
         border-radius: 10px;
         padding: 10px;
+    }
+
+    #profile_menu_bar{
+        display: flex;
+        position: relative;
+        left: 250px;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 40px;
+    }
+
+    #content_part{
+        position: relative;
+        width: auto;
+        left: 250px;
     }

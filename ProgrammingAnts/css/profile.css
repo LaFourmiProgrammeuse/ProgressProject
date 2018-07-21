@@ -27,12 +27,12 @@ body {
 
 		#top {
 			display: inline-flex;
-			margin-top: 75px;
+			margin-top: 50px;
 			height: 70px;
 			width: 50%;
 			min-width: 347px;
 			box-shadow: 1px 1px 5px grey;
-			border-radius: 15px;
+			border-radius: 5px;
 		}
 
 			#top h1 {
@@ -66,6 +66,7 @@ body {
 		margin-left: 12%;
 		width: 160px;
 		height: 500px;
+		border-radius: 5px;
 		float: left;
 	}
 
@@ -88,12 +89,12 @@ body {
 			color: #495969;
 		}
 
-		.nav_element:nth-child(3) {
+		.nav_element:nth-child(4) {
 			border-bottom: 1px solid #495969;
 		}
 
-		.nav_element:nth-child(4) {
-			margin-top: 285px;
+		.nav_element:nth-child(5) {
+			margin-top: 240px;
 			border-bottom: 1px solid #495969;
 		}
 
@@ -107,6 +108,7 @@ body {
 		margin-top: 50px;
 		box-shadow: 1px 1px 5px grey;
 		background-color: #f4f4f4;
+		border-radius: 5px;
 	}
 
     #user_informations1 {
@@ -119,6 +121,7 @@ body {
 			margin-top: auto;
 			margin-bottom: auto;
 			border: 1px solid grey;
+			border-radius: 5px;
     }
 
 		#user_img_frame{
@@ -127,7 +130,6 @@ body {
       width: 100px;
 			height: 100px;
       background-color: white;
-			border: 1px solid #24252f;
     }
 
     #user_img{
@@ -151,9 +153,31 @@ body {
       width: auto;
       padding-left: 8px;
 			padding-right: 8px;
-			line-height: 22px;
-			border: 1px solid grey;
-			margin-top: 20px;
+			line-height: 25px;
 			margin-left: 5px;
 			margin-right: 5px;
     }
+
+		#user_stats_forum h4 {
+			color: #24252f;
+			font-size: 15px;
+			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+			height: 5px;
+		}
+
+	/* FOOTER */
+
+	footer {
+	   position: absolute;
+	   height: 50px;
+	   width: 100%;
+	   margin-top: 57px;
+	   background-color: #24252f;
+	   align-content: center;
+	   color: white;
+ 	}
+
+	  #footer_label {
+	  	margin-top: 20px;
+	  	text-align: center;
+ 		}

@@ -107,9 +107,16 @@ body {
 							}
 
 							.username {
-								color: #495969;
 								font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-								font-size: 13px;;
+								font-size: 13px;
+							}
+
+							.username a {
+								color: #24252f;
+							}
+
+							.username a:hover {
+								color: #495969;
 							}
 
 	/* SECTION */
@@ -268,17 +275,18 @@ body {
 		}
 
 	/* FOOTER */
-    footer{
+
+  footer{
     position: absolute;
-    height: 75px;
+    height: 50px;
     width: 100%;
     margin-top: 20px;
-    background-color: rgb(32,32,32);
+    background-color: #24252f;
     align-content: center;
     color: white;
     }
 
     #footer_label{
-        margin-top: 28px;
-        text-align: center;
+      margin-top: 20px;
+      text-align: center;
     }

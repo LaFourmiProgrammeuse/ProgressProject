@@ -3,102 +3,157 @@ a {
 }
 
 p {
- margin: 0px;
+ margin: 0;
+}
+
+ul {
+	padding-left: 0;
+	margin-left: 0;
+	list-style: none;
 }
 
 body {
-	background-color: white;
 	margin: 0;
 	padding: 0;
 }
 
   /* HEADER */
 
-	#top {
+	header {
 		display: flex;
-		margin-left: auto;
-		margin-right: auto;
-		width: 50%;
-		background-color: red;
+		justify-content: center;
+		height: auto;
 	}
 
-		.top_element:nth-child(1) {
-			color: red;
+		#top {
+			display: inline-flex;
+			margin-top: 75px;
+			height: 70px;
+			width: 50%;
+			min-width: 347px;
+			box-shadow: 1px 1px 5px grey;
+			border-radius: 15px;
 		}
+
+			#top h1 {
+				color:  #24252f;
+				font-size: 40px;
+				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+				margin-left: 15px;
+				margin-top: 15px;
+			}
+
+			#top a {
+				color:  #24252f;
+				font-size: 15px;
+				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+				font-style: italic;
+				margin-left: 10px;
+				margin-top: 36px;
+			}
+
+			#top a:hover {
+				color: #495969;
+			}
 
 	/* ASIDE */
 
-	#side_nav {
-        position: fixed;
+	aside {
 		display: flex;
-		background-color: pink;
-        width: 200px;
-        left: 0px;
+		background-color: #24252f;
+		margin-top: 50px;
+		margin-right: 25px;
+		margin-left: 12%;
+		width: 160px;
+		height: 500px;
+		float: left;
 	}
+
+		aside ul {
+			margin: 15px auto;
+		}
+
+		.nav_element {
+			text-align: center;
+			font-size: 12px;
+			font-family: Verdana, "DejaVu Sans", "Bitstream Vera Sans", Geneva, sans-serif;
+			border-top: 1px solid #495969;
+		}
+
+		.nav_element a {
+			color: white;
+		}
+
+		.nav_element a:hover {
+			color: #495969;
+		}
+
+		.nav_element:nth-child(3) {
+			border-bottom: 1px solid #495969;
+		}
+
+		.nav_element:nth-child(4) {
+			margin-top: 285px;
+			border-bottom: 1px solid #495969;
+		}
 
 	/* SECTION */
 
 	section {
 		display: flex;
-		width: 65%;
-        height: 800px;
-		height: 50px;
-        margin-left: auto;
-        margin-right: auto;
+		width: 50%;
+		min-width: 450px;
+    height: 500px;
+		margin-top: 50px;
+		box-shadow: 1px 1px 5px grey;
+		background-color: #f4f4f4;
 	}
 
-    #informations_user{
-        position: absolute;
-        width: 250px;
-        height: 400px;
+    #user_informations1 {
+			display: flex;
+			background-color: white;
+			flex-direction: column;
+      width: 35%;
+      height: 480px;
+			margin-left: 10px;
+			margin-top: auto;
+			margin-bottom: auto;
+			border: 1px solid grey;
+    }
 
+		#user_img_frame{
+			display: flex;
+			margin: 10px auto;
+      width: 100px;
+			height: 100px;
+      background-color: white;
+			border: 1px solid #24252f;
     }
 
     #user_img{
-        position: relative;
-        left: 25px;
-        top: 25px;
-        width: 200px;
-        height: 200px;
+      width: 100px;
+      height: 100px;
     }
 
-    #user_img_frame{
-        position: relative;
-        width: 250px;
-        height: 250px;
-        background-color: rgb(204,204,204);
-        border-radius: 20px;
+    #username{
+			color: white;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			font-size: 18px;
+			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+			background-color: #24252f;
+			width: 100%;
     }
 
-    #user_nickname{
-        position: relative;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        font-size: 22px;
-
-    }
-
-    #information_user_forum{
-        position: relative;
-        height: 75px;
-        width: 230px;
-        border: 1px solid grey;
-        border-radius: 10px;
-        padding: 10px;
-    }
-
-    #profile_menu_bar{
-        display: flex;
-        position: relative;
-        left: 250px;
-        width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-        height: 40px;
-    }
-
-    #content_part{
-        position: relative;
-        width: auto;
-        left: 250px;
+    #user_stats_forum{
+			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+			font-size: 15px;
+      width: auto;
+      padding-left: 8px;
+			padding-right: 8px;
+			line-height: 22px;
+			border: 1px solid grey;
+			margin-top: 20px;
+			margin-left: 5px;
+			margin-right: 5px;
     }

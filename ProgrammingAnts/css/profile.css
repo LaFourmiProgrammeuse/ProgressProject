@@ -165,6 +165,13 @@ body {
 			height: 5px;
 		}
 
+        #onglet_frame{
+            position: relative;
+            width: 60%;
+            margin: auto;
+            height: 470px;
+        }
+
 	/* FOOTER */
 
 	footer {

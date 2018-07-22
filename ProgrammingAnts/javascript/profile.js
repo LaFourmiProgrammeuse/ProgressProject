@@ -2,12 +2,13 @@ $(document).ready(function(){
 
 console.log("dsqd");
 
-$.ajax({
-        type: "GET",
-        url: "../html-php/Onglet.html",
-        dataType: "xml",
-        success: function(xml){
-            console.log(xml);
-        }
+$("#nav_element_overview").click(function(){
+console.log("zeqdsqdqd");
+    $("section").load("../html-php/onglets_profile/profile_overview.html");
 });
+
+$("#nav_element_profile").click(function(){
+    $("section").load("../html-php/onglets_profile/profile_profile.html");
+});
+
 });

@@ -21,17 +21,19 @@ body {
 
 	header {
 		display: flex;
-		justify-content: center;
 		height: auto;
 	}
 
 		#top {
 			display: inline-flex;
 			margin-top: 50px;
+			margin-left: auto;
+			margin-right: auto;
 			height: 70px;
 			width: 50%;
 			min-width: 347px;
-			box-shadow: 1px 1px 5px grey;
+			border-top: 2px solid #24252f;
+			border-bottom: 2px solid #24252f;
 			border-radius: 5px;
 		}
 
@@ -56,72 +58,28 @@ body {
 				color: #495969;
 			}
 
-	/* ASIDE */
-
-	aside {
-		display: flex;
-		background-color: #24252f;
-		margin-top: 50px;
-		margin-right: 25px;
-		margin-left: 12%;
-		width: 160px;
-		height: 500px;
-		border-radius: 5px;
-		float: left;
-	}
-
-		aside ul {
-			margin: 15px auto;
-		}
-
-		.nav_element {
-			text-align: center;
-			font-size: 12px;
-			font-family: Verdana, "DejaVu Sans", "Bitstream Vera Sans", Geneva, sans-serif;
-			border-top: 1px solid #495969;
-		}
-
-		.nav_element a {
-			color: white;
-		}
-
-		.nav_element a:hover {
-			color: #495969;
-		}
-
-		.nav_element:nth-child(4) {
-			border-bottom: 1px solid #495969;
-		}
-
-		.nav_element:nth-child(5) {
-			margin-top: 240px;
-			border-bottom: 1px solid #495969;
-		}
-
 	/* SECTION */
 
 	section {
 		display: flex;
-		width: 50%;
+		width: 70%;
 		min-width: 450px;
     height: 500px;
 		margin-top: 50px;
-		box-shadow: 1px 1px 5px grey;
-		background-color: #f4f4f4;
-		border-radius: 5px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
     #user_informations1 {
 			display: flex;
-			background-color: white;
 			flex-direction: column;
-      width: 35%;
+			width: 35%;
       height: 480px;
-			margin-left: 10px;
+			margin-left: 15px;
 			margin-top: auto;
 			margin-bottom: auto;
-			border: 1px solid grey;
-			border-radius: 5px;
+			border-top: 2px solid #24252f;
+			border-bottom: 2px solid #24252f;
     }
 
 		#user_img_frame{
@@ -141,10 +99,12 @@ body {
 			color: white;
 			padding-top: 5px;
 			padding-bottom: 5px;
+			margin-left: auto;
+			margin-right: auto;
 			font-size: 18px;
 			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 			background-color: #24252f;
-			width: 100%;
+			width: 60%;
     }
 
     #user_stats_forum{
@@ -154,6 +114,7 @@ body {
       padding-left: 8px;
 			padding-right: 8px;
 			line-height: 25px;
+			margin-top: 20px;
 			margin-left: 5px;
 			margin-right: 5px;
     }
@@ -165,12 +126,51 @@ body {
 			height: 5px;
 		}
 
-        #onglet_frame{
-            position: relative;
-            width: 60%;
-            margin: auto;
-            height: 470px;
-        }
+      #onglet_frame{
+        position: relative;
+        width: 60%;
+        margin: auto;
+        height: 470px;
+      }
+
+				#aside_nav {
+					display: flex;
+					width: 200px;
+				}
+
+				 #aside_nav ul {
+					 font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", "Luxi Sans", sans-serif;
+					 font-size: 18px;
+					 line-height: 50px;
+					 margin-top: auto;
+					 margin-bottom: auto;
+					 margin-left: auto;
+					 margin-right: auto;
+				 }
+
+				 #aside_nav ul a {
+					 color: #24252f;
+					 text-align: center;
+					 padding: 5px;
+				 }
+
+				 #aside_nav ul a:hover {
+					 color: #495969;
+					 border-top: 1px solid black;
+					 border-bottom: 1px solid black;
+					 border-top-left-radius: 15px;
+					 border-bottom-right-radius: 15px;
+				 }
+
+					#user_informations2 {
+						width: 50%;
+						height: 480px;
+						margin-top: auto;
+						margin-bottom: auto;
+						margin-left: 20px;
+						border-top: 2px solid #24252f;
+						border-bottom: 2px solid #24252f;
+					}
 
 	/* FOOTER */
 

@@ -131,6 +131,8 @@ body {
         width: 60%;
         margin: auto;
         height: 470px;
+        margin: 10px;
+        top: 10px;
       }
 
 				#aside_nav {

@@ -1,9 +1,6 @@
 $(document).ready(function(){
 
-console.log("dsqd");
-
 $("#nav_element_overview").click(function(){
-console.log("zeqdsqdqd");
     $("#onglet_frame").load("../html-php/onglets_profile/profile_overview.html");
 });
 

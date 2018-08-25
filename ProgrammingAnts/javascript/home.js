@@ -25,7 +25,7 @@ function readDataSession(xml_data){
 
             $("#reconnection").show();
             $("#reconnection").animate({right: '+=200'}, 2000);
-            setTimeout(hideMessageConnection(), 10000);
+            setTimeout(function(){hideMessageConnection()}, 4000);
         }
 
     }else{

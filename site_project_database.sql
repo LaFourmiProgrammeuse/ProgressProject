@@ -52,7 +52,7 @@ CREATE TABLE `users` (
   `password` varchar(30) NOT NULL,
   `mail` varchar(40) NOT NULL,
   `stay_connected` tinyint(4) NOT NULL,
-  `rank` tinyint(4) NOT NULL,
+  `rank` tinyint(4) NOT NULL DEFAULT '0',
   `prefered_language` char(2) NOT NULL DEFAULT 'en',
   `like_received` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
@@ -67,7 +67,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Florian','5789','florian@gmail.com',0,0,'en',0),(5,'Antoine','5789','antoine@gmail.com',0,0,'en',0);
+INSERT INTO `users` VALUES (1,'Florian','5789','florian@gmail.com',0,0,'en',0),(5,'Antoine','151172','antoine@gmail.com',0,0,'en',0);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -80,4 +80,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-07-23 11:47:55
+-- Dump completed on 2018-08-25 14:29:26

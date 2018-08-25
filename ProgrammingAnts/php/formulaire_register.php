@@ -30,14 +30,19 @@ catch(Exception $e){
     die('Erreur : ' . $e->getMessage());
 }
 
-$qprepare = $bdd->prepare('INSERT INTO users (id, username, password, mail, keep_connected, rank, prefered_language) VALUES (:id, :username, :password, :mail, :keep_connected, :rank, :prefered_language)');
-$qprepare->execute(array('id' => '0', 'username' => $username, 'password' => $password, 'mail' => $email, 'keep_connected' => '1', 'rank' => '0', 'prefered_language' => 'en'));
+$qprepare = $bdd->prepare('INSERT INTO users (id, username, password, mail, stay_connected) VALUES (:id, :username, :password, :mail, :stay_connected)');
+
+if($qprepare->execute(array('id' => '0', 'username' => $username, 'password' => $password, 'mail' => $email, 'stay_connected' => '1'))){
+    echo "Requête mysql avec succès !";
+}else{
+    echo "Echec de la requête mysql !";
+}
 
 $_SESSION['connected'] = 'true';
 $_SESSION['username'] = $username;
 $_SESSION['password'] = $password;
 
-header('Location: ../html-php/home.php');
+//header('Location: ../html-php/home.php');
 
 
 ?>

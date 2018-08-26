@@ -42,7 +42,7 @@ $_SESSION['connected'] = 'true';
 $_SESSION['username'] = $username;
 $_SESSION['password'] = $password;
 
-//header('Location: ../html-php/home.php');
+header('Location: ../html-php/home.php');
 
 
 ?>

@@ -23,7 +23,7 @@ else{
 
 try{
 
-$bdd = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
+$bdd = new PDO('mysql:host=localhost;dbname=site_project_database;charset=utf8', 'root', ''/*, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)*/);
 
 }
 catch(Exception $e){
@@ -42,7 +42,7 @@ $_SESSION['connected'] = 'true';
 $_SESSION['username'] = $username;
 $_SESSION['password'] = $password;
 
-header('Location: ../html-php/home.php');
+//header('Location: ../html-php/home.php');
 
 
 ?>

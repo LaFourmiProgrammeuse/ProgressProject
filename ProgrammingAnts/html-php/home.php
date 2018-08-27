@@ -30,8 +30,8 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
 				<div id="main_items2">
 					<div id="account">
-						<div class="identification"><a href="Login_page.html">Sign In</a></div>
-						<div class="identification"><a href="Register_page.html">Sign Up</a></div>
+						<div class="identification"><a href="login_page.html">Sign In</a></div>
+						<div class="identification"><a href="register_page.html">Sign Up</a></div>
 						<div class="identification disconnect"><a href="../php/disconnect.php">Sign Out</a></div>
 					</div>
 

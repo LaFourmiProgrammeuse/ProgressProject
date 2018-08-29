@@ -1,6 +1,6 @@
 <?php
 
-require '../php/session_control.php';
+require '../php_without_view/session_control.php';
 
 $username = $_POST["nickname"];
 $password = $_POST["pass"];

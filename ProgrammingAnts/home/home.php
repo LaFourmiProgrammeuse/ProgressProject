@@ -1,7 +1,7 @@
 <?php
 
 //Ne pas mettre de code html avant cette ligne !
-require '../php/session_control.php';
+require '../php_without_view/session_control.php';
 
 echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
@@ -24,7 +24,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 	<body>
 		<header>
 			<div id="main_items1">
-				<div class="main_element"><img src="../images/programming_ants.png" title="ProgramminAnts Logo"/></div>
+				<div class="main_element"><img src="../images/programming_ants.png" title="ProgrammingAnts Logo"/></div>
 				<div class="main_element"><h1>ProgrammingAnts</h1></div>
 			</div>
 

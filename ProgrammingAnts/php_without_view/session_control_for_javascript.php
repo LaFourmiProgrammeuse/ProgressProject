@@ -1,5 +1,5 @@
 <?php
-    require "session_control.php";
+    require "../php_without_view/session_control.php";
 
     header("Access-Control-Allow-Origin: *");
     header("Content-Type: text/xml");

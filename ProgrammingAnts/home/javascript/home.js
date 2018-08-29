@@ -2,7 +2,7 @@ var session_username;
 var connected;
 
 function hideMessageConnection(){
-    console.log("sdqdqdsqdq");
+
     $("#reconnection").animate({right: '-=200'}, 2000);
 }
 

@@ -65,7 +65,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
 						<div class="article">
 							<h2>Forum</h2>
-							<p><a href="forum.html" title="Here is the Forum !" >Here is the forum</a></p>
+							<p id="link_forum_article"><a href="forum.html" title="Here is the Forum !" >Here is the forum</a></p>
 						</div>
 
 						<div class="article">

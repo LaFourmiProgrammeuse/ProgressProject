@@ -11,12 +11,12 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 <html>
 <head>
 
-	<link rel="stylesheet" type="text/css" href="../css/home.css">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
 	<meta charset="utf-8"/>
 	<title>ProgrammingAnts</title>
 
-    <script type="text/javascript" src="../javascript/framework/jquery.js"></script>
-    <script type="text/javascript" src="../javascript/home.js"></script>
+    <script type="text/javascript" src="../framework_javascript/jquery.js"></script>
+    <script type="text/javascript" src="javascript/home.js"></script>
     <script type="text/javascript" src ="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
 
 </head>
@@ -30,14 +30,14 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
 				<div id="main_items2">
 					<div id="account">
-						<div class="identification"><a href="login_page.html">Sign In</a></div>
-						<div class="identification"><a href="register_page.html">Sign Up</a></div>
+						<div class="identification"><a href="../login/login_page.html">Sign In</a></div>
+						<div class="identification"><a href="../register/register_page.html">Sign Up</a></div>
 						<div class="identification disconnect"><a href="../php/disconnect.php">Sign Out</a></div>
 					</div>
 
 						<div id="user">
 							<div class="user_image"><img src="../images/no_user_image.png" /></div>
-							<div class="username"><a href="profile.html"></a></div>
+							<div class="username"><a href="../profile/profile.html"></a></div>
 						</div>
 				</div>
 		</div>
@@ -65,7 +65,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
 						<div class="article">
 							<h2>Forum</h2>
-							<p id="link_forum_article"><a href="forum.html" title="Here is the Forum !" >Here is the forum</a></p>
+							<p id="link_forum_article"><a href="../forum/forum.html" title="Here is the Forum !" >Here is the forum</a></p>
 						</div>
 
 						<div class="article">

@@ -8,15 +8,15 @@ $email = $_POST['email'];
 
 if(isset($_COOKIE['identifiant']) && isset($_COOKIE['mdp'])){
 
-    setcookie('username',  $username, time() + 365*24*3600, "/ProgrammingAnts/");
-    setcookie('password', $password, time() + 365*24*3600, "/ProgrammingAnts/");
+    setcookie('username',  $username, time() + 365*24*3600, "/www/");
+    setcookie('password', $password, time() + 365*24*3600, "/www/");
 
     echo 'Tout les cookies existent';
 }
 else{
 
-    setcookie('username',  $username, time() + 365*24*3600, "/ProgrammingAnts/");
-    setcookie('password',  $password, time() + 365*24*3600, "/ProgrammingAnts/");
+    setcookie('username',  $username, time() + 365*24*3600, "/www/");
+    setcookie('password',  $password, time() + 365*24*3600, "/www/");
 
     echo 'Un ou plusieurs cookie(s) n\'existent pas !';
 }
@@ -42,7 +42,7 @@ $_SESSION['connected'] = 'true';
 $_SESSION['username'] = $username;
 $_SESSION['password'] = $password;
 
-header('Location: ../html-php/home.php');
+header('Location: ../home/home.php');
 
 
 ?>

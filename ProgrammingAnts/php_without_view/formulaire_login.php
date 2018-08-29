@@ -53,6 +53,6 @@ $_SESSION['password'] = $password;
 
 $_SESSION['animation_connection'] = 'true';
 
-header('Location: ../html-php/home.php');
+header('Location: ../home/home.php');
 
 ?>

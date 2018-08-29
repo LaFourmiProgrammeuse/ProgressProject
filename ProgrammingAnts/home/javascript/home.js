@@ -43,7 +43,7 @@ function requestSessionData(){
 
     $.ajax({
             type: "GET",
-            url: "../php/session_control_for_javascript.php",
+            url: "../../php_without_view/session_control_for_javascript.php",
             dataType: "xml",
             success: function(xml){
                 readDataSession(xml);

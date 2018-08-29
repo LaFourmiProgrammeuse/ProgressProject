@@ -32,7 +32,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 					<div id="account">
 						<div class="identification"><a href="../login/login_page.html">Sign In</a></div>
 						<div class="identification"><a href="../register/register_page.html">Sign Up</a></div>
-						<div class="identification disconnect"><a href="../php/disconnect.php">Sign Out</a></div>
+						<div class="identification disconnect"><a href="../php_without_view/disconnect.php">Sign Out</a></div>
 					</div>
 
 						<div id="user">
@@ -48,7 +48,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 			<nav>
 				<div id="top_menu">
 					<div class="option"><h3><a href="#">Projects</a></h3></div>
-						<div class="option"><h3><a href="forum.html">Forum</a></h3></div>
+						<div class="option"><h3><a href="../forum/forum.html">Forum</a></h3></div>
 							<div class="option"><h3><a href="#">Blog</a></h3></div>
 								<div class="option"><h3><a href="#">About</a></h3></div>
 									<div class="option"><h3><a href="#">Contact</a></h3></div>

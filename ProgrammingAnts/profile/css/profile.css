@@ -150,13 +150,13 @@ body {
 					 margin-right: auto;
 				 }
 
-				 #aside_nav ul h3 {
+				 #aside_nav ul li {
 					 color: #24252f;
 					 text-align: center;
 					 padding: 5px;
 				 }
 
-				 #aside_nav ul h3:hover {
+				 #aside_nav ul li:hover {
 					 color: #495969;
 					 border-top: 1px solid black;
 					 border-bottom: 1px solid black;

@@ -21,11 +21,11 @@
 
         <div id="aside_nav">
           <ul>
-            <li class="nav_element" id="nav_element_overview"><h3><a href="#">Overview</a></h3></li>
-            <li class="nav_element" id="nav_element_profile"><h3><a href="#">Profile</a></h3></li>
-            <li class="nav_element" id="nav_element_account"><h3><a href="#">Account</a></h3></li>
-            <li class="nav_element" id="nav_element_other"><h3><a href="#">Other</a></h3></li>
-            <li class="nav_element" id="nav_element_signout"><h3><a href="#">Sign out</a></h3></li>
+            <li class="nav_element" id="nav_element_overview"><h3>Overview</h3></li>
+            <li class="nav_element" id="nav_element_profile"><h3>Profile</h3></li>
+            <li class="nav_element" id="nav_element_account"><h3>Account</h3></li>
+            <li class="nav_element" id="nav_element_other"><h3>Other</h3></li>
+            <li class="nav_element" id="nav_element_signout"><h3>Sign out</h3></li>
           </ul>
         </div>
 

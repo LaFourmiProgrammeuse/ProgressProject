@@ -30,14 +30,14 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
 				<div id="main_items2">
 					<div id="account">
-						<div class="identification"><a href="../login/login_page.html">Sign In</a></div>
-						<div class="identification"><a href="../register/register_page.html">Sign Up</a></div>
+						<div class="identification"><a href="../login/login_page.php">Sign In</a></div>
+						<div class="identification"><a href="../register/register_page.php">Sign Up</a></div>
 						<div class="identification disconnect"><a href="../php_without_view/disconnect.php">Sign Out</a></div>
 					</div>
 
 						<div id="user">
 							<div class="user_image"><img src="../images/no_user_image.png" /></div>
-							<div class="username"><a href="../profile/profile.html"></a></div>
+							<div class="username"><a href="../profile/profile.php"></a></div>
 						</div>
 				</div>
 		</div>
@@ -48,7 +48,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 			<nav>
 				<div id="top_menu">
 					<div class="option"><h3><a href="#">Projects</a></h3></div>
-						<div class="option"><h3><a href="../forum/forum.html">Forum</a></h3></div>
+						<div class="option"><h3><a href="../forum/forum.php">Forum</a></h3></div>
 							<div class="option"><h3><a href="#">Blog</a></h3></div>
 								<div class="option"><h3><a href="#">About</a></h3></div>
 									<div class="option"><h3><a href="#">Contact</a></h3></div>
@@ -65,7 +65,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
 						<div class="article">
 							<h2>Forum</h2>
-							<p id="link_forum_article"><a href="../forum/forum.html" title="Here is the Forum !" >Here is the forum</a></p>
+							<p id="link_forum_article"><a href="../forum/forum.php" title="Here is the Forum !" >Here is the forum</a></p>
 						</div>
 
 						<div class="article">

@@ -20,8 +20,8 @@
 
 
 						<div id="account">
-							<div class="identification"><a href="Login_page.html">Sign In</a></div>
-							<div class="identification"><a href="Register_page.html">Sign Up</a></div>
+							<div class="identification"><a href="Login_page.php">Sign In</a></div>
+							<div class="identification"><a href="Register_page.php">Sign Up</a></div>
 						</div>
 
 							<div id="drop-down_menu">

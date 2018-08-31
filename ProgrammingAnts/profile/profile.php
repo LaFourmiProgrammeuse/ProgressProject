@@ -47,12 +47,6 @@
             </div>
           </div>
 
-          <!-- <div id="user_informations2">
-
-            Sert a quoi ? :)
-
-          </div> -->
-
           <div id="onglet_frame">
 
           </div>
@@ -60,9 +54,11 @@
         </section>
 
           <footer>
-            <p id="footer_label">
-              © 2018 ProgrammingAnts, Inc.
-            </p>
+
+            <?php
+                require "../footer.php";
+            ?>
+
           </footer>
 
   </body>

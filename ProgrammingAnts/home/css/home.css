@@ -139,6 +139,8 @@ body {
 				border-top-right-radius: 13px;
       	        height: 45px;
       	        width: 100%;
+                position: relative;
+                top: -1px;
 			}
 
 			.option {

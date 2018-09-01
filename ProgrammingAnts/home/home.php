@@ -12,6 +12,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 <head>
 
 	<link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" type="text/css" href="../footer.css">
 	<meta charset="utf-8"/>
 	<title>ProgrammingAnts</title>
 
@@ -99,13 +100,10 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 			</div>
 		</aside>
 
-		<footer>
-
             <?php
                 require "../footer.php";
             ?>
 
-		</footer>
 	</body>
 
 </html>

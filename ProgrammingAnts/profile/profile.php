@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="css/profile.css">
+    <link rel="stylesheet" type="text/css" href="css/profile.css">
+    <link rel="stylesheet" typr="text/css" href="../footer.css">
+
   <meta charset="utf-8">
   <title>Profile</title>
     <script type="text/javascript" src="../framework_javascript/jquery.js"></script>

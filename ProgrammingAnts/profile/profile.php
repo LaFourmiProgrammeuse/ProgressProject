@@ -19,6 +19,7 @@
       </div>
     </header>
 
+    <div id="main_content"> <!-- div permettant a section de prendre toute la place de la page et ainsi au footer d'être placer au bas de la page. -->
       <section>
 
         <div id="aside_nav">
@@ -54,6 +55,7 @@
           </div>
 
         </section>
+        </div>
 
             <?php
                 require "../footer.php";

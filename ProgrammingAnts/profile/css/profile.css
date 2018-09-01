@@ -1,3 +1,4 @@
+
 a {
 	text-decoration: none;
 }
@@ -58,16 +59,23 @@ body {
 				color: #495969;
 			}
 
+    #main_content{
+        display: flex;
+        flex-direction: column;
+        min-height: calc(-290px + 100vh);
+    }
+
 	/* SECTION */
 
 	section {
 		display: flex;
 		width: 70%;
 		min-width: 450px;
-    height: 500px;
+        height: 500px;
 		margin-top: 50px;
 		margin-left: auto;
 		margin-right: auto;
+        flex: 1;
 	}
 
     #user_informations1 {
@@ -106,7 +114,7 @@ body {
 			background-color: #24252f;
 			width: 60%;
     }
-		
+
     #user_stats_forum{
 			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 			font-size: 15px;

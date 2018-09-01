@@ -143,7 +143,7 @@ body {
 				 #aside_nav ul {
 					 font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", "Luxi Sans", sans-serif;
 					 font-size: 18px;
-					 line-height: 22px;
+					 line-height: 40px;
 					 margin-top: auto;
 					 margin-bottom: auto;
 					 margin-left: auto;
@@ -153,15 +153,14 @@ body {
 				 #aside_nav ul li {
 					 color: #24252f;
 					 text-align: center;
-					 padding: 5px;
+					 padding-bottom: -1px;
+					 width: 105px;
 				 }
 
 				 #aside_nav ul li:hover {
-					 color: #495969;
-					 border-top: 1px solid black;
-					 border-bottom: 1px solid black;
-					 border-top-left-radius: 15px;
-					 border-bottom-right-radius: 15px;
+					 color: white;
+					 background-color: #24252f;
+					 border-radius: 15px;
 				 }
 
 					#user_informations2 {

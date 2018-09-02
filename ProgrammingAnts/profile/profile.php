@@ -1,3 +1,13 @@
+<?php
+
+    require "../php_for_all/session_control.php";
+
+    if($_SESSION['connected'] == 'false'){
+        header ("Location: ../home/home.php");
+    }
+
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>

@@ -2,6 +2,13 @@
 
 require '../../php_for_all/session_control.php';
 
+$date = date("d/m/Y");
+$heure = date("H:i");
+
+$date_connection_log = "[" . $date . "-" . $heure . "]";
+
+$file_log_server = fopen("../../log_server.txt", a);
+
 $username = $_POST["nickname"];
 $password = $_POST["pass"];
 
@@ -22,7 +29,12 @@ if(isset($_POST["stay_connected"])){
         }
 
         $qprepare = $bdd->prepare("UPDATE users SET stay_connected=? WHERE username=?");
-        $qprepare->execute(array("1", $username));
+
+        if(!$qprepare->execute(array("1", $username))){
+            $error_message = $file_log_server . "Error mysql request for login form";
+            fwrite($file_log_server, $error_message);
+            header('Location: ../../home/home.php');
+        }
 
     }
     $_SESSION['stay_connected'] = $stay_connected;
@@ -32,19 +44,21 @@ if(isset($_POST["stay_connected"])){
 
 if(isset($_COOKIE['username']) AND isset($_COOKIE['password'])){
 
-    setcookie('username',  $username, time() + 365*24*3600, "/ProgrammingAnts/");
-    setcookie('password',  $password, time() + 365*24*3600, "/ProgrammingAnts/");
+    setcookie('username',  $username, time() + 365*24*3600, "/www/");
+    setcookie('password',  $password, time() + 365*24*3600, "/www/");
 
     echo 'Tout les cookies existent';
 }
 else{
 
-    setcookie('username',  $username, time() + 365*24*3600, "/ProgrammingAnts/");
-    setcookie('password',  $password, time() + 365*24*3600, "/ProgrammingAnts/");
+    setcookie('username',  $username, time() + 365*24*3600, "/www/");
+    setcookie('password',  $password, time() + 365*24*3600, "/www/");
 
     echo 'Un ou plusieurs cookie(s) n\'existent pas !';
 }
 
+$connection_log = $date_connection_log . $username . " has been successfully connected /n";
+fwrite($file_log_server, $connection_log);
 
 
 $_SESSION['connected'] = 'true';

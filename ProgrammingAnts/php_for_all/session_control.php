@@ -1,6 +1,6 @@
 <?php
 
-$timeout = 7; //Temps avant destruction d'une session en seconde
+$timeout = 30; //Temps avant destruction d'une session en seconde
 
 session_start();
 

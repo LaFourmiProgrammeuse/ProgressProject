@@ -47,16 +47,25 @@
               <img src="../images/no_user_image.png" id="user_img"/>
             </div>
 
-              <p id="username" align="center">Pseudo</p>
+                <div id="username" align="center">
+                <h3>Pseudo</h3>
+                </div>
+                <div id="user_rank">
+                <h3>Rank</h3>
+                </div>
 
             <div id="user_stats_forum">
               <h4>Your stats</h4>
               <ul>
-                <li>Last connection :</li>
-                <li>Registered the :</li>
-                <li>Messages :</li>
-                <li>Liked :</li>
+                <li>Last connection : <p class="stats_forum_value" id=""></p></li>
+                <li>Registered the : <p class="stats_forum_value" id=""></p></li>
+                <li>Messages : <p class="stats_forum_value" id=""></p></li>
+                <li>Liked : <p class="stats_forum_value" id=""></p></li>
               </ul>
+            </div>
+
+            <div id="friends">
+                <h4>Your Friends</h4>
             </div>
           </div>
 

@@ -113,16 +113,33 @@ body {
 			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 			background-color: #24252f;
 			width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+    }
+
+    #username h3{
+        margin: 0px;
+    }
+
+    #user_rank{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px;
+    }
+
+    #user_rank h3{
+        margin: 0px;
+        color: rgb(0, 51, 51);
     }
 
     #user_stats_forum{
 			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 			font-size: 15px;
-      width: auto;
-      padding-left: 8px;
+        width: auto;
+        padding-left: 8px;
 			padding-right: 8px;
 			line-height: 25px;
-			margin-top: 20px;
+			margin-top: 9px;
 			margin-left: 5px;
 			margin-right: 5px;
     }
@@ -133,6 +150,19 @@ body {
 			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 			height: 5px;
 		}
+
+        #friends{
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+        #friends h4{
+            color: #24252f;
+			font-size: 15px;
+			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+            margin-top: 0px;
+
+        }
 
       #onglet_frame{
         position: relative;

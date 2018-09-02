@@ -1,4 +1,7 @@
-function
+
+function requestStatsForum(){
+
+}
 
 $(document).ready(function(){
 

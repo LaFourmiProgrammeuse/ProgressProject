@@ -23,7 +23,7 @@
 					<fieldset>
 						<legend>Log in</legend>
 
-						<form method="post" action="../php_without_view/formulaire_login.php">
+						<form method="post" action="php/formulaire_login.php">
 							<p>
 								<label for="nickname" id="nickname_label">Nickname</label>
 								<input type="text" name="nickname" id="nickname">

@@ -30,8 +30,7 @@ function readDataSession(xml_data){
 
     }else{
 
-        $(".identification").show();
-         $(".disconnect").hide();
+        $(".identification:not(.disconnect)").show();
     }
 
     console.log(connected);
@@ -43,7 +42,7 @@ function requestSessionData(){
 
     $.ajax({
             type: "GET",
-            url: "../../php_without_view/session_control_for_javascript.php",
+            url: "../../php_for_all/session_control_for_javascript.php",
             dataType: "xml",
             success: function(xml){
                 readDataSession(xml);
@@ -54,10 +53,10 @@ function requestSessionData(){
 
 $(document).ready(function(){
 
-    $(".identification").hide();
+    /*$(".identification").hide();
     $(".identification disconnect").hide();
     $("#user").hide();
-    $("#reconnection").hide();
+    $("#reconnection").hide();*/
 
     $("#users").css("order", "1");
     $("#account").css("order", "2");

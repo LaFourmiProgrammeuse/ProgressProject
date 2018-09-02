@@ -1,6 +1,6 @@
 <?php
 
-require '../php_without_view/session_control.php';
+require '../../php_for_all/session_control.php';
 
 $username = $_POST['nickname'];
 $password = $_POST['pass'];
@@ -42,7 +42,7 @@ $_SESSION['connected'] = 'true';
 $_SESSION['username'] = $username;
 $_SESSION['password'] = $password;
 
-header('Location: ../home/home.php');
+header('Location: ../../home/home.php');
 
 
 ?>

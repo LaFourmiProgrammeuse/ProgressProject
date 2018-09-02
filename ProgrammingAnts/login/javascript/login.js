@@ -64,7 +64,7 @@ function requestLoginCredentials(){
 
     }
 
-    xhr.open("POST", "../../php_without_view/verif_login_credentials.php", true);
+    xhr.open("POST", "php/verif_login_credentials.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.send("username="+username+"&password="+password);
 

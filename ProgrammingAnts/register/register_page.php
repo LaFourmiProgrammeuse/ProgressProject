@@ -28,7 +28,7 @@
 					<fieldset>
 						<legend>Join us!</legend>
 
-						<form method="post" action="../../php_without_view/formulaire_register.php">
+						<form method="post" action="php/formulaire_register.php">
 							<p>
 								<label id="nickname_label" for="nickname">Nickname</label>
 								<input type="text" name="nickname" id="nickname" placeholder="Type your nickname" size="30" maxlength="20">

@@ -1,7 +1,7 @@
 <?php
 
 //Ne pas mettre de code html avant cette ligne !
-require '../php_without_view/session_control.php';
+require '../php_for_all/session_control.php';
 
 echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
@@ -33,7 +33,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 					<div id="account">
 						<div class="identification"><a href="../login/login_page.php">Sign In</a></div>
 						<div class="identification"><a href="../register/register_page.php">Sign Up</a></div>
-						<div class="identification disconnect"><a href="../php_without_view/disconnect.php">Sign Out</a></div>
+						<div class="identification disconnect"><a href="../php_for_all/disconnect.php">Sign Out</a></div>
 					</div>
 
 						<div id="user">

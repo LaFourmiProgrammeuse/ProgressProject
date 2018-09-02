@@ -74,6 +74,7 @@ body {
 							padding-bottom: 2px;
 							padding-left: 7px;
 							padding-right: 7px;
+                            display: none;
 						}
 
 						.identification:nth-child(2) {
@@ -98,6 +99,7 @@ body {
 								margin-top: 5px;
 								margin-left: 20px;
 								align-items: center;
+                                display: none;
 							}
 
 							.user_image img {
@@ -117,6 +119,7 @@ body {
 							.username a:hover {
 								color: #495969;
 							}
+
 
 	/* SECTION */
 

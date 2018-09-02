@@ -1,13 +1,7 @@
 <?php
 
 require '../../php_for_all/session_control.php';
-
-$date = date("d/m/Y");
-$heure = date("H:i");
-
-$date_connection_log = "[" . $date . "-" . $heure . "]";
-
-$file_log_server = fopen("../../log_server.txt", a);
+include '../../php_for_all/log_function.php';
 
 $username = $_POST["nickname"];
 $password = $_POST["pass"];
@@ -31,9 +25,7 @@ if(isset($_POST["stay_connected"])){
         $qprepare = $bdd->prepare("UPDATE users SET stay_connected=? WHERE username=?");
 
         if(!$qprepare->execute(array("1", $username))){
-            $error_message = $file_log_server . "Error mysql request for login form";
-            fwrite($file_log_server, $error_message);
-            header('Location: ../../home/home.php');
+           log("Error : Echec de la requete mysql pour set stay connected a true");
         }
 
     }
@@ -57,8 +49,7 @@ else{
     echo 'Un ou plusieurs cookie(s) n\'existent pas !';
 }
 
-$connection_log = $date_connection_log . $username . " has been successfully connected /n";
-fwrite($file_log_server, $connection_log);
+log($username . "has been successfully connected !");
 
 
 $_SESSION['connected'] = 'true';

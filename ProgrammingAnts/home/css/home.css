@@ -110,6 +110,7 @@ body {
 							.username {
 								font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 								font-size: 13px;
+                                text-align: center;
 							}
 
 							.username a {

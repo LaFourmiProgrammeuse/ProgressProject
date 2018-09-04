@@ -164,6 +164,7 @@ body {
 			.option:hover {
 				background-color: #ffb322;
 				border-top: 1px solid #24252f;
+				border-bottom: 1px solid #24252f;
 			}
 
 			.option:hover a {

@@ -149,19 +149,28 @@ body {
 
 			.option {
 				color: white;
-				font-family: Verdana, "DejaVu Sans", "Bitstream Vera Sans", Geneva, sans-serif;
+				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 				font-size: 14px;
 				line-height: 9px;
-      	        margin-right: auto;
-      	        margin-left: auto;
+				padding-left: 47px;
+				padding-right: 47px;
+      	margin-right: auto;
+      	margin-left: auto;
 			}
 
 			.option a {
 				color: white;
 			}
+			.option:hover {
+				background-color: #ffb322;
+				border-top: 1px solid #24252f;
+			}
 
 			.option:hover a {
-				color: #ffb322;
+				color: #24252f;
+				border-radius: 2px;
+				padding-top: 2px;
+				padding-bottom: 2px;
 			}
 
 	/* ARTICLE */

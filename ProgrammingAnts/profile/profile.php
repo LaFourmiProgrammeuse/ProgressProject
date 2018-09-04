@@ -57,10 +57,10 @@
             <div id="user_stats_forum">
               <h4>Your stats</h4>
               <ul>
-                <li>Last connection : <p class="stats_forum_value" id=""></p></li>
-                <li>Registered the : <p class="stats_forum_value" id=""></p></li>
-                <li>Messages : <p class="stats_forum_value" id=""></p></li>
-                <li>Liked : <p class="stats_forum_value" id=""></p></li>
+                <li>Last activity : <p class="stats_forum_value" id="last_activity_value"></p></li>
+                <li>Registered the : <p class="stats_forum_value" id="date_registered_value"></p></li>
+                <li>Messages : <p class="stats_forum_value" id="number_messages_value"></p></li>
+                <li>Liked : <p class="stats_forum_value" id="number_liked_value"></p></li>
               </ul>
             </div>
 

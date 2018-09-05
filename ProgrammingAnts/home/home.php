@@ -61,7 +61,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 						<div class="article">
 							<h2>Projects</h2>
 							<p><img src="../images/progress.png" title="Still progressing on it !"/></p>
-							<p>Hey there, we still working on our website to make a great and beautiful anthill to welcome the incoming projects... Come back later ! :D </p>
+							<p>............................... </p>
 						</div>
 
 						<div class="article">
@@ -76,16 +76,16 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
 						<div class="article">
 							<h2>About</h2>
-							<p><span class="bold">Programming Ants</span> is a project that we started to push our limits in programmation and try to make something that can help people. For the moment, our website is <span class="bold">very limited in content</span>,
+							<p><span class="bold">Programming Ants</span> is a project that we started to push our limits in programmation and to try to make something that can help people. For the moment, our website is <span class="bold">very limited in content</span>,
 								 we can't create it faster because we still learning programmation to make our ideas done. The other cause is that we are only <span class="bold">two guys behind this project</span>, and it's difficult to work fast,
-								 and it's worse when we have to solve <span class="bold">bugs</span>... The fact that we are only teens and we need to work for school takes also a lot of time. But we wont give up because we know we can make it to the end
+								 mostly when we have to solve <span class="bold">bugs and mistakes</span>... The fact that we are only teens and we have to work for school takes us a lot of time aswell. But we wont give up because we know we can make it to the end
 							   and that our work will pay !</p>
 						</div>
 
 						<div class="article">
 							<h2>Contact Us</h2>
-							<p>For now you can contact us :</p></br>
-							<p><span class="bold">Programming Ants</span> e-mail adress : <span class="bold">Ajouter adresse</span></p>
+							<p>If you want to contact us :</p></br>
+							<p><span class="bold">Programming Ants</span> e-mail adress : <span class="bold">testp-a@gmail.com</span></p>
 						</div>
 					</div>
 				</article>

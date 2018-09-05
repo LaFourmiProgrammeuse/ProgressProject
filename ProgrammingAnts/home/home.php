@@ -26,7 +26,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 		<header>
 			<div id="main_items1">
 				<div class="main_element"><img src="../images/programming_ants.png" title="ProgrammingAnts Logo"/></div>
-				<div class="main_element"><h1>ProgrammingAnts</h1></div>
+				<div class="main_element"><h1>Programming Ants</h1></div>
 			</div>
 
 				<div id="main_items2">
@@ -60,31 +60,31 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 					<div id="articles">
 						<div class="article">
 							<h2>Projects</h2>
-
-							<p>............................... </p>
+							<p>No projects have been posted on our website for the moment, you should come back later, the ants will call you when the anthill is ready !</p>
 						</div>
 
 						<div class="article">
 							<h2>Forum</h2>
+							<p>Here is the forum, a place where you can talk with other people about a subject. It's the best place to go if you need help, the ants are amiable, they will help you with pleasure !
 							<p id="link_forum_article"><a href="../forum/forum.php" title="Here is the Forum !" >Here is the forum</a></p>
 						</div>
 
 						<div class="article">
 							<h2>Blog</h2>
+							<p>We still working on the blog for the moment, searching for ideas and training the ants !</p>
 						</div>
 
 						<div class="article">
 							<h2>About</h2>
 							<p><span class="bold">Programming Ants</span> is a project that we started to push our limits in programmation and to try to make something that can help people. For the moment, our website is <span class="bold">very limited in content</span>,
-								 we can't create it faster because we still learning programmation to make our ideas done. The other cause is that we are only <span class="bold">two guys behind this project</span>, and it's difficult to work fast,
-								 mostly when we have to solve <span class="bold">bugs and mistakes</span>... The fact that we are only teens and we have to work for school takes us a lot of time aswell. But we wont give up because we know we can make it to the end
-							   and that our work will pay !</p>
+								 we can't work faster because we still learning programmation languages (HTML5, PHP, CSS3, etc) to make our ideas done. The other cause is that we are only <span class="bold">two persons behind this project</span>, and it's difficult to work fastly,
+								 mostly when we have to solve <span class="bold">bugs and mistakes</span>. The fact that we are only teens and we have to study for school takes us a lot of time aswell. We won't give up and hope that everything will be fine in the futur !</p>
 						</div>
 
 						<div class="article">
-							<h2>Contact Us</h2>
-							<p>If you want to contact us :</p></br>
-							<p><span class="bold">Programming Ants</span> e-mail adress : <span class="bold">testp-a@gmail.com</span></p>
+							<h2>Contact</h2>
+							<p>If you want to contact us :</p>
+							<p><span class="bold">Programming Ants</span> e-mail adress : <a href="mailto:testp-a@gmail.com" title="Contact us !">testp-a@gmail.com</a></p>
 						</div>
 					</div>
 				</article>

@@ -13,7 +13,7 @@ body {
 		display: flex;
 		position: absolute;
 		font-size: 30px;
-		font-family: Arial Black;
+		font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 		position: absolute;
 		margin-top: 15px;
 		margin-left: 80px;
@@ -30,8 +30,8 @@ body {
 		margin-right: auto;
 	}
 
-		.programming_ants_logo {
-            position: absolute;
+		.programming_ants_logo_ide {
+      position: absolute;
 			height: 50px;
 			width: 50px;
 			margin-top: 15px;
@@ -48,19 +48,19 @@ body {
 				width: 400px;
 				height: 120px;
 				border: 2px solid;
-				border-color: #df4f48;
-				border-radius: 20px;
+				border-color: #24252f;
+				border-radius: 5px;
 			}
 
 				legend {
-					color: #df4f48;
-					font-family: Arial;
+					color: #24252f;
+					font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 					font-size: 20px;
 				}
 
 					label {
-						color: #df4f48;
-						font-family: Arial;
+						color: #24252f;
+						font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 						font-size: 15px;
 					}
 
@@ -96,14 +96,14 @@ body {
 
                     #stay_connected_label{
                          position: absolute;
-                         left: 83px;
+                         left: 42px;
                          top: 161px;
                          color: #24252f;
                     }
 
                     #stay_connected{
                         position: absolute;
-                        left: 55px;
+                        left: 15px;
                         top: 159px;
                         width: 16px;
                         height: 16px;
@@ -111,7 +111,7 @@ body {
 
                     /* ERROR */
 
-                    .text_error{ /* Modifie le formatage du texte des erreurs */
+                    	.text_error{ /* Modifie le formatage du texte des erreurs */
                         width: 300px;
                         padding-left: 5px;
                         padding-right: 5px;
@@ -119,10 +119,10 @@ body {
                     }
 
                     .message_error{ /*Ce qu'il faut appliquer a tout les messages d'erreurs */
-                        padding-bottom: auto;
-						font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-                        border: 2px dotted #df4f48;
-					    color: #df4f48;
+                      padding-bottom: auto;
+											font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+                      border: 2px solid #24252f;
+					    				color: #24252f;
                     }
 
                     #message_error_bad_filled{
@@ -148,18 +148,22 @@ body {
 					#send {
 						position: absolute;
 						top: 152px;
-						left: 350px;
+						left: 364px;
 					}
 
 						.send {
-							background-color: white;
-							padding-top: 5px;
-							padding-bottom: 5px;
-							padding-left: 20px;
-							padding-right: 20px;
+							padding-left: 14px;
+							padding-right: 14px;
 							height: 35px;
-							color: #df4f48;
+							color: #24252f;
 							border: 2px solid;
-							border-color: #df4f48;
-							border-radius: 50px;
+							background-color: white;
+							border-color: #24252f;
+							border-radius: 5px;
 						}
+
+							.send:hover {
+								background-color: #ffb322;
+								color: white;
+								border-color: #ffb322;
+							}

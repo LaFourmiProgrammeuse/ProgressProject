@@ -5,7 +5,7 @@
 
 		<link rel="stylesheet" type="text/css" href="css/register_page.css">
 		<meta charset="utf-8">
-		<title></title>
+		<title>Sign Up</title>
 
         <script type="text/javascript" src="../framework_javascript/jquery.js"></script>
         <script type="text/javascript" src="javascript/register.js"></script>
@@ -16,13 +16,13 @@
 
 				<section>
 
-					<span class="website_name"><a href="../home/home.php">ProgrammingAnts</a></span>
-					<img src="../images/programming_ants.png" class="programming_ants_logo" />
+					<span class="website_name"><a href="../home/home.php" title="Back to Programming Ants">ProgrammingAnts</a></span>
+					<img src="../images/programming_ants_ide.png" class="programming_ants_logo_ide" />
 
                     <div class="message_error" id="message_error_nickname"><p class="text_error">Error</p></div>
                     <div class="message_error" id="message_error_password"><p class="text_error">Error</p></div>
                     <div class="message_error" id="message_error_confirmation_password"><p class="text_error">Error</p></div>
-                     <div class="message_error" id="message_error_email"><p class="text_error">Error</p></div>
+                    <div class="message_error" id="message_error_email"><p class="text_error">Error</p></div>
                     <div class="message_error" id="message_error_bad_filled"><p class="text_error" id="text_error_bad_filled">Incomplete or poorly filled form</p></div>
 
 					<fieldset>

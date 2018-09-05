@@ -31,9 +31,9 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
 				<div id="main_items2">
 					<div id="account">
-						<div class="identification" id="login_button"><a href="../login/login_page.php">Sign In</a></div>
-						<div class="identification" id="register_button"><a href="../register/register_page.php">Sign Up</a></div>
-						<div class="identification" id="disconnect_button"><a href="../php_for_all/disconnect.php">Sign Out</a></div>
+						<div class="identification"><a href="../login/login_page.php">Sign In</a></div>
+						<div class="identification"><a href="../register/register_page.php">Sign Up</a></div>
+						<div class="identification disconnect"><a href="../php_for_all/disconnect.php">Sign Out</a></div>
 					</div>
 
 						<div id="user">

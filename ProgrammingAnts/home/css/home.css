@@ -57,22 +57,9 @@ body {
 						#account {
 							display: inline-flex;
 							margin-top: 22px;
-
 						}
 
-                        #login_button{
-                            display: none;
-                        }
-
-                        #register_button{
-                            display: none;
-                        }
-
-                        #disconnect_button{
-                            display: none;
-                        }
-
-						.identification {
+						.identification, .disconnect {
 							font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 							font-size: 14px;
 							text-align: center;
@@ -91,7 +78,7 @@ body {
 							margin-left: 20px;
 						}
 
-						.identification a{
+						.identification a, .disconnect a {
 							color: white;
 						}
 
@@ -259,7 +246,7 @@ body {
 		#reconnection {
 			display: flex;
 			position: fixed;
-			right: -210px;
+			right: -200px;
 			background-color: white;
 			height: 60px;
 			width: 200px;

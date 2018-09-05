@@ -1,11 +1,3 @@
-a {
-  color: white;
-}
-
-  a:hover {
-    color: #ffb322;
-  }
-
 footer{
   position: absolute;
   height: 50px;

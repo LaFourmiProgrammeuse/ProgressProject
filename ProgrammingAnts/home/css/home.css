@@ -35,11 +35,9 @@ body {
 			}
 
 				.main_element img {
-					margin-left : 12px;
-					margin-right: 9px;
-					margin-top: 12px;
-					width: 50px;
-					height: 50px;
+					margin: 9px;
+					width: 60px;
+					height: 60px;
 				}
 
 				.main_element h1 {
@@ -162,29 +160,19 @@ body {
 
 			.option {
 				color: white;
-				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+				font-family: Verdana, "DejaVu Sans", "Bitstream Vera Sans", Geneva, sans-serif;
 				font-size: 14px;
 				line-height: 9px;
-				padding-left: 47px;
-				padding-right: 47px;
-      	margin-right: auto;
-      	margin-left: auto;
+      	        margin-right: auto;
+      	        margin-left: auto;
 			}
 
 			.option a {
 				color: white;
 			}
-			.option:hover {
-				background-color: #ffb322;
-				border-top: 1px solid #24252f;
-				border-bottom: 1px solid #24252f;
-			}
 
 			.option:hover a {
-				color: #24252f;
-				border-radius: 2px;
-				padding-top: 2px;
-				padding-bottom: 2px;
+				color: #ffb322;
 			}
 
 	/* ARTICLE */

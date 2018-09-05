@@ -3,7 +3,7 @@ var connected;
 
 function hideMessageConnection(){
 
-    $("#reconnection").animate({right: '-=200'}, 2000);
+    $("#reconnection").animate({right: '-=210'}, 2000);
 }
 
 function readDataSession(xml_data){
@@ -14,7 +14,7 @@ function readDataSession(xml_data){
 
         session_username = $(xml_data).find("username").text();
 
-        $(".disconnect").show();
+        $("#disconnect_button").css("display", "block");
 
         $(".username").html("<a href='../../profile/profile.php'>"+ session_username+"</a>");
         $("#user").show();
@@ -24,13 +24,14 @@ function readDataSession(xml_data){
              $("#message_user p").text(session_username);
 
             $("#reconnection").show();
-            $("#reconnection").animate({right: '+=200'}, 2000);
+            $("#reconnection").animate({right: '+=210'}, 2000);
             setTimeout(function(){hideMessageConnection()}, 4000);
         }
 
     }else{
 
-        $(".identification:not(.disconnect)").show();
+        $("#login_button").css("display", "block");
+        $("#register_button").css("display", "block");
     }
 
     console.log(connected);
@@ -52,11 +53,6 @@ function requestSessionData(){
 }
 
 $(document).ready(function(){
-
-    /*$(".identification").hide();
-    $(".identification disconnect").hide();
-    $("#user").hide();
-    $("#reconnection").hide();*/
 
     $("#users").css("order", "1");
     $("#account").css("order", "2");

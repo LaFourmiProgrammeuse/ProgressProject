@@ -165,21 +165,22 @@ body {
 				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 				font-size: 14px;
 				line-height: 9px;
-				padding-left: 47px;
-				padding-right: 47px;
-      	margin-right: auto;
-      	margin-left: auto;
+      	        margin-right: auto;
+      	        margin-left: auto;
 			}
 
 			.option a {
 				color: white;
 			}
+<<<<<<< HEAD
 
 			.option:hover {
 				background-color: #ffb322;
 				border-top: 1px solid #24252f;
 				border-bottom: 2px solid #24252f;
 			}
+=======
+>>>>>>> f5c4d163345e7ca7a9f6d5abe4963ac616a35d85
 
 			.option:hover a {
 				color: #ffb322;

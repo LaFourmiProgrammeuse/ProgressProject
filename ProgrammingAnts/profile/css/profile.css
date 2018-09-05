@@ -151,6 +151,17 @@ body {
 			height: 5px;
 		}
 
+        #user_stats_forum h5{
+            width: 135px;
+            margin: 0px;
+        }
+
+        #user_stats_forum p{
+            width: 150px;
+            position: relative;
+            left: 136px;
+        }
+
         #friends{
             padding-left: 8px;
             padding-right: 8px;

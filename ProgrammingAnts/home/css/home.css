@@ -59,9 +59,22 @@ body {
 						#account {
 							display: inline-flex;
 							margin-top: 22px;
+
 						}
 
-						.identification, .disconnect {
+                        #login_button{
+                            display: none;
+                        }
+
+                        #register_button{
+                            display: none;
+                        }
+
+                        #disconnect_button{
+                            display: none;
+                        }
+
+						.identification {
 							font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 							font-size: 14px;
 							text-align: center;
@@ -80,7 +93,7 @@ body {
 							margin-left: 20px;
 						}
 
-						.identification a, .disconnect a {
+						.identification a{
 							color: white;
 						}
 
@@ -169,10 +182,7 @@ body {
 			}
 
 			.option:hover a {
-				color: #24252f;
-				border-radius: 2px;
-				padding-top: 2px;
-				padding-bottom: 2px;
+				color: #ffb322;
 			}
 
 	/* ARTICLE */
@@ -259,7 +269,7 @@ body {
 		#reconnection {
 			display: flex;
 			position: fixed;
-			right: -200px;
+			right: -210px;
 			background-color: white;
 			height: 60px;
 			width: 200px;

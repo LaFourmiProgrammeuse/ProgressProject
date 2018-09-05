@@ -152,14 +152,12 @@ body {
 		}
 
         #user_stats_forum h5{
-            width: 135px;
+            width: 250px;
             margin: 0px;
         }
 
-        #user_stats_forum p{
-            width: 150px;
-            position: relative;
-            left: 136px;
+        #user_stats_forum span{
+          
         }
 
         #friends{

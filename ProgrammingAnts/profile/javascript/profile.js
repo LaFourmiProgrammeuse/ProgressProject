@@ -26,7 +26,16 @@ function requestStatsForum(){
 function showForumInformation(data){
 
     var registered_date = $(data).find("registered_date").text();
-    $("#date_registered_value").text(registered_date);
+    $("#registered_date_value").text(registered_date);
+
+    var like_received = $(data).find("like_received").text();
+    $("#number_liked_received_value").text((like_received+ " (user's likes)"));
+
+    var number_message_sent = $(data).find("number_message_sent").text();
+    $("#number_message_sent_value").text((number_message_sent+" (messages sent)"));
+
+    var last_activity = $(data).find("last_activity").text();
+    $("#last_activity_value").text((last_activity+" secondes"));
 
     console.log(registered_date);
 }

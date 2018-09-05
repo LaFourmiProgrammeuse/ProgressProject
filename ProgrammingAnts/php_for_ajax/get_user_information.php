@@ -31,7 +31,7 @@
     //BDD RECUP FORUM INFORMATION
     if($information_needed[0] == 'true'){
 
-         $query = $bdd->prepare("SELECT last_activity, registered_date FROM users WHERE username=?");
+         $query = $bdd->prepare("SELECT last_activity, registered_date, like_received, number_message_sent FROM users WHERE username=?");
          if(!$query->execute(array($username))){
              log_server(("Erreur requête mysql pour recuperer la date de la dernière activité de l'utilisateur : "+$username), $file_log_path);
          }
@@ -51,6 +51,12 @@
                 echo "<registered_date>";
                     echo $user_forum_information['registered_date'];
                 echo "</registered_date>";
+                echo "<number_message_sent>";
+                    echo $user_forum_information["number_message_sent"];
+                echo "</number_message_sent>";
+                echo "<like_received >";
+                    echo $user_forum_information["like_received"];
+                echo "</like_received >";
             }
         echo "</information>";
 ?>

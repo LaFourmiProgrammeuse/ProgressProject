@@ -23,11 +23,6 @@
     //Partie a renvoyer sous format xml
     header ("Content-Type: text/xml");
 
-    //echo $information_needed[0];
-    //echo $information_needed[1];
-
-    //echo $_POST['information_needed'];
-
     //BDD RECUP FORUM INFORMATION
     if($information_needed[0] == 'true'){
 
@@ -37,6 +32,16 @@
          }
 
          $user_forum_information= $query->fetch(PDO::FETCH_ASSOC);
+    }
+
+    //BDD RECUP RANK INFORMATION
+    if($information_needed[1] == 'true'){
+        $query = $bdd->prepare("SELECT rank FROM users WHERE username=?");
+        if(!$query->execute(array($username))){
+            log_server(("Erreur requête mysql pour recuperer la date de la dernière activité de l'utilisateur : "+$username), $file_log_path);
+        }
+
+        $user_rank_information = $query->fetch(PDO::FETCH_ASSOC);
     }
 
     echo "<?xml version =\"1.0\" encoding=\"utf-8\"?>";
@@ -57,6 +62,12 @@
                 echo "<like_received >";
                     echo $user_forum_information["like_received"];
                 echo "</like_received >";
+            }
+
+            if($information_needed[1] == 'true'){
+                echo "<rank>";
+                    echo $user_rank_information[0];
+                echo "</rank>";
             }
         echo "</information>";
 ?>

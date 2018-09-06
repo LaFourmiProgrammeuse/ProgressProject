@@ -1,9 +1,12 @@
+var username;
+var user_information_already_showed = false;
 
-function requestStatsForum(){
+
+function requestUsersInformation(){
 
     var information_needed = new Array(1);
     information_needed[0] = "true";
-    information_needed[1] = "false";
+    information_needed[1] = "true";
 
     var information_needed_string = information_needed.join(',');
     alert(information_needed_string);
@@ -18,12 +21,33 @@ function requestStatsForum(){
             alert("Erreur : "+request.responseText);
         },
         success: function(data){
-            showForumInformation(data);
+            showUserInformation(data);
         }
     });
 }
 
-function showForumInformation(data){
+function requestUsername(){
+
+    $.ajax({
+        url: "../../php_for_ajax/session_control_for_javascript.php",
+        dataType: "xml",
+        cache: false,
+        type: "GET",
+        error: function(){
+            alert("Error");
+        },
+        success: function(data){
+            username = $(data).find("username").text();
+
+            if(user_information_already_showed == false){
+                requestUsersInformation();
+                user_information_already_showed = true;
+            }
+        }
+    });
+}
+
+function showUserInformation(data){
 
     var registered_date = $(data).find("registered_date").text();
     $("#registered_date_value").text(registered_date);
@@ -36,6 +60,11 @@ function showForumInformation(data){
 
     var last_activity = $(data).find("last_activity").text();
     $("#last_activity_value").text((last_activity+" secondes"));
+
+    var user_rank = $(data).find("rank").text();
+    //$("#user_rank h3").text(user_rank);
+
+    $("#username h3").text(username);
 
     console.log(registered_date);
 }
@@ -57,7 +86,5 @@ $("#nav_element_account").click(function(){
 $("#nav_element_other").click(function(){
     $("#onglet_frame").load("../../profile/onglets_profile/profile_other.html");
 });
-
-requestStatsForum();
-
+    requestUsername();
 });

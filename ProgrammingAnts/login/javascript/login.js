@@ -1,3 +1,4 @@
+var form_already_sent = false;
 
         /* AJAX */
 
@@ -33,6 +34,12 @@ function readData(data){
     console.log(data);
 
     if(data == "true"){
+
+        if(form_already_sent == true){
+            return;
+        }
+
+        form_already_sent = true;
 
         $("form").submit();
     }

@@ -9,6 +9,6 @@
         $date_log = "[" . $date . "-" . $heure . "] ";
         $log_message_with_date = $date_log . $log_message;
 
-        fwrite($file_log_server, "\n" . $log_message_with_date . "\n");
+        fwrite($file_log_server, "\n" . $log_message_with_date);
     }
  ?>

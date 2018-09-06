@@ -1,6 +1,6 @@
 var special_character = new Array('&', '@', '#', '*', '$');
 var number = new Array('1', '2', '3', '4', '5', '6', '7', '8', '9');
-var character_alphanumeric = new Array('a', 'b','c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
+var character_alphanumeric = new Array('a', 'b','c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', "Y", 'Z');
 
 var pass_special_character_needed = 2;
 var pass_number_needed = 2;
@@ -15,6 +15,8 @@ var email_old_value = "";
 
 var xhr = null;
 var nickname_use_now = false;
+
+var form_already_sent = false;
 
 
         /* AJAX */
@@ -83,7 +85,7 @@ function requestValidationNickname(){
 
     }
 
-    xhr.open("POST", "../php/verif_name.php", true);
+    xhr.open("POST", "php/verif_name.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.send("nickname="+nickname);
 
@@ -629,6 +631,13 @@ $("#send").click(function(){
     }
 
     if(Validation()){
+
+        if(form_already_sent == true){
+            return;
+        }
+
+        form_already_sent = true;
+
         $("form").submit();
     }
     else{

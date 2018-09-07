@@ -127,11 +127,11 @@ body {
 							}
 
 							.username a {
-								color: #24252f;
+								color: white;
 							}
 
 							.username a:hover {
-								color: #495969;
+								color: #ffb322;
 							}
 
 
@@ -239,34 +239,21 @@ body {
 				color: #495969;
 			}
 
-            .article:nth-child(1) {
-
-            }
-
-			.article:nth-child(1) img {
-				width: 55%;
-			}
-
 			.article:nth-child(2) a {
-				background-color: #495969;
+				background-color: #24252f;
 				color: white;
 				text-align: center;
-				padding: 5px;
+				padding: 8px;
 				box-shadow: 1px 1px 5px grey;
-				border-radius: 10px;
-			}
-
-			.article:nth-child(3) img {
-				display: flex;
-				width: 22.5%;
-				margin: auto;
+				border-radius: 5px;
 			}
 
 				.article:nth-child(5) a {
 					color: #495969;
 					font-weight: bold;
 				}
-            #link_forum_article{
+
+						#link_forum_article{
                 position: relative;
                 top: 7px;
             }
@@ -275,23 +262,23 @@ body {
 
 		#reconnection {
 			display: flex;
+			background-color: #24252f;
 			position: fixed;
 			right: -210px;
-			background-color: white;
 			height: 60px;
 			width: 200px;
 			top: 175px;
-			border-left: 1px solid #36393e;
-			border-top: 1px solid #36393e;
-			border-bottom: 1px solid #36393e;
-			border-bottom-left-radius: 15px;
-			border-top-left-radius: 15px;
-			min-width: 180px;
+			border-left: 1px solid #24252f;
+			border-top: 1px solid #24252f;
+			border-bottom: 1px solid #24252f;
+			border-bottom-left-radius: 5px;
+			border-top-left-radius: 5px;
 		}
 
 		.message {
 			position: absolute;
-			color: #36393e;
+			text-align: center;
+			color: white;
 			font-size: 20px;
 			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 			top: 15%;
@@ -299,12 +286,12 @@ body {
 		}
 
 		#message_user {
-            top: 54%;
-            width: 80%;
-            margin-left: 10%;
-            margin-right: 10%;
-            align: center;
-            height: 60px;
+			color: #ffb322;
+      top: 54%;
+      width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
+      height: 60px;
     }
 
 		.exit {

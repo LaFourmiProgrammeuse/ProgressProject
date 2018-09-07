@@ -66,7 +66,7 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 						<div class="article">
 							<h2>Forum</h2>
 							<p>Here is the forum, a place where you can talk with other people about a subject. It's the best place to go if you need help, the ants are amiable, they will help you with pleasure !
-							<p id="link_forum_article"><a href="../forum/forum.php" title="Here is the Forum !" >Here is the forum</a></p>
+							<p id="link_forum_article"><a href="../forum/forum.php" title="Forum" >Click here</a></p>
 						</div>
 
 						<div class="article">
@@ -93,9 +93,8 @@ echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
     <aside>
 			<div id="reconnection">
-				<div class="message"><img src="../images/exit.png" class="exit"/></div>
-				<div class="message">Welcome back !</div>
-        <div class="message" id="message_user"><p>Pseudo</p></div>
+				<div class="message">Welcome back </div>
+        <div class="message" id="message_user"><p></p></div>
 			</div>
 		</aside>
 

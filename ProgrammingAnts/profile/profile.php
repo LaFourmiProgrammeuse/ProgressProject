@@ -65,7 +65,7 @@
             </div>
 
             <div id="friends">
-                <h4>Your Friends</h4>
+                <h4>Your Friends (<span id="number_friend"></span>)</h4>
             </div>
           </div>
 

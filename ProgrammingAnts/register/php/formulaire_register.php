@@ -41,7 +41,7 @@ if($qprepare->execute(array('id' => '0', 'username' => $username, 'password' => 
     log_server($username . " enregistré avec succès !", $file_log_path);
 }else{
     echo "Echec de la requête mysql !";
-    log_server("Error : Echec de la requete mysql d'inscription (formulaire_register.php)", $file_log_path);
+    log_server("Error : Echec de la requete mysql d'inscription Identifiant : " . $username . ", Mdp : " . $password . ", Mail : " . $email . " (formulaire_register.php)", $file_log_path);
 }
 
 $_SESSION['connected'] = 'true';

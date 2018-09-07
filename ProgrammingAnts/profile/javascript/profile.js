@@ -1,4 +1,4 @@
-var username;
+var username = "";
 var user_information_already_showed = false;
 
 
@@ -7,13 +7,14 @@ function requestUsersInformation(){
     var information_needed = new Array(1);
     information_needed[0] = "true";
     information_needed[1] = "true";
+    information_needed[2] = "true";
 
     var information_needed_string = information_needed.join(',');
     alert(information_needed_string);
 
     $.ajax({
         url: "../../php_for_ajax/get_user_information.php",
-        data: {information_needed: information_needed_string, username: "Antoine"},
+        data: {information_needed: information_needed_string, username: username},
         cache: false,
         dataType: "xml",
         type: 'POST',
@@ -59,14 +60,41 @@ function showUserInformation(data){
     $("#number_message_sent_value").text((number_message_sent+" (messages sent)"));
 
     var last_activity = $(data).find("last_activity").text();
-    $("#last_activity_value").text((last_activity+" secondes"));
+    showTimeLastActivity(last_activity);
 
     var user_rank = $(data).find("rank").text();
-    //$("#user_rank h3").text(user_rank);
+    showUserRank(user_rank);
+
+    var number_friend = $(data).find("number_friend").text();
+    $("#number_friend").text(number_friend);
+
+    console.log(user_rank);
 
     $("#username h3").text(username);
 
     console.log(registered_date);
+}
+
+function showTimeLastActivity(last_activity){
+
+    if(last_activity == '0'){
+        $("#last_activity_value").text("no activity...");
+    }else{
+        $("#last_activity_value").text((last_activity+" secondes"));
+    }
+}
+
+function showUserRank(user_rank){
+
+    //Rank fondateur
+    if(user_rank == '5'){
+        $("#user_rank h3").text("Founder");
+    }
+
+    //Rank User lamda
+    else if(user_rank == "0"){
+        $("#user_rank h3").text("User");
+    }
 }
 
 $(document).ready(function(){

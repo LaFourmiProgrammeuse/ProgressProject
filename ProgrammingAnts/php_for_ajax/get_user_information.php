@@ -44,6 +44,16 @@
         $user_rank_information = $query->fetch(PDO::FETCH_ASSOC);
     }
 
+    //BDD RECUP FRIEND INFORMATION
+    if($information_needed[2] == "true"){
+        $query = $bdd->prepare("SELECT number_friend FROM users WHERE username=?");
+        if(!$query->execute(array($username))){
+            log_server(("Erreur requête mysql pour recuperer les informations sur les amis l'utilisateur : "+$username), $file_log_path);
+        }
+
+        $user_friend_information = $query->fetch(PDO::FETCH_ASSOC);
+    }
+
     echo "<?xml version =\"1.0\" encoding=\"utf-8\"?>";
         echo "<information>";
 
@@ -66,8 +76,14 @@
 
             if($information_needed[1] == 'true'){
                 echo "<rank>";
-                    echo $user_rank_information[0];
+                    echo $user_rank_information['rank'];
                 echo "</rank>";
+            }
+
+            if($information_needed[2] == "true"){
+                echo "<number_friend>";
+                    echo $user_friend_information['number_friend'];
+                echo "</number_friend>";
             }
         echo "</information>";
 ?>

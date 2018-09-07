@@ -1,6 +1,7 @@
 var username = "";
 var user_information_already_showed = false;
 
+var list_month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 function requestUsersInformation(){
 
@@ -51,7 +52,7 @@ function requestUsername(){
 function showUserInformation(data){
 
     var registered_date = $(data).find("registered_date").text();
-    $("#registered_date_value").text(registered_date);
+    showRegisteredDate(registered_date);
 
     var like_received = $(data).find("like_received").text();
     $("#number_liked_received_value").text((like_received+ " (user's likes)"));
@@ -82,6 +83,27 @@ function showTimeLastActivity(last_activity){
     }else{
         $("#last_activity_value").text((last_activity+" secondes"));
     }
+}
+
+function showRegisteredDate(registered_date){
+
+    year_string = registered_date.substring(0,4);
+    month_string = registered_date.substring(5,7);
+    day_string = registered_date.substring(8,10);
+
+    day_number = parseInt(day_string, 10);
+    month_number = parseInt(month_string, 10);
+    year_number = parseInt(year_string, 10);
+
+    console.log(year_number);
+console.log(month_number);
+console.log(day_number);
+
+    console.log(registered_date.substring(0,4));
+
+    var registered_date_formatted = day_number + ", " + list_month[month_number-1] + " " + year_number;
+
+    $("#registered_date_value").text(registered_date_formatted);
 }
 
 function showUserRank(user_rank){

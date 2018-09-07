@@ -1,0 +1,17 @@
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+  h3 {
+    font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+    font-size: 18px;
+    color: #24252f;
+  }
+
+  h4 {
+    font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+    font-size: 14px;
+    color: #24252f;
+  }

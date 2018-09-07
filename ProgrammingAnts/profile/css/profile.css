@@ -107,14 +107,15 @@ body {
 			color: white;
 			padding-top: 5px;
 			padding-bottom: 5px;
+			padding-left: 20px;
+			padding-right: 20px;
 			margin-left: auto;
 			margin-right: auto;
+			font-weight: lighter;
 			font-size: 18px;
 			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 			background-color: #24252f;
-			width: 60%;
-      margin-left: auto;
-      margin-right: auto;
+			width: auto;
     }
 
     #username h3{
@@ -130,8 +131,7 @@ body {
     #user_rank h3{
 			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
       margin: 0px;
-			font-weight: bold;
-      color: #ffb322;
+      color: #486470;
     }
 
     #user_stats_forum{
@@ -141,7 +141,7 @@ body {
       padding-left: 8px;
 			padding-right: 8px;
 			line-height: 25px;
-			margin-top: 9px;
+			margin-top: 5px;
 			margin-left: 5px;
 			margin-right: 5px;
     }
@@ -207,8 +207,6 @@ body {
 					 background-color: #24252f;
 					 border-radius: 5px;
 				 }
-
-				 #aside_nav
 
 				 #aside_nav ul img {
 					 width: 28px;

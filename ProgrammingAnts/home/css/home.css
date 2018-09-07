@@ -108,11 +108,13 @@ body {
 
 							#user {
 								display: flex;
+								width: auto;
 								flex-direction: column;
 								margin-top: 5px;
 								margin-left: 20px;
 								align-items: center;
-                                display: none;
+								text-align: center;
+                display: none;
 							}
 
 							.user_image img {
@@ -123,7 +125,6 @@ body {
 							.username {
 								font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 								font-size: 13px;
-                                text-align: center;
 							}
 
 							.username a {
@@ -133,7 +134,6 @@ body {
 							.username a:hover {
 								color: #ffb322;
 							}
-
 
 	/* SECTION */
 

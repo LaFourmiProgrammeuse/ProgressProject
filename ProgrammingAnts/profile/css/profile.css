@@ -120,6 +120,7 @@ body {
 
     #username h3{
       margin: 0px;
+      color: white;
     }
 
     #user_rank{
@@ -171,6 +172,14 @@ body {
 					margin-top: 0px;
         }
 
+        .friend_image{
+            margin-left: 8px;
+        }
+
+        .friend_name{
+            margin-left: 17px;
+        }
+
       #onglet_frame{
         position: relative;
         width: 60%;
@@ -181,7 +190,7 @@ body {
 		border-radius: 5px;
         margin-top: auto;
         margin-bottom: auto;
-
+        overflow: scroll; /* Je t'ai mis une barre de défilement en attendant */
       }
 
 				#aside_nav {

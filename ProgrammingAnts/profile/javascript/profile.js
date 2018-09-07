@@ -69,11 +69,8 @@ function showUserInformation(data){
     var number_friend = $(data).find("number_friend").text();
     $("#number_friend").text(number_friend);
 
-    console.log(user_rank);
-
     $("#username h3").text(username);
 
-    console.log(registered_date);
 }
 
 function showTimeLastActivity(last_activity){
@@ -94,12 +91,6 @@ function showRegisteredDate(registered_date){
     day_number = parseInt(day_string, 10);
     month_number = parseInt(month_string, 10);
     year_number = parseInt(year_string, 10);
-
-    console.log(year_number);
-console.log(month_number);
-console.log(day_number);
-
-    console.log(registered_date.substring(0,4));
 
     var registered_date_formatted = day_number + ", " + list_month[month_number-1] + " " + year_number;
 

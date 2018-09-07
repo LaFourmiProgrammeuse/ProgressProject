@@ -3,7 +3,7 @@
 //Ne pas mettre de code html avant cette ligne !
 require '../php_for_all/session_control.php';
 
-echo 'connected = ' . $_SESSION['connected'] . '<br/>';
+//echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
 ?>
 

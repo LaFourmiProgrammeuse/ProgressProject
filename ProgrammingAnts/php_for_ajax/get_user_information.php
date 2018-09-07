@@ -84,6 +84,9 @@
                 echo "<number_friend>";
                     echo $user_friend_information['number_friend'];
                 echo "</number_friend>";
+                echo "<friend>";
+
+                echo "</friend>";
             }
         echo "</information>";
 ?>

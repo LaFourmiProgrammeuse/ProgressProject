@@ -178,6 +178,8 @@ body {
         height: 470px;
         margin: 10px;
         top: 10px;
+				border: 1px solid grey;
+				border-radius: 5px;
       }
 
 				#aside_nav {

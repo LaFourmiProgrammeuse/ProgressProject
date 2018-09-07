@@ -213,6 +213,10 @@ body {
 					 height: 28px;
 				 }
 
+				 #aside_nav ul li:last-of-type:hover {
+					 background-color: white;
+				 }
+
 					#user_informations2 {
 						width: 50%;
 						height: 480px;

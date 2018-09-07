@@ -6,12 +6,17 @@ body {
 
   h3 {
     font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-    font-size: 18px;
+    font-size: 19px;
     color: #24252f;
   }
 
   h4 {
     font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     color: #24252f;
+  }
+
+  p {
+    font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+    font-size: 13px;
   }

@@ -177,6 +177,8 @@ body {
         margin: auto;
         height: 470px;
         margin: 10px;
+		border: 1px solid grey;
+		border-radius: 5px;
         margin-top: auto;
         margin-bottom: auto;
 

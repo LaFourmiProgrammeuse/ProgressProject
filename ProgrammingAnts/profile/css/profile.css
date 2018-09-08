@@ -193,6 +193,13 @@ body {
         overflow: scroll; /* Je t'ai mis une barre de défilement en attendant */
       }
 
+        #onglet_ajax_loader{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+
 				#aside_nav {
 					display: flex;
 					width: 200px;

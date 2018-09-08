@@ -70,7 +70,7 @@
           </div>
 
           <div id="onglet_frame">
-
+            <img class="ajax_loader" id="onglet_ajax_loader" src="../images/ajax-loader_2.gif" />
           </div>
 
         </section>

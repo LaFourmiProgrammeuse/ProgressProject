@@ -281,16 +281,16 @@ body {
 			font-size: 20px;
 			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 			top: 15%;
-			left: 5%;
+            height: 25px;
+			transform: translate(-50%, 0);
+            left: 50%;
+            width: 80%;
 		}
 
 		#message_user {
 			color: #ffb322;
-      top: 54%;
-      width: 80%;
-      margin-left: 10%;
-      margin-right: 10%;
-      height: 60px;
+            top: 54%;
+            height: 60px;
     }
 
 		.exit {

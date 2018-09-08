@@ -1,9 +1,10 @@
-var username = "";
 var user_information_already_showed = false;
 
 var list_month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-function requestUsersInformation(){
+var selected_onglet = 0;
+
+function requestUsersInformation(username){
 
     var information_needed = new Array(1);
     information_needed[0] = "true";
@@ -42,7 +43,7 @@ function requestUsername(){
             username = $(data).find("username").text();
 
             if(user_information_already_showed == false){
-                requestUsersInformation();
+                requestUsersInformation(username);
                 user_information_already_showed = true;
             }
         }

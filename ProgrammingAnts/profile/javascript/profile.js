@@ -12,7 +12,6 @@ function requestUsersInformation(username){
     information_needed[2] = "true";
 
     var information_needed_string = information_needed.join(',');
-    alert(information_needed_string);
 
     $.ajax({
         url: "../../php_for_ajax/get_user_information.php",
@@ -116,6 +115,7 @@ $(document).ready(function(){
 $("#nav_element_overview").click(function(){
     $("#onglet_frame").html('<img class="ajax_loader" id="onglet_ajax_loader" src="../images/ajax-loader_2.gif">');
     $("#onglet_frame").load("../../profile/onglets_profile/profile_overview.html");
+
 });
 
 $("#nav_element_profile").click(function(){
@@ -132,6 +132,13 @@ $("#nav_element_other").click(function(){
     $("#onglet_frame").html('<img class="ajax_loader" id="onglet_ajax_loader" src="../images/ajax-loader_2.gif">');
     $("#onglet_frame").load("../../profile/onglets_profile/profile_other.html");
 });
+
+$("#user_img_frame").click(function(){
+    $("#modal_drag_and_drop_img").css("display", "block");
+    $(".modal_background").css("display", "block");
+});
+
+$("#onglet_frame").load("../../profile/onglets_profile/profile_overview.html");
 
 $("#nav_element_signout").click(function(){
 

@@ -22,6 +22,13 @@
 </head>
 
   <body>
+
+    <div class="modal_background">
+        <div class="modal_content" id="modal_drag_and_drop_img">
+            Ceci est une fenetre pop up :O
+        </div>
+    </div>
+
     <header>
       <div id="top">
         <h1>Profile</h1>

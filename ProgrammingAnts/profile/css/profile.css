@@ -62,7 +62,7 @@ body {
     #main_content{
         display: flex;
         flex-direction: column;
-        min-height: calc(-290px + 100vh);
+        min-height: calc(-294px + 100vh);
     }
 
 	/* SECTION */
@@ -82,7 +82,7 @@ body {
 			display: flex;
 			flex-direction: column;
 			width: 35%;
-      height: 480px;
+            height: 480px;
 			margin-left: 15px;
 			margin-top: auto;
 			margin-bottom: auto;
@@ -263,10 +263,56 @@ body {
                         top: 50%;
                         transform: translate(-50%, -50%);
                         background-color: white;
+                        border-radius: 10px;
                     }
 
                     #modal_drag_and_drop_img{
-                        width: 400px;
+                        width: 500px;
                         height: 250px;
                         display: none;
+                    }
+
+                    #modal_drag_and_drop_img form{
+                        width: 475px;
+                        height: 209px;
+                        position: absolute;
+                        top: 47px;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                        border: 1px dashed black;
+                    }
+
+                    #modal_drag_and_drop_img h2{
+                        color: gray;
+                        position: absolute;
+                        top: 15px;
+                        width: 320px;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                        margin: 0px;
+                        text-align: center;
+                    }
+
+                    #modal_drag_and_drop_img #input_img_to_upload{
+                        width: 0.1px;
+	                    height: 0.1px;
+	                    opacity: 0;
+	                    overflow: hidden;
+	                    position: absolute;
+	                    z-index: -1;
+
+                    }
+
+                    #label_img_to_upload{
+                        position: absolute;
+                        width: 250px;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        text-align: center;
+                    }
+
+                    #label_img_to_upload label{
+                        font-size: 15px;
+                        color: rgb(0, 102, 255);
                     }

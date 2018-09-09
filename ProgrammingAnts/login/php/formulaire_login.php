@@ -8,6 +8,11 @@ $file_log_path = "../../log_server.txt";
 $username = $_POST["nickname"];
 $password = $_POST["pass"];
 
+if(!isset($username == "")){
+    log_server("Erreur : pas d'indentifiant lors de la connexion", $file_log_path);
+    exit(0);
+}
+
 if(isset($_POST["stay_connected"])){
 
     $stay_connected = $_POST["stay_connected"];

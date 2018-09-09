@@ -138,6 +138,11 @@ $("#user_img_frame").click(function(){
     $(".modal_background").css("display", "block");
 });
 
+$(".modal_background").click(function(){
+    $("#modal_drag_and_drop_img").css("display", "none");
+    $(".modal_background").css("display", "none");
+});
+
 $("#onglet_frame").load("../../profile/onglets_profile/profile_overview.html");
 
 $("#nav_element_signout").click(function(){

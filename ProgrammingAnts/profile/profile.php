@@ -25,8 +25,17 @@
 
     <div class="modal_background">
         <div class="modal_content" id="modal_drag_and_drop_img">
-            Ceci est une fenetre pop up :O
+            <h2>Upload your new profile image</h2>
+
+            <form method="post" action="">
+                <div class="input_file">
+                    <input type="file" id="input_img_to_upload" data-multiple-caption="{count} files selected" multiple />
+                    <div id="label_img_to_upload"><label for="input_img_to_upload">Choose a file</label> or drop it here !</div>
+                </div>
+
+            <form>
         </div>
+
     </div>
 
     <header>

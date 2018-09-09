@@ -7,7 +7,7 @@ a:hover {
 }
 
 footer{
-  position: absolute;
+  position: relative;
   height: 70px;
   width: 100%;
   bottom: -70px;

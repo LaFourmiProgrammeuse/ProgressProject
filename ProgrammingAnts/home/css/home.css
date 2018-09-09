@@ -16,13 +16,20 @@ body {
 	padding: 0;
 }
 
+#body_content{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+}
+
 	/* HEADER */
 
 		header {
 			display: flex;
 			justify-content: space-between;
 			background-color: #24252f;
-			margin-top: 5px;
 			height: 75px;
 			width: 100%;
 			min-width: 750px;

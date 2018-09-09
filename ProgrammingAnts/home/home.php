@@ -23,6 +23,7 @@ require '../php_for_all/session_control.php';
 </head>
 
 	<body>
+    <div id="body_content"> <!-- Pour que le footer soit placer en bas de la page -->
 		<header>
 			<div id="main_items1">
 				<div class="main_element"><img src="../images/programming_ants.png" title="ProgrammingAnts Logo"/></div>
@@ -41,7 +42,6 @@ require '../php_for_all/session_control.php';
 							<div class="username"><a href="../profile/profile.php"></a></div>
 						</div>
 				</div>
-		</div>
 	</header>
 
 		<section>
@@ -101,7 +101,7 @@ require '../php_for_all/session_control.php';
             <?php
                 require "../footer.php";
             ?>
-
+    </div>
 	</body>
 
 </html>

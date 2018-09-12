@@ -110,7 +110,33 @@ function showUserRank(user_rank){
     }
 }
 
+
+    /* WINDOW MODAL PROFILE IMAGE */
+
+var Hdle_Drag_Over_For_Prfile_Img = function(e){
+
+}
+
+var Hdle_Drag_Drop_For_Prfile_Img = function(e){
+
+}
+
+var Hdle_Drag_Enter_For_Prfile_Img = function(e){
+    $("#modal_drag_and_drop_img form").css("width", "450px");
+    $("#modal_drag_and_drop_img form").css("height", "180px");
+    $("#modal_drag_and_drop_img form").css("top", "62px");
+}
+
+var Hdle_Drag_Leave_For_Prfile_Img = function(e){
+    $("#modal_drag_and_drop_img form").css("width", "479px");
+    $("#modal_drag_and_drop_img form").css("height", "209px");
+    $("#modal_drag_and_drop_img form").css("top", "47px");
+}
+
+
 $(document).ready(function(){
+
+    /* ONGLETS LOADING */
 
 $("#nav_element_overview").click(function(){
     $("#onglet_frame").html('<img class="ajax_loader" id="onglet_ajax_loader" src="../images/ajax-loader_2.gif">');
@@ -138,11 +164,6 @@ $("#user_img_frame").click(function(){
     $(".modal_background").css("display", "block");
 });
 
-$(".modal_background").click(function(){
-    $("#modal_drag_and_drop_img").css("display", "none");
-    $(".modal_background").css("display", "none");
-});
-
 $("#onglet_frame").load("../../profile/onglets_profile/profile_overview.html");
 
 $("#nav_element_signout").click(function(){
@@ -158,5 +179,40 @@ $("#nav_element_signout").click(function(){
     });*/
 });
 
+    /* PROFILE IMAGE */
+
+$(".modal_background").click(function(){
+    $("#modal_drag_and_drop_img").css("display", "none");
+
+    if(!is_File_Api_Supported()){
+        alert("The File APIs are not fully supported in this browser");
+    }
+
+    $(".modal_background").css("display", "none");
+});
+
+    /* WINDOW MODAL PROFILE IMAGE EVENT */
+
+$("#input_img_to_upload").change(function(){
+    alert("dfsf");
+});
+
+$("#drop_zone_profile_img").bind("dragover", Hdle_Drag_Over_For_Prfile_Img);
+$("#drop_zone_profile_img").bind("drop", Hdle_Drag_Drop_For_Prfile_Img);
+$("#drop_zone_profile_img").bind("dragenter", Hdle_Drag_Enter_For_Prfile_Img);
+$("#drop_zone_profile_img").bind("dragleave", Hdle_Drag_Leave_For_Prfile_Img);
+
+
+
     requestUsername();
 });
+
+function is_File_Api_Supported(){
+
+    if(window.File && window.Blob && window.FileReader && window.FileList){
+        return true;
+    }
+    else{
+        return false;
+    }
+}

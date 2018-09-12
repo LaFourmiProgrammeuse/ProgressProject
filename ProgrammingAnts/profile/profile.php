@@ -28,8 +28,8 @@
             <h2>Upload your new profile image</h2>
 
             <form method="post" action="">
-                <div class="input_file">
-                    <input type="file" id="input_img_to_upload" data-multiple-caption="{count} files selected" multiple />
+                <div id="drop_zone_profile_img">
+                    <input type="file" id="input_img_to_upload" />
                     <div id="label_img_to_upload"><label for="input_img_to_upload">Choose a file</label> or drop it here !</div>
                 </div>
 

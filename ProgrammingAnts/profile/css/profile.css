@@ -316,3 +316,16 @@ body {
                         font-size: 15px;
                         color: rgb(0, 102, 255);
                     }
+
+                    #label_img_to_upload label:hover{
+                        cursor: pointer;
+                    }
+
+                    #drop_zone_profile_img{
+                        height: 209px;
+                        width: 479px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }

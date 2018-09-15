@@ -29,14 +29,12 @@
             <p>Click anywhere to close this window</P>
 
             <form method="post" action="">
-                <div id="drop_zone_profile_img">
-                    <input type="file" id="input_img_to_upload" />
-                    <div id="label_how_to_upload_image"><label for="input_img_to_upload">Choose a file</label> or drag it here !</div>
-                    <label id="label_upload_error">Error</label>
-                    <label id="label_uploading_message">Uploading...</label>
-                    <button type="submit">Upload Image</button>
-                </div>
-
+                <div id="drop_zone_profile_img"></div>
+                <input type="file" id="input_img_to_upload" />
+                <div id="label_how_to_upload_image"><label for="input_img_to_upload">Choose a file</label> or drag it here !</div>
+                <label id="label_upload_error">Error</label>
+                <label id="label_uploading_message">Uploading...</label>
+                <button type="submit">Upload Image</button>
             </form>
         </div>
 

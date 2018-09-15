@@ -347,7 +347,7 @@ body {
                         display: none;
                         position: absolute;
                         left: 50%;
-                        top: 75%;
+                        top: 60%;
                         transform: translate(-50%, -50%);
                     }
 
@@ -376,7 +376,7 @@ body {
                         display: none;
                          position: absolute;
                          width: 250px;
-                         top: 50%;
+                         top: 37%;
                          left: 50%;
                          transform: translate(-50%, -50%);
                          text-align: center;

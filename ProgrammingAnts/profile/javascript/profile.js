@@ -6,6 +6,7 @@ var selected_onglet = 0;
 
 var profile_image_uploading = false;
 var profile_image_wait_upload = false;
+var profile_image_type_image_error = false;
 
 function requestUsersInformation(username){
 
@@ -153,6 +154,8 @@ var Hdle_Drag_Drop_For_Prfile_Img = function(event){
         $(".upload_error").slideDown("slow");
         $("#how_to_upload_image").animate({top: "-=18px"});
 
+        profile_image_type_image_error = true;
+
         return;
     }
 
@@ -168,6 +171,15 @@ var Hdle_Drag_Drop_For_Prfile_Img = function(event){
 var Hdle_Drag_Enter_For_Prfile_Img = function(e){
 
     e.originalEvent.preventDefault();
+
+    if(profile_image_type_image_error == true){
+
+        $("#how_to_upload_image").css("display", "block");
+        $("#how_to_upload_image").css("top", "50%");
+        $(".upload_error").css("display", "none");
+
+        profile_image_type_image_error = false;
+    }
 
     $("#modal_drag_and_drop_img form").css("width", "450px");
     $("#modal_drag_and_drop_img form").css("height", "180px");

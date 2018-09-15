@@ -31,9 +31,10 @@
             <form method="post" action="">
                 <div id="drop_zone_profile_img"></div>
                 <input type="file" id="input_img_to_upload" />
-                <div id="label_how_to_upload_image"><label for="input_img_to_upload">Choose a file</label> or drag it here !</div>
-                <label id="label_upload_error">Error</label>
-                <label id="label_uploading_message">Uploading...</label>
+                <div id="how_to_upload_image"><label for="input_img_to_upload">Choose a file</label> or drag it here !</div>
+                <div class="upload_error">Error</div>
+                <div class="uploading_message">Uploading...</div>
+                <div class="file_wait_upload"></div>
                 <button type="submit">Upload Image</button>
             </form>
         </div>

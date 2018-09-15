@@ -4,7 +4,8 @@ var list_month = ['January', 'February', 'March', 'April', 'May', 'June', 'July'
 
 var selected_onglet = 0;
 
-var label_how_to_upload_image_over_by_fle = false;
+var profile_image_uploading = false;
+var profile_image_wait_upload = false;
 
 function requestUsersInformation(username){
 
@@ -132,11 +133,35 @@ var Hdle_Drag_Drop_For_Prfile_Img = function(event){
     console.log("Event type : "+event.type);
     console.log("File name : "+event.dataTransfer.files[0].name);
 
+    file = event.dataTransfer.files[0];
+
     $("#modal_drag_and_drop_img form").css("width", "479px");
     $("#modal_drag_and_drop_img form").css("height", "209px");
     $("#modal_drag_and_drop_img form").css("top", "51px");
     $("#modal_drag_and_drop_img form").css("border-color", "black");
     $("#modal_drag_and_drop_img form").css("border-size", "2px");
+
+    $("#how_to_upload_image").css("z-index", "1");
+
+    file_extension_split = file.name.split(".");
+    file_extension = file_extension_split[file_extension_split.length-1].toLowerCase();
+    console.log("Extension : "+file_extension);
+
+    if(!isImage(file_extension)){
+        $(".upload_error").text("Only images can be uploaded (.png, .jpg)");
+        $(".upload_error").css("display", "block");
+        $(".upload_error").slideDown("slow");
+        $("#how_to_upload_image").animate({top: "-=18px"});
+
+        return;
+    }
+
+    $("#modal_drag_and_drop_img form button").show(500);
+
+    $(".file_wait_upload").text("File Name : "+file.name);
+    $(".file_wait_upload").css("display", "block");
+    $("#how_to_upload_image").css("display", "none");
+
 
 }
 
@@ -149,6 +174,8 @@ var Hdle_Drag_Enter_For_Prfile_Img = function(e){
     $("#modal_drag_and_drop_img form").css("top", "64px");
     $("#modal_drag_and_drop_img form").css("border-color", "rgb(0, 149, 182)");
     $("#modal_drag_and_drop_img form").css("border-size", "8px");
+
+    $("#how_to_upload_image").css("z-index", "-1");
 }
 
 var Hdle_Drag_Leave_For_Prfile_Img = function(e){
@@ -162,6 +189,8 @@ var Hdle_Drag_Leave_For_Prfile_Img = function(e){
     $("#modal_drag_and_drop_img form").css("top", "51px");
     $("#modal_drag_and_drop_img form").css("border-color", "black");
     $("#modal_drag_and_drop_img form").css("border-size", "2px");
+
+    $("#how_to_upload_image").css("z-index", "1");
 }
 
 var Hdle_Drag_Enter_For_Label_How_Upload_Img = function(event){
@@ -169,22 +198,47 @@ var Hdle_Drag_Enter_For_Label_How_Upload_Img = function(event){
     console.log("Enter");
 
     event.preventDefault();
-
-    label_how_to_upload_image_over_by_fle = true;
-
-     $("#modal_drag_and_drop_img form").css("width", "450px");
-     $("#modal_drag_and_drop_img form").css("height", "180px");
-     $("#modal_drag_and_drop_img form").css("top", "64px");
-     $("#modal_drag_and_drop_img form").css("border-color", "rgb(0, 149, 182)");
-     $("#modal_drag_and_drop_img form").css("border-size", "8px");
-
 }
 
 var Hdle_Drag_Leave_For_Label_How_Upload_Img = function(event){
 
     event.preventDefault();
 
-    label_how_to_upload_image_over_by_fle = true;
+}
+
+function isImage(file_extension){
+
+    if(file_extension == "png" || file_extension == "jpg"){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+function close_Modal_Profile_Img(){
+
+    $("#modal_drag_and_drop_img").css("display", "none");
+    $(".modal_background").css("display", "none");
+
+    $(".upload_error").css("display", "none");
+
+    if(profile_image_wait_upload == false){
+        $("#modal_drag_and_drop_img form button").css("display", "none");
+        $(".file_wait_upload").css("display", "none");
+
+    }
+
+    if(profile_image_uploading == false){
+        $(".uploading_message").css("display", "none");
+
+    }
+
+    if(profile_image_uploading == false && profile_image_wait_upload == false){
+
+         $("#how_to_upload_image").css("display", "block");
+         $("#how_to_upload_image").css("top", "50%");
+    }
 }
 
 
@@ -214,6 +268,12 @@ $("#nav_element_other").click(function(){
 });
 
 $("#user_img_frame").click(function(){
+
+    if(!is_File_Api_Supported()){
+        alert("The File APIs are not fully supported in this browser");
+        return;
+    }
+
     $("#modal_drag_and_drop_img").css("display", "block");
     $(".modal_background").css("display", "block");
 });
@@ -236,13 +296,9 @@ $("#nav_element_signout").click(function(){
     /* PROFILE IMAGE */
 
 $(".modal_background").click(function(){
-    $("#modal_drag_and_drop_img").css("display", "none");
 
-    if(!is_File_Api_Supported()){
-        alert("The File APIs are not fully supported in this browser");
-    }
+    close_Modal_Profile_Img();
 
-    $(".modal_background").css("display", "none");
 });
 
     /* WINDOW MODAL PROFILE IMAGE EVENT */
@@ -255,11 +311,6 @@ $("#drop_zone_profile_img").bind("dragover", Hdle_Drag_Over_For_Prfile_Img);
 $("#drop_zone_profile_img").bind("drop", Hdle_Drag_Drop_For_Prfile_Img);
 $("#drop_zone_profile_img").bind("dragenter", Hdle_Drag_Enter_For_Prfile_Img);
 $("#drop_zone_profile_img").bind("dragleave", Hdle_Drag_Leave_For_Prfile_Img);
-
-$("#label_how_to_upload_image").bind("dragenter", Hdle_Drag_Enter_For_Label_How_Upload_Img);
-$("#label_how_to_upload_image").bind("dragenter", Hdle_Drag_Leave_For_Label_How_Upload_Img);
-
-
 
     requestUsername();
 });

@@ -10,7 +10,7 @@
     font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
     font-size: 19px;
     color: #24252f;
-    margin-top: 0px;
+    margin: 0;
   }
 
   #onglet_body h4 {
@@ -18,9 +18,34 @@
     font-size: 16px;
     color: #24252f;
     margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
   }
 
   #onglet_body p {
     font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
     font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
   }
+
+    #new_email,#new_password,#confirm_new_password {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      margin-left: 20px;
+      height: 20px;
+    }
+
+        #onglet_body button {
+          border-radius: 2px;
+          border: 1px solid #24252f;
+          background-color: #24252f;
+          color: white;
+          height: 26px;
+          width: 80px;
+        }
+
+          #send_new_email,#send_new_password {
+            margin-left: 5px;
+          }

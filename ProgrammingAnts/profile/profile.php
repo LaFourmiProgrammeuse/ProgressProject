@@ -26,19 +26,15 @@
     <div class="modal_background">
         <div class="modal_content" id="modal_drag_and_drop_img">
             <h2>Upload your new profile image</h2>
-            <p>Click anywhere to close this window</P> 
+            <p>Click anywhere to close this window</P>
 
             <form method="post" action="">
                 <div id="drop_zone_profile_img">
                     <input type="file" id="input_img_to_upload" />
-<<<<<<< HEAD
-                    <div id="label_img_to_upload"><label for="input_img_to_upload">Choose a file</label> or drag it here...</div>
-=======
-                    <div id="label_how_to_upload_image"><label for="input_img_to_upload">Choose a file</label> or drop it here !</div>
+                    <div id="label_how_to_upload_image"><label for="input_img_to_upload">Choose a file</label> or drag it here !</div>
                     <label id="label_upload_error">Error</label>
                     <label id="label_uploading_message">Uploading...</label>
                     <button type="submit">Upload Image</button>
->>>>>>> 4373e84f65eaa7f9e77518de990c34b421049831
                 </div>
 
             </form>

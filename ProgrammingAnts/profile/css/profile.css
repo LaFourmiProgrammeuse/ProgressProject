@@ -279,11 +279,7 @@ body {
                         top: 51px;
                         left: 50%;
                         transform: translate(-50%, 0);
-<<<<<<< HEAD
-                        border: 1px dashed #24252f;
-=======
                         border: 2px dashed black;
->>>>>>> 4373e84f65eaa7f9e77518de990c34b421049831
                     }
 
                     #modal_drag_and_drop_img h2{
@@ -291,13 +287,10 @@ body {
 												font-size: 18px;
 												font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
                         position: absolute;
-<<<<<<< HEAD
                         top: 8px;
                         width: 320px;
-=======
-                        top: 15px;
+                        top: 8px;
                         width: 400px;
->>>>>>> 4373e84f65eaa7f9e77518de990c34b421049831
                         left: 50%;
                         transform: translate(-50%, 0);
                         margin: 0px;

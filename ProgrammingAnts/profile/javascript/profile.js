@@ -4,6 +4,8 @@ var list_month = ['January', 'February', 'March', 'April', 'May', 'June', 'July'
 
 var selected_onglet = 0;
 
+var label_how_to_upload_image_over_by_fle = false;
+
 function requestUsersInformation(username){
 
     var information_needed = new Array(1);
@@ -115,22 +117,74 @@ function showUserRank(user_rank){
 
 var Hdle_Drag_Over_For_Prfile_Img = function(e){
 
+    e.originalEvent.preventDefault();
+
 }
 
-var Hdle_Drag_Drop_For_Prfile_Img = function(e){
+var Hdle_Drag_Drop_For_Prfile_Img = function(event){
+
+    event.originalEvent.preventDefault();
+    event.originalEvent.stopPropagation();
+
+    event.dataTransfer = event.originalEvent.dataTransfer;
+
+    //var files = event.dataTransfer.files[0].fileName;
+    console.log("Event type : "+event.type);
+    console.log("File name : "+event.dataTransfer.files[0].name);
+
+    $("#modal_drag_and_drop_img form").css("width", "479px");
+    $("#modal_drag_and_drop_img form").css("height", "209px");
+    $("#modal_drag_and_drop_img form").css("top", "51px");
+    $("#modal_drag_and_drop_img form").css("border-color", "black");
+    $("#modal_drag_and_drop_img form").css("border-size", "2px");
 
 }
 
 var Hdle_Drag_Enter_For_Prfile_Img = function(e){
+
+    e.originalEvent.preventDefault();
+
     $("#modal_drag_and_drop_img form").css("width", "450px");
     $("#modal_drag_and_drop_img form").css("height", "180px");
-    $("#modal_drag_and_drop_img form").css("top", "62px");
+    $("#modal_drag_and_drop_img form").css("top", "64px");
+    $("#modal_drag_and_drop_img form").css("border-color", "rgb(0, 149, 182)");
+    $("#modal_drag_and_drop_img form").css("border-size", "8px");
 }
 
 var Hdle_Drag_Leave_For_Prfile_Img = function(e){
+
+    console.log("Leave");
+
+    e.originalEvent.preventDefault();
+
     $("#modal_drag_and_drop_img form").css("width", "479px");
     $("#modal_drag_and_drop_img form").css("height", "209px");
-    $("#modal_drag_and_drop_img form").css("top", "47px");
+    $("#modal_drag_and_drop_img form").css("top", "51px");
+    $("#modal_drag_and_drop_img form").css("border-color", "black");
+    $("#modal_drag_and_drop_img form").css("border-size", "2px");
+}
+
+var Hdle_Drag_Enter_For_Label_How_Upload_Img = function(event){
+
+    console.log("Enter");
+
+    event.preventDefault();
+
+    label_how_to_upload_image_over_by_fle = true;
+
+     $("#modal_drag_and_drop_img form").css("width", "450px");
+     $("#modal_drag_and_drop_img form").css("height", "180px");
+     $("#modal_drag_and_drop_img form").css("top", "64px");
+     $("#modal_drag_and_drop_img form").css("border-color", "rgb(0, 149, 182)");
+     $("#modal_drag_and_drop_img form").css("border-size", "8px");
+
+}
+
+var Hdle_Drag_Leave_For_Label_How_Upload_Img = function(event){
+
+    event.preventDefault();
+
+    label_how_to_upload_image_over_by_fle = true;
 }
 
 
@@ -201,6 +255,9 @@ $("#drop_zone_profile_img").bind("dragover", Hdle_Drag_Over_For_Prfile_Img);
 $("#drop_zone_profile_img").bind("drop", Hdle_Drag_Drop_For_Prfile_Img);
 $("#drop_zone_profile_img").bind("dragenter", Hdle_Drag_Enter_For_Prfile_Img);
 $("#drop_zone_profile_img").bind("dragleave", Hdle_Drag_Leave_For_Prfile_Img);
+
+$("#label_how_to_upload_image").bind("dragenter", Hdle_Drag_Enter_For_Label_How_Upload_Img);
+$("#label_how_to_upload_image").bind("dragenter", Hdle_Drag_Leave_For_Label_How_Upload_Img);
 
 
 

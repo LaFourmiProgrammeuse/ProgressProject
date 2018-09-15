@@ -276,10 +276,14 @@ body {
                         width: 475px;
                         height: 209px;
                         position: absolute;
-                        top: 47px;
+                        top: 51px;
                         left: 50%;
                         transform: translate(-50%, 0);
+<<<<<<< HEAD
                         border: 1px dashed #24252f;
+=======
+                        border: 2px dashed black;
+>>>>>>> 4373e84f65eaa7f9e77518de990c34b421049831
                     }
 
                     #modal_drag_and_drop_img h2{
@@ -287,8 +291,13 @@ body {
 												font-size: 18px;
 												font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
                         position: absolute;
+<<<<<<< HEAD
                         top: 8px;
                         width: 320px;
+=======
+                        top: 15px;
+                        width: 400px;
+>>>>>>> 4373e84f65eaa7f9e77518de990c34b421049831
                         left: 50%;
                         transform: translate(-50%, 0);
                         margin: 0px;
@@ -313,7 +322,7 @@ body {
 	                    z-index: -1;
                     }
 
-                    #label_img_to_upload{
+                    #label_how_to_upload_image{
                         position: absolute;
                         width: 250px;
                         top: 50%;
@@ -322,12 +331,12 @@ body {
                         text-align: center;
                     }
 
-                    #label_img_to_upload label{
+                    #label_how_to_upload_image label{
                         font-size: 15px;
                         color: rgb(0, 102, 255);
                     }
 
-                    #label_img_to_upload label:hover{
+                    #label_how_to_upload_image label:hover{
                         cursor: pointer;
                     }
 
@@ -338,4 +347,29 @@ body {
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -50%);
+                    }
+
+                    #drop_zone_profile_img button{
+                        display: none;
+                    }
+
+                    #label_upload_error{
+                        display: none;
+                        position: absolute;
+                        width: 250px;
+                        top: 60%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        text-align: center;
+                    }
+
+                    #label_uploading_message{
+                        display: none;
+                        position: absolute;
+                        width: 250px;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        text-align: center;
+                        font-size: 20px;
                     }

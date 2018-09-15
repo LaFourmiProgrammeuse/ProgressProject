@@ -276,17 +276,17 @@ body {
                         width: 475px;
                         height: 209px;
                         position: absolute;
-                        top: 47px;
+                        top: 51px;
                         left: 50%;
                         transform: translate(-50%, 0);
-                        border: 1px dashed black;
+                        border: 2px dashed black;
                     }
 
                     #modal_drag_and_drop_img h2{
                         color: gray;
                         position: absolute;
                         top: 15px;
-                        width: 320px;
+                        width: 400px;
                         left: 50%;
                         transform: translate(-50%, 0);
                         margin: 0px;
@@ -303,7 +303,7 @@ body {
 
                     }
 
-                    #label_img_to_upload{
+                    #label_how_to_upload_image{
                         position: absolute;
                         width: 250px;
                         top: 50%;
@@ -312,12 +312,12 @@ body {
                         text-align: center;
                     }
 
-                    #label_img_to_upload label{
+                    #label_how_to_upload_image label{
                         font-size: 15px;
                         color: rgb(0, 102, 255);
                     }
 
-                    #label_img_to_upload label:hover{
+                    #label_how_to_upload_image label:hover{
                         cursor: pointer;
                     }
 
@@ -328,4 +328,29 @@ body {
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -50%);
+                    }
+
+                    #drop_zone_profile_img button{
+                        display: none;
+                    }
+
+                    #label_upload_error{
+                        display: none;
+                        position: absolute;
+                        width: 250px;
+                        top: 60%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        text-align: center;
+                    }
+
+                    #label_uploading_message{
+                        display: none;
+                        position: absolute;
+                        width: 250px;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        text-align: center;
+                        font-size: 20px;
                     }

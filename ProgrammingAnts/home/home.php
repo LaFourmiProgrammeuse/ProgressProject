@@ -12,9 +12,9 @@ require '../php_for_all/session_control.php';
 <head>
 
 	<link rel="stylesheet" type="text/css" href="css/home.css">
-    <link rel="stylesheet" type="text/css" href="../footer.css">
+  <link rel="stylesheet" type="text/css" href="../footer.css">
 	<meta charset="utf-8"/>
-	<title>ProgrammingAnts</title>
+	<title>Programming Ants</title>
 
     <script type="text/javascript" src="../framework_javascript/jquery.js"></script>
     <script type="text/javascript" src="javascript/home.js"></script>
@@ -25,36 +25,33 @@ require '../php_for_all/session_control.php';
 	<body>
     <div id="body_content"> <!-- Pour que le footer soit placer en bas de la page -->
 		<header>
-			<div id="main_items1">
-				<div class="main_element"><img src="../images/programming_ants.png" title="ProgrammingAnts Logo"/></div>
-				<div class="main_element"><h1>Programming Ants</h1></div>
+			<div id="h_groupa">
+				<div id="h_main_img"><img src="../images/programming_ants.png" title="ProgrammingAnts Logo"/></div>
 			</div>
 
-				<div id="main_items2">
-					<div id="account">
+			<div id="h_groupb">
+				<div class="nav_element"><h3><a href="#">ErrorWiki</a></h3></div>
+					<div class="nav_element"><h3><a href="../forum/forum.php">Forum</a></h3></div>
+						<div class="nav_element"><h3><a href="#">Projects</a></h3></div>
+							<div class="nav_element"><h3><a href="#">About</a></h3></div>
+								<div class="nav_element"><h3><a href="#">Contact</a></h3></div>
+			</div>
+
+				<div id="h_groupc">
+					<div id="h_usera">
 						<div class="identification" id="login_button"><a href="../login/login_page.php">Sign In</a></div>
 						<div class="identification" id="register_button"><a href="../register/register_page.php">Sign Up</a></div>
 						<div class="identification" id="disconnect_button"><a href="../php_for_all/disconnect.php">Sign Out</a></div>
 					</div>
 
-						<div id="user">
+					<div id="h_userb">
 							<div class="user_image"><img src="../images/no_user_image.png" /></div>
 							<div class="username"><a href="../profile/profile.php"></a></div>
-						</div>
+					</div>
 				</div>
 	</header>
 
 		<section>
-
-			<nav>
-				<div id="top_menu">
-					<div class="option"><h3><a href="#">Projects</a></h3></div>
-						<div class="option"><h3><a href="../forum/forum.php">Forum</a></h3></div>
-							<div class="option"><h3><a href="#">Blog</a></h3></div>
-								<div class="option"><h3><a href="#">About</a></h3></div>
-									<div class="option"><h3><a href="#">Contact</a></h3></div>
-				</div>
-			</nav>
 
 				<article>
 					<div id="articles">

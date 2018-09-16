@@ -1,9 +1,9 @@
 a {
-  color: white;
+  color: #2a363b;
 }
 
 a:hover {
-  color: #ffb322;
+  color: #ff8d33;
 }
 
 footer{
@@ -11,9 +11,9 @@ footer{
   height: 70px;
   width: 100%;
   bottom: -70px;
-  background-color: #24252f;
+  background-color: white;
   align-content: center;
-  color: white;
+  color: #2a363b;
   margin-top: 30px;
   }
 
@@ -52,8 +52,4 @@ footer{
 #label_uses_condition{
     width: 110px;
     margin: 0px;
-}
-
-a{
-  color: white;
 }

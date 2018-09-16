@@ -24,6 +24,7 @@ p {
 
 body {
 	position: relative;
+	background-color: #24252f;
 	margin: 0;
 	padding: 0;
 }
@@ -39,66 +40,92 @@ body {
 		header {
 			display: flex;
 			justify-content: space-between;
-			background-color: #24252f;
-			height: 75px;
+      background-color: white;
 			width: 100%;
 			min-width: 750px;
-			box-shadow: 1px 5px 25px grey;
 		}
 
-			#main_items1 {
-				display: inline-flex;
+			#h_groupa #h_main_img img {
+				margin-left : 45px;
+				margin-top: 7px;
+				width: 195px;
+				height:45px;
 			}
 
-				.main_element img {
-					margin-left : 12px;
-					margin-right: 9px;
-					margin-top: 12px;
-					width: 50px;
-					height: 50px;
+			#h_groupb {
+				display: flex;
+				justify-content: space-between;
+        position: relative;
+			}
+
+      .nav_element {
+				font-family: 'source_code_proregular', Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+				font-size: 14px;
+				line-height: 9px;
+				padding-left: 35px;
+				padding-right: 35px;
+				margin-top: auto;
+				margin-bottom: auto;
+      	margin-right: auto;
+      	margin-left: auto;
+			}
+
+			.nav_element a {
+				color: #2a363b;
+			}
+
+			.nav_element:hover {
+			}
+
+			.nav_element:hover a {
+        color: #ff8d33;
+			}
+
+
+				#h_groupc {
+					display: inline-flex;
+					width: auto;
+					margin-right: 45px;
 				}
 
-				.main_element h1 {
-					margin-top: 12px;
-					font-size: 2.75em;
-					color: white;
-					font-family: 'source_code_proregular', Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-					text-shadow: 1px 1px 2px black;
+				#h_usera {
+					display: inline-flex;
+					margin-top: 22px;
 				}
 
-					#main_items2 {
-						display: inline-flex;
-						width: auto;
-						margin-right: 45px;
-					}
+				#h_userb {
+					display: flex;
+					width: auto;
+					flex-direction: column;
+					margin-top: 5px;
+					margin-left: 20px;
+					align-items: center;
+					text-align: center;
+					display: none;
+				}
 
-						#account {
-							display: inline-flex;
-							margin-top: 22px;
+          #login_button{
+            display: none;
+          }
 
-						}
+          #register_button{
+            display: none;
+          }
 
-                        #login_button{
-                          display: none;
-                        }
-
-                        #register_button{
-                          display: none;
-                        }
-
-                        #disconnect_button{
-                          display: none;
-                        }
+          #disconnect_button{
+            display: none;
+          }
 
 						.identification {
 							font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 							font-size: 14px;
 							text-align: center;
 							border: 2px solid;
-							border-color: white;
+							border-color: #2a363b;
 							border-radius: 5px;
 							height: 20px;
 							width: 60px;
+              margin-top: -10px;
 							padding-top: 5px;
 							padding-bottom: 2px;
 							padding-left: 7px;
@@ -110,29 +137,17 @@ body {
 						}
 
 						.identification a{
-							color: white;
+							color: #2a363b;
 						}
 
 						.identification:hover {
-							background-color: #ffb322;
-							border-color: #ffb322;
+							background-color: #ff8d33;
+							border-color: #ff8d33;
 						}
 
 						.identification:hover a {
-							color: #24252f;
+							color: white;
 						}
-
-							#user {
-								display: flex;
-								width: auto;
-								flex-direction: column;
-								margin-top: 5px;
-								margin-left: 20px;
-								align-items: center;
-								text-align: center;
-                display: none;
-							}
-
 							.user_image img {
 								height: 50px;
 								width: 50px;
@@ -144,11 +159,11 @@ body {
 							}
 
 							.username a {
-								color: white;
+								color: #2a363b;
 							}
 
 							.username a:hover {
-								color: #ffb322;
+								color: #ff8d33;
 							}
 
 	/* SECTION */
@@ -157,49 +172,12 @@ body {
 			margin: 50px auto;
 			border: 2px solid;
 			border-color: #24252f;
-			border-radius: 5px;
 			height: auto;
 			width: 70%;
 			min-width: 610px;
 			box-shadow: 1px 5px 25px grey;
 		}
 
-			#top_menu {
-				display: flex;
-				justify-content: space-between;
-				background-color: #24252f;
-				border-top-left-radius: 3px;
-				border-top-right-radius: 3px;
-      	height: 45px;
-      	width: 100%;
-        position: relative;
-        top: -1px;
-			}
-
-			.option {
-				color: white;
-				font-family: 'source_code_proregular', Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-				font-size: 14px;
-				line-height: 9px;
-				padding-left: 47px;
-				padding-right: 47px;
-      	margin-right: auto;
-      	margin-left: auto;
-			}
-
-			.option a {
-				color: white;
-			}
-
-			.option:hover {
-				background-color: #ffb322;
-				border-top: 1px solid #24252f;
-				border-bottom: 2px solid #24252f;
-			}
-
-			.option:hover a {
-				color: #24252f;
-			}
 
 	/* ARTICLE */
 

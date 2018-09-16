@@ -64,27 +64,29 @@ body {
 			margin-right: auto;
 			margin-top: 25px;
 			width: 500px;
-			height: auto;
+			height: 175px;
 			border: 2px solid white;
 			border-radius: 5px;
 		}
 
   /* FORMULAIRE */
 
-    	#nickname{
-				margin-left: auto;
-				margin-right: auto;
-    		width: 475px;
-    		height: 25px;
+    	#nickname {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    		width: 450px;
+    		height: 30px;
 				border: 1px solid #2a363b;
 				background-color: #f9f9f9;
       }
 
-      #pass{
-				align-self: center;
-				width: 475px;
-    		height: 25px;
-				margin-top: 25px;
+      #pass {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+				width: 450px;
+    		height: 30px;
 				border: 1px solid #2a363b;
 				background-color: #f9f9f9;
     	}
@@ -93,14 +95,57 @@ body {
 					font-size: 13px;
 				}
 
-	/* label de la case à cocher */
-	#stay_connected_label {
+	/* label de la case à cocher (quand il sera cliqué il va activer la checkbox) */
+  .checkbox label {
     width: 50px;
     height: 25px;
     position: absolute;
+    left: 34.5%;
+    top: 55%;
     background-color: white;
     border-radius: 12px;
   }
+
+  /* On cache la checkbox */
+  input[type=checkbox] {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    visibility: hidden;
+  }
+
+  /* Apparence du bouton remplaçant la checkbox + temps de transition (temps que va prendre le bouton pour se déplacer) */
+  .checkbox label::after {
+    content: "";
+    width: 22px;
+    height: 21px;
+    position: absolute;
+    border-radius: 50px;
+    background-color: #ff8d33;
+    top: 2px;
+    left: 2px;
+    transition: all 0.5s;
+  }
+
+  /* Modifications appliquées au bouton quand la checkbox est activée */
+  input[type=checkbox]:checked + label::after {
+    background-color: white;
+    left: 25px;
+  }
+
+  /* Modifications appliquées au label quand la checkbox est activée */
+  input[type=checkbox]:checked + label {
+    background-color: #ff8d33;
+  }
+
+    #checkbox_label {
+      position: absolute;
+      font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+      color: white;
+      font-size: 15px;
+      top: 55.5%;
+      left: 38.75%;
+    }
 
   /* ERROR */
 
@@ -114,8 +159,8 @@ body {
     .message_error{ /*Ce qu'il faut appliquer a tout les messages d'erreurs */
       padding-bottom: auto;
 			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-      border: 2px solid #24252f;
-			color: #24252f;
+      border: 2px solid white;
+			color: white;
     }
 
       #message_error_bad_filled{
@@ -139,8 +184,8 @@ body {
 	/* SEND */
 
 		#send {
-            margin-top: 20px;
-            margin-left: 145px;
+      margin-top: 5px;
+      margin-left: 415px;
 		}
 
 		.send {
@@ -155,7 +200,7 @@ body {
 		}
 
 		.send:hover {
-			background-color: #ffb322;
-			color: white;
-			border-color: #ffb322;
+      transition: 0.2s;
+      background-color: #ff8d33;
+      color: white;
 		}

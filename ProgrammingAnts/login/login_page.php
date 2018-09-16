@@ -29,8 +29,11 @@
 								<br>
 									<input type="password" name="pass" id="pass" placeholder=" Type your password">
 
-							  	<label id="stay_connected_label" for="stay_connected"></label>
- 	              	<input type="checkbox" name="stay_connected" id="stay_connected">
+								<div class="checkbox">
+									<input type="checkbox" name="checkbox" id="checkbox">
+							  	<label for="checkbox"></label>
+									<span id="checkbox_label">Stay connected to our website</span>
+								</div>
 
  	              	<input type="button" value="Send" id="send" class="send" />
 								</p>

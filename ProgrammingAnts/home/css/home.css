@@ -142,11 +142,13 @@ body {
 						}
 
 						.identification:hover {
+              transition: 0.2s;
 							background-color: #ff8d33;
 							border-color: #ff8d33;
 						}
 
 						.identification:hover a {
+              transition: 0.2s;
 							color: white;
 						}
 							.user_image img {
@@ -166,6 +168,7 @@ body {
 							}
 
 							.username a:hover {
+                transition: 0.2s;
 								color: #ff8d33;
 							}
 

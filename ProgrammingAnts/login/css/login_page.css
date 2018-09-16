@@ -32,7 +32,7 @@ body {
 		header {
 
 		}
-
+		
 			#infa {
 				text-align: center;
 				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
@@ -68,26 +68,32 @@ body {
   /* FORMULAIRE */
 
 		#nickname_label {
-			font-size: 40px;
+			font-size: 25px;
 		}
 
     	#nickname{
-    		width: 350px;
-    		height: 50px;
-				border: 1px solid white;
+    		width: 500px;
+    		height: 25px;
+				border: 1px solid #2a363b;
 				background-color: #f9f9f9;
       }
 
 		#pass_label {
-			font-size: 40px;
+			font-size: 25px;
     }
 
       #pass{
-				width: 350px;
-    		height: 50px;
-				border: 1px solid white;
+				width: 500px;
+    		height: 25px;
+				margin-top: 25px;
+				border: 1px solid #2a363b;
 				background-color: #f9f9f9;
     	}
+
+				::placeholder {
+					margin-left: 5px;
+					font-size: 16px;
+				}
 
 	/* label de la case à cocher */
 	[type="checkbox"]:not(:checked) + label,

@@ -25,10 +25,8 @@
 						<div id"group_input"><fieldset>
 							<form method="post" action="php/formulaire_login.php">
 								<p>
-									<label for="nickname" id="nickname_label">Nickname</label>
 									<input type="text" name="nickname" id="nickname" placeholder="Type your nickname">
 								<br>
-									<label for="pass" id="pass_label">Password</label>
 									<input type="password" name="pass" id="pass" placeholder="Type your password">
 
 							  	<label id="stay_connected_label" for="stay_connected">Stay connected to our website</label>

@@ -15,7 +15,7 @@ a {
 }
 
 p {
- margin: 0px;
+ margin: 0;
 }
 
 .bold {
@@ -24,7 +24,7 @@ p {
 
 body {
 	position: relative;
-	background-color: #24252f;
+	background-color: #2a363b;
 	margin: 0;
 	padding: 0;
 }
@@ -171,13 +171,11 @@ body {
 		section {
 			margin: 50px auto;
 			border: 2px solid;
-			border-color: #24252f;
+			border-color: white;
 			height: auto;
 			width: 70%;
 			min-width: 610px;
-			box-shadow: 1px 5px 25px grey;
 		}
-
 
 	/* ARTICLE */
 
@@ -205,12 +203,11 @@ body {
 			}
 
 			.article h2 {
-				background-color: #24252f;
-				color: white;
+				background-color: white;
+				color: #2a363b;
 				font-family: 'source_code_proregular', Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 				font-size: 20px;
 				text-align: center;
-				box-shadow: 1px 1px 3px black;
 				padding-top: 5px;
 				padding-bottom: 5px;
 				width: 100%;
@@ -230,20 +227,19 @@ body {
 				margin-bottom: 10px;
 				margin-right: 25px;
 				margin-left: 25px;
-				color: #495969;
+				color: white;
 			}
 
 			.article:nth-child(2) a {
-				background-color: #24252f;
-				color: white;
+				background-color: white;
+				color: #2a363b;
 				text-align: center;
 				padding: 8px;
-				box-shadow: 1px 1px 5px grey;
 				border-radius: 5px;
 			}
 
 				.article:nth-child(5) a {
-					color: #495969;
+					color: #2a363b;
 					font-weight: bold;
 				}
 

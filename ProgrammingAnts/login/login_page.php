@@ -29,7 +29,7 @@
 								<br>
 									<input type="password" name="pass" id="pass" placeholder=" Type your password">
 
-							  	<label id="stay_connected_label" for="stay_connected">Stay connected to our website</label>
+							  	<label id="stay_connected_label" for="stay_connected"></label>
  	              	<input type="checkbox" name="stay_connected" id="stay_connected">
 
  	              	<input type="button" value="Send" id="send" class="send" />

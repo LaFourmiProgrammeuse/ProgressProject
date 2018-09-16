@@ -98,11 +98,11 @@ body {
 					display: flex;
 					width: auto;
 					flex-direction: column;
-					margin-top: 5px;
-					margin-left: 20px;
+					margin-top: 0px;
 					align-items: center;
 					text-align: center;
 					display: none;
+                    margin-right: 20px;
 				}
 
           #login_button{
@@ -150,13 +150,15 @@ body {
 							color: white;
 						}
 							.user_image img {
-								height: 50px;
-								width: 50px;
+								height: 40px;
+								width: 40px;
 							}
 
 							.username {
 								font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 								font-size: 13px;
+                                position: relative;
+                                top: -9px;
 							}
 
 							.username a {

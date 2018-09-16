@@ -1,17 +1,25 @@
 <?php
+echo "-3";
 
 require '../../php_for_all/session_control.php';
+
+echo "-2";
+
 require '../../php_for_all/log_function.php';
 
 $file_log_path = "../../log_server.txt";
 
+echo "-1";
+
 $username = $_POST["nickname"];
 $password = $_POST["pass"];
 
-if(!isset($username == "")){
+echo "0";
+
+/*if($username == "")){
     log_server("Erreur : pas d'indentifiant lors de la connexion", $file_log_path);
     exit(0);
-}
+}*/
 
 if(isset($_POST["stay_connected"])){
 
@@ -39,6 +47,8 @@ if(isset($_POST["stay_connected"])){
     $_SESSION['stay_connected'] = $stay_connected;
 
 }
+
+echo "1";
 
 
 if(isset($_COOKIE['username']) AND isset($_COOKIE['password'])){

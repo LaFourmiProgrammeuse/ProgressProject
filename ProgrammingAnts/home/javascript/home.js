@@ -17,7 +17,7 @@ function readDataSession(xml_data){
         $("#disconnect_button").css("display", "block");
 
         $(".username").html("<a href='../../profile/profile.php'>"+ session_username+"</a>");
-        $("#user").show();
+        $("#h_userb").css("display", "block");
 
         if($(xml_data).find("animation_connection").text() == "true"){
 
@@ -54,8 +54,8 @@ function requestSessionData(){
 
 $(document).ready(function(){
 
-    $("#users").css("order", "1");
-    $("#account").css("order", "2");
+    $("#h_usera").css("order", "2");
+    $("#h_userb").css("order", "1");
     $("#account").css("margin-left", "20px");
 
     requestSessionData();

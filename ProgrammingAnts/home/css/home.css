@@ -32,7 +32,8 @@ body {
 #body_content{
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-width: 100vh;
+    min-height: 1050px;
 }
 
 	/* HEADER */
@@ -169,12 +170,16 @@ body {
 	/* SECTION */
 
 		section {
-			margin: 50px auto;
+			margin: 50px;
 			border: 2px solid;
 			border-color: white;
 			height: auto;
 			width: 70%;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
 			min-width: 610px;
+            top: 56px;
 		}
 
 	/* ARTICLE */

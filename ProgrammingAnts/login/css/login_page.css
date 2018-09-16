@@ -173,7 +173,8 @@ body {
 	/* SEND */
 
 		#send {
-
+            margin-top: 20px;
+            margin-left: 145px;
 		}
 
 		.send {
@@ -192,3 +193,11 @@ body {
 			color: white;
 			border-color: #ffb322;
 		}
+
+        #stay_connected_label{
+            margin-left: 50px;
+        }
+
+        #stay_connected{
+
+        }

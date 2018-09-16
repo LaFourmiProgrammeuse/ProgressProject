@@ -15,7 +15,7 @@
 			<header>
 				<div id="h_element">
 					<div id="infa"><h2>Log In to Programming Ants</h2></div>
-					<div id="infb"><h3>If you are not registered yet, <a href="../register/register_page.php" title="Sign up page">click here to join us !</a></h3></div>
+					<div id="infb"><h3>If you are not registered yet, <a href="../register/register_page.php" title="Sign up page">click here</a> to join us !</h3></div>
 				</div>
 			</header>
 
@@ -25,9 +25,9 @@
 						<div id"group_input"><fieldset>
 							<form method="post" action="php/formulaire_login.php">
 								<p>
-									<input type="text" name="nickname" id="nickname" placeholder="Type your nickname">
+									<input type="text" name="nickname" id="nickname" placeholder=" Type your nickname">
 								<br>
-									<input type="password" name="pass" id="pass" placeholder="Type your password">
+									<input type="password" name="pass" id="pass" placeholder=" Type your password">
 
 							  	<label id="stay_connected_label" for="stay_connected">Stay connected to our website</label>
  	              	<input type="checkbox" name="stay_connected" id="stay_connected">

@@ -32,58 +32,57 @@ body {
 		header {
 
 		}
-		
+
+			#h_element {
+				margin-top: 150px;
+			}
+
 			#infa {
+				font-size: 25px;
 				text-align: center;
 				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 				color: white;
 			}
 
 			#infb {
+				font-size: 15px;
 				text-align: center;
 				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 				color: white;
 			}
+
+				#infb a {
+					color: #ff8d33;
+				}
 
 
 	/* Section ==> FIELDSET */
 
 		fieldset {
 			display: flex;
-			align-items: center;
 			margin-left: auto;
 			margin-right: auto;
-			margin-top: 215px;
+			margin-top: 25px;
 			width: 500px;
 			height: auto;
 			border: 2px solid white;
+			border-radius: 5px;
 		}
-
-			label {
-				color: white;
-				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-				font-size: 15px;
-			}
 
   /* FORMULAIRE */
 
-		#nickname_label {
-			font-size: 25px;
-		}
-
     	#nickname{
-    		width: 500px;
+				margin-left: auto;
+				margin-right: auto;
+    		width: 475px;
     		height: 25px;
 				border: 1px solid #2a363b;
 				background-color: #f9f9f9;
       }
 
-		#pass_label {
-			font-size: 25px;
-    }
-
       #pass{
-				width: 500px;
+				align-self: center;
+				width: 475px;
     		height: 25px;
 				margin-top: 25px;
 				border: 1px solid #2a363b;
@@ -91,14 +90,14 @@ body {
     	}
 
 				::placeholder {
-					margin-left: 5px;
-					font-size: 16px;
+					font-size: 13px;
 				}
 
 	/* label de la case à cocher */
 	[type="checkbox"]:not(:checked) + label,
 	[type="checkbox"]:checked + label {
-
+		color: white;
+		font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 	}
 
 	/* Aspect de la case à cocher */
@@ -174,9 +173,7 @@ body {
 	/* SEND */
 
 		#send {
-			position: absolute;
-			top: 152px;
-			left: 364px;
+
 		}
 
 		.send {

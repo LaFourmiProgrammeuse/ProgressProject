@@ -1,169 +1,191 @@
+@font-face {
+    font-family: 'source_code_proregular';
+    src: url('../fonts/sourcecodepro-regular-webfont.eot');
+    src: url('../fonts/sourcecodepro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcecodepro-regular-webfont.woff') format('woff'),
+         url('../fonts/sourcecodepro-regular-webfont.ttf') format('truetype'),
+         url('../fonts/sourcecodepro-regular-webfont.svg#source_code_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 a {
-	color: #24252f;
+	color: white;
 	text-decoration: none;
 }
 
 body {
-	background-color: white;
+	background-color: #1d1d1d;
 	margin: 0;
 	padding: 0;
 }
 
-	.website_name {
-		display: flex;
-		position: absolute;
-		font-size: 30px;
-		font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-		position: absolute;
-		margin-top: 15px;
-		margin-left: 80px;
-	}
+#body_content{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-	/* CENTER WINDOW */
+	/* Header */
 
-	section {
-		display: flex;
-		margin-top: 140px;
-		height: 400px;
-		width: 530px;
-		margin-left: auto;
-		margin-right: auto;
-	}
+		header {
 
-		.programming_ants_logo_ide {
-      position: absolute;
-			height: 50px;
-			width: 50px;
-			margin-top: 7px;
-			margin-left: 380px;
 		}
 
-			/* ==> FIELDSET */
-
-			fieldset {
-				display: flex;
-				position: absolute;
-				margin-left: 50px;
-				margin-top: 80px;
-				width: 400px;
-				height: 120px;
-				border: 2px solid;
-				border-color: #24252f;
-				border-radius: 5px;
+			#infa {
+				text-align: center;
+				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+				color: white;
 			}
 
-				legend {
-					color: #24252f;
-					font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-					font-size: 20px;
-				}
+			#infb {
+				text-align: center;
+				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+				color: white;
+			}
 
-					label {
-						color: #24252f;
-						font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-						font-size: 15px;
-					}
 
-                    /* FORMULAIRE */
+	/* Section ==> FIELDSET */
 
-					#nickname_label{
-                        position: absolute;
-                        left: 70px;
-                        top: 43px;
-                    }
+		fieldset {
+			display: flex;
+			align-items: center;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 215px;
+			width: 500px;
+			height: auto;
+			border: 2px solid white;
+		}
 
-                    #nickname{
-                        position: absolute;
-                        left: 34%;
-                        top: 40px;
-                        width: 200px;
-                        height: 20px;
-                    }
+			label {
+				color: white;
+				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+				font-size: 15px;
+			}
 
-					#pass_label{
-                        position: absolute;
-                        left: 70px;
-                        top: 83px;
-                    }
+  /* FORMULAIRE */
 
-                    #pass{
-                        position: absolute;
-                        left: 34%;
-                        top: 80px;
-                        width: 200px;
-                        height: 20px;
-                    }
+		#nickname_label {
+			font-size: 40px;
+		}
 
-                    #stay_connected_label{
-                         position: absolute;
-                         left: 42px;
-                         top: 161px;
-                         color: #24252f;
-                    }
+    	#nickname{
+    		width: 350px;
+    		height: 50px;
+				border: 1px solid white;
+				background-color: #f9f9f9;
+      }
 
-                    #stay_connected{
-                        position: absolute;
-                        left: 15px;
-                        top: 159px;
-                        width: 16px;
-                        height: 16px;
-                    }
+		#pass_label {
+			font-size: 40px;
+    }
 
-                    /* ERROR */
+      #pass{
+				width: 350px;
+    		height: 50px;
+				border: 1px solid white;
+				background-color: #f9f9f9;
+    	}
 
-                    	.text_error{ /* Modifie le formatage du texte des erreurs */
-                        width: 300px;
-                        padding-left: 5px;
-                        padding-right: 5px;
-                        word-wrap: break-word;
-                    }
+	/* label de la case à cocher */
+	[type="checkbox"]:not(:checked) + label,
+	[type="checkbox"]:checked + label {
 
-                    .message_error{ /*Ce qu'il faut appliquer a tout les messages d'erreurs */
-                      padding-bottom: auto;
-											font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-                      border: 2px solid #24252f;
-					    				color: #24252f;
-                    }
+	}
 
-                    #message_error_bad_filled{
-                        position: relative;
-                        top: 300px;
-                        left: 110px;
-                        height: 50px;
-                    }
+	/* Aspect de la case à cocher */
+	[type="checkbox"]:not(:checked) + label:before,
+	[type="checkbox"]:checked + label:before {
+		content: '';
+  	position: absolute;
+  	left:0; top: 2px;
+  	width: 17px; height: 17px; /* dim. de la case */
+  	border: 1px solid #aaa;
+  	background: #f8f8f8;
+  	border-radius: 3px; /* angles arrondis */
+		box-shadow: inset 0 1px 3px rgba(0,0,0,.3) /* légère ombre interne */
+	}
 
-                    #text_error_bad_filled{
-                        text-align: center;
-                    }
+	/* Aspect général de la coche */
+	[type="checkbox"]:not(:checked) + label:after,
+	[type="checkbox"]:checked + label:after {
+		content: '✔';
+  	position: absolute;
+  	top: 0; left: 4px;
+  	font-size: 14px;
+  	color: #09ad7e;
+  	transition: all .2s; /* on prévoit une animation */
+	}
 
-                    #message_error_bad_credentials{
-                        position: relative;
-                        top: 300px;
-                        left: 110px;
-                        height: 67px;
-                    }
+	/* Aspect quand "coché" */
+	[type="checkbox"]:not(:checked) + label:after {
+		opacity: 0; /* coche invisible */
+  	transform: scale(0); /* mise à l'échelle à 0 */
+	}
 
-				/* SEND */
+	/* Aspect quand "non coché" */
+	[type="checkbox"]:checked + label:after {
+		opacity: 1; /* coche opaque */
+  	transform: scale(1); /* mise à l'échelle 1:1 */
+	}
 
-					#send {
-						position: absolute;
-						top: 152px;
-						left: 364px;
-					}
+  /* ERROR */
 
-						.send {
-							padding-left: 14px;
-							padding-right: 14px;
-							height: 35px;
-							color: #24252f;
-							border: 2px solid;
-							background-color: white;
-							border-color: #24252f;
-							border-radius: 5px;
-						}
+  	.text_error{ /* Modifie le formatage du texte des erreurs */
+      width: 300px;
+      padding-left: 5px;
+      padding-right: 5px;
+      word-wrap: break-word;
+    }
 
-							.send:hover {
-								background-color: #ffb322;
-								color: white;
-								border-color: #ffb322;
-							}
+    .message_error{ /*Ce qu'il faut appliquer a tout les messages d'erreurs */
+      padding-bottom: auto;
+			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+      border: 2px solid #24252f;
+			color: #24252f;
+    }
+
+      #message_error_bad_filled{
+        position: relative;
+        top: 300px;
+        left: 110px;
+        height: 50px;
+      }
+
+      #text_error_bad_filled{
+        text-align: center;
+      }
+
+      #message_error_bad_credentials{
+        position: relative;
+        top: 300px;
+        left: 110px;
+        height: 67px;
+      }
+
+	/* SEND */
+
+		#send {
+			position: absolute;
+			top: 152px;
+			left: 364px;
+		}
+
+		.send {
+			padding-left: 14px;
+			padding-right: 14px;
+			height: 35px;
+			color: #24252f;
+			border: 2px solid;
+			background-color: white;
+			border-color: #24252f;
+			border-radius: 5px;
+		}
+
+		.send:hover {
+			background-color: #ffb322;
+			color: white;
+			border-color: #ffb322;
+		}

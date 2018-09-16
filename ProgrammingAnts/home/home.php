@@ -39,7 +39,7 @@ require '../php_for_all/session_control.php';
 
 				<div id="h_groupc">
 					<div id="h_usera">
-						<div class="identification" id="login_button"><a href="../login/login_page.php">Sign In</a></div>
+						<div class="identification" id="login_button"><a href="../login/login_page.php">Log In</a></div>
 						<div class="identification" id="register_button"><a href="../register/register_page.php">Sign Up</a></div>
 						<div class="identification" id="disconnect_button"><a href="../php_for_all/disconnect.php">Sign Out</a></div>
 					</div>

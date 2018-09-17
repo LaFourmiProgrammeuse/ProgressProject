@@ -57,18 +57,24 @@ require '../php_for_all/session_control.php';
 					<div id="articles">
 						<div class="article">
 							<h2>_ErrorWiki ></h2>
-							<p>No projects have been posted on our website for the moment, you should come back later, the ants will call you when the anthill is ready !</p>
+							<p><b>The ErrorWiki is coming soon, just let us the time to finish the most important part of our website and it will be ready !</b></p>
+							<br/>
+							<p>The <b>ErrorWiki</b> is the place where you can find the answer about any error/bug you meet while programming. The ErrorWiki is made with the results
+							of our researches, so it can be incomplete or wrong. If you think something is wrong or incomplete, reply us on the concerned wiki page, and if we
+							get many returns about the same problem, we will fix the mistake.
 						</div>
 
 						<div class="article">
 							<h2>_Forum ></h2>
-							<p>Here is the forum, a place where you can talk with other people about a subject. It's the best place to go if you need help, the ants are amiable, they will help you with pleasure !
+							<p><b>The Forum is coming soon, just let us the time to finish the most important part of our website and it will be ready !</b></p>
+							<br/>
+							<p>The <b>Forum</b> is the place where you can discuss with the ProgrammingAnts community about programmation or follow the news of the Programming
 							<p id="link_forum_article"><a href="../forum/forum.php" title="Forum" >Click here</a></p>
 						</div>
 
 						<div class="article">
 							<h2>_Projects ></h2>
-							<p>We still working on the blog for the moment, searching for ideas and training the ants !</p>
+							<p><b>Projects are coming soon, just let us the time to finish the most important part of our website.</b></p>
 						</div>
 
 						<div class="article">

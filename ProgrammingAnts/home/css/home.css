@@ -18,10 +18,6 @@ p {
  margin: 0;
 }
 
-.bold {
-	font-weight: bold;
-}
-
 body {
 	position: relative;
 	background-color: #1d1d1d;
@@ -75,12 +71,13 @@ body {
 				color: #2a363b;
 			}
 
-			.nav_element:hover {
-			}
-
-			.nav_element:hover a {
+			.nav_element:hover a + .> {
         color: #ff8d33;
 			}
+
+      .nav_element:hover .object {
+        color: #2a363b;
+      }
 
 
 				#h_groupc {
@@ -202,7 +199,6 @@ body {
 			#articles {
 				display: flex;
 				flex-direction: column;
-				align-items: center;
 				justify-content: space-between;
 			}
 
@@ -217,7 +213,8 @@ body {
 				color: #2a363b;
 				font-family: 'source_code_proregular', Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 				font-size: 20px;
-				text-align: center;
+				text-align: left;
+        padding-left: 15px;
 				padding-top: 5px;
 				padding-bottom: 5px;
 				width: 100%;

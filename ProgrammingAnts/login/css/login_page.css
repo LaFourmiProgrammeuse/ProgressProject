@@ -79,6 +79,7 @@ body {
     		height: 30px;
 				border: 1px solid #2a363b;
 				background-color: #f9f9f9;
+        padding-left: 5px;
       }
 
       #pass {
@@ -89,28 +90,41 @@ body {
     		height: 30px;
 				border: 1px solid #2a363b;
 				background-color: #f9f9f9;
+        padding-left: 5px;
     	}
 
 				::placeholder {
 					font-size: 13px;
 				}
 
+    #inf_input fieldset{
+        transform: translate(-50%, 0);
+        left: 50%;
+        margin-left: 0px;
+        margin-right: 0px;
+        position: absolute;
+    }
+
+    .checkbox{
+        width: 350px;
+        height: 26px;
+        margin-top: 35px;
+        margin-left: 35px;
+    }
+
 	/* label de la case à cocher (quand il sera cliqué il va activer la checkbox) */
   .checkbox label {
     width: 50px;
     height: 25px;
     position: absolute;
-    left: 34.5%;
-    top: 55%;
     background-color: white;
     border-radius: 12px;
+    margin-left: 220px;
   }
 
   /* On cache la checkbox */
   input[type=checkbox] {
     position: absolute;
-    top: 0%;
-    left: 0%;
     visibility: hidden;
   }
 
@@ -143,8 +157,7 @@ body {
       font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
       color: white;
       font-size: 15px;
-      top: 55.5%;
-      left: 38.75%;
+      margin-top: 5px;
     }
 
   /* ERROR */
@@ -184,8 +197,10 @@ body {
 	/* SEND */
 
 		#send {
-      margin-top: 5px;
-      margin-left: 415px;
+            position: absolute;
+            bottom: 160px;
+            margin-left: 414px;
+            top: 138px;
 		}
 
 		.send {

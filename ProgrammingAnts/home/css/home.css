@@ -29,7 +29,7 @@ body {
     display: flex;
     flex-direction: column;
     min-width: 100vh;
-    min-height: 1050px;
+    min-height: 1250px;
 }
 
 	/* HEADER */

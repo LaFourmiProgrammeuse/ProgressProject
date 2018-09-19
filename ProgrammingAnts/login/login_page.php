@@ -40,8 +40,8 @@
 							</form>
 						</fieldset></div>
 
-						<div class="message_error" id="message_error_bad_filled"><p class="text_error" id="text_error_bad_filled">Incomplete or poorly filled form</p></div>
-						<div class="message_error" id="message_error_bad_credentials"><p class="text_error" id="text_error_bad_filled">The username and the word does not match</p></div>
+						<div class="message_error" id="message_error_bad_filled"><p class="text_error" id="text_error_bad_filled"><b>Incomplete</b> or <b>poorly</b> filled form</p></div>
+						<div class="message_error" id="message_error_bad_credentials"><p class="text_error" id="text_error_bad_filled">The <b>username</b> or the <b>password</b> doesn't match with an existing account</p></div>
 					</div>
 
 			</section>

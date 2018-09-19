@@ -15,7 +15,7 @@
     <link rel="stylesheet" typr="text/css" href="../footer.css">
 
   <meta charset="utf-8">
-  <title>Profile</title>
+  <title>Profile ProgAnts</title>
     <script type="text/javascript" src="../framework_javascript/jquery.js"></script>
    <script type="text/javascript" src="javascript/profile.js"></script>
 <script type="text/javascript" src ="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>

@@ -5,7 +5,7 @@
 
 		<link rel="stylesheet" type="text/css" href="css/login_page.css">
 		<meta charset="utf-8">
-		<title>Log In</title>
+		<title>Log In ProgAnts</title>
 
         <script type="text/javascript" src="../framework_javascript/jquery.js"></script>
         <script type="text/javascript" src="javascript/login.js"></script>

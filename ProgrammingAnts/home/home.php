@@ -14,7 +14,7 @@ require '../php_for_all/session_control.php';
 	<link rel="stylesheet" type="text/css" href="css/home.css">
   <link rel="stylesheet" type="text/css" href="../footer.css">
 	<meta charset="utf-8"/>
-	<title>Programming Ants</title>
+	<title>Home ProgAnts</title>
 
     <script type="text/javascript" src="../framework_javascript/jquery.js"></script>
     <script type="text/javascript" src="javascript/home.js"></script>

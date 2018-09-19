@@ -5,7 +5,7 @@
 
 		<link rel="stylesheet" type="text/css" href="css/forum.css">
 		<meta charset="utf-8">
-		<title>Forum</title>
+		<title>Forum ProgAnts</title>
 
 	</head>
 

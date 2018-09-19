@@ -5,7 +5,7 @@
 
 		<link rel="stylesheet" type="text/css" href="css/register_page.css">
 		<meta charset="utf-8">
-		<title>Sign Up</title>
+		<title>SignUp ProgAnts</title>
 
         <script type="text/javascript" src="../framework_javascript/jquery.js"></script>
         <script type="text/javascript" src="javascript/register.js"></script>

@@ -343,7 +343,7 @@ body {
                         transform: translate(-50%, -50%);
                     }
 
-                    #modal_drag_and_drop_img button{
+                    #modal_drag_and_drop_img .button_upload{
                         display: none;
                         position: absolute;
                         left: 50%;

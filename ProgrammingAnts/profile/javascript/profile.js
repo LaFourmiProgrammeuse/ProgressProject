@@ -7,6 +7,7 @@ var selected_onglet = 0;
 var profile_image_uploading = false;
 var profile_image_wait_upload = false;
 var profile_image_type_image_error = false;
+var profile_image_size_image_error = false;
 
 function requestUsersInformation(username){
 
@@ -40,7 +41,7 @@ function requestUsername(){
         cache: false,
         type: "GET",
         error: function(){
-            alert("Error");
+            alert("Erreur lors de la requete ajax pour recuperer le pseudo de l'utilisateur");
         },
         success: function(data){
             username = $(data).find("username").text();
@@ -115,6 +116,7 @@ function showUserRank(user_rank){
 }
 
 
+
     /* WINDOW MODAL PROFILE IMAGE */
 
 var Hdle_Drag_Over_For_Prfile_Img = function(e){
@@ -155,6 +157,7 @@ var Hdle_Drag_Drop_For_Prfile_Img = function(event){
         $("#how_to_upload_image").animate({top: "-=18px"});
 
         profile_image_type_image_error = true;
+        profile_image_wait_upload = false;
 
         return;
     }
@@ -165,6 +168,23 @@ var Hdle_Drag_Drop_For_Prfile_Img = function(event){
     $(".file_wait_upload").css("display", "block");
     $("#how_to_upload_image").css("display", "none");
 
+    profile_image_wait_upload = true;
+    profile_image_type_image_error = false;
+
+    //Partie on l'on upload l'image
+
+    fr = new FileReader();
+
+    fr.onload = function(image_url){
+        upload_image_url(image_url.target.result);
+        console.log(image_url.target.result);
+    }
+
+    fr.onerror = function(event_){
+        console.log("Erreur lors de la conversion de l'image en Url selon une base 64");
+    }
+
+    fr.readAsDataURL(file);
 
 }
 
@@ -179,6 +199,15 @@ var Hdle_Drag_Enter_For_Prfile_Img = function(e){
         $(".upload_error").css("display", "none");
 
         profile_image_type_image_error = false;
+    }
+    else if(profile_image_wait_upload == true){
+
+        $("#how_to_upload_image").css("display", "block");
+        $("#how_to_upload_image").css("top", "50%");
+
+        $("#modal_drag_and_drop_img form button").css("display", "none");
+        $("#modal_drag_and_drop_img form .file_wait_upload").css("display", "none");
+
     }
 
     $("#modal_drag_and_drop_img form").css("width", "450px");
@@ -205,18 +234,6 @@ var Hdle_Drag_Leave_For_Prfile_Img = function(e){
     $("#how_to_upload_image").css("z-index", "1");
 }
 
-var Hdle_Drag_Enter_For_Label_How_Upload_Img = function(event){
-
-    console.log("Enter");
-
-    event.preventDefault();
-}
-
-var Hdle_Drag_Leave_For_Label_How_Upload_Img = function(event){
-
-    event.preventDefault();
-
-}
 
 function isImage(file_extension){
 
@@ -236,7 +253,7 @@ function close_Modal_Profile_Img(){
     $(".upload_error").css("display", "none");
 
     if(profile_image_wait_upload == false){
-        $("#modal_drag_and_drop_img form button").css("display", "none");
+        $("#modal_drag_and_drop_img .button_upload").css("display", "none");
         $(".file_wait_upload").css("display", "none");
 
     }
@@ -252,6 +269,25 @@ function close_Modal_Profile_Img(){
          $("#how_to_upload_image").css("top", "50%");
     }
 }
+
+function upload_image_url(image_url){
+
+    $.ajax({
+        url: "/profile/php/upload_profile_image.php",
+        type: "POST",
+        cache: false,
+        data: {image_url: image_url},
+        dataType: "text",
+        success: function(data){
+            console.log("Image uploaded successfully "+data);
+        },
+        error: function(){
+            console.log("Error during the image upload");
+        }
+    });
+}
+
+
 
 
 $(document).ready(function(){
@@ -278,6 +314,9 @@ $("#nav_element_other").click(function(){
     $("#onglet_frame").html('<img class="ajax_loader" id="onglet_ajax_loader" src="../images/ajax-loader_2.gif">');
     $("#onglet_frame").load("../../profile/onglets_profile/profile_other.html");
 });
+
+
+    /* EVENT PROFILE IMAGE */
 
 $("#user_img_frame").click(function(){
 

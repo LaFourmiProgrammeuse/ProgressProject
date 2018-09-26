@@ -1,6 +1,6 @@
 <?php
 
-    header("Conntent-Type: text/plain");
+    header("Content-Type: text/plain");
 
     if(isset($_POST['nickname'])){
 

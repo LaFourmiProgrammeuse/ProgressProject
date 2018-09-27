@@ -12,7 +12,7 @@ if(!isset($_POST['image_url'])){
 $image_encoded_with_h = $_POST['image_url'];
 $image_encoded_without_h = explode(",", $image_encoded_with_h)[1];
 
-$image_encoded_without_h = urldecode($image_encoded_without_h);
+$image_encoded_without_h = str_replace(' ','+',$image_encoded_without_h);
 $image_decoded = base64_decode($image_encoded_without_h);
 
 header("Content-Type: text/plain");

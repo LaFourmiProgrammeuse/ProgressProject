@@ -46,14 +46,34 @@
 
     //BDD RECUP FRIEND INFORMATION
     if($information_needed[2] == "true"){
-        $query = $bdd->prepare("SELECT number_friend FROM users WHERE username=?");
+        $query = $bdd->prepare("SELECT number_friend, friend FROM users WHERE username=?");
         if(!$query->execute(array($username))){
-            log_server(("Erreur requête mysql pour recuperer les informations sur les amis l'utilisateur : "+$username), $file_log_path);
+            log_server(("Erreur requête mysql pour recuperer les informations sur les amis de l'utilisateur : "+$username), $file_log_path);
         }
 
         $user_friend_information = $query->fetch(PDO::FETCH_ASSOC);
+
+        if($user_friend_information['friend'] != ""){
+
+            $list_friend_name = explode(",", $user_friend_information['friend']);
+
+            for($i = 0; $i < count($list_friend_name); $i++){
+
+                $query = $bdd->prepare("SELECT profile_image_name FROM users WHERE username=?");
+
+                if(!$query->execute(array($list_friend_name[$i]))){
+                    log_server(("Erreur requête mysql pour recuperer les informations sur les amis de l'utilisateur : ".$username." sur : "), $file_log_path);
+                }
+
+                $friend_information = $query->fetch(PDO::FETCH_ASSOC);
+                $list_friend_profile_image[$i] = $friend_information['profile_image_name'];
+
+                //log_server(($list_friend_name[$i] . ", " . $friend_information["profile_image_name"] . ", " . $list_friend_profile_image[$i]), $file_log_path);
+            }
+        }
     }
 
+    //BDD RECUP PROFILE IMAGE INFORMATION
     if($information_needed[3] == 'true'){
         $query = $bdd->prepare("SELECT profile_image_name FROM users WHERE username=?");
         if(!$query->execute(array($username))){
@@ -78,9 +98,9 @@
                 echo "<number_message_sent>";
                     echo $user_forum_information["number_message_sent"];
                 echo "</number_message_sent>";
-                echo "<like_received >";
+                echo "<like_received>";
                     echo $user_forum_information["like_received"];
-                echo "</like_received >";
+                echo "</like_received>";
             }
 
             if($information_needed[1] == 'true'){
@@ -94,8 +114,11 @@
                     echo $user_friend_information['number_friend'];
                 echo "</number_friend>";
                 echo "<friend>";
-
+                    echo $user_friend_information['friend'];
                 echo "</friend>";
+                echo "<friend_profile_image>";
+                    echo implode(",", $list_friend_profile_image);
+                echo "</friend_profile_image>";
             }
 
             if($information_needed[3] == "true"){

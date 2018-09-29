@@ -16,7 +16,8 @@ var file_profile_image_url = "";
 
 var username = "";
 
-var list_friend_name;
+var list_friend_information = new Array();
+var friend_page = 0;
 
 
 
@@ -95,6 +96,25 @@ function showUserInformation(data){
         $("#user_img").attr("src", ("../images/user_image/"+profile_image_name));
     }
 
+    /*console.log($(data).find("friend_profile_image").text());
+    console.log($(data).find("friend").text());*/
+
+    var friend_profile_image = $(data).find("friend_profile_image").text();
+    var friend = $(data).find("friend").text();
+
+    if(friend != ""){
+        var list_friend_profile_image = friend_profile_image.split(",");
+        var list_friend_name = friend.split(",");
+
+        for(var i = 0; i < list_friend_name.length; i++){
+            list_friend_information[i] = new Array(list_friend_name[i], list_friend_profile_image[i]);
+        }
+
+        showFriend();
+    }
+    else{
+
+    }
 }
 
 function showTimeLastActivity(last_activity){
@@ -161,6 +181,17 @@ function requestProfileImage(){
             alert("Erreur");
         }
     });
+}
+
+function showFriend(){
+
+    $(".friend_1 .friend_name").text(list_friend_information[friend_page*2][0]);
+    $(".friend_1 .friend_image").attr("src", ("../../images/user_image/"+list_friend_information[friend_page*2][1]));
+
+    if(list_friend_information.length >= (friend_page*2+1)){
+        $(".friend_2 .friend_name").text(list_friend_information[(friend_page*2+1)][0]);
+        $(".friend_2 .friend_image").attr("src", ("../../images/user_image/"+list_friend_information[(friend_page*2+1)][1]));
+    }
 }
 
 

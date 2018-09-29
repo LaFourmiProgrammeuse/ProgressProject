@@ -25,9 +25,9 @@
 						<div id"group_input"><fieldset>
 							<form method="post" action="php/formulaire_login.php">
 								<p>
-									<input type="text" name="nickname" id="nickname" placeholder=" Type your nickname">
+									<input type="text" name="nickname" id="nickname" placeholder="Type your nickname">
 								<br>
-									<input type="password" name="pass" id="pass" placeholder=" Type your password">
+									<input type="password" name="pass" id="pass" placeholder="Type your password">
 
 								<div class="checkbox">
 									<input type="checkbox" name="checkbox" id="checkbox">
@@ -44,8 +44,9 @@
 						<div class="message_error" id="message_error_bad_credentials"><p class="text_error" id="text_error_bad_filled">The <b>username</b> or the <b>password</b> doesn't match with an existing account</p></div>
 					</div>
 
-			</section>
-		</div>
+				</section>
+
+			</div>
 		</body>
 
 </html>

@@ -1,249 +1,209 @@
+@font-face {
+    font-family: 'source_code_proregular';
+    src: url('../fonts/sourcecodepro-regular-webfont.eot');
+    src: url('../fonts/sourcecodepro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcecodepro-regular-webfont.woff') format('woff'),
+         url('../fonts/sourcecodepro-regular-webfont.ttf') format('truetype'),
+         url('../fonts/sourcecodepro-regular-webfont.svg#source_code_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 a {
-	color: #24252f;
+	color: white;
 	text-decoration: none;
 }
 
 body {
-	background-color: white;
+	background-color: #1d1d1d;
 	margin: 0;
 	padding: 0;
 }
 
-	.website_name {
-		display: flex;
-		position: absolute;
-		font-size: 30px;
-		font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-		position: absolute;
-		margin-top: 15px;
-		margin-left: 90px;
-	}
+#body_content{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-	.website_name a {
-		color: #24252f;
-	}
+	/* Header */
 
-	/* CENTER WINDOW */
-
-	section {
-    position: relative;
-		display: flex;
-		margin-top: 140px;
-		height: 400px;
-		margin-left: auto;
-    margin-right: auto;
-    width: 530px;
-	}
-
-		.programming_ants_logo_ide {
-      position: absolute;
-			height: 50px;
-			width: 50px;
-			margin-top: 7px;
-			margin-left: 390px;
-		}
-
-			/* ==> FIELDSET */
-
-			fieldset {
-				display: flex;
-				position: absolute;
-				margin-left: 50px;
-				margin-top: 80px;
-				width: 400px;
-				height: 180px;
-				border: 2px solid;
-				border-color: #24252f;
-				border-radius: 5px;
+			#h_element {
+				margin-top: 150px;
 			}
 
-				legend {
-					color: #24252f;
-					font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-					font-size: 20px;
+			#infa {
+				font-size: 25px;
+				text-align: center;
+				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+				color: white;
+			}
+
+			#infb {
+				font-size: 15px;
+				text-align: center;
+				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+				color: white;
+			}
+
+				#infb a {
+					color: #ff8d33;
 				}
 
-					label {
-						color: #24252f;
-						font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-						font-size: 15px;
-					}
+	/* Section ==> FIELDSET */
 
-                    /* FORMULAIRE */
+		fieldset {
+			display: flex;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 25px;
+			width: 500px;
+			height: 300px;
+			border: 2px solid white;
+			border-radius: 5px;
+		}
 
-                    #nickname{
-                        position: absolute;
-                        left: 170px;
-                        top: 30px;
-                        width: 200px;
-                        height: 20px;
-                    }
+  /* FORMULAIRE */
 
-                    #nickname_label{
-                        position: absolute;
-                        left: 97px;
-                        top: 33px;
-                    }
+    #nickname {
+			display: flex;
+			margin-left: auto;
+			margin-right: auto;
+			width: 450px;
+			height: 30px;
+			border: 1px solid #2a363b;
+			background-color: #f9f9f9;
+			padding-left: 5px;
+    }
 
-                    #validation_nickname {
-                        position: absolute;
-                        left: 385px;
-                        top: 30px;
-                        width: 25px;
-                        height: 25px;
-                        visibility: hidden;
-                    }
+    #validation_nickname {
+      width: 25px;
+      height: 25px;
+      visibility: hidden;
+    }
 
-                    #pass{
-                        position: absolute;
-                        left: 170px;
-                        top: 70px;
-                        width: 200px;
-                        height: 20px;
-                    }
+    #pass {
+			display: flex;
+			margin-left: auto;
+			margin-right: auto;
+			width: 450px;
+			height: 30px;
+			border: 1px solid #2a363b;
+			background-color: #f9f9f9;
+			padding-left: 5px;
+    }
 
-                    #pass_label{
-                        position: absolute;
-                        left: 97px;
-                        top: 73px;
-                    }
+    #validation_pass {
+      width: 25px;
+      height: 25px;
+      visibility: hidden;
+    }
 
-                    #validation_pass {
-                        position: absolute;
-                        left: 385px;
-                        top: 73px;
-                        width: 25px;
-                        height: 25px;
-                        visibility: hidden;
-                    }
+    #pass_confirm {
+			display: flex;
+			margin-left: auto;
+			margin-right: auto;
+			width: 450px;
+			height: 30px;
+			border: 1px solid #2a363b;
+			background-color: #f9f9f9;
+			padding-left: 5px;
+    }
 
-                    #confirmation_password{
-                        position: absolute;
-                        left: 170px;
-                        top: 110px;
-                        width: 200px;
-                        height: 20px;
-                    }
+    #validation_pass_confirm {
+      width: 25px;
+      height: 25px;
+      visibility: hidden;
+    }
 
-                    #confirmation_password_label{
-                        position: absolute;
-                        left: 42px;
-                        top: 113px;
-                    }
+    #email {
+			display: flex;
+			margin-left: auto;
+			margin-right: auto;
+			width: 450px;
+			height: 30px;
+			border: 1px solid #2a363b;
+			background-color: #f9f9f9;
+			padding-left: 5px;
+    }
 
-                    #validation_confirmation_password {
-                        position: absolute;
-                        left: 385px;
-                        top: 113px;
-                        width: 25px;
-                        height: 25px;
-                        visibility: hidden;
-                    }
+    #validation_email {
+      width: 25px;
+      height: 25px;
+      visibility: hidden;
+    }
 
-                    #email{
-                        position: absolute;
-                        left: 170px;
-                        top: 150px;
-                        width: 198px;
-                        height: 20px;
-                    }
+	/* SEND */
 
-                    #email_label{
-                         position: absolute;
-                         left: 120px;
-                         top: 153px;
-                    }
+		#send {
+			position: relative;
+			bottom: -13px;
+			margin-left: 385px;
+		}
 
-                    #validation_email {
-                        position: absolute;
-                        left: 385px;
-                        top: 153px;
-                        width: 25px;
-                        height: 25px;
-                        visibility: hidden;
-                    }
+		.send {
+			padding-left: 14px;
+			padding-right: 14px;
+			height: 35px;
+			color: #24252f;
+			border: 2px solid;
+			background-color: white;
+			border-color: #24252f;
+			border-radius: 5px;
+		}
 
+		.send:hover {
+			transition: 0.2s;
+			background-color: #ff8d33;
+			color: white;
+		}
 
-				/* SEND */
+  /* FORMULAIRE ERROR */
 
-					#send {
-						position: absolute;
-						top: 213px;
-						left: 364px;
-					}
+    .text_error { /* Modifie le formatage du texte des erreurs */
+			padding-left: 5px;
+			padding-right: 5px;
+			word-wrap: break-word;
+    }
 
-						.send {
-							background-color: white;
-							padding-left: 14px;
-							padding-right: 14px;
-							height: 35px;
-							color: #24252f;
-							border: 2px solid;
-							border-color: #24252f;
-							border-radius: 5px;
-						}
+    .message_error { /*Ce qu'il faut appliquer a tout les messages d'erreurs */
+			width: 350px;
+			margin-left: auto;
+			margin-right: auto;
+			padding-bottom: auto;
+			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+			border: 2px solid white;
+			color: white;
+    }
 
-						.send:hover {
-							background-color: #ffb322;
-							color: white;
-							border-color: #ffb322;
-						}
+    #message_error_bad_filled {
+			position: relative;
+			top: 150px;
+			height: auto;
+    }
 
-                /* FORMULAIRE ERROR */
+    #text_error_bad_filled {
+      text-align: center;
+    }
 
-                    .text_error{ /* Modifie le formatage du texte des erreurs */
-                        width: 300px;
-                        padding-left: 5px;
-                        padding-right: 5px;
-                        word-wrap: break-word;
-                    }
+    #message_error_nickname { /*Ce qu'il faut appliquer individuellement */
+      position: relative;
+      top: 150px;
+			height: auto;
+    }
 
-                    .message_error{ /*Ce qu'il faut appliquer a tout les messages d'erreurs */
-                      padding-bottom: auto;
-											font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-                      border: 2px solid #24252f;
-					    				color: #24252f;
-                    }
+    #message_error_password {
+      position: relative;
+      top: 150px;
+    }
 
-                    #message_error_bad_filled{
-                        position: relative;
-                        top: 350px;
-                        left: 110px;
-                        height: 50px;
-                    }
+    #message_error_confirmation_password {
+      position: relative;
+      top: 150px;
+    }
 
-                    #text_error_bad_filled{
-                        text-align: center;
-                    }
-
-                    #message_error_nickname{ /*Ce qu'il faut appliquer individuellement */
-                        width: auto;
-                        height: auto;
-                        position: absolute;
-                        top: 100px;
-                        left: 500px;
-                    }
-
-                    #message_error_password{
-                        width:auto;
-                        height:auto;
-                        position: absolute;
-                        top: 140px;
-                        left: 500px;
-                    }
-
-                    #message_error_confirmation_password{
-                        width:auto;
-                        height:auto;
-                        position: absolute;
-                        top: 180px;
-                        left: 500px;
-                    }
-
-                    #message_error_email{
-                        width:auto;
-                        height:auto;
-                        position: absolute;
-                        top: 220px;
-                        left: 500px;
-                    }
+    #message_error_email {
+      position: relative;
+      top: 150px;
+    }

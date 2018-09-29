@@ -96,6 +96,8 @@
                     <h5 class="friend_name">Amis 2</h5>
                     <a class="friend_profile_link">See more...</a>
                 </div>
+                <img src="../images/next.jpg" id="next_friend_page"/>
+                <img src="../images/previous.jpg" id="previous_friend_page"/>
             </div>
           </div>
 

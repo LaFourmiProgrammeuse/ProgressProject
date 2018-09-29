@@ -16,6 +16,8 @@ var file_profile_image_url = "";
 
 var username = "";
 
+var list_friend_name;
+
 
 
 function requestUsersInformation(){

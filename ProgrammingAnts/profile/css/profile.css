@@ -172,7 +172,7 @@ body {
 					font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
           margin-left: 5px;
 					margin-top: 0px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .friend_image{
@@ -204,6 +204,22 @@ body {
         .friend_2{
             height: 50px;
             margin-left: 13px;
+        }
+
+        #next_friend_page{
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: -131px;
+            left: 152px;
+        }
+
+        #previous_friend_page{
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: -131px;
+            left: 108px;
         }
 
       #onglet_frame{

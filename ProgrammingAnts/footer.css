@@ -7,10 +7,10 @@ a:hover {
 }
 
 footer{
-  position: absolute;
+  position: relative;
   height: 70px;
   width: 100%;
-  bottom: -70px;
+  bottom: 0px;
   background-color: white;
   align-content: center;
   color: #2a363b;

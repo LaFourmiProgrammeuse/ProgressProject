@@ -101,10 +101,12 @@ require '../php_for_all/session_control.php';
 			</div>
 		</aside>
 
-            <?php
-                require "../footer.php";
-            ?>
     </div>
+
+    <?php
+        require "../footer.php";
+    ?>
+
 	</body>
 
 </html>

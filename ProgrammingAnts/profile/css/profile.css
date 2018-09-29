@@ -152,6 +152,7 @@ body {
 			font-size: 15px;
 			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 			height: 5px;
+            margin-top: 11px;
 		}
 
         #user_stats_forum h5{
@@ -162,6 +163,7 @@ body {
         #friends{
           padding-left: 8px;
           padding-right: 8px;
+            margin-top: 5px;
         }
 
         #friends h4{

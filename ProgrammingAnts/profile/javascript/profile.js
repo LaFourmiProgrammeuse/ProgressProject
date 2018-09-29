@@ -4,14 +4,19 @@ var list_month = ['January', 'February', 'March', 'April', 'May', 'June', 'July'
 
 var selected_onglet = 0;
 
+//variable pour l'upload de l'image de profil
 var profile_image_uploading = false;
 var profile_image_wait_upload = false;
+var profile_image_uploaded = false;
 var profile_image_type_image_error = false;
 var profile_image_size_image_error = false;
 
 var file_name_profile_image = "";
+var file_profile_image_url = "";
 
 var username = "";
+
+
 
 function requestUsersInformation(){
 
@@ -126,6 +131,35 @@ function showUserRank(user_rank){
         $("#user_rank h3").text("User");
     }
 }
+function requestProfileImage(){
+
+    var information_needed = new Array(4);
+    information_needed[0] = "false";
+    information_needed[1] = "false";
+    information_needed[2] = "false";
+    information_needed[3] = "true";
+
+    var information_needed_string = information_needed.join(',');
+
+    $.ajax({
+        url: "../../php_for_ajax/get_user_information.php",
+        dataType: "xml",
+        cache: false,
+        type: "POST",
+        data: {information_needed: information_needed_string, username: username},
+        success: function(data){ console.log(data);
+
+             var profile_image_name = $(data).find("profile_image_name").text();
+
+             if(profile_image_name != ""){
+                 $("#user_img").attr("src", ("../images/user_image/"+profile_image_name));
+             }
+        },
+        error: function(){
+            alert("Erreur");
+        }
+    });
+}
 
 
 
@@ -143,12 +177,12 @@ var Hdle_Drag_Drop_For_Prfile_Img = function(event){
     event.originalEvent.stopPropagation();
 
     event.dataTransfer = event.originalEvent.dataTransfer;
+    file = event.dataTransfer.files[0];
 
-    //var files = event.dataTransfer.files[0].fileName;
     console.log("Event type : "+event.type);
     console.log("File name : "+event.dataTransfer.files[0].name);
 
-    file = event.dataTransfer.files[0];
+
 
     $("#modal_drag_and_drop_img form").css("width", "479px");
     $("#modal_drag_and_drop_img form").css("height", "209px");
@@ -157,6 +191,8 @@ var Hdle_Drag_Drop_For_Prfile_Img = function(event){
     $("#modal_drag_and_drop_img form").css("border-size", "2px");
 
     $("#how_to_upload_image").css("z-index", "1");
+
+
 
     file_name_split = file.name.split(".");
     file_extension = file_name_split[file_name_split.length-1].toLowerCase();
@@ -191,8 +227,7 @@ var Hdle_Drag_Drop_For_Prfile_Img = function(event){
     fr = new FileReader();
 
     fr.onload = function(image_url){
-        alert(file_name_profile_image);
-        upload_image_url(image_url.target.result, file_name_profile_image);
+        file_profile_image_url = image_url.target.result;
         console.log(image_url.target.result);
     }
 
@@ -204,9 +239,11 @@ var Hdle_Drag_Drop_For_Prfile_Img = function(event){
 
 }
 
+
 var Hdle_Drag_Enter_For_Prfile_Img = function(e){
 
     e.originalEvent.preventDefault();
+    e.originalEvent.stopPropagation();
 
     if(profile_image_type_image_error == true){
 
@@ -224,6 +261,19 @@ var Hdle_Drag_Enter_For_Prfile_Img = function(e){
         $("#modal_drag_and_drop_img form button").css("display", "none");
         $("#modal_drag_and_drop_img form .file_wait_upload").css("display", "none");
 
+        profile_image_wait_upload = false;
+
+    }
+
+    if(profile_image_uploaded == true){
+
+        $(".uploading_message").css("display", "none");
+        $(".uploading_message").text("Uploading...");
+
+        $("#how_to_upload_image").css("display", "block");
+        $("#how_to_upload_image").css("top", "50%");
+
+        profile_image_uploaded = false;
     }
 
     $("#modal_drag_and_drop_img form").css("width", "450px");
@@ -233,6 +283,7 @@ var Hdle_Drag_Enter_For_Prfile_Img = function(e){
     $("#modal_drag_and_drop_img form").css("border-size", "8px");
 
     $("#how_to_upload_image").css("z-index", "-1");
+
 }
 
 var Hdle_Drag_Leave_For_Prfile_Img = function(e){
@@ -276,6 +327,7 @@ function close_Modal_Profile_Img(){
 
     if(profile_image_uploading == false){
         $(".uploading_message").css("display", "none");
+        $(".uploading_message").text("Uploading...");
 
     }
 
@@ -284,21 +336,41 @@ function close_Modal_Profile_Img(){
          $("#how_to_upload_image").css("display", "block");
          $("#how_to_upload_image").css("top", "50%");
     }
+
 }
 
-function upload_image_url(image_url, file_name){
+
+//Upload l'image de profile sur le serveur et affiche les messages en fonction de l'état de l'upload
+function upload_image_url(){
+
+    profile_image_wait_upload = false;
+    profile_image_uploading = true;
+
+    $("#modal_drag_and_drop_img .uploading_message").css("display", "block");
+    $("#modal_drag_and_drop_img .button_upload").css("display", "none");
+    $("#modal_drag_and_drop_img .file_wait_upload").css("display", "none");
 
     $.ajax({
         url: "/profile/php/upload_profile_image.php",
         type: "POST",
         cache: false,
-        data: {image_url: image_url, file_name: file_name, username: username},
+        data: {image_url: file_profile_image_url, file_name: file_name_profile_image, username: username},
         dataType: "text",
         success: function(data){
             console.log("Image uploaded successfully "+data);
+
+            $("#modal_drag_and_drop_img .uploading_message").text("Profile image successfully uploaded !");
+
+            profile_image_uploaded = true;
+            profile_image_uploading = false;
+
+            requestProfileImage();
+
         },
         error: function(){
             console.log("Error during the image upload");
+
+             $("#modal_drag_and_drop_img .uploading_message").text("Error during the profile image upload !");
         }
     });
 }
@@ -343,8 +415,46 @@ $("#user_img_frame").click(function(){
 
     $("#modal_drag_and_drop_img").css("display", "block");
     $(".modal_background").css("display", "block");
+
+    has_window_popup_opened = true;
 });
 
+
+    /* WINDOW MODAL PROFILE IMAGE EVENT */
+
+$(".modal_background").click(function(){
+
+       close_Modal_Profile_Img();
+
+});
+
+$("#modal_drag_and_drop_img").click(function(e){
+
+    e.originalEvent.preventDefault();
+    e.originalEvent.stopPropagation();
+
+});
+
+$("#input_img_to_upload").change(function(){
+
+});
+
+$("#drop_zone_profile_img").bind("dragover", Hdle_Drag_Over_For_Prfile_Img);
+$("#drop_zone_profile_img").bind("drop", Hdle_Drag_Drop_For_Prfile_Img);
+$("#drop_zone_profile_img").bind("dragenter", Hdle_Drag_Enter_For_Prfile_Img);
+$("#drop_zone_profile_img").bind("dragleave", Hdle_Drag_Leave_For_Prfile_Img);
+
+    requestUsername();
+
+
+$("#modal_drag_and_drop_img .button_upload").click(function(){
+    upload_image_url();
+});
+
+
+
+
+//On charge un onglet au chargement de la page
 $("#onglet_frame").load("../../profile/onglets_profile/profile_overview.html");
 
 $("#nav_element_signout").click(function(){
@@ -360,27 +470,9 @@ $("#nav_element_signout").click(function(){
     });*/
 });
 
-    /* PROFILE IMAGE */
-
-$(".modal_background").click(function(){
-
-    close_Modal_Profile_Img();
-
 });
 
-    /* WINDOW MODAL PROFILE IMAGE EVENT */
 
-$("#input_img_to_upload").change(function(){
-    alert("dfsf");
-});
-
-$("#drop_zone_profile_img").bind("dragover", Hdle_Drag_Over_For_Prfile_Img);
-$("#drop_zone_profile_img").bind("drop", Hdle_Drag_Drop_For_Prfile_Img);
-$("#drop_zone_profile_img").bind("dragenter", Hdle_Drag_Enter_For_Prfile_Img);
-$("#drop_zone_profile_img").bind("dragleave", Hdle_Drag_Leave_For_Prfile_Img);
-
-    requestUsername();
-});
 
 function is_File_Api_Supported(){
 

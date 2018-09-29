@@ -35,7 +35,7 @@
                 <div class="upload_error">Error</div>
                 <div class="uploading_message">Uploading...</div>
                 <div class="file_wait_upload"></div>
-                <button type="button" class ="button_upload">Upload Image</button>
+                <button type="button" class="button_upload">Upload Image</button>
             </form>
         </div>
 

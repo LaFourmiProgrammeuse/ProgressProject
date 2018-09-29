@@ -26,6 +26,9 @@ else{
 
 try{
 
+
+    /* PART BDD REGISTRATION */
+
 $bdd = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
 
 }
@@ -34,14 +37,16 @@ catch(Exception $e){
     log_server("Error : Echec de la connection a la base de donnée (formulaire_register.php)", $file_log_path);
 }
 
-$qprepare = $bdd->prepare('INSERT INTO users (id, username, password, mail, stay_connected) VALUES (:id, :username, :password, :mail, :stay_connected)');
+$registered_date = date("Y-m-d");
 
-if($qprepare->execute(array('id' => '0', 'username' => $username, 'password' => $password, 'mail' => $email, 'stay_connected' => '1'))){
+$qprepare = $bdd->prepare('INSERT INTO users (id, username, password, mail, stay_connected, registered_date) VALUES (:id, :username, :password, :mail, :stay_connected, :registered_date)');
+
+if($qprepare->execute(array('id' => '0', 'username' => $username, 'password' => $password, 'mail' => $email, 'stay_connected' => '1', 'registered_date' => $registered_date))){
     echo "Requête mysql avec succès !";
     log_server($username . " enregistré avec succès !", $file_log_path);
 }else{
     echo "Echec de la requête mysql !";
-    log_server("Error : Echec de la requete mysql d'inscription Identifiant : " . $username . ", Mdp : " . $password . ", Mail : " . $email . " (formulaire_register.php)", $file_log_path);
+    log_server("Error : Echec de la requete mysql d'inscription Identifiant : " . $username . ", Mdp : " . $password . ", Mail : " . $email . ", Registered_Date : " . $registered_date ."(formulaire_register.php)", $file_log_path);
 }
 
 $_SESSION['connected'] = 'true';

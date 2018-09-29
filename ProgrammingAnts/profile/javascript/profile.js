@@ -9,14 +9,20 @@ var profile_image_wait_upload = false;
 var profile_image_type_image_error = false;
 var profile_image_size_image_error = false;
 
-function requestUsersInformation(username){
+var file_name_profile_image = "";
 
-    var information_needed = new Array(1);
+var username = "";
+
+function requestUsersInformation(){
+
+    var information_needed = new Array(4);
     information_needed[0] = "true";
     information_needed[1] = "true";
     information_needed[2] = "true";
+    information_needed[3] = "true";
 
     var information_needed_string = information_needed.join(',');
+    alert(information_needed_string);
 
     $.ajax({
         url: "../../php_for_ajax/get_user_information.php",
@@ -47,7 +53,7 @@ function requestUsername(){
             username = $(data).find("username").text();
 
             if(user_information_already_showed == false){
-                requestUsersInformation(username);
+                requestUsersInformation();
                 user_information_already_showed = true;
             }
         }
@@ -75,6 +81,12 @@ function showUserInformation(data){
     $("#number_friend").text(number_friend);
 
     $("#username h3").text(username);
+
+    var profile_image_name = $(data).find("profile_image_name").text(); alert(profile_image_name);
+
+    if(profile_image_name != ""){
+        $("#user_img").attr("src", ("../images/user_image/"+profile_image_name));
+    }
 
 }
 
@@ -146,8 +158,8 @@ var Hdle_Drag_Drop_For_Prfile_Img = function(event){
 
     $("#how_to_upload_image").css("z-index", "1");
 
-    file_extension_split = file.name.split(".");
-    file_extension = file_extension_split[file_extension_split.length-1].toLowerCase();
+    file_name_split = file.name.split(".");
+    file_extension = file_name_split[file_name_split.length-1].toLowerCase();
     console.log("Extension : "+file_extension);
 
     if(!isImage(file_extension)){
@@ -171,12 +183,16 @@ var Hdle_Drag_Drop_For_Prfile_Img = function(event){
     profile_image_wait_upload = true;
     profile_image_type_image_error = false;
 
+    file_name_profile_image = (username+"_profile_image."+file_extension);
+
+
     //Partie on l'on upload l'image
 
     fr = new FileReader();
 
     fr.onload = function(image_url){
-        upload_image_url(image_url.target.result);
+        alert(file_name_profile_image);
+        upload_image_url(image_url.target.result, file_name_profile_image);
         console.log(image_url.target.result);
     }
 
@@ -270,13 +286,13 @@ function close_Modal_Profile_Img(){
     }
 }
 
-function upload_image_url(image_url){
+function upload_image_url(image_url, file_name){
 
     $.ajax({
         url: "/profile/php/upload_profile_image.php",
         type: "POST",
         cache: false,
-        data: {image_url: image_url},
+        data: {image_url: image_url, file_name: file_name, username: username},
         dataType: "text",
         success: function(data){
             console.log("Image uploaded successfully "+data);

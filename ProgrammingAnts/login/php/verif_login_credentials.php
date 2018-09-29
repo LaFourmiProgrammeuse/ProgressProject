@@ -17,7 +17,7 @@
         $qprepare = $bdd->prepare("SELECT username FROM users WHERE username=? && password=?");
         $qprepare->execute(array($username, $password));
 
-        if(!$qprepare->fetch(PDO::FETCH_NUM)){
+        if(!$qrep = $qprepare->fetch(PDO::FETCH_NUM)){
 
             //La requete mysql n'a rien renvoyer
             echo "false";
@@ -25,7 +25,12 @@
         else{
 
             //La requete mysql a renvoyer l'identifiant
-            echo "true";
+            if($qrep[0] == $username){
+                echo "true";
+            }
+            else{
+                echo "false";
+            }
         }
     }
     else{

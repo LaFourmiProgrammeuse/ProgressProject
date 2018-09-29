@@ -41,6 +41,8 @@
 
     </div>
 
+<div id="main_content"> <!-- div permettant a section de prendre toute la place de la page et ainsi au footer d'être placer au bas de la page. -->
+
     <header>
       <div id="top">
         <h1>Profile</h1>
@@ -48,7 +50,6 @@
       </div>
     </header>
 
-    <div id="main_content"> <!-- div permettant a section de prendre toute la place de la page et ainsi au footer d'être placer au bas de la page. -->
       <section>
 
         <div id="aside_nav">
@@ -85,6 +86,16 @@
 
             <div id="friends">
                 <h4>Your Friends (<span id="number_friend"></span>)</h4>
+                <div class="friend_1">
+                    <img class="friend_image" src="../../images/no_user_image.png" />
+                    <h5 class="friend_name">Amis 1</h5>
+                    <a class="friend_profile_link">See more...</a>
+                </div>
+                <div class="friend_2">
+                    <img class="friend_image" src="../../images/no_user_image.png" />
+                    <h5 class="friend_name">Amis 2</h5>
+                    <a class="friend_profile_link">See more...</a>
+                </div>
             </div>
           </div>
 
@@ -93,11 +104,11 @@
           </div>
 
         </section>
-        </div>
 
             <?php
                 require "../footer.php";
             ?>
+   </div>
 
   </body>
 </html>

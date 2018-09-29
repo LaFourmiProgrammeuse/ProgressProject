@@ -54,6 +54,15 @@
         $user_friend_information = $query->fetch(PDO::FETCH_ASSOC);
     }
 
+    if($information_needed[3] == 'true'){
+        $query = $bdd->prepare("SELECT profile_image_name FROM users WHERE username=?");
+        if(!$query->execute(array($username))){
+            log_server(("Erreur requête mysql pour recuperer le nom de la photo de profil de l'utilisateur"), $file_log_path);
+        }
+
+        $user_profile_image_name = $query->fetch(PDO::FETCH_ASSOC);
+    }
+
     echo "<?xml version =\"1.0\" encoding=\"utf-8\"?>";
         echo "<information>";
 
@@ -87,6 +96,12 @@
                 echo "<friend>";
 
                 echo "</friend>";
+            }
+
+            if($information_needed[3] == "true"){
+                echo "<profile_image_name>";
+                    echo $user_profile_image_name['profile_image_name'];
+                echo "</profile_image_name>";
             }
         echo "</information>";
 ?>

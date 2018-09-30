@@ -208,11 +208,13 @@ body {
         .friend_1{
             height: 50px;
             margin-left: 13px;
+            display: none;
         }
 
         .friend_2{
             height: 50px;
             margin-left: 13px;
+            display: none;
         }
 
         #next_friend_page{

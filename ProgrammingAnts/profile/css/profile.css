@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'source_code_proregular';
+    src: url('../fonts/sourcecodepro-regular-webfont.eot');
+    src: url('../fonts/sourcecodepro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcecodepro-regular-webfont.woff') format('woff'),
+         url('../fonts/sourcecodepro-regular-webfont.ttf') format('truetype'),
+         url('../fonts/sourcecodepro-regular-webfont.svg#source_code_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 a {
 	text-decoration: none;
@@ -14,146 +25,144 @@ ul {
 }
 
 body {
+	background-color: #1d1d1d;
 	margin: 0;
 	padding: 0;
+}
+
+#body_content{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh
 }
 
   /* HEADER */
 
 	header {
 		display: flex;
-		height: auto;
+		justify-content: space-between;
+		background-color: white;
+		width: 100%;
+		min-width: 750px;
 	}
 
 		#top {
-			display: inline-flex;
-			margin-top: 50px;
-			margin-left: auto;
-			margin-right: auto;
-			height: 70px;
-			width: 50%;
-			min-width: 347px;
-			border-top: 2px solid #24252f;
-			border-bottom: 2px solid #24252f;
-			border-radius: 5px;
+			width: 100%;
+			min-width: 750px;
 		}
 
-			#top h1 {
-				color:  #24252f;
-				font-size: 40px;
-				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-				margin-left: 15px;
-				margin-top: 15px;
-			}
+		#top h1 {
+			color: #2a363b;
+			font-size: 40px;
+			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+			margin-left: 15px;
+			margin-bottom: 0px;
+			margin-top: 15px;
+		}
 
-			#top a {
-				color:  #24252f;
-				font-size: 15px;
-				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-				font-style: italic;
-				margin-left: 10px;
-				margin-top: 36px;
-			}
+		#top a {
+			color: #2a363b;
+			font-size: 15px;
+			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+			font-style: italic;
+			margin-left: 10px;
+			margin-top: 36px;
+		}
 
-			#top a:hover {
-				color: #495969;
-			}
-
-    #main_content{
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh
-    }
+		#top a:hover {
+			color: #ff8d33;
+		}
 
 	/* SECTION */
 
-	section {
-		display: flex;
-		width: 70%;
-		min-width: 450px;
-        height: 500px;
-		margin-top: 50px;
-		margin-left: auto;
-		margin-right: auto;
-        flex: 1;
-	}
-
-    #user_informations1 {
+		section {
 			display: flex;
-			flex-direction: column;
-			width: 35%;
-            height: 480px;
-			margin-left: 15px;
-			margin-top: auto;
-			margin-bottom: auto;
-			border-top: 2px solid #24252f;
-			border-bottom: 2px solid #24252f;
-    }
-
-		#user_img_frame{
-			display: flex;
-			margin: 10px auto;
-      width: 100px;
-			height: 100px;
-      background-color: white;
-    }
-
-    #user_img{
-      width: 100px;
-      height: 100px;
-    }
-
-    #username{
-			color: white;
-			padding-top: 5px;
-			padding-bottom: 5px;
-			padding-left: 20px;
-			padding-right: 20px;
+			width: 70%;
+			min-width: 450px;
+      height: 500px;
+			margin-top: 50px;
 			margin-left: auto;
 			margin-right: auto;
-			font-weight: lighter;
-			font-size: 18px;
-			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-			background-color: #24252f;
-			width: auto;
-    }
-
-    #username h3{
-      margin: 0px;
-      color: white;
-    }
-
-    #user_rank{
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 5px;
-    }
-
-    #user_rank h3{
-			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-      margin: 0px;
-      color: #486470;
-    }
-
-    #user_stats_forum{
-			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-			font-size: 15px;
-      width: auto;
-      padding-left: 8px;
-			padding-right: 8px;
-			line-height: 25px;
-			margin-top: 5px;
-			margin-left: 5px;
-			margin-right: 5px;
-    }
-
-		#user_stats_forum h4 {
-			color: #24252f;
-			font-size: 15px;
-			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-			height: 5px;
-            margin-top: 11px;
+      flex: 1;
 		}
+
+    	#user_informations1 {
+				display: flex;
+				flex-direction: column;
+				width: 35%;
+        height: 480px;
+				margin-left: 15px;
+				margin-top: auto;
+				margin-bottom: auto;
+				border-top: 2px solid white;
+				border-bottom: 2px solid white;
+    	}
+
+				#user_img_frame{
+					display: flex;
+					margin: 10px auto;
+      		width: 100px;
+					height: 100px;
+      		background-color: white;
+    		}
+
+    		#user_img{
+      		width: 100px;
+      		height: 100px;
+    		}
+
+    		#username{
+					color: white;
+					padding-top: 5px;
+					padding-bottom: 5px;
+					padding-left: 20px;
+					padding-right: 20px;
+					margin-left: auto;
+					margin-right: auto;
+					font-weight: lighter;
+					font-size: 18px;
+					font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+					background-color: white;
+					width: auto;
+    		}
+
+    		#username h3{
+      		margin: 0px;
+      		color: white;
+    		}
+
+    		#user_rank{
+      		margin-left: auto;
+      		margin-right: auto;
+      		margin-top: 5px;
+    		}
+
+    		#user_rank h3{
+					font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+      		margin: 0px;
+      		color: white;
+    		}
+
+    		#user_stats_forum{
+					color: white;
+					font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+					font-size: 15px;
+      		width: auto;
+      		padding-left: 8px;
+					padding-right: 8px;
+					line-height: 25px;
+					margin-top: 5px;
+					margin-left: 5px;
+					margin-right: 5px;
+    		}
+
+				#user_stats_forum h4 {
+					color: white;
+					font-size: 15px;
+					font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+					height: 5px;
+          margin-top: 11px;
+				}
 
         #user_stats_forum h5{
           width: 250px;
@@ -163,16 +172,16 @@ body {
         #friends{
           padding-left: 8px;
           padding-right: 8px;
-            margin-top: 5px;
+          margin-top: 5px;
         }
 
         #friends h4{
-        	color: #24252f;
+        	color: white;
 					font-size: 15px;
 					font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
           margin-left: 5px;
 					margin-top: 0px;
-            margin-bottom: 12px;
+          margin-bottom: 12px;
         }
 
         .friend_image{
@@ -248,7 +257,7 @@ body {
 				}
 
 				 #aside_nav ul {
-					 font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", "Luxi Sans", sans-serif;
+					 font-family: 'source_code_proregular', Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 					 font-size: 18px;
 					 line-height: 40px;
 					 margin-top: auto;
@@ -258,15 +267,15 @@ body {
 				 }
 
 				 #aside_nav ul li {
-					 color: #24252f;
+					 color: white;
 					 text-align: center;
 					 padding-bottom: -1px;
 					 width: 105px;
 				 }
 
 				 #aside_nav ul li:hover {
-					 color: white;
-					 background-color: #24252f;
+					 color: black;
+					 background-color: white;
 					 border-radius: 5px;
 				 }
 
@@ -285,8 +294,8 @@ body {
 						margin-top: auto;
 						margin-bottom: auto;
 						margin-left: 20px;
-						border-top: 2px solid #24252f;
-						border-bottom: 2px solid #24252f;
+						border-top: 2px solid white;
+						border-bottom: 2px solid white;
 					}
 
                     .modal_background{

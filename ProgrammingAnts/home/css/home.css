@@ -156,8 +156,8 @@ body {
 							.username {
 								font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 								font-size: 13px;
-                                position: relative;
-                                top: -9px;
+                position: relative;
+                top: -9px;
 							}
 
 							.username a {

@@ -79,7 +79,6 @@ require '../php_for_all/session_control.php';
 							<p>For now you can download our wallpaper (which is available in only one dimensions), just click on the image below</p>
 							<br/>
 							<a href="../content/pa_official_wallpaper.jpg" download="OfficialPAWallpaper"><img src="../images/wallpaper.png" /></a>
-
 						</div>
 
 						<div class="article">

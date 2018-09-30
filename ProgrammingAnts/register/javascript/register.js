@@ -172,11 +172,11 @@ function Show_Pass_Confirm_Error(){
     $("#message_error_password").hide(500);
     $("#message_error_email").hide(500);
 
-    if(!PassConfirmValidation() && $("#confirmation_password").val() != ""){
+    if(!PassConfirmValidation() && $("#pass_confirm").val() != ""){
 
         var error = "The confirmation password is not valid because :<br/><ul>";
 
-        var confirmation_password_value = $("#confirmation_password").val();
+        var confirmation_password_value = $("#pass_confirm").val();
         if($("#pass").val() != confirmation_password_value){
             error = error+"<li>The confirmation password does not match the password !</li>";
         }
@@ -392,13 +392,13 @@ function NicknameValidation(nickname_use){
 
 function PassConfirmValidation(){
 
-    var pass_confirm_value = $("#confirmation_password").val();
+    var pass_confirm_value = $("#pass_confirm").val();
     var pass_value = $("#pass").val();
 
     if(pass_confirm_value.length == 0){
 
         console.log("1");
-        $("#validation_confirmation_password").css("visibility", "hidden");
+        $("#validation_pass_confirm").css("visibility", "hidden");
 
         return false;
 
@@ -406,8 +406,8 @@ function PassConfirmValidation(){
     else if(pass_confirm_value != pass_value){
 
         console.log("2");
-        $("#validation_confirmation_password").attr("src", "../images/wrong.png");
-        $("#validation_confirmation_password").css("visibility", "visible");
+        $("#validation_pass_confirm").attr("src", "../images/wrong.png");
+        $("#validation_pass_confirm").css("visibility", "visible");
 
         return false;
 
@@ -415,8 +415,8 @@ function PassConfirmValidation(){
     else{
 
         console.log("3");
-        $("#validation_confirmation_password").attr("src", "../images/check.png");
-        $("#validation_confirmation_password").css("visibility", "visible");
+        $("#validation_pass_confirm").attr("src", "../images/check.png");
+        $("#validation_pass_confirm").css("visibility", "visible");
 
         return true;
 
@@ -568,14 +568,14 @@ $("#pass").click(function(){
 
 
 /* CONFIRMATION PASSWORD INPUT */
-$("#confirmation_password").keyup(function(){
+$("#pass_confirm").keyup(function(){
 
     PassConfirmValidation();
     Show_Pass_Confirm_Error();
 
 });
 
-$("#confirmation_password").click(function(){
+$("#pass_confirm").click(function(){
 
     Show_Pass_Confirm_Error();
 

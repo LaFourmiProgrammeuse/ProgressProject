@@ -187,13 +187,13 @@ function showFriend(){
 
     $(".friend_1 .friend_name").text(list_friend_information[friend_page*2][0]);
     $(".friend_1 .friend_image").attr("src", ("../../images/user_image/"+list_friend_information[friend_page*2][1]));
-    $(".friend_1").attr("display", "block");
+    $(".friend_1").css("display", "block");
 
     if(list_friend_information.length >= (friend_page*2+1)){
 
         $(".friend_2 .friend_name").text(list_friend_information[(friend_page*2+1)][0]);
         $(".friend_2 .friend_image").attr("src", ("../../images/user_image/"+list_friend_information[(friend_page*2+1)][1]));
-        $(".friend_2").attr("display", "block");
+        $(".friend_2").css("display", "block");
     }
 }
 
@@ -505,6 +505,12 @@ $("#nav_element_signout").click(function(){
         }
     });*/
 });
+
+$("#nav_element_signout").click(function(){
+    document.location.href="../../php_for_all/disconnect.php";
+});
+
+
 
 });
 

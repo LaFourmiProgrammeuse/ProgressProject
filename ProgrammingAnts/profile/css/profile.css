@@ -57,7 +57,7 @@ body {
 			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 			margin-left: 15px;
 			margin-bottom: 0px;
-			margin-top: 15px;
+			margin-top: 8px;
 		}
 
 		#top a {
@@ -65,8 +65,9 @@ body {
 			font-size: 15px;
 			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 			font-style: italic;
-			margin-left: 10px;
-			margin-top: 36px;
+            position: relative;
+            bottom: 5px;
+            left: 16px;
 		}
 
 		#top a:hover {
@@ -128,7 +129,7 @@ body {
 
     		#username h3{
       		margin: 0px;
-      		color: white;
+      		color: gray;
     		}
 
     		#user_rank{
@@ -197,6 +198,7 @@ body {
             margin-bottom: 0px;
             margin-top: 0px;
             width: 80px;
+            color: white;
         }
 
         .friend_profile_link{
@@ -223,6 +225,7 @@ body {
             position: relative;
             top: -131px;
             left: 152px;
+            display: none;
         }
 
         #previous_friend_page{
@@ -231,6 +234,7 @@ body {
             position: relative;
             top: -131px;
             left: 108px;
+            display: none;
         }
 
       #onglet_frame{

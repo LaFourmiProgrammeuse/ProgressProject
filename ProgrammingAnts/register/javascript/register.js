@@ -15,6 +15,7 @@ var email_old_value = "";
 
 var xhr = null;
 var nickname_use_now = false;
+var mail_use_now = false;
 
 var form_already_sent = false;
 
@@ -203,7 +204,11 @@ function Show_Email_Error(){
 
     if(!EmailValidation() && $("#email").val() != ""){
 
-        var error = "The email is not valid";
+        var error = "The email is not valid because :<br/><ul>";
+
+        if(mail_use_now == false){
+            error+="<li>The format of the email is incorrect !</li>";
+        }
 
         $("#message_error_email p").html(error);
 
@@ -234,7 +239,6 @@ function hasSpecialCharacter(string, number_special_character_to_found){
 
                 if(special_character_found == number_special_character_to_found){
 
-                    console.log("True");
 
                      return true;
                 }

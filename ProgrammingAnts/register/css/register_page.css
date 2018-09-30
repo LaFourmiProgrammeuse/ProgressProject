@@ -59,7 +59,7 @@ body {
 			margin-right: auto;
 			margin-top: 25px;
 			width: 500px;
-			height: 300px;
+			height: 240px;
 			border: 2px solid white;
 			border-radius: 5px;
 		}
@@ -75,12 +75,17 @@ body {
 			border: 1px solid #2a363b;
 			background-color: #f9f9f9;
 			padding-left: 5px;
+            position: relative;
+            left: -5px;
     }
 
     #validation_nickname {
-      width: 25px;
-      height: 25px;
-      visibility: hidden;
+        width: 25px;
+        height: 25px;
+        visibility: hidden;
+        position: relative;
+        top: -30px;
+        left: 479px;
     }
 
     #pass {
@@ -92,12 +97,18 @@ body {
 			border: 1px solid #2a363b;
 			background-color: #f9f9f9;
 			padding-left: 5px;
+            position: relative;
+            left: -5px;
+            top: -16px;
     }
 
     #validation_pass {
-      width: 25px;
-      height: 25px;
-      visibility: hidden;
+        width: 25px;
+        height: 25px;
+        visibility: hidden;
+        position: relative;
+        left: 479px;
+        top: -46px;
     }
 
     #pass_confirm {
@@ -109,12 +120,18 @@ body {
 			border: 1px solid #2a363b;
 			background-color: #f9f9f9;
 			padding-left: 5px;
+            position: relative;
+            left: -5px;
+            top: -32px;
     }
 
     #validation_pass_confirm {
-      width: 25px;
-      height: 25px;
-      visibility: hidden;
+        width: 25px;
+        height: 25px;
+        visibility: hidden;
+        position: relative;
+        left: 479px;
+        top: -62px;
     }
 
     #email {
@@ -126,12 +143,18 @@ body {
 			border: 1px solid #2a363b;
 			background-color: #f9f9f9;
 			padding-left: 5px;
+            position: relative;
+            left: -5px;
+            top: -47px;
     }
 
     #validation_email {
-      width: 25px;
-      height: 25px;
-      visibility: hidden;
+        width: 25px;
+        height: 25px;
+        visibility: hidden;
+        position: relative;
+        left: 479px;
+        top: -77px;
     }
 
 	/* SEND */
@@ -139,7 +162,8 @@ body {
 		#send {
 			position: relative;
 			bottom: -13px;
-			margin-left: 385px;
+			margin-left: 383px;
+            top: -37px;
 		}
 
 		.send {

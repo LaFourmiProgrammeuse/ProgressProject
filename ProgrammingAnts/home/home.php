@@ -75,6 +75,11 @@ require '../php_for_all/session_control.php';
 						<div class="article">
 							<h2>_Projects ></h2>
 							<p><b>Projects are coming soon, just let us the time to finish the most important part of our website.</b></p>
+							<br/>
+							<p>For now you can download our wallpaper (which is available in only one dimensions), just click on the image below</p>
+							<br/>
+							<img src="../images/wallpaper.png" />
+
 						</div>
 
 						<div class="article">

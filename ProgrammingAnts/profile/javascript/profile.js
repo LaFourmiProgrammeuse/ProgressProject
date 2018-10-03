@@ -215,7 +215,7 @@ var Hdle_Drag_Drop_For_Prfile_Img = function(event){
     event.dataTransfer = event.originalEvent.dataTransfer;
     file = event.dataTransfer.files[0];
 
-    console.log("Event type : "+event.type);
+    //console.log("Event type : "+event.type);
     console.log("File name : "+event.dataTransfer.files[0].name);
 
 
@@ -235,9 +235,9 @@ var Hdle_Drag_Drop_For_Prfile_Img = function(event){
     console.log("Extension : "+file_extension);
 
     if(!isImage(file_extension)){
-        $(".upload_error").text("Only images can be uploaded (.png, .jpg)");
-        $(".upload_error").css("display", "block");
-        $(".upload_error").slideDown("slow");
+        $("#modal_drag_and_drop_img .upload_error").text("Only images can be uploaded (.png, .jpg)");
+        $("#modal_drag_and_drop_img .upload_error").css("display", "block");
+        $("#modal_drag_and_drop_img .upload_error").slideDown("slow");
         $("#how_to_upload_image").animate({top: "-=18px"});
 
         profile_image_type_image_error = true;
@@ -248,8 +248,8 @@ var Hdle_Drag_Drop_For_Prfile_Img = function(event){
 
     $("#modal_drag_and_drop_img form button").show(500);
 
-    $(".file_wait_upload").text("File Name : "+file.name);
-    $(".file_wait_upload").css("display", "block");
+    $("#modal_drag_and_drop_img .file_wait_upload").text("File Name : "+file.name);
+    $("#modal_drag_and_drop_img .file_wait_upload").css("display", "block");
     $("#how_to_upload_image").css("display", "none");
 
     profile_image_wait_upload = true;
@@ -285,7 +285,7 @@ var Hdle_Drag_Enter_For_Prfile_Img = function(e){
 
         $("#how_to_upload_image").css("display", "block");
         $("#how_to_upload_image").css("top", "50%");
-        $(".upload_error").css("display", "none");
+        $("#modal_drag_and_drop_img .upload_error").css("display", "none");
 
         profile_image_type_image_error = false;
     }
@@ -303,8 +303,8 @@ var Hdle_Drag_Enter_For_Prfile_Img = function(e){
 
     if(profile_image_uploaded == true){
 
-        $(".uploading_message").css("display", "none");
-        $(".uploading_message").text("Uploading...");
+        $("modal_drag_and_drop_img .uploading_message").css("display", "none");
+        $("modal_drag_and_drop_img .uploading_message").text("Uploading...");
 
         $("#how_to_upload_image").css("display", "block");
         $("#how_to_upload_image").css("top", "50%");
@@ -351,19 +351,19 @@ function isImage(file_extension){
 function close_Modal_Profile_Img(){
 
     $("#modal_drag_and_drop_img").css("display", "none");
-    $(".modal_background").css("display", "none");
+    $("modal_drag_and_drop_img .modal_background").css("display", "none");
 
-    $(".upload_error").css("display", "none");
+    $("#modal_drag_and_drop_img .upload_error").css("display", "none");
 
     if(profile_image_wait_upload == false){
         $("#modal_drag_and_drop_img .button_upload").css("display", "none");
-        $(".file_wait_upload").css("display", "none");
+        $("modal_drag_and_drop_img .file_wait_upload").css("display", "none");
 
     }
 
     if(profile_image_uploading == false){
-        $(".uploading_message").css("display", "none");
-        $(".uploading_message").text("Uploading...");
+        $("#modal_drag_and_drop_img .uploading_message").css("display", "none");
+        $("#modal_drag_and_drop_img .uploading_message").text("Uploading...");
 
     }
 
@@ -449,8 +449,8 @@ $("#user_img_frame").click(function(){
         return;
     }
 
+    $("#modal_drag_and_drop_img .modal_content").css("display", "block");
     $("#modal_drag_and_drop_img").css("display", "block");
-    $(".modal_background").css("display", "block");
 
     has_window_popup_opened = true;
 });
@@ -458,13 +458,13 @@ $("#user_img_frame").click(function(){
 
     /* WINDOW MODAL PROFILE IMAGE EVENT */
 
-$(".modal_background").click(function(){
+$("#modal_drag_and_drop_img").click(function(){
 
        close_Modal_Profile_Img();
 
 });
 
-$("#modal_drag_and_drop_img").click(function(e){
+$("#modal_drag_and_drop_img .modal_content").click(function(e){
 
     e.originalEvent.preventDefault();
     e.originalEvent.stopPropagation();

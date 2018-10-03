@@ -40,11 +40,11 @@
       </div>
     </div>
 
-    <!--<div class="modal_background" id="modal_profile_friend">
+    <div class="modal_background" id="modal_profile_friend">
         <div class="modal_content">
-
+            <h2>Futur profil d'un amis</h2>
         </div>
-    </div>-->
+    </div>
 
     <div id="body_content"> <!-- div permettant a section de prendre toute la place de la page et ainsi au footer d'être placer au bas de la page. -->
       <header>

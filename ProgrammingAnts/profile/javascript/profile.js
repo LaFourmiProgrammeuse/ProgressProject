@@ -375,6 +375,11 @@ function close_Modal_Profile_Img(){
 
 }
 
+function close_Modal_Profile_Friend(){
+
+    $("#modal_profile_friend").css("display", "none");
+}
+
 
 //Upload l'image de profile sur le serveur et affiche les messages en fonction de l'état de l'upload
 function upload_image_url(){
@@ -485,6 +490,24 @@ $("#drop_zone_profile_img").bind("dragleave", Hdle_Drag_Leave_For_Prfile_Img);
 
 $("#modal_drag_and_drop_img .button_upload").click(function(){
     upload_image_url();
+});
+
+
+    /* EVENT MODAL PROFILE FRIEND */
+
+$(".friend_profile_link").click(function(){
+    $("#modal_profile_friend").css("display", "block");
+});
+
+$("#modal_profile_friend").click(function(){
+    close_Modal_Profile_Friend();
+});
+
+$("#modal_profile_friend .modal_content").click(function(e){
+
+    e.originalEvent.preventDefault();
+    e.originalEvent.stopPropagation();
+
 });
 
 

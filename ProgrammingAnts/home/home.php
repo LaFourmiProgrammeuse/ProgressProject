@@ -57,26 +57,26 @@ require '../php_for_all/session_control.php';
 					<div id="articles">
 						<div class="article">
 							<h2>_ErrorWiki ></h2>
-							<p><b>The ErrorWiki is coming soon, just let us the time to finish the most important part of our website and it will be ready !</b></p>
+							<p><b>The ErrorWiki is coming soon, just let us the time to finish the most important parts of our website and it will be ready for use !</b></p>
 							<br/>
-							<p>The <b>ErrorWiki</b> is the place where you can find the answer about any error/bug you meet while programming. The ErrorWiki is made with the results
-							of our researches, so it can be incomplete or wrong. If you think something is wrong or incomplete, reply us on the concerned wiki page, and if we
-							get many returns about the same problem, we will fix the mistake.
+							<p>The <b>ErrorWiki</b> is the place where you can find the informations about any error/bug you meet while programming. It is made with the results
+							of our researches, so it can be incomplete or contaning mistakes. If you think something is wrong or incomplete just reply us, and if we
+							get many returns about the same problem, we will it as fast as we can.
 						</div>
 
 						<div class="article">
 							<h2>_Forum ></h2>
-							<p><b>The Forum is coming soon, just let us the time to finish the most important part of our website and it will be ready !</b></p>
+							<p><b>The Forum is coming soon, just let us the time to finish the most important parts of our website and it will be ready for use !</b></p>
 							<br/>
-							<p>The <b>Forum</b> is the place where you can discuss with the ProgrammingAnts community about programmation or follow the news of the Programming
+							<p>The <b>Forum</b> is the place where you can discuss with the ProgrammingAnts community about coding, or also to follow the news.
 							<p id="link_forum_article"><a href="../forum/forum.php" title="Forum" >Click here</a></p>
 						</div>
 
 						<div class="article">
 							<h2>_Projects ></h2>
-							<p><b>Projects are coming soon, just let us the time to finish the most important part of our website.</b></p>
+							<p><b>Projects are coming soon, just let us the time to finish the most important parts of our website and it will be ready for use !</b></p>
 							<br/>
-							<p>For now you can download our wallpaper (which is available in only one dimensions), just click on the image below</p>
+							<p>For now you can download our wallpapers to support us !</p>
 							<br/>
 							<a href="../content/pa_official_wallpaper.jpg" download="OfficialPAWallpaper"><img src="../images/wallpaper.png" /></a>
 						</div>
@@ -85,7 +85,7 @@ require '../php_for_all/session_control.php';
 							<h2>_About ></h2>
 							<p><b>Programming Ants</b> is a project that we started to push our limits in programmation and to try to make something that can help people. For the moment, our website is <b>very limited in content</b>,
 								 we can't work faster because we still learning programmation languages (HTML5, PHP, CSS3, etc) to make our ideas done. The other cause is that we are only <b>two persons behind this project</b>, and it's difficult to work fastly,
-								 mostly when we have to solve <b>bugs and mistakes</b>. The fact that we are only teens and we have to study for school takes us a lot of time aswell. We won't give up and hope that everything will be fine in the futur !</p>
+								 mostly when we have to solve <b>bugs and mistakes</b>. The fact that we are only teens has a big impact on the way we work on the website, but we don't give up and hope that everything will work better in the futur !</p>
 						</div>
 
 						<div class="article">

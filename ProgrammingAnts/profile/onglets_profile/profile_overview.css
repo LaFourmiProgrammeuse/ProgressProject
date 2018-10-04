@@ -25,6 +25,7 @@
     width: 160px;
     transform: translate(-50%, 0);
     text-align: center;
+    color: rgba(128, 128, 128, 1);
 }
 
 #last_message_received{
@@ -51,9 +52,10 @@
     position: relative;
     top: -31px;
     left: 50%;
-    width: 180px;
+    width: 190px;
     transform: translate(-50%, 0);
     text-align: center;
+    color: rgba(128, 128, 128, 1);
 }
 
 #last_activity{
@@ -61,7 +63,7 @@
     border: 1px solid black;
     border-radius: 5px;
     height: 150px;
-    margin-top: 77px;
+    margin-top: 92px;
 }
 
 #last_activity img{
@@ -82,4 +84,7 @@
     width: 150px;
     transform: translate(-50%, 0);
     left: 50%;
+    text-align: center;
+    color: rgba(128, 128, 128, 1);
+
 }

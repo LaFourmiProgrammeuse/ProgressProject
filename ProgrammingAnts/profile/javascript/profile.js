@@ -30,7 +30,7 @@ function requestUsersInformation(){
     information_needed[3] = "true";
 
     var information_needed_string = information_needed.join(',');
-    alert(information_needed_string);
+    //alert(information_needed_string);
 
     $.ajax({
         url: "../../php_for_ajax/get_user_information.php",
@@ -90,7 +90,7 @@ function showUserInformation(data){
 
     $("#username h3").text(username);
 
-    var profile_image_name = $(data).find("profile_image_name").text(); alert(profile_image_name);
+    var profile_image_name = $(data).find("profile_image_name").text();
 
     if(profile_image_name != ""){
         $("#user_img").attr("src", ("../images/user_image/"+profile_image_name));

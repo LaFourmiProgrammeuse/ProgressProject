@@ -207,6 +207,7 @@ body {
             position: relative;
             top: -45px;
             left: 70px;
+            color: rgba(128, 128, 128, 1);
         }
 
         .friend_1{
@@ -249,7 +250,7 @@ body {
 		border-radius: 5px;
         margin-top: auto;
         margin-bottom: auto;
-        overflow: scroll; /* Je t'ai mis une barre de défilement en attendant */
+        /*overflow: scroll;*/ /* Je t'ai mis une barre de défilement en attendant */
       }
 
         #onglet_ajax_loader{

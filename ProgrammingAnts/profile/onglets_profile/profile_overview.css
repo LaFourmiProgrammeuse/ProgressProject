@@ -1,0 +1,85 @@
+#last_message_sent{
+    margin: 27px;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 68px;
+}
+
+#last_message_sent img{
+    width: 42px;
+    height: 42px;
+}
+
+#last_message_sent h3{
+    position: relative;
+    top: -37px;
+    left: 50px;
+    color: white;
+    margin: 0px;
+}
+
+#last_message_sent .no_message_sent{
+    position: relative;
+    top: -31px;
+    left: 50%;
+    width: 160px;
+    transform: translate(-50%, 0);
+    text-align: center;
+}
+
+#last_message_received{
+    margin: 27px;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 68px;
+}
+
+#last_message_received img{
+    width: 42px;
+    height: 42px;
+}
+
+#last_message_received h3{
+    position: relative;
+    top: -37px;
+    left: 50px;
+    color: white;
+    margin: 0px;
+}
+
+#last_message_received .no_message_received{
+    position: relative;
+    top: -31px;
+    left: 50%;
+    width: 180px;
+    transform: translate(-50%, 0);
+    text-align: center;
+}
+
+#last_activity{
+    margin: 27px;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 150px;
+    margin-top: 77px;
+}
+
+#last_activity img{
+    width: 42px;
+    height: 42px;
+}
+
+#last_activity h3{
+    position: relative;
+    top: -37px;
+    left: 50px;
+    color: white;
+    margin: 0px;
+}
+
+#last_activity .no_activity{
+    position: relative;
+    width: 150px;
+    transform: translate(-50%, 0);
+    left: 50%;
+}

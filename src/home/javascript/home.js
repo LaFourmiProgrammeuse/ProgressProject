@@ -16,7 +16,7 @@ function readDataSession(xml_data){
 
         $("#disconnect_button").css("display", "block");
 
-        $(".username").html("<a href='../../profile/profile.php'>"+ session_username+"</a>");
+        $(".username").html("<a href='/src/profile/profile.php'>"+ session_username+"</a>");
         $("#h_userb").css("display", "block");
 
         if($(xml_data).find("animation_connection").text() == "true"){
@@ -43,7 +43,7 @@ function requestSessionData(){
 
     $.ajax({
             type: "GET",
-            url: "../../php_for_ajax/session_control_for_javascript.php",
+            url: "/src/php_for_ajax/session_control_for_javascript.php",
             dataType: "xml",
             success: function(xml){
                 readDataSession(xml);

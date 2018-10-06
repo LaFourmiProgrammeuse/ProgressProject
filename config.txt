@@ -1,2 +1,0 @@
-session_timeout=30
-keep_connected=true

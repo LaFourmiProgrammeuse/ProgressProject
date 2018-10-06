@@ -1,0 +1,12 @@
+h1{
+    text-align: center;
+}
+
+#main_content{
+    width: 500px;
+    height: 500px;
+    left: 50%;
+    top: 115px;
+    position: relative;
+    transform: translate(-50%, 0);
+}

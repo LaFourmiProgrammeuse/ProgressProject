@@ -33,7 +33,7 @@ function requestUsersInformation(){
     //alert(information_needed_string);
 
     $.ajax({
-        url: "../../php_for_ajax/get_user_information.php",
+        url: "/src/php_for_ajax/get_user_information.php",
         data: {information_needed: information_needed_string, username: username},
         cache: false,
         dataType: "xml",
@@ -50,7 +50,7 @@ function requestUsersInformation(){
 function requestUsername(){
 
     $.ajax({
-        url: "../../php_for_ajax/session_control_for_javascript.php",
+        url: "/src/php_for_ajax/session_control_for_javascript.php",
         dataType: "xml",
         cache: false,
         type: "GET",
@@ -164,7 +164,7 @@ function requestProfileImage(){
     var information_needed_string = information_needed.join(',');
 
     $.ajax({
-        url: "../../php_for_ajax/get_user_information.php",
+        url: "/src/php_for_ajax/get_user_information.php",
         dataType: "xml",
         cache: false,
         type: "POST",
@@ -174,7 +174,7 @@ function requestProfileImage(){
              var profile_image_name = $(data).find("profile_image_name").text();
 
              if(profile_image_name != ""){
-                 $("#user_img").attr("src", ("../images/user_image/"+profile_image_name));
+                 $("#user_img").attr("src", ("/images/user_image/"+profile_image_name));
              }
         },
         error: function(){
@@ -186,13 +186,13 @@ function requestProfileImage(){
 function showFriend(){
 
     $(".friend_1 .friend_name").text(list_friend_information[friend_page*2][0]);
-    $(".friend_1 .friend_image").attr("src", ("../../images/user_image/"+list_friend_information[friend_page*2][1]));
+    $(".friend_1 .friend_image").attr("src", ("images/user_image/"+list_friend_information[friend_page*2][1]));
     $(".friend_1").css("display", "block");
 
     if(list_friend_information.length >= (friend_page*2+1)){
 
         $(".friend_2 .friend_name").text(list_friend_information[(friend_page*2+1)][0]);
-        $(".friend_2 .friend_image").attr("src", ("../../images/user_image/"+list_friend_information[(friend_page*2+1)][1]));
+        $(".friend_2 .friend_image").attr("src", ("images/user_image/"+list_friend_information[(friend_page*2+1)][1]));
         $(".friend_2").css("display", "block");
     }
 }
@@ -392,7 +392,7 @@ function upload_image_url(){
     $("#modal_drag_and_drop_img .file_wait_upload").css("display", "none");
 
     $.ajax({
-        url: "/profile/php/upload_profile_image.php",
+        url: "/src/profile/php/upload_profile_image.php",
         type: "POST",
         cache: false,
         data: {image_url: file_profile_image_url, file_name: file_name_profile_image, username: username},
@@ -425,23 +425,23 @@ $(document).ready(function(){
 
 $("#nav_element_overview").click(function(){
     $("#onglet_frame").html('<img class="ajax_loader" id="onglet_ajax_loader" src="../images/ajax-loader_2.gif">');
-    $("#onglet_frame").load("../../profile/onglets_profile/profile_overview.html");
+    $("#onglet_frame").load("/src/profile/onglets_profile/profile_overview.html");
 
 });
 
 $("#nav_element_profile").click(function(){
     $("#onglet_frame").html('<img class="ajax_loader" id="onglet_ajax_loader" src="../images/ajax-loader_2.gif">');
-    $("#onglet_frame").load("../../profile/onglets_profile/profile_profile.html");
+    $("#onglet_frame").load("/src/profile/onglets_profile/profile_profile.html");
 });
 
 $("#nav_element_account").click(function(){
     $("#onglet_frame").html('<img class="ajax_loader" id="onglet_ajax_loader" src="../images/ajax-loader_2.gif">');
-    $("#onglet_frame").load("../../profile/onglets_profile/profile_account.html");
+    $("#onglet_frame").load("/src/profile/onglets_profile/profile_account.html");
 });
 
 $("#nav_element_other").click(function(){
     $("#onglet_frame").html('<img class="ajax_loader" id="onglet_ajax_loader" src="../images/ajax-loader_2.gif">');
-    $("#onglet_frame").load("../../profile/onglets_profile/profile_other.html");
+    $("#onglet_frame").load("/src/profile/onglets_profile/profile_other.html");
 });
 
 
@@ -514,7 +514,7 @@ $("#modal_profile_friend .modal_content").click(function(e){
 
 
 //On charge un onglet au chargement de la page
-$("#onglet_frame").load("../../profile/onglets_profile/profile_overview.html");
+$("#onglet_frame").load("/src/profile/onglets_profile/profile_overview.html");
 
 $("#nav_element_signout").click(function(){
 
@@ -530,7 +530,7 @@ $("#nav_element_signout").click(function(){
 });
 
 $("#nav_element_signout").click(function(){
-    document.location.href="../../php_for_all/disconnect.php";
+    document.location.href="/src/php_for_all/disconnect.php";
 });
 
 

@@ -61,13 +61,13 @@
               <li class="nav_element" id="nav_element_profile"><h3>Statistics</h3></li>
               <li class="nav_element" id="nav_element_account"><h3>Account</h3></li>
               <li class="nav_element" id="nav_element_other"><h3>Other</h3></li>
-              <li class="nav_element" id="nav_element_signout"><img src="../images/sign_out.png" title="Sign Out" /></li>
+              <li class="nav_element" id="nav_element_signout"><img src="/images/sign_out.png" title="Sign Out" /></li>
             </ul>
           </div>
 
             <div id="user_informations1">
               <div id="user_img_frame">
-                <img src="../images/no_user_image.png" id="user_img"/>
+                <img src="/images/no_user_image.png" id="user_img"/>
               </div>
 
                 <div id="username" align="center">
@@ -91,24 +91,24 @@
                 <div id="friends">
                   <h4>Your Friends (<span id="number_friend"></span>)</h4>
                     <div class="friend_1">
-                      <img class="friend_image" src="../../images/no_user_image.png" />
+                      <img class="friend_image" src="/images/no_user_image.png" />
                       <h5 class="friend_name">Amis 1</h5>
                       <a class="friend_profile_link">See more...</a>
                     </div>
 
                     <div class="friend_2">
-                      <img class="friend_image" src="../../images/no_user_image.png" />
+                      <img class="friend_image" src="/images/no_user_image.png" />
                       <h5 class="friend_name">Amis 2</h5>
                       <a class="friend_profile_link">See more...</a>
                     </div>
 
-                    <img src="../images/next.jpg" id="next_friend_page"/>
-                    <img src="../images/previous.jpg" id="previous_friend_page"/>
+                    <img src="/images/next.jpg" id="next_friend_page"/>
+                    <img src="/images/previous.jpg" id="previous_friend_page"/>
                 </div>
               </div>
 
               <div id="onglet_frame">
-                <img class="ajax_loader" id="onglet_ajax_loader" src="../images/ajax-loader_2.gif" />
+                <img class="ajax_loader" id="onglet_ajax_loader" src="/images/ajax-loader_2.gif" />
               </div>
         </section>
 

@@ -39,9 +39,9 @@ catch(Exception $e){
 
 $registered_date = date("Y-m-d");
 
-$qprepare = $bdd->prepare('INSERT INTO users (id, username, password, mail, stay_connected, registered_date) VALUES (:id, :username, :password, :mail, :stay_connected, :registered_date)');
+$qprepare = $bdd->prepare('INSERT INTO users (id, username, password, mail, stay_connected, registered_date, profile_image_name) VALUES (:id, :username, :password, :mail, :stay_connected, :registered_date, :profile_image_name)');
 
-if($qprepare->execute(array('id' => '0', 'username' => $username, 'password' => $password, 'mail' => $email, 'stay_connected' => '1', 'registered_date' => $registered_date))){
+if($qprepare->execute(array('id' => '0', 'username' => $username, 'password' => $password, 'mail' => $email, 'stay_connected' => '1', 'registered_date' => $registered_date, 'profile_image_name' => 'Default_profile_image.png'))){
     echo "Requête mysql avec succès !";
     log_server($username . " enregistré avec succès !", $file_log_path);
 }else{

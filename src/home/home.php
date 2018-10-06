@@ -45,7 +45,7 @@ require '../php_for_all/session_control.php';
 					</div>
 
 					<div id="h_userb">
-							<div class="user_image"><img src="../images/no_user_image.png" /></div>
+							<div class="user_image"><img src="/images/no_user_image.png" /></div>
 							<div class="username"><a href="../profile/profile.php"></a></div>
 					</div>
 				</div>
@@ -78,7 +78,7 @@ require '../php_for_all/session_control.php';
 							<br/>
 							<p>For now you can download our wallpapers to support us !</p>
 							<br/>
-							<a href="../content/pa_official_wallpaper.jpg" download="OfficialPAWallpaper"><img src="../images/wallpaper.png" /></a>
+							<a href="../content/pa_official_wallpaper.jpg" download="OfficialPAWallpaper"><img src="/images/wallpaper.png" /></a>
 						</div>
 
 						<div class="article">

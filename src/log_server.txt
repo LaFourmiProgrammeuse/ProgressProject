@@ -479,3 +479,4 @@
 [30/09/2018-13:31] Error : Echec de la requete mysql d'inscription Identifiant : , Mdp : , Mail : , Registered_Date : 2018-09-30(formulaire_register.php)
 [30/09/2018-13:31] Error : Echec de la requete mysql d'inscription Identifiant : Antoinen, Mdp : zzzz@@22, Mail : z@., Registered_Date : 2018-09-30(formulaire_register.php)
 [30/09/2018-13:51] Error : Echec de la requete mysql d'inscription Identifiant : Alexandres, Mdp : zzzz@@22, Mail : z@., Registered_Date : 2018-09-30(formulaire_register.php)
+[06/10/2018-13:21] Error : Echec de la requete mysql d'inscription Identifiant : esdqsdssqs, Mdp : zzzz@@22, Mail : z@., Registered_Date : 2018-10-06(formulaire_register.php)

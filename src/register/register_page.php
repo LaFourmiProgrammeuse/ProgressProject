@@ -26,16 +26,16 @@
 							<form method="post" action="php/formulaire_register.php">
 								<p>
 									<input type="text" name="nickname" id="nickname" placeholder="Type your nickname">
-                  <img id="validation_nickname" src="../images/wrong.png"/>
+                  <img id="validation_nickname" src="/images/wrong.png"/>
 								<br>
 									<input type="password" name="pass" id="pass" placeholder="Type your password">
-                  <img id="validation_pass" src="../images/wrong.png"/>
+                  <img id="validation_pass" src="/images/wrong.png"/>
 								<br>
 									<input type="password" name="pass_confirm" id="pass_confirm" placeholder="Confirm your password">
-                  <img id="validation_pass_confirm" src="../images/wrong.png"/>
+                  <img id="validation_pass_confirm" src="/images/wrong.png"/>
 								<br>
 									<input type="e-mail" name="email" id="email" placeholder="Ex:exemple@gmail.com">
-                  <img id="validation_email" src="../images/check.png"/>
+                  <img id="validation_email" src="/images/check.png"/>
 
                   <button type="button" value="Send" id="send" class="send">Send</button>
 								</p>

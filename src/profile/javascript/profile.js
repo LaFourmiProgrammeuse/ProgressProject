@@ -93,7 +93,7 @@ function showUserInformation(data){
     var profile_image_name = $(data).find("profile_image_name").text();
 
     if(profile_image_name != ""){
-        $("#user_img").attr("src", ("../images/user_image/"+profile_image_name));
+        $("#user_img").attr("src", ("/images/user_image/"+profile_image_name));
     }
 
     /*console.log($(data).find("friend_profile_image").text());

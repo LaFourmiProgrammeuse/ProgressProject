@@ -3,7 +3,7 @@
 require "../../php_for_all/log_function.php";
 $file_log_server = "../../log_server.txt";
 
-$folder_image_path = "../../images/user_image/";
+$folder_image_path = "../../../images/user_image/";
 
 
 //On verifie les informations recus
@@ -40,7 +40,7 @@ $qrep = $qprepare->fetch(PDO::FETCH_NUM);
 
 echo $qrep[0];
 
-if($qrep[0] != ""){
+if($qrep[0] != "" || $qrep[0] != "Default_profile_image.png"){
     unlink(($folder_image_path . $qrep[0]));
 }
 

@@ -9,51 +9,47 @@
 
 	</head>
 
-		<body>
+	<body>
+		<div id="body_content"> <!-- Pour que le footer soit placer en bas de la page -->
+		<header>
+			<div id="h_groupa">
+				<div id="h_main_img"><img src="/images/programming_ants.png" title="ProgrammingAnts Logo"/></div>
+			</div>
 
-			<header>
+			<div id="h_groupb">
+				<div class="nav_element"><h3><span class="object">></span> Forum</h3></div>
+			</div>
 
-				<span class="programming_ants_name"><a href="../home/home.php"><h2>ProgrammingAnts</h2></a></span>
-				<img src="/images/programming_ants_forum.png" class="programming_ants_logo" />
-				<span class="programming_ants_extension"><i>Forum</i></span>
-
-
-
-						<div id="account">
-							<div class="identification"><a href="Login_page.php">Sign In</a></div>
-							<div class="identification"><a href="Register_page.php">Sign Up</a></div>
-						</div>
-
-							<div id="drop-down_menu">
-								<div class="drop-down"><img src="/images/menu.png"></div>
-							</div>
-
-			</header>
-
-				<nav>
-
-					<div id="top_menu">
-						<div class="option"><a href="#"><img src="/images/home.png" onmouseover="this.src='/images/home_hover.png'" onmouseout="this.src='/images/home.png'" /></a></div>
-							<div class="option"><a href="#">Forums</a></div>
-								<div class="option"><a href="#">Lastest</a></div>
-									<div class="option"><a href="#">FAQ</a></div>
+				<div id="h_groupc">
+					<div id="h_usera">
+						<div class="identification" id="login_button"><a href="../login/login_page.php">Log In</a></div>
+						<div class="identification" id="register_button"><a href="../register/register_page.php">Sign Up</a></div>
+						<!-- <div class="identification" id="disconnect_button"><a href="../php_for_all/disconnect.php">Log Out</a></div> -->
 					</div>
 
-						<form method="post" action="" id="search">
-							<p>
-								<input type="search" name="searching_bar" id="searching_bar" placeholder="Research" size="30" maxlength="10">
-								<input type="image" src="/images/search.png" name="ok" id="ok">
-							</p>
-						</form>
+					<!-- <div id="h_userb">
+							<div class="user_image"><img src="/images/no_user_image.png" /></div>
+							<div class="username"><a href="../profile/profile.php"></a></div>
+					</div> -->
+				</div>
+	</header>
 
-				</nav>
+		<section>
+		</section>
 
-					<section>
+		<aside>
+			<!-- <div id="reconnection">
+				<div class="message">Welcome back </div>
+				<div class="message" id="message_user"><p></p></div>
+			</div> -->
+		</aside>
 
+		</div>
 
+		<?php
+				require "../footer.php";
+		?>
 
-					</section>
-
-		</body>
+	</body>
 
 </html>

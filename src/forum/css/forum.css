@@ -1,166 +1,169 @@
+@font-face {
+    font-family: 'source_code_proregular';
+    src: url('/fonts/sourcecodepro-regular-webfont.eot');
+    src: url('/fonts/sourcecodepro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/sourcecodepro-regular-webfont.woff') format('woff'),
+         url('/fonts/sourcecodepro-regular-webfont.ttf') format('truetype'),
+         url('/fonts/sourcecodepro-regular-webfont.svg#source_code_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 a {
 	text-decoration: none;
 }
 
-body {
-	margin: 0;
-	padding: 0;
-	background-color: #272525;
+p {
+ margin: 0;
 }
 
-/* HEADER */
+body {
+	position: relative;
+	background-color: #1d1d1d;
+	margin: 0;
+	padding: 0;
+}
 
-	header {
-		background-color: #131313;
-		height: 65px;
-		box-shadow: 0px 0px 3px black;
-	}
+#body_content{
+    display: flex;
+    flex-direction: column;
+    min-width: 100vh;
+    min-height: 1825px;
+}
 
-	header a {
-		color: #e7e7e7;
-		text-decoration: none;
-	}
+	/* HEADER */
 
-		.programming_ants_logo {
-			position: absolute;
-			top: 7px;
-			left: 25px;
-			width: 50px;
-			height: 50px;
+		header {
+			display: flex;
+			justify-content: space-between;
+      background-color: white;
+			width: 100%;
+			min-width: 750px;
 		}
 
-		.programming_ants_name {
-			position: absolute;
-			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-			font-size: 20px;
-			font-weight: bold;
-			top: -8px;
-			left: 75px;
-		}
-
-		.programming_ants_extension {
-			position: absolute;
-			font-size: 20px;
-			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-			color: #1e9fd0;
-			left: 340px;
-			top: 25px;
-		}
-
-			#account {
-				display: flex;
-				position: absolute;
-				top: 20px;
-				left: 70%;
+			#h_groupa #h_main_img img {
+				margin-left : 45px;
+				margin-top: 7px;
+				width: 195px;
+				height: 45px;
 			}
 
-			.identification {
-				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+			#h_groupb {
+				display: flex;
+        position: relative;
+			}
+
+      .nav_element {
+				font-family: 'source_code_proregular', Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 				font-size: 14px;
-				padding-top: 3px;
-				padding-bottom: 5px;
-				padding-left: 7px;
-				padding-right: 7px;
-				text-align: center;
-				width: 53px;
-				height: 15px;
-				border: 2px solid;
-				border-color: #1e9fd0;
-				border-radius: 50px;
+				line-height: 9px;
+				padding-left: 35px;
+				padding-right: 35px;
+				margin-top: auto;
+				margin-bottom: auto;
+      	margin-right: auto;
 			}
 
-			.identification a {
-				color: #1e9fd0;
+			.nav_element a {
+				color: #2a363b;
 			}
 
-			.identification:hover a {
-				color: #131313;
-			}
-
-			.identification:hover {
-				border-color: #1e9fd0;
-				background-color: #1e9fd0;
-			}
-
-			.identification:nth-child(1) {
-				margin-right: 25px;
-			}
-
-				#drop-down_menu {
-
+				#h_groupc {
+					display: inline-flex;
+					width: auto;
+					margin-right: 45px;
 				}
 
-				.drop-down img {
-					position: absolute;
-					width: 35px;
-					height: 35px;
-					top: 15px;
-					left: 85%;
+				#h_usera {
+					display: inline-flex;
+					margin-top: 22px;
 				}
 
-	/* NAV */
+				#h_userb {
+					display: flex;
+					width: auto;
+					flex-direction: column;
+					margin-top: 0px;
+					align-items: center;
+					text-align: center;
+					display: none;
+          margin-right: 20px;
+				}
 
-		nav {
-			background-color: #131313;
-			width: 65%;
-			height: 50px;
-			margin-top: 80px;
-			margin-left: auto;
-			margin-right: auto;
-			box-shadow: 0px 0px 3px black;
+          #login_button{
+
+          }
+
+          #register_button{
+
+          }
+
+          #disconnect_button{
+            display: none;
+          }
+
+						.identification {
+							font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+							font-size: 14px;
+							text-align: center;
+							border: 2px solid;
+							border-color: #2a363b;
+							border-radius: 5px;
+							height: 20px;
+							width: 60px;
+              margin-top: -10px;
+							padding-top: 5px;
+							padding-bottom: 2px;
+							padding-left: 7px;
+							padding-right: 7px;
+						}
+
+						.identification:nth-child(2) {
+							margin-left: 20px;
+						}
+
+						.identification a{
+							color: #2a363b;
+						}
+
+						.identification:hover {
+              transition: 0.2s;
+							background-color: #ff8d33;
+							border-color: #ff8d33;
+						}
+
+						.identification:hover a {
+              transition: 0.2s;
+							color: white;
+						}
+							.user_image img {
+								height: 40px;
+								width: 40px;
+							}
+
+							.username {
+								font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+								font-size: 13px;
+                position: relative;
+                top: -9px;
+							}
+
+							.username a {
+								color: #2a363b;
+							}
+
+							.username a:hover {
+                transition: 0.2s;
+								color: #ff8d33;
+							}
+
+	/* SECTION */
+
+		section {
+		  background-color: white;
+		  border-radius: 5px;
+			height: auto;
+			width: 700px;
+		  position: absolute;
 		}
-
-			#top_menu {
-				display: flex;
-				justify-content: space-between;
-				background-color: #272525;
-				width: 30%;
-				height: 35px;
-				padding-left: 25px;
-				padding-right: 40px;
-				border-left: 25px solid #1e9fd0;
-				border-right: 2px solid #1e9fd0;
-				border-top-right-radius: 5px;
-				border-bottom-right-radius: 5px;
-			}
-
-			.option {
-				padding-top: 8px;
-				font-size: 18px;
-				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-			}
-
-			.option a {
-				color: #8b8b8b;
-			}
-
-			.option img {
-				position: absolute;
-				height: 20px;
-				width: 20px;
-			}
-
-			.option:nth-child(2):hover a {
-				color: #1e9fd0;
-			}
-
-			.option:nth-child(3):hover a {
-				color: #1e9fd0;
-			}
-
-			.option:nth-child(4):hover a {
-				color: #1e9fd0;
-			}
-
-				#searching_bar {
-					background-color: #272525;
-					width: 150px;
-					height: 30px;
-					border: 1px solid;
-					border-color: #2b2b2b;
-				}
-
-				#ok {
-					height: 30px;
-					width: 30px;
-				}

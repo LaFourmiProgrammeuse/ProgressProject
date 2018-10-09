@@ -57,6 +57,7 @@ body {
 
       .nav_element {
 				font-family: 'source_code_proregular', Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+        font-weight: normal;
 				font-size: 14px;
 				line-height: 9px;
 				padding-left: 35px;
@@ -173,7 +174,7 @@ body {
 
 		section {
 			margin: 50px;
-			border: 2px solid white;
+      background-color: white;
       border-radius: 5px;
 			height: auto;
 			width: 70%;
@@ -209,11 +210,12 @@ body {
 			}
 
 			.article h2 {
-				background-color: white;
-				color: #2a363b;
+				background-color: #1d1d1d;
+				color: white;
 				font-family: 'source_code_proregular', Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 				font-size: 20px;
 				text-align: left;
+        font-weight: normal;
         padding-left: 15px;
 				padding-top: 5px;
 				padding-bottom: 5px;
@@ -221,6 +223,7 @@ body {
 				margin-left: auto;
 				margin-right: auto;
         margin-top: 0px;
+        border-bottom-right-radius: 100px;
 			}
 
 			.article p {
@@ -234,15 +237,15 @@ body {
 				margin-bottom: 10px;
 				margin-right: 25px;
 				margin-left: 25px;
-				color: white;
+				color: #1d1d1d;
 			}
 
 			.article:nth-child(2) a {
-				background-color: white;
 				color: #2a363b;
 				text-align: center;
 				padding: 8px;
-				border-radius: 5px;
+        border-bottom: 2px solid #1d1d1d;
+        border-top: 2px solid #1d1d1d;
 			}
 
 				.article:nth-child(5) a {

@@ -17,7 +17,14 @@
 			</div>
 
 			<div id="h_groupb">
-				<div class="nav_element"><h3><span class="object">></span> Forum</h3></div>
+				<div id="hgb_element">
+					<form method="post" action="#" id="search_bar">
+						<p>
+							<input type="search" name="search_bar" id="search_bar" placeholder="Type something here..." size="30" maxlength="10">
+							<input type="submit" value="Send" name="send" id="send">
+						</p>
+					</form>
+				</div>
 			</div>
 
 				<div id="h_groupc">
@@ -35,6 +42,15 @@
 	</header>
 
 		<section>
+			<div id="top_nav">
+				<div class="nav_element"><img src="/images/home.png" onmouseover="this.src='/images/home_hover.png'" onmouseout="this.src='/images/home.png'" /></div>
+					<div class="nav_element"><h3><a href="#">Lastest</a></h3></div>
+						<div class="nav_element"><h3><a href="../forum/forum.php">Topics</a></h3></div>
+							<div class="nav_element"><h3><a href="#">Sent</a></h3></div>
+								<div class="nav_element"><h3><a href="#">Received</a></h3></div>
+									<div class="nav_element"><h3><a href="#">Stats</a></h3></div>
+			</div>
+
 		</section>
 
 		<aside>

@@ -53,21 +53,23 @@ body {
 				display: flex;
         position: relative;
 			}
+      
+      #search_bar {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    		width: 300px;
+    		height: 30px;
+				border: 1px solid #2a363b;
+				background-color: #f9f9f9;
+        padding-left: 5px;
+      }
 
-      .nav_element {
-				font-family: 'source_code_proregular', Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-				font-size: 14px;
-				line-height: 9px;
-				padding-left: 35px;
-				padding-right: 35px;
-				margin-top: auto;
-				margin-bottom: auto;
-      	margin-right: auto;
-			}
-
-			.nav_element a {
-				color: #2a363b;
-			}
+      #search {
+        height: 30px;
+        border: 1px solid #2a363b;
+				background-color: #f9f9f9;
+      }
 
 				#h_groupc {
 					display: inline-flex;
@@ -104,7 +106,7 @@ body {
           }
 
 						.identification {
-							font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+							font-family: Arial, Helvetica, "Liberation Sans", "FreeSans", sans-serif;
 							font-size: 14px;
 							text-align: center;
 							border: 2px solid;
@@ -143,7 +145,7 @@ body {
 							}
 
 							.username {
-								font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+								font-family: Arial, Helvetica, "Liberation Sans", "FreeSans", sans-serif;
 								font-size: 13px;
                 position: relative;
                 top: -9px;
@@ -161,9 +163,44 @@ body {
 	/* SECTION */
 
 		section {
-		  background-color: white;
-		  border-radius: 5px;
-			height: auto;
-			width: 700px;
-		  position: absolute;
+      margin: 50px;
+      background-color: white;
+      border-radius: 5px;
+			height: 500px;
+			width: 85%;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+			min-width: 610px;
+      top: 80px;
 		}
+
+      #top_nav {
+        display: flex;
+				justify-content: space-between;
+        position: relative;
+        margin-top: 5px;
+        box-shadow: 0px 5px 5px grey;
+      }
+
+      .nav_element {
+        font-family: Arial, Helvetica, "Liberation Sans", "FreeSans", sans-serif;
+				font-size: 16px;
+				margin-top: auto;
+				margin-bottom: auto;
+      	margin-right: auto;
+      	margin-left: auto;
+      }
+
+      .nav_element a {
+        color: #1d1d1d;
+      }
+
+      .nav_element:hover a {
+        color: #ff8d33;
+      }
+
+        .nav_element:nth-child(1) img {
+          width: 22px;
+          height: 22px;
+        }

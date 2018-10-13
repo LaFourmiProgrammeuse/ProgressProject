@@ -345,7 +345,7 @@ function PassValidation(){
     else if(pass_value.length < pass_character_needed || !hasSpecialCharacter(pass_value, pass_special_character_needed) || !hasNumber(pass_value, pass_number_needed)){
 
         console.log("2");
-        $("#validation_pass").attr("src", "../images/wrong.png");
+        $("#validation_pass").attr("src", "/images/wrong.png");
         $("#validation_pass").css("visibility", "visible");
 
         return false;
@@ -354,7 +354,7 @@ function PassValidation(){
     else{
 
         console.log("3");
-        $("#validation_pass").attr("src", "../images/check.png");
+        $("#validation_pass").attr("src", "/images/check.png");
         $("#validation_pass").css("visibility", "visible");
 
         return true;
@@ -377,7 +377,7 @@ function NicknameValidation(nickname_use){
     else if(nickname_value.length < nickname_character_needed || hasSpecialCharacter(nickname_value, 0) || nickname_value.length > nickname_character_max || nickname_use == true){
 
         console.log("2");
-        $("#validation_nickname").attr("src", "../images/wrong.png");
+        $("#validation_nickname").attr("src", "/images/wrong.png");
         $("#validation_nickname").css("visibility", "visible");
 
         return false;
@@ -386,7 +386,7 @@ function NicknameValidation(nickname_use){
     else{
 
         console.log("3");
-        $("#validation_nickname").attr("src", "../images/check.png");
+        $("#validation_nickname").attr("src", "/images/check.png");
         $("#validation_nickname").css("visibility", "visible");
 
         return true;
@@ -410,7 +410,7 @@ function PassConfirmValidation(){
     else if(pass_confirm_value != pass_value){
 
         console.log("2");
-        $("#validation_pass_confirm").attr("src", "../images/wrong.png");
+        $("#validation_pass_confirm").attr("src", "/images/wrong.png");
         $("#validation_pass_confirm").css("visibility", "visible");
 
         return false;
@@ -419,7 +419,7 @@ function PassConfirmValidation(){
     else{
 
         console.log("3");
-        $("#validation_pass_confirm").attr("src", "../images/check.png");
+        $("#validation_pass_confirm").attr("src", "/images/check.png");
         $("#validation_pass_confirm").css("visibility", "visible");
 
         return true;
@@ -442,7 +442,7 @@ function EmailValidation(){
     else if(!isValidMail(email_value)){
 
         console.log("2");
-        $("#validation_email").attr("src", "../images/wrong.png");
+        $("#validation_email").attr("src", "/images/wrong.png");
         $("#validation_email").css("visibility", "visible");
 
         return false;
@@ -451,7 +451,7 @@ function EmailValidation(){
     else{
 
         console.log("3");
-        $("#validation_email").attr("src", "../images/check.png");
+        $("#validation_email").attr("src", "/images/check.png");
         $("#validation_email").css("visibility", "visible");
 
         return true;

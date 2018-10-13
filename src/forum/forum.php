@@ -13,7 +13,7 @@
 		<div id="body_content"> <!-- Pour que le footer soit placer en bas de la page -->
 		<header>
 			<div id="h_groupa">
-				<div id="h_main_img"><img src="/images/programming_ants.png" title="ProgrammingAnts Logo"/></div>
+				<div id="h_main_img"><a href="/src/home/home.php"><img src="/images/programming_ants.png" title="ProgrammingAnts Logo"/></a></div>
 			</div>
 
 			<div id="h_groupb">

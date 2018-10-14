@@ -4,6 +4,7 @@
 	<head>
 
 		<link rel="stylesheet" type="text/css" href="css/forum.css">
+        <link rel="stylesheet" type="text/css" href="../footer.css">
 		<meta charset="utf-8">
 		<title>Forum ProgAnts</title>
 

@@ -1,90 +1,44 @@
-#last_message_sent{
-    margin: 27px;
-    border: 1px solid black;
+#activities {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+
+  .a_box {
+    width: 92.5%;
+    background-color: #cccccc;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
     border-radius: 5px;
-    height: 68px;
-}
+  }
 
-#last_message_sent img{
-    width: 42px;
-    height: 42px;
-}
+    .icon_type img {
+      width: 40px;
+      height: 40px;
+      margin-top: 5px;
+      margin-left: 5px;
+      margin-right: 10px;
+      float: left;
+    }
 
-#last_message_sent h3{
-    position: relative;
-    top: -37px;
-    left: 50px;
-    color: white;
-    margin: 0px;
-}
+    .title_type {
+      color: #1d1d1d;
+      font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+      font-size: 17px;
+    }
 
-#last_message_sent .no_message_sent{
-    position: relative;
-    top: -31px;
-    left: 50%;
-    width: 160px;
-    transform: translate(-50%, 0);
-    text-align: center;
-    color: rgba(128, 128, 128, 1);
-}
+    .a_type {
+      color: #1d1d1d;
+      font-style: italic;
+      font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+      font-size: 15px;
+      text-align: center;
+    }
 
-#last_message_received{
-    margin: 27px;
-    border: 1px solid black;
-    border-radius: 5px;
-    height: 68px;
-}
-
-#last_message_received img{
-    width: 42px;
-    height: 42px;
-}
-
-#last_message_received h3{
-    position: relative;
-    top: -37px;
-    left: 50px;
-    color: white;
-    margin: 0px;
-}
-
-#last_message_received .no_message_received{
-    position: relative;
-    top: -31px;
-    left: 50%;
-    width: 190px;
-    transform: translate(-50%, 0);
-    text-align: center;
-    color: rgba(128, 128, 128, 1);
-}
-
-#last_activity{
-    margin: 27px;
-    border: 1px solid black;
-    border-radius: 5px;
-    height: 150px;
-    margin-top: 92px;
-}
-
-#last_activity img{
-    width: 42px;
-    height: 42px;
-}
-
-#last_activity h3{
-    position: relative;
-    top: -37px;
-    left: 50px;
-    color: white;
-    margin: 0px;
-}
-
-#last_activity .no_activity{
-    position: relative;
-    width: 150px;
-    transform: translate(-50%, 0);
-    left: 50%;
-    text-align: center;
-    color: rgba(128, 128, 128, 1);
-
-}
+    .a_more img {
+      width: 25px;
+      height: 15px;
+      margin-top: 10px;
+    }

@@ -69,7 +69,7 @@ require '../php_for_all/session_control.php';
 							<p><b>The Forum is coming soon, just let us the time to finish the most important parts of our website and it will be ready for use !</b></p>
 							<br/>
 							<p>The <b>Forum</b> is the place where you can discuss with the ProgrammingAnts community about coding, or also to follow the news.
-							<p id="link_forum_article"><a href="../forum/forum.php" title="Forum" >Click here</a></p>
+							<p id="link_forum_article"><a href="../forum/forum.php" title="Forum" >Click here to visit the Forum</a></p>
 						</div>
 
 						<div class="article">

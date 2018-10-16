@@ -29,7 +29,7 @@ body {
     display: flex;
     flex-direction: column;
     min-width: 100vh;
-    min-height: 1825px;
+    min-height: 1775px;
 }
 
 	/* HEADER */
@@ -242,15 +242,18 @@ body {
 			}
 
 			.article:nth-child(2) a {
-				color: #2a363b;
+				color: #1d1d1d;
+        text-decoration: underline;
 				text-align: center;
 				padding: 8px;
-        border-bottom: 2px solid #1d1d1d;
-        border-top: 2px solid #1d1d1d;
 			}
 
+      .article:nth-child(2) a:hover {
+        color: #ff8d33;
+      }
+
 				.article:nth-child(5) a {
-					color: white;
+					color: #1d1d1d;
 					font-weight: bold;
 				}
 

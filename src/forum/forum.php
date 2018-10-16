@@ -9,6 +9,7 @@
 
 		<link rel="stylesheet" type="text/css" href="css/forum.css">
         <link rel="stylesheet" type="text/css" href="../footer.css">
+
 		<meta charset="utf-8">
 		<title>Forum ProgAnts</title>
 
@@ -50,7 +51,7 @@
 			<div id="top_nav">
 				<div class="nav_element"><a href="?forum_part=home"><img src="/images/home.png" onmouseover="this.src='/images/home_hover.png'" onmouseout="this.src='/images/home.png'" /></a></div>
 					<div class="nav_element"><h3><a href="?forum_part=latest">Latest</a></h3></div>
-						<div class="nav_element"><h3><a href="?forum_part=topics">Topics</a></h3></div>
+						<div class="nav_element"><h3><a href="?forum_part=forums">Forums</a></h3></div>
 								<div class="nav_element"><h3><a href="?forum_part=recent_activity">Last activity</a></h3></div>
 									<div class="nav_element"><h3><a href="?forum_part=stats">Stats</a></h3></div>
 			</div>
@@ -69,15 +70,15 @@
                         else if($_GET['forum_part'] == "stats"){
                             require "onglets_forum/forum_stats.php";
                         }
-                        else if($_GET['forum_part'] == "topics"){
-                            require "onglets_forum/forum_topics.php";
+                        else if($_GET['forum_part'] == "forums"){
+                            require "onglets_forum/forum_forums.php";
                         }
                         else if($_GET['forum_part'] == "home"){
                             require "onglets_forum/forum_home.php";
                         }
                     }
                     else{
-                        require "../onglets_forum/forum_home.php";
+                        require "onglets_forum/forum_home.php";
                     }
                 ?>
 

@@ -183,6 +183,7 @@ body {
       transform: translate(-50%, 0);
 			min-width: 610px;
       top: 56px;
+            margin-left: 0px;
 		}
 
 	/* ARTICLE */

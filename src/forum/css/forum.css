@@ -53,7 +53,7 @@ body {
 				display: flex;
         position: relative;
 			}
-      
+
       #search_bar {
         display: flex;
         margin-left: auto;
@@ -166,13 +166,14 @@ body {
       margin: 50px;
       background-color: white;
       border-radius: 5px;
-			height: 500px;
-			width: 85%;
+			height: 600px;
+			width: 75%;
       position: absolute;
       left: 50%;
       transform: translate(-50%, 0);
 			min-width: 610px;
       top: 80px;
+            margin-left: 0px;
 		}
 
       #top_nav {

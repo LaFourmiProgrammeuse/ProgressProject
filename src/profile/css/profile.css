@@ -117,15 +117,11 @@ body {
     		#username{
 					padding-top: 5px;
 					padding-bottom: 5px;
-					padding-left: 20px;
-					padding-right: 20px;
-					margin-left: auto;
-					margin-right: auto;
 					font-weight: lighter;
 					font-size: 18px;
 					font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 					background-color: #1d1d1d;
-					width: auto;
+					width: 100%;
     		}
 
     		#username h3{
@@ -150,12 +146,14 @@ body {
 					font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 					font-size: 15px;
       		width: auto;
+          padding-top: 5px;
       		padding-left: 8px;
 					padding-right: 8px;
 					line-height: 25px;
-					margin-top: 5px;
+					margin-top: 15px;
 					margin-left: 5px;
 					margin-right: 5px;
+          border-top: 1px solid grey;
     		}
 
 				#user_stats_forum h4 {
@@ -163,7 +161,7 @@ body {
 					font-size: 15px;
 					font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 					height: 5px;
-          margin-top: 11px;
+          margin-top: -5px;
 				}
 
         #user_stats_forum h5{
@@ -172,9 +170,13 @@ body {
         }
 
         #friends{
+          width: auto;
+          padding-top: 5px;
           padding-left: 8px;
           padding-right: 8px;
-          margin-top: 5px;
+          border-top: 1px solid grey;
+          margin-left: 5px;
+					margin-right: 5px;
         }
 
         #friends h4{
@@ -194,19 +196,23 @@ body {
 
         .friend_name{
             position: relative;
+            font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+            font-size: 14px;
             left: 70px;
             top: -44px;
             margin-bottom: 0px;
             margin-top: 0px;
             width: 80px;
-            color: white;
+            color: #1d1d1d;
         }
 
         .friend_profile_link{
             position: relative;
+            font-size: 12px;
+            font-style: italic;
             top: -45px;
             left: 70px;
-            color: rgba(128, 128, 128, 1);
+            color: #9c9c9c;
         }
 
         .friend_1{

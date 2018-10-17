@@ -9,17 +9,17 @@
   #onglet_body h3 {
     font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
     font-size: 19px;
-    color: #24252f;
+    color: #1d1d1d;
     margin: 0;
   }
 
   #onglet_body h4 {
     font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
     font-size: 16px;
-    color: #24252f;
+    color: #1d1d1d;
     margin-top: 0px;
     margin-bottom: 0px;
-    margin-left: 20px;
+    margin-left: 10px;
   }
 
   #onglet_body p {
@@ -37,15 +37,15 @@
       height: 20px;
     }
 
-        #onglet_body button {
-          border-radius: 2px;
-          border: 1px solid #24252f;
-          background-color: #24252f;
-          color: white;
-          height: 26px;
-          width: 80px;
-        }
+      #onglet_body button {
+        border-radius: 2px;
+        border: 1px solid #1d1d1d;
+        background-color: #1d1d1d;
+        color: white;
+        height: 26px;
+        width: 80px;
+      }
 
-          #send_new_email,#send_new_password {
-            margin-left: 5px;
-          }
+      #send_new_email,#send_new_password {
+        margin-left: 5px;
+      }

@@ -34,7 +34,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-    height: auto;
+  height: auto;
 }
 
   /* HEADER */
@@ -92,13 +92,14 @@ body {
     	#user_informations1 {
 				display: flex;
 				flex-direction: column;
+        background-color: white;
 				width: 35%;
         height: 480px;
 				margin-left: 15px;
 				margin-top: auto;
 				margin-bottom: auto;
-				border-top: 2px solid white;
-				border-bottom: 2px solid white;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
     	}
 
 				#user_img_frame{
@@ -106,7 +107,6 @@ body {
 					margin: 10px auto;
       		width: 100px;
 					height: 100px;
-      		background-color: white;
     		}
 
     		#user_img{
@@ -115,23 +115,18 @@ body {
     		}
 
     		#username{
-					color: white;
 					padding-top: 5px;
 					padding-bottom: 5px;
-					padding-left: 20px;
-					padding-right: 20px;
-					margin-left: auto;
-					margin-right: auto;
 					font-weight: lighter;
 					font-size: 18px;
 					font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-					background-color: white;
-					width: auto;
+					background-color: #1d1d1d;
+					width: 100%;
     		}
 
     		#username h3{
       		margin: 0px;
-      		color: gray;
+      		color: white;
     		}
 
     		#user_rank{
@@ -143,28 +138,30 @@ body {
     		#user_rank h3{
 					font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
       		margin: 0px;
-      		color: white;
+      		color: #1d1d1d;
     		}
 
     		#user_stats_forum{
-					color: white;
+					color: #1d1d1d;
 					font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 					font-size: 15px;
       		width: auto;
+          padding-top: 5px;
       		padding-left: 8px;
 					padding-right: 8px;
 					line-height: 25px;
-					margin-top: 5px;
+					margin-top: 15px;
 					margin-left: 5px;
 					margin-right: 5px;
+          border-top: 1px solid grey;
     		}
 
 				#user_stats_forum h4 {
-					color: white;
+					color: #1d1d1d;
 					font-size: 15px;
 					font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 					height: 5px;
-          margin-top: 11px;
+          margin-top: -5px;
 				}
 
         #user_stats_forum h5{
@@ -173,13 +170,17 @@ body {
         }
 
         #friends{
+          width: auto;
+          padding-top: 5px;
           padding-left: 8px;
           padding-right: 8px;
-          margin-top: 5px;
+          border-top: 1px solid grey;
+          margin-left: 5px;
+					margin-right: 5px;
         }
 
         #friends h4{
-        	color: white;
+        	color: #1d1d1d;
 					font-size: 15px;
 					font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
           margin-left: 5px;
@@ -195,19 +196,23 @@ body {
 
         .friend_name{
             position: relative;
+            font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+            font-size: 14px;
             left: 70px;
             top: -44px;
             margin-bottom: 0px;
             margin-top: 0px;
             width: 80px;
-            color: white;
+            color: #1d1d1d;
         }
 
         .friend_profile_link{
             position: relative;
+            font-size: 12px;
+            font-style: italic;
             top: -45px;
             left: 70px;
-            color: rgba(128, 128, 128, 1);
+            color: #9c9c9c;
         }
 
         .friend_1{
@@ -244,13 +249,13 @@ body {
         position: relative;
         width: 60%;
         margin: auto;
-        height: 470px;
+        height: 480px;
         margin: 10px;
-		border: 1px solid grey;
-		border-radius: 5px;
+		    border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background-color: white;
         margin-top: auto;
         margin-bottom: auto;
-        /*overflow: scroll;*/ /* Je t'ai mis une barre de défilement en attendant */
       }
 
         #onglet_ajax_loader{
@@ -294,7 +299,7 @@ body {
 				 }
 
 				 #aside_nav ul li:last-of-type:hover {
-					 background-color: white;
+					 background-color: #1d1d1d;
 				 }
 
 					#user_informations2 {

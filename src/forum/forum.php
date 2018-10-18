@@ -78,7 +78,7 @@
                         }
                     }
                     else{
-                        require "onglets_forum/forum_home.php";
+                        require "onglets_forum/forum_forums.php";
                     }
                 ?>
 

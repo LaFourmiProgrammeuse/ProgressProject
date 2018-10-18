@@ -166,7 +166,7 @@ body {
       margin: 50px;
       background-color: white;
       border-radius: 5px;
-			height: 600px;
+			height: auto;
 			width: 75%;
       position: absolute;
       left: 50%;

@@ -43,6 +43,15 @@ article{
     color: #1d1d1d;
 }
 
+.article h3{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    color: white;
+    font-size: 16px;
+
+}
+
 .welcome_message{
 
 }
@@ -57,13 +66,58 @@ article{
     position: relative;
 }
 
+.h_forums_desc{
+    background-color: #1d1d1d;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.h_forums_desc_1{
+    width: 50%;
+}
+
+.h_forums_desc_2{
+    width: 20%;
+    min-width: 180px;
+}
+
+.h_forums_desc_3{
+    width: 30%;
+}
+
+#article_most_active_forums{
+    height: auto;
+}
+
+#article_most_active_forums .h_forums_desc{
+    margin-top: 20px;
+    width: 85%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#article_polls{
+    height: auto;
+}
+
+#article_polls .h_forums_desc{
+    margin-top: 30px;
+    width: 85%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
 #article_most_active_forums h2{
-    border-bottom-right-radius: 0px;
     margin-bottom: 0px;
+
 }
 
 #article_polls h2{
-    border-bottom-right-radius: 0px;
     margin-bottom: 0px;
 }
 
@@ -83,4 +137,58 @@ article{
     height: 60px;
     border: solid 2px #1d1d1d;
     border-top-width: 0px;
+}
+
+#link_forum_rules{
+    position: relative;
+    top: 7px;
+    color: #1d1d1d;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.forum_desc_groupa{
+    width: 50%;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+.forum_desc_groupb{
+    width: 20%;
+    min-width: 180px;
+    padding-left: 7px;
+    height: 35px;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.forum_desc_groupc{
+    width: 30%;
+    padding-left: 5px;
+}
+
+.forum_desc_groupc .message{
+    height: 33px;
+}
+
+.forum_desc_groupc .date_message{
+    text-align: right;
+    padding-right: 3px;
+    font-size: 14px;
+}
+
+.forum_small_desc{
+    padding-left: 5px;
+}
+
+.forum_desc{
+    height: 50px;
+    width: 84.7%;
+    border: 2px solid #1d1d1d;
+    border-top: 0px;
+    display: flex;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
 }

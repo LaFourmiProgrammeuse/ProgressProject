@@ -52,8 +52,8 @@
 
             <div class="h_forums_desc">
                 <h3 class="h_forums_desc_1">Poll</h3>
-                <h3 class="h_forums_desc_2">Topics/Messages</h3>
-                <h3 class="h_forums_desc_3">Last message</h3>
+                <h3 class="h_forums_desc_2">Votes</h3>
+                <h3 class="h_forums_desc_3">Last vote</h3>
             </div>
 
             <div class="forum_desc">

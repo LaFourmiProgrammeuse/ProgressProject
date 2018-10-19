@@ -3,6 +3,8 @@
 //Ne pas mettre de code html avant cette ligne !
 require '../php_for_all/session_control.php';
 
+include "../language/language.php";
+
 //echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
 ?>
@@ -14,7 +16,7 @@ require '../php_for_all/session_control.php';
 	<link rel="stylesheet" type="text/css" href="css/home.css">
   <link rel="stylesheet" type="text/css" href="../footer.css">
 	<meta charset="utf-8"/>
-	<title>Home ProgAnts</title>
+	<title><?php echo _("Home");?> ProgAnts</title>
 
     <script type="text/javascript" src="../framework_javascript/jquery.js"></script>
     <script type="text/javascript" src="javascript/home.js"></script>
@@ -31,17 +33,17 @@ require '../php_for_all/session_control.php';
 
 			<div id="h_groupb">
 				<div class="nav_element"><h3><a href="#"> <span class="object">></span> ErrorWiki</a></h3></div>
-					<div class="nav_element"><h3><a href="../forum/forum.php"> <span class="object">></span> Forum</a></h3></div>
-						<div class="nav_element"><h3><a href="#"> <span class="object">></span> Projects</a></h3></div>
-							<div class="nav_element"><h3><a href="#"> <span class="object">></span> About</a></h3></div>
-								<div class="nav_element"><h3><a href="#"> <span class="object">></span> Contact</a></h3></div>
+					<div class="nav_element"><h3><a href="../forum/forum.php"> <span class="object">></span> <?php echo _("Forum"); ?> </a></h3></div>
+						<div class="nav_element"><h3><a href="#"> <span class="object">></span> <?php echo _("Projects"); ?> </a></h3></div>
+							<div class="nav_element"><h3><a href="#"> <span class="object">></span> <?php echo _("About"); ?> </a></h3></div>
+								<div class="nav_element"><h3><a href="#"> <span class="object">></span> <?php echo _("Contact"); ?> </a></h3></div>
 			</div>
 
 				<div id="h_groupc">
 					<div id="h_usera">
-						<div class="identification" id="login_button"><a href="../login/login_page.php">Log In</a></div>
-						<div class="identification" id="register_button"><a href="../register/register_page.php">Sign Up</a></div>
-						<div class="identification" id="disconnect_button"><a href="../php_for_all/disconnect.php">Log Out</a></div>
+						<div class="identification" id="login_button"><a href="../login/login_page.php"> <?php echo _("Log In"); ?> </a></div>
+						<div class="identification" id="register_button"><a href="../register/register_page.php"> <?php echo _("Sign Up"); ?> </a></div>
+						<div class="identification" id="disconnect_button"><a href="../php_for_all/disconnect.php"> <?php echo _("Log Out"); ?> </a></div>
 					</div>
 
 					<div id="h_userb">

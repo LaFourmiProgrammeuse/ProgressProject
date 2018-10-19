@@ -52,11 +52,29 @@ function requestSessionData(){
 
 }
 
+/*var last_scroll_pos_y = 0;
+
+function window_scrolled(){
+
+    new_scroll_pos_y = document.body.scrollTop;
+
+    if(new_scroll_pos_y > last_scroll_pos_y){
+        $("header").css("visibility", "hidden")
+    }
+    else if(new_scroll_pos_y < last_scroll_pos_y){
+        $("header").css("visibility", "visible");
+    }
+
+    last_scroll_pos_y = new_scroll_pos_y;
+}*/
+
 $(document).ready(function(){
 
     $("#h_usera").css("order", "2");
     $("#h_userb").css("order", "1");
     $("#account").css("margin-left", "20px");
+
+    window.onscroll = function() {window_scrolled();};
 
     requestSessionData();
 

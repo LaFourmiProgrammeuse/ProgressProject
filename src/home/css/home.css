@@ -29,7 +29,7 @@ body {
     display: flex;
     flex-direction: column;
     min-width: 100vh;
-    min-height: 1800px;
+    min-height: 1845px;
 }
 
 	/* HEADER */
@@ -39,7 +39,7 @@ body {
 			justify-content: space-between;
       background-color: white;
 			width: 100%;
-			
+
 		}
 
 			#h_groupa #h_main_img img {
@@ -176,7 +176,7 @@ body {
 			margin: 50px;
       background-color: white;
       border-radius: 5px;
-			height: auto;
+			height: 1680px;
 			width: 70%;
       position: absolute;
       left: 50%;

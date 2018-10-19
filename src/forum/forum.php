@@ -1,5 +1,5 @@
 <?php
-
+    require "../php_for_all/session_control.php";
 ?>
 
 <!DOCTYPE html>

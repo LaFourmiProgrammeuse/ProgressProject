@@ -60,18 +60,57 @@
                 <h3 class="h_forums_desc_3">Last message</h3>
             </div>
 
-            <div class="forum_system_desc">
+            <div class="forum_language_desc">
                 <div class="forum_desc_groupa">
-                    <div class="forum_name"></div>
+                    <div class="forum_name">Window</div>
+                    <div class="forum_small_desc">A forum to answer your Window questions</div>
                 </div>
                 <div class="forum_desc_groupb">
-                    <div class="n_messages_forum"></div>
-                    <div class="n_topics_forum"></div>
+                    <div class="n_messages_forum">85 messages </div>
+                    <div class="n_topics_forum">70 topics</div>
                 </div>
                 <div class="forum_desc_groupc">
-                    <div class="last_message_forum"></div>
+                    <div class="last_message_forum">
+                        <div class="message">Je suis un message</div>
+                        <div class="date_message">23/02/18</div>
+                    </div>
                 </div>
             </div>
+
+            <div class="forum_language_desc">
+                <div class="forum_desc_groupa">
+                    <div class="forum_name">MacOs</div>
+                    <div class="forum_small_desc">A forum to answer your MacOS questions</div>
+                </div>
+                <div class="forum_desc_groupb">
+                    <div class="n_messages_forum">85 messages </div>
+                    <div class="n_topics_forum">70 topics</div>
+                </div>
+                <div class="forum_desc_groupc">
+                    <div class="last_message_forum">
+                        <div class="message">Je suis un message</div>
+                        <div class="date_message">23/02/18</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forum_language_desc">
+                <div class="forum_desc_groupa">
+                    <div class="forum_name">Linux</div>
+                    <div class="forum_small_desc">A forum to answer your linux questions</div>
+                </div>
+                <div class="forum_desc_groupb">
+                    <div class="n_messages_forum">85 messages </div>
+                    <div class="n_topics_forum">70 topics</div>
+                </div>
+                <div class="forum_desc_groupc">
+                    <div class="last_message_forum">
+                        <div class="message">Je suis un message</div>
+                        <div class="date_message">23/02/18</div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <div class="article" id="forums_software">
@@ -102,18 +141,23 @@
                 <h3 class="h_forums_desc_3">Last message</h3>
             </div>
 
-            <div class="forum_forum_fonctioning_desc">
+            <div class="forum_language_desc">
                 <div class="forum_desc_groupa">
-                    <div class="forum_name"></div>
+                    <div class="forum_name">Forum Rules</div>
+                    <div class="forum_small_desc">A forum speak about forum rules</div>
                 </div>
                 <div class="forum_desc_groupb">
-                    <div class="n_messages_forum"></div>
-                    <div class="n_topics_forum"></div>
+                    <div class="n_messages_forum">85 messages </div>
+                    <div class="n_topics_forum">70 topics</div>
                 </div>
                 <div class="forum_desc_groupc">
-                    <div class="last_message_forum"></div>
+                    <div class="last_message_forum">
+                        <div class="message">Je suis un message</div>
+                        <div class="date_message">23/02/18</div>
+                    </div>
                 </div>
             </div>
+
         </div>
     </article>
 </div>

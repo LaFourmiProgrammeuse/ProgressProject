@@ -1,3 +1,3 @@
 Options -Indexes
-Errordocument 404 /error_redirection/error_404/error_404.php
-Errordocument 403 /error_redirection/error_403/error_403.php
+Errordocument 404 /src/error_redirection/error_404/error_404.php
+Errordocument 403 /src/error_redirection/error_403/error_403.php

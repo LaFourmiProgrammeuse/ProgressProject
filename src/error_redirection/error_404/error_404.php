@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="/error_redirection/error_404/css/error_404.css" />
+        <link rel="stylesheet" type="text/css" href="/src/error_redirection/error_404/css/error_404.css" />
 		<meta charset="utf-8" />
 		<title>Error 404</title>
     </head>

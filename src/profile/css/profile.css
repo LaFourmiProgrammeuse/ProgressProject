@@ -28,13 +28,14 @@ body {
 	background-color: #1d1d1d;
 	margin: 0;
 	padding: 0;
+    position: relative;
 }
 
 #body_content{
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-  height: auto;
+    position: relative;
 }
 
   /* HEADER */
@@ -81,12 +82,13 @@ body {
 			display: flex;
 			width: 70%;
 			min-width: 450px;
-      height: 500px;
+            height: 500px;
 			margin-top: 50px;
             margin-bottom: 50px;
 			margin-left: auto;
 			margin-right: auto;
-      flex: 1;
+            flex: 1;
+            position: relative;
 		}
 
     	#user_informations1 {

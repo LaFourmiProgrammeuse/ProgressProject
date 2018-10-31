@@ -74,7 +74,7 @@ $(document).ready(function(){
     $("#h_userb").css("order", "1");
     $("#account").css("margin-left", "20px");
 
-    window.onscroll = function() {window_scrolled();};
+    //window.onscroll = function() {window_scrolled();};
 
     requestSessionData();
 

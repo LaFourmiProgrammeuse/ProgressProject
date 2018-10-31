@@ -107,11 +107,11 @@ include "../language/language.php";
 			</div>
 		</aside>
 
-    </div>
-
     <?php
         require "../footer.php";
     ?>
+
+    </div>
 
 	</body>
 

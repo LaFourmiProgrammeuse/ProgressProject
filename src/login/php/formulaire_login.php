@@ -53,15 +53,15 @@ echo "1";
 
 if(isset($_COOKIE['username']) AND isset($_COOKIE['password'])){
 
-    setcookie('username',  $username, time() + 365*24*3600, "/www/");
-    setcookie('password',  $password, time() + 365*24*3600, "/www/");
+    setcookie('username',  $username, time() + 365*24*3600, "/");
+    setcookie('password',  $password, time() + 365*24*3600, "/");
 
     echo 'Tout les cookies existent';
 }
 else{
 
-    setcookie('username',  $username, time() + 365*24*3600, "/www/");
-    setcookie('password',  $password, time() + 365*24*3600, "/www/");
+    setcookie('username',  $username, time() + 365*24*3600, "/");
+    setcookie('password',  $password, time() + 365*24*3600, "/");
 
     echo 'Un ou plusieurs cookie(s) n\'existent pas !';
 }

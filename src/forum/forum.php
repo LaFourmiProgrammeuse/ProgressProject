@@ -23,14 +23,12 @@
 			</div>
 
 			<div id="h_groupb">
-				<div id="hgb_element">
-					<form method="post" action="#" id="search_bar">
+					<form method="post" action="#" id="form_search">
 						<p>
 							<input type="search" name="search_bar" id="search_bar" placeholder="Type something here..." size="30" maxlength="10">
-							<input type="submit" value="Send" name="send" id="send">
+							<input type="submit" value="Search" name="search_button" id="search_button">
 						</p>
 					</form>
-				</div>
 			</div>
 
 				<div id="h_groupc">

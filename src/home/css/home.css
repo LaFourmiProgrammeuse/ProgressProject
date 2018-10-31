@@ -28,8 +28,7 @@ body {
 #body_content{
     display: flex;
     flex-direction: column;
-    min-width: 100vh;
-    min-height: 1845px;
+
 }
 
 	/* HEADER */
@@ -37,10 +36,15 @@ body {
 		header {
 			display: flex;
 			justify-content: space-between;
-      background-color: white;
+            background-color: white;
 			width: 100%;
 
 		}
+
+            #h_groupa{
+                width: 18%;
+                width: 265px;
+            }
 
 			#h_groupa #h_main_img img {
 				margin-left : 45px;
@@ -53,15 +57,17 @@ body {
 				display: flex;
 				justify-content: space-between;
         position: relative;
+                width: calc(89% - 265px);
+                margin-left: 5px;
 			}
 
       .nav_element {
 				font-family: 'source_code_proregular', Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
         font-weight: normal;
-				font-size: 14px;
+				font-size: 0.9vw;
 				line-height: 9px;
-				padding-left: 35px;
-				padding-right: 35px;
+				padding-left: 5px;
+				padding-right: 5px;
 				margin-top: auto;
 				margin-bottom: auto;
       	margin-right: auto;
@@ -84,12 +90,16 @@ body {
 				#h_groupc {
 					display: inline-flex;
 					width: auto;
-					margin-right: 45px;
+					margin-right: 35px;
+                    width: 11%;
+                    text-align: right;
+                    min-width: 180px;
 				}
 
 				#h_usera {
 					display: inline-flex;
 					margin-top: 22px;
+
 				}
 
 				#h_userb {
@@ -101,6 +111,7 @@ body {
 					text-align: center;
 					display: none;
                     margin-right: 20px;
+
 				}
 
           #login_button{
@@ -172,18 +183,21 @@ body {
 
 	/* SECTION */
 
+        #section_centered{
+
+        }
+
 		section {
-			margin: 50px;
-      background-color: white;
-      border-radius: 5px;
-			height: 1680px;
+			margin-top: 50px;
+            margin-bottom: 105px;
+            background-color: white;
+            border-radius: 5px;
+			height: auto;
 			width: 70%;
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%, 0);
+            position: relative;
 			min-width: 610px;
-      top: 56px;
-            margin-left: 0px;
+            margin-left: auto;
+            margin-right: auto;
 		}
 
 	/* ARTICLE */

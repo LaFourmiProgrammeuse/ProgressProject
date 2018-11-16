@@ -90,7 +90,7 @@ body {
 				#h_groupc {
 					display: inline-flex;
 					width: auto;
-					margin-right: 35px;
+					margin-right: 45px;
                     width: 11%;
                     text-align: right;
                     min-width: 180px;
@@ -184,7 +184,7 @@ body {
 	/* SECTION */
 
         #section_centered{
-
+            
         }
 
 		section {

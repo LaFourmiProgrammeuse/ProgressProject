@@ -480,3 +480,78 @@
 [30/09/2018-13:31] Error : Echec de la requete mysql d'inscription Identifiant : Antoinen, Mdp : zzzz@@22, Mail : z@., Registered_Date : 2018-09-30(formulaire_register.php)
 [30/09/2018-13:51] Error : Echec de la requete mysql d'inscription Identifiant : Alexandres, Mdp : zzzz@@22, Mail : z@., Registered_Date : 2018-09-30(formulaire_register.php)
 [06/10/2018-13:21] Error : Echec de la requete mysql d'inscription Identifiant : esdqsdssqs, Mdp : zzzz@@22, Mail : z@., Registered_Date : 2018-10-06(formulaire_register.php)
+[06/10/2018-13:29] Antoine has been successfully connected !
+[06/10/2018-13:30]  has been successfully connected !
+[06/10/2018-14:02] zezdqsd enregistré avec succès !
+[06/10/2018-14:02] Error : Echec de la requete mysql d'inscription Identifiant : , Mdp : , Mail : , Registered_Date : 2018-10-06(formulaire_register.php)
+[06/10/2018-15:16] Antoine has been successfully connected !
+[06/10/2018-15:16] Kreyse has been successfully connected !
+[08/10/2018-13:47] Antoine has been successfully connected !
+[08/10/2018-13:56] Antoine has been successfully connected !
+[09/10/2018-15:09] Antoine has been successfully connected !
+[09/10/2018-16:30] Antoine has been successfully connected !
+[10/10/2018-14:22] Antoine has been successfully connected !
+[13/10/2018-06:57] Antoine has been successfully connected !
+[13/10/2018-06:58]  has been successfully connected !
+[13/10/2018-12:41] Antoine has been successfully connected !
+[13/10/2018-16:03] Antoine has been successfully connected !
+[13/10/2018-16:03] Antoine has been successfully connected !
+[13/10/2018-16:04]  has been successfully connected !
+[14/10/2018-19:56] Antoine has been successfully connected !
+[14/10/2018-19:56]  has been successfully connected !
+[15/10/2018-20:45] Antoine has been successfully connected !
+[16/10/2018-21:06] Kreyse has been successfully connected !
+[16/10/2018-21:22] Kreyse has been successfully connected !
+[16/10/2018-22:00] Kreyse has been successfully connected !
+[17/10/2018-09:22] Kreyse has been successfully connected !
+[17/10/2018-09:36] Antoine has been successfully connected !
+[17/10/2018-09:38] Antoine has been successfully connected !
+[17/10/2018-09:54] Kreyse has been successfully connected !
+[17/10/2018-09:55] Kreyse has been successfully connected !
+[17/10/2018-10:12] Kreyse has been successfully connected !
+[17/10/2018-12:07] Antoine has been successfully connected !
+[17/10/2018-12:13] Antoine has been successfully connected !
+[17/10/2018-12:18] Antoine has been successfully connected !
+[17/10/2018-12:26] Kreyse has been successfully connected !
+[17/10/2018-12:29] Antoine has been successfully connected !
+[17/10/2018-13:58] Antoine has been successfully connected !
+[17/10/2018-13:58]  has been successfully connected !
+[17/10/2018-15:06] Kreyse has been successfully connected !
+[18/10/2018-08:38] Antoine has been successfully connected !
+[18/10/2018-08:47]  has been successfully connected !
+[18/10/2018-10:44] Kreyse has been successfully connected !
+[18/10/2018-11:01] Antoine has been successfully connected !
+[18/10/2018-11:01]  has been successfully connected !
+[18/10/2018-18:03] Kreyse has been successfully connected !
+[18/10/2018-18:04] Kreyse has been successfully connected !
+[19/10/2018-11:08] Antoine has been successfully connected !
+[19/10/2018-11:08]  has been successfully connected !
+[19/10/2018-15:55] Antoine has been successfully connected !
+[19/10/2018-15:55]  has been successfully connected !
+[19/10/2018-16:22] Antoine has been successfully connected !
+[19/10/2018-18:46] Antoine has been successfully connected !
+[19/10/2018-19:30] Kreyse has been successfully connected !
+[19/10/2018-19:47] Antoine has been successfully connected !
+[19/10/2018-21:09] Antoine has been successfully connected !
+[20/10/2018-08:02] Antoine has been successfully connected !
+[20/10/2018-08:03]  has been successfully connected !
+[20/10/2018-08:10] Antoine has been successfully connected !
+[20/10/2018-08:30] Antoine has been successfully connected !
+[20/10/2018-08:30]  has been successfully connected !
+[20/10/2018-14:11] Antoine has been successfully connected !
+[20/10/2018-14:14]  has been successfully connected !
+[20/10/2018-16:53] Antoine has been successfully connected !
+[20/10/2018-16:53]  has been successfully connected !
+[20/10/2018-17:13] Antoine has been successfully connected !
+[20/10/2018-17:13]  has been successfully connected !
+[20/10/2018-17:33] Antoine has been successfully connected !
+[20/10/2018-17:34]  has been successfully connected !
+[20/10/2018-17:39] Antoine has been successfully connected !
+[20/10/2018-18:06] Antoine has been successfully connected !
+[20/10/2018-18:06]  has been successfully connected !
+[20/10/2018-18:07] Antoine has been successfully connected !
+[22/10/2018-18:51] Antoine has been successfully connected !
+[23/10/2018-07:11] Antoine has been successfully connected !
+[01/11/2018-14:01] Kreyse has been successfully connected !
+[03/11/2018-14:03] Antoine has been successfully connected !
+[03/11/2018-14:03]  has been successfully connected !

@@ -134,16 +134,18 @@ article{
     width: 50%;
     padding-left: 5px;
     padding-top: 5px;
+    padding-bottom: 8px;
 }
 
 .forum_desc_groupb{
     width: 20%;
     min-width: 180px;
     padding-left: 7px;
-    height: 35px;
     position: relative;
     top: 50%;
-    transform: translate(0, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .forum_desc_groupc{
@@ -163,9 +165,22 @@ article{
 
 .forum_small_desc{
     padding-left: 5px;
+    word-wrap: break-word;
 }
 
 .forum_index h3{
     margin-top: 5px;
     margin-bottom: 4px;
+}
+
+.n_messages_forum{
+    height: 20px;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.n_topics_forum{
+    height: 20px;
+    position: relative;
+    padding-top: 3px;
 }

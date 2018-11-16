@@ -1,0 +1,142 @@
+#central_onglet_body{
+    margin: 20px;
+}
+
+h3{
+    font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+
+}
+
+article{
+  display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 28px;
+  margin-bottom: 15px;
+  height: auto;
+    width: 90%;
+}
+
+.forum_index_path{
+    margin-left: 12px;
+}
+
+.article{
+    margin-bottom: 30px;
+}
+
+.article h2 {
+    background-color: #1d1d1d;
+    color: white;
+    font-family: 'source_code_proregular', Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+    font-size: 20px;
+    text-align: left;
+    font-weight: normal;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: calc(100% - 15px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    border-bottom-right-radius: 100px;
+}
+
+.article p {
+    font-size: 16px;
+    padding-left: 100px;
+    padding-right: 100px;
+    line-height: 25px;
+    text-align: center;
+    font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 25px;
+    margin-left: 25px;
+    color: #1d1d1d;
+}
+
+.article h3{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    color: white;
+    font-size: 16px;
+}
+
+.h_forums_desc{
+    background-color: #1d1d1d;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.h_forums_desc_1{
+    width: 50%;
+}
+
+.h_forums_desc_2{
+    width: 20%;
+    min-width: 180px;
+}
+
+.h_forums_desc_3{
+    width: 30%;
+}
+
+.forum_desc_groupa{
+    width: 50%;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 8px;
+}
+
+.forum_desc_groupb{
+    width: 20%;
+    min-width: 180px;
+    padding-left: 7px;
+    position: relative;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.forum_desc_groupc{
+    width: 30%;
+    padding-left: 5px;
+}
+
+.forum_desc_groupc .message{
+    height: 33px;
+}
+
+.forum_desc_groupc .date_message{
+    text-align: right;
+    padding-right: 3px;
+    font-size: 14px;
+}
+
+.forum_small_desc{
+    padding-left: 5px;
+    word-wrap: break-word;
+}
+
+.forum_index h3{
+    margin-top: 5px;
+    margin-bottom: 4px;
+}
+
+.n_messages_forum{
+    height: 20px;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.n_topics_forum{
+    height: 20px;
+    position: relative;
+    padding-top: 3px;
+}

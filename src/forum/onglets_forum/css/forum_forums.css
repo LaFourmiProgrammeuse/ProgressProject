@@ -103,28 +103,24 @@ article{
 }
 
 .forum_language_desc{
-    height: 50px;
     border: 2px solid #1d1d1d;
     border-top: 0px;
     display: flex;
 }
 
 .forum_system_desc{
-    height: 50px;
     border: 2px solid #1d1d1d;
     border-top: 0px;
     display: flex;
 }
 
 .forum_software_desc{
-    height: 50px;
     border: 2px solid #1d1d1d;
     border-top: 0px;
     display: flex;
 }
 
 .forum_forum_fonctioning_desc{
-    height: 50px;
     border: 2px solid #1d1d1d;
     border-top: 0px;
     display: flex;

@@ -64,7 +64,7 @@ article{
     font-size: 16px;
 }
 
-.h_forums_desc{
+.h_topics_desc{
     background-color: #1d1d1d;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -73,27 +73,33 @@ article{
     flex-direction: row;
 }
 
-.h_forums_desc_1{
+.h_topics_desc_1{
     width: 50%;
 }
 
-.h_forums_desc_2{
+.h_topics_desc_2{
     width: 20%;
     min-width: 180px;
 }
 
-.h_forums_desc_3{
+.h_topics_desc_3{
     width: 30%;
 }
 
-.forum_desc_groupa{
+.topic_desc{
+    border: 2px solid black;
+    border-top: 0px;
+    display: flex;
+}
+
+.topic_desc_groupa{
     width: 50%;
     padding-left: 5px;
     padding-top: 5px;
     padding-bottom: 8px;
 }
 
-.forum_desc_groupb{
+.topic_desc_groupb{
     width: 20%;
     min-width: 180px;
     padding-left: 7px;
@@ -104,22 +110,22 @@ article{
     justify-content: center;
 }
 
-.forum_desc_groupc{
+.topic_desc_groupc{
     width: 30%;
     padding-left: 5px;
 }
 
-.forum_desc_groupc .message{
+.topic_desc_groupc .message{
     height: 33px;
 }
 
-.forum_desc_groupc .date_message{
+.topic_desc_groupc .date_message{
     text-align: right;
     padding-right: 3px;
     font-size: 14px;
 }
 
-.forum_small_desc{
+.topic_author{
     padding-left: 5px;
     word-wrap: break-word;
 }
@@ -129,14 +135,16 @@ article{
     margin-bottom: 4px;
 }
 
-.n_messages_forum{
-    height: 20px;
+.n_message_topic{
     position: relative;
-    padding-bottom: 3px;
 }
 
-.n_topics_forum{
+.n_view_topic{
     height: 20px;
     position: relative;
     padding-top: 3px;
+}
+
+.no_pinned_topic{
+    text-align: center;
 }

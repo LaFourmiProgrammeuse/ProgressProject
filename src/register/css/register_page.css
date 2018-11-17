@@ -76,7 +76,7 @@ body {
 			background-color: #f9f9f9;
 			padding-left: 5px;
             position: relative;
-            left: -5px;
+            left: 4px;
     }
 
     #validation_nickname {
@@ -98,7 +98,7 @@ body {
 			background-color: #f9f9f9;
 			padding-left: 5px;
             position: relative;
-            left: -5px;
+            left: 4px;
             top: -16px;
     }
 
@@ -121,7 +121,7 @@ body {
 			background-color: #f9f9f9;
 			padding-left: 5px;
             position: relative;
-            left: -5px;
+            left: 4px;
             top: -32px;
     }
 
@@ -144,7 +144,7 @@ body {
 			background-color: #f9f9f9;
 			padding-left: 5px;
             position: relative;
-            left: -5px;
+            left: 4px;
             top: -47px;
     }
 
@@ -161,9 +161,8 @@ body {
 
 		#send {
 			position: relative;
-			bottom: -13px;
-			margin-left: 383px;
-            top: -37px;
+			left: 370px;
+            top: -38px;
 		}
 
 		.send {

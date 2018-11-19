@@ -147,4 +147,38 @@ article{
 
 .no_pinned_topic{
     text-align: center;
+    height: 50px;
+    border: 2px solid black;
+}
+
+.no_pinned_topic p{
+
+}
+
+.no_topic{
+    text-align: center;
+    height: 50px;
+    border: 2px solid black;
+}
+
+.no_topic p{
+
+}
+
+.topic_last_post{
+    font-size: 18px;
+}
+
+.topic_last_post p{
+    margin: 0px;
+    line-height: 18px;
+    padding: 0px;
+    text-align: left;
+}
+
+.topic_last_post .label_post_author{
+    height: 32px;
+}
+.topic_last_post .date_post{
+    text-align: right;
 }

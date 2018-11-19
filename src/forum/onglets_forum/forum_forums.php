@@ -94,7 +94,7 @@
             <div class="h_forums_desc">
                 <h3 class="h_forums_desc_1">Language</h3>
                 <h3 class="h_forums_desc_2">Topics/Posts</h3>
-                <h3 class="h_forums_desc_3">Last message</h3>
+                <h3 class="h_forums_desc_3">Last activity</h3>
             </div>
 
                 <?php
@@ -107,7 +107,7 @@
                     </div>
                     <div class="forum_desc_groupb">
                         <div class="n_messages_forum"><?php echo ($_forum_information['number_posts'] . " posts"); ?></div>
-                        <div class="n_topics_forum"><?php echo ($_forum_information['number_posts'] . " topics"); ?></div>
+                        <div class="n_topics_forum"><?php echo ($_forum_information['number_topics'] . " topics"); ?></div>
                     </div>
                     <div class="forum_desc_groupc">
                         <div class="last_message_forum">
@@ -134,7 +134,7 @@
             <div class="h_forums_desc">
                 <h3 class="h_forums_desc_1">System</h3>
                 <h3 class="h_forums_desc_2">Topics/Posts</h3>
-                <h3 class="h_forums_desc_3">Last message</h3>
+                <h3 class="h_forums_desc_3">Last activity</h3>
             </div>
 
                 <?php
@@ -147,7 +147,7 @@
                     </div>
                     <div class="forum_desc_groupb">
                         <div class="n_messages_forum"><?php echo ($_forum_information['number_posts'] . " posts"); ?></div>
-                        <div class="n_topics_forum"><?php echo ($_forum_information['number_posts'] . " topics"); ?></div>
+                        <div class="n_topics_forum"><?php echo ($_forum_information['number_topics'] . " topics"); ?></div>
                     </div>
                     <div class="forum_desc_groupc">
                         <div class="last_message_forum">
@@ -156,10 +156,9 @@
                                 if($_forum_information['last_post_content'] == "" && $_forum_information['date_of_publication'] == ""){
                             ?>
                                 <div class="message">No recently post</div>
-                                <div class="date_message"></div>
                             <?php }else{ ?>
                                 <div class="message"><?php echo $_forum_information['last_post_content']; ?></div>
-                                <div class="date_message"><?php echo $_forum_information['date_of_publication']; ?></div>
+                                <div class="date_post"><?php echo $_forum_information['date_of_publication']; ?></div>
                             <?php } ?>
                         </div>
                     </div>
@@ -187,7 +186,7 @@
                 </div>
                 <div class="forum_desc_groupb">
                     <div class="n_messages_forum"><?php echo ($_forum_information['number_posts'] . " posts"); ?></div>
-                    <div class="n_topics_forum"><?php echo ($_forum_information['number_posts'] . " topics"); ?></div>
+                    <div class="n_topics_forum"><?php echo ($_forum_information['number_topics'] . " topics"); ?></div>
                 </div>
                 <div class="forum_desc_groupc">
                     <div class="last_message_forum">
@@ -226,7 +225,7 @@
                </div>
                <div class="forum_desc_groupb">
                    <div class="n_messages_forum"><?php echo ($_forum_information['number_posts'] . " posts"); ?></div>
-                   <div class="n_topics_forum"><?php echo ($_forum_information['number_posts'] . " topics"); ?></div>
+                   <div class="n_topics_forum"><?php echo ($_forum_information['number_topics'] . " topics"); ?></div>
                </div>
                <div class="forum_desc_groupc">
                    <div class="last_message_forum">

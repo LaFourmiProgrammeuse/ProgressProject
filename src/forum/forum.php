@@ -31,6 +31,16 @@
     </head>
 
     <body>
+
+        <div id="modal_warning_no_content">
+            <div class="modal_background">
+                <div class="modal_content">
+                    <img src="/images/warning.png" class="warning_img"/>
+                    <p>This part of the website has not content yet, folow the progress in our DevBlog</p>
+                </div>
+            </div>
+        </div>
+
         <div id="body_content"> <!-- Pour que le footer soit placer en bas de la page -->
         <header>
             <div id="h_groupa">
@@ -63,10 +73,10 @@
         <section>
             <div id="top_nav">
                 <div class="nav_element"><a href="?forum_part=home"><img src="/images/home.png" onmouseover="this.src='/images/home_hover.png'" onmouseout="this.src='/images/home.png'" /></a></div>
-                    <div class="nav_element"><h3><a href="?forum_part=latest">Latest</a></h3></div>
+                    <div class="nav_element nav_element_latest"><h3><a href="?forum_part=latest">Latest</a></h3></div>
                         <div class="nav_element"><h3><a href="?forum_part=forums">Forums</a></h3></div>
-                                <div class="nav_element"><h3><a href="?forum_part=recent_activity">Last activity</a></h3></div>
-                                    <div class="nav_element"><h3><a href="?forum_part=stats">Stats</a></h3></div>
+                                <div class="nav_element nav_element_last_activity"><h3><a href="?forum_part=recent_activity">Last activity</a></h3></div>
+                                    <div class="nav_element nav_element_stats"><h3><a href="?forum_part=stats">Stats</a></h3></div>
             </div>
 
             <div id="forum_content">

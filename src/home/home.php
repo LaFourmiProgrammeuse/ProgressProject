@@ -25,6 +25,15 @@ include "../language/language.php";
 </head>
 
 	<body>
+		<div id="modal_warning_no_content">
+			<div class="modal_background">
+				<div class="modal_content">
+					<img src="/images/warning.png" class="warning_img"/>
+					<p>This part of the website has not content yet, folow the progress in our DevBlog</p>
+				</div>
+			</div>
+		</div>
+
     <div id="body_content"> <!-- Pour que le footer soit placer en bas de la page -->
 		<header>
 			<div id="h_groupa">
@@ -32,11 +41,11 @@ include "../language/language.php";
 			</div>
 
 			<div id="h_groupb">
-				<div class="nav_element"><h3><a href="#"> <span class="object">></span> ErrorWiki</a></h3></div>
+				<div class="nav_element nav_element_error_wiki"><h3><a href="#"> <span class="object">></span> ErrorWiki</a></h3></div>
 					<div class="nav_element"><h3><a href="../forum/forum.php"> <span class="object">></span> <?php echo _("Forum"); ?> </a></h3></div>
-						<div class="nav_element"><h3><a href="#"> <span class="object">></span> <?php echo _("Projects"); ?> </a></h3></div>
-							<div class="nav_element"><h3><a href="#"> <span class="object">></span> <?php echo _("About"); ?> </a></h3></div>
-								<div class="nav_element"><h3><a href="#"> <span class="object">></span> <?php echo _("Contact"); ?> </a></h3></div>
+						<div class="nav_element nav_element_projects"><h3><a href="#"> <span class="object">></span> <?php echo _("Projects"); ?> </a></h3></div>
+							<div class="nav_element nav_element_about"><h3><a href="#"> <span class="object">></span> <?php echo _("About"); ?> </a></h3></div>
+								<div class="nav_element nav_element_contact"><h3><a href="#"> <span class="object">></span> <?php echo _("Contact"); ?> </a></h3></div>
 			</div>
 
 				<div id="h_groupc">
@@ -51,7 +60,7 @@ include "../language/language.php";
 							<div class="username"><a href="../profile/profile.php"></a></div>
 					</div>
 				</div>
-	</header>
+		</header>
 
 		<section>
 

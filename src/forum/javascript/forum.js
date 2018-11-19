@@ -42,4 +42,24 @@ $(document).ready(function(){
 
 		clickForumDesc(this);
 	});
+
+	$("#modal_warning_no_content .modal_content").click(function(e){
+        e.stopPropagation();
+    });
+
+    $("#modal_warning_no_content .modal_background").click(function(e){
+        $("#modal_warning_no_content").css("display", "none");
+    });
+
+    $(".nav_element_latest").click(function(){
+    	$("#modal_warning_no_content").css("display", "block");
+    });
+
+    $(".nav_element_last_activity").click(function(){
+    	$("#modal_warning_no_content").css("display", "block");
+    });
+
+    $(".nav_element_stats").click(function(){
+    	$("#modal_warning_no_content").css("display", "block");
+    });
 });

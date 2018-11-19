@@ -78,4 +78,29 @@ $(document).ready(function(){
 
     requestSessionData();
 
+    //Gestion des clicks sur des boutons menant à des parties du site pas encore commencé
+    $(".nav_element_error_wiki").click(function(){
+        $("#modal_warning_no_content").css("display", "block");
+    });
+
+    $(".nav_element_projects").click(function(){
+        $("#modal_warning_no_content").css("display", "block");
+    });
+
+    $(".nav_element_about").click(function(){
+        $("#modal_warning_no_content").css("display", "block");
+    });
+
+    $(".nav_element_contact").click(function(){
+       $("#modal_warning_no_content").css("display", "block"); 
+    });
+
+    $("#modal_warning_no_content .modal_content").click(function(e){
+        e.stopPropagation();
+    });
+
+    $("#modal_warning_no_content .modal_background").click(function(e){
+        $("#modal_warning_no_content").css("display", "none");
+    });
+
 });

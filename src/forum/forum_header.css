@@ -1,0 +1,145 @@
+header {
+			display: flex;
+			justify-content: space-between;
+      		background-color: white;
+			width: 100%;
+			min-width: 750px;
+		}
+
+			#h_groupa #h_main_img img {
+				margin-left : 45px;
+				margin-top: 7px;
+				width: 195px;
+				height: 45px;
+			}
+
+			#h_groupb {
+				display: flex;
+                position: relative;
+                width: 30%;
+			}
+
+      #search_bar {
+        display: flex;
+    		width: 80%;
+    		height: 30px;
+				border: 1px solid #2a363b;
+				background-color: #f9f9f9;
+        padding-left: 5px;
+        position: relative;
+        top: 13px;
+      }
+
+      #search_button{
+        border-radius: 2px;
+        border: 1px solid #1d1d1d;
+        background-color: #1d1d1d;
+        color: white;
+        height: 26px;
+        width: 18%;
+        min-width: 58px;
+        margin-left: 10px;
+        position: relative;
+        right: -80%;
+        top: -15px;
+      }
+
+      #form_search {
+        width: 100%;
+        display: flex;
+
+      }
+
+        #form_search p{
+            width: 100%;
+        }
+
+
+				#h_groupc {
+					display: inline-flex;
+					width: auto;
+					margin-right: 45px;
+				}
+
+				#h_usera {
+					display: inline-flex;
+					margin-top: 22px;
+				}
+
+				#h_userb {
+					display: flex;
+					width: auto;
+					flex-direction: column;
+					margin-top: 0px;
+					align-items: center;
+					text-align: center;
+					display: none;
+          margin-right: 20px;
+				}
+
+          #login_button{
+
+          }
+
+          #register_button{
+
+          }
+
+          #disconnect_button{
+            display: none;
+          }
+
+						.identification {
+							font-family: Arial, Helvetica, "Liberation Sans", "FreeSans", sans-serif;
+							font-size: 14px;
+							text-align: center;
+							border: 2px solid;
+							border-color: #2a363b;
+							border-radius: 5px;
+							height: 20px;
+							width: 60px;
+              margin-top: -10px;
+							padding-top: 5px;
+							padding-bottom: 2px;
+							padding-left: 7px;
+							padding-right: 7px;
+						}
+
+						.identification:nth-child(2) {
+							margin-left: 20px;
+						}
+
+						.identification a{
+							color: #2a363b;
+						}
+
+						.identification:hover {
+              transition: 0.2s;
+							background-color: #ff8d33;
+							border-color: #ff8d33;
+						}
+
+						.identification:hover a {
+              transition: 0.2s;
+							color: white;
+						}
+							.user_image img {
+								height: 40px;
+								width: 40px;
+							}
+
+							.username {
+								font-family: Arial, Helvetica, "Liberation Sans", "FreeSans", sans-serif;
+								font-size: 13px;
+                position: relative;
+                top: -9px;
+							}
+
+							.username a {
+								color: #2a363b;
+							}
+
+							.username a:hover {
+                transition: 0.2s;
+								color: #ff8d33;
+							}

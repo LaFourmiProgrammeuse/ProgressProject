@@ -20,6 +20,7 @@
 
         <link rel="stylesheet" type="text/css" href="css/forum.css" />
         <link rel="stylesheet" type="text/css" href="../footer.css" />
+        <link rel="stylesheet" type="text/css" href="/src/forum/forum_header.css" />
 
         <meta charset="utf-8" />
         <title>Forum ProgAnts</title>
@@ -42,41 +43,16 @@
         </div>
 
         <div id="body_content"> <!-- Pour que le footer soit placer en bas de la page -->
-        <header>
-            <div id="h_groupa">
-                <div id="h_main_img"><a href="/src/home/home.php"><img src="/images/programming_ants.png" title="ProgrammingAnts Logo"/></a></div>
-            </div>
-
-            <div id="h_groupb">
-                    <form method="post" action="#" id="form_search">
-                        <p>
-                            <input type="search" name="search_bar" id="search_bar" placeholder="Type something here..." size="30" maxlength="10">
-                            <input type="submit" value="Search" name="search_button" id="search_button">
-                        </p>
-                    </form>
-            </div>
-
-                <div id="h_groupc">
-                    <div id="h_usera">
-                        <div class="identification" id="login_button"><a href="../login/login_page.php">Log In</a></div>
-                        <div class="identification" id="register_button"><a href="../register/register_page.php">Sign Up</a></div>
-                        <!-- <div class="identification" id="disconnect_button"><a href="../php_for_all/disconnect.php">Log Out</a></div> -->
-                    </div>
-
-                    <!-- <div id="h_userb">
-                            <div class="user_image"><img src="/images/no_user_image.png" /></div>
-                            <div class="username"><a href="../profile/profile.php"></a></div>
-                    </div> -->
-                </div>
-    </header>
+         
+         <?php require "forum_header.php"; ?>
 
         <section>
             <div id="top_nav">
                 <div class="nav_element"><a href="?forum_part=home"><img src="/images/home.png" onmouseover="this.src='/images/home_hover.png'" onmouseout="this.src='/images/home.png'" /></a></div>
-                    <div class="nav_element nav_element_latest"><h3><a href="?forum_part=latest">Latest</a></h3></div>
+                    <div class="nav_element nav_element_latest"><h3><a href="#">Latest</a></h3></div>
                         <div class="nav_element"><h3><a href="?forum_part=forums">Forums</a></h3></div>
-                                <div class="nav_element nav_element_last_activity"><h3><a href="?forum_part=recent_activity">Last activity</a></h3></div>
-                                    <div class="nav_element nav_element_stats"><h3><a href="?forum_part=stats">Stats</a></h3></div>
+                                <div class="nav_element nav_element_last_activity"><h3><a href="#">Last activity</a></h3></div>
+                                    <div class="nav_element nav_element_stats"><h3><a href="#">Stats</a></h3></div>
             </div>
 
             <div id="forum_content">
@@ -99,13 +75,20 @@
                         else if($_GET['forum_part'] == "home"){
                             require "onglets_forum/forum_home.php";
                         }
-                        else if($_GET['forum_part'] == "forum"){ //echo $_GET['forum'];
+                        else if($_GET['forum_part'] == "forum"){
 
-                            if(isset($_GET["forum_id"])){
+                            if(isset($_GET["forum_id"]) && isset($_GET["topic_pinned_page"]) && isset($_GET["topic_no_pinned_page"])){
 
-                                $forum_id = $_GET["forum_id"];
                                 require "onglets_forum/forum_topics.php";
                                 
+                            }
+                        }
+                        else if($_GET['forum_part'] == "topic"){
+
+                            if(isset($_GET['topic_id'])){
+
+                                $topic_id = $_GET["topic_id"];
+                                require "onglets_forum/forum_topic.php";
                             }
                         }
                     }

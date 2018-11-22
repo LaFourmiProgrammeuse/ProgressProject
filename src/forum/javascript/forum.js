@@ -22,7 +22,7 @@ function clickForumDesc(forum){
 
 function answerForumIdRequest(forum_id){
 
-	document.location.href = ("/src/forum/forum.php?forum_part=forum&forum_id="+forum_id);
+	document.location.href = ("/src/forum/forum.php?forum_part=forum&forum_id="+forum_id+"&topic_no_pinned_page=1&topic_pinned_page=1");
 }
 
 $(document).ready(function(){
@@ -43,6 +43,8 @@ $(document).ready(function(){
 		clickForumDesc(this);
 	});
 
+		/* EVENT POP UP */
+		
 	$("#modal_warning_no_content .modal_content").click(function(e){
         e.stopPropagation();
     });

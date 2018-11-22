@@ -22,7 +22,7 @@ article{
 }
 
 .article{
-    margin-bottom: 30px;
+    margin-bottom: 21px;
 }
 
 .article h2 {
@@ -181,4 +181,20 @@ article{
 }
 .topic_last_post .date_post{
     text-align: right;
+}
+
+.topic_page{
+    width: 135px;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 12px;
+    justify-content: center;
+}
+
+.topic_page img{
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    margin-left: 6px
 }

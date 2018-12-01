@@ -103,4 +103,20 @@ $(document).ready(function(){
         $("#modal_warning_no_content").css("display", "none");
     });
 
+    $("#h_groupb .h_small_resolution img").mouseenter(function(){
+        $("#h_vertical_menu").css("display", "flex");
+    });
+
+    $("section").mouseenter(function(){
+        $("#h_vertical_menu").css("display", "none");
+    });
+
+    $("#h_groupa").mouseenter(function(){
+        $("#h_vertical_menu").css("display", "none");
+    });
+
+    $("#h_groupc").mouseenter(function(){
+        $("#h_vertical_menu").css("display", "none");
+    });
+
 });

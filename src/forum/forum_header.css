@@ -7,7 +7,7 @@ header {
 		}
 
 			#h_groupa #h_main_img img {
-				margin-left : 45px;
+				margin-left : 20px;
 				margin-top: 7px;
 				width: 195px;
 				height: 45px;
@@ -58,7 +58,7 @@ header {
 				#h_groupc {
 					display: inline-flex;
 					width: auto;
-					margin-right: 45px;
+					margin-right: 20px;
 				}
 
 				#h_usera {

@@ -16,7 +16,7 @@
         </div>
 
          <div class="article" id="article_most_active_forums">
-            <h2>Most actives forums</h2>
+            <h2>_Most actives forums</h2>
             <p>You can see all forums <b><a href="../forum?forum_part=forums">here</a></b></p>
 
 
@@ -46,7 +46,7 @@
          </div>
 
         <div class="article" id="article_polls">
-            <h2>Pool of the week</h2>
+            <h2>_Pool of the week</h2>
             <p>We regularly put poll here, you can vote and share your opinion ! If you want to be alerted for all poll, subscribe you to the newsletters :
             <p id="link_forum_rules"><a href="#" title="Forum" >Click here to subscribe the poll newsletters</a></p>
 

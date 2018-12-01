@@ -30,7 +30,7 @@ body {
 	/* Header */
 
 			#h_element {
-				margin-top: 150px;
+				margin-top: 90px;
 			}
 
 			#infa {
@@ -76,7 +76,7 @@ body {
 			background-color: #f9f9f9;
 			padding-left: 5px;
             position: relative;
-            left: 4px;
+            left: 8px;
     }
 
     #validation_nickname {
@@ -85,7 +85,7 @@ body {
         visibility: hidden;
         position: relative;
         top: -30px;
-        left: 479px;
+        left: 476px;
     }
 
     #pass {
@@ -98,7 +98,7 @@ body {
 			background-color: #f9f9f9;
 			padding-left: 5px;
             position: relative;
-            left: 4px;
+            left: 8px;
             top: -16px;
     }
 
@@ -107,7 +107,7 @@ body {
         height: 25px;
         visibility: hidden;
         position: relative;
-        left: 479px;
+        left: 476px;
         top: -46px;
     }
 
@@ -121,7 +121,7 @@ body {
 			background-color: #f9f9f9;
 			padding-left: 5px;
             position: relative;
-            left: 4px;
+            left: 8px;
             top: -32px;
     }
 
@@ -130,7 +130,7 @@ body {
         height: 25px;
         visibility: hidden;
         position: relative;
-        left: 479px;
+        left: 476px;
         top: -62px;
     }
 
@@ -144,7 +144,7 @@ body {
 			background-color: #f9f9f9;
 			padding-left: 5px;
             position: relative;
-            left: 4px;
+            left: 8px;
             top: -47px;
     }
 
@@ -153,7 +153,7 @@ body {
         height: 25px;
         visibility: hidden;
         position: relative;
-        left: 479px;
+        left: 476px;
         top: -77px;
     }
 
@@ -161,7 +161,7 @@ body {
 
 		#send {
 			position: relative;
-			left: 370px;
+			left: 375px;
             top: -38px;
 		}
 
@@ -202,7 +202,7 @@ body {
 
     #message_error_bad_filled {
 			position: relative;
-			top: 150px;
+			top: 21px;
 			height: auto;
     }
 
@@ -212,21 +212,25 @@ body {
 
     #message_error_nickname { /*Ce qu'il faut appliquer individuellement */
       position: relative;
-      top: 150px;
-			height: auto;
+      top: -244px;
+      			height: auto;
+      left: 467px;
     }
 
     #message_error_password {
       position: relative;
-      top: 150px;
+      top: -196px;
+      left: 467px;
     }
 
     #message_error_confirmation_password {
       position: relative;
-      top: 150px;
+      top: -148px;
+      left: 467px;
     }
 
     #message_error_email {
       position: relative;
-      top: 150px;
+      top: -101px;
+      left: 467px;
     }

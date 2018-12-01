@@ -66,7 +66,7 @@ while($qrep_2 = $qprepare_2->fetch(PDO::FETCH_NAMED)){
     $qrep_3 = $qprepare_3->fetch(PDO::FETCH_NAMED);
 
     //Informations sur les topics non épinglés misent dans un tableau
-    $list_topics[$n] = ['topic_title' => $qrep_2['topic_title'], 'topic_author' => $qrep_2['author'], 'number_posts' => $qrep_2['number_posts'], 'number_views' => $qrep_2['number_views'], 'last_post_author' => $qrep_3['author'], 'last_post_date' => $qrep_3['date_of_publication']];
+    $list_topics[$n] = ['topic_id' => $qrep_2['id'],'topic_title' => $qrep_2['topic_title'], 'topic_author' => $qrep_2['author'], 'number_posts' => $qrep_2['number_posts'], 'number_views' => $qrep_2['number_views'], 'last_post_author' => $qrep_3['author'], 'last_post_date' => $qrep_3['date_of_publication']];
 
     $n++;
 }
@@ -84,7 +84,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
     $qrep_3 = $qprepare_3->fetch(PDO::FETCH_NAMED);
 
 //Informations sur les topics épinglés misent dans un tableau
-    $list_pinned_topics[$n] = ['topic_title' => $qrep_4['topic_title'], 'topic_author' => $qrep_4['author'], 'number_posts' => $qrep_4['number_posts'], 'number_views' => $qrep_4['number_views'], 'last_post_author' => $qrep_3['author'], 'last_post_date' => $qrep_3['date_of_publication']];
+    $list_pinned_topics[$n] = ['topic_id' => $qrep_4['id'], 'topic_title' => $qrep_4['topic_title'], 'topic_author' => $qrep_4['author'], 'number_posts' => $qrep_4['number_posts'], 'number_views' => $qrep_4['number_views'], 'last_post_author' => $qrep_3['author'], 'last_post_date' => $qrep_3['date_of_publication']];
 
     $n++;
 }
@@ -227,6 +227,8 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
   }
   else{
    foreach($list_topics as $topic_information){
+
+     echo "<a class='link_topic_desc' href=/src/forum/forum.php?forum_part=topic&topic_id=" . $topic_information['topic_id'] . ">";
      ?>
      <div class="topic_desc">
 
@@ -259,7 +261,10 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
 </div>
 </div>
 </div>
-<?php }} ?>
+<?php 
+  echo "</a>";
+  }} 
+?>
 </div>
 
 <div id="topic_no_pinned_page" class="topic_page">

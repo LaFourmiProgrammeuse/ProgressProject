@@ -173,7 +173,7 @@
             <div class="h_forums_desc">
                 <h3 class="h_forums_desc_1">Software</h3>
                 <h3 class="h_forums_desc_2">Topics/Posts</h3>
-                <h3 class="h_forums_desc_3">Last message</h3>
+                <h3 class="h_forums_desc_3">Last activity</h3>
             </div>
 
             <?php
@@ -212,7 +212,7 @@
             <div class="h_forums_desc">
                 <h3 class="h_forums_desc_1">Forum Functioning</h3>
                 <h3 class="h_forums_desc_2">Topics/Posts</h3>
-                <h3 class="h_forums_desc_3">Last message</h3>
+                <h3 class="h_forums_desc_3">Last activity</h3>
             </div>
 
            <?php

@@ -92,6 +92,14 @@ article{
     display: flex;
 }
 
+.link_topic_desc{
+    color: #1d1d1d;
+}
+
+.link_topic_desc:hover{
+    color: #1d1d1d;
+}
+
 .topic_desc_groupa{
     width: 50%;
     padding-left: 5px;

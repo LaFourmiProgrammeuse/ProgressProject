@@ -50,8 +50,8 @@ body {
 
 			#h_groupb {
 				display: flex;
-                position: relative;
-                width: 30%;
+        position: relative;
+        width: 30%;
 			}
 
       #search_bar {
@@ -62,7 +62,7 @@ body {
 				background-color: #f9f9f9;
         padding-left: 5px;
         position: relative;
-        top: 13px;
+        top: 14px;
       }
 
       #search_button{
@@ -70,7 +70,7 @@ body {
         border: 1px solid #1d1d1d;
         background-color: #1d1d1d;
         color: white;
-        height: 26px;
+        height: 28px;
         width: 18%;
         margin-left: 2%;
         position: relative;
@@ -196,6 +196,7 @@ body {
         display: flex;
 				justify-content: space-between;
         position: relative;
+        background-color: #1d1d1d;
       }
 
       .nav_element {
@@ -208,7 +209,7 @@ body {
       }
 
       .nav_element a {
-        color: #1d1d1d;
+        color: white;
       }
 
       .nav_element:hover a {

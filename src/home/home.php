@@ -70,9 +70,9 @@ include "../language/language.php";
 							<h2>_ErrorWiki ></h2>
 							<p><b>The ErrorWiki is coming soon, just let us the time to finish the most important parts of our website and it will be ready for use !</b></p>
 							<br/>
-							<p>The <b>ErrorWiki</b> is the place where you can find the informations about any error/bug you meet while programming. It is made with the results
-							of our researches, so it can be incomplete or contaning mistakes. If you think something is wrong or incomplete just reply us, and if we
-							get many returns about the same problem, we will it as fast as we can.
+							<p>The <b>ErrorWiki</b> is the place where you can find informations about any error/bug you meet while programming. It is made with the results
+							of our researches or experiences. If you think something is wrong or incomplete just reply us, and if we get many returns about the same problem,
+							we will it as fast as we can.
 						</div>
 
 						<div class="article">
@@ -94,9 +94,10 @@ include "../language/language.php";
 
 						<div class="article">
 							<h2>_About ></h2>
-							<p><b>Programming Ants</b> is a project that we started to push our limits in programmation and to try to make something that can help people. For the moment, our website is <b>very limited in content</b>,
-								 we can't work faster because we still learning programmation languages (HTML5, PHP, CSS3, etc) to make our ideas done. The other cause is that we are only <b>two persons behind this project</b>, and it's difficult to work fastly,
-								 mostly when we have to solve <b>bugs and mistakes</b>. The fact that we are only teens has a big impact on the way we work on the website, but we don't give up and hope that everything will work better in the futur !</p>
+							<p><b>Programming Ants</b> is a project we started to push our limits in programmation and to try making something that can help people. For the moment, our website is <b>very limited in content</b>,
+								 we can't work faster because we still learning programmation languages (HTML5, PHP, CSS3, JS, ...) to realize what we want to do. Also, we are only <b>two persons behind this project</b>, and it's difficult to work fast,
+								 mostly when we have to solve <b>bugs and mistakes</b>. We are only teens, so this has a big impact on the way we are working on our website, because we need to study for school. But time passes, and the website is
+								 getting built slowly !
 						</div>
 
 						<div class="article">

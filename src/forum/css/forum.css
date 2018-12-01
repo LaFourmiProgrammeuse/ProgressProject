@@ -32,17 +32,19 @@ body {
     min-height: 100vh;
 }
 
+	
+
+  
 	/* SECTION */
 
 		section {
             margin-bottom: 180px;
             background-color: white;
-            border-radius: 5px;
 			height: auto;
-			width: 75%;
+			width: 90%;
             position: relative;
 			min-width: 610px;
-            top: 55px;
+            top: 50px;
             margin-left: auto;
             margin-right: auto;
 		}
@@ -51,8 +53,7 @@ body {
         display: flex;
 				justify-content: space-between;
         position: relative;
-        margin-top: 5px;
-        box-shadow: 0px 5px 5px grey;
+        background-color: #1d1d1d;
       }
 
       .nav_element {
@@ -65,7 +66,7 @@ body {
       }
 
       .nav_element a {
-        color: #1d1d1d;
+        color: white;
       }
 
       .nav_element:hover a {

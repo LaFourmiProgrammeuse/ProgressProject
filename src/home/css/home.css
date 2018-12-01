@@ -36,9 +36,9 @@ body {
 		header {
 			display: flex;
 			justify-content: space-between;
-            background-color: white;
+      background-color: white;
+      height: 60px;
 			width: 100%;
-
 		}
 
             #h_groupa{
@@ -64,7 +64,7 @@ body {
       .nav_element {
 				font-family: 'source_code_proregular', Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
         font-weight: normal;
-				font-size: 0.9vw;
+				font-size: 1vw;
 				line-height: 9px;
 				padding-left: 5px;
 				padding-right: 5px;
@@ -184,20 +184,17 @@ body {
 	/* SECTION */
 
         #section_centered{
-            
+
         }
 
 		section {
-			margin-top: 50px;
-            margin-bottom: 105px;
-            background-color: white;
-            border-radius: 5px;
+      margin-top: 35px;
+      margin-bottom: 105px;
 			height: auto;
-			width: 70%;
-            position: relative;
+      position: relative;
 			min-width: 610px;
-            margin-left: auto;
-            margin-right: auto;
+      margin-left: auto;
+      margin-right: auto;
 		}
 
 	/* ARTICLE */
@@ -210,6 +207,7 @@ body {
       margin-bottom: 15px;
       height: auto;
     	width: 90%;
+      background-color: white;
     }
 
 			#articles {
@@ -220,7 +218,7 @@ body {
 
 			.article {
 				margin-top: 0px;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
 				width: 100%;
 			}
 
@@ -242,7 +240,7 @@ body {
 			}
 
 			.article p {
-				font-size: 16px;
+				font-size: 1vw;
 				padding-left: 100px;
 				padding-right: 100px;
 				line-height: 25px;
@@ -356,4 +354,3 @@ body {
     	height: 140px;
     	width: 270px;
     }
-

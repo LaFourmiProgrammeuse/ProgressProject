@@ -100,10 +100,11 @@ body {
 			#h_vertical_menu .nav_element{
 				width: 130px;
 				text-align: center;
+				font-size: 1.85vw;
 			}
 
 
-			@media screen and (min-width: 1024px){
+			@media screen and (min-width: 950px){
 			
 				.h_high_resolution{
 					display: flex;
@@ -111,7 +112,7 @@ body {
 
 			}
 
-			@media screen and (max-width: 1024px){
+			@media screen and (max-width: 950px){
 				
 				.h_small_resolution{
 					display: block;
@@ -280,7 +281,7 @@ body {
 			}
 
 			.article h2 {
-				background-color: #1d1d1d;
+				background-color: #4a4242;
 				color: white;
 				font-family: 'source_code_proregular', Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 				font-size: 20px;
@@ -297,7 +298,7 @@ body {
 			}
 
 			.article p {
-				font-size: 1vw;
+				font-size: 1.45vw;
 				padding-left: 100px;
 				padding-right: 100px;
 				line-height: 25px;

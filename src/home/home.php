@@ -59,11 +59,11 @@ include "../language/language.php";
 
 					<div class="vertical_menu" id="h_vertical_menu">
 
-						<div class="nav_element nav_element_error_wiki"><h3><a href="#"> <span class="object">></span> ErrorWiki</a></h3></div>
-					<div class="nav_element"><h3><a href="../forum/forum.php"> <span class="object">></span> <?php echo _("Forum"); ?> </a></h3></div>
-					<div class="nav_element nav_element_projects"><h3><a href="#"> <span class="object">></span> <?php echo _("Projects"); ?> </a></h3></div>
-					<div class="nav_element nav_element_about"><h3><a href="#"> <span class="object">></span> <?php echo _("About"); ?> </a></h3></div>
-					<div class="nav_element nav_element_contact"><h3><a href="#"> <span class="object">></span> <?php echo _("Contact"); ?> </a></h3></div>
+						<div class="nav_element nav_element_error_wiki"><h3><a href="#"> <span class="object"></span> ErrorWiki</a></h3></div>
+					<div class="nav_element"><h3><a href="../forum/forum.php"> <span class="object"></span> <?php echo _("Forum"); ?> </a></h3></div>
+					<div class="nav_element nav_element_projects"><h3><a href="#"> <span class="object"></span> <?php echo _("Projects"); ?> </a></h3></div>
+					<div class="nav_element nav_element_about"><h3><a href="#"> <span class="object"></span> <?php echo _("About"); ?> </a></h3></div>
+					<div class="nav_element nav_element_contact"><h3><a href="#"> <span class="object"></span> <?php echo _("Contact"); ?> </a></h3></div>
 					</div>
 
 				</div>

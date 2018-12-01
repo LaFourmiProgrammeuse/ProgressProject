@@ -119,4 +119,8 @@ $(document).ready(function(){
         $("#h_vertical_menu").css("display", "none");
     });
 
+    $(".nav_element").click(function(){
+        $("#h_vertical_menu").css("display", "none");
+    });
+
 });

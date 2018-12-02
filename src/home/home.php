@@ -62,7 +62,22 @@ include "../language/language.php";
 				</div>
 		</header>
 
-		<section>
+		<section id="sect1">
+			<div id="ewiki">
+				<article id="toptext">
+					<h1>Make programmation easier, learn by your mistakes</h1>
+					<h3>Visit our ErrorWiki and find out what is wrong in your code !</h3>
+
+					<p><a href="#">ErrorWiki</a></p>
+				</article>
+
+				<article id="topimg">
+
+				</article>
+			</div>
+		</section>
+
+		<section id="sect2">
 
 				<article>
 					<div id="articles">

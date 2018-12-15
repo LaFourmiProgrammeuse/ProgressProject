@@ -35,9 +35,12 @@ include "../language/language.php";
 	</div>
 
 	<div id="body_content"> <!-- Pour que le footer soit placer en bas de la page -->
+
+<!-- HEADER -->
+
 		<header>
 			<div id="h_groupa">
-				<div id="h_main_img"><img src="/images/programming_ants.png" title="ProgrammingAnts Logo"/></div>
+				<div id="h_main_img"><img src="/images/programming_ants.svg" title="ProgrammingAnts Logo"/></div>
 			</div>
 
 			<div id="h_groupb">
@@ -85,6 +88,8 @@ include "../language/language.php";
 			</div>
 		</header>
 
+<!-- SECTION -->
+
 		<section id="sect1">
 			<div id="ewiki">
 				<article id="toptext">
@@ -101,7 +106,6 @@ include "../language/language.php";
 		</section>
 
 		<section id="sect2">
-
 			<article>
 				<div id="articles">
 					<div class="article">
@@ -118,35 +122,36 @@ include "../language/language.php";
 							<p><b>The Forum is coming soon, just let us the time to finish the most important parts of our website and it will be ready for use !</b></p>
 							<br/>
 							<p>The <b>Forum</b> is the place where you can discuss with the ProgrammingAnts community about coding, or also to follow the news.
-								<p id="link_forum_article"><a href="../forum/forum.php" title="Forum" >Click here to visit the Forum</a></p>
+							<p id="link_forum_article"><a href="../forum/forum.php" title="Forum" >Click here to visit the Forum</a></p>
+						</div>
+
+						<div class="article">
+							<h2>_Projects ></h2>
+							<p><b>Projects are coming soon, just let us the time to finish the most important parts of our website and it will be ready for use !</b></p>
+							<br/>
+							<p>For now you can download our wallpapers to support us !</p>
+							<br/>
+							<a href="/content/pa_official_wallpaper.jpg" download="OfficialPAWallpaper"><img src="/images/wallpaper.png" /></a>
+						</div>
+
+						<div class="article">
+							<h2>_About ></h2>
+							<p><b>Programming Ants</b> is a project we started to push our limits in programmation and to try making something that can help people. For the moment, our website is <b>very limited in content</b>,
+								we can't work faster because we still learning programmation languages (HTML5, PHP, CSS3, JS, ...) to realize what we want to do. Also, we are only <b>two persons behind this project</b>, and it's difficult to work fast,
+								mostly when we have to solve <b>bugs and mistakes</b>. We are only teens, so this has a big impact on the way we are working on our website, because we need to study for school. But time passes, and the website is
+								getting built slowly !
 							</div>
 
 							<div class="article">
-								<h2>_Projects ></h2>
-								<p><b>Projects are coming soon, just let us the time to finish the most important parts of our website and it will be ready for use !</b></p>
-								<br/>
-								<p>For now you can download our wallpapers to support us !</p>
-								<br/>
-								<a href="/content/pa_official_wallpaper.jpg" download="OfficialPAWallpaper"><img src="/images/wallpaper.png" /></a>
+								<h2>_Contact ></h2>
+								<p>If you want to contact us :</p>
+								<p><b>Programming Ants</b> e-mail adress : <a href="mailto:testp-a@gmail.com" title="Contact us !">testp-a@gmail.com</a></p>
 							</div>
+						</div>
+					</article>
+				</section>
 
-							<div class="article">
-								<h2>_About ></h2>
-								<p><b>Programming Ants</b> is a project we started to push our limits in programmation and to try making something that can help people. For the moment, our website is <b>very limited in content</b>,
-									we can't work faster because we still learning programmation languages (HTML5, PHP, CSS3, JS, ...) to realize what we want to do. Also, we are only <b>two persons behind this project</b>, and it's difficult to work fast,
-									mostly when we have to solve <b>bugs and mistakes</b>. We are only teens, so this has a big impact on the way we are working on our website, because we need to study for school. But time passes, and the website is
-									getting built slowly !
-								</div>
-
-								<div class="article">
-									<h2>_Contact ></h2>
-									<p>If you want to contact us :</p>
-									<p><b>Programming Ants</b> e-mail adress : <a href="mailto:testp-a@gmail.com" title="Contact us !">testp-a@gmail.com</a></p>
-								</div>
-							</div>
-						</article>
-
-					</section>
+<!-- ASIDE -->
 
 					<aside>
 						<div id="reconnection">
@@ -154,6 +159,8 @@ include "../language/language.php";
 							<div class="message" id="message_user"><p></p></div>
 						</div>
 					</aside>
+
+<!-- FOOTER -->
 
 					<?php
 					require "../footer.php";

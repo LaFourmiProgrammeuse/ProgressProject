@@ -111,7 +111,7 @@ body {
 
 
 			@media screen and (min-width: 1024px){
-			
+
 				.h_high_resolution{
 					display: flex;
 				}
@@ -119,7 +119,7 @@ body {
 			}
 
 			@media screen and (max-width: 1024px){
-				
+
 				.h_small_resolution{
 					display: block;
 				}
@@ -265,7 +265,7 @@ body {
     #toptext {
       background-color: white;
       margin-right: 22px;
-      text-align: center;
+      text-align: left;
     }
 
     #toptext h1 {
@@ -289,6 +289,10 @@ body {
       font-size: 25px;
       font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
     }
+
+		#illustration {
+			width: 70%;
+		}
 
 		section {
       margin-top: 35px;

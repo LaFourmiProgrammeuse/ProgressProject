@@ -93,14 +93,15 @@ include "../language/language.php";
 		<section id="sect1">
 			<div id="ewiki">
 				<article id="toptext">
+					<br/>
 					<h1>Make programmation easier, learn by your mistakes</h1>
 					<h3>Visit our ErrorWiki and find out what is wrong in your code !</h3>
 
 					<p><a href="#">ErrorWiki</a></p>
 				</article>
 
-				<article id="topimg">
-
+				<article id="illustration">
+					<img src="/images/home_illustration.svg" />
 				</article>
 			</div>
 		</section>

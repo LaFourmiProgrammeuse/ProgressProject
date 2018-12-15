@@ -20,7 +20,7 @@ p {
 
 body {
 	position: relative;
-	background-color: black;
+	background-color: #1d1d1d;;
 	margin: 0;
 	padding: 0;
 }
@@ -38,7 +38,7 @@ body {
 			justify-content: space-between;
       background-color: black;
 			width: 100%;
-      border-bottom: 1px solid #5c6163;
+      border-bottom: 1px solid white;
 		}
 
       #h_groupa{
@@ -53,12 +53,13 @@ body {
 				margin-top: 7px;
 				width: 195px;
 				height:45px;
+				margin-bottom: 3px;
 			}
 
 			#h_groupb {
         	position: relative;
                 width: calc(89% - 265px);
-                margin-left: 5px;
+       			left: -20px;
                 margin-top: auto;
                 margin-bottom: auto;
 			}
@@ -107,7 +108,7 @@ body {
 			}
 
 
-			@media screen and (min-width: 950px){
+			@media screen and (min-width: 1024px){
 			
 				.h_high_resolution{
 					display: flex;
@@ -115,7 +116,7 @@ body {
 
 			}
 
-			@media screen and (max-width: 950px){
+			@media screen and (max-width: 1024px){
 				
 				.h_small_resolution{
 					display: block;
@@ -136,7 +137,7 @@ body {
 			}
 
 			.nav_element a {
-				color: #5c6163;
+				color: #fff;
 			}
 
 			.nav_element:hover a + .> {
@@ -144,7 +145,7 @@ body {
 			}
 
       .nav_element:hover .object {
-        color: #5c6163;
+        color: #ff8d33;
       }
 
 
@@ -159,7 +160,6 @@ body {
 
 				#h_usera {
 					display: inline-flex;
-					margin-top: 7px;
 				}
 
 				#h_userb {
@@ -190,11 +190,12 @@ body {
 							font-size: 14px;
 							text-align: center;
 							border: 2px solid;
-							border-color: #5c6163;
+							border-color: #fff;
 							border-radius: 5px;
 							height: 20px;
 							width: 60px;
-              margin-top: -10px;
+              				margin-top: auto;
+              				margin-bottom: auto;
 							padding-top: 5px;
 							padding-bottom: 2px;
 							padding-left: 7px;
@@ -206,7 +207,7 @@ body {
 						}
 
 						.identification a{
-							color: #5c6163;
+							color: #fff;
 						}
 
 						.identification:hover {
@@ -219,6 +220,11 @@ body {
               transition: 0.2s;
 							color: white;
 						}
+
+							.user_image{
+								margin-top: 3px;
+							}
+
 							.user_image img {
 								height: 40px;
 								width: 40px;
@@ -228,7 +234,7 @@ body {
 								font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 								font-size: 13px;
                 position: relative;
-                top: -9px;
+                top: -3px;
 							}
 
 							.username a {
@@ -255,7 +261,9 @@ body {
     }
 
     #toptext {
-      background-color: black;
+      background-color: #1d1d1d;
+      margin-right: 22px;
+      text-align: center;
     }
 
     #toptext h1 {

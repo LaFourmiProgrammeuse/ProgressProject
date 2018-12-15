@@ -131,7 +131,8 @@ include "../language/language.php";
 							<br/>
 							<p>For now you can download our wallpapers to support us !</p>
 							<br/>
-							<a href="/content/pa_official_wallpaper.jpg" download="OfficialPAWallpaper"><img src="/images/wallpaper.png" /></a>
+							<!-- <a href="/images/pawallpaper1440x900_1.png" download="pawallpaper1440x900"><img src="/images/pawallpaper1440x900_1.png" /></a> Lance le téléchargement du fichier lors du click -->
+							<a href="../../content/download_pawallpaper1440x900_1.html"><img src="/images/pawallpaper1440x900_1.png" /></a>
 						</div>
 
 						<div class="article">

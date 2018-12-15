@@ -1,5 +1,5 @@
 a {
-  color: #5c6163;
+  color: black;
 }
 
 a:hover {
@@ -11,10 +11,10 @@ footer{
   height: 70px;
   width: 100%;
   bottom: 0px;
-  background-color: black;
+  background-color: #f6f6f6;
   align-content: center;
-  color: #5c6163;
-  border-top: 1px solid #5c6163;
+  color: black;
+  box-shadow: 1px 1px 20px 5px #cfcfcf;
   }
 
 #footer_label{

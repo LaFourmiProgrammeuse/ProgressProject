@@ -93,60 +93,67 @@ include "../language/language.php";
 		<section id="sect1">
 			<div id="ewiki">
 				<article id="toptext">
-					<h1>Make programmation easier, learn by your mistakes</h1>
+					<h1>Make programmation easier, learn from your mistakes</h1>
 					<h3>Visit our ErrorWiki and find out what is wrong in your code !</h3>
-
-					<p><a href="#">ErrorWiki</a></p>
 				</article>
 
-				<article id="topimg">
-
+				<article id="illustration">
+					<img src="/images/home_illustration.svg" />
 				</article>
 			</div>
 		</section>
 
 		<section id="sect2">
+			<div id="info">
+				<p>Visit our forum and ask your questions <a href="../forum/forum.php">here</a>
+			</div>
+
 			<article>
 				<div id="articles">
 					<div class="article">
-						<h2>_ErrorWiki ></h2>
-						<p><b>The ErrorWiki is coming soon, just let us the time to finish the most important parts of our website and it will be ready for use !</b></p>
-						<br/>
-						<p>The <b>ErrorWiki</b> is the place where you can find informations about any error/bug you meet while programming. It is made with the results
-							of our researches or experiences. If you think something is wrong or incomplete just reply us, and if we get many returns about the same problem,
-							we will it as fast as we can.
+						<div class="element_image"><img src="/images/errorwiki_illustration.svg" /></div>
+						<div class="element_text">
+							<p><b>The ErrorWiki is coming soon, just let us the time to finish the most important parts of our website and it will be ready for use !</b></p>
+							<br/>
+							<p>The <b>ErrorWiki</b> is the place you can find informations about any error/bug you meet while programming. It is made with the results
+							of our researches and experiences. If you think something is wrong or incomplete just reply us, we will correct it as fast as we can.
 						</div>
+					</div>
 
 						<div class="article">
-							<h2>_Forum ></h2>
+							<div class="element_text">
 							<p><b>The Forum is coming soon, just let us the time to finish the most important parts of our website and it will be ready for use !</b></p>
 							<br/>
 							<p>The <b>Forum</b> is the place where you can discuss with the ProgrammingAnts community about coding, or also to follow the news.
 							<p id="link_forum_article"><a href="../forum/forum.php" title="Forum" >Click here to visit the Forum</a></p>
+							</div>
 						</div>
 
 						<div class="article">
-							<h2>_Projects ></h2>
+							<div class="element_text">
 							<p><b>Projects are coming soon, just let us the time to finish the most important parts of our website and it will be ready for use !</b></p>
 							<br/>
 							<p>For now you can download our wallpapers to support us !</p>
 							<br/>
 							<!-- <a href="/images/pawallpaper1440x900_1.png" download="pawallpaper1440x900"><img src="/images/pawallpaper1440x900_1.png" /></a> Lance le téléchargement du fichier lors du click -->
 							<a href="../../content/download_pawallpaper1440x900_1.html"><img src="/images/pawallpaper1440x900_1.png" /></a>
+							</div>
 						</div>
 
 						<div class="article">
-							<h2>_About ></h2>
-							<p><b>Programming Ants</b> is a project we started to push our limits in programmation and to try making something that can help people. For the moment, our website is <b>very limited in content</b>,
+							<div class="element_text">
+								<p><b>Programming Ants</b> is a project we started to push our limits in programmation and to try making something that can help people. For the moment, our website is <b>very limited in content</b>,
 								we can't work faster because we still learning programmation languages (HTML5, PHP, CSS3, JS, ...) to realize what we want to do. Also, we are only <b>two persons behind this project</b>, and it's difficult to work fast,
 								mostly when we have to solve <b>bugs and mistakes</b>. We are only teens, so this has a big impact on the way we are working on our website, because we need to study for school. But time passes, and the website is
 								getting built slowly !
 							</div>
+							</div>
 
 							<div class="article">
-								<h2>_Contact ></h2>
+								<div class="element_text">
 								<p>If you want to contact us :</p>
 								<p><b>Programming Ants</b> e-mail adress : <a href="mailto:testp-a@gmail.com" title="Contact us !">testp-a@gmail.com</a></p>
+								</div>
 							</div>
 						</div>
 					</article>

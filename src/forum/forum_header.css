@@ -4,11 +4,13 @@ header {
       		background-color: white;
 			width: 100%;
 			min-width: 750px;
+			box-shadow: 1px 1px 20px 5px #cfcfcf;
+			height: 70px;
 		}
 
 			#h_groupa #h_main_img img {
 				margin-left : 20px;
-				margin-top: 7px;
+				margin-top: 12px;
 				width: 195px;
 				height: 45px;
 			}
@@ -27,7 +29,7 @@ header {
 				background-color: #f9f9f9;
         padding-left: 5px;
         position: relative;
-        top: 13px;
+        top: 20px;
       }
 
       #search_button{
@@ -41,7 +43,7 @@ header {
         margin-left: 10px;
         position: relative;
         right: -80%;
-        top: -15px;
+        top: -8px;
       }
 
       #form_search {
@@ -63,7 +65,7 @@ header {
 
 				#h_usera {
 					display: inline-flex;
-					margin-top: 22px;
+					
 				}
 
 				#h_userb {
@@ -103,6 +105,8 @@ header {
 							padding-bottom: 2px;
 							padding-left: 7px;
 							padding-right: 7px;
+							margin-bottom: auto;
+							margin-top: auto;
 						}
 
 						.identification:nth-child(2) {

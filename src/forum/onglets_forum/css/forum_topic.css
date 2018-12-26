@@ -7,6 +7,10 @@ h3{
 
 }
 
+h5{
+    margin: 0px;
+}
+
 article{
   display: block;
         margin-left: auto;
@@ -15,6 +19,13 @@ article{
   margin-bottom: 15px;
   height: auto;
     width: 90%;
+}
+
+.separator{
+    height: 0px;
+    border: black solid 2px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .forum_index_path{
@@ -60,6 +71,234 @@ article{
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 5px;
-    color: white;
     font-size: 16px;
+}
+
+.post_frame_1{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.post_frame_2{
+    display: flex;
+    flex-direction: row;
+}
+
+.post_frame_3{
+    display: flex;
+    flex-direction: column;
+}
+
+.user_information{
+    text-align: center;
+    width: 200px;
+    background-color: #2f2c2c4d;
+}
+
+.user_forum_stats{
+    text-align: left;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.user_forum_stats h5{
+    font-size: 12px;
+    margin-left: 3px;
+}
+
+.date_of_publication{
+    width: 50%;
+    text-align: left;
+    padding-left: 10px;
+    height: 18px;
+    margin-bottom: auto;
+    margin-top: auto;
+    color: white;
+}
+
+.post_index{
+    width: 50%;
+    text-align: right;
+    padding-right: 10px;
+    height: 18px;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+}
+
+.post_header{
+    height: 23px;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #2f2c2c;
+    background-color: #2f2c2c;
+}
+
+.post_frame_3{
+    width: calc(100% - 200px);
+    padding-top: 12px;
+}
+
+.post_frame_3 .separator{
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.post_content{
+    padding-left: 14px;
+    padding-bottom: 14px;
+}
+
+.post_title{
+    padding-left: 6px;
+}
+
+.post_author{
+    /*margin-right: auto;
+    margin-left: auto;*/
+    text-align: left;
+}
+
+.post_author h3{
+    color: black;
+    margin-bottom: 0px;
+}
+
+.post_footer{
+    display: flex;
+    flex-direction: row;
+    background-color: #2f2c2cb3;
+    padding-left: 2px;
+}
+
+.post_footer .reaction{
+    width: 100%;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.post_footer .reaction .like_button{
+    width: 26px;
+    height: 26px;
+}
+
+.post_footer .reaction .dislike_button{
+    width: 26px;
+    height: 26px;
+}
+
+.post_footer .reaction .n_like{
+    position: relative;
+    bottom: 4px;
+}
+
+.post_footer .reaction .n_dislike{
+    position: relative;
+    bottom: 4px;
+}
+
+.post_frame_1{
+    margin-bottom: 20px;
+}
+
+#part_reply{
+   
+}
+
+#form_reply{
+    width: 60%;
+    text-align: center;
+}
+
+#form_reply textarea{
+    width: 100%;
+    min-height: 130px;
+}
+
+#form_reply .send{
+    text-align: right;
+    width: 100%;
+
+}
+
+#form_reply .send input{
+    width: 100px;
+    margin-top: 7px;
+    text-align: center;
+}
+
+.text_formatting{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+    width: calc(100% - 150px);
+}
+
+.text_style{
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 90px;
+    margin-right: 6px;
+}
+
+.text_style .label{
+    margin-right: 23px;
+}
+
+.text_size{
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 90px;
+    margin-right: 11px;
+}
+
+.text_size .label{
+    margin-right: 29px;
+}
+
+.text_style img{
+    width: 11px;
+    position: relative;
+    top: -1;
+}
+
+.text_size img{
+    width: 11px;
+    position: relative;
+    top: -1;
+}
+
+.text_bold{
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 23px;
+    margin-right: 4px;
+}
+
+.text_underline{
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 23px;
+    margin-right: 4px;
+}
+
+.text_italic{
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 23px;
+    margin-right: 4px;
+}
+
+.editor_type{
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+    align-content: right;
+}
+
+.form_header{
+    display: flex;
+    flex-direction: row;
 }

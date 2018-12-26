@@ -121,6 +121,8 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
   }
   else{
    foreach($list_pinned_topics as $topic_information){
+
+      echo "<a class='link_topic_desc' href=/src/forum/forum.php?forum_part=topic&topic_id=" . $topic_information['topic_id'] . ">";
      ?>
      <div class="topic_desc">
 
@@ -153,7 +155,10 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
 </div>
 </div>
 </div>
-<?php }} ?>
+<?php
+  echo "</a>";
+ }} 
+ ?>
 </div>
 
 <div id="topic_pinned_page" class="topic_page">

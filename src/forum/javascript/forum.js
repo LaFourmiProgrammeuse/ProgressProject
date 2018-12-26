@@ -64,4 +64,8 @@ $(document).ready(function(){
     $(".nav_element_stats").click(function(){
     	$("#modal_warning_no_content").css("display", "block");
     });
+
+    $("#form_reply .send").click(function(){
+    	$("#form_reply").submit();
+    });
 });

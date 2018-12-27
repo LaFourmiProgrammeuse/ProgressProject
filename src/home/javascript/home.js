@@ -70,8 +70,6 @@ function window_scrolled(){
 
 $(document).ready(function(){
 
-    $("#h_usera").css("order", "2");
-    $("#h_userb").css("order", "1");
     $("#account").css("margin-left", "20px");
 
     //window.onscroll = function() {window_scrolled();};

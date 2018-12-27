@@ -59,7 +59,8 @@ header {
 
 				#h_groupc {
 					display: inline-flex;
-					width: auto;
+					flex-direction: row-reverse;
+					width: 176px;
 					margin-right: 20px;
 				}
 
@@ -80,11 +81,11 @@ header {
 				}
 
           #login_button{
-
+          	display: none;
           }
 
           #register_button{
-
+          	display: none;
           }
 
           #disconnect_button{
@@ -130,6 +131,7 @@ header {
 							.user_image img {
 								height: 40px;
 								width: 40px;
+								margin-top: 7px;
 							}
 
 							.username {

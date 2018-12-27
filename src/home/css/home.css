@@ -59,7 +59,7 @@ body {
 
 			#h_groupb {
         	position: relative;
-                width: calc(89% - 215px);
+                width: calc(100% - 355px);
                 margin-top: auto;
                 margin-bottom: auto;
 			}
@@ -156,11 +156,10 @@ body {
 
 				#h_groupc {
 					display: inline-flex;
-					width: auto;
+					flex-direction: row-reverse;
 					margin-right: 20px;
-                    width: 11%;
                     text-align: right;
-                    min-width: 180px;
+                    width: 176px;
 				}
 
 				#h_usera {

@@ -25,7 +25,58 @@ function answerForumIdRequest(forum_id){
 	document.location.href = ("/src/forum/forum.php?forum_part=forum&forum_id="+forum_id+"&topic_no_pinned_page=1&topic_pinned_page=1");
 }
 
+function readDataSession(xml_data){
+
+    connected = $(xml_data).find("connected").text();
+
+    if(connected == "true"){
+
+        session_username = $(xml_data).find("username").text();
+
+        $("#disconnect_button").css("display", "block");
+
+        $(".username").html("<a href='/src/profile/profile.php'>"+ session_username+"</a>");
+        $("#h_userb").css("display", "block");
+
+        if($(xml_data).find("animation_connection").text() == "true"){
+
+             $("#message_user p").text(session_username);
+
+            $("#reconnection").show();
+            $("#reconnection").animate({right: '+=210'}, 2000);
+            setTimeout(function(){hideMessageConnection()}, 4000);
+        }
+
+    }else{
+
+        $("#login_button").css("display", "block");
+        $("#register_button").css("display", "block");
+    }
+
+    console.log(connected);
+    console.log(session_username);
+
+}
+
+function requestSessionData(){
+
+    $.ajax({
+            type: "GET",
+            url: "/src/php_for_ajax/session_control_for_javascript.php",
+            dataType: "xml",
+            success: function(xml){
+                readDataSession(xml);
+            }
+    });
+
+}
+
 $(document).ready(function(){
+
+    $("#account").css("margin-left", "20px");
+
+    //On recupère les données de l'utilisateur si il est connecté
+	requestSessionData();
 	
 	// CLICK EVENT TOPIC DESC
 	$(".topic_desc").click(function(){

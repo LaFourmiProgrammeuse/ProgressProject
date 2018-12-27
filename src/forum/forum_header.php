@@ -17,12 +17,12 @@
             <div class="identification" id="login_button"><a href="../login/login_page.php">Log In</a></div>
             <div class="identification" id="register_button"><a href="../register/register_page.php">Sign Up</a>
             </div>
-            <!-- <div class="identification" id="disconnect_button"><a href="../php_for_all/disconnect.php">Log Out</a></div> -->
+            <div class="identification" id="disconnect_button"><a href="../php_for_all/disconnect.php">Log Out</a></div>
         </div>
 
-                    <!-- <div id="h_userb">
+                    <div id="h_userb">
                             <div class="user_image"><img src="/images/no_user_image.png" /></div>
                             <div class="username"><a href="../profile/profile.php"></a></div>
-                        </div> -->
+                        </div>
     </div>
  </header>

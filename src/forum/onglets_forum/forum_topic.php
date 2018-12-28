@@ -207,11 +207,11 @@ $forum_name = $qrep_5['name'];
 
 					<div class="post_frame_3">
 
-						<div class="post_title">
+						<!-- <div class="post_title">
 							<?php echo $post['post_title']; ?>
 						</div>
 
-						<div class="separator"></div>
+						<div class="separator"></div>-->
 
 						<div class="post_content">
 							<?php echo $post['post_content']; ?>

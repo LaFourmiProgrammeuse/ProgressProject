@@ -61,8 +61,8 @@ while($qrep_2 = $qprepare_2->fetch(PDO::FETCH_NAMED)){
 
     $has_topic = true;
 
-    $qprepare_3 = $bdd->prepare("SELECT author, date_of_publication FROM posts WHERE topic=? && post_index=?");
-    $qprepare_3->execute(array($qrep_2['id'], 0));
+    $qprepare_3 = $bdd->prepare("SELECT author, date_of_publication FROM posts WHERE topic=? ORDER BY date_of_publication DESC LIMIT 1");
+    $qprepare_3->execute(array($qrep_2['id']));
     $qrep_3 = $qprepare_3->fetch(PDO::FETCH_NAMED);
 
     //On déduit le temps écoulé depuis la derniere publication dans le topic
@@ -123,12 +123,58 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
 
     $has_topic_pinned = true;
 
-    $qprepare_3 = $bdd->prepare("SELECT author, date_of_publication FROM posts WHERE topic=? && post_index=?");
-    $qprepare_3->execute(array($qrep_4['id'], 0));
+    $qprepare_3 = $bdd->prepare("SELECT author, date_of_publication FROM posts WHERE topic=? ORDER BY date_of_publication DESC LIMIT 1");
+    $qprepare_3->execute(array($qrep_4['id']));
     $qrep_3 = $qprepare_3->fetch(PDO::FETCH_NAMED);
 
-//On met les informations sur les topics épinglés misent dans un tableau
-    $list_pinned_topics[$n] = ['topic_id' => $qrep_4['id'], 'topic_title' => $qrep_4['topic_title'], 'topic_author' => $qrep_4['author'], 'number_posts' => $qrep_4['number_posts'], 'number_views' => $qrep_4['number_views'], 'last_post_author' => $qrep_3['author'], 'last_post_date' => $qrep_3['date_of_publication']];
+
+    //On déduit le temps écoulé depuis la derniere publication dans le topic
+    $date_of_publication_no_formatted = $qrep_3['date_of_publication'];
+    $date_of_publication = new DateTime($date_of_publication_no_formatted);
+    $date_now = new DateTime("now");
+    $time_from_publication = $date_of_publication->diff($date_now);
+    
+    //On formate le résultat sous forme de temps écoulé
+    if(intval($time_from_publication->format("%m")) >= 1){
+      if(intval($time_from_publication->format("%m")) != 1){
+        $time_from_publication_str = "about " . intval($time_from_publication->format("%m")) . " months ago..." ;
+      }else{
+        $time_from_publication_str = "about 1 month ago..." ;
+      }
+    }
+    else if(intval($time_from_publication->format("%d")) >= 1){
+      if(intval($time_from_publication->format("%d")) != 1){
+        $time_from_publication_str = "about " . intval($time_from_publication->format("%d")) . " days ago..." ;
+      }else{
+        $time_from_publication_str = "about 1 day ago..." ;
+      }
+    }
+    else if(intval($time_from_publication->format("%h")) >= 1){
+      if(intval($time_from_publication->format("%h")) != 1){
+        $time_from_publication_str = "about " . intval($time_from_publication->format("%h")) . " hours ago..." ;
+      }else{
+        $time_from_publication_str = "about 1 hour ago..." ;
+      }
+    }
+    else if(intval($time_from_publication->format("%i")) >= 1){
+      if(intval($time_from_publication->format("%i")) != 1){
+        $time_from_publication_str = "about " . intval($time_from_publication->format("%i")) . " minutes ago..." ;
+      }else{
+        $time_from_publication_str = "about 1 minute ago..." ;
+      }
+    }
+    else if(intval($time_from_publication->format("%s")) >= 1){
+      if(intval($time_from_publication->format("%s")) != 1){
+        $time_from_publication_str = "about " . intval($time_from_publication->format("%s")) . " seconds ago..." ;
+      }else{
+        $time_from_publication_str = "about 1 second ago..." ;
+      }
+    }
+
+
+
+    //On met les informations sur les topics épinglés misent dans un tableau
+    $list_pinned_topics[$n] = ['topic_id' => $qrep_4['id'], 'topic_title' => $qrep_4['topic_title'], 'topic_author' => $qrep_4['author'], 'number_posts' => $qrep_4['number_posts'], 'number_views' => $qrep_4['number_views'], 'last_post_author' => $qrep_3['author'], 'last_post_date' => $time_from_publication_str];
 
     $n++;
 }

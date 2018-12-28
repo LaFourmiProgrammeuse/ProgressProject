@@ -18,7 +18,7 @@
 
     while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
 
-        $qprepare_2 = $bdd->prepare("SELECT forum_desc, last_post_id, number_posts, number_topics FROM forums WHERE name=?");
+        $qprepare_2 = $bdd->prepare("SELECT forum_desc, last_active_topic, number_posts, number_topics FROM forums WHERE name=?");
         $qprepare_2->execute(array($forum['name']));
 
         $forum_information = $qprepare_2->fetch(PDO::FETCH_ASSOC);
@@ -94,7 +94,7 @@
             <div class="h_forums_desc">
                 <h3 class="h_forums_desc_1">Language</h3>
                 <h3 class="h_forums_desc_2">Topics/Posts</h3>
-                <h3 class="h_forums_desc_3">Last activity</h3>
+                <h3 class="h_forums_desc_3">Last active topic</h3>
             </div>
 
                 <?php
@@ -134,7 +134,7 @@
             <div class="h_forums_desc">
                 <h3 class="h_forums_desc_1">System</h3>
                 <h3 class="h_forums_desc_2">Topics/Posts</h3>
-                <h3 class="h_forums_desc_3">Last activity</h3>
+                <h3 class="h_forums_desc_3">Last active topic</h3>
             </div>
 
                 <?php
@@ -173,7 +173,7 @@
             <div class="h_forums_desc">
                 <h3 class="h_forums_desc_1">Software</h3>
                 <h3 class="h_forums_desc_2">Topics/Posts</h3>
-                <h3 class="h_forums_desc_3">Last activity</h3>
+                <h3 class="h_forums_desc_3">Last active topic</h3>
             </div>
 
             <?php
@@ -212,7 +212,7 @@
             <div class="h_forums_desc">
                 <h3 class="h_forums_desc_1">Forum Functioning</h3>
                 <h3 class="h_forums_desc_2">Topics/Posts</h3>
-                <h3 class="h_forums_desc_3">Last activity</h3>
+                <h3 class="h_forums_desc_3">Last active topic</h3>
             </div>
 
            <?php

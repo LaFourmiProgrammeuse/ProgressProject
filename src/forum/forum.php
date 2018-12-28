@@ -91,6 +91,9 @@
                                 require "onglets_forum/forum_topic.php";
                             }
                         }
+                        else if($_GET['forum_part'] == "new_topic"){
+                            require "onglets_forum/forum_new_topic.php";
+                        }
                     }
                     else{
                         require "onglets_forum/forum_forums.php";

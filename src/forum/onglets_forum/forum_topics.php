@@ -65,8 +65,52 @@ while($qrep_2 = $qprepare_2->fetch(PDO::FETCH_NAMED)){
     $qprepare_3->execute(array($qrep_2['id'], 0));
     $qrep_3 = $qprepare_3->fetch(PDO::FETCH_NAMED);
 
-    //Informations sur les topics non épinglés misent dans un tableau
-    $list_topics[$n] = ['topic_id' => $qrep_2['id'],'topic_title' => $qrep_2['topic_title'], 'topic_author' => $qrep_2['author'], 'number_posts' => $qrep_2['number_posts'], 'number_views' => $qrep_2['number_views'], 'last_post_author' => $qrep_3['author'], 'last_post_date' => $qrep_3['date_of_publication']];
+    //On déduit le temps écoulé depuis la derniere publication dans le topic
+    $date_of_publication_no_formatted = $qrep_3['date_of_publication'];
+    $date_of_publication = new DateTime($date_of_publication_no_formatted);
+    $date_now = new DateTime("now");
+    $time_from_publication = $date_of_publication->diff($date_now);
+    
+    //On formate le résultat sous forme de temps écoulé
+    if(intval($time_from_publication->format("%m")) >= 1){
+      if(intval($time_from_publication->format("%m")) != 1){
+        $time_from_publication_str = "about " . intval($time_from_publication->format("%m")) . " months ago..." ;
+      }else{
+        $time_from_publication_str = "about 1 month ago..." ;
+      }
+    }
+    else if(intval($time_from_publication->format("%d")) >= 1){
+      if(intval($time_from_publication->format("%d")) != 1){
+        $time_from_publication_str = "about " . intval($time_from_publication->format("%d")) . " days ago..." ;
+      }else{
+        $time_from_publication_str = "about 1 day ago..." ;
+      }
+    }
+    else if(intval($time_from_publication->format("%h")) >= 1){
+      if(intval($time_from_publication->format("%h")) != 1){
+        $time_from_publication_str = "about " . intval($time_from_publication->format("%h")) . " hours ago..." ;
+      }else{
+        $time_from_publication_str = "about 1 hour ago..." ;
+      }
+    }
+    else if(intval($time_from_publication->format("%i")) >= 1){
+      if(intval($time_from_publication->format("%i")) != 1){
+        $time_from_publication_str = "about " . intval($time_from_publication->format("%i")) . " minutes ago..." ;
+      }else{
+        $time_from_publication_str = "about 1 minute ago..." ;
+      }
+    }
+    else if(intval($time_from_publication->format("%s")) >= 1){
+      if(intval($time_from_publication->format("%s")) != 1){
+        $time_from_publication_str = "about " . intval($time_from_publication->format("%s")) . " seconds ago..." ;
+      }else{
+        $time_from_publication_str = "about 1 second ago..." ;
+      }
+    }
+
+
+    //On met les informations sur les topics non épinglés misent dans un tableau
+    $list_topics[$n] = ['topic_id' => $qrep_2['id'],'topic_title' => $qrep_2['topic_title'], 'topic_author' => $qrep_2['author'], 'number_posts' => $qrep_2['number_posts'], 'number_views' => $qrep_2['number_views'], 'last_post_author' => $qrep_3['author'], 'last_post_date' => $time_from_publication_str];
 
     $n++;
 }
@@ -83,7 +127,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
     $qprepare_3->execute(array($qrep_4['id'], 0));
     $qrep_3 = $qprepare_3->fetch(PDO::FETCH_NAMED);
 
-//Informations sur les topics épinglés misent dans un tableau
+//On met les informations sur les topics épinglés misent dans un tableau
     $list_pinned_topics[$n] = ['topic_id' => $qrep_4['id'], 'topic_title' => $qrep_4['topic_title'], 'topic_author' => $qrep_4['author'], 'number_posts' => $qrep_4['number_posts'], 'number_views' => $qrep_4['number_views'], 'last_post_author' => $qrep_3['author'], 'last_post_date' => $qrep_3['date_of_publication']];
 
     $n++;
@@ -131,7 +175,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
         <?php echo $topic_information['topic_title']; ?>
     </div>
     <div class="topic_author">
-        <?php echo "Par <i>" . $topic_information['topic_author'] . "</i>"; ?>
+        <?php echo "By <i>" . $topic_information['topic_author'] . "</i>"; ?>
     </div>
 </div>
 <div class="topic_desc_groupb">
@@ -242,7 +286,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
         <?php echo $topic_information['topic_title']; ?>
     </div>
     <div class="topic_author">
-        <?php echo "Par <i>" . $topic_information['topic_author'] . "</i>"; ?>
+        <?php echo "By <i>" . $topic_information['topic_author'] . "</i>"; ?>
     </div>
 </div>
 <div class="topic_desc_groupb">
@@ -323,7 +367,10 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
         echo "</a>";
     ?>
 </div>
-
+<div class="part_create_topic">
+  <?php $link = "<a href=forum.php?forum_part=new_topic&forum_id=" . $_GET['forum_id'] . ">Create a new topic !</a>"; ?>
+  <h1>You have a question or you want speak about a subject ? <i> <?php echo $link ?> </i></h1>
+</div>
 </div>
 </article>
 </div>

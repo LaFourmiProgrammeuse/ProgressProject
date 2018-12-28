@@ -7,10 +7,6 @@ h3{
 
 }
 
-h5{
-    margin: 0px;
-}
-
 article{
   display: block;
         margin-left: auto;
@@ -19,13 +15,6 @@ article{
   margin-bottom: 15px;
   height: auto;
     width: 90%;
-}
-
-.separator{
-    height: 0px;
-    border: black solid 2px;
-    margin-top: 15px;
-    margin-bottom: 15px;
 }
 
 .forum_index_path{
@@ -71,162 +60,33 @@ article{
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 5px;
+    color: white;
     font-size: 16px;
 }
 
-.post_frame_1{
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
-}
-
-.post_frame_2{
-    display: flex;
-    flex-direction: row;
-}
-
-.post_frame_3{
-    display: flex;
-    flex-direction: column;
-}
-
-.user_information{
-    text-align: center;
-    width: 211px;
-    background-color: #2f2c2c4d;
-}
-
-.user_forum_stats{
-    text-align: left;
-    margin-top: 6px;
-    margin-bottom: 6px;
-}
-
-.user_forum_stats h5{
-    font-size: 11px;
-    margin-left: 3px;
-}
-
-.date_of_publication{
-    width: 50%;
-    text-align: left;
-    padding-left: 10px;
-    height: 18px;
-    margin-bottom: auto;
-    margin-top: auto;
-    color: white;
-}
-
-.post_index{
-    width: 50%;
-    text-align: right;
-    padding-right: 10px;
-    height: 18px;
-    margin-top: auto;
-    margin-bottom: auto;
-    color: white;
-}
-
-.post_header{
-    height: 23px;
-    display: flex;
-    flex-direction: row;
-    border: 2px solid #2f2c2c;
-    background-color: #2f2c2c;
-}
-
-.post_frame_3{
-    width: calc(100% - 200px);
-    padding-top: 12px;
-}
-
-.post_frame_3 .separator{
-    width: 90%;
-    margin-right: 5%;
-    margin-left: 5%;
-}
-
-.post_content{
-    padding-left: 14px;
-    padding-bottom: 14px;
-}
-
-.post_title{
-    padding-left: 6px;
-}
-
-.post_author{
-    /*margin-right: auto;
-    margin-left: auto;*/
-    text-align: left;
-}
-
-.post_author h3{
-    color: black;
-    margin-bottom: 0px;
-}
-
-.post_footer{
-    display: flex;
-    flex-direction: row;
-    background-color: #2f2c2cb3;
-    padding-left: 2px;
-}
-
-.post_footer .reaction{
-    width: 100%;
-    text-align: right;
-    padding-right: 5px;
-}
-
-.post_footer .reaction .like_button{
-    width: 26px;
-    height: 26px;
-}
-
-.post_footer .reaction .dislike_button{
-    width: 26px;
-    height: 26px;
-}
-
-.post_footer .reaction .n_like{
-    position: relative;
-    bottom: 4px;
-}
-
-.post_footer .reaction .n_dislike{
-    position: relative;
-    bottom: 4px;
-}
-
-.post_frame_1{
-    margin-bottom: 20px;
-}
-
-#part_reply{
-   
-}
-
-#form_reply{
+#form_new_topic{
     width: 60%;
-    text-align: center;
 }
 
-#form_reply textarea{
+#form_new_topic textarea{
     width: 100%;
     min-height: 130px;
 }
 
-#form_reply .send{
+#form_new_topic .send{
     text-align: right;
     width: 100%;
 
 }
 
-#form_reply .send input{
+#form_new_topic .send input{
     width: 100px;
     margin-top: 7px;
     text-align: center;
+}
+
+#form_new_topic h3{
+	color: black;
 }
 
 .text_formatting{
@@ -301,19 +161,16 @@ article{
 .form_header{
     display: flex;
     flex-direction: row;
+    text-align: center;
+    margin-top: 18px;
 }
 
-.presentation_topic h3{
-    color: black;
+#form_new_topic .topic_title{
+	width: 70%;
 }
 
-.forum_index h3{
-    margin-top: 5px;
-    margin-bottom: 4px;
+#form_new_topic .topic_subtitle{
+	width: 70%;
 }
 
-.forum_index{
-    margin-bottom: 15px;
-    margin-top: 20px;
-    margin-left: 20px;
-}
+

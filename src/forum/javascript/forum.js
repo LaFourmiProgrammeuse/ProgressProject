@@ -31,7 +31,7 @@ function readDataSession(xml_data){
 
     if(connected == "true"){
 
-        session_username = $(xml_data).find("username").text();
+        var session_username = $(xml_data).find("username").text();
 
         $("#disconnect_button").css("display", "block");
 
@@ -116,7 +116,14 @@ $(document).ready(function(){
     	$("#modal_warning_no_content").css("display", "block");
     });
 
+    //Event pour envoyer un formulaire
+
     $("#form_reply .send").click(function(){
     	$("#form_reply").submit();
     });
+
+    $("#form_new_topic .send").click(function(){
+        $("#form_new_topic").submit();
+    });
+
 });

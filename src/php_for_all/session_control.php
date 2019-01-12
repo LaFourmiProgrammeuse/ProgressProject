@@ -1,5 +1,21 @@
 <?php
 
+function get_ip() {
+
+    // IP si internet partagé
+    if (isset($_SERVER['HTTP_CLIENT_IP'])) {
+        return $_SERVER['HTTP_CLIENT_IP'];
+    }
+    // IP derrière un proxy
+    elseif (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        return $_SERVER['HTTP_X_FORWARDED_FOR'];
+    }
+    // Sinon : IP normale
+    else {
+        return (isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '');
+    }
+}
+
 $timeout = 360; //Temps avant destruction d'une session en seconde
 
 session_start();
@@ -88,10 +104,14 @@ if(isset($_SESSION['timeout'])){
         $_SESSION['username'] = $_COOKIE['username'];
         $_SESSION['password'] = $_COOKIE['password'];
 
-        $qprepare = $bdd->prepare("SELECT keep_connected FROM users WHERE username = :username && password = :password");
+        $qprepare = $bdd->prepare("SELECT keep_connected, username FROM users WHERE username = :username && password = :password");
         $qprepare->execute(array('username' => $_COOKIE['username'], 'password' => $_COOKIE['password']));
 
         if($qprepare){
+
+            //On met dans la bdd la derniere ip avec laquelle il vient de charger la page
+            //$qprepare_2 = $bdd->prepare("UPDATE users SET");
+
             $qrep = $qprepare->fetch();
 
             if($qrep['stay_connected'] == '0'){

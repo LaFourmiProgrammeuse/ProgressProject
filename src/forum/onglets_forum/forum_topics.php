@@ -29,15 +29,15 @@ if($forum_number_topics != 0){
 
 
     //Récuperation du nombre de topic épinglé et non épinglé
-    $qprepare_6 = $bdd->prepare("SELECT id FROM topics WHERE pinned=0");
-    $qprepare_6->execute();
+    $qprepare_6 = $bdd->prepare("SELECT id FROM topics WHERE pinned=0 && forum_id=?");
+    $qprepare_6->execute(array($forum_id));
 
     $qrep_6 = $qprepare_6->fetch();
     $n_of_page_no_pinned_topic = ceil($qprepare_6->rowCount()/$n_topics_per_page);
 
 
-    $qprepare_7 = $bdd->prepare("SELECT id FROM topics WHERE pinned=1");
-    $qprepare_7->execute();
+    $qprepare_7 = $bdd->prepare("SELECT id FROM topics WHERE pinned=1 && forum_id=?");
+    $qprepare_7->execute(array($forum_id));
 
     $qrep_7 = $qprepare_7->fetch();
     $n_of_page_pinned_topic = ceil($qprepare_7->rowCount()/$n_topics_per_page);

@@ -44,6 +44,7 @@ header {
         position: relative;
         right: -80%;
         top: -8px;
+        font-size: 0.92vw;
       }
 
       #form_search {

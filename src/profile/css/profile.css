@@ -80,7 +80,7 @@ body {
 
 		section {
 			display: flex;
-			width: 70%;
+			width: 96%;
 			min-width: 450px;
             height: 500px;
 			margin-top: 50px;
@@ -95,7 +95,7 @@ body {
 				display: flex;
 				flex-direction: column;
         background-color: white;
-				width: 35%;
+				width: 27%;
         height: 480px;
 				margin-left: 15px;
 				margin-top: auto;

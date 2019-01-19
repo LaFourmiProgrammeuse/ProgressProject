@@ -152,7 +152,7 @@ include "../language/language.php";
 							<div class="article">
 								<div class="element_text">
 								<p>If you want to contact us :</p>
-								<p><b>Programming Ants</b> e-mail adress : <a href="mailto:testp-a@gmail.com" title="Contact us !">testp-a@gmail.com</a></p>
+								<p><b>Programming Ants</b> contact e-mail adress : <a href="mailto:contact@programming-ants.ovh" title="Contact us !">contact@programming-ants.ovh</a></p>
 								</div>
 							</div>
 						</div>

@@ -5,11 +5,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-	<link rel="stylesheet" type="text/css" href="download_pawallpaper1440x900_1.css">
+	<link rel="stylesheet" type="text/css" href="download_content.css">
 	<meta charset="utf-8"/>
 	<title>Download File</title>
-
 </head>
 
 <body>

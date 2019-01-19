@@ -1,14 +1,4 @@
-@font-face {
-	font-family: 'source_code_proregular';
-	src: url('/fonts/sourcecodepro-regular-webfont.eot');
-	src: url('/fonts/sourcecodepro-regular-webfont.eot?#iefix') format('embedded-opentype'),
-	url('/fonts/sourcecodepro-regular-webfont.woff') format('woff'),
-	url('/fonts/sourcecodepro-regular-webfont.ttf') format('truetype'),
-	url('/fonts/sourcecodepro-regular-webfont.svg#source_code_proregular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-
-}
+@import url('https://fonts.googleapis.com/css?family=Istok+Web:400,700');
 
 a {
 	text-decoration: none;
@@ -258,7 +248,6 @@ body {
     #sect1 {
       margin-bottom: 15px;
       width: 95%;
-			background-image: url("/images/sect1_background.svg");
 			background-repeat: no-repeat;
     }
 
@@ -278,13 +267,14 @@ body {
 
     #toptext h1 {
       margin-top: 0;
-      font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+      font-family: 'Istok Web', sans-serif, Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
       font-size: 4vw;
+			font-weight: 700;
 			color: #2d3333;
     }
 
     #toptext h3 {
-      font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+      font-family: 'Istok Web', sans-serif, Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
       font-size: 2vw;
 			color: #2d3333;
     }

@@ -1,3 +1,7 @@
+<?php
+  $content_name = $_GET['content_name'];
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,8 +18,8 @@
   </header>
 
   <section>
-    <img src="/images/pawallpaper1440x900_1.png" />
-    <a href="/images/pawallpaper1440x900_1.png" download="pawallpaper1440x900_1">Click here to download it</a>
+    <img src="/content/<?php echo $content_name; ?>"/>
+    <a href="/content/<?php echo $content_name; ?>" download="/content/<?php echo $content_name; ?>">Click here to download it</a>
   </section>
 </body>
 

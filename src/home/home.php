@@ -131,12 +131,15 @@ include "../language/language.php";
 
 						<div class="article">
 							<div class="element_text">
-							<p><b>Projects are coming soon, just let us the time to finish the most important parts of our website and it will be ready for use !</b></p>
-							<br/>
-							<p>For now you can download our wallpapers to support us !</p>
-							<br/>
-							<!-- <a href="/images/pawallpaper1440x900_1.png" download="pawallpaper1440x900"><img src="/images/pawallpaper1440x900_1.png" /></a> Lance le téléchargement du fichier lors du click -->
-							<a href="/content/download_content.php?content_name=download_pawallpaper1440x900_1.png"><img src="/content/download_pawallpaper1440x900_1.png" /></a>
+
+								<p><b>Projects are coming soon, just let us the time to finish the most important parts of our website and it will be ready for use !</b></p>
+								<br/>
+								<p>For now you can download our wallpapers to support us !</p>
+								<br/>
+								<!-- <a href="/images/pawallpaper1440x900_1.png" download="pawallpaper1440x900"><img src="/images/pawallpaper1440x900_1.png" /></a> Lance le téléchargement du fichier lors du click -->
+								<div id="overview">
+									<div class="wallpaper"><a href="/content/download_content.php?content_name=download_pawallpaper1440x900_1.png"><img src="/content/download_pawallpaper1440x900_1.png" /></a></div>
+								</div>
 							</div>
 						</div>
 

@@ -40,7 +40,7 @@ body {
 			height: 70px;
 			width: 100%;
       border-bottom: 1px solid white;
-			box-shadow: 1px 1px 20px 5px #cfcfcf;
+			box-shadow: 1px 1px 5px 1px #cfcfcf;
 		}
 
       #h_groupa{
@@ -251,10 +251,15 @@ body {
 
 	/* SECTION */
 
+		#illustration {
+			width: 70%;
+		}
+
     #sect1 {
-      margin-top: 40px;
       margin-bottom: 15px;
       width: 95%;
+			background-image: url("/images/sect1_background.svg");
+			background-repeat: no-repeat;
     }
 
     #ewiki {
@@ -284,10 +289,6 @@ body {
 			color: #2d3333;
     }
 
-		#illustration {
-			width: 70%;
-		}
-
 		#sect2 {
 		}
 
@@ -310,15 +311,18 @@ body {
 		#info p {
 			color: white;
 			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-			font-size: 2vw;
+			font-size: 1.80vw;
 			padding-top: 20px;
 			padding-bottom: 20px;
 			font-weight: 400;
 		}
 
 		#info a {
-			font-style: italic;
 			color: #ffb912;
+		}
+
+		#overview {
+			display: flex;
 		}
 
 	/* ARTICLE */
@@ -327,10 +331,10 @@ body {
       display: block;
 			margin-left: auto;
 			margin-right: auto;
-			margin-top: 28px;
+			margin-top: 75px;
       margin-bottom: 15px;
       height: auto;
-    	width: 90%;
+    	width: 75%;
       background-color: white;
     }
 
@@ -352,12 +356,12 @@ body {
 				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 				margin-top: auto;
 				margin-bottom: auto;
-				margin-left: 25px;
 				color: #1d1d1d;
 			}
 
 			.element_image img {
-				width: 25%;
+				width: 17.5%;
+				margin-right: 50px;
 				float: left;
 			}
 
@@ -383,10 +387,7 @@ body {
             }
 
               .article:nth-child(3) a img {
-                display: flex;
-                margin-left: auto;
-                margin-right: auto;
-                width: 50%;
+                width: 25%;
 								border: 1px solid black;
               }
 

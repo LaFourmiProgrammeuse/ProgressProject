@@ -91,10 +91,10 @@ include "../language/language.php";
 <!-- SECTION -->
 
 		<section id="sect1">
-			<div id="ewiki">
-				<article id="toptext">
-					<h1>Make programmation easier, learn from your mistakes</h1>
-					<h3>Visit our ErrorWiki and find out what is wrong in your code !</h3>
+			<div id="illustration_text">
+				<article id="title">
+					<h1>MAKE PROGRAMMATION EASIER, LEARN FORM YOUR MISTAKES</h1>
+					<a href="#">Visit the Errorwiki</a>
 				</article>
 
 				<article id="illustration">
@@ -131,15 +131,7 @@ include "../language/language.php";
 
 						<div class="article">
 							<div class="element_text">
-
 								<p><b>Projects are coming soon, just let us the time to finish the most important parts of our website and it will be ready for use !</b></p>
-								<br/>
-								<p>For now you can download our wallpapers to support us !</p>
-								<br/>
-								<!-- <a href="/images/pawallpaper1440x900_1.png" download="pawallpaper1440x900"><img src="/images/pawallpaper1440x900_1.png" /></a> Lance le téléchargement du fichier lors du click -->
-								<div id="overview">
-									<div class="wallpaper"><a href="/content/download_content.php?content_name=download_pawallpaper1440x900_1.png"><img src="/content/download_pawallpaper1440x900_1.png" /></a></div>
-								</div>
 							</div>
 						</div>
 
@@ -150,7 +142,17 @@ include "../language/language.php";
 								mostly when we have to solve <b>bugs and mistakes</b>. We are only teens, so this has a big impact on the way we are working on our website, because we need to study for school. But time passes, and the website is
 								getting built slowly !
 							</div>
+						</div>
+
+						<div class="article">
+							<div class="element_text">
+								<p><b>Support us !</b></p>
+								<p>You can download our wallpapers and share them to your friends to support us !</p>
 							</div>
+							<div id="overview">
+								<div class="wallpaper"><a href="/content/download_content.php?content_name=download_pawallpaper1440x900_1.png"><img src="/content/download_pawallpaper1440x900_1.png" /></a></div>
+							</div>
+						</div>
 
 							<div class="article">
 								<div class="element_text">

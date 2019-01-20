@@ -1,14 +1,6 @@
-@font-face {
-	font-family: 'source_code_proregular';
-	src: url('/fonts/sourcecodepro-regular-webfont.eot');
-	src: url('/fonts/sourcecodepro-regular-webfont.eot?#iefix') format('embedded-opentype'),
-	url('/fonts/sourcecodepro-regular-webfont.woff') format('woff'),
-	url('/fonts/sourcecodepro-regular-webfont.ttf') format('truetype'),
-	url('/fonts/sourcecodepro-regular-webfont.svg#source_code_proregular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto:500,900');
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
+@import url('https://fonts.googleapis.com/css?family=Chivo:400,700');
 
 a {
 	text-decoration: none;
@@ -128,8 +120,8 @@ body {
 			}
 
       .nav_element {
-				font-family: 'source_code_proregular', Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-        font-weight: normal;
+				font-family: 'Karla', sans-serif, Arial, Helvetica, "Liberation Sans", FreeSans;
+        font-weight: 400;
 				font-size: 1vw;
 				line-height: 9px;
 				padding-left: 5px;
@@ -141,16 +133,15 @@ body {
 			}
 
 			.nav_element a {
-
-				color: black;
+				color: #1a1c1c;
 			}
 
 			.nav_element:hover a + .> {
-        color: #ff8d33;
+        color: #ffb912;
 			}
 
       .nav_element:hover .object {
-        color: black;
+        color: #1a1c1c;
       }
 
 
@@ -158,8 +149,8 @@ body {
 					display: inline-flex;
 					flex-direction: row-reverse;
 					margin-right: 20px;
-                    text-align: right;
-                    width: 176px;
+          text-align: right;
+          width: 176px;
 				}
 
 				#h_usera {
@@ -191,15 +182,15 @@ body {
 
 						.identification {
 							font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-							font-size: 14px;
+							font-size: 15px;
 							text-align: center;
 							border: 2px solid;
-							border-color: black;
+							border-color: #1a1c1c;
 							border-radius: 5px;
 							height: 20px;
 							width: 60px;
 							margin-top: auto;
-              				margin-bottom: auto;
+              margin-bottom: auto;
 							padding-top: 5px;
 							padding-bottom: 2px;
 							padding-left: 7px;
@@ -211,17 +202,18 @@ body {
 						}
 
 						.identification a{
-							color: black;
+							color: #1a1c1c;
 						}
 
 						.identification:hover {
-              				transition: 0.2s;
-							border-color: #ff8d33;
+              transition: 0.2s;
+							background-color: #ffb912;
+							border-color: #ffb912;
 						}
 
 						.identification:hover a {
               transition: 0.2s;
-							color: #ff8d33;
+							color: white;
 						}
 
 							.user_image{
@@ -251,55 +243,63 @@ body {
 
 	/* SECTION */
 
+	section {
+		margin-top: 35px;
+		margin-bottom: 105px;
+		height: auto;
+		position: relative;
+		min-width: 610px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#sect1 {
+		margin-bottom: 15px;
+		width: 95%;
+	}
+
+	#illustration_text {
+		display: inline-flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	#title {
+		display: flex;
+		flex-direction: column;
+		margin-top: 150px;
+		text-align: left;
+	}
+
+	#title h1 {
+		margin-top: 0;
+		font-family: 'Roboto', sans-serif, Arial, Helvetica, "Liberation Sans", FreeSans;
+		font-size: 3vw;
+		font-weight: 900;
+		color: #1a1c1c;
+		margin-bottom: 0;
+		border-left: 8px solid #1a1c1c;
+		padding-left: 15px;
+	}
+
+	#title a {
+		background-color: #ffb912;
+		color: white;
+		border-radius: 5px;
+		padding: 10px;
+		font-size: 1.75vw;
+		font-family: 'Karla', sans-serif, Arial, Helvetica, "Liberation Sans", FreeSans;
+		margin-top: 40px;
+		margin-left: 20px;
+		width: 250px;
+		text-align: center;
+	}
+
 		#illustration {
 			width: 70%;
 		}
 
-    #sect1 {
-      margin-bottom: 15px;
-      width: 95%;
-			background-image: url("/images/sect1_background.svg");
-			background-repeat: no-repeat;
-    }
-
-    #ewiki {
-      display: inline-flex;
-      justify-content: space-between;
-      width: 100%;
-    }
-
-    #toptext {
-			margin-top: auto;
-			margin-bottom: auto;
-      background-color: white;
-      margin-right: 22px;
-      text-align: left;
-    }
-
-    #toptext h1 {
-      margin-top: 0;
-      font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-      font-size: 4vw;
-			color: #2d3333;
-    }
-
-    #toptext h3 {
-      font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-      font-size: 2vw;
-			color: #2d3333;
-    }
-
 		#sect2 {
-		}
-
-		section {
-      margin-top: 35px;
-      margin-bottom: 105px;
-			height: auto;
-      position: relative;
-			min-width: 610px;
-      margin-left: auto;
-      margin-right: auto;
 		}
 
 		#info {
@@ -310,7 +310,7 @@ body {
 
 		#info p {
 			color: white;
-			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+			font-family: 'Karla', sans-serif, Arial, Helvetica, "Liberation Sans", FreeSans;
 			font-size: 1.80vw;
 			padding-top: 20px;
 			padding-bottom: 20px;
@@ -319,10 +319,6 @@ body {
 
 		#info a {
 			color: #ffb912;
-		}
-
-		#overview {
-			display: flex;
 		}
 
 	/* ARTICLE */
@@ -353,7 +349,7 @@ body {
 			.element_text p {
 				font-size: 1.25vw;
 				line-height: 25px;
-				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+				font-family: 'Chivo', sans-serif, Arial, Helvetica, "Liberation Sans", FreeSans;
 				margin-top: auto;
 				margin-bottom: auto;
 				color: #1d1d1d;
@@ -386,10 +382,14 @@ body {
               top: 7px;
             }
 
-              .article:nth-child(3) a img {
+              .article:nth-child(5) a img {
                 width: 25%;
 								border: 1px solid black;
               }
+
+							#overview {
+								display: flex;
+							}
 
 	/* ASIDE */
 

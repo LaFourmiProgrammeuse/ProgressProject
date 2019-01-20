@@ -5,12 +5,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 	<link rel="stylesheet" type="text/css" href="download_content.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
+  
 	<meta charset="utf-8"/>
 	<title>Download File</title>
-
 </head>
 
 <body>

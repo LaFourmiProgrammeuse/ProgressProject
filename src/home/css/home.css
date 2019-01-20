@@ -207,12 +207,13 @@ body {
 
 						.identification:hover {
               transition: 0.2s;
+							background-color: #ffb912;
 							border-color: #ffb912;
 						}
 
 						.identification:hover a {
               transition: 0.2s;
-							color: #ffb912;
+							color: white;
 						}
 
 							.user_image{

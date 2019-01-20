@@ -53,6 +53,31 @@ $_SESSION['connected'] = 'true';
 $_SESSION['username'] = $username;
 $_SESSION['password'] = $password;
 
+
+//On envoie le mail aux devs
+
+$boundary = "-----=".md5(rand());
+
+$topic = "A new person has joined ProgrammingAnts !";
+
+$header = "From: \"ProgrammingAnts\"<site.devnews@programming-ants.ovh>\n";
+$header .= "Reply-to: \"ProgrammingAnts\"<site.devnews@programming-ants.ovh>\n";
+$header .= "MIME-Version: 1.0\n";
+$header .= "Content-Type: multipart/alternative;\n boundary=\"$boundary\"\n";
+
+$message_body = "\n--" . $boundary . "\n";
+
+$message_body .= "Content-Type: text/plain; charset=\"ISO-8859-1\"\n";
+$message_body .= "Content-Transfer-Encoding: 8bit\n";
+$message_body .= "\nA user has just registered ! :\n";
+$message_body .= "   *Username: " . $username . "\n";
+$message_body .= "   *Mail: " . $email . "\n";
+
+$message_body .= "\n--" . $boundary . "--\n";
+
+mail("site.devnews@programming-ants.ovh", $topic, $message_body, $header);
+
+
 header('Location: ../../home/home.php');
 
 

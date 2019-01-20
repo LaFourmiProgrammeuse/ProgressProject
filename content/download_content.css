@@ -1,0 +1,26 @@
+header{
+	text-align: center;
+}
+
+header p{
+	font-size: 25px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+section{
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+}
+
+section img{
+	margin-right: auto;
+	margin-left: auto;
+	height: 400px;
+}
+
+section a{
+	margin-top: 10px;
+	margin-right: auto;
+	margin-left: auto;
+}

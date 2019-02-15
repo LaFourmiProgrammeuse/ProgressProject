@@ -2,7 +2,7 @@ var special_character = new Array('&', '@', '#', '*', '$');
 var number = new Array('1', '2', '3', '4', '5', '6', '7', '8', '9');
 var character_alphanumeric = new Array('a', 'b','c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', "Y", 'Z');
 
-var pass_special_character_needed = 2;
+var pass_special_character_needed = 0;
 var pass_number_needed = 2;
 var pass_character_needed = 8;
 
@@ -98,10 +98,10 @@ function requestValidationNickname(){
 
 function Show_Nickname_Error(nickname_use_now){
 
-    $("#message_error_password").hide(500);
-    $("#message_error_confirmation_password").hide(500);
-    $("#message_error_email").hide(500);
-    $("#message_error_bad_filled").hide();
+    $("#message_error_password").hide(0);
+    $("#message_error_confirmation_password").hide(0);
+    $("#message_error_email").hide(0);
+    $("#message_error_bad_filled").hide(0);
 
     if(!NicknameValidation(nickname_use_now) && $("#nickname").val() != ""){
 
@@ -114,7 +114,7 @@ function Show_Nickname_Error(nickname_use_now){
         else if(nickname_value.length > nickname_character_max){
             error = error+"<li>The nickname must be at max 11 characters !</li>";
         }
-        if(hasSpecialCharacter(nickname_value, 0)){
+        if(!hasSpecialCharacter(nickname_value, 0)){
             error = error+"<li>The nickname can't be composed by special characters !</li>";
         } console.log("Show_Nickname_Error : "+nickname_use_now);
 
@@ -127,22 +127,22 @@ function Show_Nickname_Error(nickname_use_now){
 
         $("#message_error_nickname p").html(error);
 
-        $("#message_error_nickname").show(1000);
+        $("#message_error_nickname").show(0);
 
     }
     else{
 
-        $("#message_error_nickname").hide(1000);
+        $("#message_error_nickname").hide(0);
 
     }
 }
 
 function Show_Pass_Error(){
 
-    $("#message_error_nickname").hide(500);
-    $("#message_error_confirmation_password").hide(500);
-    $("#message_error_email").hide(500);
-    $("#message_error_bad_filled").hide();
+    $("#message_error_nickname").hide(0);
+    $("#message_error_confirmation_password").hide(0);
+    $("#message_error_email").hide(0);
+    $("#message_error_bad_filled").hide(0);
 
     if(!PassValidation() && $("#pass").val() != ""){
 
@@ -152,7 +152,7 @@ function Show_Pass_Error(){
         if(pass_value.length < pass_character_needed){
             error = error+"<li>The password must be at least 8 characters !</li>";
         }
-        if(!hasSpecialCharacter(pass_value, 2)){
+        if(!hasSpecialCharacter(pass_value, pass_special_character_needed)){
             error = error+"<li>The password must be at least 2 specials characters ! (as : &, @, #, *, $)</li>";
         }
 
@@ -160,21 +160,21 @@ function Show_Pass_Error(){
 
         $("#message_error_password p").html(error);
 
-        $("#message_error_password").show(1000);
+        $("#message_error_password").show(0);
 
     }
     else{
 
-        $("#message_error_password").hide(1000);
+        $("#message_error_password").hide(0);
     }
 }
 
 function Show_Pass_Confirm_Error(){
 
-    $("#message_error_nickname").hide(500);
-    $("#message_error_password").hide(500);
-    $("#message_error_email").hide(500);
-    $("#message_error_bad_filled").hide();
+    $("#message_error_nickname").hide(0);
+    $("#message_error_password").hide(0);
+    $("#message_error_email").hide(0);
+    $("#message_error_bad_filled").hide(0);
 
     if(!PassConfirmValidation() && $("#pass_confirm").val() != ""){
 
@@ -189,22 +189,22 @@ function Show_Pass_Confirm_Error(){
 
         $("#message_error_confirmation_password p").html(error);
 
-        $("#message_error_confirmation_password").show(1000);
+        $("#message_error_confirmation_password").show(0);
 
     }
     else{
 
-        $("#message_error_confirmation_password").hide(1000);
+        $("#message_error_confirmation_password").hide(0);
 
     }
 }
 
 function Show_Email_Error(){
 
-    $("#message_error_nickname").hide(500);
-    $("#message_error_confirmation_password").hide(500);
-    $("#message_error_password").hide(500);
-    $("#message_error_bad_filled").hide();
+    $("#message_error_nickname").hide(0);
+    $("#message_error_confirmation_password").hide(0);
+    $("#message_error_password").hide(0);
+    $("#message_error_bad_filled").hide(0);
 
     if(!EmailValidation() && $("#email").val() != ""){
 
@@ -216,12 +216,12 @@ function Show_Email_Error(){
 
         $("#message_error_email p").html(error);
 
-        $("#message_error_email").show(1000);
+        $("#message_error_email").show(0);
 
     }
     else{
 
-        $("#message_error_email").hide(1000);
+        $("#message_error_email").hide(0);
     }
 }
 
@@ -232,6 +232,10 @@ function Show_Email_Error(){
 function hasSpecialCharacter(string, number_special_character_to_found){
 
     var special_character_found = 0;
+
+    if(number_special_character_to_found == 0){
+      return true;
+    }
 
     for(var i = 0; i < string.length; i++){
 
@@ -245,9 +249,6 @@ function hasSpecialCharacter(string, number_special_character_to_found){
 
 
                      return true;
-                }
-                else if(number_special_character_to_found == 0){
-                    return true;
                 }
                 else{
                     break;
@@ -263,6 +264,10 @@ function hasNumber(string, number_to_found){
 
     var number_found = 0;
 
+    if(number_to_found == 0){
+      return true;
+    }
+
     for(var i = 0; i < string.length; i++){
 
         for(var e = 0; e < number.length; e++){
@@ -272,9 +277,6 @@ function hasNumber(string, number_to_found){
                 number_found++;
 
                 if(number_found == number_to_found){
-                    return true;
-                }
-                else if(number_to_found == 0){
                     return true;
                 }
                 else{
@@ -346,7 +348,7 @@ function PassValidation(){
         return false;
 
     }
-    else if(pass_value.length < pass_character_needed || !hasSpecialCharacter(pass_value, pass_special_character_needed) || !hasNumber(pass_value, pass_number_needed)){
+    else if(pass_value.length < pass_character_needed || !hasSpecialCharacter(pass_value, pass_special_character_needed)){
 
         console.log("2");
         $("#validation_pass").attr("src", "/images/wrong.png");
@@ -378,7 +380,7 @@ function NicknameValidation(nickname_use){
         return false;
 
     }
-    else if(nickname_value.length < nickname_character_needed || hasSpecialCharacter(nickname_value, 0) || nickname_value.length > nickname_character_max || nickname_use == true){
+    else if(nickname_value.length < nickname_character_needed || !hasSpecialCharacter(nickname_value, 0) || nickname_value.length > nickname_character_max || nickname_use == true){
 
         console.log("2");
         $("#validation_nickname").attr("src", "/images/wrong.png");

@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:500,900');
 @import url('https://fonts.googleapis.com/css?family=Karla:400,700');
-@import url('https://fonts.googleapis.com/css?family=Chivo:400,700');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700');
+@import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC');
 
 a {
 	text-decoration: none;
@@ -18,42 +18,36 @@ body {
 }
 
 #body_content{
-
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 	/* HEADER */
 
 		header {
 			display: flex;
-			justify-content: space-between;
-      background-color: white;
-			height: 70px;
+			height: 60px;
 			width: 100%;
-      border-bottom: 1px solid white;
-			box-shadow: 1px 1px 5px 1px #cfcfcf;
 		}
 
-      #h_groupa{
-        width: 235px;
-        margin-top: auto;
-        margin-bottom: auto;
-      }
-
-			#h_groupa #h_main_img img {
+      #h_groupa {
+				display: flex;
 				margin-left : 20px;
-				margin-top: 7px;
-				width: 195px;
-				height:45px;
-				margin-bottom: 3px;
+        width: 90px;
+				height: 100%;
+				align-items: center;
+      }
+			#h_groupa img {
+				width: 100%;
 			}
 
 			#h_groupb {
-        	position: relative;
-                width: calc(100% - 355px);
-                margin-top: auto;
-                margin-bottom: auto;
+				display: flex;
+				justify-content: space-between;
+				flex-direction: row;
+				height: 100%;
+				align-items: center;
+				margin-left: 35px;
 			}
 
 			.h_high_resolution{
@@ -64,17 +58,13 @@ body {
 
 			.h_small_resolution{
 					display: none;
-					text-align: center;
 			}
-
 			.h_small_resolution img{
 				height: 25px;
 				width: 25px;
 			}
-
 			.h_small_resolution img:hover{
 				color: orange;
-
 			}
 
 			.vertical_menu{
@@ -92,71 +82,62 @@ body {
 				left: 50%;
 				width: 140px;
 			}
-
 			#h_vertical_menu .nav_element{
 				width: 130px;
 				text-align: center;
 				font-size: 1.85vw;
 			}
-
 			#h_vertical_menu .nav_element a{
 				color: white;
 			}
 
 
 			@media screen and (min-width: 1024px){
-
 				.h_high_resolution{
 					display: flex;
 				}
-
 			}
-
 			@media screen and (max-width: 1024px){
-
 				.h_small_resolution{
 					display: block;
 				}
 			}
 
       .nav_element {
-				font-family: 'Karla', sans-serif, Arial, Helvetica, "Liberation Sans", FreeSans;
-        font-weight: 400;
-				font-size: 1vw;
-				line-height: 9px;
-				padding-left: 5px;
-				padding-right: 5px;
-				margin-top: auto;
-				margin-bottom: auto;
-      	margin-right: auto;
-      	margin-left: auto;
+				font-family: 'Comfortaa', cursive;
+				font-weight: 400;
+				font-size: 0.90vw;
+				margin-left: 20px;
+				margin-right: 20px;
 			}
-
+			.nav_element h3 {
+				margin: 0;
+			}
 			.nav_element a {
-				color: #1a1c1c;
+				color: #898989;
 			}
-
-			.nav_element:hover a + .> {
-        color: #ffb912;
+			.nav_element:hover a {
+        color: #898989;
 			}
-
       .nav_element:hover .object {
         color: #1a1c1c;
       }
 
-
 				#h_groupc {
-					display: inline-flex;
+					display: flex;
 					flex-direction: row-reverse;
+					align-self: flex-end;
+					height: 100%;
+					width: auto;
 					margin-right: 20px;
-          text-align: right;
-          width: 176px;
+					align-items: center;
 				}
-
 				#h_usera {
-					display: inline-flex;
+					display: flex;
+					justify-content: space-between;
+					flex-direction: row;
+					align-items: center;
 				}
-
 				#h_userb {
 					display: flex;
 					width: auto;
@@ -164,78 +145,49 @@ body {
 					align-items: center;
 					text-align: center;
 					display: none;
-          margin-top: 0px;
           margin-right: 20px;
 				}
-
           #login_button{
             display: none;
           }
-
           #register_button{
             display: none;
           }
-
           #disconnect_button{
             display: none;
           }
-
-						.identification {
-							font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-							font-size: 15px;
-							text-align: center;
-							border: 2px solid;
-							border-color: #1a1c1c;
-							border-radius: 5px;
-							height: 20px;
-							width: 60px;
-							margin-top: auto;
-              margin-bottom: auto;
-							padding-top: 5px;
-							padding-bottom: 2px;
-							padding-left: 7px;
-							padding-right: 7px;
-						}
-
 						.identification:nth-child(2) {
 							margin-left: 20px;
+							background-color: #7566b6;
+							padding-top: 12.5px;
+							padding-bottom: 12.5px;
+							padding-left: 17.5px;
+							padding-right: 17.5px;
+							border-radius: 5px;
 						}
-
-						.identification a{
-							color: #1a1c1c;
-						}
-
-						.identification:hover {
-              transition: 0.2s;
-							background-color: #ffb912;
-							border-color: #ffb912;
-						}
-
-						.identification:hover a {
-              transition: 0.2s;
+						.identification:nth-child(2) a {
+							font-weight: bold;
+							font-size: 15px;
 							color: white;
 						}
-
-							.user_image{
-								margin-top: 3px;
-							}
-
+						.identification a{
+							font-family: 'Comfortaa', cursive;
+						}
+						.identification:nth-child(1) a {
+							color: #898989;
+						}
 							.user_image img {
 								height: 40px;
 								width: 40px;
 							}
-
 							.username {
 								font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 								font-size: 13px;
                 position: relative;
-                top: -3px;
 							}
-
 							.username a {
 								color: black;
 							}
-
 							.username a:hover {
                 transition: 0.2s;
 								color: #ff8d33;
@@ -244,7 +196,6 @@ body {
 	/* SECTION */
 
 	section {
-		margin-top: 35px;
 		margin-bottom: 105px;
 		height: auto;
 		position: relative;
@@ -254,6 +205,37 @@ body {
 	}
 
 	#sect1 {
+		width: 100%;
+	}
+	#top_info {
+		display: flex;
+		flex-direction: row;
+		background-color: #6456a1;
+		align-items: center;
+	}
+	#top_info img {
+		width: 35px;
+		height: 35px;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+	#top_info h3 {
+		color: white;
+		font-size: 21px;
+		font-family: 'Carrois Gothic SC', sans-serif;
+	}
+	#goto_solve_it {
+		background-color: #7566b6;
+		border-radius: 5px;
+		padding: 15px;
+		font-size: 25px;
+	}
+	.info_element {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#sect2 {
 		margin-bottom: 15px;
 		width: 95%;
 	}
@@ -300,7 +282,7 @@ body {
 			margin-top: 60px;
 		}
 
-		#sect2 {
+		#sect3 {
 		}
 
 		#info {

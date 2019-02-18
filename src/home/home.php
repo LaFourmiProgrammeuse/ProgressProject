@@ -40,20 +40,17 @@ include "../language/language.php";
 
 		<header>
 			<div id="h_groupa">
-				<div id="h_main_img"><img src="/images/programming_ants.svg" title="ProgrammingAnts Logo"/></div>
+				<img src="/images/logos/pa.svg" title="Programming Ants' Logo"/>
 			</div>
 
 			<div id="h_groupb">
-
 				<!-- Menu de navigation +700px -->
 				<div class="h_high_resolution">
-
-					<div class="nav_element nav_element_error_wiki"><h3><a href="#"> <span class="object">></span> ErrorWiki</a></h3></div>
-					<div class="nav_element"><h3><a href="../forum/forum.php"> <span class="object">></span> <?php echo _("Forum"); ?> </a></h3></div>
-					<div class="nav_element nav_element_projects"><h3><a href="#"> <span class="object">></span> <?php echo _("Projects"); ?> </a></h3></div>
-					<div class="nav_element nav_element_about"><h3><a href="#"> <span class="object">></span> <?php echo _("About"); ?> </a></h3></div>
-					<div class="nav_element nav_element_contact"><h3><a href="#"> <span class="object">></span> <?php echo _("Contact"); ?> </a></h3></div>
-
+					<div class="nav_element nav_element_error_wiki"><h3><a href="#">Solve it!</a></h3></div>
+					<div class="nav_element"><h3><a href="../forum/forum.php"><?php echo _("Forum"); ?> </a></h3></div>
+					<div class="nav_element nav_element_projects"><h3><a href="#"><?php echo _("Projects"); ?> </a></h3></div>
+					<div class="nav_element nav_element_about"><h3><a href="#"><?php echo _("About"); ?> </a></h3></div>
+					<div class="nav_element nav_element_contact"><h3><a href="#"><?php echo _("Contact"); ?> </a></h3></div>
 				</div>
 
 				<!-- Menu de navigation -700px -->
@@ -61,18 +58,14 @@ include "../language/language.php";
 					<img src="/images/menu.png" />
 
 					<div class="vertical_menu" id="h_vertical_menu">
-
-						<div class="nav_element nav_element_error_wiki"><h3><a href="#"> <span class="object"></span> ErrorWiki</a></h3></div>
-					<div class="nav_element"><h3><a href="../forum/forum.php"> <span class="object"></span> <?php echo _("Forum"); ?> </a></h3></div>
-					<div class="nav_element nav_element_projects"><h3><a href="#"> <span class="object"></span> <?php echo _("Projects"); ?> </a></h3></div>
-					<div class="nav_element nav_element_about"><h3><a href="#"> <span class="object"></span> <?php echo _("About"); ?> </a></h3></div>
-					<div class="nav_element nav_element_contact"><h3><a href="#"> <span class="object"></span> <?php echo _("Contact"); ?> </a></h3></div>
+						<div class="nav_element nav_element_error_wiki"><h3><a href="#">Solve it!</a></h3></div>
+						<div class="nav_element"><h3><a href="../forum/forum.php"><?php echo _("Forum"); ?> </a></h3></div>
+						<div class="nav_element nav_element_projects"><h3><a href="#"><?php echo _("Projects"); ?> </a></h3></div>
+						<div class="nav_element nav_element_about"><h3><a href="#"><?php echo _("About"); ?> </a></h3></div>
+						<div class="nav_element nav_element_contact"><h3><a href="#"><?php echo _("Contact"); ?> </a></h3></div>
 					</div>
-
 				</div>
-
 			</div>
-
 
 			<div id="h_groupc">
 				<div id="h_usera">
@@ -91,6 +84,14 @@ include "../language/language.php";
 <!-- SECTION -->
 
 		<section id="sect1">
+			<div id="top_info">
+				<div class="info_element"><img src="/images/icons/info.svg"></div>
+				<div class="info_element"><h3>Solve it ! Visit our wiki to find how to solve your coding errors</h3></div>
+				<div class="info_element"><h3><a id="goto_solve_it" href="#" title="A link to Solve it!">Click here</a></h3></div>
+			</div>
+		</section>
+
+		<section id="sect2">
 			<div id="illustration_text">
 				<article id="title">
 					<h1>MAKE PROGRAMMATION EASIER, LEARN FORM YOUR MISTAKES</h1>
@@ -103,7 +104,7 @@ include "../language/language.php";
 			</div>
 		</section>
 
-		<section id="sect2">
+		<section id="sect3">
 			<div id="info">
 				<p>Visit our forum and ask your questions <a href="../forum/forum.php">here</a>
 			</div>

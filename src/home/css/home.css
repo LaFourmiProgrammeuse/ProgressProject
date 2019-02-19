@@ -139,7 +139,7 @@ body {
 					justify-content: space-between;
 					align-items: center;
 					display: none;
-					margin-left: 25px;
+					margin-right: 25px;
 				}
           #login_button{
             display: none;
@@ -182,23 +182,28 @@ body {
 							color: #656565;
 						}
 							#user_image {
+								position: relative;
+								top: 5px;
+								margin-left: auto;
+								margin-right: auto;
+							}
+							#user_image img{
 								height: 40px;
 								width: 40px;
-								margin-top: auto;
-								margin-bottom: auto;
 							}
 							#user_username {
 								color: #6b247e;
 								font-family: 'Karla', cursive;
-								font-size: 1.1vw;
-								margin-top: auto;
-								margin-bottom: auto;
+								font-size: 13px;
+								position: relative;
+								top: -9px;
 							}
+
 
 	/* SECTION */
 
 	section {
-		margin-bottom: 38px;
+		margin-bottom: 30px;
 		height: auto;
 		position: relative;
 		min-width: 610px;

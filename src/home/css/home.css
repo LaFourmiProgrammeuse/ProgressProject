@@ -50,6 +50,18 @@ body {
 				width: calc(100% - 290px);
 			}
 
+			.nav_element {
+				margin-left: 20px;
+				margin-right: 20px;
+				margin-bottom: 15px;
+			}
+			.nav_element a {
+				color: #515151;
+				font-family: 'Karla', cursive;
+				font-weight: lighter;
+				font-size: 1.1vw;
+			}
+
 			.h_high_resolution{
 				display: none;
 				justify-content: space-between;
@@ -82,9 +94,13 @@ body {
 			#h_vertical_menu .nav_element{
 				width: 130px;
 				text-align: center;
+				margin-left: 0px;
+				margin-top: 3px;
+				margin-bottom: 3px;
 			}
 			#h_vertical_menu .nav_element a{
 				color: white;
+				font-size: 1.4vw;
 			}
 
 
@@ -96,19 +112,10 @@ body {
 			@media screen and (max-width: 1024px){
 				.h_small_resolution{
 					display: block;
+					position: absolute;
+					top: 18px;
+					left: 50%;
 				}
-			}
-
-      .nav_element {
-				margin-left: 20px;
-				margin-right: 20px;
-				margin-bottom: 15px;
-			}
-			.nav_element a {
-				color: #515151;
-				font-family: 'Karla', cursive;
-				font-weight: lighter;
-				font-size: 1.1vw;
 			}
 
 				#h_groupc {

@@ -73,10 +73,8 @@ include "../language/language.php";
 				</div>
 
 				<div id="h_userb">
-					<div id=user_image>
-						<img src="/images/no_user_image.png" />
-					</div>
-					<a id="user_username" href="../profile/profile.php">Kreyse</a>
+					<img id="user_image" src="/images/no_user_image.png" />
+					<a id="username" href="../profile/profile.php">Kreyse</a>
 				</div>
 			</div>
 		</header>
@@ -84,29 +82,25 @@ include "../language/language.php";
 <!-- SECTION -->
 
 		<section id="sect1">
-			<div id="top_info">
-				<div class="info_element"><img src="/images/icons/info.svg"></div>
-				<div class="info_element"><h3>Solve it ! Visit our wiki to find how to solve your coding errors</h3></div>
-				<div class="info_element"><h3><a id="goto_solve_it" href="#" title="A link to Solve it!">Click here</a></h3></div>
-			</div>
-		</section>
-
-		<section id="sect2">
-			<div id="illustration_text">
+			<div id="illust_text">
 				<article id="title">
 					<h1>MAKE PROGRAMMATION EASIER, LEARN FORM YOUR MISTAKES</h1>
-					<a href="#">Visit the Errorwiki</a>
+					<a href="#">Visit the forum</a>
 				</article>
 
-				<article id="illustration">
+				<article id="illus">
 					<img src="/images/home_illustration.svg" />
 				</article>
 			</div>
 		</section>
 
-		<section id="sect3">
-			<div id="info">
-				<p>Visit our forum and ask your questions <a href="../forum/forum.php">here</a>
+		<section id="sect2">
+			<div id="inf_area">
+				<div id="inf">
+					<img src="/images/icons/info.svg">
+					<h3>Solve it ! Visit our wiki to find how to solve your coding errors</h3>
+					<a id="link_to" href="#" title="A link to Solve it!">Click here</a>
+				</div>
 			</div>
 
 			<article>

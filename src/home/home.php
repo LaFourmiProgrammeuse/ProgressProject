@@ -73,8 +73,10 @@ include "../language/language.php";
 				</div>
 
 				<div id="h_userb">
-					<img id="user_image" src="/images/no_user_image.png" />
-					<a id="username" href="../profile/profile.php">Kreyse</a>
+					<div id=user_image>
+						<img src="/images/no_user_image.png" />
+					</div>
+					<a id="user_username" href="../profile/profile.php">Kreyse</a>
 				</div>
 			</div>
 		</header>

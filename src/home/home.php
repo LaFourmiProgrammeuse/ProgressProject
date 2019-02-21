@@ -84,25 +84,29 @@ include "../language/language.php";
 <!-- SECTION -->
 
 		<section id="sect1">
-			<div id="illust_text">
+			<div id="top_info">
+				<div class="info_element"><img src="/images/icons/info.svg"></div>
+				<div class="info_element"><h3>Solve it ! Visit our wiki to find how to solve your coding errors</h3></div>
+				<div class="info_element"><h3><a id="goto_solve_it" href="#" title="A link to Solve it!">Click here</a></h3></div>
+			</div>
+		</section>
+
+		<section id="sect2">
+			<div id="illustration_text">
 				<article id="title">
 					<h1>MAKE PROGRAMMATION EASIER, LEARN FORM YOUR MISTAKES</h1>
-					<a href="#">Visit the forum</a>
+					<a href="#">Visit the Errorwiki</a>
 				</article>
 
-				<article id="illus">
+				<article id="illustration">
 					<img src="/images/home_illustration.svg" />
 				</article>
 			</div>
 		</section>
 
-		<section id="sect2">
-			<div id="inf_area">
-				<div id="inf">
-					<img src="/images/icons/info.svg">
-					<h3>Solve it ! Visit our wiki to find how to solve your coding errors</h3>
-					<a id="link_to" href="#" title="A link to Solve it!">Click here</a>
-				</div>
+		<section id="sect3">
+			<div id="info">
+				<p>Visit our forum and ask your questions <a href="../forum/forum.php">here</a>
 			</div>
 
 			<article>

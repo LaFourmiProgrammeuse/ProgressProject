@@ -110,8 +110,9 @@ include "../language/language.php";
 							<img class="a_logo" src="/images/icons/solve_it.svg">
 						</div>
 						<div class="element_text">
-							<p><b>Solve it !</b> is our main project on Programming Ants. It's goal is to help programmers to find what is wrong with their code when they
-								meet errors or bugs. Me and my friend didn't start this project yet, but we've got many ideas to get a nice final result. For the now we
+							<h3>Solve it !</h3>
+							<p>It is our main project on <b>Programming Ants</b>. It's goal is to <b>help programmers</b> to find what is wrong with their code when they
+								meet <b>errors or bugs</b>. Me and my friend didn't start this project yet, but we've got many ideas to get a nice final result. For the now we
 								continue to polish the entire website, working on some failed designs or little/big graphic bugs. This <b>Wiki</b> is the last step before
 								we start making little random softwares. We just hope everything will ok, so we can keep a fast workflow.
 							</p>
@@ -123,10 +124,10 @@ include "../language/language.php";
 							<img class="a_logo" src="/images/icons/forum.svg">
 						</div>
 						<div class="element_text">
-							<p><b>Solve it !</b> is our main project on Programming Ants. It's goal is to help programmers to find what is wrong with their code when they
-								meet errors or bugs. Me and my friend didn't start this project yet, but we've got many ideas to get a nice final result. For the now we
-								continue to polish the entire website, working on some failed designs or little/big graphic bugs. This <b>Wiki</b> is the last step before
-								we start making little random softwares. We just hope everything will ok, so we can keep a fast workflow.
+							<h3>Forum</h3>
+							<p>It is a place to <b>share your opinion or get some help from the community</b>. This is the first thing we've made after having a working website and we're
+								pretty proud of it, even <b>it is not finished</b>. The design is <b>not the final one</b>, and there are still <b>several bugs</b>. For the moment it is our best production,
+								and especially the most complex. In the future, maybe we will do even better.
 							</p>
 						</div>
 					</div>

@@ -13,7 +13,6 @@ footer{
   bottom: 0px;
   background-color: #f6f6f6;
   align-content: center;
-  color: black;
   box-shadow: 1px 1px 5px 1px #cfcfcf;
   }
 
@@ -21,13 +20,11 @@ footer{
   margin-top: 20px;
   text-align: center;
 }
-
 #footer_information_frame_1{
     position: relative;
     text-align: center;
     top: 10px;
 }
-
 #footer_information_frame_2{
     display: flex;
     justify-content: space-around;
@@ -43,12 +40,10 @@ footer{
     width: 80px;
     margin: 0px;
 }
-
 #label_contact{
     width: 80px;
     margin: 0px;
 }
-
 #label_uses_condition{
     width: 110px;
     margin: 0px;

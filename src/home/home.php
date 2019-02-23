@@ -104,60 +104,56 @@ include "../language/language.php";
 			</div>
 
 			<article>
-				<div id="articles">
-					<div class="article">
-						<div class="element_image"><img src="/images/errorwiki_illustration.svg" /></div>
-						<div class="element_text">
-							<p><b>The ErrorWiki is coming soon, just let us the time to finish the most important parts of our website and it will be ready for use !</b></p>
-							<br/>
-							<p>The <b>ErrorWiki</b> is the place you can find informations about any error/bug you meet while programming. It is made with the results
-							of our researches and experiences. If you think something is wrong or incomplete just reply us, we will correct it as fast as we can.
-						</div>
+				<div id="s_groupa">
+					<div class="a1">
+						<img class="a_logo" src="/images/icons/solve_it.svg">
+					<div class="element_text">
+						<p><b>Solve it !</b> is our main project on Programming Ants. It's goal is to help programmers to find what is wrong with their code when they
+							meet errors or bugs. Me and my friend didn't start this project yet, but we've got many ideas to get a nice final result. For the now we
+							continue to polish the entire website, working on some failed designs or little/big graphic bugs. This <b>Wiki</b> is the last step before
+							we start making little random softwares. We just hope everything will ok, so we can keep a fast workflow.
+						</p>
+					</div>
 					</div>
 
-						<div class="article">
-							<div class="element_text">
-							<p><b>The Forum is coming soon, just let us the time to finish the most important parts of our website and it will be ready for use !</b></p>
-							<br/>
-							<p>The <b>Forum</b> is the place where you can discuss with the ProgrammingAnts community about coding, or also to follow the news.
-							<p id="link_forum_article"><a href="../forum/forum.php" title="Forum" >Click here to visit the Forum</a></p>
-							</div>
-						</div>
+					<div class="a1">
+						<img class="a_logo" src="/images/icons/forum.svg">
+					<div class="element_text">
+					</div>
+						<p>The <b>forum</b> is where you can ask questions about coding to the community, you can also share on it your opinion on a subject.
+						</p>
+					</div>
+				</div>
 
-						<div class="article">
-							<div class="element_text">
-								<p><b>Projects are coming soon, just let us the time to finish the most important parts of our website and it will be ready for use !</b></p>
-							</div>
-						</div>
-
-						<div class="article">
-							<div class="element_text">
-								<p><b>Programming Ants</b> is a project we started to push our limits in programmation and to try making something that can help people. For the moment, our website is <b>very limited in content</b>,
+				<div id="s_groupb">
+					<div class="a2">
+						<div class="element_text">
+							<p><b>Programming Ants</b> is a project we started to push our limits in programmation and to try making something that can help people. For the moment, our website is <b>very limited in content</b>,
 								we can't work faster because we still learning programmation languages (HTML5, PHP, CSS3, JS, ...) to realize what we want to do. Also, we are only <b>two persons behind this project</b>, and it's difficult to work fast,
 								mostly when we have to solve <b>bugs and mistakes</b>. We are only teens, so this has a big impact on the way we are working on our website, because we need to study for school. But time passes, and the website is
 								getting built slowly !
-							</div>
 						</div>
+					</div>
 
-						<div class="article">
-							<div class="element_text">
-								<p><b>Support us !</b></p>
-								<p>You can download our wallpapers and share them to your friends to support us !</p>
-							</div>
-							<div id="overview">
-								<div class="wallpaper"><a href="/content/download_content.php?content_name=download_pawallpaper1440x900_1.png"><img src="/content/download_pawallpaper1440x900_1.png" /></a></div>
-							</div>
+					<div class="a2">
+						<div class="element_text">
+							<p><b>Support us !</b></p>
+							<p>You can download our wallpapers and share them to your friends to support us !</p>
 						</div>
+						<div id="overview">
+							<div class="wallpaper"><a href="/content/download_content.php?content_name=download_pawallpaper1440x900_1.png"><img src="/content/download_pawallpaper1440x900_1.png" /></a></div>
+						</div>
+					</div>
 
-							<div class="article">
-								<div class="element_text">
-								<p>If you want to contact us :</p>
-								<p><b>Programming Ants</b> contact e-mail adress : <a href="mailto:contact@programming-ants.ovh" title="Contact us !">contact@programming-ants.ovh</a></p>
-								</div>
-							</div>
+					<div class="a2">
+						<div class="element_text">
+						<p>If you want to contact us :</p>
+						<p><b>Programming Ants</b> contact e-mail adress : <a href="mailto:contact@programming-ants.ovh" title="Contact us !">contact@programming-ants.ovh</a></p>
 						</div>
-					</article>
-				</section>
+					</div>
+				</div>
+			</article>
+		</section>
 
 <!-- ASIDE -->
 

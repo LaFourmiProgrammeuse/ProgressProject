@@ -210,7 +210,7 @@ header {
 							}
 
 
-	/* SECTION */
+/* SECTION */
 
 	section {
 		margin-bottom: 30px;
@@ -475,13 +475,30 @@ article {
   margin-bottom: 15px;
   height: auto;
 	width: 75%;
-  background-color: white;
 }
 
-#articles {
+#s_groupa, #s_groupb {
 	display: flex;
-	flex-direction: column;
+}
+#s_groupa {
 	justify-content: space-between;
+	flex-direction: row;
+}
+.a1 {
+	background-color: #f9f9f9;
+	border-radius: 10px;
+	width: 45%;
+	padding: 15px;
+}
+.a1 img {
+	width: 60px;
+	height: 60px;
+	float: left;
+	margin-right: 15px;
+}
+#s_groupb {
+	flex-direction: column;
+	margin-top: 45px;
 }
 
 .article {
@@ -522,13 +539,12 @@ article {
               top: 7px;
             }
 
-              .article:nth-child(5) a img {
-                width: 25%;
-								border: 1px solid black;
-              }
-
 							#overview {
 								display: flex;
+							}
+							#overview img {
+								width: 25%;
+								border: 1px solid black;
 							}
 
 	/* ASIDE */

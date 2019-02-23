@@ -16,7 +16,7 @@ include "../language/language.php";
 	<link rel="stylesheet" type="text/css" href="css/home.css">
 	<link rel="stylesheet" type="text/css" href="../footer.css">
 	<meta charset="utf-8"/>
-	<title><?php echo _("Home");?> ProgAnts</title>
+	<title><?php echo _("Home");?></title>
 
 	<script type="text/javascript" src="../framework_javascript/jquery.js"></script>
 	<script type="text/javascript" src="javascript/home.js"></script>
@@ -74,7 +74,7 @@ include "../language/language.php";
 
 				<div id="h_userb">
 					<img id="user_image" src="/images/no_user_image.png" />
-					<a id="username" href="../profile/profile.php">Kreyse</a>
+					<a id="username" href="../profile/profile.php"></a>
 				</div>
 			</div>
 		</header>
@@ -84,7 +84,7 @@ include "../language/language.php";
 		<section id="sect1">
 			<div id="illust_text">
 				<article id="title">
-					<h1>MAKE PROGRAMMATION EASIER, LEARN FORM YOUR MISTAKES</h1>
+					<h1>MAKE PROGRAMMATION EASIER, LEARN FROM YOUR MISTAKES</h1>
 					<a href="#">Visit the forum</a>
 				</article>
 
@@ -106,22 +106,29 @@ include "../language/language.php";
 			<article>
 				<div id="s_groupa">
 					<div class="a1">
-						<img class="a_logo" src="/images/icons/solve_it.svg">
-					<div class="element_text">
-						<p><b>Solve it !</b> is our main project on Programming Ants. It's goal is to help programmers to find what is wrong with their code when they
-							meet errors or bugs. Me and my friend didn't start this project yet, but we've got many ideas to get a nice final result. For the now we
-							continue to polish the entire website, working on some failed designs or little/big graphic bugs. This <b>Wiki</b> is the last step before
-							we start making little random softwares. We just hope everything will ok, so we can keep a fast workflow.
-						</p>
-					</div>
+						<div class="element_icon">
+							<img class="a_logo" src="/images/icons/solve_it.svg">
+						</div>
+						<div class="element_text">
+							<p><b>Solve it !</b> is our main project on Programming Ants. It's goal is to help programmers to find what is wrong with their code when they
+								meet errors or bugs. Me and my friend didn't start this project yet, but we've got many ideas to get a nice final result. For the now we
+								continue to polish the entire website, working on some failed designs or little/big graphic bugs. This <b>Wiki</b> is the last step before
+								we start making little random softwares. We just hope everything will ok, so we can keep a fast workflow.
+							</p>
+						</div>
 					</div>
 
 					<div class="a1">
-						<img class="a_logo" src="/images/icons/forum.svg">
-					<div class="element_text">
-					</div>
-						<p>The <b>forum</b> is where you can ask questions about coding to the community, you can also share on it your opinion on a subject.
-						</p>
+						<div class="element_icon">
+							<img class="a_logo" src="/images/icons/forum.svg">
+						</div>
+						<div class="element_text">
+							<p><b>Solve it !</b> is our main project on Programming Ants. It's goal is to help programmers to find what is wrong with their code when they
+								meet errors or bugs. Me and my friend didn't start this project yet, but we've got many ideas to get a nice final result. For the now we
+								continue to polish the entire website, working on some failed designs or little/big graphic bugs. This <b>Wiki</b> is the last step before
+								we start making little random softwares. We just hope everything will ok, so we can keep a fast workflow.
+							</p>
+						</div>
 					</div>
 				</div>
 

@@ -345,11 +345,10 @@ section {
 	width: 225px;
 	color: white;
 	font-size: 1.75vw;
-	margin-top: 40px;
+	margin-top: 20px;
 	font-family: 'Karla', sans-serif;
 	text-align: center;
 	padding: 10px;
-	border-radius: 5px;
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -370,7 +369,6 @@ section {
   right: 0;
   bottom: 0;
   background: #63d6a7;
-	border-radius: 5px;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 0 50%;
@@ -485,6 +483,8 @@ article {
 	flex-direction: row;
 }
 .a1 {
+	justify-content: space-between;
+	flex-direction: row;
 	background-color: #f9f9f9;
 	border-radius: 10px;
 	width: 45%;
@@ -493,8 +493,6 @@ article {
 .a1 img {
 	width: 60px;
 	height: 60px;
-	float: left;
-	margin-right: 15px;
 }
 #s_groupb {
 	flex-direction: column;

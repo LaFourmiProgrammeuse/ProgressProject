@@ -197,6 +197,7 @@ header {
 								position: relative;
 								margin-left: auto;
 								margin-right: auto;
+								top: 3px;
 							}
 							#user_image img{
 								height: 40px;
@@ -207,7 +208,7 @@ header {
 								font-family: 'Karla', cursive;
 								font-size: 1.15vw;
 								position: relative;
-								top: -11px;
+								top: -9px;
 							}
 
 

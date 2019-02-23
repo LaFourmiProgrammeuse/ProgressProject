@@ -42,6 +42,17 @@ section {
   background-color: #2f2c2c;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
+	align-items: center;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#top_nav .nav_element{
+	margin-bottom: 0px;
+}
+
+#top_nav .nav_element img{
+	width: 20px;
 }
 
 .modal_background{

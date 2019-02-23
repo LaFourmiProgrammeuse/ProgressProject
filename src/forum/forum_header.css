@@ -14,6 +14,11 @@ header {
 	height: 100%;
 	align-items: center;
 }
+
+#h_groupa a {
+	width: 100%;
+}
+
 #h_groupa img {
 	width: 100%;
 }
@@ -135,7 +140,7 @@ header {
 					display: flex;
 					flex-direction: row;
 					justify-content: space-between;
-					align-items: center;
+					text-align: center;
 					display: none;
 					margin-right: 25px;
 				}
@@ -183,6 +188,7 @@ header {
 								position: relative;
 								margin-left: auto;
 								margin-right: auto;
+								top: 3px;
 							}
 							#user_image img{
 								height: 40px;
@@ -193,5 +199,5 @@ header {
 								font-family: 'Karla', cursive;
 								font-size: 1.15vw;
 								position: relative;
-								top: -11px;
+								top: -9px;
 							}

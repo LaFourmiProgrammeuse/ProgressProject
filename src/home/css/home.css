@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Karla:400,700');
-@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:700,800');
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
 
 a {
 	text-decoration: none;
@@ -344,7 +343,7 @@ section {
 }
 #title a {
 	background-color: #63d6a7;
-	width: 225px;
+	width: 35%;
 	color: white;
 	font-size: 1.75vw;
 	margin-top: 20px;
@@ -405,17 +404,20 @@ section {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	width: 750px;
+	width: 50%;
 	height: 60px;
 	margin-left: auto;
 	margin-right: auto;
 }
 #inf_area  img {
-	width: 35px;
-	height: 35px;
+	min-width: 10px;
+	min-height: 10px;
+	max-width: 35px;
+	max-height: 35px;
 	margin-top: auto;
 	margin-bottom: auto;
 	margin-right: 15px;
+	margin-left: auto;
 }
 #inf_area  h3 {
 	color: white;
@@ -423,6 +425,7 @@ section {
 	font-family: 'Karla', cursive;
 }
 #link_to {
+	width: 15%;
 	color: #6b247e;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
@@ -432,6 +435,7 @@ section {
 	border-radius: 5px;
 	padding: 7.5px;
 	margin-left: 15px;
+	margin-right: auto;
 }
 @-webkit-keyframes hvr-pulse-shrink {
   to {
@@ -493,7 +497,8 @@ article {
 }
 .a1 h3 {
 	font-size: 1.75vw;
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
 	color: #747474;
 	margin-top: 5px;
 	margin-bottom: 0;
@@ -504,11 +509,15 @@ article {
 }
 .a1 p {
 	font-size: 1.25vw;
-	line-height: 25px;
-	font-family: 'Quicksand', sans-serif;
+	line-height: 150%;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
 	margin-top: 10px;
 	color: #747474;
 	padding-top: 10px;
+}
+.semi_bold {
+	font-weight: 500;
 }
 .element_icon {
 	width: 60px;

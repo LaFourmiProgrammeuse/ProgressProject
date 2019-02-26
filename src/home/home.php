@@ -127,8 +127,8 @@ include "../language/language.php";
 						</div>
 						<div class="element_text">
 							<h3>Forum</h3>
-							<p>It is a place to <b>share your opinion or get some help from the community</b>. This is the first thing we've made after having a working website and we're
-								pretty proud of it, even <b>it is not finished</b>. The design is <b>not the final one</b>, and there are still <b>several bugs</b>. For the moment it is our best production,
+							<p>It is a place to <span class="semi_bold">share your opinion or get some help from the community</span>. This is the first thing we've made after having a working website and we're
+								pretty proud of it, even <span class="semi_bold">it is not finished</span>. The design is <span class="semi_bold">not the final one</span>, and there are still <span class="semi_bold">several bugs</span>. For the moment it is our best production,
 								and especially the most complex. In the future, maybe we will do even better.
 							</p>
 						</div>
@@ -138,9 +138,9 @@ include "../language/language.php";
 				<div id="s_groupb">
 					<div class="a2">
 						<div class="element_text">
-							<p><b>Programming Ants</b> is a project we started to push our limits in programmation and to try making something that can help people. For the moment, our website is <b>very limited in content</b>,
-								we can't work faster because we still learning programmation languages (HTML5, PHP, CSS3, JS, ...) to realize what we want to do. Also, we are only <b>two persons behind this project</b>, and it's difficult to work fast,
-								mostly when we have to solve <b>bugs and mistakes</b>. We are only teens, so this has a big impact on the way we are working on our website, because we need to study for school. But time passes, and the website is
+							<p><span class="semi_bold">Programming Ants</span> is a project we started to push our limits in programmation and to try making something that can help people. For the moment, our website is <span class="semi_bold">very limited in content</span>,
+								we can't work faster because we still learning programmation languages (HTML5, PHP, CSS3, JS, ...) to realize what we want to do. Also, we are only <span class="semi_bold">two persons behind this project</span>, and it's difficult to work fast,
+								mostly when we have to solve <span class="semi_bold">bugs and mistakes</span>. We are only teens, so this has a big impact on the way we are working on our website, because we need to study for school. But time passes, and the website is
 								getting built slowly !
 						</div>
 					</div>

@@ -7,6 +7,8 @@ include "../language/language.php";
 
 //echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
+error_reporting(E_ALL);
+
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +17,7 @@ include "../language/language.php";
 
 	<link rel="stylesheet" type="text/css" href="css/home.css">
 	<link rel="stylesheet" type="text/css" href="../footer.css">
+	<link rel="stylesheet" type="text/css" href="../widgets/simple_image_viewer/simple_image_viewer.css">
 	<meta charset="utf-8"/>
 	<title><?php echo _("Home");?></title>
 
@@ -87,7 +90,7 @@ include "../language/language.php";
 			<div id="illust_text">
 				<article id="title">
 					<h1>MAKE PROGRAMMATION EASIER, LEARN FROM YOUR MISTAKES</h1>
-					<a href="#">Visit the forum</a>
+					<a href="/src/forum/forum.php">Visit the forum</a>
 				</article>
 
 				<article id="illus">
@@ -154,6 +157,17 @@ include "../language/language.php";
 							<div class="wallpaper"><a href="/content/download_content.php?content_name=download_pawallpaper1440x900_1.png"><img src="/content/download_pawallpaper1440x900_1.png" /></a></div>
 						</div>
 					</div>
+
+					<?php
+					include "../widgets/simple_image_viewer/simple_image_viewer.php";
+					$siv = new SimpleImageViewer();
+					$siv->setImageViewerId("1");
+					$siv->addImage("../../content/download_pawallpaper1440x900_1.png");
+					$siv->addImage("../../images/4046_386_plan_metroB_2017.jpg");
+					$siv->addImage("../../images/thumb-1920-430892.png");
+					$siv->setMandatoryPartOfUrl("?");
+					$siv->createHtmlCode();
+					?>
 
 					<div class="a2">
 						<div class="element_text">

@@ -339,7 +339,7 @@ section {
 	font-family: 'Montserrat', sans-serif;
 	margin-bottom: 0;
 	padding-left: 15px;
-	border-left: 10px solid #2b2a2a;
+	border-left: 10px solid #1a1c1c;
 }
 #title a {
 	background-color: #63d6a7;
@@ -404,13 +404,16 @@ section {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	width: 65%;
-	height: 65px;
+	width: 50%;
+	height: 60px;
 	margin-left: auto;
 	margin-right: auto;
 }
 #inf_area  img {
-	max-width: 5%;
+	min-width: 10px;
+	min-height: 10px;
+	max-width: 35px;
+	max-height: 35px;
 	margin-top: auto;
 	margin-bottom: auto;
 	margin-right: 15px;
@@ -422,7 +425,7 @@ section {
 	font-family: 'Karla', cursive;
 }
 #link_to {
-	width: 12.5%;
+	width: 15%;
 	color: #6b247e;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;

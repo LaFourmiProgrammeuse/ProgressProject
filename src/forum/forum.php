@@ -44,11 +44,11 @@
 
   <section>
     <div id="top_nav">
-      <div class="top_nav_e"><a href="?forum_part=home"><img src="/images/home.png" onmouseover="this.src='/images/home_hover.png'" onmouseout="this.src='/images/home.png'" /></a></div>
-      <div class="top_nav_e" "nav_element_latest"><a href="#">Latest</a></div>
-      <div class="top_nav_e"><a href="?forum_part=forums">Forums</a></div>
-      <div class="top_nav_e" "nav_element_last_activity"><a href="#">Last activity</a></div>
-      <div class="top_nav_e" "nav_element_stats"><a href="#">Stats</a></div>
+      <div class="nav_element"><a href="?forum_part=home"><img src="/images/home.png" onmouseover="this.src='/images/home_hover.png'" onmouseout="this.src='/images/home.png'" /></a></div>
+      <div class="nav_element nav_element_latest"><h3><a href="#">Latest</a></h3></div>
+      <div class="nav_element"><h3><a href="?forum_part=forums">Forums</a></h3></div>
+      <div class="nav_element nav_element_last_activity"><h3><a href="#">Last activity</a></h3></div>
+      <div class="nav_element nav_element_stats"><h3><a href="#">Stats</a></h3></div>
     </div>
 
     <div id="forum_content">

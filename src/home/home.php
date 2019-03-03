@@ -138,6 +138,7 @@ include "../language/language.php";
 				<div id="s_groupb">
 					<div class="a2">
 						<div class="element_text">
+							<a href="../tpe/site_tpe/Accueil/accueil.html">Un lien temporaire mdr</a>
 							<p><span class="semi_bold">Programming Ants</span> is a project we started to push our limits in programmation and to try making something that can help people. For the moment, our website is <span class="semi_bold">very limited in content</span>,
 								we can't work faster because we still learning programmation languages (HTML5, PHP, CSS3, JS, ...) to realize what we want to do. Also, we are only <span class="semi_bold">two persons behind this project</span>, and it's difficult to work fast,
 								mostly when we have to solve <span class="semi_bold">bugs and mistakes</span>. We are only teens, so this has a big impact on the way we are working on our website, because we need to study for school. But time passes, and the website is

@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700,800');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
+
 a {
 	text-decoration: none;
 }
@@ -8,7 +12,6 @@ p {
 
 body {
 	position: relative;
-	background-color: white;
 	margin: 0;
 	padding: 0;
 }
@@ -21,37 +24,32 @@ body {
 /* SECTION */
 
 section {
-  margin-bottom: 180px;
-  background-color: white;
-	height: auto;
-	width: 90%;
+  margin-bottom: 30px;
+	width: 80%;
   position: relative;
-	min-width: 610px;
+	min-width: 45%;
   top: 50px;
   margin-left: auto;
   margin-right: auto;
-  border-top-left-radius: 26px;
-  border-top-right-radius: 26px;
-  border: 2px solid #2f2c2c;
 }
 
 #top_nav {
   display: flex;
-	justify-content: space-between;
+	height: 60px;
+	flex-direction: row;
   position: relative;
-  background-color: #2f2c2c;
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
+  background-color: #2b2a2a;
 	align-items: center;
-	padding-left: 20px;
-	padding-right: 20px;
 }
-
-#top_nav .nav_element{
+#top_nav .top_nav_e {
 	margin-bottom: 0px;
+	margin-left: 25px;
 }
-
-#top_nav .nav_element img{
+#top_nav .top_nav_e a {
+	color: white;
+	font-family: 'Karla', cursive;
+}
+#top_nav .top_nav_e img {
 	width: 20px;
 }
 

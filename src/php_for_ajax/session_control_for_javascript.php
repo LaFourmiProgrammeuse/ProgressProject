@@ -16,4 +16,8 @@
     }
     echo "</session>";
 
+    if($_SESSION['animation_connection'] == 'true'){
+      $_SESSION['animation_connection'] = 'false';
+    }
+
  ?>

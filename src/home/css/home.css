@@ -273,7 +273,7 @@ header {
 }
 #disconnect_button{
   display: none;
-	background-color: #6b247e;
+	background-color: #ffc25f;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 27.5px;
@@ -286,7 +286,7 @@ header {
 
 .identification:nth-child(2) {
 	margin-left: 20px;
-	background-color: #6b247e;
+	background-color: #ffc25f;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 27.5px;
@@ -339,10 +339,10 @@ section {
 	font-family: 'Montserrat', sans-serif;
 	margin-bottom: 0;
 	padding-left: 15px;
-	border-left: 10px solid #1a1c1c;
+	border-left: 8px solid #1a1c1c;
 }
 #title a {
-	background-color: #63d6a7;
+	background-color: #69b4ff;
 	width: 35%;
 	color: white;
 	font-size: 1.75vw;
@@ -369,7 +369,7 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #69b4ff;
+  background: #ffc25f;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 0 50%;
@@ -394,10 +394,10 @@ section {
 }
 
 #sect2 {
-		margin-top: 35px;
+		margin-top: 25px;
 }
 #inf_area {
-	background-color: #6b247e;
+	background-color: #ffc25f;
 	align-items: center;
 }
 #inf {
@@ -409,16 +409,6 @@ section {
 	margin-left: auto;
 	margin-right: auto;
 }
-#inf_area  img {
-	min-width: 10px;
-	min-height: 10px;
-	max-width: 35px;
-	max-height: 35px;
-	margin-top: auto;
-	margin-bottom: auto;
-	margin-right: 15px;
-	margin-left: auto;
-}
 #inf_area  h3 {
 	color: white;
 	font-size: 1.2vw;
@@ -426,7 +416,7 @@ section {
 }
 #link_to {
 	width: 15%;
-	color: #6b247e;
+	color: #ffc25f;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	font-size: 1.25vw;

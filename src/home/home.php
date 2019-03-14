@@ -102,7 +102,6 @@ error_reporting(E_ALL);
 		<section id="sect2">
 			<div id="inf_area">
 				<div id="inf">
-					<img src="/images/icons/info.svg">
 					<h3>Solve it ! Visit our wiki to find how to solve your coding errors</h3>
 					<a id="link_to" href="#" title="A link to Solve it!">Click here</a>
 				</div>

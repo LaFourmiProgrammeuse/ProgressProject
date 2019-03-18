@@ -50,6 +50,18 @@ header {
 	margin-left: 30px;
 	width: calc(100% - 290px);
 }
+.nav_element {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.nav_element a {
+	color: #515151;
+	font-family: 'Karla', cursive;
+	font-weight: lighter;
+	font-size: 1.1vw;
+}
 
 .h_small_resolution{
 		display: none;
@@ -89,138 +101,8 @@ header {
 #h_vertical_menu .nav_element a{
 	color: white;
 }
-
-			.vertical_menu{
-				z-index: 5;
-			}
-
-			#h_vertical_menu{
-				flex-direction: column;
-				display: none;
-				position: absolute;
-				top: 37px;
-				border: solid 2px grey;
-				background-color: black;
-				transform: translate(-50%, 0);
-				left: 50%;
-				width: 140px;
-			}
-			#h_vertical_menu .nav_element{
-				width: 130px;
-				text-align: center;
-				margin-left: 0px;
-				margin-top: 3px;
-				margin-bottom: 3px;
-			}
-			#h_vertical_menu .nav_element a{
-				color: white;
-				font-size: 1.4vw;
-			}
-
-
-			@media screen and (min-width: 1024px){
-				.h_high_resolution{
-					display: flex;
-				}
-			}
-			@media screen and (max-width: 1024px){
-				.h_small_resolution{
-					display: block;
-				}
-			}
-
-				#h_groupc {
-					display: flex;
-					flex-direction: row-reverse;
-					align-self: flex-end;
-					height: 100%;
-					width: 375px;
-					margin-right: 75px;
-					align-items: center;
-				}
-				#h_usera {
-					display: flex;
-					justify-content: space-between;
-					flex-direction: row;
-					align-items: center;
-				}
-				#h_userb {
-					display: flex;
-					flex-direction: row;
-					justify-content: space-between;
-					align-items: center;
-					display: none;
-					margin-right: 25px;
-				}
-          #login_button{
-            display: none;
-          }
-          #register_button{
-            display: none;
-          }
-          #disconnect_button{
-            display: none;
-						background-color: #6b247e;
-						padding-top: 10px;
-						padding-bottom: 10px;
-						padding-left: 27.5px;
-						padding-right: 27.5px;
-						border-radius: 5px;
-          }
-					#disconnect_button a {
-						color: white;
-					}
-
-						.identification:nth-child(2) {
-							margin-left: 20px;
-							background-color: #6b247e;
-							padding-top: 10px;
-							padding-bottom: 10px;
-							padding-left: 27.5px;
-							padding-right: 27.5px;
-							border-radius: 5px;
-						}
-						.identification:nth-child(2) a {
-							font-weight: bold;
-							font-size: 1.3vw;;
-							color: white;
-						}
-						.identification a {
-							font-family: 'Karla', cursive;
-						}
-						.identification:nth-child(1) a {
-							font-size: 1.1vw;
-							color: #656565;
-						}
-							#user_image {
-								position: relative;
-								margin-left: auto;
-								margin-right: auto;
-								top: 3px;
-							}
-							#user_image img{
-								height: 40px;
-								width: 40px;
-							}
-							#user_username {
-								color: #6b247e;
-								font-family: 'Karla', cursive;
-								font-size: 1.15vw;
-								position: relative;
-								top: -9px;
-							}
-
-
-/* SECTION */
-
-	section {
-		margin-bottom: 30px;
-		height: auto;
-		position: relative;
-		min-width: 610px;
-		margin-left: auto;
-		margin-right: auto;
-	}
+@media screen and (min-width: 1024px){
+	.h_high_resolution{
 		display: flex;
 	}
 }
@@ -228,18 +110,6 @@ header {
 	.h_small_resolution{
 		display: block;
 	}
-}
-
-.nav_element {
-	margin-left: 20px;
-	margin-right: 20px;
-	margin-bottom: 15px;
-}
-.nav_element a {
-	color: #515151;
-	font-family: 'Karla', cursive;
-	font-weight: lighter;
-	font-size: 1.1vw;
 }
 
 #h_groupc {
@@ -251,39 +121,6 @@ header {
 	margin-right: 75px;
 	align-items: center;
 }
-#h_usera {
-	display: flex;
-	justify-content: space-between;
-	flex-direction: row;
-	align-items: center;
-}
-#h_userb {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	text-align: center;
-	display: none;
-	margin-left: 25px;
-}
-#login_button{
-  display: none;
-}
-#register_button{
-  display: none;
-}
-#disconnect_button{
-  display: none;
-	background-color: #ffc25f;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 27.5px;
-	padding-right: 27.5px;
-	border-radius: 5px;
-}
-#disconnect_button a {
-	color: white;
-}
-
 .identification:nth-child(2) {
 	margin-left: 20px;
 	background-color: #ffc25f;
@@ -304,6 +141,55 @@ header {
 .identification:nth-child(1) a {
 	font-size: 1.1vw;
 	color: #656565;
+}
+
+#h_usera {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+}
+#login_button{
+  display: none;
+}
+#register_button{
+  display: none;
+}
+#h_userb {
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	display: none;
+	margin-left: 25px;
+}
+#user_image {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: 3px;
+}
+#user_image img{
+	height: 40px;
+	width: 40px;
+}
+#user_username {
+	color: #6b247e;
+	font-family: 'Karla', cursive;
+	font-size: 1.15vw;
+	position: relative;
+	top: -9px;
+}
+#disconnect_button{
+  display: none;
+	background-color: #ffc25f;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 27.5px;
+	padding-right: 27.5px;
+	border-radius: 5px;
+}
+#disconnect_button a {
+	color: white;
 }
 
 /* SECTION */

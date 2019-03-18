@@ -86,24 +86,29 @@ error_reporting(E_ALL);
 
 <!-- SECTION -->
 
-		<section id="sect1">
-			<div id="illust_text">
-				<article id="title">
-					<h1>MAKE PROGRAMMATION EASIER, LEARN FROM YOUR MISTAKES</h1>
+		<section id="sec_1">
+			<div id="welcome_t">
+				<div id="title">
+					<h1>Make programmation easier,<br>learn from your mistakes
+					</h1>
+				</div>
+				<div id="link">
 					<a href="/src/forum/forum.php">Visit the forum</a>
-				</article>
+				</div>
+			</div>
 
-				<article id="illus">
-					<img src="/images/home_illustration.svg" />
-				</article>
+			<div id="welcome_i">
+				<img src="/images/illustrations/home_i.svg" />
 			</div>
 		</section>
 
-		<section id="sect2">
-			<div id="inf_area">
-				<div id="inf">
+		<section id="sec_2">
+			<div id="inf_box">
+				<div class="inf_area">
 					<h3>Solve it ! Visit our wiki to find how to solve your coding errors</h3>
-					<a id="link_to" href="#" title="A link to Solve it!">Click here</a>
+				</div>
+				<div class="inf_area">
+					<a id="link_to" href="#" title="A link to Solve it !">Click here for more informations</a>
 				</div>
 			</div>
 

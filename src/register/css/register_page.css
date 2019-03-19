@@ -198,6 +198,7 @@ body {
 			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
 			border: 2px solid white;
 			color: white;
+      display: none;
     }
 
     #message_error_bad_filled {

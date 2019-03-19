@@ -489,12 +489,12 @@ function Validation(){
 
 $(document).ready(function(){
 
-    $("#message_error_password").hide();
+    /*$("#message_error_password").hide();
     $("#message_error_confirmation_password").hide();
     $("#message_error_email").hide();
     $("#message_error_nickname").hide();
 
-    $("#message_error_bad_filled").hide();
+    $("#message_error_bad_filled").hide();*/
 
 /* NICKNAME INPUT */
 $("#nickname").change(function(){
@@ -651,10 +651,10 @@ $("#send").click(function(){
         $("form").submit();
     }
     else{
-        $("#message_error_nickname").hide(300);
-        $("#message_error_confirmation_password").hide(300);
-        $("#message_error_password").hide(300);
-        $("#message_error_email").hide(300);
+        $("#message_error_nickname").hide();
+        $("#message_error_confirmation_password").hide();
+        $("#message_error_password").hide();
+        $("#message_error_email").hide();
 
         $("#message_error_bad_filled").show();
     }

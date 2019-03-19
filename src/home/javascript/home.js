@@ -1,6 +1,9 @@
 var session_username;
 var connected;
 
+var siv1_index = 0;
+var siv1_images = ["/images/thumb-1920-430892.png", "/images/4046_386_plan_metroB_2017.jpg", "/images/ajax-loader_2.gif"];
+
 function hideMessageConnection(){
 
     $("#reconnection").animate({right: '-=210'}, 2000);
@@ -52,27 +55,77 @@ function requestSessionData(){
 
 }
 
-/*var last_scroll_pos_y = 0;
+  // WIDGETS
 
-function window_scrolled(){
+//SIV init
+function load_siv1(){
 
-    new_scroll_pos_y = document.body.scrollTop;
+  $.ajax({
+          method: "POST",
+          url: "/src/widgets/simple_image_viewer/simple_image_viewer.php",
+          dataType: "html",
+          data: {index: siv1_index, images: siv1_images},
+          success: function(html_response){
+              $("#siv_1").html(html_response);
+              init_siv1_event();
+          },
+          error: function(error, status, http_status){
+            console.log("Error during siv loading : "+status+", "+http_status);
+          }
+  });
 
-    if(new_scroll_pos_y > last_scroll_pos_y){
-        $("header").css("visibility", "hidden")
-    }
-    else if(new_scroll_pos_y < last_scroll_pos_y){
-        $("header").css("visibility", "visible");
-    }
+}
 
-    last_scroll_pos_y = new_scroll_pos_y;
-}*/
+function siv_previous_index(index, images){
+
+  if(index-1 >= 0){
+    new_index = index-1;
+  }
+  else{
+    new_index = images.length-1;
+  }
+
+  return new_index;
+}
+
+function siv_next_index(index, images){
+
+  if(index+1 <= images.length-1){
+    new_index = index+1;
+  }
+  else{
+    new_index = 0;
+  }
+
+  return new_index;
+}
+
+function siv1_left_arrow_clicked(){
+  siv1_index = siv_previous_index(siv1_index, siv1_images);
+  load_siv1();
+}
+
+function siv1_right_arrow_clicked(){
+  siv1_index = siv_next_index(siv1_index, siv1_images);
+  load_siv1();
+}
+
+//SIV event
+function init_siv1_event(){
+
+  $("#siv_1 .left_arrow").click(function(){ console.log("g");
+    siv1_left_arrow_clicked();
+  });
+  $("#siv_1 .right_arrow").click(function(){
+    siv1_right_arrow_clicked();
+  });
+}
 
 $(document).ready(function(){
 
     $("#account").css("margin-left", "20px");
 
-    //window.onscroll = function() {window_scrolled();};
+    load_siv1();
 
     requestSessionData();
 
@@ -90,7 +143,7 @@ $(document).ready(function(){
     });
 
     $(".nav_element_contact").click(function(){
-       $("#modal_warning_no_content").css("display", "block"); 
+       $("#modal_warning_no_content").css("display", "block");
     });
 
     $("#modal_warning_no_content .modal_content").click(function(e){

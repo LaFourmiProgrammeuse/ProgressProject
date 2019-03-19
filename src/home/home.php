@@ -163,14 +163,18 @@ error_reporting(E_ALL);
 					</div>
 
 					<?php
-					include "../widgets/simple_image_viewer/simple_image_viewer.php";
-					$siv = new SimpleImageViewer();
-					$siv->setImageViewerId("1");
-					$siv->addImage("../../content/download_pawallpaper1440x900_1.png");
-					$siv->addImage("../../images/4046_386_plan_metroB_2017.jpg");
-					$siv->addImage("../../images/thumb-1920-430892.png");
-					$siv->setMandatoryPartOfUrl("?");
-					$siv->createHtmlCode();
+						echo "<div class='widget_simple_image_viewer' id='siv_1'>";
+
+					  //Contenu à charger en javascript
+						echo "<div class='widget_body'>";
+			        echo "<div class='left_arrow'><img src='/images/arrows/a_left.png' /></div>";
+			        echo "<div class='left_image'><img src='' /></div>";
+			        echo "<div class='central_image'><img src='' /></div>";
+			        echo "<div class='right_image'><img src='' /></div>";
+			        echo "<div class='right_arrow'><img src='/images/arrows/a_right.png' /></div>";
+			      echo "</div>";
+
+						echo "</div>";
 					?>
 
 					<div class="a2">

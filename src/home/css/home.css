@@ -21,6 +21,10 @@ body {
 #body_content{
   display: flex;
   flex-direction: column;
+	background-image: url("/images/backgrounds/home_i_background.svg");
+	background-position: 50% 12.5%;
+	background-repeat: no-repeat;
+	background-size: 98%;
 }
 
 /* HEADER */
@@ -234,9 +238,7 @@ section {
 	padding-right: 70px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	border-top-right-radius: 7.5px;
-	border-bottom-right-radius: 7.5px;
-	border-bottom-left-radius: 15px;
+	border-radius: 50px;
 	letter-spacing: 2px;
 }
 #welcome_i {

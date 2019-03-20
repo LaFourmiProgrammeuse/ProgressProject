@@ -21,10 +21,6 @@ body {
 #body_content{
   display: flex;
   flex-direction: column;
-	background-image: url("/images/backgrounds/home_i_background.svg");
-	background-position: 50% 12.5%;
-	background-repeat: no-repeat;
-	background-size: 98%;
 }
 
 /* HEADER */
@@ -211,6 +207,9 @@ section {
 	justify-content: space-between;
 	width: 90%;
 	margin-top: 60px;
+	background-image: url("/images/backgrounds/home_i_background.svg");
+	background-repeat: no-repeat;
+	background-position: left 0px top 50px;
 }
 #welcome_t {
 	display: flex;
@@ -219,16 +218,20 @@ section {
 #title {
 	text-align: left;
 	margin-top: 10px;
+	text-align: center;
 }
 #title h1 {
 	color: #1c1c1c;
-	font-size: 3.75vw;
+	font-size: 3.5vw;
 	font-family: 'Lobster', cursive;
-	margin-top: 10px;
+	margin-top: 25px;
 	margin: 0;
 	padding-bottom: 40px;
   letter-spacing: .05em;
   text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+}
+#link {
+	text-align: center;
 }
 #link a {
 	background-color: #191919;

@@ -144,7 +144,11 @@ error_reporting(E_ALL);
 
 				<div id="s_groupb">
 					<div class="a2">
+						<div class="element_icon">
+							<img class="a_logo" src="/images/icons/cogwheel.svg">
+						</div>
 						<div class="element_text">
+							<h3>The Project</h3>
 							<p><span class="semi_bold">Programming Ants</span> is a project we started to push our limits in programmation and to try making something that can help people. For the moment, our website is <span class="semi_bold">very limited in content</span>,
 								we can't work faster because we still learning programmation languages (HTML5, PHP, CSS3, JS, ...) to realize what we want to do. Also, we are only <span class="semi_bold">two persons behind this project</span>, and it's difficult to work fast,
 								mostly when we have to solve <span class="semi_bold">bugs and mistakes</span>. We are only teens, so this has a big impact on the way we are working on our website, because we need to study for school. But time passes, and the website is
@@ -153,14 +157,15 @@ error_reporting(E_ALL);
 					</div>
 
 					<div class="a2">
+						<div class="element_icon">
+							<img class="a_logo" src="/images/icons/heart.svg">
+						</div>
 						<div class="element_text">
-							<p><b>Support us !</b></p>
+							<h3>Support us !</h3>
 							<p>You can download our wallpapers and share them to your friends to support us !</p>
 						</div>
-						<div id="overview">
-							<div class="wallpaper"><a href="/content/download_content.php?content_name=download_pawallpaper1440x900_1.png"><img src="/content/download_pawallpaper1440x900_1.png" /></a></div>
-						</div>
 					</div>
+				</div>
 
 					<?php
 						echo "<div class='widget_simple_image_viewer' id='siv_1'>";

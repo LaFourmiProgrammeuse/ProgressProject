@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Karla:400,700');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:700,800');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
-@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One');
 
 a {
 	text-decoration: none;
@@ -205,14 +204,17 @@ section {
 	display: inline-flex;
 	justify-content: space-between;
 	width: 90%;
-	margin-top: 60px;
+	margin-top: 25px;
 	background-image: url("/images/backgrounds/home_i_background.svg");
 	background-repeat: no-repeat;
-	background-position: left 0px top 50px;
+	background-position: left 0px top -50px;
+	padding-top: 25px;
+	padding-bottom: 25px;
 }
 #welcome_t {
 	display: flex;
 	flex-direction: column;
+	width: 55%;
 }
 #title {
 	text-align: left;
@@ -221,13 +223,12 @@ section {
 }
 #title h1 {
 	color: #1c1c1c;
-	font-size: 3.5vw;
-	font-family: 'Lobster', cursive;
+	font-size: 3vw;
+	font-family: 'Rubik Mono One', sans-serif;
 	margin-top: 25px;
 	margin: 0;
 	padding-bottom: 40px;
-  letter-spacing: .05em;
-  text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+  text-shadow: 4px 4px 0px #e7e7e7;
 }
 #link {
 	text-align: center;
@@ -235,21 +236,22 @@ section {
 #link a {
 	background-color: #191919;
 	color: white;
-	font-size: 1.50vw;
-	font-family: 'Lobster', cursive;
+	font-size: 1vw;
+	font-family: 'Karla', cursive;
 	padding-left: 70px;
 	padding-right: 70px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	border-radius: 50px;
+	border-radius: 15px;
 	letter-spacing: 2px;
 }
 #welcome_i {
-	width: 42.5%;
+	width: 35%;
+	margin-right: 50px;
 }
 
 #sec_2 {
-		margin-top: 60px;
+		margin-top: 25px;
 }
 #inf_box {
 	display: flex;

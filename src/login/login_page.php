@@ -16,7 +16,7 @@
 					<div id="h_elements">
 						<div id="infa">
 							<h2>Log In to Programming Ants</h2>
-							<a href="../home/home.php" title="Return to the homepage"><img class="return" src="/images/icons/go_back.svg"></a>
+							<a href="../home/home.php" title="Return to the homepage"><img class="return" src="/images/icons/normal/return.svg"></a>
 						</div>
 						<div id="infb"><h3>If you are not registered yet, <a href="../register/register_page.php" title="Sign up page">click here</a> to join us !</h3></div>
 					</div>

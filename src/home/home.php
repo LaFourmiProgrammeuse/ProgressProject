@@ -116,7 +116,7 @@ error_reporting(E_ALL);
 				<div id="s_groupa">
 					<div class="a1">
 						<div class="element_icon">
-							<img class="a_logo" src="/images/icons/solve_it.svg">
+							<img class="a_logo" src="/images/icons/articles/solveit.svg">
 						</div>
 						<div class="element_text">
 							<h3>Solve it !</h3>
@@ -130,7 +130,7 @@ error_reporting(E_ALL);
 
 					<div class="a1">
 						<div class="element_icon">
-							<img class="a_logo" src="/images/icons/forum.svg">
+							<img class="a_logo" src="/images/icons/articles/forum.svg">
 						</div>
 						<div class="element_text">
 							<h3>Forum</h3>
@@ -145,7 +145,7 @@ error_reporting(E_ALL);
 				<div id="s_groupb">
 					<div class="a2">
 						<div class="element_icon">
-							<img class="a_logo" src="/images/icons/cogwheel.svg">
+							<img class="a_logo" src="/images/icons/articles/projects.svg">
 						</div>
 						<div class="element_text">
 							<h3>The Project</h3>
@@ -158,7 +158,7 @@ error_reporting(E_ALL);
 
 					<div class="a2">
 						<div class="element_icon">
-							<img class="a_logo" src="/images/icons/heart.svg">
+							<img class="a_logo" src="/images/icons/articles/support.svg">
 						</div>
 						<div class="element_text">
 							<h3>Support us !</h3>

@@ -14,7 +14,10 @@
 			<div id="body_content">
 				<header>
 					<div id="h_elements">
-						<div id="infa"><h2>Sign Up to Programming Ants</h2></div>
+						<div id="infa">
+							<h2>Sign Up to Programming Ants</h2>
+							<a href="../home/home.php" title="Return to the homepage"><img class="return" src="/images/icons/go_back.svg"></a>
+						</div>
 						<div id="infb"><h3>If you already have an existing account, <a href="../login/login_page.php" title="Log In page">click here</a> to log in !</h3></div>
 					</div>
 				</header>

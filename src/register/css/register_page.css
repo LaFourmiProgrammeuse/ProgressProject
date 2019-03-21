@@ -55,8 +55,9 @@ header {
 }
 
 #infa {
-	font-size: 25px;
+  display: inline-flex;
 	text-align: center;
+  width: 100%;
 }
 #infa h2 {
   color: #2d2d2d;
@@ -65,11 +66,21 @@ header {
   font-size: 1.75vw;
   padding-bottom: 10px;
   border-bottom: 1.5px solid #eeeeee;
+  margin-left: auto;
+}
+#infa a {
+  width: 2.5%;
+  margin-right: auto;
+}
+.return {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+  width: 100%;
 }
 
 #infb {
   margin-top: 10px;
-	font-size: 15px;
 	text-align: center;
 }
 #infb h3 {

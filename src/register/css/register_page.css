@@ -1,237 +1,219 @@
-@font-face {
-    font-family: 'source_code_proregular';
-    src: url('/fonts/sourcecodepro-regular-webfont.eot');
-    src: url('/fonts/sourcecodepro-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/sourcecodepro-regular-webfont.woff') format('woff'),
-         url('/fonts/sourcecodepro-regular-webfont.ttf') format('truetype'),
-         url('/fonts/sourcecodepro-regular-webfont.svg#source_code_proregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
 
 a {
-	color: white;
 	text-decoration: none;
 }
 
 body {
-	background-color: #1d1d1d;
 	margin: 0;
 	padding: 0;
 }
 
 #body_content{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-	/* Header */
+p {
+  margin: 0;
+}
+h2 {
+  margin: 0
+}
+h3{
+  margin: 0;
+}
+input::placeholder {
+  font-size: 15px;
+  font-style: italic;
+}
 
-			#h_element {
-				margin-top: 90px;
-			}
+/* Header */
 
-			#infa {
-				font-size: 25px;
-				text-align: center;
-				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-				color: white;
-			}
+#h_elements {
+  width: 35%;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-			#infb {
-				font-size: 15px;
-				text-align: center;
-				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-				color: white;
-			}
+#infa {
+	font-size: 25px;
+	text-align: center;
+}
+#infa h2 {
+  color: #2d2d2d;
+  font-family: 'Karla', cursive;
+	font-weight: 700;
+  font-size: 1.75vw;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid #eeeeee;
+}
 
-				#infb a {
-					color: #ff8d33;
-				}
+#infb {
+  margin-top: 10px;
+	font-size: 15px;
+	text-align: center;
+}
+#infb h3 {
+  color: #5a5a5a;
+  font-family: 'Karla', cursive;
+	font-weight: 400;
+  font-size: 1.2vw;
+}
+#infb a {
+  color: #8cc6ff;
+}
 
-	/* Section ==> FIELDSET */
+/* Section */
 
-		fieldset {
-			display: flex;
-			margin-left: auto;
-			margin-right: auto;
-			margin-top: 25px;
-			width: 500px;
-			height: 240px;
-			border: 2px solid white;
-			border-radius: 5px;
-		}
+section {
+  margin-top: 25px;
+}
 
-  /* FORMULAIRE */
+#group_input {
+  display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	width: 35%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 
-    #nickname {
-			display: flex;
-			margin-left: auto;
-			margin-right: auto;
-			width: 450px;
-			height: 30px;
-			border: 1px solid #2a363b;
-			background-color: #f9f9f9;
-			padding-left: 5px;
-            position: relative;
-            left: 8px;
-    }
+fieldset {
+	display: flex;
+	height: 400px;
+  width: 100%;
+  border-top: 7px solid;
+  border-image: linear-gradient(to right, #ff9a64 25%, #ffd584 25%, #ffd584 50%, #a0cdf6 50%, #a0cdf6 75%, #c5b3ff 75%) 5;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  margin: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 
-    #validation_nickname {
-        width: 25px;
-        height: 25px;
-        visibility: hidden;
-        position: relative;
-        top: -30px;
-        left: 476px;
-    }
+/* Formulaire */
 
-    #pass {
-			display: flex;
-			margin-left: auto;
-			margin-right: auto;
-			width: 450px;
-			height: 30px;
-			border: 1px solid #2a363b;
-			background-color: #f9f9f9;
-			padding-left: 5px;
-            position: relative;
-            left: 8px;
-            top: -16px;
-    }
+input {
+  display: flex;
+  background-color: #f4f4f4;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  height: 37.5px;
+  width: 75%;
+  padding-left: 15px;
+}
 
-    #validation_pass {
-        width: 25px;
-        height: 25px;
-        visibility: hidden;
-        position: relative;
-        left: 476px;
-        top: -46px;
-    }
+#inf_box {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+}
 
-    #pass_confirm {
-			display: flex;
-			margin-left: auto;
-			margin-right: auto;
-			width: 450px;
-			height: 30px;
-			border: 1px solid #2a363b;
-			background-color: #f9f9f9;
-			padding-left: 5px;
-            position: relative;
-            left: 8px;
-            top: -32px;
-    }
+#validation_nickname {
+  margin-left: 12.5px;
+  width: 4%;
+  visibility: hidden;
+}
 
-    #validation_pass_confirm {
-        width: 25px;
-        height: 25px;
-        visibility: hidden;
-        position: relative;
-        left: 476px;
-        top: -62px;
-    }
+#validation_pass {
+  margin-left: 12.5px;
+  width: 4%;
+  visibility: hidden;
+}
+#validation_pass_confirm {
+  margin-left: 12.5px;
+  width: 4%;
+  visibility: hidden;
+}
 
-    #email {
-			display: flex;
-			margin-left: auto;
-			margin-right: auto;
-			width: 450px;
-			height: 30px;
-			border: 1px solid #2a363b;
-			background-color: #f9f9f9;
-			padding-left: 5px;
-            position: relative;
-            left: 8px;
-            top: -47px;
-    }
+#validation_email {
+  margin-left: 12.5px;
+  width: 4%;
+  visibility: hidden;
+}
 
-    #validation_email {
-        width: 25px;
-        height: 25px;
-        visibility: hidden;
-        position: relative;
-        left: 476px;
-        top: -77px;
-    }
+/* Send */
 
-	/* SEND */
+#send {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  font-family: 'Roboto', cursive;
+  font-size: 1.1vw;
+  font-weight: 500;
+  letter-spacing: 1px;
+  background-color: #ffc25f;
+	border-radius: 5px;
+  border: none;
+}
 
-		#send {
-			position: relative;
-			left: 375px;
-            top: -38px;
-		}
+/* FORMULAIRE ERROR */
 
-		.send {
-			padding-left: 14px;
-			padding-right: 14px;
-			height: 35px;
-			color: #24252f;
-			border: 2px solid;
-			background-color: white;
-			border-color: #24252f;
-			border-radius: 5px;
-		}
+.text_error { /* Modifie le formatage du texte des erreurs */
+	padding-left: 5px;
+	padding-right: 5px;
+	word-wrap: break-word;
+}
 
-		.send:hover {
-			transition: 0.2s;
-			background-color: #ff8d33;
-			color: white;
-		}
+.message_error { /*Ce qu'il faut appliquer a tout les messages d'erreurs */
+	width: 35%;
+	margin-left: auto;
+	margin-right: auto;
+  border: 1px solid black;
+  display: none;
+}
 
-  /* FORMULAIRE ERROR */
+#message_error_bad_filled {
+	position: relative;
+	top: 21px;
+  height: auto;
+}
 
-    .text_error { /* Modifie le formatage du texte des erreurs */
-			padding-left: 5px;
-			padding-right: 5px;
-			word-wrap: break-word;
-    }
+#text_error_bad_filled {
+  text-align: center;
+}
 
-    .message_error { /*Ce qu'il faut appliquer a tout les messages d'erreurs */
-			width: 350px;
-			margin-left: auto;
-			margin-right: auto;
-			padding-bottom: auto;
-			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-			border: 2px solid white;
-			color: white;
-      display: none;
-    }
+#message_error_nickname { /*Ce qu'il faut appliquer individuellement */
+  position: relative;
+  top: -244px;
+  height: auto;
+  left: 467px;
+}
 
-    #message_error_bad_filled {
-			position: relative;
-			top: 21px;
-			height: auto;
-    }
+#message_error_password {
+  position: relative;
+  top: -196px;
+  left: 467px;
+}
 
-    #text_error_bad_filled {
-      text-align: center;
-    }
+#message_error_confirmation_password {
+  position: relative;
+  top: -148px;
+  left: 467px;
+}
 
-    #message_error_nickname { /*Ce qu'il faut appliquer individuellement */
-      position: relative;
-      top: -244px;
-      			height: auto;
-      left: 467px;
-    }
-
-    #message_error_password {
-      position: relative;
-      top: -196px;
-      left: 467px;
-    }
-
-    #message_error_confirmation_password {
-      position: relative;
-      top: -148px;
-      left: 467px;
-    }
-
-    #message_error_email {
-      position: relative;
-      top: -101px;
-      left: 467px;
-    }
+#message_error_email {
+  position: relative;
+  top: -101px;
+  left: 467px;
+}

@@ -1,215 +1,295 @@
-@font-face {
-    font-family: 'source_code_proregular';
-    src: url('../fonts/sourcecodepro-regular-webfont.eot');
-    src: url('../fonts/sourcecodepro-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/sourcecodepro-regular-webfont.woff') format('woff'),
-         url('../fonts/sourcecodepro-regular-webfont.ttf') format('truetype'),
-         url('../fonts/sourcecodepro-regular-webfont.svg#source_code_proregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
 
 a {
-	color: white;
 	text-decoration: none;
 }
 
 body {
-	background-color: #1d1d1d;
 	margin: 0;
 	padding: 0;
 }
 
 #body_content{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-	/* Header */
+p {
+  margin: 0;
+}
+h2 {
+  margin: 0
+}
+h3{
+  margin: 0;
+}
+input::placeholder {
+  font-size: 15px;
+  font-style: italic;
+}
 
-			#h_element {
-				margin-top: 90px;
-			}
+/* Header */
 
-			#infa {
-				font-size: 25px;
-				text-align: center;
-				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-				color: white;
-			}
+header {
+  margin-top: auto;
+}
 
-			#infb {
-				font-size: 15px;
-				text-align: center;
-				font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-				color: white;
-			}
+#h_elements {
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-				#infb a {
-					color: #ff8d33;
-				}
+#infa {
+	font-size: 25px;
+	text-align: center;
+}
+#infa h2 {
+  color: #2d2d2d;
+  font-family: 'Karla', cursive;
+	font-weight: 700;
+  font-size: 1.75vw;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid #eeeeee;
+}
 
+#infb {
+  margin-top: 10px;
+	font-size: 15px;
+	text-align: center;
+}
+#infb h3 {
+  color: #5a5a5a;
+  font-family: 'Karla', cursive;
+	font-weight: 400;
+  font-size: 1.2vw;
+}
+#infb a {
+  color: #8cc6ff;
+}
 
-	/* Section ==> FIELDSET */
+/* Section */
 
-		fieldset {
-			display: flex;
-			margin-left: auto;
-			margin-right: auto;
-			margin-top: 25px;
-			width: 500px;
-			height: 175px;
-			border: 2px solid white;
-			border-radius: 5px;
-		}
+section {
+  margin-top: 25px;
+  margin-bottom: auto;
+}
 
-  /* FORMULAIRE */
+#group_input {
+  display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	width: 35%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 
-    	#nickname {
-        display: flex;
-        margin-left: 20px;
-    		width: 450px;
-    		height: 30px;
-				border: 1px solid #2a363b;
-				background-color: #f9f9f9;
-        padding-left: 5px;
-      }
+fieldset {
+	display: flex;
+  width: 100%;
+  border-top: 7px solid;
+  border-image: linear-gradient(to right, #ff9a64 25%, #ffd584 25%, #ffd584 50%, #a0cdf6 50%, #a0cdf6 75%, #c5b3ff 75%) 5;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  margin: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 12.5px;
+  padding-bottom: 30px;
+}
 
-      #pass {
-        display: flex;
-        margin-left: auto;
-				width: 450px;
-    		height: 30px;
-				border: 1px solid #2a363b;
-				background-color: #f9f9f9;
-        padding-left: 5px;
-    	}
+/* Formulaire */
 
-				::placeholder {
-					font-size: 13px;
-				}
+input {
+  display: flex;
+  background-color: #f4f4f4;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  height: 37.5px;
+  width: 75%;
+  padding-left: 15px;
+  margin-top: 17.5px;
+  margin-bottom: 17.5px;
+}
 
-    #inf_input fieldset{
-        transform: translate(-50%, 0);
-        left: 50%;
-        margin-left: 0px;
-        margin-right: 0px;
-        position: absolute;
-    }
+#inf_box {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+}
 
-    .checkbox{
-        width: 350px;
-        height: 26px;
-        margin-top: 25px;
-        margin-left: 25px;
-    }
+#checkbox_text {
+  font-family: 'Roboto', cursive;
+  font-weight: 300;
+  font-size: 1.2vw;
+  color: #a1a1a1;
+}
+label {
+  margin-top: 17.5px;
+  margin-bottom: 17.5px;
+}
+.control {
+    font-family: arial;
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.control_indicator {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #e6e6e6;
+  border: 0px solid #000000;
+}
+.control-radio .control_indicator {
+  border-radius: undefined%;
+}
 
-	/* label de la case à cocher (quand il sera cliqué il va activer la checkbox) */
-  .checkbox label {
-    width: 50px;
-    height: 25px;
-    position: absolute;
-    background-color: white;
-    border-radius: 12px;
-    margin-left: 220px;
-  }
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+  background: #cccccc;
+}
 
-  /* On cache la checkbox */
-  input[type=checkbox] {
-    position: absolute;
-    visibility: hidden;
-  }
+.control input:checked ~ .control_indicator {
+  background: #2aa1c0;
+}
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+  background: #0e6647d;
+}
+.control input:disabled ~ .control_indicator {
+  background: #e6e6e6;
+  opacity: 1;
+  pointer-events: none;
+}
+.control_indicator:after {
+  box-sizing: unset;
+  content: '';
+  position: absolute;
+  display: none;
+}
+.control input:checked ~ .control_indicator:after {
+  display: block;
+}
+.control-checkbox .control_indicator:after {
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.control-checkbox input:disabled ~ .control_indicator:after {
+  border-color: #7b7b7b;
+}
 
-  /* Apparence du bouton remplaçant la checkbox + temps de transition (temps que va prendre le bouton pour se déplacer) */
-  .checkbox label::after {
-    content: "";
-    width: 22px;
-    height: 21px;
-    position: absolute;
-    border-radius: 50px;
-    background-color: #ff8d33;
-    top: 2px;
-    left: 2px;
-    transition: all 0.5s;
-  }
+/* Formulaire error */
 
-  /* Modifications appliquées au bouton quand la checkbox est activée */
-  input[type=checkbox]:checked + label::after {
-    background-color: white;
-    left: 25px;
-  }
+.text_error { /* Modifie le formatage du texte des erreurs */
+	padding-left: 5px;
+	padding-right: 5px;
+	word-wrap: break-word;
+}
 
-  /* Modifications appliquées au label quand la checkbox est activée */
-  input[type=checkbox]:checked + label {
-    background-color: #ff8d33;
-  }
+.message_error { /*Ce qu'il faut appliquer a tout les messages d'erreurs */
+  display: none;
+  position: relative;
+  background-color: white;
+  font-family: 'Roboto', cursive;
+  font-weight: 300;
+  font-size: 1.25vw;
+  color: #a1a1a1;
+  padding: 10px;
+	width: 35%;
+	margin-left: auto;
+	margin-right: auto;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid #eeeeee;
+}
+.message_error:after {
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 15px 15px 15px 0;
+border-color: transparent #FFFFFF;
+display: block;
+width: 0;
+z-index: 1;
+margin-top: -15px;
+left: -15px;
+top: 50%;
+}
+.message_error:before {
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 15px 15px 15px 0;
+border-color: transparent #eeeeee;
+display: block;
+width: 0;
+z-index: 0;
+margin-top: -15px;
+left: -16px;
+top: 50%;
+}
 
-    #checkbox_label {
-      position: absolute;
-      font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-      color: white;
-      font-size: 15px;
-      margin-top: 5px;
-    }
+#message_error_bad_filled{
+  position: relative;
+  top: 235px;
+  height: 50px;
+}
 
-  /* ERROR */
+#text_error_bad_filled{
+  text-align: center;
+}
 
-  	.text_error{ /* Modifie le formatage du texte des erreurs */
-      padding-left: 5px;
-      padding-right: 5px;
-      word-wrap: break-word;
-    }
+#message_error_bad_credentials{
+  position: relative;
+  top: 235px;
+  height: auto;
+}
 
-    .message_error{ /*Ce qu'il faut appliquer a tout les messages d'erreurs */
-      width: 350px;
-      margin-left: auto;
-      margin-right: auto;
-      padding-bottom: auto;
-			font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-      border: 2px solid white;
-			color: white;
-    }
+/* Send */
 
-      #message_error_bad_filled{
-        position: relative;
-        top: 235px;
-        height: 50px;
-      }
-
-      #text_error_bad_filled{
-        text-align: center;
-      }
-
-      #message_error_bad_credentials{
-        position: relative;
-        top: 235px;
-        height: auto;
-      }
-
-	/* SEND */
-
-		#send {
-      position: absolute;
-      bottom: 160px;
-      margin-left: 417px;
-      top: 128px;
-		}
-
-		.send {
-			padding-left: 14px;
-			padding-right: 14px;
-			height: 35px;
-			color: #24252f;
-			border: 2px solid;
-			background-color: white;
-			border-color: #24252f;
-			border-radius: 5px;
-		}
-
-		.send:hover {
-      transition: 0.2s;
-      background-color: #ff8d33;
-      color: white;
-		}
+#send {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  font-family: 'Roboto', cursive;
+  font-size: 1.1vw;
+  font-weight: 500;
+  letter-spacing: 1px;
+  background-color: #ffc25f;
+	border-radius: 5px;
+  border: none;
+}

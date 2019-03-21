@@ -105,7 +105,6 @@ section {
 
 fieldset {
 	display: flex;
-	height: 400px;
   width: 100%;
   border-top: 7px solid;
   border-image: linear-gradient(to right, #ff9a64 25%, #ffd584 25%, #ffd584 50%, #a0cdf6 50%, #a0cdf6 75%, #c5b3ff 75%) 5;
@@ -121,7 +120,6 @@ fieldset {
 form {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 100%;
   padding-top: 12.5px;
   padding-bottom: 30px;
@@ -186,7 +184,7 @@ input {
   border: none;
 }
 
-/* FORMULAIRE ERROR */
+/* Formulaire error */
 
 .text_error { /* Modifie le formatage du texte des erreurs */
 	padding-left: 5px;

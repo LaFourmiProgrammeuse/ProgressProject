@@ -109,18 +109,18 @@ function Show_Nickname_Error(nickname_use_now){
 
         var nickname_value = $("#nickname").val();
         if(nickname_value.length < nickname_character_needed){
-            error = error+"<li>The nickname must be at least 6 characters !</li>";
+            error = error+"<li>-> the nickname must be at least 6 characters !</li>";
         }
         else if(nickname_value.length > nickname_character_max){
-            error = error+"<li>The nickname must be at max 11 characters !</li>";
+            error = error+"<li>-> the nickname must be at max 11 characters !</li>";
         }
         if(!hasSpecialCharacter(nickname_value, 0)){
-            error = error+"<li>The nickname can't be composed by special characters !</li>";
+            error = error+"<li>-> the nickname can't be composed by special characters !</li>";
         } console.log("Show_Nickname_Error : "+nickname_use_now);
 
         if(nickname_use_now == true){
 
-            error = error+"<li>The nickname is already used !</li>";
+            error = error+"<li>-> the nickname is already used !</li>";
         }
 
         error = error+"</ul>";
@@ -150,10 +150,10 @@ function Show_Pass_Error(){
 
         var pass_value = $("#pass").val();
         if(pass_value.length < pass_character_needed){
-            error = error+"<li>The password must be at least 8 characters !</li>";
+            error = error+"<li>-> the password must be at least 8 characters !</li>";
         }
         if(!hasSpecialCharacter(pass_value, pass_special_character_needed)){
-            error = error+"<li>The password must be at least 2 specials characters ! (as : &, @, #, *, $)</li>";
+            error = error+"<li>-> the password must be at least 2 specials characters ! (as : &, @, #, *, $)</li>";
         }
 
         error = error+"</ul>";
@@ -182,7 +182,7 @@ function Show_Pass_Confirm_Error(){
 
         var confirmation_password_value = $("#pass_confirm").val();
         if($("#pass").val() != confirmation_password_value){
-            error = error+"<li>The confirmation password does not match the password !</li>";
+            error = error+"<li>-> the confirmation password does not match the password !</li>";
         }
 
         error = error+"</ul>";
@@ -211,7 +211,7 @@ function Show_Email_Error(){
         var error = "The email is not valid because :<br/><ul>";
 
         if(mail_use_now == false){
-            error+="<li>The format of the email is incorrect !</li>";
+            error+="<li>-> the format of the email is incorrect !</li>";
         }
 
         $("#message_error_email p").html(error);

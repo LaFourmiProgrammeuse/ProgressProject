@@ -17,7 +17,7 @@ error_reporting(E_ALL);
 
 	<link rel="stylesheet" type="text/css" href="css/home.css">
 	<link rel="stylesheet" type="text/css" href="../footer.css">
-	<link rel="stylesheet" type="text/css" href="../widgets/simple_image_viewer/simple_image_viewer.css">
+	<link rel="stylesheet" type="text/css" href="css/simple_image_viewer.css">
 	<meta charset="utf-8"/>
 	<title><?php echo _("Home");?></title>
 

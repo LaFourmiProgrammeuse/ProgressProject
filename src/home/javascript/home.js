@@ -2,7 +2,7 @@ var session_username;
 var connected;
 
 var siv1_index = 0;
-var siv1_images = ["/images/thumb-1920-430892.png", "/images/4046_386_plan_metroB_2017.jpg", "/images/ajax-loader_2.gif"];
+var siv1_images = ["/content/pa_official_wallpaper_1.jpg", "/content/pa_official_wallpaper_2.jpg", "/content/pa_official_wallpaper_3.png"];
 
 function hideMessageConnection(){
 

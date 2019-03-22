@@ -17,7 +17,7 @@ error_reporting(E_ALL);
 
 	<link rel="stylesheet" type="text/css" href="css/home.css">
 	<link rel="stylesheet" type="text/css" href="../footer.css">
-	<link rel="stylesheet" type="text/css" href="css/simple_image_viewer.css">
+	<link rel="stylesheet" type="text/css" href="css/home_simple_image_viewer.css">
 	<meta charset="utf-8"/>
 	<title><?php echo _("Home");?></title>
 
@@ -163,25 +163,25 @@ error_reporting(E_ALL);
 						<div class="element_text">
 							<h3>Support us !</h3>
 							<p>You can download our wallpapers and share them to your friends to support us !</p>
+
+                                <div class='widget_simple_image_viewer' id='siv_1'>
+        						  <div class='widget_body'>
+        			                 <div class='left_arrow'><img src='/images/arrows/a_left.png' /></div>
+        			                 <div class='left_image'><img src='' /></div>
+        			                 <div class='central_image'><img src='' /></div>
+        			                 <div class='right_image'><img src='' /></div>"
+        			                 <div class='right_arrow'><img src='/images/arrows/a_right.png' /></div>
+        			              </div>
+                                </div>
+
+                            <p>You can also follow our socials networks as instagram. We regularly publish things related to the advancement of our website</p>
+                            <div class="part_insta">
+                                <img src="/images/instagram.png" />
+                                <a href="https://www.instagram.com/programming_ants/">@Programming Ants</a>
+                            </div>
 						</div>
 					</div>
 				</div>
-
-					<?php
-						echo "<div class='widget_simple_image_viewer' id='siv_1'>";
-
-					  //Contenu à charger en javascript
-						echo "<div class='widget_body'>";
-			        echo "<div class='left_arrow'><img src='/images/arrows/a_left.png' /></div>";
-			        echo "<div class='left_image'><img src='' /></div>";
-			        echo "<div class='central_image'><img src='' /></div>";
-			        echo "<div class='right_image'><img src='' /></div>";
-			        echo "<div class='right_arrow'><img src='/images/arrows/a_right.png' /></div>";
-			      echo "</div>";
-
-						echo "</div>";
-					?>
-
 					<div class="a2">
 						<div class="element_text">
 						<p>If you want to contact us :</p>

@@ -49,7 +49,7 @@ error_reporting(E_ALL);
 			<div id="h_groupb">
 				<!-- Menu de navigation +700px -->
 				<div class="h_high_resolution">
-					<div class="nav_element"><a href="../forum/forum.php"><?php echo _("Forum"); ?> </a></div>
+					<div class="nav_element nav_element_forum"><a href="../forum/forum.php"><?php echo _("Forum"); ?> </a></div>
 					<div class="nav_element nav_element_projects"><a href="#"><?php echo _("Projects"); ?> </a></div>
 					<div class="nav_element nav_element_about"><a href="#"><?php echo _("About"); ?> </a></div>
 					<div class="nav_element nav_element_contact"><a href="#"><?php echo _("Contact"); ?> </a></div>
@@ -60,7 +60,7 @@ error_reporting(E_ALL);
 					<img src="/images/menu.png" />
 
 					<div class="vertical_menu" id="h_vertical_menu">
-						<div class="nav_element"><a href="../forum/forum.php"><?php echo _("Forum"); ?> </a></div>
+						<div class="nav_element nav_element_forum"><a href="../forum/forum.php"><?php echo _("Forum"); ?> </a></div>
 						<div class="nav_element nav_element_projects"><a href="#"><?php echo _("Projects"); ?> </a></div>
 						<div class="nav_element nav_element_about"><a href="#"><?php echo _("About"); ?> </a></div>
 						<div class="nav_element nav_element_contact"><a href="#"><?php echo _("Contact"); ?> </a></div>
@@ -164,16 +164,6 @@ error_reporting(E_ALL);
 							<h3>Support us !</h3>
 							<p>You can download our wallpapers and share them to your friends to support us !</p>
 
-                                <div class='widget_simple_image_viewer' id='siv_1'>
-        						  <div class='widget_body'>
-        			                 <div class='left_arrow'><img src='/images/arrows/a_left.png' /></div>
-        			                 <div class='left_image'><img src='' /></div>
-        			                 <div class='central_image'><img src='' /></div>
-        			                 <div class='right_image'><img src='' /></div>"
-        			                 <div class='right_arrow'><img src='/images/arrows/a_right.png' /></div>
-        			              </div>
-                                </div>
-
                             <p>You can also follow our socials networks as instagram. We regularly publish things related to the advancement of our website</p>
                             <div class="part_insta">
                                 <img src="/images/instagram.png" />
@@ -182,6 +172,22 @@ error_reporting(E_ALL);
 						</div>
 					</div>
 				</div>
+
+                    <div class="a2 article_wallpapers_pa">
+                        <div class="element_text">
+                            <h3>Programming Ants wallpapers</h3>
+
+                            <div class='widget_simple_image_viewer' id='siv_1'>
+        				        <div class='widget_body'>
+        			             <div class='left_arrow'><img src='/images/arrows/a_left.png' /></div>
+        			             <div class='left_image'><img src='' /></div>
+        			             <div class='central_image'><img src='' /></div>
+        			             <div class='right_image'><img src='' /></div>"
+        			             <div class='right_arrow'><img src='/images/arrows/a_right.png' /></div>
+        			         </div>
+                            </div>
+                        </div>
+                    </div>
 					<div class="a2">
 						<div class="element_text">
 						<p>If you want to contact us :</p>

@@ -7,7 +7,7 @@
 }
 
 .widget_simple_image_viewer .widget_body{
-  width: 612px;
+  width: auto;
   display: flex;
   flex-direction: row;
   margin-left: auto;
@@ -44,3 +44,8 @@
 .widget_simple_image_viewer .right_arrow img{
   width: 23px;
 }
+
+/*@media screen and (max-width: 1024px){
+
+
+}*/

@@ -331,13 +331,37 @@ article {
 	display: flex;
 }
 
+#s_groupa{
+    margin-bottom: 14px;
+}
+
 .a1 {
-	width: 75%;
-	margin-left: auto;
-	margin-right: auto;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	width: 100%;
+	padding: 20px;
+    text-align: center;
 }
 .a1 h3 {
-	text-align: center;
+	font-size: 1.75vw;
+	font-weight: bold;
+	color: #747474;
+	margin-top: 5px;
+	margin-bottom: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top: 1px solid #f4f4f4;
+	border-bottom: 1px solid #f4f4f4;
+}
+.a1 p {
+	font-size: 1.25vw;
+	line-height: 150%;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	margin-top: 10px;
+	color: #747474;
+	padding-top: 10px;
 }
 
 #s_groupb {
@@ -414,6 +438,7 @@ article {
 	margin-top: 5px;
 	margin-bottom: 0;
 	padding-top: 10px;
+    padding-left: 12px;
 	padding-bottom: 10px;
 	border-top: 1px solid #f4f4f4;
 	border-bottom: 1px solid #f4f4f4;
@@ -442,10 +467,17 @@ article {
 .article_wallpapers_pa {
     margin-left: auto;
     margin-right: auto;
+    width: 75%;
 }
 .article_wallpapers_pa h3 {
     text-align: center;
 }
+
+.article_wallpapers_pa .element_text {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .part_insta{
     width: 100%;
     display: flex;

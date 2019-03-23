@@ -3,7 +3,10 @@
 
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/register_page.css">
+
 		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.430, shrink-to-fit=no">
+
 		<title>Sign Up</title>
 
     <script type="text/javascript" src="../framework_javascript/jquery.js"></script>
@@ -60,6 +63,9 @@
 						</div>
 					</section>
 			</div>
+            <div class="page_change_orientation">
+
+            </div>
 		</body>
 
 </html>

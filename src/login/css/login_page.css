@@ -13,7 +13,7 @@ body {
 #body_content{
   display: flex;
   flex-direction: column;
-  min-height: 90vh;
+  min-height: 80vh;
 }
 
 p {
@@ -272,9 +272,7 @@ top: 50%;
 }
 
 #message_error_bad_filled{
-  position: relative;
-  top: 235px;
-  height: 50px;
+  margin-top: 20px;
 }
 
 #text_error_bad_filled{
@@ -282,9 +280,7 @@ top: 50%;
 }
 
 #message_error_bad_credentials{
-  position: relative;
-  top: 235px;
-  height: auto;
+  margin-top: 20px;
 }
 
 /* Send */
@@ -303,4 +299,23 @@ top: 50%;
   background-color: #ffc25f;
 	border-radius: 5px;
   border: none;
+}
+
+.page_change_orientation{
+    background-color: black;
+    z-index: 999;
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+}
+
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+
+    .page_change_orientation{
+        display: block;
+    }
+
 }

@@ -25,7 +25,7 @@ li {
 #body_content{
   display: flex;
   flex-direction: column;
-  min-height: 90vh;
+  min-height: 80vh;
 }
 
 p {
@@ -248,9 +248,7 @@ top: 50%;
 }
 
 #message_error_bad_filled {
-	position: relative;
-	top: 21px;
-  height: auto;
+	margin-top: 20px;
 }
 
 #text_error_bad_filled {
@@ -258,26 +256,36 @@ top: 50%;
 }
 
 #message_error_nickname { /*Ce qu'il faut appliquer individuellement */
-  position: relative;
-  top: -244px;
-  height: auto;
-  left: 467px;
+  margin-top: 20px;
 }
 
 #message_error_password {
-  position: relative;
-  top: -196px;
-  left: 467px;
+  margin-top: 20px;
 }
 
 #message_error_confirmation_password {
-  position: relative;
-  top: -148px;
-  left: 467px;
+  margin-top: 20px;
 }
 
 #message_error_email {
-  position: relative;
-  top: -101px;
-  left: 467px;
+  margin-top: 20px;
+}
+
+.page_change_orientation{
+    background-color: black;
+    z-index: 999;
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+}
+
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+
+    .page_change_orientation{
+        display: block;
+    }
+
 }

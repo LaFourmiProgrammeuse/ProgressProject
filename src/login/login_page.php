@@ -4,7 +4,10 @@
 	<head>
 
 		<link rel="stylesheet" type="text/css" href="css/login_page.css">
+
 		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.450, shrink-to-fit=no">
+
 		<title>Log In</title>
 
         <script type="text/javascript" src="../framework_javascript/jquery.js"></script>

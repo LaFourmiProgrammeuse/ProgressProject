@@ -18,7 +18,10 @@ error_reporting(E_ALL);
 	<link rel="stylesheet" type="text/css" href="css/home.css">
 	<link rel="stylesheet" type="text/css" href="../footer.css">
 	<link rel="stylesheet" type="text/css" href="css/home_simple_image_viewer.css">
+
 	<meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
 	<title><?php echo _("Home");?></title>
 
 	<script type="text/javascript" src="../framework_javascript/jquery.js"></script>

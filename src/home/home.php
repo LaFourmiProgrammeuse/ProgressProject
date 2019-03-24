@@ -111,39 +111,40 @@ error_reporting(E_ALL);
 
 			<article>
 				<div id="s_groupa">
-					<div class="a1">
-						<div class="element_text">
-							<h3>The Project</h3>
-							<p><span class="semi_bold">Programming Ants</span> is a project we started to push our limits in programmation. For the moment, our website is
-								<span class="semi_bold">very limited in content</span>. Also, we are only <span class="semi_bold">two persons behind this project</span>, and it's difficult to
-								work fast, mostly when we have to solve <span class="semi_bold">bugs and mistakes</span>. But time passes, and the website is getting built slowly !
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<div id="s_groupb">
-					<div class="a2">
-						<div class="element_title">
-							<img class="a_icon" src="/images/icons/articles/solveit.svg">
-							<h3>Solve it</h3>
-						</div>
-						<div class="element_text">
-							<p>It is our main project on <b>Programming Ants</b>. It's goal is to <b>help programmers</b> to find what is wrong with their code when they
-								meet <b>errors or bugs</b>. Me and my friend didn't start this project yet, but we've got many ideas to get a nice final result.
-							</p>
-						</div>
+					<div class="g_title">
+						<h2>The projects</h2>
 					</div>
 
-					<div class="a2">
-						<div class="element_title">
-							<img class="a_icon" src="/images/icons/articles/forum.svg">
-							<h3>Forum</h3>
+					<div id="s_groupa_con">
+						<div class="a2">
+							<div class="element_title">
+								<h3>Solve it</h3>
+							</div>
+							<div class="element_text">
+								<p>It is our main project on <b>Programming Ants</b>. It's goal is to <b>help programmers</b> to find what is wrong with their code when they
+									meet <b>errors or bugs</b>. Me and my friend didn't start this project yet, but we've got many ideas to get a nice final result.
+								</p>
+							</div>
 						</div>
-						<div class="element_text">
-							<p>It is a place to <span class="semi_bold">share your opinion or get some help from the community</span>. This is the first thing we've made after having a working
-								website and we're pretty proud of it. The design is <span class="semi_bold">not the final one</span>, and there are still <span class="semi_bold">several bugs</span>.
-							</p>
+
+						<div class="a1">
+							<div class="element_text">
+								<p><span class="semi_bold">Programming Ants</span> is a project we started to push our limits in programmation. For the moment, our website is
+									<span class="semi_bold">very limited in content</span>. Also, we are only <span class="semi_bold">two persons behind this project</span>, and it's difficult to
+									work fast, mostly when we have to solve <span class="semi_bold">bugs and mistakes</span>. But time passes, and the website is getting built slowly !
+								</p>
+							</div>
+						</div>
+
+						<div class="a2">
+							<div class="element_title">
+								<h3>Forum</h3>
+							</div>
+							<div class="element_text">
+								<p>It is a place to <span class="semi_bold">share your opinion or get some help from the community</span>. This is the first thing we've made after having a working
+									website and we're pretty proud of it. The design is <span class="semi_bold">not the final one</span>, and there are still <span class="semi_bold">several bugs</span>.
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>

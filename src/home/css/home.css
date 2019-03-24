@@ -325,10 +325,9 @@ article {
   display: block;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 50px;
+	margin-top: 90px;
   margin-bottom: 15px;
-  height: auto;
-	width: 85%;
+	width: 90%;
 }
 
 #s_groupa, #s_groupb, #s_groupc {
@@ -336,7 +335,29 @@ article {
 }
 
 #s_groupa {
-	margin-top: 35px;
+	flex-direction: column;
+}
+#s_groupa_con {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.g_title h2 {
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-size: 2.50vw;
+	color: #747474;
+	text-align: center;
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 20px;
+	background-color: #f6f6f6;
+	padding-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e1e1e1;
+	border-radius: 5px;
 }
 .a1 {
 	display: flex;
@@ -344,14 +365,9 @@ article {
 	flex-direction: row;
 	margin-left: auto;
 	margin-right: auto;
-	width: 60%;
+	width: 40%;
   text-align: center;
 	color: #747474;
-}
-.element_text h3 {
-	font-family: 'Alegreya Sans SC', sans-serif;
-	font-size: 2.50vw;
-	margin-bottom: 20px;
 }
 .a1 p {
 	font-family: 'Montserrat Alternates', sans-serif;
@@ -366,8 +382,45 @@ article {
 	border-bottom: 1px solid #e1e1e1;
 	border-radius: 5px;
 }
+.a2 {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+	color: #747474;
+}
+.element_title {
+	text-align: center;
+	margin-bottom: 10px;
+}
+.a_icon {
+	width: 50px;
+	height: 50px;
+}
+.element_title h3 {
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-size: 1.75vw;
+	margin: 0;
+}
+.a2 p {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 1.25vw;
+	background-color: #f6f6f6;
+	line-height: 150%;
+	font-weight: 200;
+	text-align: center;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e1e1e1;
+	border-radius: 5px;
+}
 
-#s_groupb {
+/* Code du s_groupb (qui a été supprimé) <- à ne pas retirer du code, en cas de besoin dans le futur */
+/*#s_groupb {
 	flex-direction: row;
 	justify-content: space-between;
 	margin-top: 50px;
@@ -413,7 +466,7 @@ article {
 	padding-bottom: 20px;
 	border-bottom: 1px solid #e1e1e1;
 	border-radius: 5px;
-}
+}*/
 
 #s_groupc {
 	flex-direction: column;

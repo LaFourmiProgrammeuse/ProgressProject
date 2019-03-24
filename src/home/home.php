@@ -114,38 +114,35 @@ error_reporting(E_ALL);
 					<div class="a1">
 						<div class="element_text">
 							<h3>The Project</h3>
-							<p><span class="semi_bold">Programming Ants</span> is a project we started to push our limits in programmation and to try making something that can help people. For the moment, our website is <span class="semi_bold">very limited in content</span>,
-								we can't work faster because we still learning programmation languages (HTML5, PHP, CSS3, JS, ...) to realize what we want to do. Also, we are only <span class="semi_bold">two persons behind this project</span>, and it's difficult to work fast,
-								mostly when we have to solve <span class="semi_bold">bugs and mistakes</span>. We are only teens, so this has a big impact on the way we are working on our website, because we need to study for school. But time passes, and the website is
-								getting built slowly !
+							<p><span class="semi_bold">Programming Ants</span> is a project we started to push our limits in programmation. For the moment, our website is
+								<span class="semi_bold">very limited in content</span>. Also, we are only <span class="semi_bold">two persons behind this project</span>, and it's difficult to
+								work fast, mostly when we have to solve <span class="semi_bold">bugs and mistakes</span>. But time passes, and the website is getting built slowly !
+							</p>
 						</div>
 					</div>
 				</div>
 
 				<div id="s_groupb">
 					<div class="a2">
-						<div class="element_icon1">
-							<img class="a_logo" src="/images/icons/articles/solveit.svg">
+						<div class="element_title">
+							<img class="a_icon" src="/images/icons/articles/solveit.svg">
+							<h3>Solve it</h3>
 						</div>
 						<div class="element_text">
-							<h3>Solve it</h3>
 							<p>It is our main project on <b>Programming Ants</b>. It's goal is to <b>help programmers</b> to find what is wrong with their code when they
-								meet <b>errors or bugs</b>. Me and my friend didn't start this project yet, but we've got many ideas to get a nice final result. For the now we
-								continue to polish the entire website, working on some failed designs or little/big graphic bugs. This <b>Wiki</b> is the last step before
-								we start making little random softwares. We just hope everything will ok, so we can keep a fast workflow.
+								meet <b>errors or bugs</b>. Me and my friend didn't start this project yet, but we've got many ideas to get a nice final result.
 							</p>
 						</div>
 					</div>
 
 					<div class="a2">
-						<div class="element_icon2">
-							<img class="a_logo" src="/images/icons/articles/forum.svg">
+						<div class="element_title">
+							<img class="a_icon" src="/images/icons/articles/forum.svg">
+							<h3>Forum</h3>
 						</div>
 						<div class="element_text">
-							<h3>Forum</h3>
-							<p>It is a place to <span class="semi_bold">share your opinion or get some help from the community</span>. This is the first thing we've made after having a working website and we're
-								pretty proud of it, even <span class="semi_bold">it is not finished</span>. The design is <span class="semi_bold">not the final one</span>, and there are still <span class="semi_bold">several bugs</span>. For the moment it is our best production,
-								and especially the most complex. In the future, maybe we will do even better.
+							<p>It is a place to <span class="semi_bold">share your opinion or get some help from the community</span>. This is the first thing we've made after having a working
+								website and we're pretty proud of it. The design is <span class="semi_bold">not the final one</span>, and there are still <span class="semi_bold">several bugs</span>.
 							</p>
 						</div>
 					</div>
@@ -153,42 +150,39 @@ error_reporting(E_ALL);
 
 				<div id="s_groupc">
 					<div class="a3">
-						<div class="element_icon">
-							<img class="a_logo" src="/images/icons/articles/support.svg">
-						</div>
 						<div class="element_text">
 							<h3>Support us !</h3>
 							<p>You can download our wallpapers and share them to your friends to support us !</p>
 
               <p>You can also follow our socials networks as instagram. We regularly publish things related to the advancement of our website</p>
-              <div class="part_insta">
+              <div class="social_net">
                 <img src="/images/instagram.png" />
                 <a href="https://www.instagram.com/programming_ants/">@Programming Ants</a>
               </div>
 						</div>
 					</div>
-				</div>
 
-        <div class="a3 article_wallpapers_pa">
-          <div class="element_text">
-            <h3>Programming Ants wallpapers</h3>
+        	<div class="a3 article_wallpapers_pa">
+          	<div class="element_text">
+            	<h3>Programming Ants wallpapers</h3>
 
-            <div class='widget_simple_image_viewer' id='siv_1'>
-        			<div class='widget_body'>
-        			 <div class='left_arrow'><img src='/images/arrows/a_left.png' /></div>
-        			 <div class='left_image'><img src='' /></div>
-        			 <div class='central_image'><img src='' /></div>
-        			 <div class='right_image'><img src='' /></div>"
-        			 <div class='right_arrow'><img src='/images/arrows/a_right.png' /></div>
-        			</div>
-            </div>
-          </div>
-        </div>
+            	<div class='widget_simple_image_viewer' id='siv_1'>
+        				<div class='widget_body'>
+	        			 <div class='left_arrow'><img src='/images/arrows/a_left.png' /></div>
+	        			 <div class='left_image'><img src='' /></div>
+	        			 <div class='central_image'><img src='' /></div>
+	        			 <div class='right_image'><img src='' /></div>"
+	        			 <div class='right_arrow'><img src='/images/arrows/a_right.png' /></div>
+	        			</div>
+            	</div>
+          	</div>
+        	</div>
 
-				<div class="a3">
-					<div class="element_text">
-						<p>If you want to contact us :</p>
-						<p><b>Programming Ants</b> contact e-mail adress : <a href="mailto:contact@programming-ants.ovh" title="Contact us !">contact@programming-ants.ovh</a></p>
+					<div class="a3">
+						<div class="element_text">
+							<p>If you want to contact us :</p>
+							<p><b>Programming Ants</b> contact e-mail adress : <a href="mailto:contact@programming-ants.ovh" title="Contact us !">contact@programming-ants.ovh</a></p>
+						</div>
 					</div>
 				</div>
 			</article>

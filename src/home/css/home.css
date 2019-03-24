@@ -729,3 +729,68 @@ article {
 	height: 140px;
 	width: 270px;
 }
+
+/*On rajoute 0.75vw sur les textes des petites résolutions */
+@media screen and (max-width: 1024px){
+
+    .g_title_prts h2{
+        font-size: 3.25vw;
+    }
+
+    .g_title_sprt h2{
+        font-size: 3.25vw;
+    }
+
+    .g_title_wprs h2{
+        font-size: 3.25vw;
+    }
+
+    .g_title_cnct h2{
+        font-size: 3.25vw;
+    }
+
+    .a1 p{
+        font-size: 2vw
+    }
+
+    .a2 p{
+        font-size: 2vw
+    }
+
+    .support p{
+        font-size: 2vw
+    }
+
+    .element_title h3{
+        font-size: 2.5vw;
+    }
+
+    .social_net a{
+        font-size: 2vw;
+    }
+
+    .contact p{
+        font-size: 2vw;
+    }
+
+    #link a{
+        font-size: 1.70vw;
+    }
+
+    :nth-child(1).identification a{
+        font-size: 1.85vw;
+    }
+
+    :nth-child(2).identification a{
+        font-size: 1.85vw;
+    }
+
+}
+
+/*Changement de taille de certains objets pour les petites résolutions*/
+@media screen and (max-width: 1024px){
+
+    .social_net{
+        width: 90%;
+    }
+}

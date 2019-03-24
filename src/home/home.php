@@ -111,7 +111,7 @@ error_reporting(E_ALL);
 
 			<article>
 				<div id="s_groupa">
-					<div class="g_title">
+					<div class="g_title_prts">
 						<h2>The projects</h2>
 					</div>
 
@@ -127,12 +127,32 @@ error_reporting(E_ALL);
 							</div>
 						</div>
 
-						<div class="a1">
-							<div class="element_text">
-								<p><span class="semi_bold">Programming Ants</span> is a project we started to push our limits in programmation. For the moment, our website is
-									<span class="semi_bold">very limited in content</span>. Also, we are only <span class="semi_bold">two persons behind this project</span>, and it's difficult to
-									work fast, mostly when we have to solve <span class="semi_bold">bugs and mistakes</span>. But time passes, and the website is getting built slowly !
-								</p>
+						<div id="s_groupa_smallg">
+							<div class="a1">
+								<div class="element_text">
+									<p><span class="semi_bold">Programming Ants</span> is a project we started to push our limits in programmation. For the moment, our website is
+										<span class="semi_bold">very limited in content</span>. Also, we are only <span class="semi_bold">two persons behind this project</span>, and it's difficult to
+										work fast, mostly when we have to solve <span class="semi_bold">bugs and mistakes</span>. But time passes, and the website is getting built slowly !
+									</p>
+								</div>
+							</div>
+
+							<div class="g_title_sprt">
+								<h2>Support us !</h2>
+							</div>
+
+							<div class="support">
+								<div class="element_text">
+									<p>You can download our wallpapers and share them to your friends to support us !
+									<br>
+									<br>
+										You can also follow our socials networks as <i>Instagram</i>. We regularly publish things related to the advancement of our website.
+									</p>
+		              <div class="social_net">
+		                <img src="/images/icons/articles/instagram.png" />
+		                <a href="https://www.instagram.com/programming_ants/">@Programming Ants</a>
+		              </div>
+								</div>
 							</div>
 						</div>
 
@@ -149,24 +169,13 @@ error_reporting(E_ALL);
 					</div>
 				</div>
 
-				<div id="s_groupc">
-					<div class="a3 support">
-						<div class="element_text">
-							<h3>Support us !</h3>
-							<p>You can download our wallpapers and share them to your friends to support us !</p>
-							<br>
-              <p>You can also follow our socials networks as <i>Instagram</i>. We regularly publish things related to the advancement of our website.</p>
-              <div class="social_net">
-                <img src="/images/icons/articles/instagram.png" />
-                <a href="https://www.instagram.com/programming_ants/">@Programming Ants</a>
-              </div>
-						</div>
+				<div id="s_groupb">
+					<div class="g_title_wprs">
+						<h2>Wallpapers</h2>
 					</div>
 
-        	<div class="a3 article_wallpapers_pa">
+        	<div class="article_wallpapers_pa">
           	<div class="element_text">
-            	<h3>Programming Ants wallpapers</h3>
-
             	<div class='widget_simple_image_viewer' id='siv_1'>
         				<div class='widget_body'>
 	        			 <div class='left_arrow'><img src='/images/arrows/a_left.png' /></div>
@@ -178,13 +187,19 @@ error_reporting(E_ALL);
             	</div>
           	</div>
         	</div>
+				</div>
 
-					<div class="a3 contact">
+				<div id="s_groupc">
+					<div class="g_title_cnct">
+						<h2>Contact</h2>
+					</div>
+
+					<div class="contact">
 						<div class="element_text">
-							<h3>Contact</h3>
-
-							<p>If you want to contact us :</p>
-							<p><i>Programming Ants</i> contact e-mail adress : <a href="mailto:contact@programming-ants.ovh" title="Contact us !">contact@programming-ants.ovh</a></p>
+							<p>If you want to contact us :
+							<br>
+							<i>Programming Ants</i> contact e-mail adress : <a href="mailto:contact@programming-ants.ovh" title="Contact us !">contact@programming-ants.ovh</a>
+							</p>
 						</div>
 					</div>
 				</div>

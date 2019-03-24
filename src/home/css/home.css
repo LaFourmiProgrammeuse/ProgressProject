@@ -7,9 +7,11 @@
 a {
 	text-decoration: none;
 }
-
 p {
 	margin: 0;
+}
+i {
+	color: black;
 }
 
 body {
@@ -440,23 +442,32 @@ article {
 }
 .social_net {
 	display: flex;
-	flex-direction: column;
-	text-align: center;
-  width: 100%;
-}
-.social_net a {
+	flex-direction: row;
+	align-items: center;
+	width: 25%;
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #f6f6f6;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #e1e1e1;
+	border-radius: 50px;
 }
 .social_net img {
-  width: 80px;
-  margin-top: 20px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 6px;
+  width: 35px;
+	margin-left: auto;
+}
+.social_net a {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 1.25vw;
+	font-weight: 200;
+	color: #747474;
+	margin-right: auto;
+	margin-left: 15px;
 }
 .article_wallpapers_pa {
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
+margin-top: 50px;
 }
 .article_wallpapers_pa h3 {
   text-align: center;
@@ -464,6 +475,10 @@ article {
 .article_wallpapers_pa .element_text {
   margin-left: auto;
   margin-right: auto;
+}
+.contact {
+	margin-top: 50px;
+	margin-bottom: 100px;
 }
 
 /* ASIDE */

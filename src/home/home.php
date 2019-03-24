@@ -149,14 +149,14 @@ error_reporting(E_ALL);
 				</div>
 
 				<div id="s_groupc">
-					<div class="a3">
+					<div class="a3 support">
 						<div class="element_text">
 							<h3>Support us !</h3>
 							<p>You can download our wallpapers and share them to your friends to support us !</p>
-
-              <p>You can also follow our socials networks as instagram. We regularly publish things related to the advancement of our website</p>
+							<br>
+              <p>You can also follow our socials networks as <i>Instagram</i>. We regularly publish things related to the advancement of our website.</p>
               <div class="social_net">
-                <img src="/images/instagram.png" />
+                <img src="/images/icons/articles/instagram.png" />
                 <a href="https://www.instagram.com/programming_ants/">@Programming Ants</a>
               </div>
 						</div>
@@ -178,10 +178,12 @@ error_reporting(E_ALL);
           	</div>
         	</div>
 
-					<div class="a3">
+					<div class="a3 contact">
 						<div class="element_text">
+							<h3>Contact</h3>
+
 							<p>If you want to contact us :</p>
-							<p><b>Programming Ants</b> contact e-mail adress : <a href="mailto:contact@programming-ants.ovh" title="Contact us !">contact@programming-ants.ovh</a></p>
+							<p><i>Programming Ants</i> contact e-mail adress : <a href="mailto:contact@programming-ants.ovh" title="Contact us !">contact@programming-ants.ovh</a></p>
 						</div>
 					</div>
 				</div>

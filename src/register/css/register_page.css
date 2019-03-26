@@ -25,7 +25,7 @@ li {
 #body_content{
   display: flex;
   flex-direction: column;
-  min-height: 80vh;
+  min-height: 90vh;
 }
 
 p {
@@ -282,10 +282,38 @@ top: 50%;
     height: 100vh;
 }
 
-/*@media screen and (max-width: 1024px) and (orientation: portrait) {
+@media screen and (max-width: 1024px) {
 
-    .page_change_orientation{
-        display: block;
+    #group_input{
+        width: 55%;
     }
 
-}*/
+    #infa h2{
+        font-size: 2.25vw;
+    }
+
+    #infb h3{
+        font-size: 1.70vw;
+    }
+
+    #send{
+        font-size: 1.9vw;
+    }
+
+    #checkbox_text{
+        font-size: 1.7vw;
+    }
+
+    .message_error{
+        font-size: 1.75vw;
+    }
+
+    .message_error li{
+        font-size: 1.6vw;
+    }
+
+    #body_content{
+        min-height: 80vh;
+    }
+
+}

@@ -2,12 +2,31 @@
 
 //Ne pas mettre de code html avant cette ligne !
 require '../php_for_all/session_control.php';
-
 include "../language/language.php";
 
 //echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
 error_reporting(E_ALL);
+
+if($_SESSION['connected'] == "true"){
+
+    try{
+        //On initialise une connexion avec la bdd
+        $bdd = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
+
+    }catch(Exception $e){
+        die('Erreur : ' . $e);
+
+    }
+
+    $username = $_SESSION['username'];
+
+    $qprepare = $bdd->prepare("SELECT profile_image_name FROM users WHERE username=?");
+    $qprepare->execute(array($username));
+
+    $profile_image_name = $qprepare->fetch()["profile_image_name"];
+    $profile_image_url = "/images/user_image/" . $profile_image_name;
+}
 
 ?>
 
@@ -76,7 +95,7 @@ error_reporting(E_ALL);
 
 				<div id="h_userb">
 					<div id="user_image">
-						<img src="/images/no_user_image.png" />
+						<img src="<?php  echo $profile_image_url; ?>" />
 				  </div>
 					<a id="user_username" href="../profile/profile.php"> <?php echo $_SESSION['username']; ?> </a>
 				</div>

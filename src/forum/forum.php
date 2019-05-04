@@ -1,5 +1,9 @@
 <?php
-    require "../php_for_all/session_control.php";
+    //Ne pas mettre de code html avant cette ligne !
+    require '../php_for_all/session_control.php';
+    include "../language/language.php";
+
+    IncrementVisitorCounter();
 
     ini_set("display_errors", 1);
     ini_set('error_log', dirname(__file__) . '/src/log_server.txt');
@@ -44,7 +48,7 @@
 
   <section>
     <div id="top_nav">
-      
+
     </div>
 
     <div id="forum_content">

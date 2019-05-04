@@ -6,7 +6,10 @@ include "../language/language.php";
 
 //echo 'connected = ' . $_SESSION['connected'] . '<br/>';
 
+//On active les rapports d'erreur
 error_reporting(E_ALL);
+
+IncrementVisitorCounter();
 
 if($_SESSION['connected'] == "true"){
 

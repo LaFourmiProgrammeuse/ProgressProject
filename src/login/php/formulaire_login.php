@@ -1,41 +1,33 @@
 <?php
-echo "-3";
 
 require '../../php_for_all/session_control.php';
-
-echo "-2";
-
 require '../../php_for_all/log_function.php';
 
 $file_log_path = "../../log_server.txt";
 
-echo "-1";
-
 $username = $_POST["nickname"];
 $password = $_POST["pass"];
-
-echo "0";
 
 /*if($username == "")){
     log_server("Erreur : pas d'indentifiant lors de la connexion", $file_log_path);
     exit(0);
 }*/
 
+try{
+    //On initialise une connexion avec la bdd
+    $bdd = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
+
+}catch(Exception $e){
+
+    //die('Erreur : ' . $e);
+
+}
+
 if(isset($_POST["stay_connected"])){
 
     $stay_connected = $_POST["stay_connected"];
 
     if($stay_connected == "on"){
-
-        try{
-            //On initialise une connexion avec la bdd
-            $bdd = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
-
-        }catch(Exception $e){
-
-            //die('Erreur : ' . $e);
-
-        }
 
         $qprepare = $bdd->prepare("UPDATE users SET stay_connected=? WHERE username=?");
 
@@ -48,7 +40,9 @@ if(isset($_POST["stay_connected"])){
 
 }
 
-echo "1";
+$user_ip = GetIp();
+$qprepared_2 = $bdd->prepare("UPDATE users SET last_ip_used=? WHERE username=?");
+$qprepared_2->execute(array($user_ip, $username));
 
 
 if(isset($_COOKIE['username']) AND isset($_COOKIE['password'])){

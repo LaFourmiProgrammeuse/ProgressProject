@@ -1,6 +1,6 @@
 <?php
 
-function get_ip() {
+function GetIp() {
 
     // IP si internet partagé
     if (isset($_SERVER['HTTP_CLIENT_IP'])) {
@@ -16,13 +16,40 @@ function get_ip() {
     }
 }
 
+function IncrementVisitorCounter(){
+
+    try{
+        //On initialise une connexion avec la db
+        $db = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
+
+    }catch(Exception $e){
+
+        die('Erreur : ' . $e);
+
+    }
+
+    $qprepared = $db->prepare("SELECT n_visitor FROM divers");
+    $qprepared->execute();
+
+    $qanswer = $qprepared->fetch();
+    $n_visitor = $qanswer[0];
+
+    //On incrémente de 1 car un utilisateur vient de charger la page
+    $n_visitor++;
+
+    $qprepared_2 = $db->prepare("UPDATE divers SET n_visitor=?");
+    $qprepared_2->execute(array($n_visitor));
+
+
+}
+
 $timeout = 360; //Temps avant destruction d'une session en seconde
 
 session_start();
 
 try{
-    //On initialise une connexion avec la bdd
-    $bdd = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
+    //On initialise une connexion avec la db
+    $db = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
 
 }catch(Exception $e){
 
@@ -52,13 +79,13 @@ if(isset($_SESSION['timeout'])){
 
             time();
 
-            $qprepare = $bdd->prepare("SELECT stay_connected FROM users WHERE username = :username && password = :password");
-            $qprepare->execute(array('username' => $_COOKIE['username'], 'password' => $_COOKIE['password']));
+            $qprepared = $db->prepare("SELECT stay_connected FROM users WHERE username = :username && password = :password");
+            $qprepared->execute(array('username' => $_COOKIE['username'], 'password' => $_COOKIE['password']));
 
-            if($qprepare){
+            if($qprepared){
 
                 time();
-                $qrep = $qprepare->fetch();
+                $qrep = $qprepared->fetch();
 
                 if($qrep['stay_connected'] == '0'){
 
@@ -104,15 +131,15 @@ if(isset($_SESSION['timeout'])){
         $_SESSION['username'] = $_COOKIE['username'];
         $_SESSION['password'] = $_COOKIE['password'];
 
-        $qprepare = $bdd->prepare("SELECT keep_connected, username FROM users WHERE username = :username && password = :password");
-        $qprepare->execute(array('username' => $_COOKIE['username'], 'password' => $_COOKIE['password']));
+        $qprepared = $db->prepare("SELECT keep_connected, username FROM users WHERE username = :username && password = :password");
+        $qprepared->execute(array('username' => $_COOKIE['username'], 'password' => $_COOKIE['password']));
 
-        if($qprepare){
+        if($qprepared){
 
-            //On met dans la bdd la derniere ip avec laquelle il vient de charger la page
-            //$qprepare_2 = $bdd->prepare("UPDATE users SET");
+            //On met dans la db la derniere ip avec laquelle il vient de charger la page
+            //$qprepared_2 = $db->prepare("UPDATE users SET");
 
-            $qrep = $qprepare->fetch();
+            $qrep = $qprepared->fetch();
 
             if($qrep['stay_connected'] == '0'){
 

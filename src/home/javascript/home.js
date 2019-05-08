@@ -1,8 +1,15 @@
 var session_username;
 var connected;
 
+    /* Variable of the simple image viewer for the wallpaper */
 var siv1_index = 0;
+
+//Liste des images du siv
 var siv1_images = ["/content/pa_official_wallpaper_1.jpg", "/content/pa_official_wallpaper_2.jpg", "/content/pa_official_wallpaper_3.png"];
+
+//Nom du fichier sur le serveur à télécharger pour chaque image si clické
+var siv1_download_content_name = ["pa_official_wallpaper_1.jpg", "pa_official_wallpaper_2.jpg", "pa_official_wallpaper_3.png"];
+
 
 function hideMessageConnection(){
 
@@ -64,7 +71,7 @@ function load_siv1(){
           method: "POST",
           url: "/src/widgets/simple_image_viewer/simple_image_viewer.php",
           dataType: "html",
-          data: {index: siv1_index, images: siv1_images},
+          data: {index: siv1_index, images: siv1_images, download_content_name: siv1_download_content_name},
           success: function(html_response){
               $("#siv_1").html(html_response);
               init_siv1_event();

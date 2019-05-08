@@ -6,7 +6,7 @@ $has_topic_pinned = false;
 $has_topic = false;
 
 $topic_pinned_page = $_GET['topic_pinned_page'];
-$topic_no_pinned_page =$_GET['topic_no_pinned_page'];
+$topic_no_pinned_page = $_GET['topic_no_pinned_page'];
 
 $n_topics_per_page = 2;
 $n_pinned_topic_beginner = ($topic_pinned_page-1)*$n_topics_per_page;
@@ -21,11 +21,11 @@ $qrep = $qprepare->fetch();
 $forum_name = $qrep[0];
 $forum_number_topics = $qrep[1];
 
-if($forum_number_topics != 0){
+$list_topics = array();
+$list_pinned_topics = array();
 
-    $list_topics = array();
-    $list_pinned_topics = array();
-
+//On cherche le nombre de topics de chaque type (épinglé ou non)
+//On commence chercher le nombre de topic non épinglé
 
 
     //Récuperation du nombre de topic épinglé et non épinglé
@@ -60,6 +60,7 @@ if($forum_number_topics != 0){
 while($qrep_2 = $qprepare_2->fetch(PDO::FETCH_NAMED)){
 
     $has_topic = true;
+    $n = 0;
 
     $qprepare_3 = $bdd->prepare("SELECT author, date_of_publication FROM posts WHERE topic=? ORDER BY date_of_publication DESC LIMIT 1");
     $qprepare_3->execute(array($qrep_2['id']));
@@ -70,7 +71,7 @@ while($qrep_2 = $qprepare_2->fetch(PDO::FETCH_NAMED)){
     $date_of_publication = new DateTime($date_of_publication_no_formatted);
     $date_now = new DateTime("now");
     $time_from_publication = $date_of_publication->diff($date_now);
-    
+
     //On formate le résultat sous forme de temps écoulé
     if(intval($time_from_publication->format("%m")) >= 1){
       if(intval($time_from_publication->format("%m")) != 1){
@@ -122,6 +123,7 @@ while($qrep_2 = $qprepare_2->fetch(PDO::FETCH_NAMED)){
 while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
 
     $has_topic_pinned = true;
+    $n = 0;
 
     $qprepare_3 = $bdd->prepare("SELECT author, date_of_publication FROM posts WHERE topic=? ORDER BY date_of_publication DESC LIMIT 1");
     $qprepare_3->execute(array($qrep_4['id']));
@@ -133,7 +135,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
     $date_of_publication = new DateTime($date_of_publication_no_formatted);
     $date_now = new DateTime("now");
     $time_from_publication = $date_of_publication->diff($date_now);
-    
+
     //On formate le résultat sous forme de temps écoulé
     if(intval($time_from_publication->format("%m")) >= 1){
       if(intval($time_from_publication->format("%m")) != 1){
@@ -178,7 +180,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
 
     $n++;
 }
-}
+
 ?>
 
 <head>
@@ -202,7 +204,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
     <div class="topics_pinned">
 
      <?php
-     if($has_topic_pinned == false){ 	
+     if($has_topic_pinned == false){
          ?>
          <div class="no_pinned_topic">
           <p>No pinned topic</p>
@@ -247,12 +249,12 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
 </div>
 <?php
   echo "</a>";
- }} 
+ }}
  ?>
 </div>
 
 <div id="topic_pinned_page" class="topic_page">
-    <?php 
+    <?php
         if($_GET["topic_pinned_page"]-1 < 1){
             echo "<a href=forum.php?forum_part=forum" . "&forum_id=" . $_GET["forum_id"] . "&topic_no_pinned_page=" . $_GET["topic_no_pinned_page"] . "&topic_pinned_page=" . $n_of_page_pinned_topic . ">";
     }else{
@@ -266,16 +268,15 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
     <span class ="pages">
         <?php
 
+            //Si on a 1 page de topic épinglé on affiche juste la le numéro 1
             if($n_of_page_pinned_topic == 0){
                 echo "<a href=forum.php?forum_part=forum" . "&forum_id=" . $_GET["forum_id"] . "&topic_no_pinned_page=" . $_GET["topic_no_pinned_page"] . "&topic_pinned_page=" . 1 . ">";
 
-                echo "1";
-
                 echo "</a>";
 
-            }else{
+            }else{ //Si on a une ou plusieurs pages de topic épinglé on affiche tous les numeros de page avec un lien pour y accéder
 
-                for ($i=0; $i < $n_of_page_pinned_topic; $i++) { 
+                for ($i=0; $i < $n_of_page_pinned_topic; $i++) {
 
                     if($i != 0){
                         echo " - ";
@@ -290,7 +291,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
             }
         ?>
     </span>
-    <?php 
+    <?php
         if(($_GET["topic_pinned_page"]+1) > $n_of_page_pinned_topic){
             echo "<a href=forum.php?forum_part=forum" . "&forum_id=" . $_GET["forum_id"] . "&topic_no_pinned_page=" . $_GET["topic_no_pinned_page"]  . "&topic_pinned_page=" . 1 . ">";
     }else{
@@ -356,14 +357,14 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
 </div>
 </div>
 </div>
-<?php 
+<?php
   echo "</a>";
-  }} 
+  }}
 ?>
 </div>
 
 <div id="topic_no_pinned_page" class="topic_page">
-    <?php 
+    <?php
         if($_GET["topic_no_pinned_page"]-1 < 1){
             echo "<a href=forum.php?forum_part=forum" . "&forum_id=" . $_GET["forum_id"] . "&topic_no_pinned_page=" . $n_of_page_no_pinned_topic . "&topic_pinned_page=" . $_GET["topic_pinned_page"] . ">";
     }else{
@@ -386,7 +387,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
 
             }else{
 
-                for ($i=0; $i < $n_of_page_no_pinned_topic; $i++) { 
+                for ($i=0; $i < $n_of_page_no_pinned_topic; $i++) {
 
                     if($i != 0){
                         echo " - ";
@@ -401,7 +402,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
             }
         ?>
     </span>
-    <?php 
+    <?php
         if(($_GET["topic_no_pinned_page"]+1) > $n_of_page_no_pinned_topic){
             echo "<a href=forum.php?forum_part=forum" . "&forum_id=" . $_GET["forum_id"] . "&topic_no_pinned_page=" . 1 . "&topic_pinned_page=" . $_GET["topic_pinned_page"] . ">";
     }else{

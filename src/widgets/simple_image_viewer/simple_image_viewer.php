@@ -4,6 +4,7 @@
 
     $images = $_POST['images'];
     $index = intval($_POST['index']);
+    $download_content_name = $_POST["download_content_name"];
 
     //echo "1" . $index . $images;
 
@@ -21,11 +22,15 @@
       $img_3_index = 0;
     }
 
+        $link_for_download_img_1 = "/content/download_content.php?content_name=" . $download_content_name[$img_1_index];
+        $link_for_download_img_2 = "/content/download_content.php?content_name=" . $download_content_name[$img_2_index];
+        $link_for_download_img_3 = "/content/download_content.php?content_name=" . $download_content_name[$img_3_index];
+
       echo "<div class='widget_body'>";
         echo "<div class='left_arrow'><img src='/images/arrows/a_left.png' /></div>";
-        echo "<div class='left_image'><img src='" . $images[$img_1_index] . "' /></div>";
-        echo "<div class='central_image'><img src='" . $images[$img_2_index] . "' /></div>";
-        echo "<div class='right_image'><img src='" . $images[$img_3_index] . "' /></div>";
+        echo "<div class='left_image'><a href='" . $link_for_download_img_1 . "'><img src='" . $images[$img_1_index] . "' /></a></div>";
+        echo "<div class='central_image'><a href='" . $link_for_download_img_2 . "'><img src='" . $images[$img_2_index] . "' /></a></div>";
+        echo "<div class='right_image'><a href='" . $link_for_download_img_3 . "'><img src='" . $images[$img_3_index] . "' /></a></div>";
         echo "<div class='right_arrow'><img src='/images/arrows/a_right.png' /></div>";
       echo "</div>";
 

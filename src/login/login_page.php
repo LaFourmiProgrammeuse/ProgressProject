@@ -9,8 +9,10 @@ IncrementVisitorCounter();
 
 <!DOCTYPE html>
 <html>
-
 	<head>
+
+        <!-- Google Analytics -->
+        <?php include "../analytic_tools/google_analytics.html"; ?>
 
 		<link rel="stylesheet" type="text/css" href="css/login_page.css">
 

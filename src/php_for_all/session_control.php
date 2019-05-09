@@ -28,7 +28,7 @@ function IncrementVisitorCounter(){
 
     }
 
-    $qprepared = $db->prepare("SELECT n_visitor FROM divers");
+    $qprepared = $db->prepare("SELECT n_page_loaded FROM divers");
     $qprepared->execute();
 
     $qanswer = $qprepared->fetch();
@@ -37,7 +37,7 @@ function IncrementVisitorCounter(){
     //On incrémente de 1 car un utilisateur vient de charger la page
     $n_visitor++;
 
-    $qprepared_2 = $db->prepare("UPDATE divers SET n_visitor=?");
+    $qprepared_2 = $db->prepare("UPDATE divers SET n_page_loaded=?");
     $qprepared_2->execute(array($n_visitor));
 
 

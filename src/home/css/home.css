@@ -95,7 +95,7 @@ header {
 	transform: translate(-50%, 0);
 	left: 50%;
 	width: 170px;
-    height: 120px;
+    height: 143px;
 }
 
 #h_vertical_menu .nav_element{
@@ -104,27 +104,27 @@ header {
 }
 #h_vertical_menu .nav_element a{
 	color: white;
-    font-size: 1.7vw;
+    font-size: 2vw;
 }
 
 #h_vertical_menu .nav_element_forum{
     position: relative;
-    top: 8px;
+    top: 12px;
 }
 
 #h_vertical_menu .nav_element_projects{
     position: relative;
-    top: 16px;
+    top: 24px;
 }
 
 #h_vertical_menu .nav_element_about{
     position: relative;
-    top: 24px;
+    top: 36px;
 }
 
 #h_vertical_menu .nav_element_contact{
     position: relative;
-    top: 32px;
+    top: 48px;
 }
 
 @media screen and (min-width: 1024px){
@@ -136,6 +136,18 @@ header {
 	.h_small_resolution{
 		display: block;
 	}
+}
+
+@media screen and (min-width: 927px){
+	#h_vertical_menu{
+        height: 155px;
+    }
+}
+
+@media screen and (max-width: 927px){
+	#h_vertical_menu{
+        height: 143px;
+    }
 }
 
 #h_groupc {

@@ -1,9 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
-@import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One');
-@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:200,200i');
-@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:700');
-
 header {
 	display: flex;
 	height: 60px;

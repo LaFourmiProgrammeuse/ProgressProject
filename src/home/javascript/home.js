@@ -132,11 +132,13 @@ $(document).ready(function(){
 
     $("#account").css("margin-left", "20px");
 
+    // wallpaper
     load_siv1();
 
     requestSessionData();
 
-    //Gestion des clicks sur des boutons menant à des parties du site pas encore commencé
+        /* MODAL WARNING NO CONTENT */
+
     $(".nav_element_error_wiki").click(function(){
         $("#modal_warning_no_content").css("display", "block");
     });
@@ -160,6 +162,8 @@ $(document).ready(function(){
     $("#modal_warning_no_content .modal_background").click(function(e){
         $("#modal_warning_no_content").css("display", "none");
     });
+
+        /* VERTICAL MENU FOR SMALL RESOLUTION */
 
     $("#h_groupb .h_small_resolution img").mouseenter(function(){
         $("#h_vertical_menu").css("display", "flex");

@@ -6,7 +6,7 @@
   <div id="h_groupb">
     <!-- Menu de navigation +700px -->
     <div class="h_high_resolution">
-      <div class="nav_element"><a href="../forum/forum.php"><?php echo _("Forum"); ?> </a></div>
+      <div class="nav_element nav_element_forum"><a href="../forum/forum.php"><?php echo _("Forum"); ?> </a></div>
       <div class="nav_element nav_element_projects"><a href="#"><?php echo _("Projects"); ?> </a></div>
       <div class="nav_element nav_element_about"><a href="#"><?php echo _("About"); ?> </a></div>
       <div class="nav_element nav_element_contact"><a href="#"><?php echo _("Contact"); ?> </a></div>
@@ -17,7 +17,7 @@
       <img src="/images/menu.png" />
 
       <div class="vertical_menu" id="h_vertical_menu">
-        <div class="nav_element"><a href="../forum/forum.php"><?php echo _("Forum"); ?> </a></div>
+        <div class="nav_element nav_element_forum"><a href="../forum/forum.php"><?php echo _("Forum"); ?> </a></div>
         <div class="nav_element nav_element_projects"><a href="#"><?php echo _("Projects"); ?> </a></div>
         <div class="nav_element nav_element_about"><a href="#"><?php echo _("About"); ?> </a></div>
         <div class="nav_element nav_element_contact"><a href="#"><?php echo _("Contact"); ?> </a></div>

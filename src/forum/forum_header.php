@@ -1,6 +1,6 @@
 <header>
   <div id="h_groupa">
-    <img src="/images/logos/pa.svg" title="Programming Ants' Logo"/>
+    <a href="../home/home.php"><img src="/images/logos/pa.svg" title="Programming Ants' Logo"/></a>
   </div>
 
   <div id="h_groupb">

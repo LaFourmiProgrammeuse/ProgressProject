@@ -14,11 +14,6 @@ header {
 	height: 100%;
 	align-items: center;
 }
-
-#h_groupa a {
-	width: 100%;
-}
-
 #h_groupa img {
 	width: 100%;
 }
@@ -28,19 +23,19 @@ header {
 	justify-content: space-between;
 	flex-direction: row;
 	height: 100%;
-	align-items: flex-end;
+	align-items: center;
 	margin-left: 30px;
 	width: calc(100% - 290px);
 }
 .nav_element {
 	margin-left: 20px;
 	margin-right: 20px;
-	margin-bottom: 15px;
 }
 .nav_element a {
+	color: #515151;
 	font-family: 'Karla', cursive;
+	font-weight: lighter;
 	font-size: 1.1vw;
-	color: #656565;
 }
 
 .h_small_resolution{
@@ -72,132 +67,139 @@ header {
 	background-color: black;
 	transform: translate(-50%, 0);
 	left: 50%;
-	width: 140px;
+	width: 170px;
+    height: 143px;
 }
+
 #h_vertical_menu .nav_element{
 	width: 130px;
 	text-align: center;
 }
 #h_vertical_menu .nav_element a{
 	color: white;
+    font-size: 2vw;
 }
 
-			.vertical_menu{
-				z-index: 5;
-			}
+#h_vertical_menu .nav_element_forum{
+    position: relative;
+    top: 12px;
+}
 
-			#h_vertical_menu{
-				flex-direction: column;
-				display: none;
-				position: absolute;
-				top: 37px;
-				border: solid 2px grey;
-				background-color: black;
-				transform: translate(-50%, 0);
-				left: 50%;
-				width: 140px;
-			}
-			#h_vertical_menu .nav_element{
-				width: 130px;
-				text-align: center;
-				margin-left: 0px;
-				margin-top: 3px;
-				margin-bottom: 3px;
-			}
-			#h_vertical_menu .nav_element a{
-				color: white;
-				font-size: 1.4vw;
-			}
+#h_vertical_menu .nav_element_projects{
+    position: relative;
+    top: 24px;
+}
 
+#h_vertical_menu .nav_element_about{
+    position: relative;
+    top: 36px;
+}
 
-			@media screen and (min-width: 1024px){
-				.h_high_resolution{
-					display: flex;
-				}
-			}
-			@media screen and (max-width: 1024px){
-				.h_small_resolution{
-					display: block;
-				}
-			}
+#h_vertical_menu .nav_element_contact{
+    position: relative;
+    top: 48px;
+}
 
-				#h_groupc {
-					display: flex;
-					flex-direction: row-reverse;
-					align-self: flex-end;
-					height: 100%;
-					width: 375px;
-					margin-right: 75px;
-					align-items: center;
-				}
-				#h_usera {
-					display: flex;
-					justify-content: space-between;
-					flex-direction: row;
-					align-items: center;
-				}
-				#h_userb {
-					display: flex;
-					flex-direction: row;
-					justify-content: space-between;
-					text-align: center;
-					display: none;
-					margin-right: 25px;
-				}
-          #login_button{
-            display: none;
-          }
-          #register_button{
-            display: none;
-          }
-          #disconnect_button{
-            display: none;
-						background-color: #6b247e;
-						padding-top: 10px;
-						padding-bottom: 10px;
-						padding-left: 27.5px;
-						padding-right: 27.5px;
-						border-radius: 5px;
-          }
-					#disconnect_button a {
-						color: white;
-					}
+@media screen and (min-width: 1024px){
+	.h_high_resolution{
+		display: flex;
+	}
+}
+@media screen and (max-width: 1024px){
+	.h_small_resolution{
+		display: block;
+	}
+}
 
-						.identification:nth-child(2) {
-							margin-left: 20px;
-							background-color: #6b247e;
-							padding-top: 10px;
-							padding-bottom: 10px;
-							padding-left: 27.5px;
-							padding-right: 27.5px;
-							border-radius: 5px;
-						}
-						.identification:nth-child(2) a {
-							font-weight: bold;
-							font-size: 1.2vw;;
-							color: white;
-						}
-						.identification a {
-							font-family: 'Karla', cursive;
-						}
-						.identification:nth-child(1) a {
-							font-size: 1.1vw;
-							color: #656565;
-						}
-							#user_image {
-								position: relative;
-								margin-left: auto;
-								margin-right: auto;
-								top: 3px;
-							}
-							#user_image img{
-								height: 40px;
-								width: 40px;
-							}
-							#user_username {
-								color: #6b247e;
-								font-family: 'Karla', cursive;
-								font-size: 1.15vw;
-								position: relative;
-								top: -9px;
-							}
+@media screen and (min-width: 927px){
+	#h_vertical_menu{
+        height: 155px;
+    }
+}
+
+@media screen and (max-width: 927px){
+	#h_vertical_menu{
+        height: 143px;
+    }
+}
+
+#h_groupc {
+	display: flex;
+	flex-direction: row-reverse;
+	align-self: flex-end;
+	height: 100%;
+	width: 375px;
+	margin-right: 75px;
+	align-items: center;
+}
+.identification:nth-child(2) {
+	margin-left: 20px;
+	background-color: #ffc25f;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 27.5px;
+	padding-right: 27.5px;
+	border-radius: 5px;
+}
+.identification:nth-child(2) a {
+	font-weight: bold;
+	font-size: 1.1vw;;
+	color: white;
+}
+.identification a {
+	font-family: 'Karla', cursive;
+}
+.identification:nth-child(1) a {
+	font-size: 1.1vw;
+	color: #656565;
+}
+
+#h_usera {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+}
+#login_button{
+  display: none;
+}
+#register_button {
+  display: none;
+}
+#h_userb {
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	display: none;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+#user_image {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#user_image img {
+	height: 40px;
+	width: 40px;
+    margin-top: 8px;
+}
+
+#user_username{
+    position: relative;
+    top: -2px;
+}
+#disconnect_button {
+  display: none;
+	background-color: #ffc25f;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 27.5px;
+	padding-right: 27.5px;
+	border-radius: 5px;
+}
+#disconnect_button a {
+	font-weight: bold;
+	font-size: 1.1vw;;
+	color: white;
+}

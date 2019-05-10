@@ -62,20 +62,14 @@ catch(Exception $e){
                 <?php
                 if(isset($_GET['forum_part'])){
 
-                    if($_GET['forum_part'] == "latest"){
-                        require "onglets_forum/forum_latest.php";
-                    }
-                    else if($_GET['forum_part'] == "recent_activity"){
-                        require "onglets_forum/forum_recent_activity.php";
+                    if($_GET['forum_part'] == "rules"){
+                        require "onglets_forum/forum_rules.php";
                     }
                     else if($_GET['forum_part'] == "stats"){
                         require "onglets_forum/forum_stats.php";
                     }
                     else if($_GET['forum_part'] == "forums"){
                         require "onglets_forum/forum_forums.php";
-                    }
-                    else if($_GET['forum_part'] == "home"){
-                        require "onglets_forum/forum_home.php";
                     }
                     else if($_GET['forum_part'] == "forum"){
 

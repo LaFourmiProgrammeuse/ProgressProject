@@ -15,6 +15,10 @@ header {
 	width: 100%;
 }
 
+#h_groupa a{
+    width: 100%;
+}
+
 #h_groupb {
 	display: flex;
 	justify-content: space-between;

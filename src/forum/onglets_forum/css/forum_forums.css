@@ -90,12 +90,18 @@ article {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 65px;
 }
 
 .f_category {
   display: flex;
   flex-direction: column;
-  margin-top: 65px;
+}
+.f_category:nth-child(2) {
+  margin-top: 85px;
+}
+.f_category:nth-child(3) {
+  margin-top: 85px;
 }
 .category_title {
   font-size: 1.85vw;

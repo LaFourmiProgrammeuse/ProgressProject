@@ -53,7 +53,7 @@ IncrementVisitorCounter();
 							        </label>
 										</div>
 
-		 	              <input type="button" value="Send" id="send" class="send" />
+		 	                        <button type="button" value="Send" id="send" class="send" >Send</button>
 									</form>
 								</fieldset>
 							</div>

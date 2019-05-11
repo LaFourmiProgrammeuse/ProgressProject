@@ -84,7 +84,7 @@ header {
 }
 #h_vertical_menu .nav_element a{
 	color: white;
-    font-size: 2vw;
+    font-size: 2.5vw;
 }
 
 #h_vertical_menu .nav_element_forum{
@@ -120,13 +120,13 @@ header {
 
 @media screen and (min-width: 927px){
 	#h_vertical_menu{
-        height: 155px;
+        height: 173px;
     }
 }
 
 @media screen and (max-width: 927px){
 	#h_vertical_menu{
-        height: 143px;
+        height: 164px;
     }
 }
 
@@ -215,10 +215,26 @@ header {
 @media screen and (max-width: 1024px){
 
     :nth-child(1).identification a{
-        font-size: 1.85vw;
+        font-size: 2vw;
     }
 
     :nth-child(2).identification a{
-        font-size: 1.85vw;
+        font-size: 2vw;
     }
+
+    #disconnect_button a {
+    	font-size: 2vw;;
+    }
+
+    #h_groupa{
+        width: 150px;
+        position: relative;
+        top: 5px;
+    }
+
+    .h_small_resolution img{
+        width: 27px;
+        height: 27px;
+    }
+
 }

@@ -24,14 +24,15 @@ footer{
     position: relative;
     text-align: center;
     top: 10px;
+    font-size: 18px;
 }
 #footer_information_frame_2{
     display: flex;
     justify-content: space-around;
     width: 300px;
-    font-size: 10px;
+    font-size: 13px;
     position: relative;
-    top: 22px;
+    top: 18px;
     margin: auto;
     text-align: center;
 }
@@ -45,6 +46,6 @@ footer{
     margin: 0px;
 }
 #label_uses_condition{
-    width: 110px;
+    width: 130px;
     margin: 0px;
 }

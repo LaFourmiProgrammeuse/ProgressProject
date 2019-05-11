@@ -104,9 +104,9 @@ section {
 	border-radius: 50px;
 	font-family: 'Roboto', cursive;
 }
-.inf_area  h3 {
+.inf_area h3 {
 	color: white;
-	font-size: 15px;
+	font-size: 1vw;
 	font-weight: 300;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -118,7 +118,7 @@ section {
 	display: inline-block;
   vertical-align: middle;
 	color: white;
-	font-size: 15px;
+	font-size: 0.9vw;
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-top: 10px;
@@ -548,47 +548,55 @@ article {
 @media screen and (max-width: 1024px){
 
     .g_title_prts h2{
-        font-size: 3.25vw;
+        font-size: 3.75vw;
     }
 
     .g_title_sprt h2{
-        font-size: 3.25vw;
+        font-size: 3.75vw;
     }
 
     .g_title_wprs h2{
-        font-size: 3.25vw;
+        font-size: 3.75vw;
     }
 
     .g_title_cnct h2{
-        font-size: 3.25vw;
+        font-size: 3.75vw;
     }
 
     .a1 p{
-        font-size: 2vw
+        font-size: 2.75vw
     }
 
     .a2 p{
-        font-size: 2vw
+        font-size: 2.75vw
     }
 
     .support p{
-        font-size: 2vw
+        font-size: 2.75vw
     }
 
     .element_title h3{
-        font-size: 2.5vw;
+        font-size: 3vw;
     }
 
     .social_net a{
-        font-size: 2vw;
+        font-size: 2.25vw;
     }
 
     .contact p{
-        font-size: 2vw;
+        font-size: 2.75vw;
     }
 
     #link a{
-        font-size: 1.70vw;
+        font-size: 2vw;
+    }
+
+    .inf_area h3{
+        font-size: 2.2vw;
+    }
+
+    #link_to{
+        font-size: 2vw;
     }
 
 }
@@ -598,5 +606,13 @@ article {
 
     .social_net{
         width: 90%;
+    }
+
+    .contact{
+        width: 75%;
+    }
+
+    .g_title_cnct h2{
+        width: 75%;
     }
 }

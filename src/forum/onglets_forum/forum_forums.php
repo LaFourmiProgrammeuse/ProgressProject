@@ -46,7 +46,7 @@ $forums_system = array();
 $forums_software = array();
 $forums_forum_functioning = array();
 
-$logo_forum_dir_path = "/src/images/topics_logo/";
+$logo_forum_dir_path = "/images/topic_icons/";
 
 try{
     $bdd = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
@@ -109,7 +109,7 @@ while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
         $forums_language[$forum['name']] = "last_active_topic_title" => $forum_information['last_active_topic_title'],
         $forums_language[$forum['name']] = "lat_time_from_last_activity" => $forum_information['lat_time_from_last_activity'],
         $forums_language[$forum['name']] = "number_posts" => $forum_information['number_posts'],
-        $forums_language[$forum['name']] = "number_topics" => $forum_information['number_topics'], "logo_path" => $forum_information['logo_path']];
+        $forums_language[$forum['name']] = "number_topics" => $forum_information['number_topics'], "logo_path" => $logo_path];
     }
     else if($forum["forum_type"] == "system"){
 
@@ -117,7 +117,7 @@ while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
         $forums_system[$forum['name']] = "last_active_topic_title" => $forum_information['last_active_topic_title'],
         $forums_system[$forum['name']] = "lat_time_from_last_activity" => $forum_information['lat_time_from_last_activity'],
         $forums_system[$forum['name']] = "number_posts" => $forum_information['number_posts'],
-        $forums_system[$forum['name']] = "number_topics" => $forum_information['number_topics'], "logo_path" => $forum_information['logo_path']];
+        $forums_system[$forum['name']] = "number_topics" => $forum_information['number_topics'], "logo_path" => $logo_path];
     }
     else if($forum["forum_type"] == "software"){
 
@@ -125,7 +125,7 @@ while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
         $forums_software[$forum['name']] = "last_active_topic_title" => $forum_information['last_active_topic_title'],
         $forums_software[$forum['name']] = "lat_time_from_last_activity" => $forum_information['lat_time_from_last_activity'],
         $forums_software[$forum['name']] = "number_posts" => $forum_information['number_posts'],
-        $forums_software[$forum['name']] = "number_topics" => $forum_information['number_topics'], "logo_path" => $forum_information['logo_path']];
+        $forums_software[$forum['name']] = "number_topics" => $forum_information['number_topics'], "logo_path" => $logo_path];
     }
     else if($forum["forum_type"] == "forum_functioning"){
 
@@ -133,7 +133,7 @@ while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
         $forums_forum_functioning[$forum['name']] = "last_active_topic_title" => $forum_information['last_active_topic_title'],
         $forums_forum_functioning[$forum['name']] = "lat_time_from_last_activity" => $forum_information['lat_time_from_last_activity'],
         $forums_forum_functioning[$forum['name']] = "number_posts" => $forum_information['number_posts'],
-        $forums_forum_functioning[$forum['name']] = "number_topics" => $forum_information['number_topics'], "logo_path" => $forum_information['logo_path']];
+        $forums_forum_functioning[$forum['name']] = "number_topics" => $forum_information['number_topics'], "logo_path" => $logo_path];
     }
 
         //var_dump($forums_language);
@@ -185,6 +185,7 @@ while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
           ?>
           <div class="forum_desc">
               <div class="forum_desc_groupa">
+                  <img src="<?php echo $_forum_information["logo_path"] ?>" />
                   <div class="forum_name"><?php echo $_forum_name; ?></div>
                   <div class="forum_small_desc"><?php echo $_forum_information['forum_desc']; ?></div>
               </div>
@@ -214,6 +215,7 @@ while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
           ?>
           <div class="forum_desc">
               <div class="forum_desc_groupa">
+                  <img src="<?php echo $_forum_information["logo_path"] ?>" />
                   <div class="forum_name"><?php echo $_forum_name; ?></div>
                   <div class="forum_small_desc"><?php echo $_forum_information['forum_desc']; ?></div>
               </div>
@@ -243,6 +245,7 @@ while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
           ?>
           <div class="forum_desc">
               <div class="forum_desc_groupa">
+                  <img src="<?php echo $_forum_information["logo_path"] ?>" />
                   <div class="forum_name"><?php echo $_forum_name; ?></div>
                   <div class="forum_small_desc"><?php echo $_forum_information['forum_desc']; ?></div>
               </div>

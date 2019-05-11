@@ -81,8 +81,23 @@ article {
 
 .forum_desc_groupa {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: #d2d2d2;
+}
+.f_icon {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  background-color: #ee4747;
+}
+.f_inf {
+  display: flex;
+  flex-direction: column;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-left: 2px solid black;
 }
 
 .forum_desc_groupb {

@@ -173,8 +173,13 @@ while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
           ?>
           <div class="forum_desc">
               <div class="forum_desc_groupa">
-                  <div class="forum_name"><?php echo $_forum_name; ?></div>
-                  <div class="forum_small_desc"><?php echo $_forum_information['forum_desc']; ?></div>
+                  <div class="f_icon">
+
+                  </div>
+                  <div class="f_inf">
+                      <div class="forum_name"><?php echo $_forum_name; ?></div>
+                      <div class="forum_small_desc"><?php echo $_forum_information['forum_desc']; ?></div>
+                  </div>
               </div>
 
               <div class="forum_desc_groupb">
@@ -202,8 +207,13 @@ while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
           ?>
           <div class="forum_desc">
               <div class="forum_desc_groupa">
-                  <div class="forum_name"><?php echo $_forum_name; ?></div>
-                  <div class="forum_small_desc"><?php echo $_forum_information['forum_desc']; ?></div>
+                  <div class="f_icon">
+
+                  </div>
+                  <div class="f_inf">
+                      <div class="forum_name"><?php echo $_forum_name; ?></div>
+                      <div class="forum_small_desc"><?php echo $_forum_information['forum_desc']; ?></div>
+                  </div>
               </div>
 
               <div class="forum_desc_groupb">
@@ -231,8 +241,13 @@ while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
           ?>
           <div class="forum_desc">
               <div class="forum_desc_groupa">
-                  <div class="forum_name"><?php echo $_forum_name; ?></div>
-                  <div class="forum_small_desc"><?php echo $_forum_information['forum_desc']; ?></div>
+                  <div class="f_icon">
+
+                  </div>
+                  <div class="f_inf">
+                      <div class="forum_name"><?php echo $_forum_name; ?></div>
+                      <div class="forum_small_desc"><?php echo $_forum_information['forum_desc']; ?></div>
+                  </div>
               </div>
 
               <div class="forum_desc_groupb">

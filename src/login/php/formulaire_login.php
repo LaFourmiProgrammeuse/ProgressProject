@@ -1,9 +1,9 @@
 <?php
 
-require '../../php_for_all/session_control.php';
-require '../../php_for_all/log_function.php';
+require '/home/programmpk/www/src/php_for_all/session_control.php';
+require '/home/programmpk/www/src/php_for_all/log_function.php';
 
-$file_log_path = "../../log_server.txt";
+$file_log_path = "/home/programmpk/www/src/log_server.txt";
 
 $username = $_POST["nickname"];
 $password = $_POST["pass"];
@@ -69,6 +69,6 @@ $_SESSION['password'] = $password;
 
 $_SESSION['animation_connection'] = 'true';
 
-header('Location: ../../home/home.php');
+header('Location: /home.php');
 
 ?>

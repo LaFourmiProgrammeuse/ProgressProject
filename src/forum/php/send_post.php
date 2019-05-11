@@ -44,7 +44,7 @@
 	$qprepare_5->execute(array($n_posts_topic, $post_topic));
 
 
-	
+
 	//On update les informations du forum
 	$qprepare_6 = $bdd->prepare("SELECT number_posts FROM forums WHERE id=?");
 	$qprepare_6->execute(array($forum_id));
@@ -55,7 +55,7 @@
 	$qprepare_7 = $bdd->prepare("UPDATE forums SET number_posts=?, last_active_topic=? WHERE id=?");
 	$qprepare_7->execute(array($n_posts_forum, $post_topic, $forum_id));
 
-	$link_topic = "../forum.php?forum_part=topic&topic_id=" . $post_topic;
+	$link_topic = "/src/forum.php?forum_part=topic&topic_id=" . $post_topic;
 	header("Location: " . $link_topic);
 
 

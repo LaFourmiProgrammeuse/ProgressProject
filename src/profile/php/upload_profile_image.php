@@ -1,9 +1,9 @@
 <?php
 
-require "../../php_for_all/log_function.php";
-$file_log_server = "../../log_server.txt";
+require "/home/programmpk/www/src/php_for_all/log_function.php";
+$file_log_server = "/home/programmpk/www/src/log_server.txt";
 
-$folder_image_path = "../../../images/user_image/";
+$folder_image_path = "/images/user_image/";
 
 
 //On verifie les informations recus

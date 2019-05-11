@@ -16,5 +16,5 @@
 
     session_destroy();
 
-    header("Location: /src/home/home.php");
+    header("Location: /home.php");
  ?>

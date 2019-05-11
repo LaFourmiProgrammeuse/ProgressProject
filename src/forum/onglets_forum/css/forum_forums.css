@@ -1,0 +1,44 @@
+/* Le bloc contenant la liste des forums */
+
+#central_onglet_body {
+  margin-top: 50px;
+}
+
+/* Indexe */
+
+.index_path {
+  margin-left: 50px;
+}
+#index_path_smll {
+
+}
+
+/* Barre de nav */
+
+#top_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 25px;
+  background-color: #eeeeee;
+}
+#tn_groupa {
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 75px;
+}
+.text_element {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#tn_groupb {
+  flex-direction: row;
+  margin-right: 75px;
+}
+#search-btn {
+  margin: 0;
+}
+
+/* Liste des forums */

@@ -144,136 +144,115 @@ while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
 
 <div id="central_onglet_body">
 
-    <div class="forum_index">
-        <h3>You are here :</h3>
-        <span class="forum_index_path">Index/Forums</span>
+    <div class="path">
+        <span class="index_path">Index > <span id="index_path_smll">Forums</span></span>
+    </div>
+
+    <div id="top_nav">
+      <div id="tn_groupa">
+
+        <a href="#" class="text_element">Choose a forum</a>
+        <a href="forum_stats.php" class="text_element">Stats</a>
+        <a href="forum_rules.php" class="text_element">Rules</a>
+
+      </div>
+
+      <div id="tn_groupb">
+
+        <div class="searchbar">
+          <form action="/search" id="searchthis" method="get">
+            <input id="search" name="q" type="text" placeholder="Type here to search" />
+            <input id="search-btn" type="submit" value="Ok" />
+          </form>
+        </div>
+
+      </div>
     </div>
 
     <article>
-        <div class="article" id="forums_language">
-            <div class="h_forums_desc">
-                <h3 class="h_forums_desc_1">Language</h3>
-                <h3 class="h_forums_desc_2">Topics/Posts</h3>
-                <h3 class="h_forums_desc_3">Last active topic</h3>
-            </div>
 
-                <?php
-                    foreach($forums_language as $_forum_name => $_forum_information){
-                ?>
-                <div class="forum_desc">
-                    <div class="forum_desc_groupa">
-                        <div class="forum_name"><?php echo $_forum_name; ?></div>
-                        <div class="forum_small_desc"><?php echo $_forum_information['forum_desc']; ?></div>
-                    </div>
-                    <div class="forum_desc_groupb">
-                        <div class="n_messages_forum"><?php echo ($_forum_information['number_posts'] . " posts"); ?></div>
-                        <div class="n_topics_forum"><?php echo ($_forum_information['number_topics'] . " topics"); ?></div>
-                    </div>
-                    <div class="forum_desc_groupc">
-                        <div class="last_message_forum">
-                            <div class="message"><?php echo $_forum_information['last_active_topic_title']; ?></div>
-                            <div class="date_message"><?php echo $_forum_information['lat_time_from_last_activity']; ?></div>
-                        </div>
-                    </div>
-                </div>
+        <!-- Langages informatiques -->
+        <div class="f_category" id="f_languages">
+          <h1 class="category_title">Languages</h1>
 
-                <?php } ?>
+          <?php
+              foreach($forums_language as $_forum_name => $_forum_information){
+          ?>
+          <div class="forum_desc">
+              <div class="forum_desc_groupa">
+                  <div class="forum_name"><?php echo $_forum_name; ?></div>
+                  <div class="forum_small_desc"><?php echo $_forum_information['forum_desc']; ?></div>
+              </div>
+              <div class="forum_desc_groupb">
+                  <div class="n_messages_forum"><?php echo ($_forum_information['number_posts'] . " posts"); ?></div>
+                  <div class="n_topics_forum"><?php echo ($_forum_information['number_topics'] . " topics"); ?></div>
+              </div>
+              <div class="forum_desc_groupc">
+                  <div class="last_message_forum">
+                      <div class="message"><?php echo $_forum_information['last_active_topic_title']; ?></div>
+                      <div class="date_message"><?php echo $_forum_information['lat_time_from_last_activity']; ?></div>
+                  </div>
+              </div>
+          </div>
+          <?php } ?>
 
         </div>
 
 
-        <div class="article" id="forums_system">
-            <div class="h_forums_desc">
-                <h3 class="h_forums_desc_1">System</h3>
-                <h3 class="h_forums_desc_2">Topics/Posts</h3>
-                <h3 class="h_forums_desc_3">Last active topic</h3>
-            </div>
+        <!-- Systèmes d'exploitation -->
+        <div class="f_category" id="f_systems">
+          <h1 class="category_title">Operating systems</h1>
 
-                <?php
-                    foreach($forums_system as $_forum_name => $_forum_information){
-                ?>
-                <div class="forum_desc">
-                    <div class="forum_desc_groupa">
-                        <div class="forum_name"><?php echo $_forum_name; ?></div>
-                        <div class="forum_small_desc"><?php echo $_forum_information['forum_desc']; ?></div>
-                    </div>
-                    <div class="forum_desc_groupb">
-                        <div class="n_messages_forum"><?php echo ($_forum_information['number_posts'] . " posts"); ?></div>
-                        <div class="n_topics_forum"><?php echo ($_forum_information['number_topics'] . " topics"); ?></div>
-                    </div>
-                    <div class="forum_desc_groupc">
-                        <div class="last_message_forum">
-                            <div class="message"><?php echo $_forum_information['last_active_topic_title']; ?></div>
-                            <div class="date_post"><?php echo $_forum_information['lat_time_from_last_activity']; ?></div>
-                        </div>
-                    </div>
-                </div>
-
-                <?php } ?>
-
-            </div>
-
-
-            <div class="article" id="forums_software">
-            <div class="h_forums_desc">
-                <h3 class="h_forums_desc_1">Software</h3>
-                <h3 class="h_forums_desc_2">Topics/Posts</h3>
-                <h3 class="h_forums_desc_3">Last active topic</h3>
-            </div>
-
-            <?php
-                foreach($forums_software as $_forum_name => $_forum_information){
-            ?>
-            <div class="forum_desc">
-                <div class="forum_desc_groupa">
-                    <div class="forum_name"><?php echo $_forum_name; ?></div>
-                    <div class="forum_small_desc"><?php echo $_forum_information['forum_desc']; ?></div>
-                </div>
-                <div class="forum_desc_groupb">
-                    <div class="n_messages_forum"><?php echo ($_forum_information['number_posts'] . " posts"); ?></div>
-                    <div class="n_topics_forum"><?php echo ($_forum_information['number_topics'] . " topics"); ?></div>
-                </div>
-                <div class="forum_desc_groupc">
-                    <div class="last_message_forum">
-                        <div class="message"><?php echo $_forum_information['last_active_topic_title']; ?></div>
-                        <div class="date_message"><?php echo $_forum_information['lat_time_from_last_activity']; ?></div>
-                    </div>
-                </div>
-            </div>
-
-            <?php } ?>
+          <?php
+              foreach($forums_system as $_forum_name => $_forum_information){
+          ?>
+          <div class="forum_desc">
+              <div class="forum_desc_groupa">
+                  <div class="forum_name"><?php echo $_forum_name; ?></div>
+                  <div class="forum_small_desc"><?php echo $_forum_information['forum_desc']; ?></div>
+              </div>
+              <div class="forum_desc_groupb">
+                  <div class="n_messages_forum"><?php echo ($_forum_information['number_posts'] . " posts"); ?></div>
+                  <div class="n_topics_forum"><?php echo ($_forum_information['number_topics'] . " topics"); ?></div>
+              </div>
+              <div class="forum_desc_groupc">
+                  <div class="last_message_forum">
+                      <div class="message"><?php echo $_forum_information['last_active_topic_title']; ?></div>
+                      <div class="date_post"><?php echo $_forum_information['lat_time_from_last_activity']; ?></div>
+                  </div>
+              </div>
+          </div>
+          <?php } ?>
 
         </div>
 
-        <div class="article" id="forums_forum_functioning">
-            <div class="h_forums_desc">
-                <h3 class="h_forums_desc_1">Forum Functioning</h3>
-                <h3 class="h_forums_desc_2">Topics/Posts</h3>
-                <h3 class="h_forums_desc_3">Last active topic</h3>
-            </div>
 
-           <?php
-               foreach($forums_forum_functioning as $_forum_name => $_forum_information){
-           ?>
-           <div class="forum_desc">
-               <div class="forum_desc_groupa">
-                   <div class="forum_name"><?php echo $_forum_name; ?></div>
-                   <div class="forum_small_desc"><?php echo $_forum_information['forum_desc']; ?></div>
-               </div>
-               <div class="forum_desc_groupb">
-                   <div class="n_messages_forum"><?php echo ($_forum_information['number_posts'] . " posts"); ?></div>
-                   <div class="n_topics_forum"><?php echo ($_forum_information['number_topics'] . " topics"); ?></div>
-               </div>
-               <div class="forum_desc_groupc">
-                   <div class="last_message_forum">
-                        <div class="message"><?php echo $_forum_information['last_active_topic_title']; ?></div>
-                        <div class="date_message"><?php echo $_forum_information['lat_time_from_last_activity']; ?></div>
-                   </div>
-               </div>
-           </div>
+        <!-- Logiciels -->
+        <div class="f_category" id="f_softwares">
+          <h1 class="category_title">Softwares</h1>
 
-           <?php } ?>
+          <?php
+              foreach($forums_software as $_forum_name => $_forum_information){
+          ?>
+          <div class="forum_desc">
+              <div class="forum_desc_groupa">
+                  <div class="forum_name"><?php echo $_forum_name; ?></div>
+                  <div class="forum_small_desc"><?php echo $_forum_information['forum_desc']; ?></div>
+              </div>
+              <div class="forum_desc_groupb">
+                  <div class="n_messages_forum"><?php echo ($_forum_information['number_posts'] . " posts"); ?></div>
+                  <div class="n_topics_forum"><?php echo ($_forum_information['number_topics'] . " topics"); ?></div>
+              </div>
+              <div class="forum_desc_groupc">
+                  <div class="last_message_forum">
+                      <div class="message"><?php echo $_forum_information['last_active_topic_title']; ?></div>
+                      <div class="date_message"><?php echo $_forum_information['lat_time_from_last_activity']; ?></div>
+                  </div>
+              </div>
+          </div>
+          <?php } ?>
 
         </div>
+
     </article>
 </div>

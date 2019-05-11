@@ -36,6 +36,7 @@ catch(Exception $e){
     <script type="text/javascript" src="/src/framework_javascript/jquery.js"></script>
     <script type="text/javascript" src="/src/framework_javascript/ajax.js"></script>
     <script type="text/javascript" src="/src/forum/javascript/forum.js" ></script>
+
 </head>
 
 <body>
@@ -50,18 +51,14 @@ catch(Exception $e){
 
     <div id="body_content"> <!-- Pour que le footer soit placer en bas de la page -->
 
+        <!-- HEADER -->
         <?php require "forum_header.php"; ?>
 
         <section>
-            <div id="top_nav">
-
-            </div>
-
             <div id="forum_content">
 
                 <?php
                 if(isset($_GET['forum_part'])){
-
                     if($_GET['forum_part'] == "rules"){
                         require "onglets_forum/forum_rules.php";
                     }
@@ -72,17 +69,12 @@ catch(Exception $e){
                         require "onglets_forum/forum_forums.php";
                     }
                     else if($_GET['forum_part'] == "forum"){
-
                         if(isset($_GET["forum_id"]) && isset($_GET["topic_pinned_page"]) && isset($_GET["topic_no_pinned_page"])){
-
                             require "onglets_forum/forum_topics.php";
-
                         }
                     }
                     else if($_GET['forum_part'] == "topic"){
-
                         if(isset($_GET['topic_id'])){
-
                             $topic_id = $_GET["topic_id"];
                             require "onglets_forum/forum_topic.php";
                         }
@@ -104,9 +96,9 @@ catch(Exception $e){
             <div class="message">Welcome back </div>
             <div class="message" id="message_user"><p></p></div>
         </div> -->
-    </aside>
+        </aside>
 
-</div>
+    </div>
 
 <?php
 require "../footer.php";

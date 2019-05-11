@@ -63,7 +63,7 @@ if($_SESSION['connected'] == "true"){
         </div>
     </div>
 
-    <div id="body_content">
+    <div id="body_content"> <!-- Pour que le footer soit placer en bas de la page -->
 
         <!-- HEADER -->
         <?php require "home_header.html"; ?>

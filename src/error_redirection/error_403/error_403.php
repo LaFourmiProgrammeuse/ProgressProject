@@ -3,9 +3,9 @@
     <head>
 
         <!-- Google Analytics -->
-        <?php include "../s../analytic_tools/google_analytics.html"; ?>
+        <?php include "/home/programmpk/www/src/analytic_tools/google_analytics.html"; ?>
 
-        <link rel="stylesheet" type="text/css" href="/error_redirection/error_403/css/error_403.css">
+        <link rel="stylesheet" type="text/css" href="/src/error_redirection/error_403/css/error_403.css">
 		<meta charset="utf-8">
 
 		<title>Error 403</title>

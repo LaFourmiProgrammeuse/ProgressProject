@@ -1,7 +1,7 @@
 <?php
 
-require '../../php_for_all/session_control.php';
-require '../../php_for_all/log_function.php';
+require '/home/programmpk/www/src/php_for_all/session_control.php';
+require '/home/programmpk/www/src/php_for_all/log_function.php';
 
 $file_log_path = "../../log_server.txt";
 
@@ -78,7 +78,7 @@ $message_body .= "\n--" . $boundary . "--\n";
 mail("site.devnews@programming-ants.ovh", $topic, $message_body, $header);
 
 
-header('Location: ../../home/home.php');
+header('Location: /home.php');
 
 
 ?>

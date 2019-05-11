@@ -1,6 +1,6 @@
 <?php
 
-	require "../../php_for_all/session_control.php";
+	require "/home/programmpk/www/src/php_for_all/session_control.php";
 
 	$topic_title = $_POST['topic_title'];
 	$topic_subtitle = $_POST['topic_subtitle'];

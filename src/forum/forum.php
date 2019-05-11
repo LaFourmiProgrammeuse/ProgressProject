@@ -1,7 +1,7 @@
 <?php
 //Ne pas mettre de code html avant cette ligne !
-require '../php_for_all/session_control.php';
-include "../language/language.php";
+require '/home/programmpk/www/src/php_for_all/session_control.php';
+include "/home/programmpk/www/src/language/language.php";
 
 IncrementVisitorCounter();
 
@@ -24,10 +24,10 @@ catch(Exception $e){
 <head>
 
     <!-- Google Analytics -->
-    <?php include "../analytic_tools/google_analytics.html"; ?>
+    <?php include "/home/programmpk/www/src/analytic_tools/google_analytics.html"; ?>
 
-    <link rel="stylesheet" type="text/css" href="css/forum.css" />
-    <link rel="stylesheet" type="text/css" href="../footer.css" />
+    <link rel="stylesheet" type="text/css" href="/src/forum/css/forum.css" />
+    <link rel="stylesheet" type="text/css" href="/src/footer.css" />
     <link rel="stylesheet" type="text/css" href="/src/forum/forum_header.css" />
 
     <meta charset="utf-8" />

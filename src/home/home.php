@@ -1,10 +1,12 @@
 <?php
 
 //Ne pas mettre de code html avant cette ligne !
-require '../php_for_all/session_control.php';
-include "../language/language.php";
+require '/home/programmpk/www/src/php_for_all/session_control.php';
+include "/home/programmpk/www/src/language/language.php";
 
-//On active les rapports d'erreur
+//Debug
+ini_set("display_errors", 1);
+ini_set('error_log', dirname(__file__) . '/src/log_server.txt');
 error_reporting(E_ALL);
 
 IncrementVisitorCounter();
@@ -36,19 +38,19 @@ if($_SESSION['connected'] == "true"){
 <head>
 
     <!-- Google Analytics -->
-    <?php include "../analytic_tools/google_analytics.html"; ?>
+    <?php include "/home/programmpk/www/src/analytic_tools/google_analytics.html"; ?>
 
-    <link rel="stylesheet" type="text/css" href="css/home.css" />
-    <link rel="stylesheet" type="text/css" href="../footer.css">
-    <link rel="stylesheet" type="text/css" href="css/home_simple_image_viewer.css" />
-    <link rel="stylesheet" type="text/css" href="home_header.css" />
+    <link rel="stylesheet" type="text/css" href="/src/home/css/home.css" />
+    <link rel="stylesheet" type="text/css" href="/src/footer.css">
+    <link rel="stylesheet" type="text/css" href="/src/home/css/home_simple_image_viewer.css" />
+    <link rel="stylesheet" type="text/css" href="/src/home/home_header.css" />
 
     <meta charset="utf-8"/>
 
     <title><?php echo _("Home");?></title>
 
-    <script type="text/javascript" src="../framework_javascript/jquery.js"></script>
-    <script type="text/javascript" src="javascript/home.js"></script>
+    <script type="text/javascript" src="/src/framework_javascript/jquery.js"></script>
+    <script type="text/javascript" src="/src/home/javascript/home.js"></script>
     <script type="text/javascript" src ="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
 
 </head>
@@ -66,7 +68,7 @@ if($_SESSION['connected'] == "true"){
     <div id="body_content">
 
         <!-- HEADER -->
-        <?php require "home_header.html"; ?>
+        <?php require "home_header.php"; ?>
 
         <section id="sec_1">
             <div id="welcome_t">
@@ -75,7 +77,7 @@ if($_SESSION['connected'] == "true"){
                     </h1>
                 </div>
                 <div id="link">
-                    <a href="/src/forum/forum.php">Visit the forum</a>
+                    <a href="forum.php">Visit the forum</a>
                 </div>
             </div>
 

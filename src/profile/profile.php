@@ -1,8 +1,8 @@
 <?php
 
     //Ne pas mettre de code html avant cette ligne !
-    require '../php_for_all/session_control.php';
-    include "../language/language.php";
+    require '/home/programmpk/www/src/php_for_all/session_control.php';
+    include "/home/programmpk/www/src/language/language.php";
 
     IncrementVisitorCounter();
 
@@ -17,15 +17,15 @@
  <head>
 
      <!-- Google Analytics -->
-     <?php include "../analytic_tools/google_analytics.html"; ?>
+     <?php include "/home/programmpk/www/src/analytic_tools/google_analytics.html"; ?>
 
-     <link rel="stylesheet" type="text/css" href="css/profile.css">
-     <link rel="stylesheet" typr="text/css" href="../footer.css">
+     <link rel="stylesheet" type="text/css" href="/src/profile/css/profile.css">
+     <link rel="stylesheet" typr="text/css" href="/src/footer.css">
      <meta charset="utf-8">
      <title>Profile ProgAnts</title>
 
-     <script type="text/javascript" src="../framework_javascript/jquery.js"></script>
-     <script type="text/javascript" src="javascript/profile.js"></script>
+     <script type="text/javascript" src="/src/framework_javascript/jquery.js"></script>
+     <script type="text/javascript" src="/src/profile/javascript/profile.js"></script>
      <script type="text/javascript" src ="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
  </head>
 
@@ -58,7 +58,7 @@
          <header>
              <div id="top">
                  <h1>Profile</h1>
-                 <a href="../home/home.php" title="Return to ProgrammingAnts">Return to ProgrammingAnts</a>
+                 <a href="/home.php" title="Return to ProgrammingAnts">Return to ProgrammingAnts</a>
              </div>
          </header>
 
@@ -121,7 +121,7 @@
          </section>
 
          <?php
-         require "../footer.php";
+         require "/home/programmpk/www/src/footer.php";
          ?>
      </div>
  </body>

@@ -86,7 +86,7 @@ function requestValidationNickname(){
 
     }
 
-    xhr.open("POST", "php/verif_name.php", true);
+    xhr.open("POST", "/src/register/php/verif_name.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.send("nickname="+nickname);
 

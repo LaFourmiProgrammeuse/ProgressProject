@@ -1,8 +1,8 @@
 <?php
 
 //Ne pas mettre de code html avant cette ligne !
-require '../php_for_all/session_control.php';
-include "../language/language.php";
+require '/home/programmpk/www/src/php_for_all/session_control.php';
+include "/home/programmpk/www/src/language/language.php";
 
 IncrementVisitorCounter();
 ?>
@@ -12,17 +12,17 @@ IncrementVisitorCounter();
 	<head>
 
         <!-- Google Analytics -->
-        <?php include "../analytic_tools/google_analytics.html"; ?>
+        <?php include "/home/programmpk/www/src/analytic_tools/google_analytics.html"; ?>
 
-		<link rel="stylesheet" type="text/css" href="css/login_page.css">
+		<link rel="stylesheet" type="text/css" href="/src/login/css/login_page.css">
 
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=0.400, shrink-to-fit=no">
 
 		<title>Log In</title>
 
-        <script type="text/javascript" src="../framework_javascript/jquery.js"></script>
-        <script type="text/javascript" src="javascript/login.js"></script>
+        <script type="text/javascript" src="/src/framework_javascript/jquery.js"></script>
+        <script type="text/javascript" src="/src/login/javascript/login.js"></script>
 
 		<body>
 			<div id="body_content">
@@ -30,9 +30,9 @@ IncrementVisitorCounter();
 					<div id="h_elements">
 						<div id="infa">
 							<h2>Log In to Programming Ants</h2>
-							<a href="../home/home.php" title="Return to the homepage"><img class="return" src="/images/icons/normal/return.svg"></a>
+							<a href="/home.php" title="Return to the homepage"><img class="return" src="/images/icons/normal/return.svg"></a>
 						</div>
-						<div id="infb"><h3>If you are not registered yet, <a href="../register/register_page.php" title="Sign up page">click here</a> to join us !</h3></div>
+						<div id="infb"><h3>If you are not registered yet, <a href="/register.php" title="Sign up page">click here</a> to join us !</h3></div>
 					</div>
 				</header>
 
@@ -40,7 +40,7 @@ IncrementVisitorCounter();
 						<div id="inf_input">
 							<div id="group_input">
 								<fieldset>
-									<form method="post" action="php/formulaire_login.php">
+									<form method="post" action="/src/login/php/formulaire_login.php">
 										<input type="text" name="nickname" id="nickname" placeholder="Type your nickname">
 
 										<input type="password" name="pass" id="pass" placeholder="Type your password">

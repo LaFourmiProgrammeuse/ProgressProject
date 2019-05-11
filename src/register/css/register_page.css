@@ -49,7 +49,7 @@ header {
 }
 
 #h_elements {
-  width: 35%;
+  width: 55%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -289,19 +289,19 @@ top: 50%;
     }
 
     #infa h2{
-        font-size: 2.25vw;
+        font-size: 3vw;
     }
 
     #infb h3{
-        font-size: 1.70vw;
+        font-size: 2.40vw;
     }
 
     #send{
-        font-size: 1.9vw;
+        font-size: 2.2vw;
     }
 
     #checkbox_text{
-        font-size: 1.7vw;
+        font-size: 2.2vw;
     }
 
     .message_error{
@@ -313,7 +313,10 @@ top: 50%;
     }
 
     #body_content{
-        min-height: 80vh;
+        min-height: 82vh;
     }
 
+    .return{
+        width: 2.8vw;
+    }
 }

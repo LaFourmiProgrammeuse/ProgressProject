@@ -2,7 +2,7 @@
 <footer>
     <div id="footer_information_frame_1">
         <p id="label_copyright">
-            © 2018 ProgrammingAnts, Inc.
+            © 2019 ProgrammingAnts, Inc.
         </p>
     </div>
     <div id="footer_information_frame_2">

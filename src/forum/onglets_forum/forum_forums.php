@@ -156,8 +156,8 @@ while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
       <div id="tn_groupa">
 
         <div class="tn_groupa_elem"><a href="#">Choose a forum</a></div>
-        <div class="tn_groupa_elem"><a href="forum_stats.php" class="tn_groupa_elem">Stats</a></div>
-        <div class="tn_groupa_elem"><a href="forum_rules.php" class="tn_groupa_elem">Rules</a></div>
+        <div class="tn_groupa_elem"><a href="forum_stats.php">Stats</a></div>
+        <div class="tn_groupa_elem"><a href="forum_rules.php">Rules</a></div>
 
       </div>
 
@@ -185,9 +185,13 @@ while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
           ?>
           <div class="forum_desc">
               <div class="forum_desc_groupa">
-                  <img src="<?php echo $_forum_information["logo_path"] ?>" />
-                  <div class="forum_name"><?php echo $_forum_name; ?></div>
-                  <div class="forum_small_desc"><?php echo $_forum_information['forum_desc']; ?></div>
+                  <div class="f_icon">
+                      <img src="<?php echo $_forum_information["logo_path"] ?>" />
+                  </div>
+                  <div class="f_inf">
+                      <div class="forum_name"><?php echo $_forum_name; ?></div>
+                      <div class="forum_small_desc"><?php echo $_forum_information['forum_desc']; ?></div>
+                  </div>
               </div>
 
               <div class="forum_desc_groupb">
@@ -215,9 +219,13 @@ while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
           ?>
           <div class="forum_desc">
               <div class="forum_desc_groupa">
-                  <img src="<?php echo $_forum_information["logo_path"] ?>" />
-                  <div class="forum_name"><?php echo $_forum_name; ?></div>
-                  <div class="forum_small_desc"><?php echo $_forum_information['forum_desc']; ?></div>
+                  <div class="f_icon">
+                      <img src="<?php echo $_forum_information["logo_path"] ?>" />
+                  </div>
+                  <div class="f_inf">
+                      <div class="forum_name"><?php echo $_forum_name; ?></div>
+                      <div class="forum_small_desc"><?php echo $_forum_information['forum_desc']; ?></div>
+                  </div>
               </div>
 
               <div class="forum_desc_groupb">
@@ -245,9 +253,13 @@ while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
           ?>
           <div class="forum_desc">
               <div class="forum_desc_groupa">
-                  <img src="<?php echo $_forum_information["logo_path"] ?>" />
-                  <div class="forum_name"><?php echo $_forum_name; ?></div>
-                  <div class="forum_small_desc"><?php echo $_forum_information['forum_desc']; ?></div>
+                  <div class="f_icon">
+                      <img src="<?php echo $_forum_information["logo_path"] ?>" />
+                  </div>
+                  <div class="f_inf">
+                      <div class="forum_name"><?php echo $_forum_name; ?></div>
+                      <div class="forum_small_desc"><?php echo $_forum_information['forum_desc']; ?></div>
+                  </div>
               </div>
 
               <div class="forum_desc_groupb">

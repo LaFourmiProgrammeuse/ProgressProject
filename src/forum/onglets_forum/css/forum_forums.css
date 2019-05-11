@@ -1,16 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,500,600,800|Roboto:300,400,500');
+
 /* Le bloc contenant la liste des forums */
 
 #central_onglet_body {
   margin-top: 40px;
+  margin-bottom: 90px;
 }
 
 /* Indexe */
 
 .index_path {
   margin-left: 50px;
+  font-size: 1.25vw;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: #313131;
+  padding-left: 7.5px;
+  border-left: 5px solid #313131;
 }
 #index_path_smll {
-
+  font-size: 1vw;
+  font-weight: 400;
 }
 
 /* Barre de nav */
@@ -19,32 +30,58 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 25px;
-  background-color: #eeeeee;
+  margin-top: 17.5px;
+  background-color: #f0f0f0;
 }
 #tn_groupa {
   display: flex;
   flex-direction: row;
   margin-left: 75px;
+  font-size: 1.20vw;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
 }
 .tn_groupa_elem {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.tn_groupa_elem a {
+  color: #4d4d4d;
+}
+.tn_groupa_elem:hover a {
+  color: black;
+  transition: 0.2s;
+}
+.tn_groupa_elem:nth-child(1) {
+  background-color: white;
 }
 .tn_groupa_elem:nth-child(2) {
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  border-left: 1px solid #d6d6d6;
+  border-right: 1px solid #d6d6d6;
 }
+
 #tn_groupb {
   display: flex;
   flex-direction: row;
   margin-right: 75px;
   align-items: center;
 }
-#search-btn {
+#search {
+  height: 32.5px;
+  width: 175px;
   margin: 0;
+  padding-left: 15px;
+  border: 1px solid #d6d6d6;
+  background-color: #f9f9f9;
+}
+#search-btn {
+  width: 32.5px;
+  height: 32.5px;
+  margin: 0;
+  border: 1px solid #d6d6d6;
+  background-color: #d6d6d6;
 }
 
 /* Liste des forums */
@@ -58,10 +95,16 @@ article {
 .f_category {
   display: flex;
   flex-direction: column;
-  margin-top: 55px;
+  margin-top: 65px;
 }
 .category_title {
-  font-size: 2vw;
+  font-size: 1.85vw;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  color: #313131;
+  padding-left: 10px;
+  border-left: 7.5px solid #313131;
+  letter-spacing: 2px;
 }
 
 .f_list {
@@ -72,7 +115,7 @@ article {
 .forum_desc {
   display: flex;
   flex-direction: column;
-  margin-top: 25px;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
   min-width: 30.5%;
@@ -82,22 +125,34 @@ article {
 .forum_desc_groupa {
   display: flex;
   flex-direction: row;
-  background-color: #d2d2d2;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
 }
 .f_icon {
-  width: 50px;
-  height: 50px;
-  margin: 10px;
-  background-color: #ee4747;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 27.5%;
 }
 .f_inf {
   display: flex;
   flex-direction: column;
   padding-left: 7.5px;
   padding-right: 7.5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-left: 2px solid black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-left: 1px solid #d6d6d6;
+}
+.forum_name {
+  font-size: 1.75vw;
+  font-weight: 600;
+}
+.forum_small_desc {
+  margin-top: 10px;
+  font-size: 1.05vw;
+  font-weight: 300;
 }
 
 .forum_desc_groupb {
@@ -109,25 +164,40 @@ article {
 .n_topics_forum, .n_messages_forum {
   text-align: center;
   padding: 10px;
-  background-color: #d2d2d2;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
 }
 .n_topics_forum {
  margin-right: 5px;
+ font-size: 0.90vw;
+ font-weight: 300;
 }
 .last_message_forum {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #d2d2d2;
+  background-color: #f0f0f0;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
   width: 100%;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
 }
 .lmf_inf {
-
+ font-size: 1.10vw;
+ font-weight: 500;
+}
+.message {
+  margin-top: 2.5px;
+  font-size: 1vw;
+  font-weight: 300;
+  font-style: italic;
 }
 .n_messages_forum {
   margin-left: 5px;
+  font-size: 0.90vw;
+  font-weight: 300;
 }

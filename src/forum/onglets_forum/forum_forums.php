@@ -163,12 +163,10 @@ while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
 
       <div id="tn_groupb">
 
-        <div class="searchbar">
-          <form action="/search" id="searchthis" method="get">
-            <input id="search" name="tn_searchbar" type="text" placeholder="Type here to search" />
-            <input id="search-btn" type="submit" value="Ok" />
-          </form>
-        </div>
+        <form action="/search" id="searchthis" method="get">
+          <input id="search" name="tn_searchbar" type="text" placeholder="Type here to search" />
+          <button type=submit id="search-btn"><img id="search-icn" src=/images/icons/normal/search.svg></button>
+        </form>
 
       </div>
     </div>

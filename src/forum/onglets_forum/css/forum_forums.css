@@ -69,20 +69,36 @@
   margin-right: 75px;
   align-items: center;
 }
+#searchthis {
+  display: flex;
+  align-items: center;
+}
 #search {
-  height: 32.5px;
-  width: 175px;
-  margin: 0;
-  padding-left: 15px;
-  border: 1px solid #d6d6d6;
-  background-color: #f9f9f9;
+  height: 30px;
+  width: 250px;
+  padding-left: 10px;
+  border: none;
+  border-top-left-radius: 2.5px;
+  border-bottom-left-radius: 2.5px;
+  background-color: white;
+}
+#search::placeholder {
+  font-size: 1.05vw;
+  font-family: 'Roboto', sans-serif;
+  color: #6d6d6d;
 }
 #search-btn {
-  width: 32.5px;
-  height: 32.5px;
-  margin: 0;
-  border: 1px solid #d6d6d6;
-  background-color: #d6d6d6;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-top-right-radius: 2.5px;
+  border-bottom-right-radius: 2.5px;
+  background-color: #5e5e5e;
+}
+#search-icon {
+  width: 100%;
+  margin-left: auto;
+  margin-bottom: auto;
 }
 
 /* Liste des forums */

@@ -186,238 +186,196 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
 <head>
     <link rel="stylesheet" type="text/css" href="/src/forum/onglets_forum/css/forum_topics.css">
 </head>
+
 <div id="central_onglet_body">
 
-    <div class="forum_index">
-        <h3>You are here :</h3>
-        <span class="forum_index_path">Index/<a href="/src/forum/forum.php?forum_part=forums">Forums</a>/<?php echo "Forum " . $forum_name ?> </span>
+    <div class="path">
+        <span class="index_path">INDEX > <a id="previous_page" href="/src/forum/forum.php?forum_part=forums">FORUMS</a> > LANGUAGES ><span id="index_path_smll"> <?php echo $forum_name ?></span></span>
+    </div>
+
+    <div id="top_nav">
+      <div id="tn_groupa">
+
+        <div class="tn_groupa_elem"><a href="#">Choose a forum</a></div>
+        <div class="tn_groupa_elem"><a href="forum_stats.php">Stats</a></div>
+        <div class="tn_groupa_elem"><a href="forum_rules.php">Rules</a></div>
+
+      </div>
+
+      <div id="tn_groupb">
+
+        <form action="/search" id="searchthis" method="get">
+          <input id="search" name="tn_searchbar" type="text" placeholder="Type here to search" />
+          <button type=submit id="search-btn"><img id="search-icn" src=/images/icons/normal/search.svg></button>
+        </form>
+
+      </div>
     </div>
 
     <article>
-      <div class="article">
-       <div class="h_topics_desc">
-        <h3 class="h_topics_desc_1">Topics pinned</h3>
-        <h3 class="h_topics_desc_2">Posts/Views</h3>
-        <h3 class="h_topics_desc_3">Last Post</h3>
-    </div>
 
-    <div class="topics_pinned">
-
-     <?php
-     if($has_topic_pinned == false){
-         ?>
-         <div class="no_pinned_topic">
-          <p>No pinned topic</p>
+      <!-- En-tête du forum -->
+      <div class="f_inf">
+        <div class="f_name">
+          <h1><?php echo $forum_name ?></h1>
+        </div>
+        <div class="create_topic">
+          <?php $link = "<a href=forum.php?forum_part=new_topic&forum_id=" . $_GET['forum_id'] . ">Click here to create a new topic</a>"; ?>
+          <h3>A question to ask ? <?php echo $link ?></h3>
+        </div>
       </div>
-      <?php
-  }
-  else{
-   foreach($list_pinned_topics as $topic_information){
 
-      echo "<a class='link_topic_desc' href=/src/forum/forum.php?forum_part=topic&topic_id=" . $topic_information['topic_id'] . ">";
-     ?>
-     <div class="topic_desc">
-
-      <div class="topic_desc_groupa">
-       <div class="topic_title">
-        <?php echo $topic_information['topic_title']; ?>
-    </div>
-    <div class="topic_author">
-        <?php echo "By <i>" . $topic_information['topic_author'] . "</i>"; ?>
-    </div>
-</div>
-<div class="topic_desc_groupb">
-   <div class="n_message_topic">
-    <?php echo $topic_information['number_posts'] . " post(s)"; ?>
-</div>
-<div class="n_view_topic">
-    <?php echo $topic_information['number_views'] . " view(s)"; ?>
-</div>
-</div>
-<div class="topic_desc_groupc">
-   <div class="topic_last_post">
-    <p class="label_post_author">Last post by
-     <span class="post_author">
-      <?php echo $topic_information['last_post_author']; ?>
-  </span>
-</p>
-<p class="date_post">
- <?php echo $topic_information['last_post_date']; ?>
-</p>
-</div>
-</div>
-</div>
-<?php
-  echo "</a>";
- }}
- ?>
-</div>
-
-<div id="topic_pinned_page" class="topic_page">
-    <?php
-        if($_GET["topic_pinned_page"]-1 < 1){
-            echo "<a href=forum.php?forum_part=forum" . "&forum_id=" . $_GET["forum_id"] . "&topic_no_pinned_page=" . $_GET["topic_no_pinned_page"] . "&topic_pinned_page=" . $n_of_page_pinned_topic . ">";
-    }else{
-        echo "<a href=forum.php?forum_part=forum" . "&forum_id=" . $_GET["forum_id"] . "&topic_no_pinned_page=" . $_GET["topic_no_pinned_page"] . "&topic_pinned_page=" . ($_GET["topic_pinned_page"]-1) . ">";
-    }
-    ?>
-    <img class="arrow_left" src="/images/arrows/a_left.png" />
-    <?php
-        echo "</a>";
-    ?>
-    <span class ="pages">
+      <!-- Les sujets épinglés -->
+      <div class="topics_pinned">
         <?php
-
-            //Si on a 1 page de topic épinglé on affiche juste la le numéro 1
-            if($n_of_page_pinned_topic == 0){
-                echo "<a href=forum.php?forum_part=forum" . "&forum_id=" . $_GET["forum_id"] . "&topic_no_pinned_page=" . $_GET["topic_no_pinned_page"] . "&topic_pinned_page=" . 1 . ">";
-
-                echo "</a>";
-
-            }else{ //Si on a une ou plusieurs pages de topic épinglé on affiche tous les numeros de page avec un lien pour y accéder
-
-                for ($i=0; $i < $n_of_page_pinned_topic; $i++) {
-
-                    if($i != 0){
-                        echo " - ";
-                    }
-
-                    echo "<a href=forum.php?forum_part=forum" . "&forum_id=" . $_GET["forum_id"] . "&topic_no_pinned_page=" . $_GET["topic_no_pinned_page"] . "&topic_pinned_page=" . ($i+1) . ">";
-
-                    echo $i+1;
-
-                    echo "</a>";
-                }
-            }
+          if($has_topic_pinned == false){
         ?>
-    </span>
-    <?php
-        if(($_GET["topic_pinned_page"]+1) > $n_of_page_pinned_topic){
-            echo "<a href=forum.php?forum_part=forum" . "&forum_id=" . $_GET["forum_id"] . "&topic_no_pinned_page=" . $_GET["topic_no_pinned_page"]  . "&topic_pinned_page=" . 1 . ">";
-    }else{
-        echo "<a href=forum.php?forum_part=forum" . "&forum_id=" . $_GET["forum_id"] . "&topic_no_pinned_page=" . $_GET["topic_no_pinned_page"] . "&topic_pinned_page=" . ($_GET["topic_pinned_page"]+1) . ">";
-    }
-    ?>
-    <img class="arrow_right" src="/images/arrows/a_right.png" />
-    <?php
-        echo "</a>";
-    ?>
-</div>
+          <div class="no_pinned_topic">
+            <p>No pinned topic</p>
+          </div>
+          <?php
+          }
+          else{
+            foreach($list_pinned_topics as $topic_information){
+              echo "<a class='link_topic_desc' href=/src/forum/forum.php?forum_part=topic&topic_id=" . $topic_information['topic_id'] . ">";
+          ?>
+             <div class="topic_desc">
+               <div class="topic_desc_groupa">
+                 <div class="topic_title">
+                   <?php echo $topic_information['topic_title']; ?>
+                 </div>
+                 <div class="topic_author">
+                   <?php echo "By <i>" . $topic_information['topic_author'] . "</i>"; ?>
+                 </div>
+               </div>
 
-</div>
-<div class="article">
-    <div class="h_topics_desc">
-        <h3 class="h_topics_desc_1">Lasted Topics</h3>
-        <h3 class="h_topics_desc_2">Posts/Views</h3>
-        <h3 class="h_topics_desc_3">Last Post</h3>
-    </div>
+               <div class="topic_desc_groupb">
+                 <div class="n_message_topic">
+                   <?php echo $topic_information['number_posts'] . " post(s)"; ?>
+                 </div>
+                 <div class="n_view_topic">
+                   <?php echo $topic_information['number_views'] . " view(s)"; ?>
+                 </div>
+               </div>
 
-    <div class="topics_lasted">
-        <?php
-        if($has_topic != true){
-         ?>
-         <div class="no_topic">
-          <p>The forum has no topic</p>
+               <div class="topic_desc_groupc">
+                 <div class="topic_last_post">
+                   <p class="label_post_author">Last post by</p>
+                   <span class="post_author"><?php echo $topic_information['last_post_author']; ?></span>
+                   <p class="date_post"><?php echo $topic_information['last_post_date']; ?></p>
+                 </div>
+               </div>
+             </div>
+          <?php
+            echo "</a>";
+            }}
+          ?>
       </div>
-      <?php
-  }
-  else{
-   foreach($list_topics as $topic_information){
 
-     echo "<a class='link_topic_desc' href=/src/forum/forum.php?forum_part=topic&topic_id=" . $topic_information['topic_id'] . ">";
-     ?>
-     <div class="topic_desc">
+      <div class="f_part">
+        <div class="topics_lasted">
+          <?php
+            if($has_topic != true){
+          ?>
+            <div class="no_topic">
+              <p>The forum has no topic</p>
+              <?php $link = "<a href=forum.php?forum_part=new_topic&forum_id=" . $_GET['forum_id'] . ">click here</a>"; ?>
+              <h4>Be the first to ask a question,  <?php echo $link ?></h4>
+            </div>
+          <?php
+            }
+            else{
+              foreach($list_topics as $topic_information){
+                echo "<a class='link_topic_desc' href=/src/forum/forum.php?forum_part=topic&topic_id=" . $topic_information['topic_id'] . ">";
+          ?>
 
-      <div class="topic_desc_groupa">
-       <div class="topic_title">
-        <?php echo $topic_information['topic_title']; ?>
-    </div>
-    <div class="topic_author">
-        <?php echo "By <i>" . $topic_information['topic_author'] . "</i>"; ?>
-    </div>
-</div>
-<div class="topic_desc_groupb">
-   <div class="n_message_topic">
-    <?php echo $topic_information['number_posts'] . " post(s)"; ?>
-</div>
-<div class="n_view_topic">
-    <?php echo $topic_information['number_views'] . " view(s)"; ?>
-</div>
-</div>
-<div class="topic_desc_groupc">
-   <div class="topic_last_post">
-    <p class="label_post_author">Last post by
-     <span class="post_author">
-      <?php echo $topic_information['last_post_author']; ?>
-  </span>
-</p>
-<p class="date_post">
- <?php echo $topic_information['last_post_date']; ?>
-</p>
-</div>
-</div>
-</div>
-<?php
-  echo "</a>";
-  }}
-?>
-</div>
+          <div class="topic_desc">
+            <div class="topic_desc_groupa">
+              <div class="topic_title">
+                <?php echo $topic_information['topic_title']; ?>
+              </div>
+              <div class="topic_author">
+                <?php echo "By <b><i>" . $topic_information['topic_author'] . "</i></b>"; ?>
+              </div>
+            </div>
 
-<div id="topic_no_pinned_page" class="topic_page">
-    <?php
-        if($_GET["topic_no_pinned_page"]-1 < 1){
-            echo "<a href=forum.php?forum_part=forum" . "&forum_id=" . $_GET["forum_id"] . "&topic_no_pinned_page=" . $n_of_page_no_pinned_topic . "&topic_pinned_page=" . $_GET["topic_pinned_page"] . ">";
-    }else{
-        echo "<a href=forum.php?forum_part=forum" . "&forum_id=" . $_GET["forum_id"] . "&topic_no_pinned_page=" . ($_GET["topic_no_pinned_page"]-1) . "&topic_pinned_page=" . $_GET["topic_pinned_page"] . ">";
-    }
-    ?>
-    <img class="arrow_left" src="/images/arrows/a_left.png" />
-    <?php
-        echo "</a>";
-    ?>
-    <span class ="pages">
-        <?php
+            <div class="topic_desc_groupb">
+              <div class="n_message_topic">
+                <?php echo $topic_information['number_posts'] . " post(s)"; ?>
+              </div>
+              <div class="n_view_topic">
+                <?php echo $topic_information['number_views'] . " view(s)"; ?>
+              </div>
+            </div>
 
-            if($n_of_page_no_pinned_topic == 0){
-                echo "<a href=forum.php?forum_part=forum" . "&forum_id=" . $_GET["forum_id"] . "&topic_no_pinned_page=" . 1 . "&topic_pinned_page=" . $_GET["topic_pinned_page"] . ">";
+            <div class="topic_desc_groupc">
+              <div class="topic_last_post">
+                <p class="label_post_author">Last post by</p>
+                <span class="post_author"><?php echo $topic_information['last_post_author']; ?></span>
+                <p class="date_post"><?php echo $topic_information['last_post_date']; ?></p>
+              </div>
+            </div>
+          </div>
+          <?php
+            echo "</a>";
+          }}
+          ?>
+        </div>
 
-                echo "1";
+        <div id="topic_no_pinned_page" class="topic_page">
+          <div class="page_selector">
+            <?php
+              if($_GET["topic_no_pinned_page"]-1 < 1){
+                echo "<a href=forum.php?forum_part=forum" . "&forum_id=" . $_GET["forum_id"] . "&topic_no_pinned_page=" . $n_of_page_no_pinned_topic . "&topic_pinned_page=" . $_GET["topic_pinned_page"] . ">";
+              }
+              else{
+                echo "<a href=forum.php?forum_part=forum" . "&forum_id=" . $_GET["forum_id"] . "&topic_no_pinned_page=" . ($_GET["topic_no_pinned_page"]-1) . "&topic_pinned_page=" . $_GET["topic_pinned_page"] . ">";
+              }
+            ?>
 
+            <img class="arrow_left" src="/images/arrows/a_left.png" />
+              <?php
                 echo "</a>";
+              ?>
 
-            }else{
-
-                for ($i=0; $i < $n_of_page_no_pinned_topic; $i++) {
-
+            <div class="pages">
+              <?php
+                if($n_of_page_no_pinned_topic == 0){
+                  echo "<a href=forum.php?forum_part=forum" . "&forum_id=" . $_GET["forum_id"] . "&topic_no_pinned_page=" . 1 . "&topic_pinned_page=" . $_GET["topic_pinned_page"] . ">";
+                  echo "1";
+                  echo "</a>";
+                }
+                else{
+                  for ($i=0; $i < $n_of_page_no_pinned_topic; $i++) {
                     if($i != 0){
-                        echo " - ";
+                      echo " - ";
                     }
 
                     echo "<a href=forum.php?forum_part=forum" . "&forum_id=" . $_GET["forum_id"] . "&topic_no_pinned_page=" . ($i+1) . "&topic_pinned_page=" . $_GET["topic_pinned_page"] . ">";
-
                     echo $i+1;
-
                     echo "</a>";
+                  }
                 }
-            }
-        ?>
-    </span>
-    <?php
-        if(($_GET["topic_no_pinned_page"]+1) > $n_of_page_no_pinned_topic){
-            echo "<a href=forum.php?forum_part=forum" . "&forum_id=" . $_GET["forum_id"] . "&topic_no_pinned_page=" . 1 . "&topic_pinned_page=" . $_GET["topic_pinned_page"] . ">";
-    }else{
-        echo "<a href=forum.php?forum_part=forum" . "&forum_id=" . $_GET["forum_id"] . "&topic_no_pinned_page=" . ($_GET["topic_no_pinned_page"]+1) . "&topic_pinned_page=" . $_GET["topic_pinned_page"] . ">";
-    }
-    ?>
-    <img class="arrow_right" src="/images/arrows/a_right.png" />
-    <?php
-        echo "</a>";
-    ?>
-</div>
-<div class="part_create_topic">
-  <?php $link = "<a href=forum.php?forum_part=new_topic&forum_id=" . $_GET['forum_id'] . ">Create a new topic !</a>"; ?>
-  <h1>You have a question or you want speak about a subject ? <i> <?php echo $link ?> </i></h1>
-</div>
-</div>
-</article>
+              ?>
+            </div>
+
+            <?php
+              if(($_GET["topic_no_pinned_page"]+1) > $n_of_page_no_pinned_topic){
+                echo "<a href=forum.php?forum_part=forum" . "&forum_id=" . $_GET["forum_id"] . "&topic_no_pinned_page=" . 1 . "&topic_pinned_page=" . $_GET["topic_pinned_page"] . ">";
+              }
+              else{
+                echo "<a href=forum.php?forum_part=forum" . "&forum_id=" . $_GET["forum_id"] . "&topic_no_pinned_page=" . ($_GET["topic_no_pinned_page"]+1) . "&topic_pinned_page=" . $_GET["topic_pinned_page"] . ">";
+              }
+            ?>
+
+            <img class="arrow_right" src="/images/arrows/a_right.png" />
+              <?php
+                echo "</a>";
+              ?>
+          </div>
+        </div>
+      </div>
+
+    </article>
+
 </div>

@@ -149,7 +149,7 @@ while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
 <div id="central_onglet_body">
 
     <div class="path">
-        <span class="index_path">Index > <span id="index_path_smll">Forums</span></span>
+        <span class="index_path">INDEX > <span id="index_path_smll">Forums</span></span>
     </div>
 
     <div id="top_nav">

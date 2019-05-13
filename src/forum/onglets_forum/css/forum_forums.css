@@ -227,3 +227,30 @@ article {
   font-size: 0.90vw;
   font-weight: 300;
 }
+
+/* On addapte la taille du texte de certaines balises pour les petites résolutions */
+@media screen and (max-width: 1024px){
+	.index_path{
+        font-size: 1.72vw;
+    }
+
+    #index_path_smll{
+        font-size: 1.6vw;
+    }
+
+    #tn_groupa{
+        font-size: 1.6vw;
+    }
+
+    .forum_small_desc{
+        font-size: 1.4vw;
+    }
+
+    .forum_name{
+        font-size: 1.9vw;
+    }
+
+    .category_title{
+        font-size: 2.1vw;
+    }
+}

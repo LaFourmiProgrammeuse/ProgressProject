@@ -189,6 +189,7 @@ if($_SESSION['connected'] == "true"){
                             </p>
                         </div>
                     </div>
+                    <a id="secret_link" href="/src/tpe/Accueil/accueil.html">TPE</a>
                 </div>
             </article>
         </section>

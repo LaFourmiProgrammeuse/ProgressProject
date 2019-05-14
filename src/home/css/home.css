@@ -616,3 +616,12 @@ article {
         width: 75%;
     }
 }
+
+/* TPE */
+#secret_link {
+	color: white;
+	border: 1px solid #f9f9f9;
+}
+#secret_link:hover {
+	color: white;
+}

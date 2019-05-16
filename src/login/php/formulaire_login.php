@@ -8,7 +8,9 @@ $file_log_path = "/home/programmpk/www/src/log_server.txt";
 $username = $_POST["nickname"];
 $password = $_POST["pass"];
 
-/*if($username == "")){
+if($username != "" || $password != ""){
+
+    /*if($username == "")){
     log_server("Erreur : pas d'indentifiant lors de la connexion", $file_log_path);
     exit(0);
 }*/
@@ -32,7 +34,7 @@ if(isset($_POST["stay_connected"])){
         $qprepare = $bdd->prepare("UPDATE users SET stay_connected=? WHERE username=?");
 
         if(!$qprepare->execute(array("1", $username))){
-           log_server("Error : Echec de la requete mysql pour set stay connected a true", $file_log_path);
+            log_server("Error : Echec de la requete mysql pour set stay connected a true", $file_log_path);
         }
 
     }
@@ -70,5 +72,7 @@ $_SESSION['password'] = $password;
 $_SESSION['animation_connection'] = 'true';
 
 header('Location: /home.php');
+
+}
 
 ?>

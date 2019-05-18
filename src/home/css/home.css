@@ -157,7 +157,7 @@ article {
 .g_title_prts h2 {
 	font-family: 'Alegreya Sans SC', sans-serif;
 	font-size: 2.50vw;
-	color: #747474;
+	color: rgba(92, 92, 92, 1);
 	text-align: center;
 	margin-top: 0;
 	margin-left: 0;
@@ -177,8 +177,8 @@ article {
 	flex-direction: row;
 	margin-left: auto;
 	margin-right: auto;
-  text-align: center;
-	color: #747474;
+    text-align: center;
+	color: rgba(0, 0, 0, 1);
 }
 .a1 p {
 	font-family: 'Montserrat Alternates', sans-serif;
@@ -197,7 +197,7 @@ article {
 	display: flex;
 	flex-direction: column;
 	width: 30%;
-	color: #747474;
+	color: rgba(92, 92, 92, 1);
 }
 .element_title {
 	text-align: center;
@@ -228,11 +228,12 @@ article {
 	padding-bottom: 20px;
 	border-bottom: 1px solid #e1e1e1;
 	border-radius: 5px;
+    color: rgba(0, 0, 0, 1);
 }
 .g_title_sprt h2 {
 	font-family: 'Alegreya Sans SC', sans-serif;
 	font-size: 2.50vw;
-	color: #747474;
+	color: rgba(92, 92, 92, 1);
 	text-align: center;
 	margin-top: 20px;
 	margin-left: 0;
@@ -249,7 +250,7 @@ article {
 .support {
 	display: flex;
 	flex-direction: column;
-	color: #747474;
+	color: rgba(0, 0, 0, 1);
 }
 .support p {
 	font-family: 'Montserrat Alternates', sans-serif;
@@ -289,7 +290,7 @@ article {
 	font-family: 'Montserrat Alternates', sans-serif;
 	font-size: 1.25vw;
 	font-weight: 200;
-	color: #747474;
+	color: rgba(0, 0, 0, 1);
 	margin-right: auto;
 	margin-left: 15px;
 }
@@ -402,7 +403,7 @@ article {
 .g_title_wprs h2 {
 	font-family: 'Alegreya Sans SC', sans-serif;
 	font-size: 2.50vw;
-	color: #747474;
+	color: rgba(92, 92, 92, 1);
 	text-align: center;
 	margin: 0;
 	background-color: #f6f6f6;
@@ -439,7 +440,7 @@ article {
 .g_title_cnct h2 {
 	font-family: 'Alegreya Sans SC', sans-serif;
 	font-size: 2.50vw;
-	color: #747474;
+	color: rgba(92, 92, 92, 1);
 	text-align: center;
 	margin: 0;
 	background-color: #f6f6f6;
@@ -452,7 +453,7 @@ article {
 .contact {
 	display: flex;
 	flex-direction: column;
-	color: #747474;
+	color: rgba(0, 0, 0, 1);
 	margin-top: 20px;
 	margin-bottom: 90px;
 	width: 60%;

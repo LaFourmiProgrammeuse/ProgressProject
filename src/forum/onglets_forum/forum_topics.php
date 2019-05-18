@@ -25,7 +25,7 @@ $list_topics = array();
 $list_pinned_topics = array();
 
 //On cherche le nombre de topics de chaque type (épinglé ou non)
-//On commence chercher le nombre de topic non épinglé
+//On commence par chercher le nombre de topic non épinglé
 
 
     //Récuperation du nombre de topic épinglé et non épinglé
@@ -57,10 +57,10 @@ $list_pinned_topics = array();
 
 
 //Recup des informations du dernier post des topics non épinglés
+$n = 0;
 while($qrep_2 = $qprepare_2->fetch(PDO::FETCH_NAMED)){
 
     $has_topic = true;
-    $n = 0;
 
     $qprepare_3 = $bdd->prepare("SELECT author, date_of_publication FROM posts WHERE topic=? ORDER BY date_of_publication DESC LIMIT 1");
     $qprepare_3->execute(array($qrep_2['id']));
@@ -109,8 +109,7 @@ while($qrep_2 = $qprepare_2->fetch(PDO::FETCH_NAMED)){
       }
     }
 
-
-    //On met les informations sur les topics non épinglés misent dans un tableau
+    //On met les informations sur les topics non épinglés dans un tableau
     $list_topics[$n] = ['topic_id' => $qrep_2['id'],'topic_title' => $qrep_2['topic_title'], 'topic_author' => $qrep_2['author'], 'number_posts' => $qrep_2['number_posts'], 'number_views' => $qrep_2['number_views'], 'last_post_author' => $qrep_3['author'], 'last_post_date' => $time_from_publication_str];
 
     $n++;
@@ -120,18 +119,18 @@ while($qrep_2 = $qprepare_2->fetch(PDO::FETCH_NAMED)){
 
 
 //Recup des informations du dernier post des topics épinglés
+$n = 0;
 while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
 
     $has_topic_pinned = true;
-    $n = 0;
 
-    $qprepare_3 = $bdd->prepare("SELECT author, date_of_publication FROM posts WHERE topic=? ORDER BY date_of_publication DESC LIMIT 1");
-    $qprepare_3->execute(array($qrep_4['id']));
-    $qrep_3 = $qprepare_3->fetch(PDO::FETCH_NAMED);
+    $qprepare_5 = $bdd->prepare("SELECT author, date_of_publication FROM posts WHERE topic=? ORDER BY date_of_publication DESC LIMIT 1");
+    $qprepare_5->execute(array($qrep_4['id']));
+    $qrep_5 = $qprepare_5->fetch(PDO::FETCH_NAMED);
 
 
     //On déduit le temps écoulé depuis la derniere publication dans le topic
-    $date_of_publication_no_formatted = $qrep_3['date_of_publication'];
+    $date_of_publication_no_formatted = $qrep_5['date_of_publication'];
     $date_of_publication = new DateTime($date_of_publication_no_formatted);
     $date_now = new DateTime("now");
     $time_from_publication = $date_of_publication->diff($date_now);
@@ -173,10 +172,8 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
       }
     }
 
-
-
     //On met les informations sur les topics épinglés misent dans un tableau
-    $list_pinned_topics[$n] = ['topic_id' => $qrep_4['id'], 'topic_title' => $qrep_4['topic_title'], 'topic_author' => $qrep_4['author'], 'number_posts' => $qrep_4['number_posts'], 'number_views' => $qrep_4['number_views'], 'last_post_author' => $qrep_3['author'], 'last_post_date' => $time_from_publication_str];
+    $list_pinned_topics[$n] = ['topic_id' => $qrep_4['id'], 'topic_title' => $qrep_4['topic_title'], 'topic_author' => $qrep_4['author'], 'number_posts' => $qrep_4['number_posts'], 'number_views' => $qrep_4['number_views'], 'last_post_author' => $qrep_5['author'], 'last_post_date' => $time_from_publication_str];
 
     $n++;
 }
@@ -196,7 +193,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
     <div id="top_nav">
       <div id="tn_groupa">
 
-        <div class="tn_groupa_elem"><a href="#">Choose a forum</a></div>
+        <div class="tn_groupa_elem"><a href="/forum.php?forum_part=forums">Choose a forum</a></div>
         <div class="tn_groupa_elem"><a href="forum_stats.php">Stats</a></div>
         <div class="tn_groupa_elem"><a href="forum_rules.php">Rules</a></div>
 
@@ -261,7 +258,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
                <div class="topic_desc_groupc">
                  <div class="topic_last_post">
                    <p class="label_post_author">Last post by</p>
-                   <span class="post_author"><?php echo $topic_information['last_post_author']; ?></span>
+                   <div class="post_author"><?php echo $topic_information['last_post_author']; ?></div>
                    <p class="date_post"><?php echo $topic_information['last_post_date']; ?></p>
                  </div>
                </div>
@@ -311,7 +308,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
             <div class="topic_desc_groupc">
               <div class="topic_last_post">
                 <p class="label_post_author">Last post by</p>
-                <span class="post_author"><?php echo $topic_information['last_post_author']; ?></span>
+                <div class="post_author"><?php echo $topic_information['last_post_author']; ?></div>
                 <p class="date_post"><?php echo $topic_information['last_post_date']; ?></p>
               </div>
             </div>

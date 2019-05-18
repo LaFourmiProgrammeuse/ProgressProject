@@ -228,29 +228,74 @@ article {
   font-weight: 300;
 }
 
-/* On addapte la taille du texte de certaines balises pour les petites résolutions */
+/* On addapte la taille du texte et des margins de certaines balises pour les petites résolutions */
 @media screen and (max-width: 1024px){
+
 	.index_path{
-        font-size: 1.72vw;
+        font-size: 2.65vw;
     }
 
     #index_path_smll{
-        font-size: 1.6vw;
+        font-size: 2.4vw;
     }
 
     #tn_groupa{
-        font-size: 1.6vw;
+        font-size: 2.7vw;
+        margin-left: 35px;
+    }
+
+    #tn_groupb{
+        margin-right: 35px;
     }
 
     .forum_small_desc{
-        font-size: 1.4vw;
+        font-size: 3.2vw;
+        margin-top: 6px;
     }
 
     .forum_name{
-        font-size: 1.9vw;
+        font-size: 3.4vw;
     }
 
     .category_title{
-        font-size: 2.1vw;
+        font-size: 2.75vw;
+    }
+
+    #search{
+        font-size: 20px;
+    }
+
+    .lmf_inf{
+        font-size: 2.6vw;
+    }
+
+    .message{
+        font-size: 2.5vw;
+    }
+
+    .n_messages_forum{
+        font-size: 2.7vw;
+    }
+
+    .n_topics_forum{
+        font-size: 2.7vw;
+    }
+
+}
+
+/* On addapte la taille de certains objets pour les petites résolutions */
+@media screen and (max-width: 1024px){
+
+    .forum_desc{
+        min-width: 90%;
+        max-width: 90%;
+    }
+
+    #search{
+        width: 270px;
+    }
+
+    .f_icon{
+        width: 17%;
     }
 }

@@ -43,8 +43,8 @@ header {
 		display: none;
 }
 .h_small_resolution img{
-	height: 35px;
-	width: 35px;
+	height: 40px;
+	width: 40px;
 	position: absolute;
 	top: 18px;
 	left: 50%;
@@ -209,15 +209,15 @@ header {
 @media screen and (max-width: 1024px){
 
     :nth-child(1).identification a{
-        font-size: 2.5vw;
+        font-size: 2.8vw;
     }
 
     :nth-child(2).identification a{
-        font-size: 2.5vw;
+        font-size: 2.8vw;
     }
 
     .identification{
-        margin-top: 10px;
+        margin-top: 16px;
     }
 
     #disconnect_button a {
@@ -225,7 +225,7 @@ header {
     }
 
     #h_groupa{
-        width: 180px;
+        width: 210px;
         position: relative;
         top: 5px;
         margin-left: 35px;
@@ -234,6 +234,5 @@ header {
 
     #h_groupc{
         margin-right: 35px;
-        padding-top:
     }
 }

@@ -299,20 +299,52 @@ article {
 @media screen and (max-width: 1024px){
 
     .index_path{
-        font-size: 1.85vw;
+        font-size: 2.65vw;
     }
 
     #index_path_smll{
-        font-size: 1.65vw;
+        font-size: 2.4vw;
     }
 
     #tn_groupa{
-        font-size: 1.9vw;
+        font-size: 2.7vw;
         margin-left: 35px;
     }
 
     #tn_groupb{
         margin-right: 35px;
+    }
+
+    #search{
+        font-size: 20px;
+    }
+
+    .topic_title{
+        font-size: 2.1vw;
+    }
+
+    .topic_author{
+        font-size: 1.6vw;
+    }
+
+    .n_message_topic, .n_view_topic{
+        font-size: 1.85vw;
+    }
+
+    .create_topic h3{
+        font-size: 1.8vw;
+    }
+
+    .f_name{
+        font-size: 1.85vw;
+    }
+
+    .no_pinned_topic{
+        font-size: 2.5vw;
+    }
+
+    .no_topic{
+        font-size: 2.5vw;
     }
 
 }

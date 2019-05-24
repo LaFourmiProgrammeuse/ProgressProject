@@ -618,6 +618,13 @@ article {
     }
 }
 
+/* On affiche ou on cache certains objets pour les petites résolutions */
+@media screen and (max-width: 1024px){
+
+    
+}
+
+
 /* TPE */
 #secret_link {
 	color: white;

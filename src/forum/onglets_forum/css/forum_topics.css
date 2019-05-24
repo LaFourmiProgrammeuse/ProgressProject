@@ -231,6 +231,16 @@ article {
   font-weight: 300;
   color: #363636;
 }
+
+.n_message_topic{
+    margin-top: auto;
+}
+
+.n_view_topic{
+    margin-bottom: auto;
+    margin-top: 12px;
+}
+
 .n_view_topic {
   margin-top: 5px;
 }
@@ -281,20 +291,19 @@ article {
 }
 
 .page_selector a {
-    width: 10%;
     display: flex; /* Pour centrer les flèches qui sont dedans en hauteur */
 }
 
 .page_selector a img {
-    width: 100%;
+
 }
 
 .arrow_left {
-  width: 10%;
+  width: 18px;
   margin-right: 1px;
 }
 .arrow_right {
-  width: 10%;
+  width: 18px;;
   margin-left: 1px;
 }
 .pages {
@@ -334,27 +343,31 @@ article {
     }
 
     #search{
-        font-size: 20px;
-    }
-
-    .topic_title{
-        font-size: 2.1vw;
-    }
-
-    .topic_author{
-        font-size: 1.6vw;
-    }
-
-    .n_message_topic, .n_view_topic{
-        font-size: 1.85vw;
-    }
-
-    .create_topic h3{
         font-size: 1.8vw;
     }
 
+    #search::placeholder {
+        font-size: 1.8vw;
+    }
+
+    .topic_title{
+        font-size: 2.6vw;
+    }
+
+    .topic_author{
+        font-size: 2vw;
+    }
+
+    .n_message_topic, .n_view_topic{
+        font-size: 2vw;
+    }
+
+    .create_topic h3{
+        font-size: 2.5vw;
+    }
+
     .f_name{
-        font-size: 1.85vw;
+        font-size: 3.4vw;
     }
 
     .no_pinned_topic{
@@ -365,12 +378,39 @@ article {
         font-size: 2.5vw;
     }
 
+    .pages a {
+        font-size: 1.7vw;
+    }
+
+    .topic_last_post p {
+        font-size: 2vw;
+    }
+
+    .topic_last_post div{
+        font-size: 2vw;
+    }
+
 }
 
-/* On agrandis certains objets sur les petites résolutions */
+/* On change les tailles ou les marges de certains objets sur les petites résolutions */
 @media screen and (max-width: 1024px){
 
     article{
-        width: 75%;
+        width: 85%;
     }
+
+    .arrow_left {
+      width: 13px;
+      height: 22px;
+    }
+
+    .arrow_right {
+      width: 13px;
+        height: 22px;
+    }
+
+    #central_onglet_body{
+        margin-top: 90px;
+    }
+
 }

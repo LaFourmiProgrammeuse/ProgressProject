@@ -222,54 +222,56 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
         </div>
       </div>
 
-      <!-- Les sujets épinglés -->
-      <div class="topics_pinned">
-        <?php
-          if($has_topic_pinned == false){
-        ?>
-          <div class="no_pinned_topic">
-            <p>No pinned topic</p>
-          </div>
-          <?php
-          }
-          else{
-            foreach($list_pinned_topics as $topic_information){
-              echo "<a class='link_topic_desc' href=/src/forum/forum.php?forum_part=topic&topic_id=" . $topic_information['topic_id'] . ">";
-          ?>
-             <div class="topic_desc">
-               <div class="topic_desc_groupa">
-                 <div class="topic_title">
-                   <?php echo $topic_information['topic_title']; ?>
-                 </div>
-                 <div class="topic_author">
-                   <?php echo "By <i>" . $topic_information['topic_author'] . "</i>"; ?>
-                 </div>
-               </div>
-
-               <div class="topic_desc_groupb">
-                 <div class="n_message_topic">
-                   <?php echo $topic_information['number_posts'] . " post(s)"; ?>
-                 </div>
-                 <div class="n_view_topic">
-                   <?php echo $topic_information['number_views'] . " view(s)"; ?>
-                 </div>
-               </div>
-
-               <div class="topic_desc_groupc">
-                 <div class="topic_last_post">
-                   <p class="label_post_author">Last post by</p>
-                   <div class="post_author"><?php echo $topic_information['last_post_author']; ?></div>
-                   <p class="date_post"><?php echo $topic_information['last_post_date']; ?></p>
-                 </div>
-               </div>
-             </div>
-          <?php
-            echo "</a>";
-            }}
-          ?>
-      </div>
-
       <div class="f_part">
+
+        <!-- Les sujets épinglés -->
+        <div class="topics_pinned">
+          <?php
+            if($has_topic_pinned == false){
+          ?>
+            <div class="no_pinned_topic">
+              <p>No pinned topic</p>
+            </div>
+            <?php
+            }
+            else{
+              foreach($list_pinned_topics as $topic_information){
+                echo "<a class='link_topic_desc' href=/src/forum/forum.php?forum_part=topic&topic_id=" . $topic_information['topic_id'] . ">";
+            ?>
+               <div class="topic_desc">
+                 <div class="topic_desc_groupa">
+                   <div class="topic_title">
+                     <?php echo $topic_information['topic_title']; ?>
+                   </div>
+                   <div class="topic_author">
+                     <?php echo "By <i>" . $topic_information['topic_author'] . "</i>"; ?>
+                   </div>
+                 </div>
+
+                 <div class="topic_desc_groupb">
+                   <div class="n_message_topic">
+                     <?php echo $topic_information['number_posts'] . " post(s)"; ?>
+                   </div>
+                   <div class="n_view_topic">
+                     <?php echo $topic_information['number_views'] . " view(s)"; ?>
+                   </div>
+                 </div>
+
+                 <div class="topic_desc_groupc">
+                   <div class="topic_last_post">
+                     <p class="label_post_author">Last post by</p>
+                     <div class="post_author"><?php echo $topic_information['last_post_author']; ?></div>
+                     <p class="date_post"><?php echo $topic_information['last_post_date']; ?></p>
+                   </div>
+                 </div>
+               </div>
+            <?php
+              echo "</a>";
+              }}
+            ?>
+        </div>
+
+        <!-- Les sujets non épinglés -->
         <div class="topics_lasted">
           <?php
             if($has_topic != true){
@@ -292,7 +294,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
                 <?php echo $topic_information['topic_title']; ?>
               </div>
               <div class="topic_author">
-                <?php echo "By <b><i>" . $topic_information['topic_author'] . "</i></b>"; ?>
+                <?php echo "By <span class='spec_ib'>" . $topic_information['topic_author'] . "</span>"; ?>
               </div>
             </div>
 
@@ -371,6 +373,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
               ?>
           </div>
         </div>
+
       </div>
 
     </article>

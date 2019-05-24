@@ -137,15 +137,18 @@ article {
   color: #696969;
 }
 
+.f_part {
+  margin-top: 30px;
+}
+
 .topics_pinned {
   margin-top: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
   border-top: 1.5px solid #ececec;
   border-bottom: 1.5px solid #ececec;
 }
-
 .no_pinned_topic {
+  margin-top: 35px;
+  margin-bottom: 35px;
   text-align: center;
   font-size: 1.05vw;
   font-family: 'Montserrat', cursive;;
@@ -154,8 +157,7 @@ article {
 }
 
 .topics_lasted {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  margin-top: 30px;
   border-top: 1.5px solid #ececec;
   border-bottom: 1.5px solid #ececec;
 }
@@ -177,25 +179,29 @@ article {
   color: #a1a1a1;
 }
 
+
+/* Description du sujet */
 .topic_desc {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: #f2f2f2;
   width: 100%;
+  margin-top: 7.5px;
+  margin-bottom: 7.5px;
   padding-top: 15px;
   padding-bottom: 15px;
   border-radius: 5px;
 }
 
 .topic_desc_groupa {
-    display: flex;
-    flex-direction: column;
-    margin-left: 25px;
-    width: 37%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+  width: 37%;
 }
 .topic_title {
-  font-size: 1.30vw;
+  font-size: 1.40vw;
   font-family: 'Montserrat', cursive;
   font-weight: 600;
   color: #222222;
@@ -205,10 +211,11 @@ article {
   font-size: 1vw;
   font-family: 'Montserrat', cursive;
   font-weight: 300;
-  color: #5a5a5a;
+  color: #ababab;
 }
-.topic_author i {
-  color: #454545;
+.spec_ib {
+  color: #5a5a5a;
+  font-family: 'Montserrat', cursive;
   font-weight: 500;
 }
 
@@ -225,32 +232,43 @@ article {
   color: #363636;
 }
 .n_view_topic {
-  margin-top: 7.5px;
+  margin-top: 5px;
 }
 
 .topic_desc_groupc {
- display: flex;
- flex-direction: column;
- text-align: center;
- margin-right: 25px;
-    margin-left: 6%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-right: 25px;
+  margin-left: 6%;
 }
 .topic_last_post {
 
 }
 .label_post_author {
-
+  font-size: 1vw;
+  font-family: 'Montserrat', cursive;
+  font-weight: 300;
+  color: #ababab;
 }
 .post_author {
-    width: 100%;
+  margin-top: 2.5px;
+  width: 100%;
+  font-size: 1vw;
+  font-family: 'Montserrat', cursive;
+  font-weight: 500;
+  color: #5a5a5a;
 }
 .date_post {
-
+  margin-top: 2.5px;
+  font-size: 1vw;
+  font-family: 'Montserrat', cursive;
+  font-weight: 300;
+  color: #ababab;
 }
+/* ------------- */
 
-.f_part {
-  margin-top: 55px;
-}
+
 .topic_page {
   margin-top: 25px;
   margin-bottom: 25px;

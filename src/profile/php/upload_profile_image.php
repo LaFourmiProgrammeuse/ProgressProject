@@ -1,6 +1,6 @@
 <?php
 
-require "/home/programmpk/www/src/php_for_all/log_function.php";
+include "/home/programmpk/www/src/php_for_all/log_function.php";
 $file_log_server = "/home/programmpk/www/src/log_server.txt";
 
 $folder_image_path = "/images/user_image/";

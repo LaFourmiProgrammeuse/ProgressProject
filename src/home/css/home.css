@@ -549,11 +549,11 @@ article {
 @media screen and (max-width: 1024px){
 
     .g_title_prts h2{
-        font-size: 3.75vw;
+        font-size: 4.3vw;
     }
 
     .g_title_sprt h2{
-        font-size: 3.75vw;
+        font-size: 4.4vw;
     }
 
     .g_title_wprs h2{
@@ -565,19 +565,19 @@ article {
     }
 
     .a1 p{
-        font-size: 2.75vw
+        font-size: 2.5vw
     }
 
     .a2 p{
-        font-size: 2.75vw
+        font-size: 2.5vw
     }
 
     .support p{
-        font-size: 2.75vw
+        font-size: 2.5vw
     }
 
     .element_title h3{
-        font-size: 3vw;
+        font-size: 3.8vw;
     }
 
     .social_net a{
@@ -585,11 +585,11 @@ article {
     }
 
     .contact p{
-        font-size: 2.75vw;
+        font-size: 2.5vw;
     }
 
     #link a{
-        font-size: 2vw;
+        font-size: 2.3vw;
     }
 
     .inf_area h3{
@@ -602,11 +602,11 @@ article {
 
 }
 
-/*Changement de taille de certains objets pour les petites résolutions */
+/*Changement de la taille et des marges de certains objets pour les petites résolutions */
 @media screen and (max-width: 1024px){
 
-    .social_net{
-        width: 90%;
+    .social_net {
+        width: 40%;
     }
 
     .contact{
@@ -616,14 +616,73 @@ article {
     .g_title_cnct h2{
         width: 75%;
     }
+
+    #s_groupa_smallg{
+        width: 100%;
+    }
+
+    .a2{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        margin-top: 28px;
+    }
+
+    .g_title_sprt h2{
+        margin-top: 90px;
+    }
 }
 
-/* On affiche ou on cache certains objets pour les petites résolutions */
+/* Diverses modifs pour les petites résolutions */
 @media screen and (max-width: 1024px){
 
-    
+    #s_groupa_con{
+        flex-direction: column;
+    }
+
+    .a1{
+        order: 1;
+    }
+
+    .a2 p{
+        background-color: #f6f6f6;
+    }
+
+    .a2_solveit{
+        order: 2;
+    }
+
+    .a2_forum{
+        order: 3;
+    }
+
+    .g_title_sprt{
+        order: 4;
+    }
+
+    .support{
+        order: 5;
+    }
+
+    .small_resolution {
+        display: flex;
+    }
+
+    .high_resolution{
+        display: none;
+    }
 }
 
+@media screen and (min-width: 1025px){
+
+    .small_resolution{
+        display: none;
+    }
+
+    .high_resolution{
+        display: flex;
+    }
+}
 
 /* TPE */
 #secret_link {

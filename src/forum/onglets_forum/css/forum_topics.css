@@ -351,15 +351,15 @@ article {
     }
 
     .topic_title{
-        font-size: 2.6vw;
+        font-size: 2.8vw;
     }
 
     .topic_author{
-        font-size: 2vw;
+        font-size: 2.2vw;
     }
 
     .n_message_topic, .n_view_topic{
-        font-size: 2vw;
+        font-size: 2.2vw;
     }
 
     .create_topic h3{
@@ -371,23 +371,24 @@ article {
     }
 
     .no_pinned_topic{
-        font-size: 2.5vw;
+        font-size: 2.7vw;
     }
 
     .no_topic{
-        font-size: 2.5vw;
+        font-size: 2.7vw;
     }
 
     .pages a {
-        font-size: 1.7vw;
+        font-size: 2vw;
     }
 
     .topic_last_post p {
-        font-size: 2vw;
+        font-size: 2.4vw;
+        color: #625f5f;
     }
 
     .topic_last_post div{
-        font-size: 2vw;
+        font-size: 2.4vw;
     }
 
 }

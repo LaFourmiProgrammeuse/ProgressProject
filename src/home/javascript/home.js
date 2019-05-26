@@ -130,6 +130,8 @@ function init_siv1_event(){
 
 $(document).ready(function(){
 
+    console.log(screen.width);
+
     $("#account").css("margin-left", "20px");
 
     // wallpaper

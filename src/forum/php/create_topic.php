@@ -2,6 +2,9 @@
 
 	require "/home/programmpk/www/src/php_for_all/session_control.php";
 
+    if($_POST['topic_title'] == "" || $_POST['topic_subtitle'] == "" || $_POST['first_post_content'] == "")
+        exit();
+
 	$topic_title = $_POST['topic_title'];
 	$topic_subtitle = $_POST['topic_subtitle'];
 	$first_post_content = $_POST['first_post_content'];
@@ -42,7 +45,7 @@
 	$qprepare_6->execute(array($n_posts_forum, $topic_id, $forum_id));
 
 
-	$link_new_topic = "../forum.php?forum_part=topic&topic_id=" . $topic_id;
+	$link_new_topic = "/forum.php?forum_part=topic&topic_id=" . $topic_id;
 	header("Location: " . $link_new_topic);
 
 	//On update les informations de l'utilisateur

@@ -7,7 +7,8 @@
     IncrementVisitorCounter();
 
     if($_SESSION['connected'] == 'false'){
-        header ("Location: ../home/home.php");
+        header ("Location: /home.php");
+        exit();
     }
 
  ?>

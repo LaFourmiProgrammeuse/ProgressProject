@@ -1,0 +1,16 @@
+Options -Indexes
+Options +FollowSymlinks
+
+RewriteEngine on
+#RewriteRule ^([a-z]+)(.php) /src/$1/$1$2 [L]
+#RewriteRule ^(.*)$ /src/$1
+
+RewriteRule ^(forum.php)(\?.*){0,1}$ /src/forum/forum.php$2 [L]
+RewriteRule ^(home.php)(\?.*){0,1}$ /src/home/home.php$2 [L]
+RewriteRule ^(profile.php)(\?.*){0,1}$ /src/profile/profile.php$2 [L]
+RewriteRule ^(register.php)(\?.*){0,1}$ /src/register/register_page.php$2 [L]
+RewriteRule ^(login.php)(\?.*){0,1}$ /src/login/login_page.php$2 [L]
+
+
+Errordocument 404 /src/error_redirection/error_404/error_404.php
+Errordocument 403 /src/error_redirection/error_403/error_403.php

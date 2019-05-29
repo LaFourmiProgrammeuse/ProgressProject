@@ -549,31 +549,31 @@ article {
 @media screen and (max-width: 1024px){
 
     .g_title_prts h2{
-        font-size: 4.3vw;
+        font-size: 4.6vw;
     }
 
     .g_title_sprt h2{
-        font-size: 4.4vw;
+        font-size: 4.6vw;
     }
 
     .g_title_wprs h2{
-        font-size: 3.75vw;
+        font-size: 3.9vw;
     }
 
     .g_title_cnct h2{
-        font-size: 3.75vw;
+        font-size: 3.9vw;
     }
 
     .a1 p{
-        font-size: 2.5vw
+        font-size: 3.1vw
     }
 
     .a2 p{
-        font-size: 2.5vw
+        font-size: 3.1vw
     }
 
     .support p{
-        font-size: 2.5vw
+        font-size: 3.1vw
     }
 
     .element_title h3{
@@ -581,15 +581,15 @@ article {
     }
 
     .social_net a{
-        font-size: 2.25vw;
+        font-size: 2.9vw;
     }
 
     .contact p{
-        font-size: 2.5vw;
+        font-size: 3.1vw;
     }
 
     #link a{
-        font-size: 2.3vw;
+        font-size: 2.6vw;
     }
 
     .inf_area h3{
@@ -606,7 +606,7 @@ article {
 @media screen and (max-width: 1024px){
 
     .social_net {
-        width: 40%;
+        width: 45%;
     }
 
     .contact{
@@ -629,7 +629,7 @@ article {
     }
 
     .g_title_sprt h2{
-        margin-top: 90px;
+        margin-top: 145px;
     }
 }
 

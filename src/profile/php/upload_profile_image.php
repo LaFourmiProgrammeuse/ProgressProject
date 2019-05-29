@@ -3,7 +3,7 @@
 include "/home/programmpk/www/src/php_for_all/log_function.php";
 $file_log_server = "/home/programmpk/www/src/log_server.txt";
 
-$folder_image_path = "/images/user_image/";
+$folder_image_path = "/home/programmpk/www/images/user_image/";
 
 
 //On verifie les informations recus
@@ -31,7 +31,6 @@ try{
 
 }
 
-
 //on supprime l'ancienne photo de profile de l'user si il en avait une
 $qprepare = $bdd->prepare('SELECT profile_image_name FROM users WHERE username=:username');
 $qprepare->execute(array("username" => $_POST['username']));
@@ -47,17 +46,17 @@ if($qrep[0] != "" || $qrep[0] != "Default_profile_image.png"){
 
 //on place la nouvelle image de profile dans le dossier images
 if(!$file_image_uploaded = fopen(($folder_image_path.$_POST['file_name']), "w")){
-    //echo "Echec de la création de la nouvele image";
+    echo "Echec de la création de la nouvelle image \n";
 }
 else{
-    //echo "Creation de la nouvelle image avec succes";
+    echo "Creation de la nouvelle image avec succes \n";
 }
 
 fwrite($file_image_uploaded, $image_decoded);
 fclose($file_image_uploaded);
 
 
-echo ($folder_image_path.$_POST['file_name']);
+echo ($folder_image_path . $_POST['file_name']);
 
 
 //on entre dans la bbd le nom de la nouvelle photo de profil

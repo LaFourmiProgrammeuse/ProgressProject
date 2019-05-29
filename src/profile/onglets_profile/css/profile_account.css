@@ -49,3 +49,13 @@
       #send_new_email,#send_new_password {
         margin-left: 5px;
       }
+
+#send_biography{
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+
+#confirm_new_password_label h4{
+    margin-top: 15px;
+}

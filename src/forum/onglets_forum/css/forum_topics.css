@@ -150,7 +150,7 @@ article {
   margin-top: 35px;
   margin-bottom: 35px;
   text-align: center;
-  font-size: 1.05vw;
+  font-size: 1.25vw;
   font-family: 'Montserrat', cursive;;
   font-weight: 300;
   color: #565656;
@@ -161,16 +161,22 @@ article {
   border-top: 1.5px solid #ececec;
   border-bottom: 1.5px solid #ececec;
 }
+
+.no_topic{
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
 .no_topic p {
   text-align: center;
-  font-size: 1.05vw;
+  font-size: 1.25vw;
   font-family: 'Montserrat', cursive;
   font-weight: 300;
   color: #565656;
 }
 .no_topic h4 {
   text-align: center;
-  font-size: 0.95vw;
+  font-size: 1.10vw;
   font-family: 'Montserrat', cursive;
   font-weight: 300;
   color: #727272;
@@ -326,15 +332,15 @@ article {
 @media screen and (max-width: 1024px){
 
     .index_path{
-        font-size: 2.65vw;
+        font-size: 2.9vw;
     }
 
     #index_path_smll{
-        font-size: 2.4vw;
+        font-size: 2.75vw;
     }
 
     #tn_groupa{
-        font-size: 2.7vw;
+        font-size: 2.75vw;
         margin-left: 35px;
     }
 
@@ -343,11 +349,11 @@ article {
     }
 
     #search{
-        font-size: 1.8vw;
+        font-size: 2.3vw;
     }
 
     #search::placeholder {
-        font-size: 1.8vw;
+        font-size: 2.3vw;
     }
 
     .topic_title{
@@ -363,19 +369,23 @@ article {
     }
 
     .create_topic h3{
-        font-size: 2.5vw;
+        font-size: 2.7vw;
     }
 
     .f_name{
-        font-size: 3.4vw;
+        font-size: 3.6vw;
     }
 
     .no_pinned_topic{
-        font-size: 2.7vw;
+        font-size: 3.1vw;
     }
 
-    .no_topic{
-        font-size: 2.7vw;
+    .no_topic p{
+        font-size: 3.1vw;
+    }
+
+    .no_topic h4 {
+        font-size: 2.6vw;
     }
 
     .pages a {
@@ -406,12 +416,21 @@ article {
     }
 
     .arrow_right {
-      width: 13px;
+        width: 13px;
         height: 22px;
     }
 
     #central_onglet_body{
         margin-top: 90px;
+    }
+
+    #search-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    #search{
+        height: 40px;
     }
 
 }

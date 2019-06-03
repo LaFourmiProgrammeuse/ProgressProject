@@ -167,8 +167,9 @@ $(document).ready(function(){
 
         /* VERTICAL MENU FOR SMALL RESOLUTION */
 
-    $("#h_groupb .h_small_resolution img").mouseenter(function(){
+    $(".h_small_resolution img").mouseenter(function(){
         $("#h_vertical_menu").css("display", "flex");
+        console.log("fff");
     });
 
     $("section").mouseenter(function(){

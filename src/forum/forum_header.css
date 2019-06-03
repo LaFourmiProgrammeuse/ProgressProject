@@ -1,13 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
-@import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One');
-@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:200,200i');
-@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:700');
-
 header {
-	display: flex;
-	height: 60px;
 	width: 100%;
+}
+
+header .part_1 {
+    display: flex;
+	height: 72px;
 }
 
 #h_groupa {
@@ -35,8 +32,8 @@ header {
 	width: calc(100% - 290px);
 }
 .nav_element {
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-left: auto;
+	margin-right: auto;
 }
 .nav_element a {
 	color: #515151;
@@ -52,7 +49,7 @@ header {
 	height: 40px;
 	width: 40px;
 	position: absolute;
-	top: 18px;
+	top: 28px;
 	left: 50%;
 	transform: translate(-50%, 0);
 }
@@ -60,6 +57,7 @@ header {
 	display: none;
 	justify-content: space-between;
 	flex-direction: row;
+    width: 380px;
 }
 
 .vertical_menu{
@@ -68,14 +66,12 @@ header {
 #h_vertical_menu{
 	flex-direction: column;
 	display: none;
-	position: absolute;
-	top: 37px;
-	border: solid 2px grey;
-	background-color: black;
-	transform: translate(-50%, 0);
-	left: 50%;
-	width: 170px;
-    height: 143px;
+	width: 100%;
+    margin-top: 30px;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 #h_vertical_menu .nav_element{
@@ -83,28 +79,8 @@ header {
 	text-align: center;
 }
 #h_vertical_menu .nav_element a{
-	color: white;
-    font-size: 2.5vw;
-}
-
-#h_vertical_menu .nav_element_forum{
-    position: relative;
-    top: 12px;
-}
-
-#h_vertical_menu .nav_element_projects{
-    position: relative;
-    top: 24px;
-}
-
-#h_vertical_menu .nav_element_about{
-    position: relative;
-    top: 36px;
-}
-
-#h_vertical_menu .nav_element_contact{
-    position: relative;
-    top: 48px;
+	color: black;
+    font-size: 4vw;
 }
 
 @media screen and (min-width: 1025px){
@@ -118,24 +94,12 @@ header {
 	}
 }
 
-@media screen and (min-width: 927px){
-	#h_vertical_menu{
-        height: 173px;
-    }
-}
-
-@media screen and (max-width: 927px){
-	#h_vertical_menu{
-        height: 164px;
-    }
-}
-
 #h_groupc {
 	display: flex;
 	flex-direction: row-reverse;
 	align-self: flex-end;
 	height: 100%;
-	width: 375px;
+	width: 380px;
 	margin-right: 75px;
 	align-items: center;
 }
@@ -215,25 +179,25 @@ header {
 @media screen and (max-width: 1024px){
 
     :nth-child(1).identification a{
-        font-size: 2.8vw;
+        font-size: 2.7vw;
     }
 
     :nth-child(2).identification a{
-        font-size: 2.8vw;
+        font-size: 2.7vw;
     }
 
     .identification{
-        margin-top: 16px;
+        margin-top: 23px;
     }
 
     #disconnect_button a {
-    	font-size: 2vw;;
+    	font-size: 2vw;
     }
 
     #h_groupa{
-        width: 210px;
+        width: 260px;
         position: relative;
-        top: 5px;
+        top: 10px;
         margin-left: 35px;
         margin-top: 4px;
     }

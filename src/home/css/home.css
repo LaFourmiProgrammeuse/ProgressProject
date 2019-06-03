@@ -549,11 +549,11 @@ article {
 @media screen and (max-width: 1024px){
 
     .g_title_prts h2{
-        font-size: 4.6vw;
+        font-size: 5vw;
     }
 
     .g_title_sprt h2{
-        font-size: 4.6vw;
+        font-size: 5vw;
     }
 
     .g_title_wprs h2{
@@ -565,27 +565,27 @@ article {
     }
 
     .a1 p{
-        font-size: 3.1vw
+        font-size: 3.5vw
     }
 
     .a2 p{
-        font-size: 3.1vw
+        font-size: 3.5vw
     }
 
     .support p{
-        font-size: 3.1vw
+        font-size: 3.5vw
     }
 
     .element_title h3{
-        font-size: 3.8vw;
+        font-size: 4.1vw;
     }
 
     .social_net a{
-        font-size: 2.9vw;
+        font-size: 3vw;
     }
 
     .contact p{
-        font-size: 3.1vw;
+        font-size: 3.5vw;
     }
 
     #link a{
@@ -593,11 +593,11 @@ article {
     }
 
     .inf_area h3{
-        font-size: 2.2vw;
+        font-size: 2.4vw;
     }
 
     #link_to{
-        font-size: 2vw;
+        font-size: 2.1vw;
     }
 
 }

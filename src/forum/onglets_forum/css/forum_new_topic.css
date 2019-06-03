@@ -202,9 +202,14 @@ input[type=text]:focus{
 .editor_type{
     display: flex;
     flex-direction: row;
-    width: 150px;
+    width: 235px;
     align-content: right;
-    padding-top: 5px;
+    padding-top: 12px;
+    padding-right: 4px;
+}
+
+.editor_type h3 {
+    margin-left: auto;
 }
 
 .message_content textarea {
@@ -254,13 +259,17 @@ input[type=text]:focus{
     }
 
     .form_header_frame {
-        width: 60%;
-        font-size: 2.2vw;
+        width: 80%;
+        font-size: 2.8vw;
     }
 
     .warning_rules {
         width: 80%;
-        font-size: 2.3vw;
+        margin-bottom: 100px;
+    }
+
+    .warning_rules p {
+        font-size: 2.2vw;
     }
 
     #form_new_topic h3{

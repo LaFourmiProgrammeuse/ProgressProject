@@ -232,15 +232,15 @@ article {
 @media screen and (max-width: 1024px){
 
 	.index_path{
-        font-size: 2.65vw;
+        font-size: 2.9vw;
     }
 
     #index_path_smll{
-        font-size: 2.4vw;
+        font-size: 2.75vw;
     }
 
     #tn_groupa{
-        font-size: 2.7vw;
+        font-size: 2.75vw;
         margin-left: 35px;
     }
 
@@ -258,15 +258,15 @@ article {
     }
 
     .category_title{
-        font-size: 2.75vw;
+        font-size: 3.7vw;
     }
 
     #search{
-        font-size: 20px;
+        font-size: 2.3vw;
     }
 
     #search::placeholder {
-        font-size: 1.8vw;
+        font-size: 2.3vw;
     }
 
     .lmf_inf{
@@ -305,5 +305,15 @@ article {
 
     #central_onglet_body{
         margin-top: 90px;
+    }
+
+    #search-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    #search{
+        height: 40px;
+
     }
 }

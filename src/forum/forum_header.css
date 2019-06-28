@@ -39,7 +39,7 @@ header .part_1 {
 	color: #515151;
 	font-family: 'Karla', cursive;
 	font-weight: lighter;
-	font-size: 1.1vw;
+	font-size: 1.4vw;
 }
 
 .h_small_resolution{
@@ -114,14 +114,14 @@ header .part_1 {
 }
 .identification:nth-child(2) a {
 	font-weight: bold;
-	font-size: 1.1vw;;
+	font-size: 1.4vw;;
 	color: white;
 }
 .identification a {
 	font-family: 'Karla', cursive;
 }
 .identification:nth-child(1) a {
-	font-size: 1.1vw;
+	font-size: 1.4vw;
 	color: #656565;
 }
 

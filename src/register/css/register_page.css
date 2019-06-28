@@ -25,7 +25,7 @@ li {
 #body_content{
   display: flex;
   flex-direction: column;
-  min-height: 90vh;
+  min-height: 100vh;
 }
 
 p {

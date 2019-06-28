@@ -10,6 +10,8 @@ var siv1_images = ["/content/pa_official_wallpaper_1.jpg", "/content/pa_official
 //Nom du fichier sur le serveur à télécharger pour chaque image si clické
 var siv1_download_content_name = ["pa_official_wallpaper_1.jpg", "pa_official_wallpaper_2.jpg", "pa_official_wallpaper_3.png"];
 
+var siv1_width_for_3_images = 845;
+
 
 function hideMessageConnection(){
 
@@ -67,11 +69,21 @@ function requestSessionData(){
 //SIV init
 function load_siv1(){
 
+  var n_images_to_show;
+
+  screen_width = window.innerWidth; console.log(screen_width);
+  if(screen_width >= siv1_width_for_3_images){
+    n_images_to_show = 3;
+  }
+  else{
+    n_images_to_show = 1;
+  }
+
   $.ajax({
           method: "POST",
           url: "/src/widgets/simple_image_viewer/simple_image_viewer.php",
           dataType: "html",
-          data: {index: siv1_index, images: siv1_images, download_content_name: siv1_download_content_name},
+          data: {index: siv1_index, images: siv1_images, download_content_name: siv1_download_content_name, n_images_to_show: n_images_to_show},
           success: function(html_response){
               $("#siv_1").html(html_response);
               init_siv1_event();
@@ -128,6 +140,11 @@ function init_siv1_event(){
   });
 }
 
+//Window event
+function window_resized(){
+  load_siv1();
+}
+
 $(document).ready(function(){
 
     console.log(screen.width);
@@ -138,6 +155,8 @@ $(document).ready(function(){
     load_siv1();
 
     requestSessionData();
+
+    window.onresize = window_resized;
 
         /* MODAL WARNING NO CONTENT */
 

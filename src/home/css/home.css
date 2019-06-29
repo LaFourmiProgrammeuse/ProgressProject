@@ -72,7 +72,7 @@ section {
 #link a {
 	background-color: #191919;
 	color: white;
-	font-size: 1vw;
+	font-size: 1.3vw;
 	font-family: 'Karla', cursive;
 	padding-left: 70px;
 	padding-right: 70px;
@@ -106,7 +106,7 @@ section {
 }
 .inf_area h3 {
 	color: white;
-	font-size: 1vw;
+	font-size: 1.3vw;
 	font-weight: 300;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -118,7 +118,7 @@ section {
 	display: inline-block;
   vertical-align: middle;
 	color: white;
-	font-size: 0.9vw;
+	font-size: 1.2vw;
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-top: 10px;

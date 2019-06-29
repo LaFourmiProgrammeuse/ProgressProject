@@ -30,7 +30,7 @@ footer{
     display: flex;
     justify-content: space-around;
     width: 300px;
-    font-size: 13px;
+    font-size: 0.9vw;
     position: relative;
     top: 18px;
     margin: auto;
@@ -48,4 +48,11 @@ footer{
 #label_uses_condition{
     width: 130px;
     margin: 0px;
+}
+
+@media screen and (max-width: 1024px){
+
+    #footer_information_frame_2{
+      font-size: 1.2vw;
+    }
 }

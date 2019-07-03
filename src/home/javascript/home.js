@@ -12,6 +12,8 @@ var siv1_download_content_name = ["pa_official_wallpaper_1.jpg", "pa_official_wa
 
 var siv1_width_for_3_images = 845;
 
+var small_resolution_mode = false;
+
 
 function hideMessageConnection(){
 
@@ -71,7 +73,7 @@ function load_siv1(){
 
   var n_images_to_show;
 
-  screen_width = window.innerWidth; console.log(screen_width);
+  screen_width = window.innerWidth; //console.log(screen_width);
   if(screen_width >= siv1_width_for_3_images){
     n_images_to_show = 3;
   }
@@ -132,7 +134,7 @@ function siv1_right_arrow_clicked(){
 //SIV event
 function init_siv1_event(){
 
-  $("#siv_1 .left_arrow").click(function(){ console.log("g");
+  $("#siv_1 .left_arrow").click(function(){
     siv1_left_arrow_clicked();
   });
   $("#siv_1 .right_arrow").click(function(){
@@ -140,14 +142,51 @@ function init_siv1_event(){
   });
 }
 
+
+
+function ActivateSmallResolutionMode(){
+
+    var begin_div_head = "<div class='nav_element'><div class='small_resolution' id=h_usera>";
+    var end_div_head = "</div></div>";
+
+    var final_div = $(begin_div_head + $("#h_usera").html() + end_div_head); console.log(final_div);
+    $(final_div).find("#login_button").addClass("small_resolution");
+    $(final_div).find("#login_button").addClass("nav_element_login");
+    $(final_div).find("#register_button").addClass("small_resolution");
+    $(final_div).find("#register_button").addClass("nav_element_register");
+
+    $("#h_usera").remove();
+    $("#h_vertical_menu").append(final_div);
+}
+
+function DesactivateSmallResolutionMode(){
+
+}
+
 //Window event
 function window_resized(){
+
   load_siv1();
+
+    //Si l'utilisateur a une petite résolution, on arrange le code (déplacement et ajout d'attribut) afin d'adapter le site
+    if(window.innerWidth < 1024){
+
+        if(small_resolution_mode == false){
+            small_resolution_mode = true;
+            ActivateSmallResolutionMode();
+        }
+    }
+    else{
+        if(small_resolution_mode == true){
+            small_resolution_mode = false;
+            DesactivateSmallResolutionMode();
+        }
+    }
 }
 
 $(document).ready(function(){
 
-    console.log(screen.width);
+    //console.log(screen.width);
 
     $("#account").css("margin-left", "20px");
 
@@ -188,7 +227,6 @@ $(document).ready(function(){
 
     $(".h_small_resolution img").mouseenter(function(){
         $("#h_vertical_menu").css("display", "flex");
-        console.log("fff");
     });
 
     $("section").mouseenter(function(){

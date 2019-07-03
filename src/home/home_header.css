@@ -32,14 +32,23 @@ header .part_1 {
 	width: calc(100% - 290px);
 }
 .nav_element {
-	margin-left: auto;
-	margin-right: auto;
+    margin-left: 20px;
 }
 .nav_element a {
 	color: #515151;
 	font-family: 'Karla', cursive;
 	font-weight: lighter;
 	font-size: 1.4vw;
+}
+
+.nav_element_login {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav_element_register {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .h_small_resolution{
@@ -66,17 +75,18 @@ header .part_1 {
 #h_vertical_menu{
 	flex-direction: column;
 	display: none;
-	width: 100%;
+	width: 300px;
     margin-top: 30px;
-    border-top: 2px solid grey;
-    border-bottom: 2px solid grey;
+    border: 2px solid grey;
     padding-top: 5px;
     padding-bottom: 5px;
+    position: fixed;
+    right: -2px;
+    background-color: white;
 }
 
 #h_vertical_menu .nav_element{
-	width: 130px;
-	text-align: center;
+	width: 250px;
 }
 #h_vertical_menu .nav_element a{
 	color: black;
@@ -112,6 +122,10 @@ header .part_1 {
 	padding-right: 27.5px;
 	border-radius: 5px;
 }
+.small_resolution.identification:nth-child(2) {
+	margin-left: 0px;
+}
+
 .identification:nth-child(2) a {
 	font-weight: bold;
 	font-size: 1.4vw;;
@@ -131,12 +145,21 @@ header .part_1 {
 	flex-direction: row;
 	align-items: center;
 }
+
+.small_resolution#h_usera{
+    position: relative;
+    left: -20px;
+    display: block;
+}
+
 #login_button{
   display: none;
 }
+
 #register_button {
   display: none;
 }
+
 #h_userb {
 	display: flex;
 	flex-direction: row;
@@ -186,9 +209,9 @@ header .part_1 {
         font-size: 2.7vw;
     }
 
-    .identification{
+    /*.identification{
         margin-top: 23px;
-    }
+    }*/
 
     #disconnect_button a {
     	font-size: 2vw;;

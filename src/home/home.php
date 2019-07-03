@@ -1,5 +1,12 @@
 <?php
 
+/* Résolutions
+Very small resolution : inférieur à 580px
+Small résolutions : entre 480px à 1024px
+Medium résolutions : entre 1025px et 1380px
+High résolutions : au dessus de 1381px
+*/
+
 //Ne pas mettre de code html avant cette ligne !
 require '/home/programmpk/www/src/php_for_all/session_control.php';
 include "/home/programmpk/www/src/language/language.php";

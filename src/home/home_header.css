@@ -10,9 +10,9 @@ header .part_1 {
 #h_groupa {
 	display: flex;
 	margin-left :  75px;
-  width: 110px;
 	height: 100%;
 	align-items: center;
+    width: 110px;
 }
 #h_groupa img {
 	width: 100%;
@@ -69,7 +69,7 @@ header .part_1 {
     display: none;
 }
 .h_high_resolution{
-	display: none;
+	display: flex;
 	justify-content: space-between;
 	flex-direction: row;
     width: 380px;
@@ -156,7 +156,6 @@ header .part_1 {
 	justify-content: space-between;
 	flex-direction: row;
 	align-items: center;
-    margin-top: 20px;
 }
 
 .small_resolution#h_usera{
@@ -201,7 +200,7 @@ header .part_1 {
 #user_image img {
 	height: 40px;
 	width: 40px;
-    margin-top: 32px;
+    margin-top: 15px;
 }
 
 #user_username{
@@ -260,12 +259,20 @@ header .part_1 {
     #small_resolution_menu_icon{
         display: block;
     }
+
+    .h_high_resolution {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1025px){
+
     #small_resolution_menu_icon{
         display: none;
     }
 
-    
+    .h_high_resolution {
+        display: flex;
+    }
+
 }

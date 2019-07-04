@@ -146,21 +146,33 @@ function init_siv1_event(){
 
 function ActivateSmallResolutionMode(){
 
-    var begin_div_head = "<div class='nav_element'><div class='small_resolution' id=h_usera>";
+    //On déplace les boutons de connection dans le menu déroulant de navigation
+    var begin_div_head = "<div class='nav_element nav_element_logs'><div class='small_resolution' id=h_usera>";
     var end_div_head = "</div></div>";
 
-    var final_div = $(begin_div_head + $("#h_usera").html() + end_div_head); console.log(final_div);
-    $(final_div).find("#login_button").addClass("small_resolution");
-    $(final_div).find("#login_button").addClass("nav_element_login");
-    $(final_div).find("#register_button").addClass("small_resolution");
-    $(final_div).find("#register_button").addClass("nav_element_register");
+    var new_usera = $(begin_div_head + $("#h_usera").html() + end_div_head); console.log(new_usera);
+    $(new_usera).find("#login_button").addClass("small_resolution");
+    $(new_usera).find("#login_button").addClass("nav_element_login");
+    $(new_usera).find("#register_button").addClass("small_resolution");
+    $(new_usera).find("#register_button").addClass("nav_element_register");
 
     $("#h_usera").remove();
-    $("#h_vertical_menu").append(final_div);
+    $("#h_vertical_menu").append(new_usera);
 }
 
 function DesactivateSmallResolutionMode(){
 
+    var begin_div_usera = "<div id=h_usera>";
+    var end_div_usera = "</div>";
+    var div_usera_filled = $(begin_div_usera + $(".nav_element_logs").html() + end_div_usera); console.log(div_usera_filled);
+
+     $(div_usera_filled).find("#login_button").removeClass("small_resolution");
+     $(div_usera_filled).find("#login_button").removeClass("nav_element_login");
+     $(div_usera_filled).find("#register_button").removeClass("small_resolution");
+     $(div_usera_filled).find("#register_button").removeClass("nav_element_register");
+
+    $("#h_usera").remove();
+    $("#h_groupc").prepend(div_usera_filled);
 }
 
 //Window event
@@ -196,6 +208,7 @@ $(document).ready(function(){
     requestSessionData();
 
     window.onresize = window_resized;
+    window_resized();
 
         /* MODAL WARNING NO CONTENT */
 
@@ -225,23 +238,28 @@ $(document).ready(function(){
 
         /* VERTICAL MENU FOR SMALL RESOLUTION */
 
-    $(".h_small_resolution img").mouseenter(function(){
+    $("#small_resolution_menu_icon").mouseenter(function(){
+        $(".h_small_resolution").css("display", "flex");
         $("#h_vertical_menu").css("display", "flex");
     });
 
     $("section").mouseenter(function(){
-        $("#h_vertical_menu").css("display", "none");
+        $(".h_small_resolution").css("display", "none");
+        $("#h_small_resolution").css("display", "none");
     });
 
     $("#h_groupa").mouseenter(function(){
+        $(".h_small_resolution").css("display", "none");
         $("#h_vertical_menu").css("display", "none");
     });
 
-    $("#h_groupc").mouseenter(function(){
+    $("#h_groupb").mouseenter(function(){
+        $(".h_small_resolution").css("display", "none");
         $("#h_vertical_menu").css("display", "none");
     });
 
     $(".nav_element").click(function(){
+        $(".h_small_resolution").css("display", "none");
         $("#h_vertical_menu").css("display", "none");
     });
 

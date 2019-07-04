@@ -51,16 +51,22 @@ header .part_1 {
     margin-right: auto;
 }
 
+.nav_element_logs {
+    margin-left: auto;
+    margin-right: auto;
+    //margin-left: 0px;
+}
+
 .h_small_resolution{
 		display: none;
 }
-.h_small_resolution img{
-	height: 40px;
-	width: 40px;
-	position: absolute;
-	top: 28px;
-	left: 50%;
-	transform: translate(-50%, 0);
+
+#small_resolution_menu_icon{
+	height: 45px;
+	width: 45px;
+    position: relative;
+	top: 12px;
+    display: none;
 }
 .h_high_resolution{
 	display: none;
@@ -83,6 +89,7 @@ header .part_1 {
     position: fixed;
     right: -2px;
     background-color: white;
+    text-align: center;
 }
 
 #h_vertical_menu .nav_element{
@@ -93,15 +100,20 @@ header .part_1 {
     font-size: 4vw;
 }
 
-@media screen and (min-width: 1025px){
-	.h_high_resolution{
-		display: flex;
-	}
+#h_vertical_menu .separator {
+    width: 200px;
+    border: 1px grey solid;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+    margin-top: 16px;
 }
-@media screen and (max-width: 1024px){
-	.h_small_resolution{
-		display: block;
-	}
+
+.menu_title {
+    text-align: center;
+    font-size: 3vw;
+    font-family: "Karla",cursive;
+    margin-bottom: 8px
 }
 
 #h_groupc {
@@ -144,20 +156,33 @@ header .part_1 {
 	justify-content: space-between;
 	flex-direction: row;
 	align-items: center;
+    margin-top: 20px;
 }
 
 .small_resolution#h_usera{
-    position: relative;
-    left: -20px;
     display: block;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 8px;
 }
 
 #login_button{
   display: none;
 }
 
+.small_resolution #login_button a {
+     color: black;
+     font-size: 3.2vw;
+}
+
 #register_button {
   display: none;
+    margin-top: 5px;
+}
+
+.small_resolution #register_button a {
+     color: black;
+     font-size: 3.2vw;
 }
 
 #h_userb {
@@ -176,7 +201,7 @@ header .part_1 {
 #user_image img {
 	height: 40px;
 	width: 40px;
-    margin-top: 8px;
+    margin-top: 32px;
 }
 
 #user_username{
@@ -228,4 +253,19 @@ header .part_1 {
     #h_groupc{
         margin-right: 35px;
     }
+}
+
+@media screen and (max-width: 1024px){
+
+    #small_resolution_menu_icon{
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1025px){
+    #small_resolution_menu_icon{
+        display: none;
+    }
+
+    
 }

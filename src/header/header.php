@@ -1,7 +1,7 @@
 <header>
     <div class="part_1">
     <div id="h_groupa">
-        <a><img src="/images/logos/pa.svg" title="Programming Ants' Logo"/></a>
+        <a href="home.php"><img src="/images/logos/pa.svg" title="Programming Ants' Logo"/></a>
     </div>
 
     <div id="h_groupb">

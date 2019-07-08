@@ -5,6 +5,8 @@ Very small resolution : inférieur à 580px
 Small résolutions : entre 480px à 1024px
 Medium résolutions : entre 1025px et 1380px
 High résolutions : au dessus de 1381px
+
+Résolution de référence : High resolution (on développe pour les grands écran vu qu'on a de grands écrans et on adpate ensuite le site pour les autres résolutions)
 */
 
 //Ne pas mettre de code html avant cette ligne !
@@ -50,7 +52,7 @@ if($_SESSION['connected'] == "true"){
     <link rel="stylesheet" type="text/css" href="/src/home/css/home.css" />
     <link rel="stylesheet" type="text/css" href="/src/footer.css">
     <link rel="stylesheet" type="text/css" href="/src/home/css/home_simple_image_viewer.css" />
-    <link rel="stylesheet" type="text/css" href="/src/home/home_header.css" />
+    <link rel="stylesheet" type="text/css" href="/src/header/header.css" />
 
     <meta charset="utf-8"/>
 
@@ -59,6 +61,7 @@ if($_SESSION['connected'] == "true"){
     <script type="text/javascript" src="/src/framework_javascript/jquery.js"></script>
     <script type="text/javascript" src="/src/home/javascript/home.js"></script>
     <script type="text/javascript" src ="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/src/header/header.js"></script>
 
 </head>
 
@@ -75,7 +78,7 @@ if($_SESSION['connected'] == "true"){
     <div id="body_content"> <!-- Pour que le footer soit placer en bas de la page -->
 
         <!-- HEADER -->
-        <?php require "home_header.php"; ?>
+        <?php require "/home/programmpk/www/src/header/header.php"; ?>
 
         <section id="sec_1">
             <div id="welcome_t">

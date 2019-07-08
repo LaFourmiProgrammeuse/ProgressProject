@@ -40,7 +40,7 @@ section {
 	display: inline-flex;
 	justify-content: space-between;
 	width: 90%;
-	margin-top: 25px;
+	margin-top: 37px;
 	background-image: url("/images/backgrounds/home_i_background.svg");
 	background-repeat: no-repeat;
 	background-position: left 0px top -50px;
@@ -545,6 +545,9 @@ article {
 	width: 270px;
 }
 
+    /* MEDIA QUERIES */
+
+/* MQ FOR SMALLS RESOLUTIONS */
 /* On agrandis certains textes sur les textes des petites résolutions */
 @media screen and (max-width: 1024px){
 
@@ -610,11 +613,11 @@ article {
     }
 
     .contact{
-        width: 75%;
+        width: 85%;
     }
 
     .g_title_cnct h2{
-        width: 75%;
+        width: 85%;
     }
 
     #s_groupa_smallg{
@@ -683,6 +686,8 @@ article {
         display: flex;
     }
 }
+
+/* MQ FOR MEDIUMS RESOLUTIONS */
 
 /* TPE */
 #secret_link {

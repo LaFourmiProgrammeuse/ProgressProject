@@ -12,7 +12,8 @@ header .part_1 {
 	margin-left :  75px;
 	height: 100%;
 	align-items: center;
-    width: 110px;
+    width: 175px;
+    margin-top: 4px;
 }
 #h_groupa img {
 	width: 100%;
@@ -29,9 +30,16 @@ header .part_1 {
 	height: 100%;
 	align-items: center;
 	margin-left: 30px;
-	width: calc(100% - 290px);
+	width: 100%;
+    margin-top: 4px;
 }
+
 .nav_element {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vertical_menu .nav_element {
     margin-left: 20px;
 }
 .nav_element a {
@@ -72,7 +80,7 @@ header .part_1 {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row;
-    width: 380px;
+    width: 38.5%;
 }
 
 .vertical_menu{
@@ -113,7 +121,8 @@ header .part_1 {
     text-align: center;
     font-size: 3vw;
     font-family: "Karla",cursive;
-    margin-bottom: 8px
+    margin-bottom: 8px;
+    margin-top: 22px;
 }
 
 #h_groupc {
@@ -242,11 +251,11 @@ header .part_1 {
     }
 
     #h_groupa{
-        width: 260px;
+        width: 320px;
         position: relative;
         top: 10px;
         margin-left: 35px;
-        margin-top: 4px;
+        margin-top: 6px;
     }
 
     #h_groupc{
@@ -275,4 +284,19 @@ header .part_1 {
         display: flex;
     }
 
+}
+
+@media screen and (min-width: 1025px and max-width: 1379px){
+
+    .h_high_resolution{
+        width: 52%;
+    }
+
+    .nav_element a{
+        font-size: 1.6vw;
+    }
+
+    .identification a{
+        font-size: 1.6vw;
+    }
 }

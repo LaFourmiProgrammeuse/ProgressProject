@@ -28,7 +28,7 @@ catch(Exception $e){
 
     <link rel="stylesheet" type="text/css" href="/src/forum/css/forum.css" />
     <link rel="stylesheet" type="text/css" href="/src/footer.css" />
-    <link rel="stylesheet" type="text/css" href="/src/forum/forum_header.css" />
+    <link rel="stylesheet" type="text/css" href="/src/header/header.css" />
 
     <meta charset="utf-8" />
     <title>Forum</title>
@@ -36,6 +36,7 @@ catch(Exception $e){
     <script type="text/javascript" src="/src/framework_javascript/jquery.js"></script>
     <script type="text/javascript" src="/src/framework_javascript/ajax.js"></script>
     <script type="text/javascript" src="/src/forum/javascript/forum.js" ></script>
+    <script type="text/javascript" src="/src/header/header.js"></script>
 
 </head>
 
@@ -52,7 +53,7 @@ catch(Exception $e){
     <div id="body_content"> <!-- Pour que le footer soit placer en bas de la page -->
 
         <!-- HEADER -->
-        <?php require "forum_header.php"; ?>
+        <?php require "/home/programmpk/www/src/header/header.php"; ?>
 
         <section>
             <div id="forum_content">

@@ -1,6 +1,5 @@
 function clickForumDesc(forum){
 
-    console.log("2");
     console.log($(forum).find(".forum_name").text());
 
     var forum_name = $(forum).find(".forum_name").text();
@@ -81,7 +80,6 @@ $(document).ready(function(){
     // CLICK EVENT TOPIC DESC
     $(".topic_desc").click(function(){
 
-        console.log("1");
         console.log($(this).find(".topic_name").text());
 
         var topic_name = $(this).find(".forum_name").text();

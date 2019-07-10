@@ -286,17 +286,21 @@ header .part_1 {
 
 }
 
-@media screen and (min-width: 1025px and max-width: 1379px){
+@media screen and (min-width: 1025px) and (max-width: 1379px){
 
     .h_high_resolution{
         width: 52%;
     }
 
     .nav_element a{
-        font-size: 1.6vw;
+        font-size: 1.73vw;
     }
 
-    .identification a{
-        font-size: 1.6vw;
+    :nth-child(1).identification a{
+        font-size: 1.73vw;
+    }
+
+    :nth-child(2).identification a{
+        font-size: 1.73vw;
     }
 }

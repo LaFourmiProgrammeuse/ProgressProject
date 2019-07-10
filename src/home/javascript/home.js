@@ -4,11 +4,10 @@ var connected = false;
     /* Variable of the simple image viewer for the wallpaper */
 var siv1_index = 0;
 
-//Liste des images du siv
-var siv1_images = ["/content/pa_official_wallpaper_1.jpg", "/content/pa_official_wallpaper_2.jpg", "/content/pa_official_wallpaper_3.png"];
-
-//Nom du fichier sur le serveur à télécharger pour chaque image si clické
-var siv1_download_content_name = ["pa_official_wallpaper_1.jpg", "pa_official_wallpaper_2.jpg", "pa_official_wallpaper_3.png"];
+//Nom du fichier sur le serveur à télécharger (+sa résolution et son extension) pour chaque image si clické
+var siv1_download_content_name = ["pa_official_wallpaper_1", "pa_official_wallpaper_2", "pa_official_wallpaper_3"];
+var siv1_download_content_extension = ["jpg", "jpg", "png"];
+var siv1_download_content_resolution = ["1920-1080", "1920-1080", "1440-900"];
 
 //Taille minimal de la fenetre pour pouvoir afficher 3 images dans le siv
 var siv1_width_for_3_images = 845;
@@ -67,7 +66,7 @@ function load_siv1(){
           method: "POST",
           url: "/src/widgets/simple_image_viewer/simple_image_viewer.php",
           dataType: "html",
-          data: {index: siv1_index, images: siv1_images, download_content_name: siv1_download_content_name, n_images_to_show: n_images_to_show},
+          data: {index: siv1_index, download_content_name: siv1_download_content_name, download_content_extension: siv1_download_content_extension, download_content_resolution: siv1_download_content_resolution,  n_images_to_show: n_images_to_show},
           success: function(html_response){
               $("#siv_1").html(html_response);
               init_siv1_event();
@@ -106,12 +105,12 @@ function siv_next_index(index, images){
 }
 
 function siv1_left_arrow_clicked(){
-  siv1_index = siv_previous_index(siv1_index, siv1_images);
+  siv1_index = siv_previous_index(siv1_index, siv1_download_content_name);
   load_siv1();
 }
 
 function siv1_right_arrow_clicked(){
-  siv1_index = siv_next_index(siv1_index, siv1_images);
+  siv1_index = siv_next_index(siv1_index, siv1_download_content_name);
   load_siv1();
 }
 

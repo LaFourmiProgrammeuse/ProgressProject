@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
+
+header{
+	text-align: center;
+    margin-top: 50px;
+}
+
+header p{
+	font-size: 25px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+section{
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+}
+
+section img{
+	margin-right: auto;
+	margin-left: auto;
+	height: 400px;
+    width: 900px;
+}
+
+section a{
+	margin-top: 10px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.img_attributes_choices {
+    width: 450px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 8px;
+}
+
+.extension_container_title{
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.5vw;
+    margin-bottom: 6px;
+}
+
+.resolution_container_title {
+    text-align: center;
+    margin-top: 35px;
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.5vw;
+    margin-bottom: 6px;
+}
+
+.extension_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.resolution_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.extension {
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    height: 40px;
+    width: 70px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 12px;
+    background-color: #1abc9c;
+}
+
+.resolution {
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    height: 40px;
+    width: 90px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 12px;
+    background-color: #1abc9c;
+}
+
+.extension p {
+    margin: 0px;
+    margin-top: 10px;
+    color: white;
+}
+
+.resolution p {
+    margin: 0px;
+    margin-top: 10px;
+    color: white;
+}
+
+.download_link {
+    color: black;
+}

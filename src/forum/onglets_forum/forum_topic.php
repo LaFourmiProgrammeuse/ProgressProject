@@ -92,7 +92,7 @@ while($qrep = $qprepare->fetch(PDO::FETCH_NAMED)){
 				else{
 					$last_activity= intval($last_activity) . " seconds";
 				}
-				
+
 			}
 			else if(intval($last_activity) >= 60 && intval($last_activity) < 3600){
 
@@ -159,131 +159,166 @@ $forum_name = $qrep_5['name'];
 <head>
 	<link rel="stylesheet" type="text/css" href="/src/forum/onglets_forum/css/forum_topic.css" />
 </head>
-<div class="central_onglet_body">
 
-	<div class="forum_index">
-        <h3>You are here :</h3>
-        <span class="forum_index_path">Index/<a href="/src/forum/forum.php?forum_part=forums">Forums/</a><a href="/src/forum/forum.php?forum_part=forum&forum_id=<?php echo $forum_id ?>&topic_pinned_page=1&topic_no_pinned_page=1"><?php echo "Forum " . $forum_name ?></a>/<?php echo $topic_title; ?></span>
+<div id="central_onglet_body">
+
+    <div class="path">
+      <span class="index_path">INDEX > <a class="previous_page" href="/src/forum/forum.php?forum_part=forums">FORUMS</a> > LANGUAGES ><a class="previous_page" href="/src/forum/forum.php?forum_part=topics"> <?php echo $forum_name ?></a> > <span id="index_path_smll"> <?php echo $topic_title; ?></span>
     </div>
 
-	<article>
-		<div class="article">
+    <div id="top_nav">
+      <div id="tn_groupa">
 
-		<div class="presentation_topic">
-		<h3> <?php echo "Discussion : " . $topic_title; ?> </h3>
-		<h3> <?php echo $topic_subtitle; ?> </h3>
-		</div>
+        <div class="tn_groupa_elem"><a href="/forum.php?forum_part=forums">Choose a forum</a></div>
+        <div class="tn_groupa_elem"><a href="forum_stats.php">Stats</a></div>
+        <div class="tn_groupa_elem"><a href="forum_rules.php">Rules</a></div>
 
-		<?php 
-			foreach($list_posts as $post){
-				$author = $list_authors[$post['author']];
-		?>
-			<div class="post_frame_1">
+      </div>
 
-				<div class="post_header">
-					<div class="date_of_publication">
-						<?php echo $post['date_of_publication']; ?>
-					</div>
-					<div class="post_index">
-						<?php echo $post['post_index']; ?>
-					</div>
-				</div>
+      <div id="tn_groupb">
 
-				<div class="post_frame_2">
+        <form action="/search" id="searchthis" method="get">
+          <input id="search" name="tn_searchbar" type="text" placeholder="Type here to search" />
+          <button type=submit id="search-btn"><img id="search-icn" src=/images/icons/normal/search.svg></button>
+        </form>
 
-					<div class="user_information">
+      </div>
+    </div>
 
-						<h3 class="post_author"> <?php echo $post['author']; ?> </h3>
+  	<article id="posts">
 
-						<img class="user_img" src="/images/user_image/Default_profile_image.png"/>
+      <!-- En-tête du topic -->
+  		<div class="t_inf">
+  		  <div class="t_name">
+          <h1><?php echo $topic_title; ?></h1>
+        </div>
+  		</div>
 
-						<div class="user_forum_stats">
-							<h5>Last activity : <span class="last_activity_value"> <?php echo $author['last_activity']; ?> </span></h5>
-							<h5>Registered in : <span class="registered_date_value"> <?php echo $author['registered_date']; ?> </span></h5>
-							<h5>Messages : <span class="n_messages_value"> <?php echo $author['number_message_sent']; ?> </span></h5>
-							<h5>Liked : <span class="n_likes_value "> <?php echo $author['like_received']; ?> </span></h5>
-						</div>
-					</div>
+    		<?php
+    			foreach($list_posts as $post){
+    				$author = $list_authors[$post['author']];
+    		?>
 
-					<div class="post_frame_3">
+      <div class="p_part">
 
-						<!-- <div class="post_title">
-							<?php echo $post['post_title']; ?>
-						</div>
+        <div class="main_frame">
+          <div class="left_frame">
+    				<div class="user_inf">
 
-						<div class="separator"></div>-->
+    					<h3 class="post_author"> <?php echo $post['author']; ?> </h3>
+    					<img class="user_img" src="/images/user_image/Default_profile_image.png"/>
 
-						<div class="post_content">
-							<?php echo $post['post_content']; ?>
-						</div>
+    					<div class="user_forum_stats">
+    						<h5>Registered in : <span class="registered_date_value"> <?php echo $author['registered_date']; ?> </span></h5>
+    						<h5>Messages : <span class="n_messages_value"> <?php echo $author['number_message_sent']; ?> </span></h5>
+    						<h5>Liked : <span class="n_likes_value "> <?php echo $author['like_received']; ?> </span></h5>
+    					</div>
+    				</div>
+          </div>
 
-					</div>
-				</div>
+          <div class="right_frame">
+      			<div class="rf_groupa">
+              <div class="rank">
+                <h3 class="rank">| Rank |</h3>
+              </div>
 
-				<div class="post_footer">
+      				<div class="d_of_p">
+      					<?php echo $post['date_of_publication']; ?>
+      				</div>
+      			</div>
 
-						<div class="reaction">
-								<img class="like_button" src="/images/like.png" />
-								<span class="n_like"> <?php echo $post['n_like']; ?> </span>
-								<img class="dislike_button" src="/images/dislike.png" />
-								<span class="n_dislike"> <?php echo $post['n_dislike']; ?> </span>
-						</div>
-				</div>
+    			  <div class="rf_groupb">
+      				<!-- <div class="post_title">
+      					<?php echo $post['post_title']; ?>
+      				</div>
 
-			</div>
-		<?php } ?>
-		</div>
-		<div class="article">
-			<div id="part_reply">
+      				<div class="separator"></div>-->
 
-				<h1>Leave a post</h1>
+      				<div class="post_content">
+      					<?php echo $post['post_content']; ?>
+      				</div>
+    			  </div>
+          </div>
+        </div>
 
-				<form id="form_reply" action="/src/forum/php/send_post.php" method="post">
-					<div class="form_header">
-						<div class="text_formatting">
-							<div class="text_style">
-								<span class="label">Style</span>
-								<img src="/images/arrows/a_down.png" />
-							</div>
-							<div class="text_size">
-								<span class="label">Size</span>
-								<img src="/images/arrows/a_down.png" />
-							</div>
-							<div class="text_bold">
-								B
-							</div>
-							<div class="text_underline">
-								U
-							</div>
-							<div class="text_italic">
-								I
-							</div>
-							<div class="text_color">
+  			<div class="bottom_frame">
+          <div class="post_index">
+            <?php echo $post['post_index']; ?>
+          </div>
 
-							</div>
-						</div>
-						<div class="editor_type">
-						<h3>
-						<span>Editor </span>
-							-
-						<span> Markdown</span>
-						</h3>
-					</div>
-					</div>
-					<div class="form_content">
-						<textarea form="form_reply" name="post_content">
+  				<div class="rating">
+            <div class="like">
+    					<img class="like_button" src="/images/like.png" />
+    					<span class="n_like"> <?php echo $post['n_like']; ?> </span>
+            </div>
+            <div class="dislike">
+    					<img class="dislike_button" src="/images/dislike.png" />
+    					<span class="n_dislike"> <?php echo $post['n_dislike']; ?> </span>
+            </div>
+  				</div>
+  			</div>
 
-						</textarea>
-					</div>
-					<div class="form_footer">
-						<div class="send">
-							<input type="button" name="send" value="Send" class="send" />
-						</div>
-						<input type="text" name="post_topic" value=" <?php echo $_GET['topic_id']; ?> " style="display: none;"></input>
-					</div>
-				</form>
-			</div>
-		</div>
-	</article>
+  		<?php } ?>
+
+    </article>
+
+      <!-- Outil de rédaction de post -->
+    <article id="p_editor">
+  		<h1>Leave a post</h1>
+
+  		<form id="form_reply" action="/src/forum/php/send_post.php" method="post">
+
+  			<div id="form_header">
+  				<div class="text_formatting">
+  					<div class="text_style">
+  						<span class="label">Style</span>
+  						<img src="/images/arrows/a_down.png" />
+  					</div>
+
+  					<div class="text_size">
+  						<span class="label">Size</span>
+  						<img src="/images/arrows/a_down.png" />
+  					</div>
+
+  					<div class="text_bold">
+  						B
+  					</div>
+
+  					<div class="text_underline">
+  						U
+  					</div>
+
+  					<div class="text_italic">
+  						I
+  					</div>
+
+  					<div class="text_color">
+
+  					</div>
+  				</div>
+
+  				<div class="editor_type">
+  					<h3>
+    					<span>Editor </span>
+    						-
+    					<span> Markdown</span>
+  					</h3>
+  				</div>
+  			</div>
+
+  			<div class="form_content">
+  			  <textarea form="form_reply" name="post_content">
+
+  				</textarea>
+  			</div>
+
+  			<div class="form_footer">
+  				<div class="send">
+  					<input type="button" name="send" value="Send" class="send" />
+  				</div>
+  				<input type="text" name="post_topic" value=" <?php echo $_GET['topic_id']; ?> " style="display: none;"></input>
+  			</div>
+  		</form>
+    </article>
 
 </div>

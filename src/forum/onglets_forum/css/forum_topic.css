@@ -145,6 +145,7 @@ article {
 .left_frame {
   display: flex;
   flex-direction: column;
+  min-width: 25%;
   background-color: #f0f0f0;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -165,6 +166,9 @@ article {
 }
 .user_forum_stats {
   margin-top: 10px;
+}
+.registered_date_value, .n_messages_value, .n_likes_value {
+  margin: 0;
 }
 
 .right_frame {
@@ -194,16 +198,25 @@ article {
 }
 
 .bottom_frame {
-  display: inline-flex;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .rating {
   display: inline-flex;
+  align-items: center;
 }
-.like {
+.like_button, .dislike_button {
+  height: 20px;
+  width: 20px;
+}
+.like, .dislike {
   display: inline-flex;
+  align-items: center;
 }
 .dislike {
-  display: inline-flex;
+  margin-left: 10px;
 }
 
 #p_editor {
@@ -240,8 +253,11 @@ article {
   justify-content: space-between;
 }
 .text_formatting {
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  width: 35%;
 }
 .label {
 
@@ -271,7 +287,7 @@ article {
 }
 
 .form_content textarea {
-  resize: none;
+  resize: vertical;
   width: 100%;
   min-height: 200px;
   margin-top: 15px;

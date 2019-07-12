@@ -211,7 +211,7 @@ $forum_name = $qrep_5['name'];
     					<div class="user_forum_stats">
     						<h5>Registered in : <span class="registered_date_value"> <?php echo $author['registered_date']; ?> </span></h5>
     						<h5>Messages : <span class="n_messages_value"> <?php echo $author['number_message_sent']; ?> </span></h5>
-    						<h5>Liked : <span class="n_likes_value "> <?php echo $author['like_received']; ?> </span></h5>
+    						<h5>Liked : <span class="n_likes_value"> <?php echo $author['like_received']; ?> </span></h5>
     					</div>
     				</div>
           </div>

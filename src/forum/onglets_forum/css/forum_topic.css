@@ -129,12 +129,15 @@ article {
 }
 
 .p_part {
+  display: flex;
+  flex-direction: column;
   margin-top: 30px;
 }
 
 .main_frame {
   display: flex;
   flex-direction: row;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -143,15 +146,19 @@ article {
   display: flex;
   flex-direction: column;
   background-color: #f0f0f0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: 0.25px solid #e1e1e1;
 }
 .user_inf {
-  padding: 10px;
+  padding: 20px;
 }
 .post_author {
   margin: 0;
   text-align: center;
 }
 .user_img {
+  display: flex;
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -161,10 +168,29 @@ article {
 }
 
 .right_frame {
-
+  width: 100%;
+  background-color: #f6f6f6;
+  padding: 15px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-left: 0.25px solid #e1e1e1;
 }
 .rf_groupa {
   display: inline-flex;
+  margin-top: 5px;
+  align-items: center;
+}
+.rank {
+  margin: 0;
+}
+.d_of_p {
+  margin-left: 20px;
+}
+.rf_groupb {
+ margin-top: 10px;
+}
+.post_content {
+
 }
 
 .bottom_frame {
@@ -178,4 +204,85 @@ article {
 }
 .dislike {
   display: inline-flex;
+}
+
+#p_editor {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  border-top: 2px solid #d6d6d6;
+}
+
+#p_editor_inf {
+  margin-top: 12.5px;
+}
+#p_editor_inf h2 {
+
+}
+#warn_editusage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  margin-top: 12.5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#form_reply {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+#form_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.text_formatting {
+  display: inline-flex;
+  align-items: center;
+}
+.label {
+
+}
+.a_down {
+  margin-left: 15px;
+  width: 7.5px;
+}
+.text_style, .text_size {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.text_bold, .text_underline, .text_italic {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.form_content textarea {
+  resize: none;
+  width: 100%;
+  min-height: 200px;
+  margin-top: 15px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.form_footer {
+  display: flex;
+  justify-content: flex-end;
+}
+.send {
+  margin-top: 10px;
 }

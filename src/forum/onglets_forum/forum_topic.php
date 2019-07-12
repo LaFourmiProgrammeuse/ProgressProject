@@ -264,61 +264,68 @@ $forum_name = $qrep_5['name'];
 
       <!-- Outil de rédaction de post -->
     <article id="p_editor">
-  		<h1>Leave a post</h1>
+      <div id="p_editor_inf">
+  	     <h2>Leave a post</h2>
 
-  		<form id="form_reply" action="/src/forum/php/send_post.php" method="post">
+         <div id="warn_editusage">
+           <span id="warn_text">Answering old topics may be subject to sanctions</span>
+           <a id="rules_" href="#">Learn more...</a>
+         </div>
+       </div>
 
-  			<div id="form_header">
-  				<div class="text_formatting">
-  					<div class="text_style">
-  						<span class="label">Style</span>
-  						<img src="/images/arrows/a_down.png" />
-  					</div>
+       <form id="form_reply" action="/src/forum/php/send_post.php" method="post">
 
-  					<div class="text_size">
-  						<span class="label">Size</span>
-  						<img src="/images/arrows/a_down.png" />
-  					</div>
+         <div id="form_header">
+           <div class="text_formatting">
+             <div class="text_style">
+               <span class="label">Style</span>
+               <img class="a_down" src="/images/arrows/a_down.png" />
+             </div>
 
-  					<div class="text_bold">
-  						B
-  					</div>
+             <div class="text_size">
+               <span class="label">Size</span>
+               <img class="a_down" src="/images/arrows/a_down.png" />
+             </div>
 
-  					<div class="text_underline">
-  						U
-  					</div>
+             <div class="text_bold">
+               B
+             </div>
 
-  					<div class="text_italic">
-  						I
-  					</div>
+             <div class="text_underline">
+               U
+             </div>
 
-  					<div class="text_color">
+             <div class="text_italic">
+               I
+             </div>
 
-  					</div>
-  				</div>
+             <div class="text_color">
 
-  				<div class="editor_type">
-  					<h3>
-    					<span>Editor </span>
-    						-
-    					<span> Markdown</span>
-  					</h3>
-  				</div>
-  			</div>
+             </div>
+           </div>
 
-  			<div class="form_content">
-  			  <textarea form="form_reply" name="post_content">
+           <div class="editor_type">
+             <h3>
+               <span>Editor </span>
+                 -
+               <span> Markdown</span>
+             </h3>
+           </div>
+         </div>
 
-  				</textarea>
-  			</div>
+         <div class="form_content">
+           <textarea form="form_reply" name="post_content">
 
-  			<div class="form_footer">
-  				<div class="send">
-  					<input type="button" name="send" value="Send" class="send" />
-  				</div>
-  				<input type="text" name="post_topic" value=" <?php echo $_GET['topic_id']; ?> " style="display: none;"></input>
-  			</div>
-  		</form>
-    </article>
+           </textarea>
+         </div>
+
+         <div class="form_footer">
+           <div class="send">
+             <input type="button" name="send" value="Send" class="send" />
+           </div>
+           <input type="text" name="post_topic" value=" <?php echo $_GET['topic_id']; ?> " style="display: none;"></input>
+         </div>
+       </form>
+     </article>
 
 </div>

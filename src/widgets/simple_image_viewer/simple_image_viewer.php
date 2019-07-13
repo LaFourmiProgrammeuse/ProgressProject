@@ -27,7 +27,7 @@
     var_dump($download_content_w_resolution);
     var_dump($download_content_h_resolution);*/
 
-    echo "Index: " . $index;
+    //echo "Index: " . $index;
 
     if($index-1 >= 0){
       $img_1_index = ($index-1);

@@ -24,8 +24,16 @@ $forum_number_topics = $qrep[1];
 $list_topics = array();
 $list_pinned_topics = array();
 
-//On cherche le nombre de topics de chaque type (épinglé ou non)
-//On commence par chercher le nombre de topic non épinglé
+
+    //On cherche la categorie du topic
+    $qprepare = $bdd->prepare("SELECT forum_type FROM forums WHERE id=?");
+    $qprepare->execute(array($forum_id));
+
+    $forum_category = $qprepare->fetch()[0];
+    $forum_category = strtoupper($forum_category);
+
+    //On cherche le nombre de topics de chaque type (épinglé ou non)
+    //On commence par chercher le nombre de topic non épinglé
 
 
     //Récuperation du nombre de topic épinglé et non épinglé
@@ -187,7 +195,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
 <div id="central_onglet_body">
 
     <div class="path">
-        <span class="index_path">INDEX > <a id="previous_page" href="/src/forum/forum.php?forum_part=forums">FORUMS</a> > LANGUAGES ><span id="index_path_smll"> <?php echo $forum_name ?></span></span>
+        <span class="index_path">INDEX > <a id="previous_page" href="/forum.php?forum_part=forums">FORUMS</a> > <?php echo $forum_category; ?>> <span id="index_path_smll"> <?php echo $forum_name ?></span></span>
     </div>
 
     <div id="top_nav">
@@ -236,7 +244,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
             }
             else{
               foreach($list_pinned_topics as $topic_information){
-                echo "<a class='link_topic_desc' href=/src/forum/forum.php?forum_part=topic&topic_id=" . $topic_information['topic_id'] . ">";
+                echo "<a class='link_topic_desc' href=/forum.php?forum_part=topic&topic_id=" . $topic_information['topic_id'] . ">";
             ?>
                <div class="topic_desc">
                  <div class="topic_desc_groupa">
@@ -285,7 +293,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
             }
             else{
               foreach($list_topics as $topic_information){
-                echo "<a class='link_topic_desc' href=/src/forum/forum.php?forum_part=topic&topic_id=" . $topic_information['topic_id'] . ">";
+                echo "<a class='link_topic_desc' href=/forum.php?forum_part=topic&topic_id=" . $topic_information['topic_id'] . ">";
           ?>
 
           <div class="topic_desc">

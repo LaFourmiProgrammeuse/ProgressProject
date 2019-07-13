@@ -34,7 +34,7 @@ function readDataSession(xml_data){
 
         $("#disconnect_button").css("display", "block");
 
-        $(".username").html("<a href='/src/profile/profile.php'>"+ session_username+"</a>");
+        $(".username").html("<a href='/profile.php'>"+ session_username+"</a>");
         $("#h_userb").css("display", "block");
 
         if($(xml_data).find("animation_connection").text() == "true"){

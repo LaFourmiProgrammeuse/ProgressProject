@@ -302,3 +302,42 @@ article {
 .send {
   margin-top: 10px;
 }
+
+/* On change les tailles ou les marges de certains objets sur les petites résolutions */
+@media screen and (max-width: 1024px){
+
+    #tn_groupa{
+       font-size: 2.75vw;
+    }
+
+    article{
+        width: 85%;
+    }
+
+    .index_path {
+        font-size: 2.9vw;
+    }
+
+    #index_path_smll {
+        font-size: 2.75vw;
+    }
+
+    #central_onglet_body{
+        margin-top: 90px;
+    }
+
+    #search {
+        font-size: 2.3vw;
+        height: 40px;
+    }
+
+    #search-btn{
+        width: 40px;
+        height: 40px;
+    }
+
+    #tn_groupb {
+        margin-right: 35px;
+    }
+
+}

@@ -45,12 +45,14 @@ while($qrep = $qprepare->fetch(PDO::FETCH_NAMED)){
 
 
 		//On recupère les données de l'utilisateur
-		$qprepare_2 = $bdd->prepare('SELECT like_received, number_message_sent, registered_date, last_activity FROM users WHERE username=?');
+		$qprepare_2 = $bdd->prepare('SELECT like_received, number_message_sent, registered_date, last_activity, rank FROM users WHERE username=?');
 		$qprepare_2->execute(array($qrep['author']));
 
 		$qrep_2 = $qprepare_2->fetch(PDO::FETCH_NAMED);
 
-		// On formate les données de l'utilisateurs
+        $author_rank = $qrep_2['rank'];
+
+		// On formate certaines données de l'utilisateurs
 		$user_registered_date = $qrep_2['registered_date'];
 		$user_registered_date = new DateTime($user_registered_date);
 		$user_registered_date = $user_registered_date->format("F Y");
@@ -123,7 +125,13 @@ while($qrep = $qprepare->fetch(PDO::FETCH_NAMED)){
 			}
 		}
 
-		$author = ['like_received' => $like_received, 'number_message_sent' => $number_message_sent, 'registered_date' => $user_registered_date, 'last_activity' => $last_activity];
+        //On récupère le rang principal de l'auteur
+        $qprepare = $bdd->prepare("SELECT rank_name FROM ranks WHERE id=?");
+        $qprepare->execute(array($author_rank));
+
+        $author_rank_name = $qprepare->fetch()['rank_name'];
+
+		$author = ['like_received' => $like_received, 'number_message_sent' => $number_message_sent, 'registered_date' => $user_registered_date, 'last_activity' => $last_activity, 'rank_name' => $author_rank_name];
 
 		$list_authors[$qrep['author']] = $author;
 	}
@@ -139,7 +147,7 @@ $topic_title = $qrep_3['topic_title'];
 $topic_subtitle = $qrep_3['topic_subtitle'];
 $forum_id = $qrep_3['forum_id'];
 
-//On rajoute une vue dans la base de données pour ce topic
+//On incrémente le compteur de vue dans la base de données pour ce topic
 $n_views_topic = intval($qrep_3['number_views'])+1;
 
 $qprepare_4 = $bdd->prepare("UPDATE topics SET number_views=? WHERE id=?");
@@ -219,7 +227,7 @@ $forum_name = $qrep_5['name'];
           <div class="right_frame">
       			<div class="rf_groupa">
               <div class="rank">
-                <h3 class="rank">| Rank |</h3>
+                <h3 class="rank">| <?php echo $author['rank_name']; ?> |</h3>
               </div>
 
       				<div class="d_of_p">

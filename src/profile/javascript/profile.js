@@ -144,12 +144,12 @@ function showRegisteredDate(registered_date){
 function showUserRank(user_rank){
 
     //Rank fondateur
-    if(user_rank == '5'){
+    if(user_rank == '1'){
         $("#user_rank h3").text("Founder");
     }
 
     //Rank User lamda
-    else if(user_rank == "0"){
+    else if(user_rank == "4"){
         $("#user_rank h3").text("User");
     }
 }

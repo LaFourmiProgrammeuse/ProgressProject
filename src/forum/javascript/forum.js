@@ -24,6 +24,19 @@ function answerForumIdRequest(forum_id){
     document.location.href = ("/forum.php?forum_part=forum&forum_id="+forum_id+"&topic_no_pinned_page=1&topic_pinned_page=1");
 }
 
+function requestSessionData(){
+
+    $.ajax({
+        type: "GET",
+        url: "/src/php_for_ajax/session_control_for_javascript.php",
+        dataType: "xml",
+        success: function(xml){
+            readDataSession(xml);
+        }
+    });
+
+}
+
 function readDataSession(xml_data){
 
     connected = $(xml_data).find("connected").text();
@@ -52,21 +65,10 @@ function readDataSession(xml_data){
         $("#register_button").css("display", "block");
     }
 
+
+
     console.log(connected);
     console.log(session_username);
-
-}
-
-function requestSessionData(){
-
-    $.ajax({
-        type: "GET",
-        url: "/src/php_for_ajax/session_control_for_javascript.php",
-        dataType: "xml",
-        success: function(xml){
-            readDataSession(xml);
-        }
-    });
 
 }
 

@@ -2,8 +2,16 @@
 
 	require "/home/programmpk/www/src/php_for_all/session_control.php";
 
-    if($_POST['topic_title'] == "" || $_POST['topic_subtitle'] == "" || $_POST['first_post_content'] == "")
+    //On vérifie que l'on récupère toute les informations (pas de champ vide)
+    if($_POST['topic_title'] == "" || $_POST['topic_subtitle'] == "" || $_POST['first_post_content'] == "") {
+        header("Location: /forum.php");
         exit();
+    }
+
+    if($_SESSION['connected'] == "false"){
+        header("Location: /login.php");
+        exit();
+    }
 
 	$topic_title = $_POST['topic_title'];
 	$topic_subtitle = $_POST['topic_subtitle'];

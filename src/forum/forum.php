@@ -17,6 +17,14 @@ catch(Exception $e){
     die('Erreur : ' . $e->getMessage());
 }
 
+$username = $_SESSION['username'];
+
+$qprepare = $bdd->prepare("SELECT profile_image_name FROM users WHERE username=?");
+$qprepare->execute(array($username));
+
+$profile_image_name = $qprepare->fetch()["profile_image_name"];
+$profile_image_url = "/images/user_image/" . $profile_image_name;
+
 ?>
 
 <!DOCTYPE html>

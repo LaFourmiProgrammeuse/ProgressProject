@@ -271,6 +271,11 @@ $forum_name = $qrep_5['name'];
            <span id="warn_text">Answering old topics may be subject to sanctions</span>
            <a id="rules_" href="#">Learn more...</a>
          </div>
+
+         <div id="warn_editusage">
+           <span id="warn_text">You have to be connected to answer this topic</span>
+           <a id="rules_" href="/login.php">Connect...</a>
+         </div>
        </div>
 
        <form id="form_reply" action="/src/forum/php/send_post.php" method="post">
@@ -314,9 +319,7 @@ $forum_name = $qrep_5['name'];
          </div>
 
          <div class="form_content">
-           <textarea form="form_reply" name="post_content">
-
-           </textarea>
+           <textarea form="form_reply" name="post_content"></textarea>
          </div>
 
          <div class="form_footer">

@@ -1,9 +1,22 @@
 <?php
 
+    require "/home/programmpk/www/src/php_for_all/session_control.php";
+
+    //On vérifie que l'on récupère toute les informations (pas de champ vide)
+    if(!isset($_POST['post_content']) || !isset($_POST['post_topic'])){
+        header("Location: /forum.php");
+        exit();
+    }
+
+    if($_SESSION['connected'] == 'false'){
+        header("Location: /login.php");
+        exit();
+    }
+
 	$author = $_SESSION['username'];
 	$post_content = $_POST['post_content'];
 	$post_topic = $_POST['post_topic'];
-	$post_title = "";
+	$post_title = ""; //Récupéré ensuite dans la bdd
 
 
 	try{

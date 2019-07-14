@@ -1,3 +1,8 @@
+<?php
+    //On replace les '&' par des 'and' pour pouvoir mettre l'ensemble des arguments que reçois la page dans le paramètre redirection_path que recoit les pages login et register
+    $current_page_path = str_replace("&", "and", $_SERVER['REQUEST_URI']);
+?>
+
 <header>
     <div class="part_1">
     <div id="h_groupa">
@@ -16,9 +21,9 @@
 
     <div id="h_groupc">
         <div id="h_usera">
-            <div class="identification" id="login_button"><a href="/login.php"> <?php echo _("Log In"); ?> </a></div>
-            <div class="identification" id="register_button"><a href="/register.php"> <?php echo _("Sign Up"); ?> </a></div>
-            <div class="identification" id="disconnect_button"><a href="/src/php_for_all/disconnect.php"> <?php echo _("Log Out"); ?> </a></div>
+            <div class="identification" id="login_button"><a href='<?php echo "/login.php?redirection_path=" . $current_page_path; ?>'> <?php echo _("Log In"); ?> </a></div>
+            <div class="identification" id="register_button"><a href='<?php echo "/register.php?redirection_path=" . $current_page_path; ?>'> <?php echo _("Sign Up"); ?> </a></div>
+            <div class="identification" id="disconnect_button"><a href='<?php echo "/src/php_for_all/disconnect.php?redirection_path=" . $current_page_path; ?>'> <?php echo _("Log Out"); ?> </a></div>
 
         </div>
 

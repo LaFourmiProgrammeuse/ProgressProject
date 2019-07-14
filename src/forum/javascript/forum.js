@@ -1,3 +1,7 @@
+var user_connected = false;
+var username = "";
+
+//Redirige vers le forum clické
 function clickForumDesc(forum){
 
     console.log($(forum).find(".forum_name").text());
@@ -39,20 +43,20 @@ function requestSessionData(){
 
 function readDataSession(xml_data){
 
-    connected = $(xml_data).find("connected").text();
+    user_connected = $(xml_data).find("connected").text();
 
-    if(connected == "true"){
+    if(user_connected == "true"){
 
-        var session_username = $(xml_data).find("username").text();
+        username = $(xml_data).find("username").text();
 
         $("#disconnect_button").css("display", "block");
 
-        $(".username").html("<a href='/profile.php'>"+ session_username+"</a>");
+        $(".username").html("<a href='/profile.php'>"+username+"</a>");
         $("#h_userb").css("display", "block");
 
         if($(xml_data).find("animation_connection").text() == "true"){
 
-            $("#message_user p").text(session_username);
+            $("#message_user p").text(username);
 
             $("#reconnection").show();
             $("#reconnection").animate({right: '+=210'}, 2000);
@@ -67,8 +71,64 @@ function readDataSession(xml_data){
 
 
 
-    console.log(connected);
-    console.log(session_username);
+    //console.log(connected);
+    //console.log(username);
+
+}
+
+function postLikeButtonPressed(){
+
+    if(user_connected == "false"){
+        return;
+    }
+
+    //On envoie les informations néscessaires au serveur gérer l'evênement de l'appuie sur le bouton like
+    $.ajax({
+        url: "/src/forum/php/reactions.php",
+        cache: false,
+        data: {author: username, action_type: "like"},
+        error: function(){
+            console.log("Error: Like");
+        },
+        success: function(){
+
+        }
+    });
+}
+
+function postDislikButtonPressed(){
+
+    if(user_connected == "false"){
+        return;
+    }
+
+    $.ajax({
+        url: "/src/forum/php/reactions.php",
+        cache: false,
+        data: {author: username, action_type: "dislike"},
+        error: function(){
+            console.log("Error: Dislike");
+        },
+        success: function(){
+
+        }
+    });
+}
+
+//Fonctions appelés seulement après la réponse du serveur
+function likePost(post_index){
+
+}
+
+function unlikePost(post_index){
+
+}
+
+function dislikePost(post_index){
+
+}
+
+function undislikePost(post_index){
 
 }
 
@@ -178,4 +238,14 @@ $(document).ready(function(){
         $("#h_vertical_menu").css("display", "none");
     });
 
+
+        /* REACTIONS EVENTS */
+
+    $(".like").click(function(){
+        postLikeButtonPressed();
+    });
+
+    $(".dislike").click(function(){
+        postDislikButtonPressed();
+    });
 });

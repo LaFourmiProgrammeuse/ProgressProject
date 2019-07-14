@@ -71,7 +71,13 @@ $_SESSION['password'] = $password;
 
 $_SESSION['animation_connection'] = 'true';
 
-header('Location: /home.php');
+if($_SESSION["redirection_path_after_connection"] != ""){
+    header('Location: '. $_SESSION["redirection_path_after_connection"]);
+}
+else{
+    header('Location: /home.php');
+}
+
 
 }
 

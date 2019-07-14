@@ -16,5 +16,11 @@
 
     session_destroy();
 
-    header("Location: /home.php");
+
+    if($_GET['redirection_path'] != ""){
+        header(('Location: ' . str_replace("and", "&", $_GET['redirection_path'])));
+    }
+    else{
+        header('Location: /home.php');
+    }
  ?>

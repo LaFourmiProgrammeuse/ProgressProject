@@ -1,5 +1,21 @@
 var form_already_sent = false;
 
+
+function $_GET(param) {
+	var vars = {};
+	window.location.href.replace( location.hash, '' ).replace(
+		/[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+		function( m, key, value ) { // callback
+			vars[key] = value !== undefined ? value : '';
+		}
+	);
+
+	if ( param ) {
+		return vars[param] ? vars[param] : null;
+	}
+	return vars;
+}
+
         /* AJAX */
 
 var xhr = null;
@@ -73,7 +89,9 @@ function requestLoginCredentials(){
 
     xhr.open("POST", "/src/login/php/verif_login_credentials.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.send("username="+username+"&password="+password);
+    data = "username="+username+"&password="+password;
+
+    xhr.send(data);
 
 }
 

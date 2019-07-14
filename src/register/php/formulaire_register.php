@@ -29,7 +29,7 @@ if($username != "" || $password != "" || $email != ""){
     try{
 
         /* PART BDD REGISTRATION */
-        
+
         $bdd = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
 
     }
@@ -80,7 +80,11 @@ if($username != "" || $password != "" || $email != ""){
     mail("site.devnews@programming-ants.ovh", $topic, $message_body, $header);
 
 
-    header('Location: /home.php');
+    if($_SESSION["redirection_path_after_connection"] != ""){
+        header('Location: '. $_SESSION["redirection_path_after_connection"]);
+    }
+    else{
+        header('Location: /home.php');
 
 }
 ?>

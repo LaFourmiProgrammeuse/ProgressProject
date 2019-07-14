@@ -276,13 +276,13 @@ $forum_name = $qrep_5['name'];
   	     <h2>Leave a post</h2>
 
          <div id="warn_editusage">
-           <span id="warn_text">Answering old topics may be subject to sanctions</span>
-           <a id="rules_" href="#">Learn more...</a>
+           <span class="warn_text">Answering old topics may be subject to sanctions</span>
+           <a class="rules_reply" href="#">Learn more...</a>
          </div>
 
          <div id="warn_editusage">
-           <span id="warn_text">You have to be connected to answer this topic</span>
-           <a id="rules_" href="/login.php">Connect...</a>
+           <span class="warn_text">You have to be connected to answer this topic</span>
+           <a class="rules_reply" href="/login.php">Log In...</a>
          </div>
        </div>
 

@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600|Roboto:300,300i,400,400i,500,500i,700&display=swap');
+
 a {
   color: black;
 }
 
 a:hover {
-  color: #ff8d33;
+  color: ;
 }
 
 footer{
@@ -24,17 +26,19 @@ footer{
     position: relative;
     text-align: center;
     top: 10px;
-    font-size: 18px;
+    font-size: 1vw;
 }
 #footer_information_frame_2{
     display: flex;
     justify-content: space-around;
     width: 300px;
-    font-size: 0.9vw;
     position: relative;
     top: 18px;
     margin: auto;
     text-align: center;
+    font-family: 'Open sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.55vw;
 }
 
 #label_github{

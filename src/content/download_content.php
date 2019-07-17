@@ -51,6 +51,7 @@
 	<link rel="stylesheet" type="text/css" href="/src/content/download_content.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
+    <script type="text/javascript" src="/src/javascript_for_all/url_methods.js"></script>
     <script type="text/javascript" src="/src/framework_javascript/jquery.js"></script>
     <script type="text/javascript" src="/src/content/download_content.js"></script>
 

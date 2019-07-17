@@ -35,8 +35,8 @@ function readDataSession(xml_data){
      $("#register_button").css("display", "block");
  }
 
- console.log(connected);
- console.log(session_username);
+ //console.log(connected);
+ //console.log(session_username);
 
 }
 

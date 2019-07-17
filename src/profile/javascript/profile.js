@@ -119,11 +119,14 @@ function showUserInformation(data){
 
 function showTimeLastActivity(last_activity){
 
-    if(last_activity == '-1'){
+    /*if(last_activity == '-1'){
         $("#last_activity_value").text("no activity...");
     }else{
         $("#last_activity_value").text((last_activity+" secondes"));
-    }
+    }*/
+
+    //En attendant de réparer...
+    $("#last_activity_value").text("Soon...");
 }
 
 function showRegisteredDate(registered_date){

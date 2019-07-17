@@ -76,22 +76,36 @@ function readDataSession(xml_data){
 
 }
 
+function getPostIndex(dom){
+
+    var post_index = dom.parents(".bottom_frame").find(".post_index").text();
+    post_index = post_index.substring(1); //On enlève le # devant l'index
+
+    return post_index;
+}
+
 function postLikeButtonPressed(){
 
     if(user_connected == "false"){
         return;
     }
 
+    var topic_id = $_GET("topic_id");
+
+    //On récupère l'index du post pour l'identifier
+    var post_index = getPostIndex($(this));
+
     //On envoie les informations néscessaires au serveur gérer l'evênement de l'appuie sur le bouton like
     $.ajax({
         url: "/src/forum/php/reactions.php",
         cache: false,
-        data: {author: username, action_type: "like"},
+        method: "POST",
+        data: {author: username, action_type: "like", objet_type: "post", post_index: post_index, topic_id: topic_id},
         error: function(){
             console.log("Error: Like");
         },
-        success: function(){
-
+        success: function(data){
+            console.log(data);
         }
     });
 }
@@ -102,10 +116,16 @@ function postDislikButtonPressed(){
         return;
     }
 
+    var topic_id = $_GET("topic_id");
+
+    //On récupère l'index du post pour l'identifier
+    var post_index = getPostIndex($(this));
+
     $.ajax({
         url: "/src/forum/php/reactions.php",
         cache: false,
-        data: {author: username, action_type: "dislike"},
+        method: "POST",
+        data: {author: username, action_type: "dislike", objet_type: "post", post_index: post_index, topic_id: topic_id},
         error: function(){
             console.log("Error: Dislike");
         },
@@ -241,11 +261,6 @@ $(document).ready(function(){
 
         /* REACTIONS EVENTS */
 
-    $(".like").click(function(){
-        postLikeButtonPressed();
-    });
-
-    $(".dislike").click(function(){
-        postDislikButtonPressed();
-    });
+    $(".like").click(postLikeButtonPressed);
+    $(".dislike").click(postDislikButtonPressed);
 });

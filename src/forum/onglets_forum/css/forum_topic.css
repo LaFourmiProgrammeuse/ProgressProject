@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600|Roboto:300,300i,400,400i,500,500i,700&display=swap');
 
-/* Le bloc contenant la liste des sujets */
+/* Le bloc contenant la liste des messages */
 
 #central_onglet_body {
   margin-top: 40px;
@@ -116,12 +116,6 @@ article {
   margin-top: 45px;
 }
 
-.t_inf {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-}
 .t_name {
   font-size: 1.50vw;
   font-family: 'Roboto', sans-serif;
@@ -149,8 +143,6 @@ article {
   flex-direction: column;
   min-width: 25%;
   background-color: #f0f0f0;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
   border-right: 0.25px solid #e1e1e1;
 }
 .user_inf {
@@ -192,8 +184,6 @@ article {
   width: 100%;
   background-color: #f6f6f6;
   padding: 15px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
   border-left: 0.25px solid #e1e1e1;
 }
 .rf_groupa {
@@ -247,6 +237,8 @@ article {
 .dislike {
   margin-left: 10px;
 }
+
+/* Espace de rédaction */
 
 #p_editor {
   display: flex;

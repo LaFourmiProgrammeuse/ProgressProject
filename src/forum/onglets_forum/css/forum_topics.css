@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,500,600,800|Roboto:300,400,500');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600|Roboto:300,300i,400,400i,500,500i,700&display=swap');
 
 /* Le bloc contenant la liste des sujets */
 
@@ -15,21 +15,21 @@
 
 .index_path {
   margin-left: 50px;
-  font-size: 1.05vw;
+  font-size: 0.90vw;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   letter-spacing: 1.5px;
-  color: #454545;
+  color: ;
   padding-left: 10px;
-  border-left: 5px solid #313131;
+  border-left: 5px solid ;
 }
 #previous_page {
-  color: #454545;
+  color: ;
 }
 #index_path_smll {
   font-size: 0.90vw;
   font-weight: 400;
-  color: #969696;
+  color: ;
 }
 
 /* Barre de nav */
@@ -38,7 +38,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 17.5px;
+  margin-top: 15px;
   background-color: #f0f0f0;
 }
 #tn_groupa {
@@ -46,8 +46,9 @@
   flex-direction: row;
   margin-left: 75px;
   font-size: 1.20vw;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
+  letter-spacing: 1px;
 }
 .tn_groupa_elem {
   padding-left: 30px;
@@ -56,10 +57,10 @@
   padding-bottom: 20px;
 }
 .tn_groupa_elem a {
-  color: #4d4d4d;
+  color: ;
 }
 .tn_groupa_elem:hover a {
-  color: black;
+  color: ;
   transition: 0.2s;
 }
 .tn_groupa_elem:nth-child(2) {
@@ -70,7 +71,7 @@
 #tn_groupb {
   display: flex;
   flex-direction: row;
-  margin-right: 75px;
+  margin-right: 105px;
   align-items: center;
 }
 #searchthis {
@@ -87,9 +88,10 @@
   background-color: white;
 }
 #search::placeholder {
-  font-size: 1.05vw;
-  font-family: 'Roboto', sans-serif;
-  color: #6d6d6d;
+  font-size: 0.80vw;
+  font-family: 'Open Sans', sans-serif;
+  color: #b0b0b0;
+  font-weight: 300;
 }
 #search-btn {
   width: 30px;
@@ -108,7 +110,7 @@
 /* Liste des sujets */
 
 article {
-  width: 60%;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 45px;
@@ -121,108 +123,119 @@ article {
   align-items: baseline;
 }
 .f_name {
-  font-size: 1.65vw;
-  font-family: 'Montserrat', cursive;
+  font-size: 1.50vw;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
-  color: #313131;
-  letter-spacing: 2px;
-}
-.create_topic {
-
+  color: ;
+  letter-spacing: 1px;
 }
 .create_topic h3 {
-  font-size: 1.07vw;
-  font-family: 'Robot', sans-serif;
+  font-size: 0.875vw;
+  font-family: 'Open sans', sans-serif;
   font-weight: 400;
-  color: #696969;
+  color: ;
+}
+.create_topic a {
+  font-family: 'Open sans', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  color: ;
 }
 
-.f_part {
-  margin-top: 30px;
+.t_part {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
 }
 
 .topics_pinned {
-  margin-top: 15px;
   border-top: 1.5px solid #ececec;
   border-bottom: 1.5px solid #ececec;
 }
 .no_pinned_topic {
-  margin-top: 35px;
-  margin-bottom: 35px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   text-align: center;
-  font-size: 1.25vw;
-  font-family: 'Montserrat', cursive;;
-  font-weight: 300;
-  color: #565656;
+  font-size: 1.10vw;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: ;
 }
 
 .topics_lasted {
-  margin-top: 30px;
+  margin-top: 40px;
   border-top: 1.5px solid #ececec;
   border-bottom: 1.5px solid #ececec;
 }
-
 .no_topic{
-    margin-top: 35px;
-    margin-bottom: 35px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
-
 .no_topic p {
   text-align: center;
-  font-size: 1.25vw;
-  font-family: 'Montserrat', cursive;
-  font-weight: 300;
-  color: #565656;
+  font-size: 1.10vw;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: ;
 }
 .no_topic h4 {
   text-align: center;
-  font-size: 1.10vw;
-  font-family: 'Montserrat', cursive;
-  font-weight: 300;
-  color: #727272;
+  font-size: 0.875vw;
+  font-family: "Open sans", sans-serif;
+  font-weight: 400;
+  color: ;
 }
 .no_topic h4 a {
-  color: #a1a1a1;
+  font-weight: 300;
+  font-style: italic;
+  color: ;
 }
 
 
 /* Description du sujet */
+
 .topic_desc {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
   background-color: #f2f2f2;
   width: 100%;
   margin-top: 7.5px;
   margin-bottom: 7.5px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  border-radius: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 12.5px;
+  padding-bottom: 12.5px;
 }
 
 .topic_desc_groupa {
   display: flex;
   flex-direction: column;
-  margin-left: 25px;
-  width: 37%;
+  align-content: center;
 }
 .topic_title {
-  font-size: 1.40vw;
-  font-family: 'Montserrat', cursive;
-  font-weight: 600;
-  color: #222222;
+  font-size: 1.20vw;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: ;
 }
 .topic_author {
+  margin-left: 15px;
   margin-top: 5px;
-  font-size: 1vw;
-  font-family: 'Montserrat', cursive;
-  font-weight: 300;
-  color: #625f5f;
+  font-size: 0.75vw;
+  font-family: "Open sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: ;
 }
 .spec_ib {
-  color: #5a5a5a;
-  font-family: 'Montserrat', cursive;
-  font-weight: 500;
+  font-family: "Open sans", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  color: ;
 }
 
 .topic_desc_groupb {
@@ -255,7 +268,6 @@ article {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-right: 25px;
   margin-left: 6%;
 }
 .topic_last_post {

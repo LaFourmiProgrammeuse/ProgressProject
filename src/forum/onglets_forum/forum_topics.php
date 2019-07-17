@@ -230,7 +230,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
         </div>
       </div>
 
-      <div class="f_part">
+      <div class="t_part">
 
         <!-- Les sujets épinglés -->
         <div class="topics_pinned">

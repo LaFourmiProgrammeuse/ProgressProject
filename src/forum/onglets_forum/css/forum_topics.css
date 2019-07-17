@@ -294,6 +294,8 @@ article {
   align-items: center;
   justify-content: space-between;
   width: 15%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .page_selector a {

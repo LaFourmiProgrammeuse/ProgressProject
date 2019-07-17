@@ -35,33 +35,28 @@ header .part_1 {
 	width: 100%;
   margin-top: 4px;
 }
-
 .nav_element {
   margin-left: auto;
   margin-right: auto;
 }
-
 .vertical_menu .nav_element {
   margin-left: 20px;
 }
 .nav_element a {
 	color: ;
 	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
-	font-size: 1.10vw;
+	font-weight: 300;
+	font-size: 1vw;
 	letter-spacing: 1.25px;
 }
-
 .nav_element_login {
   margin-left: auto;
   margin-right: auto;
 }
-
 .nav_element_register {
   margin-left: auto;
   margin-right: auto;
 }
-
 .nav_element_logs {
   margin-left: auto;
   margin-right: auto;
@@ -71,7 +66,6 @@ header .part_1 {
 .h_small_resolution{
 	display: none;
 }
-
 #small_resolution_menu_icon{
 	height: 45px;
 	width: 45px;
@@ -102,7 +96,6 @@ header .part_1 {
   background-color: white;
   text-align: center;
 }
-
 #h_vertical_menu .nav_element{
 	width: 250px;
 }
@@ -110,7 +103,6 @@ header .part_1 {
 	color: black;
   font-size: 4vw;
 }
-
 #h_vertical_menu .separator {
   width: 200px;
   border: 1px grey solid;
@@ -119,7 +111,6 @@ header .part_1 {
   margin-bottom: 8px;
   margin-top: 16px;
 }
-
 .menu_title {
   text-align: center;
   font-size: 3vw;
@@ -137,39 +128,37 @@ header .part_1 {
 	margin-right: 75px;
 	align-items: center;
 }
+.identification a {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1vw;
+	letter-spacing: 1px;
+}
+.identification:nth-child(1) a {
+	font-weight: 300;
+}
+.identification:nth-child(2) a {
+	font-weight: 500;
+	color: white;
+}
 .identification:nth-child(2) {
 	margin-left: 20px;
-	background-color: #ffc25f;
-	padding-top: 7px;
-	padding-bottom: 7px;
-	padding-left: 27.5px;
-	padding-right: 27.5px;
+	background-color: #45a6ee;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
 	border-radius: 5px;
 }
+
 .small_resolution.identification:nth-child(2) {
 	margin-left: 0px;
 }
-
-.identification:nth-child(2) a {
-	font-weight: 500;
-	font-size: 1.10vw;;
-	color: white;
-	letter-spacing: 1px;
-}
-.identification a {
-	font-family: 'Roboto', sans-serif;
-}
-.identification:nth-child(1) a {
-	font-size: 1.10vw;
-}
-
 #h_usera {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row;
 	align-items: center;
 }
-
 .small_resolution#h_usera{
     display: block;
     text-align: center;
@@ -221,7 +210,7 @@ header .part_1 {
 }
 #disconnect_button {
   display: none;
-	background-color: #ffc25f;
+	background-color: #4eabf0;
 	padding-top: 7px;
 	padding-bottom: 7px;
 	padding-left: 27.5px;

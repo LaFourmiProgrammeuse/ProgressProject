@@ -175,7 +175,7 @@ while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
 
         <!-- Langages informatiques -->
         <div class="f_category" id="f_languages">
-          <h1 class="category_title">LANGUAGES</h1>
+          <h1 class="category_title">> LANGUAGES</h1>
 
           <div class="f_list">
           <?php
@@ -209,7 +209,7 @@ while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
 
         <!-- Systèmes d'exploitation -->
         <div class="f_category" id="f_systems">
-          <h1 class="category_title">OPERATING SYSTEMS</h1>
+          <h1 class="category_title">> OPERATING SYSTEMS</h1>
 
           <div class="f_list">
           <?php
@@ -243,7 +243,7 @@ while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
 
         <!-- Logiciels -->
         <div class="f_category" id="f_softwares">
-          <h1 class="category_title">SOFTWARES</h1>
+          <h1 class="category_title">> SOFTWARES</h1>
 
           <div class="f_list">
           <?php

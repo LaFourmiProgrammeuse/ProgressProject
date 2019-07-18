@@ -153,12 +153,13 @@ $n_views_topic = intval($qrep_3['number_views'])+1;
 $qprepare_4 = $bdd->prepare("UPDATE topics SET number_views=? WHERE id=?");
 $qprepare_4->execute(array($n_views_topic, $topic_id));
 
-//On récupère le nom du forum
-$qprepare_5 = $bdd->prepare("SELECT name FROM forums WHERE id=?");
+//On récupère le nom et la catégorie du forum
+$qprepare_5 = $bdd->prepare("SELECT name, forum_type FROM forums WHERE id=?");
 $qprepare_5->execute(array($forum_id));
 
 $qrep_5 = $qprepare_5->fetch(PDO::FETCH_NAMED);
 $forum_name = $qrep_5['name'];
+$forum_category = strtoupper($qrep_5['forum_type']);
 
 //var_dump($list_posts);
 //var_dump($list_authors);

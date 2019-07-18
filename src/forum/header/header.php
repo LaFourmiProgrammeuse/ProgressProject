@@ -5,11 +5,11 @@
 <div class="path">
 
     <?php //En fonction de la page du forum demandée on a pas le même chemin (normal)
-    if($_GET["forum_part"] == "forums"){ ?>
-        <span class="index_path">INDEX > <span id="index_path_smll">Forums</span></span>
-    <?php } else if($_GET["forum_part"] == "forum"){ ?>
-        <span class="index_path">INDEX > <a class="previous_page" href="/src/forum/forum.php?forum_part=forums">FORUMS</a> > LANGUAGES ><a class="previous_page" href="/src/forum/forum.php?forum_part=topics"> <?php echo $forum_name ?></a> > <span id="index_path_smll"> <?php echo $topic_title; ?></span>
+    if($_GET["forum_part"] == "forums" || !isset($_GET["forum_part"])){ ?>
+        <span class="index_path">INDEX > <span id="index_path_smll">Forums</span> </span>
     <?php } else if($_GET["forum_part"] == "topic"){ ?>
+        <span class="index_path">INDEX > <a class="previous_page" href="/src/forum/forum.php?forum_part=forums">FORUMS</a> > LANGUAGES ><a class="previous_page" href="/src/forum/forum.php?forum_part=topics"> <?php echo $forum_name ?></a> > <span id="index_path_smll"> <?php echo $topic_title; ?> </span></span>
+    <?php } else if($_GET["forum_part"] == "forum"){ ?>
         <span class="index_path">INDEX > <a id="previous_page" href="/forum.php?forum_part=forums">FORUMS</a> > <?php echo $forum_category; ?>> <span id="index_path_smll"> <?php echo $forum_name ?></span></span>
     <?php } ?>
 

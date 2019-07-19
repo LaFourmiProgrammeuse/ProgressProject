@@ -7,6 +7,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Mandali&display=swap" rel="stylesheet">
 </head>
+
 <div class="central_onglet_body">
 
 	<article>

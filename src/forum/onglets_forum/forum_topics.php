@@ -194,28 +194,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
 
 <div id="central_onglet_body">
 
-    <div class="path">
-        <span class="index_path">INDEX > <a id="previous_page" href="/forum.php?forum_part=forums">FORUMS</a> > <?php echo $forum_category; ?>> <span id="index_path_smll"> <?php echo $forum_name ?></span></span>
-    </div>
-
-    <div id="top_nav">
-      <div id="tn_groupa">
-
-        <div class="tn_groupa_elem"><a href="/forum.php?forum_part=forums">Choose a forum</a></div>
-        <div class="tn_groupa_elem"><a href="forum_stats.php">Stats</a></div>
-        <div class="tn_groupa_elem"><a href="forum_rules.php">Rules</a></div>
-
-      </div>
-
-      <div id="tn_groupb">
-
-        <form action="/search" id="searchthis" method="get">
-          <input id="search" name="tn_searchbar" type="text" placeholder="Type here to search" />
-          <button type=submit id="search-btn"><img id="search-icn" src=/images/icons/normal/search.svg></button>
-        </form>
-
-      </div>
-    </div>
+    <?php require "/home/programmpk/www/src/forum/header/header.php"; ?>
 
     <article>
 

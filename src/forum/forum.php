@@ -45,6 +45,7 @@ $profile_image_url = "/images/user_image/" . $profile_image_name;
     <script type="text/javascript" src="/src/framework_javascript/ajax.js"></script>
     <script type="text/javascript" src="/src/forum/javascript/forum.js" ></script>
     <script type="text/javascript" src="/src/header/header.js"></script>
+    <script type="text/javascript" src="/src/javascript_for_all/url_methods.js"></script>
 
 </head>
 
@@ -110,7 +111,7 @@ $profile_image_url = "/images/user_image/" . $profile_image_name;
     </div>
 
 <?php
-require "../footer.php";
+    require "../footer.php";
 ?>
 
 </body>

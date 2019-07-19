@@ -113,97 +113,46 @@ if($_SESSION['connected'] == "true"){
   </div>
 
   <article>
-    <div id="s_groupa">
-      <div class="g_title_prts">
-        <h2>The projects</h2>
-      </div>
+    <div id="h_groupa">
+      <h2>Projects</h2>
 
-      <div id="s_groupa_con">
-        <div class="a2 a2_solveit high_resolution">
-          <div class="element_title">
-            <h3>Solve it</h3>
-          </div>
+      <h3>PA - Programming Ants</h3>
 
-          <div class="element_text">
-            <p>It is our main project on <b>Programming Ants</b>. It's goal is to <b>help programmers</b> to find what is wrong with their code when they
-              meet <b>errors or bugs</b>. Me and my friend didn't start this project yet, but we've got many ideas to get a nice final result.
-            </p>
-          </div>
-        </div>
+      <p><span class="semi_bold">Programming Ants</span> is a project we started to push our limits in programmation. For the moment, our website is
+        <span class="semi_bold">very limited in content</span>. Also, we are only <span class="semi_bold">two persons behind this project</span>, and it's difficult to
+        work fast, mostly when we have to solve <span class="semi_bold">bugs and mistakes</span>. But time passes, and the website is getting built slowly !
+      </p>
 
-        <div id="s_groupa_smallg">
-          <div class="a1">
-            <div class="element_text">
-              <p><span class="semi_bold">Programming Ants</span> is a project we started to push our limits in programmation. For the moment, our website is
-                <span class="semi_bold">very limited in content</span>. Also, we are only <span class="semi_bold">two persons behind this project</span>, and it's difficult to
-                work fast, mostly when we have to solve <span class="semi_bold">bugs and mistakes</span>. But time passes, and the website is getting built slowly !
-              </p>
-            </div>
-          </div>
+      <h3>Forum</h3>
 
-          <div class="g_title_sprt">
-            <h2>Support us !</h2>
-          </div>
+      <p>It is a place to <span class="semi_bold">share your opinion or get some help from the community</span>. This is the first thing we've made after having a working
+        website and we're pretty proud of it. The design is <span class="semi_bold">not the final one</span>, and there are still <span class="semi_bold">several bugs</span>.
+      </p>
 
-          <!-- Solution temporaire pour les 2 blocs a2 qui sont déplacés dans la balise s_group_a_smallg pour les petites résolutions -->
+      <h3>Solve it</h3>
 
-          <div class="a2 a2_solveit small_resolution">
-            <div class="element_title">
-              <h3>Solve it</h3>
-            </div>
-            <div class="element_text">
-              <p>It is our main project on <b>Programming Ants</b>. It's goal is to <b>help programmers</b> to find what is wrong with their code when they
-                meet <b>errors or bugs</b>. Me and my friend didn't start this project yet, but we've got many ideas to get a nice final result.
-              </p>
-            </div>
-          </div>
-
-          <div class="a2 a2_forum small_resolution">
-            <div class="element_title">
-              <h3>Forum</h3>
-            </div>
-
-            <div class="element_text">
-              <p>It is a place to <span class="semi_bold">share your opinion or get some help from the community</span>. This is the first thing we've made after having a working
-                website and we're pretty proud of it. The design is <span class="semi_bold">not the final one</span>, and there are still <span class="semi_bold">several bugs</span>.
-              </p>
-            </div>
-          </div>
-
-          <div class="support">
-            <div class="element_text">
-              <p>You can download our wallpapers and share them to your friends to support us !
-              <br>
-              <br>
-                You can also follow our socials networks as <i>Instagram</i>. We regularly publish things related to the advancement of our website.
-              </p>
-
-              <div class="social_net">
-                <img src="/images/icons/articles/instagram.png" />
-                <a href="https://www.instagram.com/programming_ants/">@Programming Ants</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="a2 a2_forum high_resolution">
-          <div class="element_title">
-            <h3>Forum</h3>
-          </div>
-
-          <div class="element_text">
-            <p>It is a place to <span class="semi_bold">share your opinion or get some help from the community</span>. This is the first thing we've made after having a working
-              website and we're pretty proud of it. The design is <span class="semi_bold">not the final one</span>, and there are still <span class="semi_bold">several bugs</span>.
-            </p>
-          </div>
-        </div>
-      </div>
+      <p>It is our main project on <b>Programming Ants</b>. It's goal is to <b>help programmers</b> to find what is wrong with their code when they
+        meet <b>errors or bugs</b>. Me and my friend didn't start this project yet, but we've got many ideas to get a nice final result.
+      </p>
     </div>
 
-    <div id="s_groupb">
-      <div class="g_title_wprs">
-        <h2>Wallpapers</h2>
-      </div>
+    <div id="h_groupb">
+      <h2>Support us !</h2>
+
+      <p>You can download our wallpapers and share them to your friends to support us !
+      <br>
+      <br>
+        You can also follow our socials networks as <i>Instagram</i>. We regularly publish things related to the advancement of our website.
+      </p>
+
+      <img src="/images/icons/articles/instagram.png" />
+      <a href="https://www.instagram.com/programming_ants/">@Programming Ants</a>
+    </div>
+
+    <!-- Slider -->
+
+    <div id="h_groupc">
+      <h2>Wallpapers</h2>
 
       <div class="article_wallpapers_pa">
         <div class="element_text">

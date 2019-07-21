@@ -159,6 +159,7 @@ header .part_1 {
 	justify-content: space-between;
 	flex-direction: row;
 	align-items: center;
+    margin-top: 5px;
 }
 .small_resolution#h_usera{
     display: block;
@@ -178,6 +179,9 @@ header .part_1 {
 
 #register_button {
   display: none;
+}
+
+.small_resolution #register_button {
     margin-top: 5px;
 }
 
@@ -264,6 +268,10 @@ header .part_1 {
 
     .h_high_resolution {
         display: none;
+    }
+
+    header {
+        height: 93px;
     }
 }
 

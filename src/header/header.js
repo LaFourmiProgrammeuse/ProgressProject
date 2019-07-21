@@ -1,5 +1,5 @@
 var session_username = "";
-var connected = false;
+var user_connected = "false";
 
 var small_resolution_mode = false;
 var small_resolution_menu_opened = false;
@@ -9,9 +9,11 @@ var small_resolution_menu_opened = false;
 
 function readDataSession(xml_data){
 
- connected = $(xml_data).find("connected").text();
+    console.log(user_connected);
 
- if(connected == "true"){
+ user_connected = $(xml_data).find("connected").text(); console.log(user_connected);
+
+ if(user_connected == "true"){
 
      session_username = $(xml_data).find("username").text();
 
@@ -35,21 +37,24 @@ function readDataSession(xml_data){
      $("#register_button").css("display", "block");
  }
 
- //console.log(connected);
- //console.log(session_username);
+ console.log(user_connected);
+ console.log(session_username);
 
 }
 
 function requestSessionData(){
 
- $.ajax({
-         type: "GET",
-         url: "/src/php_for_ajax/session_control_for_javascript.php",
-         dataType: "xml",
-         success: function(xml){
-             readDataSession(xml);
-         }
- });
+    $.ajax({
+            type: "GET",
+            url: "/src/php_for_ajax/session_control_for_javascript.php",
+            dataType: "xml",
+            success: function(xml){
+                readDataSession(xml); console.log(xml);
+            },
+            error: function(){
+                alert("error");
+            }
+    });
 
 }
 

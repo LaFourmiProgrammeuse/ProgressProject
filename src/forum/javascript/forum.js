@@ -1,5 +1,4 @@
-var user_connected = false;
-var username = "";
+// *** Les variables sessions javascript sont définis dans le header.js ***
 
 //Redirige vers le forum clické
 function clickForumDesc(forum){
@@ -14,7 +13,7 @@ function clickForumDesc(forum){
         data: {forum_name: forum_name},
         method: "POST",
         success: function(data){
-            answerForumIdRequest(data);
+            redirectToForumClicked(data);
         },
         error: function(){
             alert("error");
@@ -23,60 +22,12 @@ function clickForumDesc(forum){
     });
 }
 
-function answerForumIdRequest(forum_id){
+function redirectToForumClicked(forum_id){
 
     document.location.href = ("/forum.php?forum_part=forum&forum_id="+forum_id+"&topic_no_pinned_page=1&topic_pinned_page=1");
 }
 
-function requestSessionData(){
-
-    $.ajax({
-        type: "GET",
-        url: "/src/php_for_ajax/session_control_for_javascript.php",
-        dataType: "xml",
-        success: function(xml){
-            readDataSession(xml);
-        }
-    });
-
-}
-
-function readDataSession(xml_data){
-
-    user_connected = $(xml_data).find("connected").text();
-
-    if(user_connected == "true"){
-
-        username = $(xml_data).find("username").text();
-
-        $("#disconnect_button").css("display", "block");
-
-        $(".username").html("<a href='/profile.php'>"+username+"</a>");
-        $("#h_userb").css("display", "block");
-
-        if($(xml_data).find("animation_connection").text() == "true"){
-
-            $("#message_user p").text(username);
-
-            $("#reconnection").show();
-            $("#reconnection").animate({right: '+=210'}, 2000);
-            setTimeout(function(){hideMessageConnection()}, 4000);
-        }
-
-    }else{
-
-        $("#login_button").css("display", "block");
-        $("#register_button").css("display", "block");
-    }
-
-
-
-    //console.log(connected);
-    //console.log(username);
-
-}
-
-function getPostIndex(dom){
+function getPostIndexFromReactionsButtons(dom){ //A partir
 
     var post_index = dom.parents(".bottom_frame").find(".post_index").text();
     post_index = post_index.substring(1); //On enlève le # devant l'index
@@ -84,72 +35,75 @@ function getPostIndex(dom){
     return post_index;
 }
 
-function postLikeButtonPressed(){
+function getPostId(dom){
+
+    var post_id = dom.parents(".p_part").attr("id");
+    post_id = post_id.substr(5);
+
+    return post_id;
+}
+
+function postLikeButtonPressed(){ console.log(user_connected);
 
     if(user_connected == "false"){
         return;
     }
 
-    var topic_id = $_GET("topic_id");
-
-    //On récupère l'index du post pour l'identifier
-    var post_index = getPostIndex($(this));
+    //On récupère l'id du post pour l'identifier
+    var post_id = getPostId($(this));
 
     //On envoie les informations néscessaires au serveur gérer l'evênement de l'appuie sur le bouton like
     $.ajax({
         url: "/src/forum/php/reactions.php",
         cache: false,
         method: "POST",
-        data: {author: username, action_type: "like", objet_type: "post", post_index: post_index, topic_id: topic_id},
+        data: {author: session_username, action_type: "like", object_type: "post", post_id: post_id},
         error: function(){
             console.log("Error: Like");
         },
         success: function(data){
             console.log(data);
+            updateGraphicalsPostReactions(data, post_id);
         }
     });
 }
 
-function postDislikButtonPressed(){
+function postDislikeButtonPressed(){
 
     if(user_connected == "false"){
         return;
     }
 
-    var topic_id = $_GET("topic_id");
-
-    //On récupère l'index du post pour l'identifier
-    var post_index = getPostIndex($(this));
+    //On récupère l'id du post pour l'identifier
+    var post_id = getPostId($(this));
 
     $.ajax({
         url: "/src/forum/php/reactions.php",
         cache: false,
         method: "POST",
-        data: {author: username, action_type: "dislike", objet_type: "post", post_index: post_index, topic_id: topic_id},
+        data: {author: session_username, action_type: "dislike", object_type: "post", post_id: post_id},
         error: function(){
             console.log("Error: Dislike");
         },
-        success: function(){
-
+        success: function(data){
+            console.log(data);
+            updateGraphicalsPostReactions(data, post_id);
         }
     });
 }
 
-//Fonctions appelés seulement après la réponse du serveur
-function likePost(post_index){
+//Fonction appelée seulement après la réponse du serveur
+function updateGraphicalsPostReactions(data, post_id){
 
-}
+    var post_id_str = "post-" + post_id;
+    var n_like_display_identifier_path = "#" + post_id_str + " .n_like";
+    var n_dislike_display_identifier_path = "#" + post_id_str + " .n_dislike";
 
-function unlikePost(post_index){
+    var n_like = $(data).find("n_like").text();
+    var n_dislike = $(data).find("n_dislike").text();
 
-}
-
-function dislikePost(post_index){
-
-}
-
-function undislikePost(post_index){
-
+    $(n_like_display_identifier_path).text(n_like);
+    $(n_dislike_display_identifier_path).text(n_dislike);
 }
 
 $(document).ready(function(){
@@ -157,7 +111,7 @@ $(document).ready(function(){
     $("#account").css("margin-left", "20px");
 
     //On recupère les données de l'utilisateur si il est connecté
-    requestSessionData();
+    //requestSessionData();
 
     // CLICK EVENT TOPIC DESC
     $(".topic_desc").click(function(){
@@ -165,13 +119,11 @@ $(document).ready(function(){
         console.log($(this).find(".topic_name").text());
 
         var topic_name = $(this).find(".forum_name").text();
-
     });
 
         /* CLICK EVENT FORUM DESCRIPTION */
 
     $(".forum_desc").click(function(){
-
         clickForumDesc(this);
     });
 
@@ -262,5 +214,5 @@ $(document).ready(function(){
         /* REACTIONS EVENTS */
 
     $(".like").click(postLikeButtonPressed);
-    $(".dislike").click(postDislikButtonPressed);
+    $(".dislike").click(postDislikeButtonPressed);
 });

@@ -17,7 +17,7 @@ $n_posts = 0;
 
 
 //On récupère les posts dans la bdd
-$qprepare = $bdd->prepare("SELECT post_index, post_content, post_title, author, date_of_publication, n_like, n_dislike FROM posts WHERE topic=? ORDER BY post_index");
+$qprepare = $bdd->prepare("SELECT id, post_index, post_content, post_title, author, date_of_publication, n_like, n_dislike FROM posts WHERE topic=? ORDER BY post_index");
 $qprepare->execute(array(intval($topic_id)));
 
 while($qrep = $qprepare->fetch(PDO::FETCH_NAMED)){
@@ -36,7 +36,8 @@ while($qrep = $qprepare->fetch(PDO::FETCH_NAMED)){
 
 	$date_of_publication = $date_of_publication_ymd . ", at " . $date_of_publication_hms;
 
-	array_push($list_posts, ['post_index' => $post_index, 'post_content' => $qrep['post_content'], 'author' => $qrep['author'], 'date_of_publication' => $date_of_publication, 'n_like' => $qrep['n_like'], 'n_dislike' => $qrep['n_dislike']]);
+    //On met les données de chaque post dans un tableau
+	array_push($list_posts, ['post_id' => $qrep['id'], 'post_index' => $post_index, 'post_content' => $qrep['post_content'], 'author' => $qrep['author'], 'date_of_publication' => $date_of_publication, 'n_like' => $qrep['n_like'], 'n_dislike' => $qrep['n_dislike']]);
 
 
 
@@ -131,6 +132,7 @@ while($qrep = $qprepare->fetch(PDO::FETCH_NAMED)){
 
         $author_rank_name = $qprepare->fetch()['rank_name'];
 
+        //On met les données de l'auteur du post dans un tableau
 		$author = ['like_received' => $like_received, 'number_message_sent' => $number_message_sent, 'registered_date' => $user_registered_date, 'last_activity' => $last_activity, 'rank_name' => $author_rank_name];
 
 		$list_authors[$qrep['author']] = $author;
@@ -183,11 +185,12 @@ $forum_category = strtoupper($qrep_5['forum_type']);
   		</div>
 
     		<?php
+                //Boucle qui va générer tout les posts
     			foreach($list_posts as $post){
     				$author = $list_authors[$post['author']];
     		?>
 
-      <div class="p_part">
+      <div class="p_part" id="<?php echo 'post-' . $post['post_id']; ?>">
 
         <div class="main_frame">
           <div class="left_frame">

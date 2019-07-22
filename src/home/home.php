@@ -94,10 +94,8 @@ if($_SESSION['connected'] == "true"){
   <div id="anchor_nav">
     <div id="tn_groupa">
 
-      <div class="tn_groupa_elem"><a href="#">PA</a></div>
-      <div class="tn_groupa_elem"><a href="forum_stats.php">Forum</a></div>
-      <div class="tn_groupa_elem"><a href="forum_rules.php">Solvit</a></div>
-      <div class="tn_groupa_elem"><a href="forum_rules.php">Support</a></div>
+      <div class="tn_groupa_elem"><a href="#">Timeline</a></div>
+      <div class="tn_groupa_elem"><a href="forum_stats.php">Support</a></div>
       <div class="tn_groupa_elem"><a href="forum_rules.php">Wallpapers</a></div>
 
     </div>

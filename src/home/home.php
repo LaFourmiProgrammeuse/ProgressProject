@@ -114,45 +114,71 @@ if($_SESSION['connected'] == "true"){
 
   <article>
     <div id="h_groupa">
-      <h2>Projects</h2>
+      <h2 class="gtclass">PROJECTS</h2>
 
-      <h3>PA - Programming Ants</h3>
+      <div class="a_box">
+        <div class="prevw_img">
+          <img src="/images/preview_images/pa_image.JPG">
+        </div>
 
-      <p><span class="semi_bold">Programming Ants</span> is a project we started to push our limits in programmation. For the moment, our website is
-        <span class="semi_bold">very limited in content</span>. Also, we are only <span class="semi_bold">two persons behind this project</span>, and it's difficult to
-        work fast, mostly when we have to solve <span class="semi_bold">bugs and mistakes</span>. But time passes, and the website is getting built slowly !
-      </p>
+        <div class="a_desc">
+          <h3 class="mtclass">PA - PROGRAMMING ANTS</h3>
 
-      <h3>Forum</h3>
+          <p class="smllrclass"><span class="semi_bold">Programming Ants</span> is a project we started to push our limits in programmation. For the moment, our website is
+            <span class="semi_bold">very limited in content</span>. Also, we are only <span class="semi_bold">two persons behind this project</span>, and it's difficult to
+            work fast, mostly when we have to solve <span class="semi_bold">bugs and mistakes</span>. But time passes, and the website is getting built slowly !
+          </p>
+        </div>
+      </div>
 
-      <p>It is a place to <span class="semi_bold">share your opinion or get some help from the community</span>. This is the first thing we've made after having a working
-        website and we're pretty proud of it. The design is <span class="semi_bold">not the final one</span>, and there are still <span class="semi_bold">several bugs</span>.
-      </p>
+      <div class="a_box">
+        <div class="prevw_img">
+          <img src="/images/preview_images/forum_image.JPG">
+        </div>
 
-      <h3>Solve it</h3>
+        <div class="a_desc">
+          <h3 class="mtclass">FORUM</h3>
 
-      <p>It is our main project on <b>Programming Ants</b>. It's goal is to <b>help programmers</b> to find what is wrong with their code when they
-        meet <b>errors or bugs</b>. Me and my friend didn't start this project yet, but we've got many ideas to get a nice final result.
-      </p>
+          <p class="smllrclass">It is a place to <span class="semi_bold">share your opinion or get some help from the community</span>. This is the first thing we've made after having a working
+            website and we're pretty proud of it. The design is <span class="semi_bold">not the final one</span>, and there are still <span class="semi_bold">several bugs</span>.
+          </p>
+        </div>
+      </div>
+
+      <div class="a_box">
+        <div class="prevw_img">
+          <img src="/images/preview_images/solveit_image.JPG">
+        </div>
+
+        <div class="a_desc">
+          <h3 class="mtclass">SOLVE IT</h3>
+
+          <p class="smllrclass">It is our main project on <b>Programming Ants</b>. It's goal is to <b>help programmers</b> to find what is wrong with their code when they
+            meet <b>errors or bugs</b>. Me and my friend didn't start this project yet, but we've got many ideas to get a nice final result.
+          </p>
+        </div>
+      </div>
     </div>
 
     <div id="h_groupb">
-      <h2>Support us !</h2>
+      <h2 class="gtclass">SUPPORT US</h2>
 
-      <p>You can download our wallpapers and share them to your friends to support us !
+      <p class="smllrclass_bdless">You can download our wallpapers and share them to your friends to support us !
       <br>
       <br>
         You can also follow our socials networks as <i>Instagram</i>. We regularly publish things related to the advancement of our website.
       </p>
 
-      <img src="/images/icons/articles/instagram.png" />
-      <a href="https://www.instagram.com/programming_ants/">@Programming Ants</a>
+      <div id="social_meds">
+        <img id="l_inst" src="/images/icons/articles/instagram.png" />
+        <a href="https://www.instagram.com/programming_ants/">@Programming Ants</a>
+      </div>
     </div>
 
     <!-- Slider -->
 
     <div id="h_groupc">
-      <h2>Wallpapers</h2>
+      <h2 class="gtclass">WALLPAPERS</h2>
 
       <div class="article_wallpapers_pa">
         <div class="element_text">

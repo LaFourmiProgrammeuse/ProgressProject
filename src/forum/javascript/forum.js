@@ -43,7 +43,7 @@ function getPostId(dom){
     return post_id;
 }
 
-function postLikeButtonPressed(){ console.log(user_connected);
+function postLikeButtonPressed(){
 
     if(user_connected == "false"){
         return;
@@ -62,7 +62,6 @@ function postLikeButtonPressed(){ console.log(user_connected);
             console.log("Error: Like");
         },
         success: function(data){
-            console.log(data);
             updateGraphicalsPostReactions(data, post_id);
         }
     });
@@ -86,7 +85,6 @@ function postDislikeButtonPressed(){
             console.log("Error: Dislike");
         },
         success: function(data){
-            console.log(data);
             updateGraphicalsPostReactions(data, post_id);
         }
     });

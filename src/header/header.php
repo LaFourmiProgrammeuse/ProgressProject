@@ -42,7 +42,7 @@
     <!-- Menu de navigation -1024px -->
     <div class="hr_small_resolution">
 
-        <div class="vertical_menu" id="h_vertical_menu">
+        <div class="hr_vertical_menu" id="hr_vertical_menu">
             <h3 class="menu_title">--- Menu ---</h3>
             <div class="separator"></div>
             <div class="nav_element nav_element_forum"><a href="/forum.php"><?php echo _("Forum"); ?> </a></div>

@@ -262,10 +262,13 @@ $forum_category = strtoupper($qrep_5['forum_type']);
            <a class="rules_reply" href="#">Learn more...</a>
          </div>
 
+        <?php if($_SESSION["connected"] == "false"){ ?>
          <div id="warn_editusage">
            <span class="warn_text">You have to be connected to answer this topic</span>
-           <a class="rules_reply" href="/login.php">Log In...</a>
+           <a class="rules_reply" href="/login.php?redirection_path=<?php echo $current_page_path; ?>">Log In...</a>
          </div>
+        <?php } ?>
+
        </div>
 
        <form id="form_reply" action="/src/forum/php/send_post.php" method="post">

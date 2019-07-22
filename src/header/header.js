@@ -20,7 +20,7 @@ function readDataSession(xml_data){
      $("#disconnect_button").css("display", "block");
 
      $(".username").html("<a href='/src/profile/profile.php'>"+ session_username+"</a>");
-     $("#h_userb").css("display", "block");
+     $("#hr_userb").css("display", "block");
 
      if($(xml_data).find("animation_connection").text() == "true"){
 
@@ -65,34 +65,34 @@ function requestSessionData(){
 function ActivateSmallResolutionMode(){
 
     //On déplace les boutons de connection dans le menu déroulant de navigation
-    var begin_div_head = "<div class='nav_element nav_element_logs'><div class='small_resolution' id=h_usera>";
+    var begin_div_head = "<div class='nav_element nav_element_logs'><div class='small_resolution' id=hr_usera>";
     var end_div_head = "</div></div>";
 
-    var new_usera = $(begin_div_head + $("#h_usera").html() + end_div_head); console.log(new_usera);
+    var new_usera = $(begin_div_head + $("#hr_usera").html() + end_div_head); console.log(new_usera);
     $(new_usera).find("#login_button").addClass("small_resolution");
     $(new_usera).find("#login_button").addClass("nav_element_login");
     $(new_usera).find("#register_button").addClass("small_resolution");
     $(new_usera).find("#register_button").addClass("nav_element_register");
 
-    $("#h_usera").remove();
-    $("#h_vertical_menu").append(new_usera);
+    $("#hr_usera").remove();
+    $("#hr_vertical_menu").append(new_usera);
 }
 
 function DesactivateSmallResolutionMode(){
 
     //On remet les boutons de connection à leur place initial dans le header
-    var begin_div_usera = "<div id=h_usera>";
+    var begin_div_usera = "<div id=hr_usera>";
     var end_div_usera = "</div>";
     var div_usera_filled = $(begin_div_usera + $(".nav_element_logs").html() + end_div_usera); console.log(div_usera_filled);
 
-     $(div_usera_filled).find("#h_usera").removeClass("small_resolution");
+     $(div_usera_filled).find("#hr_usera").removeClass("small_resolution");
      $(div_usera_filled).find("#login_button").removeClass("small_resolution");
      $(div_usera_filled).find("#login_button").removeClass("nav_element_login");
      $(div_usera_filled).find("#register_button").removeClass("small_resolution");
      $(div_usera_filled).find("#register_button").removeClass("nav_element_register");
 
-    $("#h_usera").remove();
-    $("#h_groupc").prepend(div_usera_filled);
+    $("#hr_usera").remove();
+    $("#hr_groupc").prepend(div_usera_filled);
 }
 
 
@@ -133,28 +133,28 @@ $(document).ready(function(){
         /* VERTICAL MENU FOR SMALL RESOLUTION */
 
     $("#small_resolution_menu_icon").mouseenter(function(){
-        $(".h_small_resolution").css("display", "flex");
-        $("#h_vertical_menu").css("display", "flex");
+        $(".hr_small_resolution").css("display", "flex");
+        $("#hr_vertical_menu").css("display", "flex");
     });
 
     $("section").mouseenter(function(){
-        $(".h_small_resolution").css("display", "none");
-        $("#h_small_resolution").css("display", "none");
+        $(".hr_small_resolution").css("display", "none");
+        $("#hr_small_resolution").css("display", "none");
     });
 
     $("#h_groupa").mouseenter(function(){
-        $(".h_small_resolution").css("display", "none");
-        $("#h_vertical_menu").css("display", "none");
+        $(".hr_small_resolution").css("display", "none");
+        $("#hr_vertical_menu").css("display", "none");
     });
 
     $("#h_groupb").mouseenter(function(){
-        $(".h_small_resolution").css("display", "none");
-        $("#h_vertical_menu").css("display", "none");
+        $(".hr_small_resolution").css("display", "none");
+        $("#hr_vertical_menu").css("display", "none");
     });
 
     $(".nav_element").click(function(){
-        $(".h_small_resolution").css("display", "none");
-        $("#h_vertical_menu").css("display", "none");
+        $(".hr_small_resolution").css("display", "none");
+        $("#hr_vertical_menu").css("display", "none");
     });
 
 });

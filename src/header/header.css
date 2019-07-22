@@ -40,9 +40,10 @@ header .part_1 {
   margin-left: auto;
   margin-right: auto;
 }
-.vertical_menu .nav_element {
+/*.hr_vertical_menu .nav_element {
   margin-left: 20px;
-}
+}*/
+
 .nav_element a {
 	color: ;
 	font-family: 'Roboto', sans-serif;
@@ -61,7 +62,6 @@ header .part_1 {
 .nav_element_logs {
   margin-left: auto;
   margin-right: auto;
-  margin-left: 0px;
 }
 
 .hr_small_resolution{
@@ -87,7 +87,7 @@ header .part_1 {
   width: 38.5%;
 }
 
-.vertical_menu{
+.hr_vertical_menu{
 	z-index: 5;
 }
 #hr_vertical_menu{
@@ -135,6 +135,11 @@ header .part_1 {
 	margin-right: 75px;
 	align-items: center;
 }
+
+.identication {
+    width: 200px;
+}
+
 .identification a {
 	font-family: 'Roboto', sans-serif;
 	font-size: 1vw;
@@ -167,11 +172,12 @@ header .part_1 {
 	align-items: center;
     margin-top: 5px;
 }
-.small_resolution#h_usera{
+.small_resolution#hr_usera{
     display: block;
     text-align: center;
     margin-bottom: 15px;
     margin-top: 8px;
+    flex-direction: column;
 }
 
 #login_button{

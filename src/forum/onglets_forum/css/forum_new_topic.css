@@ -1,83 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600|Roboto:300,300i,400,400i,500,500i,700&display=swap');
+
 #central_onglet_body{
     margin: 20px;
 }
 
-h3{
-    font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-
-}
+/* Editor */
 
 article{
   display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 28px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 28px;
   margin-bottom: 15px;
   height: auto;
-    width: 90%;
+  width: 90%;
 }
 
 .forum_index_path{
-    margin-left: 12px;
+  margin-left: 12px;
 }
 
 .form_header_frame{
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-    text-align: center;
-    margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  text-align: center;
+  margin-top: 80px;
 }
 
 .form_header_frame h1 {
-    font-family: 'Mandali', sans-serif;
+  font-family: 'Mandali', sans-serif;
 }
 
 .form_frame{
-    margin-bottom: 21px;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    margin-top: 25px;
+  margin-bottom: 21px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 25px;
 }
 
 .form_frame h2 {
-    background-color: #1d1d1d;
-    color: white;
-    font-family: 'source_code_proregular', Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-    font-size: 20px;
-    text-align: left;
-    font-weight: normal;
-    padding-left: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width: calc(100% - 15px);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0px;
-    border-bottom-right-radius: 100px;
+  background-color: #1d1d1d;
+  color: white;
+  font-family: 'source_code_proregular', Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+  font-size: 20px;
+  text-align: left;
+  font-weight: normal;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: calc(100% - 15px);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  border-bottom-right-radius: 100px;
 }
 
 .form_frame p {
-    font-size: 16px;
-    padding-left: 100px;
-    padding-right: 100px;
-    line-height: 25px;
-    text-align: center;
-    font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 25px;
-    margin-left: 25px;
-    color: #1d1d1d;
+  font-size: 16px;
+  padding-left: 100px;
+  padding-right: 100px;
+  line-height: 25px;
+  text-align: center;
+  font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 25px;
+  margin-left: 25px;
+  color: #1d1d1d;
 }
 
 .form_frame h3{
-    margin-bottom: 5px;
-    margin-left: 5px;
-    color: white;
-    font-size: 16px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  color: white;
+  font-size: 16px;
 }
 
 #form_new_topic h3{
@@ -85,7 +84,7 @@ article{
 }
 
 #form_new_topic{
-    width: 100%;
+  width: 100%;
 }
 
 #form_new_topic .topic_title{
@@ -97,186 +96,186 @@ article{
 }
 
 input[type=text]{
-    border: 2px solid #2980b9;
-    border-radius: 8px;
-    width: 55%;
-    height: 18px;
-    transition: ease-in-out, width .35s ease-in-out;
-    margin-bottom: 7px;
+  border: 2px solid #2980b9;
+  border-radius: 8px;
+  width: 55%;
+  height: 18px;
+  transition: ease-in-out, width .35s ease-in-out;
+  margin-bottom: 7px;
 }
 
 input[type=text]:focus{
-    width: 65%;
+  width: 65%;
 }
 
 #form_new_topic textarea{
-    width: 100%;
-    min-height: 130px;
+  width: 100%;
+  min-height: 130px;
 }
 
 #form_new_topic .send{
-    text-align: right;
-    width: 100%;
+  text-align: right;
+  width: 100%;
 
 }
 
 #form_new_topic .send input{
-    margin-top: 7px;
-    text-align: center;
-    width: 175px;
-    height: 30px;
-    border-radius: 8px;
-    color: white;
-    border: 2px solid #2ecc71;
-    background-color: #2ecc71;
+  margin-top: 7px;
+  text-align: center;
+  width: 175px;
+  height: 30px;
+  border-radius: 8px;
+  color: white;
+  border: 2px solid #2ecc71;
+  background-color: #2ecc71;
 }
 
 .label_message {
-    margin-top: 25px;
-    font-size: 18px;
+  margin-top: 25px;
+  font-size: 18px;
 }
 
 .text_formatting{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 5px;
-    width: calc(100% - 150px);
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+  width: calc(100% - 150px);
 }
 
 .text_style{
-    border: 1px solid black;
-    border-radius: 3px;
-    width: 90px;
-    margin-right: 6px;
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 90px;
+  margin-right: 6px;
 }
 
 .text_style .label{
-    margin-right: 23px;
+  margin-right: 23px;
 }
 
 .text_size{
-    border: 1px solid black;
-    border-radius: 3px;
-    width: 90px;
-    margin-right: 11px;
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 90px;
+  margin-right: 11px;
 }
 
 .text_size .label{
-    margin-right: 29px;
+  margin-right: 29px;
 }
 
 .text_style img{
-    width: 11px;
-    position: relative;
-    top: -1;
+  width: 11px;
+  position: relative;
+  top: -1;
 }
 
 .text_size img{
-    width: 11px;
-    position: relative;
-    top: -1;
+  width: 11px;
+  position: relative;
+  top: -1;
 }
 
 .text_bold{
-    border: 1px solid black;
-    border-radius: 3px;
-    width: 23px;
-    margin-right: 4px;
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 23px;
+  margin-right: 4px;
 }
 
 .text_underline{
-    border: 1px solid black;
-    border-radius: 3px;
-    width: 23px;
-    margin-right: 4px;
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 23px;
+  margin-right: 4px;
 }
 
 .text_italic{
-    border: 1px solid black;
-    border-radius: 3px;
-    width: 23px;
-    margin-right: 4px;
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 23px;
+  margin-right: 4px;
 }
 
 .editor_type{
-    display: flex;
-    flex-direction: row;
-    width: 235px;
-    align-content: right;
-    padding-top: 12px;
-    padding-right: 4px;
+  display: flex;
+  flex-direction: row;
+  width: 235px;
+  align-content: right;
+  padding-top: 12px;
+  padding-right: 4px;
 }
 
 .editor_type h3 {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 .message_content textarea {
-    border: 2px solid grey;
-    border-radius: 5px;
+  border: 2px solid grey;
+  border-radius: 5px;
 }
 
 .message_header{
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    margin-top: 18px;
-    margin-bottom: 4px;
-    padding-left: 2px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin-top: 18px;
+  margin-bottom: 4px;
+  padding-left: 2px;
 }
 
 .text_formatting div {
-    padding-top: 3px;
-    height: 24px;
+  padding-top: 3px;
+  height: 24px;
 }
 
 .warning_rules{
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    border: 2px solid #e74c3c;
-    border-radius: 8px;
-    margin-top: 35px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #e74c3c;
+  border-radius: 8px;
+  margin-top: 35px;
 }
 
 .warning_rules p {
-    padding: 0px;
+  padding: 0px;
 }
 
 @media screen and (max-width: 1024px){
 
     .form_frame{
-        width: 85%;
+      width: 85%;
     }
 
     input[type=text] {
-        width: 65%
+      width: 65%
     }
 
     input[type=text]:focus {
-        width: 75%
+      width: 75%
     }
 
     .form_header_frame {
-        width: 80%;
-        font-size: 2.8vw;
+      width: 80%;
+      font-size: 2.8vw;
     }
 
     .warning_rules {
-        width: 80%;
-        margin-bottom: 100px;
+      width: 80%;
+      margin-bottom: 100px;
     }
 
     .warning_rules p {
-        font-size: 2.2vw;
+      font-size: 2.2vw;
     }
 
     #form_new_topic h3{
-        font-size: 2.35vw;
+      font-size: 2.35vw;
     }
 
     .send{
-        font-size: 1.8vw;
+      font-size: 1.8vw;
     }
 
 }

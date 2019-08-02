@@ -98,9 +98,6 @@ section {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.tn_groupa_elem a {
-
-}
 
 .tn_groupa_elem:hover a {
   color: ;
@@ -239,7 +236,7 @@ article {
 }
 #social_meds a {
 	margin-right: auto;
-    font-size: 1.2vw;
+  font-size: 0.95vw;
 }
 
 #h_groupc {

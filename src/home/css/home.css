@@ -244,16 +244,7 @@ article {
 	margin-top: 175px;
 	margin-bottom: 100px;
 }
-.g_title_wprs h2 {
-	font-family: 'Alegreya Sans SC', sans-serif;
-	font-size: 2.50vw;
-	color: rgba(92, 92, 92, 1);
-	text-align: center;
-	margin: 0;
-	background-color: #f6f6f6;
-	border-bottom: 1px solid #e1e1e1;
-	border-radius: 5px;
-}
+
 .article_wallpapers_pa {
 	display: flex;
 	flex-direction: column;
@@ -262,15 +253,6 @@ article {
 	background-color: #fbfbfb;
 	border-bottom: 1px solid #f0f0f0;
 	border-radius: 5px;
-}
-.article_wallpapers_pa p {
-	font-family: "Montserrat", sans-serif;
-	font-size: 1.25vw;
-	text-align: center;
-	line-height: 150%;
-	width: 70%;
-	margin-left: auto;
-	margin-right: auto;
 }
 .article_wallpapers_pa .element_text {
   margin-left: auto;

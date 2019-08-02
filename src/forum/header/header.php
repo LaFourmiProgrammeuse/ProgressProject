@@ -18,7 +18,7 @@
 <div id="top_nav">
   <div id="tn_groupa">
 
-    <div class="tn_groupa_elem"><a href="#">Choose a forum</a></div>
+    <div class="tn_groupa_elem" <?php if($_GET["forum_part"] == "forums" || !isset($_GET["forum_part"])) {echo "style='background-color:white;'";} ?>><a href="#">Choose a forum</a></div>
     <div class="tn_groupa_elem"><a href="forum_stats.php">Stats</a></div>
     <div class="tn_groupa_elem"><a href="forum_rules.php">Rules</a></div>
 

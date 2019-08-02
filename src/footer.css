@@ -57,6 +57,13 @@ footer{
 @media screen and (max-width: 1024px){
 
     #footer_information_frame_2{
-      font-size: 1.2vw;
+      font-size: 1.1vw;
     }
+
+    #footer_information_frame_1 {
+        font-size: 1.5vw;
+    }
+
+
+
 }

@@ -99,8 +99,9 @@ section {
   padding-bottom: 20px;
 }
 .tn_groupa_elem a {
-  color: ;
+
 }
+
 .tn_groupa_elem:hover a {
   color: ;
   transition: 0.2s;
@@ -159,7 +160,7 @@ article {
 #h_groupa {
 	display: flex;
 	flex-direction: column;
-	width: 50%;
+	width: 62%;
 	margin-top: 100px;
 	margin-left: auto;
 	margin-right: auto;
@@ -167,7 +168,7 @@ article {
 
 .gtclass {
 	font-family: "Montserrat", sans-serif;
-	font-size: 1.25vw;
+	font-size: 1.7vw;
 	font-weight: 600;
 	text-align: center;
 	letter-spacing: 1px;
@@ -193,13 +194,13 @@ article {
 }
 .mtclass {
 	font-family: "Montserrat", sans-serif;
-	font-size: 1.05vw;
+	font-size: 1.2vw;
 	font-weight: 500;
 	letter-spacing: 1px;
 }
 .smllrclass {
 	font-family: "Open sans", sans-serif;
-	font-size: 0.80vw;
+	font-size: 0.95vw;
 	font-weight: 400;
 	border-left: 5px solid black;
 	padding-left: 25px;
@@ -216,11 +217,12 @@ article {
 }
 .smllrclass_bdless {
 	font-family: "Open sans", sans-serif;
-	font-size: 0.80vw;
+	font-size: 1vw;
 	font-weight: 400;
 	padding-left: 25px;
 	margin-top: 25px;
 	letter-spacing: 1px;
+    text-align: center;
 }
 #social_meds {
 	display: flex;
@@ -237,6 +239,7 @@ article {
 }
 #social_meds a {
 	margin-right: auto;
+    font-size: 1.2vw;
 }
 
 #h_groupc {
@@ -348,8 +351,9 @@ article {
     /* MEDIA QUERIES */
 
 /* MQ FOR SMALLS RESOLUTIONS */
-/* On agrandis certains textes sur les textes des petites résolutions */
 @media screen and (max-width: 1024px){
+
+    /* FONT SIZE */
 
     .g_title_prts h2{
         font-size: 5vw;
@@ -403,10 +407,39 @@ article {
         font-size: 2.1vw;
     }
 
-}
+    #sect1_link {
+        font-size: 2.6vw;
+    }
 
-/*Changement de la taille et des marges de certains objets pour les petites résolutions */
-@media screen and (max-width: 1024px){
+    #title {
+        font-size: 4.9vw;
+    }
+
+    #tn_groupa{
+        font-size: 2.2vw;
+    }
+
+    .gtclass {
+        font-size: 3.9vw;
+    }
+
+    .mtclass {
+        font-size: 2.2vw;
+    }
+
+    .smllrclass {
+        font-size: 1.65vw;
+    }
+
+    .smllrclass_bdless {
+        font-size: 1.65vw;
+    }
+
+    #social_meds a {
+        font-size: 2.45vw;
+    }
+
+    /* WIDTH, MARGIN */
 
     .social_net {
         width: 45%;
@@ -434,10 +467,48 @@ article {
     .g_title_sprt h2{
         margin-top: 145px;
     }
-}
 
-/* Diverses modifs pour les petites résolutions */
-@media screen and (max-width: 1024px){
+    #tn_groupa{
+        margin-left: 25px;
+    }
+
+    #tn_groupb {
+        margin-right: 25px;
+    }
+
+    #h_groupa {
+        width: 80%;
+    }
+
+    #h_groupb {
+        width: 80%;
+    }
+
+    .prevw_img{
+        width: 90%;
+        margin-top: 30px;
+        margin-bottom: 50px;
+         margin-left: auto;
+         margin-right: auto;
+    }
+
+    .a_desc{
+        width: 100%;
+    }
+
+    #h_groupb {
+        margin-top: 115px;
+    }
+
+    .smllrclass {
+        border-left: 0;
+        border-bottom: 5px solid black;
+        padding-bottom: 25px;
+    }
+
+
+
+    /* FLEX, ORDER, DISPLAY */
 
     #s_groupa_con{
         flex-direction: column;
@@ -474,8 +545,25 @@ article {
     .high_resolution{
         display: none;
     }
+
+    .a_box{
+        flex-direction: column;
+    }
+
+    .a_desc {
+        order: 0;
+    }
+
+    .prevw_img {
+        order: 1;
+    }
+
+    #search::placeholder {
+        font-size: 1.55vw;
+    }
 }
 
+/* MQ FOR ALL RESOLUTIONS UNLESS SMALLS */
 @media screen and (min-width: 1025px){
 
     .small_resolution{
@@ -488,6 +576,49 @@ article {
 }
 
 /* MQ FOR MEDIUMS RESOLUTIONS */
+@media screen and (min-width: 1025px) and (max-width: 1379px){
+
+    #tn_groupa {
+        font-size: 1.55vw;
+        margin-left: 40px;
+    }
+
+    #tn_groupb {
+        margin-right: 40px;
+    }
+
+    .gtclass {
+        font-size: 2vw;
+    }
+
+    #h_groupa {
+        width: 65%;
+    }
+
+    .mtclass {
+        font-size: 1.6vw;
+    }
+
+    .smllrclass {
+        font-size: 1.6vw;
+    }
+
+    #title{
+        font-size: 3.8vw;
+    }
+
+    #sect1_link {
+        font-size: 1.85vw;
+    }
+
+    .smllrclass_bdless {
+        font-size: 1.6vw;
+    }
+
+    #social_meds a {
+        font-size: 1.6vw;
+    }
+}
 
 /* Code du s_groupb/une partie du h_groupc (partie du support) [qui ont été supprimés] <- à ne pas retirer du code, en cas de besoin dans le futur */
 /*#s_groupb {

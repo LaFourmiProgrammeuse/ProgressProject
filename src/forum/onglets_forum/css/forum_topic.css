@@ -243,41 +243,58 @@ article {
   margin-top: 10px;
 }
 
-/* On change les tailles ou les marges de certains objets sur les petites résolutions */
 @media screen and (max-width: 1024px){
 
-    #tn_groupa{
-       font-size: 2.75vw;
+    .post_content {
+        font-size: 2.6vw;
     }
 
-    article{
-        width: 85%;
+    .post_author {
+        font-size: 2.6vw;
     }
 
-    .index_path {
-        font-size: 2.9vw;
+    .rank {
+        font-size: 2.25vw;
     }
 
-    #index_path_smll {
-        font-size: 2.75vw;
+    .user_forum_stats h5 {
+        font-size: 2vw;
     }
 
-    #central_onglet_body{
-        margin-top: 90px;
+    .registered_date_value, .n_messages_value, .n_likes_value {
+        font-size: 1.85vw;
     }
 
-    #search {
-        font-size: 2.3vw;
-        height: 40px;
+    .d_of_p {
+        font-size: 2.15vw;
     }
 
-    #search-btn{
-        width: 40px;
-        height: 40px;
+    .warn_text {
+        font-size: 2.5vw
     }
 
-    #tn_groupb {
-        margin-right: 35px;
+    .rules_reply {
+        font-size: 2.2vw;
     }
 
+    .left_frame{
+        width: 53%;
+    }
+
+    #p_editor_inf h2 {
+        font-size: 2.8vw;
+    }
+
+    .t_name {
+        font-size: 2.65vw;
+    }
+
+    .post_index {
+        font-size: 2.4vw;
+    }
+
+    .send {
+        font-size: 2.4vw;
+        width: 140px;
+    }
 }

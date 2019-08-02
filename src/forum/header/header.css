@@ -46,7 +46,7 @@
   padding-bottom: 20px;
 }
 .tn_groupa_elem:nth-child(1) {
-  background-color: white;
+
 }
 .tn_groupa_elem:nth-child(2) {
   border-left: 1px solid #d6d6d6;
@@ -90,4 +90,45 @@
   width: 100%;
   margin-left: auto;
   margin-bottom: auto;
+}
+
+@media screen and (max-width: 1024px){
+
+    #tn_groupa{
+       font-size: 2.75vw;
+    }
+
+    article{
+        width: 85%;
+    }
+
+    .index_path {
+        font-size: 2.9vw;
+    }
+
+    #index_path_smll {
+        font-size: 2.75vw;
+    }
+
+    #central_onglet_body{
+        margin-top: 90px;
+    }
+
+    #search {
+        height: 40px;
+    }
+
+    #search::placeholder {
+        font-size: 1.7vw;
+    }
+
+    #search-btn{
+        width: 40px;
+        height: 40px;
+    }
+
+    #tn_groupb {
+        margin-right: 35px;
+    }
+
 }

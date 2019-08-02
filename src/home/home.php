@@ -95,8 +95,8 @@ if($_SESSION['connected'] == "true"){
     <div id="tn_groupa">
 
       <div class="tn_groupa_elem"><a href="#">Timeline</a></div>
-      <div class="tn_groupa_elem"><a href="forum_stats.php">Support</a></div>
-      <div class="tn_groupa_elem"><a href="forum_rules.php">Wallpapers</a></div>
+      <div class="tn_groupa_elem"><a href="#social_meds">Support</a></div>
+      <div class="tn_groupa_elem"><a href="#h_groupc">Wallpapers</a></div>
 
     </div>
 

@@ -9,9 +9,7 @@ var small_resolution_menu_opened = false;
 
 function readDataSession(xml_data){
 
-    console.log(user_connected);
-
- user_connected = $(xml_data).find("connected").text(); console.log(user_connected);
+ user_connected = $(xml_data).find("connected").text();
 
  if(user_connected == "true"){
 
@@ -37,9 +35,6 @@ function readDataSession(xml_data){
      $("#register_button").css("display", "block");
  }
 
- console.log(user_connected);
- console.log(session_username);
-
 }
 
 function requestSessionData(){
@@ -49,7 +44,7 @@ function requestSessionData(){
             url: "/src/php_for_ajax/session_control_for_javascript.php",
             dataType: "xml",
             success: function(xml){
-                readDataSession(xml); console.log(xml);
+                readDataSession(xml);
             },
             error: function(){
                 alert("error");
@@ -68,7 +63,7 @@ function ActivateSmallResolutionMode(){
     var begin_div_head = "<div class='nav_element nav_element_logs'><div class='small_resolution' id=hr_usera>";
     var end_div_head = "</div></div>";
 
-    var new_usera = $(begin_div_head + $("#hr_usera").html() + end_div_head); console.log(new_usera);
+    var new_usera = $(begin_div_head + $("#hr_usera").html() + end_div_head);
     $(new_usera).find("#login_button").addClass("small_resolution");
     $(new_usera).find("#login_button").addClass("nav_element_login");
     $(new_usera).find("#register_button").addClass("small_resolution");
@@ -83,7 +78,7 @@ function DesactivateSmallResolutionMode(){
     //On remet les boutons de connection à leur place initial dans le header
     var begin_div_usera = "<div id=hr_usera>";
     var end_div_usera = "</div>";
-    var div_usera_filled = $(begin_div_usera + $(".nav_element_logs").html() + end_div_usera); console.log(div_usera_filled);
+    var div_usera_filled = $(begin_div_usera + $(".nav_element_logs").html() + end_div_usera);
 
      $(div_usera_filled).find("#hr_usera").removeClass("small_resolution");
      $(div_usera_filled).find("#login_button").removeClass("small_resolution");
@@ -100,6 +95,8 @@ function DesactivateSmallResolutionMode(){
 
 //WINDOW EVENT
 function window_resized(){
+
+    console.log(window.innerWidth);
 
     //Si l'utilisateur a une petite résolution, on arrange le code (déplacement et ajout d'attribut) afin d'adapter le site
     if(window.innerWidth < 1024){

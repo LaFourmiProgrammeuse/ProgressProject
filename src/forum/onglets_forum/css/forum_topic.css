@@ -20,12 +20,26 @@ article {
   margin-top: 45px;
 }
 
+.t_inf {
+    display: flex;
+}
+
 .t_name {
   font-size: 1.50vw;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   color: ;
   letter-spacing: 1px;
+}
+
+.t_folow {
+    margin-left: auto;
+    margin-top: auto;
+}
+
+.t_folow img {
+    width: 35px;
+    height: 35px;
 }
 
 .p_part {

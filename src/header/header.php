@@ -3,6 +3,14 @@
     $current_page_path = str_replace("&", "and", $_SERVER['REQUEST_URI']);
 ?>
 
+
+<!-- CSS LINKS -->
+<link rel="stylesheet" type="text/css" href="/src/header/header.css" />
+
+<!-- SCRIPTS -->
+<script type="text/javascript" src="/src/header/header.js"></script>
+
+
 <header>
     <div class="part_1">
     <div id="hr_groupa">

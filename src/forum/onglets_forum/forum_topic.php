@@ -182,6 +182,9 @@ $forum_category = strtoupper($qrep_5['forum_type']);
   		  <div class="t_name">
           <h1><?php echo $topic_title; ?></h1>
         </div>
+        <div class="t_folow">
+            <img src="/images/grey_star.svg" />
+        </div>
   		</div>
 
     		<?php

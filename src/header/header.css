@@ -10,6 +10,11 @@ header .part_1 {
 	height: 72px;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 #hr_groupa {
 	display: flex;
 	margin-left :  75px;

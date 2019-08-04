@@ -46,22 +46,22 @@ if($_SESSION['connected'] == "true"){
 <html>
 <head>
 
+    <meta charset="utf-8"/>
+    <title><?php echo _("Home");?></title>
+
     <!-- Google Analytics -->
     <?php include "/home/programmpk/www/src/analytic_tools/google_analytics.html"; ?>
 
+    <!-- CSS LINKS -->
     <link rel="stylesheet" type="text/css" href="/src/home/css/home.css" />
     <link rel="stylesheet" type="text/css" href="/src/footer.css">
     <link rel="stylesheet" type="text/css" href="/src/home/css/home_simple_image_viewer.css" />
-    <link rel="stylesheet" type="text/css" href="/src/header/header.css" />
 
-    <meta charset="utf-8"/>
-
-    <title><?php echo _("Home");?></title>
-
+    <!-- SCRIPTS -->
     <script type="text/javascript" src="/src/framework_javascript/jquery.js"></script>
+    <script type="text/javascript" src="/src/framework_javascript/ajax.js"></script>
     <script type="text/javascript" src="/src/home/javascript/home.js"></script>
     <script type="text/javascript" src ="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="/src/header/header.js"></script>
 
 </head>
 

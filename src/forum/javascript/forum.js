@@ -104,6 +104,39 @@ function updateGraphicalsPostReactions(data, post_id){
     $(n_dislike_display_identifier_path).text(n_dislike);
 }
 
+function topicFolowButtonPressed(){
+
+    if(user_connected == "false"){
+        return;
+    }
+
+    var topic_id = $_GET("topic_id");
+
+    $.ajax({
+        url: "/src/forum/php/reactions.php",
+        cache: false,
+        method: "POST",
+        data: {author: session_username, action_type: "folow", object_type: "topic", topic_id: topic_id},
+        error: function(){
+            console.log("Error: Folow Topic");
+        },
+        success: function(data){
+            updateTopicFolowButton(data);
+        }
+    });
+}
+
+function updateTopicFolowButton(data){
+
+    var topic_folowed = $(data).find("topic_folowed").text();
+
+    if(topic_folowed == "true"){
+        $(".t_folow img").attr("src", "/images/yellow_star.svg");
+    }else if(topic_folowed == "false"){
+        $(".t_folow img").attr("src", "/images/grey_star.svg");
+    }
+}
+
 $(document).ready(function(){
 
     $("#account").css("margin-left", "20px");
@@ -213,4 +246,10 @@ $(document).ready(function(){
 
     $(".like").click(postLikeButtonPressed);
     $(".dislike").click(postDislikeButtonPressed);
+
+    $(".t_folow").click(topicFolowButtonPressed);
+
+        /* TOOL TIP FOR NEEDED CONNECTION */
+
+
 });

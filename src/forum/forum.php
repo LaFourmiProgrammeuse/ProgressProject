@@ -31,19 +31,21 @@ $profile_image_url = "/images/user_image/" . $profile_image_name;
 <html>
 <head>
 
+    <meta charset="utf-8" />
+    <title>Forum</title>
+
     <!-- Google Analytics -->
     <?php include "/home/programmpk/www/src/analytic_tools/google_analytics.html"; ?>
 
+    <!-- CSS LINKS -->
     <link rel="stylesheet" type="text/css" href="/src/forum/css/forum.css" />
     <link rel="stylesheet" type="text/css" href="/src/footer.css" />
     <link rel="stylesheet" type="text/css" href="/src/header/header.css" />
 
-    <meta charset="utf-8" />
-    <title>Forum</title>
-
+    <!-- SCRIPTS -->
     <script type="text/javascript" src="/src/framework_javascript/jquery.js"></script>
+    <script type="text/javascript" src ="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
     <script type="text/javascript" src="/src/framework_javascript/ajax.js"></script>
-    <script type="text/javascript" src="/src/header/header.js"></script>
     <script type="text/javascript" src="/src/forum/javascript/forum.js" ></script>
     <script type="text/javascript" src="/src/javascript_for_all/url_methods.js"></script>
 
@@ -57,6 +59,11 @@ $profile_image_url = "/images/user_image/" . $profile_image_name;
                 <p>This part of the website has not content yet, folow the progress in our DevBlog</p>
             </div>
         </div>
+    </div>
+
+    <div class="tooltip_connection">
+        <p>To perform this action, you have to be connected</p>
+        <div class="link_page_connection">Log In</div>
     </div>
 
     <div id="body_content"> <!-- Pour que le footer soit placer en bas de la page -->

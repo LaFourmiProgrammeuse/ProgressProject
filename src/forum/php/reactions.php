@@ -120,6 +120,35 @@ if($object_type == "post"){
         echo "<n_dislike>" . $n_dislike . "</n_dislike>";
     echo "</reaction_informations>";
 }
+else if($object_type == "topic"){
+
+    $topic_id = $_POST['topic_id'];
+
+    if($action_type == "folow"){
+
+        $qprepare = $bdd->prepare("SELECT id FROM reactions WHERE type=? && object=? && object_id=? && author=?");
+        $qprepare->execute(array($action_type, $object_type, $topic_id, $author_reaction));
+
+        if($qprepare->fetch()){
+            $topic_folowed = "false";
+
+            $qprepare = $bdd->prepare("DELETE FROM reactions WHERE type=? && object=? && object_id=? && author=?");
+            $qprepare->execute(array($action_type, $object_type, $topic_id, $author_reaction));
+        }
+        else{
+            $topic_folowed = "true";
+
+           $qprepare = $bdd->prepare("INSERT INTO reactions (type, object, object_id, author) VALUES (?, ?, ?, ?)");
+           $qprepare->execute(array($action_type, $object_type, $topic_id, $author_reaction));
+        }
+
+        //Réponse pour les topics (XML)
+        echo "<?xml version =\"1.0\" encoding=\"utf-8\"?>";
+        echo "<reaction_informations>";
+            echo "<topic_folowed>" . $topic_folowed . "</topic_folowed>";
+        echo "</reaction_informations>";
+    }
+}
 
 
 ?>

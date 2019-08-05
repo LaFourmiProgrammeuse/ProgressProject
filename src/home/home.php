@@ -169,7 +169,7 @@ if($_SESSION['connected'] == "true"){
 
       <div id="social_meds">
         <img id="l_inst" src="/images/icons/articles/instagram.png" />
-        <a href="https://www.instagram.com/programming_ants/">@Programming Ants</a>
+        <a href="https://www.instagram.com/programming_ants/">@PROG-ANTS</a>
       </div>
     </div>
 

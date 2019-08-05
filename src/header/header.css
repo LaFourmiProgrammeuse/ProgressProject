@@ -2,7 +2,7 @@
 
 header {
 	width: 100%;
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 header .part_1 {
@@ -11,8 +11,8 @@ header .part_1 {
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 #hr_groupa {
@@ -47,11 +47,16 @@ a {
 }
 
 .nav_element a {
-	color: ;
+	color: #2b2b2b;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	font-size: 1.2vw;
 	letter-spacing: 1.25px;
+	transition-property: color;
+	transition-duration: 0.5s;
+}
+.nav_element:hover a {
+	color: #45a6ee;
 }
 .nav_element_login {
   margin-left: auto;
@@ -66,6 +71,7 @@ a {
   margin-right: auto;
 }
 
+/* ----------------------- SMALL RESOLUTIONS ----------------------*/
 .hr_small_resolution{
 	display: none;
 }
@@ -82,51 +88,43 @@ a {
 	background: url("/images/icons/normal/h_vertical_m/hovered.svg");
 	background-repeat: no-repeat;
 }
-.hr_high_resolution{
+.hr_high_resolution {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row;
   width: 38.5%;
 }
 
-.hr_vertical_menu{
+.hr_vertical_menu {
 	z-index: 5;
 }
-#hr_vertical_menu{
+#hr_vertical_menu {
 	flex-direction: column;
 	display: none;
 	width: 300px;
-  margin-top: 27px;
-  border: 2px solid grey;
+  margin-top: 25px;
   padding-top: 5px;
   padding-bottom: 5px;
   position: fixed;
-  right: -2px;
   background-color: white;
   text-align: center;
 }
-#hr_vertical_menu .nav_element{
+#hr_vertical_menu .nav_element {
 	width: 250px;
 }
-#hr_vertical_menu .nav_element a{
+#hr_vertical_menu .nav_element a {
 	color: black;
-  font-size: 4vw;
+  font-size: 3.80vw;
 }
 #hr_vertical_menu .separator {
   width: 200px;
-  border: 1px grey solid;
+  border: 1px #202020 solid;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 8px;
   margin-top: 16px;
 }
-.menu_title {
-  text-align: center;
-  font-size: 3vw;
-  font-family: "Karla",cursive;
-  margin-bottom: 8px;
-  margin-top: 22px;
-}
+/* ---------------------------------------------------------------- */
 
 #hr_groupc {
 	display: flex;
@@ -138,17 +136,19 @@ a {
 	align-items: center;
 }
 
-.identication {
-    width: 200px;
-}
-
 .identification a {
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.2vw;
 	letter-spacing: 1px;
 }
-.identification:nth-child(1) a {
+#login_button a {
+	color: #2b2b2b;
 	font-weight: 300;
+	transition-property: color;
+	transition-duration: 0.5s;
+}
+#login_button:hover a {
+	color: #45a6ee;
 }
 .identification:nth-child(2) a {
 	font-weight: 500;
@@ -172,14 +172,14 @@ a {
 	justify-content: space-between;
 	flex-direction: row;
 	align-items: center;
-    margin-top: 5px;
+  margin-top: 5px;
 }
 .small_resolution#hr_usera{
-    display: block;
-    text-align: center;
-    margin-bottom: 15px;
-    margin-top: 8px;
-    flex-direction: column;
+  display: block;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 8px;
+  flex-direction: column;
 }
 
 #login_button{
@@ -187,8 +187,8 @@ a {
 }
 
 .small_resolution #login_button a {
-     color: black;
-     font-size: 3.2vw;
+  color: black;
+  font-size: 3.2vw;
 }
 
 #register_button {
@@ -196,12 +196,12 @@ a {
 }
 
 .small_resolution #register_button {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .small_resolution #register_button a {
-     color: black;
-     font-size: 3.2vw;
+  color: black;
+  font-size: 3.2vw;
 }
 
 #hr_userb {
@@ -220,12 +220,12 @@ a {
 #user_image img {
 	height: 40px;
 	width: 40px;
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 #user_username{
-    position: relative;
-    top: -2px;
+  position: relative;
+  top: -2px;
 }
 #disconnect_button {
   display: none;

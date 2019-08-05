@@ -51,8 +51,6 @@
     <div class="hr_small_resolution">
 
         <div class="hr_vertical_menu" id="hr_vertical_menu">
-            <h3 class="menu_title">--- Menu ---</h3>
-            <div class="separator"></div>
             <div class="nav_element nav_element_forum"><a href="/forum.php"><?php echo _("Forum"); ?> </a></div>
             <div class="nav_element nav_element_projects"><a href="#"><?php echo _("Projects"); ?> </a></div>
             <div class="nav_element nav_element_about"><a href="#"><?php echo _("About"); ?> </a></div>

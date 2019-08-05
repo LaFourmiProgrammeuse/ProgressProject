@@ -97,11 +97,12 @@ section {
   padding-right: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
+	background-color: #f0f0f0;
+	transition-property: background-color;
+	transition-duration: 0.5s;
 }
-
-.tn_groupa_elem:hover a {
-  color: ;
-  transition: 0.2s;
+.tn_groupa_elem:hover {
+  background-color: #dddddd;
 }
 .tn_groupa_elem:nth-child(2) {
   border-left: 1px solid #d6d6d6;

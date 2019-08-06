@@ -143,7 +143,7 @@ while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
 ?>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="/src/forum/onglets_forum/css/forum_forums.css">
+    <link rel="stylesheet" type="text/css" href="/src/forum/onglets/css/forums.css">
 </head>
 
 <div id="central_onglet_body">

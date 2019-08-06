@@ -168,7 +168,7 @@ $forum_category = strtoupper($qrep_5['forum_type']);
 ?>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="/src/forum/onglets_forum/css/forum_topic.css" />
+	<link rel="stylesheet" type="text/css" href="/src/forum/onglets/css/topic.css" />
 </head>
 
 <div id="central_onglet_body">

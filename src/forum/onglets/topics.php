@@ -189,7 +189,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
 ?>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="/src/forum/onglets_forum/css/forum_topics.css">
+    <link rel="stylesheet" type="text/css" href="/src/forum/onglets/css/topics.css">
 </head>
 
 <div id="central_onglet_body">

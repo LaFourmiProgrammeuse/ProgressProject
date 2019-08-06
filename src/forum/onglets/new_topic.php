@@ -3,7 +3,7 @@
 ?>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="/src/forum/onglets_forum/css/forum_new_topic.css" />
+	<link rel="stylesheet" type="text/css" href="/src/forum/onglets/css/new_topic.css" />
 
   <link href="https://fonts.googleapis.com/css?family=Mandali&display=swap" rel="stylesheet">
 </head>

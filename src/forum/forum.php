@@ -52,14 +52,6 @@ $profile_image_url = "/images/user_image/" . $profile_image_name;
 </head>
 
 <body>
-    <div id="modal_warning_no_content">
-        <div class="modal_background">
-            <div class="modal_content">
-                <img src="/images/warning.png" class="warning_img"/>
-                <p>This part of the website has not content yet, folow the progress in our DevBlog</p>
-            </div>
-        </div>
-    </div>
 
     <div class="tooltip_connection">
         <p>To perform this action, you have to be connected</p>

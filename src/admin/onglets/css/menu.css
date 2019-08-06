@@ -1,0 +1,48 @@
+.title {
+   margin-left: auto;
+   margin-right: auto;
+    font-size: 2vw;
+    width: 50%;
+    text-align: center;
+}
+
+.menu_frame {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.menu_frame .menu_item {
+    width: 50%;
+    border: 2px black solid;
+    border-radius: 3px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 7px;
+    margin-top: 11px;
+}
+
+.menu_frame .staff_interface_mode {
+    display: flex;
+    flex-direction: row;
+    padding-left: 13px;
+}
+
+.staff_interface_mode img {
+    width: 34px;
+    height: 34px;
+    margin-left: auto;
+}
+
+.staff_interface_mode a {
+    margin-left: auto;
+}
+
+.staff_interface_mode p {
+    margin-top: 9px;
+}
+
+.staff_interface_mode input {
+    margin-left: 25px;
+}

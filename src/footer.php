@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="/src/footer.css" />
 
 <footer>
     <div id="footer_information_frame_1">

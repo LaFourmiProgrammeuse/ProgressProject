@@ -54,7 +54,6 @@ if($_SESSION['connected'] == "true"){
 
     <!-- CSS LINKS -->
     <link rel="stylesheet" type="text/css" href="/src/home/css/home.css" />
-    <link rel="stylesheet" type="text/css" href="/src/footer.css">
     <link rel="stylesheet" type="text/css" href="/src/home/css/home_simple_image_viewer.css" />
 
     <!-- SCRIPTS -->

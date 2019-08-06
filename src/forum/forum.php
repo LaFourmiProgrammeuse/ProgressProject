@@ -39,7 +39,6 @@ $profile_image_url = "/images/user_image/" . $profile_image_name;
 
     <!-- CSS LINKS -->
     <link rel="stylesheet" type="text/css" href="/src/forum/css/forum.css" />
-    <link rel="stylesheet" type="text/css" href="/src/footer.css" />
     <link rel="stylesheet" type="text/css" href="/src/header/header.css" />
 
     <!-- SCRIPTS -->

@@ -1,0 +1,43 @@
+p {
+	margin: 0;
+}
+
+body {
+	position: relative;
+	background-color: white;
+	margin: 0;
+	padding: 0;
+}a
+
+#body_content{ /* Inclus le header mais pas le footer */
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 70px);
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-frame {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 75px); /* On retire la hauteur du header */
+  background-color: #16a085;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+    margin-top: 75px;
+}
+
+/* All smalls resolutions */
+@media screen and (max-width: 1024px){
+
+    #particles-frame {
+        margin-top: 93px;
+    }
+}

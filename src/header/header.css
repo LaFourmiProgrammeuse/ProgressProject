@@ -160,6 +160,44 @@ a {
 	color: white;
 }
 
+/* Pop-up (Element inexistant) */
+
+.modal_background{
+	background-color: rgba(0,0,0,0.4);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.modal_content{
+  padding: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10px;
+}
+#modal_warning_no_content{
+	display: none;
+}
+#modal_warning_no_content .warning_img{
+	height: 65px;
+	width: 65px;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+	margin-bottom: 12px;
+}
+#modal_warning_no_content p{
+	text-align: center;
+}
+#modal_warning_no_content .modal_content{
+	height: 140px;
+	width: 270px;
+}
+
+
 /* ----------------------- SMALL RESOLUTIONS ----------------------*/
 .hr_small_resolution{
 	display: none;
@@ -238,10 +276,12 @@ a {
   color: white;
   font-size: 3.5vw;
 }
+
 /* ---------------------------------------------------------------- */
 
-/* All smalls resolutions */
+    /* MEDIA QUERIES */
 
+/* MQ FOR SMALLS RESOLUTIONS */
 @media screen and (max-width: 1024px){
 
     :nth-child(1).identification a{
@@ -251,10 +291,6 @@ a {
     :nth-child(2).identification a{
         font-size: 2.7vw;
     }
-
-    /*.identification{
-        margin-top: 23px;
-    }*/
 
     #disconnect_button a {
     	font-size: 2vw;;
@@ -286,7 +322,7 @@ a {
 
 }
 
-/* All mediums resolutions */
+/* MQ FOR MEDIUMS RESOLUTIONS */
 @media screen and (min-width: 1025px) and (max-width: 1379px){
 
     .hr_high_resolution{
@@ -315,7 +351,7 @@ a {
 }
 
 
-/* All other smalls resolutions */
+/* MQ FOR ALL OTHER SMALLS RESOLUTIONS */
 @media screen and (min-width: 1025px){
 
     #small_resolution_menu_icon{

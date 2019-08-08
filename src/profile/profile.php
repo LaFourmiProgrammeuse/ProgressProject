@@ -21,7 +21,6 @@
      <?php include "/home/programmpk/www/src/analytic_tools/google_analytics.html"; ?>
 
      <link rel="stylesheet" type="text/css" href="/src/profile/css/profile.css">
-     <link rel="stylesheet" typr="text/css" href="/src/footer.css">
      <meta charset="utf-8">
      <title>Profile ProgAnts</title>
 

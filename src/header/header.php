@@ -21,7 +21,7 @@
         <!-- Menu de navigation +1024px -->
         <div class="hr_high_resolution">
             <div class="nav_element nav_element_forum"><a href="/forum.php"><?php echo _("Forum"); ?> </a></div>
-            <div class="nav_element nav_element_projects"><a href="#"><?php echo _("Projects"); ?> </a></div>
+            <div class="nav_element nav_element_devblog"><a href="#"><?php echo _("DevBlog"); ?> </a></div>
             <div class="nav_element nav_element_about"><a href="#"><?php echo _("About"); ?> </a></div>
             <div class="nav_element nav_element_contact"><a href="#"><?php echo _("Contact"); ?> </a></div>
         </div>
@@ -52,7 +52,7 @@
 
         <div class="hr_vertical_menu" id="hr_vertical_menu">
             <div class="nav_element nav_element_forum"><a href="/forum.php"><?php echo _("Forum"); ?> </a></div>
-            <div class="nav_element nav_element_projects"><a href="#"><?php echo _("Projects"); ?> </a></div>
+            <div class="nav_element nav_element_devblog"><a href="#"><?php echo _("DevBlog"); ?> </a></div>
             <div class="nav_element nav_element_about"><a href="#"><?php echo _("About"); ?> </a></div>
             <div class="nav_element nav_element_contact"><a href="#"><?php echo _("Contact"); ?> </a></div>
             <div class="separator"></div>
@@ -60,3 +60,13 @@
     </div>
     </div>
 </header>
+
+<!-- MODALS -->
+<div id="modal_warning_no_content">
+    <div class="modal_background">
+        <div class="modal_content">
+            <img src="/images/warning.png" class="warning_img"/>
+            <p>This part of the website has not content yet, folow the progress in our DevBlog</p>
+        </div>
+    </div>
+</div>

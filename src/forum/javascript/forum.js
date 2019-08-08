@@ -158,29 +158,6 @@ $(document).ready(function(){
         clickForumDesc(this);
     });
 
-        /* EVENT POP UP */
-
-    $("#modal_warning_no_content .modal_content").click(function(e){
-        e.stopPropagation();
-    });
-
-    $("#modal_warning_no_content .modal_background").click(function(e){
-        $("#modal_warning_no_content").css("display", "none");
-    });
-
-    $(".nav_element_latest").click(function(){
-        $("#modal_warning_no_content").css("display", "block");
-    });
-
-    $(".nav_element_last_activity").click(function(){
-        $("#modal_warning_no_content").css("display", "block");
-    });
-
-    $(".nav_element_stats").click(function(){
-        $("#modal_warning_no_content").css("display", "block");
-    });
-
-
 
     //Event pour envoyer les formulaires
     $("#form_reply .send").click(function(){
@@ -191,55 +168,6 @@ $(document).ready(function(){
         $("#form_new_topic").submit();
     });
 
-
-        /* MODAL WARNING NO CONTENT */
-
-    $(".nav_element_error_wiki").click(function(){
-        $("#modal_warning_no_content").css("display", "block");
-    });
-
-    $(".nav_element_projects").click(function(){
-        $("#modal_warning_no_content").css("display", "block");
-    });
-
-    $(".nav_element_about").click(function(){
-        $("#modal_warning_no_content").css("display", "block");
-    });
-
-    $(".nav_element_contact").click(function(){
-        $("#modal_warning_no_content").css("display", "block");
-    });
-
-    $("#modal_warning_no_content .modal_content").click(function(e){
-        e.stopPropagation();
-    });
-
-    $("#modal_warning_no_content .modal_background").click(function(e){
-        $("#modal_warning_no_content").css("display", "none");
-    });
-
-
-        /* VERTICAL MENU FOR SMALL RESOLUTION */
-
-    $(".h_small_resolution img").mouseenter(function(){
-        $("#h_vertical_menu").css("display", "flex");
-    });
-
-    $("section").mouseenter(function(){
-        $("#h_vertical_menu").css("display", "none");
-    });
-
-    $("#h_groupa").mouseenter(function(){
-        $("#h_vertical_menu").css("display", "none");
-    });
-
-    $("#h_groupc").mouseenter(function(){
-        $("#h_vertical_menu").css("display", "none");
-    });
-
-    $(".nav_element").click(function(){
-        $("#h_vertical_menu").css("display", "none");
-    });
 
 
         /* REACTIONS EVENTS */

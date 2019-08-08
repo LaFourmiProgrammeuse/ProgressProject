@@ -39,7 +39,6 @@ $profile_image_url = "/images/user_image/" . $profile_image_name;
 
     <!-- CSS LINKS -->
     <link rel="stylesheet" type="text/css" href="/src/forum/css/forum.css" />
-    <link rel="stylesheet" type="text/css" href="/src/footer.css" />
     <link rel="stylesheet" type="text/css" href="/src/header/header.css" />
 
     <!-- SCRIPTS -->
@@ -52,14 +51,6 @@ $profile_image_url = "/images/user_image/" . $profile_image_name;
 </head>
 
 <body>
-    <div id="modal_warning_no_content">
-        <div class="modal_background">
-            <div class="modal_content">
-                <img src="/images/warning.png" class="warning_img"/>
-                <p>This part of the website has not content yet, folow the progress in our DevBlog</p>
-            </div>
-        </div>
-    </div>
 
     <div class="tooltip_connection">
         <p>To perform this action, you have to be connected</p>
@@ -77,31 +68,31 @@ $profile_image_url = "/images/user_image/" . $profile_image_name;
                 <?php
                 if(isset($_GET['forum_part'])){
                     if($_GET['forum_part'] == "rules"){
-                        require "onglets_forum/forum_rules.php";
+                        require "onglets/rules.php";
                     }
                     else if($_GET['forum_part'] == "stats"){
-                        require "onglets_forum/forum_stats.php";
+                        require "onglets/stats.php";
                     }
                     else if($_GET['forum_part'] == "forums"){
-                        require "onglets_forum/forum_forums.php";
+                        require "onglets/forums.php";
                     }
                     else if($_GET['forum_part'] == "forum"){
                         if(isset($_GET["forum_id"]) && isset($_GET["topic_pinned_page"]) && isset($_GET["topic_no_pinned_page"])){
-                            require "onglets_forum/forum_topics.php";
+                            require "onglets/topics.php";
                         }
                     }
                     else if($_GET['forum_part'] == "topic"){
                         if(isset($_GET['topic_id'])){
                             $topic_id = $_GET["topic_id"];
-                            require "onglets_forum/forum_topic.php";
+                            require "onglets/topic.php";
                         }
                     }
                     else if($_GET['forum_part'] == "new_topic"){
-                        require "onglets_forum/forum_new_topic.php";
+                        require "onglets/new_topic.php";
                     }
                 }
                 else{
-                    require "onglets_forum/forum_forums.php";
+                    require "onglets/forums.php";
                 }
                 ?>
 

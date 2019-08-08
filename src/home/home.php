@@ -54,7 +54,6 @@ if($_SESSION['connected'] == "true"){
 
     <!-- CSS LINKS -->
     <link rel="stylesheet" type="text/css" href="/src/home/css/home.css" />
-    <link rel="stylesheet" type="text/css" href="/src/footer.css">
     <link rel="stylesheet" type="text/css" href="/src/home/css/home_simple_image_viewer.css" />
 
     <!-- SCRIPTS -->
@@ -66,14 +65,6 @@ if($_SESSION['connected'] == "true"){
 </head>
 
 <body>
-    <div id="modal_warning_no_content">
-        <div class="modal_background">
-            <div class="modal_content">
-                <img src="/images/warning.png" class="warning_img"/>
-                <p>This part of the website has not content yet, folow the progress in our DevBlog</p>
-            </div>
-        </div>
-    </div>
 
 <div id="body_content"> <!-- Pour que le footer soit placer en bas de la page -->
 

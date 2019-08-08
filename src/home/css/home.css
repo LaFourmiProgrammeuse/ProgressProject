@@ -271,9 +271,6 @@ article {
 	flex-direction: column;
 	color: #747474;
 	margin-top: 20px;
-	background-color: #fbfbfb;
-	border-bottom: 1px solid #f0f0f0;
-	border-radius: 5px;
 }
 .article_wallpapers_pa .element_text {
   margin-left: auto;
@@ -314,7 +311,7 @@ article {
 
     /* MEDIA QUERIES */
 
-/* MQ FOR SMALLS RESOLUTIONS */
+/* MQ FOR SMALL RESOLUTIONS */
 @media screen and (max-width: 1024px){
 
     /* FONT SIZE */

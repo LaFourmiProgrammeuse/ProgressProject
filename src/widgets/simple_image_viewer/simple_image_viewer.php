@@ -68,7 +68,7 @@
 
       //Réponse HTML
       echo "<div class='widget_body'>";
-        echo "<div class='left_arrow'><img src='/images/arrows/a_left.png' /></div>";
+        echo "<div class='left_arrow'><img src='/images/icons/articles/slider/sldr_arw_left.svg' /></div>";
 
         if($n_images_to_show == 3){
           echo "<div class='left_image'><a href='" . $link_for_download_img_1 . "'><img src='" . $image_folder_path[$img_1_index] . $download_content_name[$img_1_index] . "." . $download_content_extension[$img_1_index] . "' /></a></div>";
@@ -80,7 +80,7 @@
           echo "<div class='right_image'><a href='" . $link_for_download_img_3 . "'><img src='" . $image_folder_path[$img_3_index] . $download_content_name[$img_3_index] . "." . $download_content_extension[$img_3_index] . "' /></a></div>";
         }
 
-        echo "<div class='right_arrow'><img src='/images/arrows/a_right.png' /></div>";
+        echo "<div class='right_arrow'><img src='/images/icons/articles/slider/sldr_arw_right.svg' /></div>";
       echo "</div>";
 
 ?>

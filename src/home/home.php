@@ -85,9 +85,9 @@ if($_SESSION['connected'] == "true"){
   <div id="anchor_nav">
     <div id="tn_groupa">
 
-      <div class="tn_groupa_elem"><a href="#">Timeline</a></div>
-      <div class="tn_groupa_elem"><a href="#social_meds">Support</a></div>
-      <div class="tn_groupa_elem"><a href="#h_groupc">Wallpapers</a></div>
+      <div class="tn_groupa_elem"><a href="#prjts_ancle">Timeline</a></div>
+      <div class="tn_groupa_elem"><a href="#sprt_ancle">Support</a></div>
+      <div class="tn_groupa_elem"><a href="#wlprs_ancle">Wallpapers</a></div>
 
     </div>
 
@@ -95,7 +95,7 @@ if($_SESSION['connected'] == "true"){
 
       <form action="/search" id="searchthis" method="get">
         <input id="search" name="tn_searchbar" type="text" placeholder="Type here to search" />
-        <button type=submit id="search-btn"><img id="search-icn" src=/images/icons/normal/search.svg></button>
+        <button type=submit id="search-btn"><img id="search-icn" src=/images/icons/others/search.svg></button>
       </form>
 
     </div>
@@ -103,7 +103,7 @@ if($_SESSION['connected'] == "true"){
 
   <article>
     <div id="h_groupa">
-      <h2 class="gtclass">PROJECTS</h2>
+      <h2 class="gtclass" id="prjts_ancle">PROJECTS</h2>
 
       <div class="a_box">
         <div class="prevw_img">
@@ -150,7 +150,7 @@ if($_SESSION['connected'] == "true"){
     </div>
 
     <div id="h_groupb">
-      <h2 class="gtclass">SUPPORT US</h2>
+      <h2 class="gtclass" id="sprt_ancle">SUPPORT US</h2>
 
       <p class="smllrclass_bdless">You can download our wallpapers and share them to your friends to support us !
       <br>
@@ -167,17 +167,17 @@ if($_SESSION['connected'] == "true"){
     <!-- Slider -->
 
     <div id="h_groupc">
-      <h2 class="gtclass">WALLPAPERS</h2>
+      <h2 class="gtclass" id="wlprs_ancle">WALLPAPERS</h2>
 
       <div class="article_wallpapers_pa">
         <div class="element_text">
-          <div class='widget_simple_image_viewer' id='siv_1'>
-            <div class='widget_body'>
-              <div class='left_arrow'><img src='/images/arrows/a_left.png' /></div>
-              <div class='left_image'><img src='' /></div>
-              <div class='central_image'><img src='' /></div>
-              <div class='right_image'><img src='' /></div>"
-              <div class='right_arrow'><img src='/images/arrows/a_right.png' /></div>
+          <div class="widget_simple_image_viewer" id="siv_1">
+            <div class="widget_body">
+              <div class="left_arrow"><img src="/images/icons/articles/slider/sldr_arw_left.svg" /></div>
+              <div class="left_image"><img src="" /></div>
+              <div class="central_image"><img src="" /></div>
+              <div class="right_image"><img src="" /></div>"
+              <div class="right_arrow"><img src="/images/icons/articles/slider/sldr_arw_right.svg" /></div>
             </div>
           </div>
         </div>

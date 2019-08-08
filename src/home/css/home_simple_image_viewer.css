@@ -25,7 +25,7 @@
 .widget_simple_image_viewer .left_image img {
   width: 425px;
   height: 250px;
-  margin-left: 50px;
+  margin-left: 45px;
 }
 .widget_simple_image_viewer .central_image img {
   width: 500px;
@@ -36,7 +36,7 @@
 .widget_simple_image_viewer .right_image img {
   width: 425px;
   height: 250px;
-  margin-right: 50px;
+  margin-right: 45px;
 }
 
 .widget_simple_image_viewer .left_arrow img {

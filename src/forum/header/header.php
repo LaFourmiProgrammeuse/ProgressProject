@@ -28,7 +28,7 @@
 
     <form action="/search" id="searchthis" method="get">
       <input id="search" name="tn_searchbar" type="text" placeholder="Type here to search" />
-      <button type=submit id="search-btn"><img id="search-icn" src=/images/icons/normal/search.svg></button>
+      <button type=submit id="search-btn"><img id="search-icn" src=/images/icons/others/search.svg></button>
     </form>
 
   </div>

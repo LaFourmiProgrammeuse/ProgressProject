@@ -1,5 +1,7 @@
 <?php
 
+var_dump(debug_backtrace());
+
 require '/home/programmpk/www/src/php_for_all/session_control.php';
 require '/home/programmpk/www/src/php_for_all/log_function.php';
 
@@ -41,15 +43,19 @@ if($username != "" || $password != "" || $email != ""){
     $registered_date = date("Y-m-d");
     $user_ip = GetIp();
 
-    $qprepare = $bdd->prepare('INSERT INTO users (id, username, password, mail, stay_connected, registered_date, profile_image_name, last_ip_used) VALUES (:id, :username, :password, :mail, :stay_connected, :registered_date, :profile_image_name, :user_ip)');
+    $qprepare = $bdd->prepare('INSERT INTO users (username, password, mail, stay_connected, registered_date, profile_image_name, last_ip_used) VALUES (:username, :password, :mail, :stay_connected, :registered_date, :profile_image_name, :user_ip)');
 
-    if($qprepare->execute(array('id' => '0', 'username' => $username, 'password' => $password, 'mail' => $email, 'stay_connected' => '1', 'registered_date' => $registered_date, 'profile_image_name' => 'Default_profile_image.png', 'user_ip' => $user_ip))){
+    if($qprepare->execute(array('username' => $username, 'password' => $password, 'mail' => $email, 'stay_connected' => '1', 'registered_date' => $registered_date, 'profile_image_name' => 'Default_profile_image.png', 'user_ip' => $user_ip))){
         echo "Requête mysql avec succès !";
         log_server($username . " enregistré avec succès !", $file_log_path);
     }else{
         echo "Echec de la requête mysql !";
         log_server("Error : Echec de la requete mysql d'inscription Identifiant : " . $username . ", Mdp : " . $password . ", Mail : " . $email . ", Registered_Date : " . $registered_date . ", Ip user : " . $user_ip . "(formulaire_register.php)", $file_log_path);
     }
+
+    //On incrémente le nombre d'inscrit dans la bdd
+    $qprepare = $bdd->prepare("UPDATE divers SET n_user_registered=n_user_registered+1");
+    $qprepare->execute();
 
     $_SESSION['connected'] = 'true';
     $_SESSION['username'] = $username;
@@ -85,6 +91,6 @@ if($username != "" || $password != "" || $email != ""){
     }
     else{
         header('Location: /home.php');
-
+    }
 }
 ?>

@@ -3,9 +3,9 @@
 .widget_simple_image_viewer {
   width: 100%;
   margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .widget_simple_image_viewer .widget_body {
   width: auto;
@@ -16,38 +16,61 @@
   align-items: center;
 }
 
-/* Images */
+/* Previews */
 
+.left_image img, .central_image img, .right_image img {
+  border-radius: 3.25px;
+  border: 1.75px solid #e3e3e3;
+}
 .widget_simple_image_viewer .left_image img {
-  border-radius: 5px;
-  width: 180px;
-  height: 95px;
-  margin-left: 30px;
+  width: 425px;
+  height: 250px;
+  margin-left: 45px;
 }
 .widget_simple_image_viewer .central_image img {
-  border-radius: 5px;
-  width: 230px;
-  height: 120px;
-  margin-left: 30px;
-  margin-right: 30px;
+  width: 500px;
+  height: 295px;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 .widget_simple_image_viewer .right_image img {
-  border-radius: 5px;
-  width: 180px;
-  height: 95px;
-  margin-right: 30px;
+  width: 425px;
+  height: 250px;
+  margin-right: 45px;
 }
-
-/* Arrows */
 
 .widget_simple_image_viewer .left_arrow img {
-  width: 30px;
+  width: 40px;
 }
 .widget_simple_image_viewer .right_arrow img {
-  width: 30px;
+  width: 40px;
 }
 
-/*@media screen and (max-width: 1024px){
+/* Small resolutions */
+@media screen and (max-width: 1024px) {
 
+  .widget_simple_image_viewer .left_image img {
+    width: 180px;
+    height: 95px;
+    margin-left: 30px;
+  }
+  .widget_simple_image_viewer .central_image img {
+    width: 230px;
+    height: 120px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .widget_simple_image_viewer .right_image img {
+    width: 180px;
+    height: 95px;
+    margin-right: 30px;
+  }
 
-}*/
+  .widget_simple_image_viewer .left_arrow img {
+    width: 30px;
+  }
+  .widget_simple_image_viewer .right_arrow img {
+    width: 30px;
+  }
+
+}

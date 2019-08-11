@@ -230,7 +230,7 @@ a {
   display: none;
 }
 #small_resolution_menu_icon:hover {
-	background: url("/images/icons/normal/h_vertical_m/hovered.svg");
+	background: url("/images/icons/others/h_vertical_m/hovered.svg");
 	background-repeat: no-repeat;
 }
 .hr_high_resolution {

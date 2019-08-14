@@ -10,6 +10,9 @@ RewriteRule ^(home.php)(\?.*){0,1}$ /src/home/home.php$2 [L]
 RewriteRule ^(profile.php)(\?.*){0,1}$ /src/profile/profile.php$2 [L]
 RewriteRule ^(register.php)(\?.*){0,1}$ /src/register/register_page.php$2 [L]
 RewriteRule ^(login.php)(\?.*){0,1}$ /src/login/login_page.php$2 [L]
+RewriteRule ^(staff_portal.php)(\?.*){0,1}$ /src/admin/staff_portal.php$2 [L]
+RewriteRule ^(devblog.php)(\?.*){0,1}$ /src/devblog/devblog.php$2 [L]
+RewriteRule ^(contact.php)(\?.*){0,1}$ /src/contact/contact.php$2 [L]
 
 
 Errordocument 404 /src/error_redirection/error_404/error_404.php

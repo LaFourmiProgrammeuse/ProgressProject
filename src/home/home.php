@@ -1,10 +1,10 @@
 <?php
 
 /* Résolutions
-Very small resolution : inférieur à 580px
-Small résolutions : entre 480px à 1024px
-Medium résolutions : entre 1025px et 1380px
-High résolutions : au dessus de 1381px
+Very smalls resolutiosn : inférieur à 580px
+Smalls résolutions : entre 480px à 1024px
+Mediums résolutions : entre 1025px et 1380px
+Highs résolutions : au dessus de 1381px
 
 Résolution de référence : High resolution (on développe pour les grands écran vu qu'on a de grands écrans et on adpate ensuite le site pour les autres résolutions)
 */

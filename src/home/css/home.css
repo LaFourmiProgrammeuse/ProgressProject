@@ -276,6 +276,37 @@ article {
   margin-left: auto;
   margin-right: auto;
 }
+#dwnld_help {
+	text-align: center;
+	margin-top: 15px;
+	font-family: "open sans";
+	font-size: 0.95vw;
+	font-weight: 400;
+	font-style: italic;
+	color: #858585;
+}
+
+#wlprs_prvws {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 30px;
+}
+.prvws_lign {
+	display: flex;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+.wlpr_frame {
+	background-color: #f6f5f5;
+	width: 288px;
+	height: 162px;
+	border-radius: 5px;
+	border: 1px solid #eaeaea;
+	margin-left: 3px;
+	margin-right: 3px;
+}
 
 /* ASIDE */
 

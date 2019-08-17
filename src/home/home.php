@@ -113,9 +113,9 @@ if($_SESSION['connected'] == "true"){
         <div class="a_desc">
           <h3 class="mtclass">PA - PROGRAMMING ANTS</h3>
 
-          <p class="smllrclass"><span class="semi_bold">Programming Ants</span> is a project we started to push our limits in programmation. For the moment, our website is
-            <span class="semi_bold">very limited in content</span>. Also, we are only <span class="semi_bold">two persons behind this project</span>, and it's difficult to
-            work fast, mostly when we have to solve <span class="semi_bold">bugs and mistakes</span>. But time passes, and the website is getting built slowly !
+          <p class="smllrclass"><b>Programming Ants</b> is the main project my friend and I started <b>to push our limits in programmation</b>. For the moment our
+            website is <b>very limited in content</b>, you can <b>check out the wallpapers</b> we've made or <b>visit our new Forum</b>. Time passes and we're
+            adding new content, <b>the website is getting built slowly</b>.
           </p>
         </div>
       </div>
@@ -128,8 +128,23 @@ if($_SESSION['connected'] == "true"){
         <div class="a_desc">
           <h3 class="mtclass">FORUM</h3>
 
-          <p class="smllrclass">It is a place to <span class="semi_bold">share your opinion or get some help from the community</span>. This is the first thing we've made after having a working
-            website and we're pretty proud of it. The design is <span class="semi_bold">not the final one</span>, and there are still <span class="semi_bold">several bugs</span>.
+          <p class="smllrclass">The <b>forum</b> is the first thing we've added to our website in order to bring more content to it. It's a place where you can
+            <b>share your opinion or get some help from the community</b>. This is the first thing we've made after having basic and working website and we're
+            pretty proud of it. However, <b>the forum is not completely finished</b> and many options are missing.
+          </p>
+        </div>
+      </div>
+
+      <div class="a_box">
+        <div class="prevw_img">
+          <img src="/images/preview_images/solveit_image.JPG">
+        </div>
+
+        <div class="a_desc">
+          <h3 class="mtclass">DEVBLOG</h3>
+
+          <p class="smllrclass">The <b>devblog</b> is the second part we are <b>actually adding to the website</b>. It <b>has not been released yet</b> but its
+            goal is <b>to show you each thing we add, fix or plan to make</b>. Overall, <b>it shows the progress of Programming Ants</b>.
           </p>
         </div>
       </div>
@@ -142,8 +157,8 @@ if($_SESSION['connected'] == "true"){
         <div class="a_desc">
           <h3 class="mtclass">SOLVE IT</h3>
 
-          <p class="smllrclass">It is our main project on <b>Programming Ants</b>. It's goal is to <b>help programmers</b> to find what is wrong with their code when they
-            meet <b>errors or bugs</b>. Me and my friend didn't start this project yet, but we've got many ideas to get a nice final result.
+          <p class="smllrclass">It's one of the projects we want to make in the future on <b>Programming Ants</b>. It's goal will be to <b>help programmers</b> to
+            find out what is wrong with their code when they meet <b>errors or bugs</b>.
           </p>
         </div>
       </div>
@@ -164,24 +179,46 @@ if($_SESSION['connected'] == "true"){
       </div>
     </div>
 
-    <!-- Slider -->
-
     <div id="h_groupc">
       <h2 class="gtclass" id="wlprs_ancle">WALLPAPERS</h2>
 
-      <div class="article_wallpapers_pa">
-        <div class="element_text">
-          <div class="widget_simple_image_viewer" id="siv_1">
-            <div class="widget_body">
-              <div class="left_arrow"><img src="/images/icons/articles/slider/sldr_arw_left.svg" /></div>
-              <div class="left_image"><img src="" /></div>
-              <div class="central_image"><img src="" /></div>
-              <div class="right_image"><img src="" /></div>"
-              <div class="right_arrow"><img src="/images/icons/articles/slider/sldr_arw_right.svg" /></div>
-            </div>
+      <p class="smllrclass_bdless">Here are some wallpapers we've made for the website, you are free to download them !</p>
+      <h3 id="dwnld_help">↓ Clicking on a wallpaper will open a new tab with a downloading page ↓</h3>
+
+      <div id="wlprs_prvws">
+        <div class="prvws_lign">
+          <div class="wlpr_frame"></div>
+          <div class="wlpr_frame"></div>
+          <div class="wlpr_frame"></div>
+        </div>
+        <div class="prvws_lign">
+          <div class="wlpr_frame"></div>
+          <div class="wlpr_frame"></div>
+          <div class="wlpr_frame"></div>
+        </div>
+        <div class="prvws_lign">
+          <div class="wlpr_frame"></div>
+          <div class="wlpr_frame"></div>
+          <div class="wlpr_frame"></div>
+        </div>
+      </div>
+
+      <!-- Slider -->
+
+<!--<div class="article_wallpapers_pa">
+      <div class="element_text">
+        <div class="widget_simple_image_viewer" id="siv_1">
+          <div class="widget_body">
+            <div class="left_arrow"><img src="/images/icons/articles/slider/sldr_arw_left.svg" /></div>
+            <div class="left_image"><img src="" /></div>
+            <div class="central_image"><img src="" /></div>
+            <div class="right_image"><img src="" /></div>"
+            <div class="right_arrow"><img src="/images/icons/articles/slider/sldr_arw_right.svg" /></div>
           </div>
         </div>
       </div>
+    </div>-->
+
     </div>
 
 <!-- Aside -->

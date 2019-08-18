@@ -288,15 +288,11 @@ article {
 
 #wlprs_prvws {
 	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
 	margin-top: 30px;
 }
-.prvws_lign {
-	display: flex;
-	margin-top: 3px;
-	margin-bottom: 3px;
+tbody {
+	margin-left: auto;
+	margin-right: auto;
 }
 .wlpr_frame {
 	background-color: #f6f5f5;
@@ -304,8 +300,6 @@ article {
 	height: 162px;
 	border-radius: 5px;
 	border: 1px solid #eaeaea;
-	margin-left: 3px;
-	margin-right: 3px;
 }
 
 /* ASIDE */

@@ -185,23 +185,23 @@ if($_SESSION['connected'] == "true"){
       <p class="smllrclass_bdless">Here are some wallpapers we've made for the website, you are free to download them !</p>
       <h3 id="dwnld_help">↓ Clicking on a wallpaper will open a new tab with a downloading page ↓</h3>
 
-      <div id="wlprs_prvws">
-        <div class="prvws_lign">
-          <div class="wlpr_frame"></div>
-          <div class="wlpr_frame"></div>
-          <div class="wlpr_frame"></div>
-        </div>
-        <div class="prvws_lign">
-          <div class="wlpr_frame"></div>
-          <div class="wlpr_frame"></div>
-          <div class="wlpr_frame"></div>
-        </div>
-        <div class="prvws_lign">
-          <div class="wlpr_frame"></div>
-          <div class="wlpr_frame"></div>
-          <div class="wlpr_frame"></div>
-        </div>
-      </div>
+      <table id="wlprs_prvws">
+        <tr class="prvws_lign">
+          <td class="wlpr_frame"></div>
+          <td class="wlpr_frame"></div>
+          <td class="wlpr_frame"></div>
+        </tr>
+        <tr class="prvws_lign">
+          <td class="wlpr_frame"></div>
+          <td class="wlpr_frame"></div>
+          <td class="wlpr_frame"></div>
+        </tr>
+        <tr class="prvws_lign">
+          <td class="wlpr_frame"></div>
+          <td class="wlpr_frame"></div>
+          <td class="wlpr_frame"></div>
+        </tr>
+      </table>
 
       <!-- Slider -->
 

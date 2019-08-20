@@ -72,7 +72,7 @@ if($_SESSION['connected'] == "true"){
 
 <?php require "/home/programmpk/www/src/header/header.php"; ?>
 
-<!-- Section -->
+<!-- SECTION -->
 
 <section id="sect1">
   <div id="welc">
@@ -103,7 +103,7 @@ if($_SESSION['connected'] == "true"){
 
   <article>
     <div id="h_groupa">
-      <h2 class="gtclass" id="prjts_ancle">PROJECTS</h2>
+      <h2 class="gtclass" id="prjts_ancle">TIMELINE</h2>
 
       <div class="a_box">
         <div class="prevw_img">

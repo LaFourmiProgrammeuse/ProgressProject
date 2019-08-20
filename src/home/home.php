@@ -185,7 +185,7 @@ if($_SESSION['connected'] == "true"){
       <p class="smllrclass_bdless">Here are some wallpapers we've made for the website, you are free to download them !</p>
       <h3 id="dwnld_help">↓ Clicking on a wallpaper will open a new tab with a downloading page ↓</h3>
 
-      <!--<table id="wlprs_prvws">
+      <table id="wlprs_prvws">
         <tr class="prvws_lign">
           <td class="wlpr_frame"></div>
           <td class="wlpr_frame"></div>
@@ -201,11 +201,11 @@ if($_SESSION['connected'] == "true"){
           <td class="wlpr_frame"></div>
           <td class="wlpr_frame"></div>
         </tr>
-      </table>-->
+      </table>
 
       <!-- Slider -->
 
-    <div class="article_wallpapers_pa">
+    <!--<div class="article_wallpapers_pa">
       <div class="element_text">
         <div class="widget_simple_image_viewer" id="siv_1">
           <div class="widget_body">
@@ -217,7 +217,7 @@ if($_SESSION['connected'] == "true"){
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
 
     </div>
 

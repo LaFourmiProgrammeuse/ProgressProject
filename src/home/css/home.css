@@ -180,23 +180,27 @@ article {
 	justify-content: space-between;
 	margin-top: 50px;
 }
+
 .prevw_img {
 	width: 45%;
 }
 .prevw_img img {
 	width: 100%;
-	border: 0.75px solid #f2f2f2;
+	border: 1.5px solid #C3C3C3;
 }
+
 .a_desc {
 	width: 45%;
 	flex-direction: column;
 }
+
 .mtclass {
 	font-family: "Montserrat", sans-serif;
 	font-size: 1.2vw;
 	font-weight: 500;
 	letter-spacing: 1px;
 }
+
 .smllrclass {
 	font-family: "Open sans", sans-serif;
 	font-size: 0.95vw;
@@ -214,6 +218,7 @@ article {
 	margin-left: auto;
 	margin-right: auto;
 }
+
 .smllrclass_bdless {
 	font-family: "Open sans", sans-serif;
 	font-size: 1vw;
@@ -223,6 +228,7 @@ article {
 	letter-spacing: 1px;
   text-align: center;
 }
+
 #social_meds {
 	display: flex;
 	flex-direction: row;
@@ -230,12 +236,14 @@ article {
 	align-items: center;
 	margin-top: 35px;
 }
+
 #l_inst {
 	height: 45px;
 	width: 45px;
 	margin-right: 17.5px;
 	margin-left: auto;
 }
+
 #social_meds a {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 500;
@@ -252,6 +260,7 @@ article {
 	transition-property: all;
 	transition-duration: 0.5s;
 }
+
 #social_meds:hover a {
 	color: #c1558b;
 	border-top: 2px solid #c1558b;
@@ -425,13 +434,13 @@ tbody {
         font-size: 2.45vw;
     }
 		#h_groupc .smllrclass_bdless {
-        font-size: 1.30vw;
+        font-size: 1.9vw;
     }
 		#dwnld_help {
-			font-size: 1vw;
+			font-size: 1.8vw;
 		}
 
-    /* WIDTH, MARGIN */
+    /* WIDTH, MARGIN, BORDER */
 
     .social_net {
         width: 45%;
@@ -496,6 +505,10 @@ tbody {
         border-left: 0;
         border-bottom: 5px solid black;
         padding-bottom: 25px;
+    }
+
+    .prevw_img img {
+    	border: 1.5px solid #C3C3C3;
     }
 
 

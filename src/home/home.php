@@ -137,7 +137,7 @@ if($_SESSION['connected'] == "true"){
 
       <div class="a_box">
         <div class="prevw_img">
-          <img src="/images/preview_images/solveit_image.JPG">
+          <img src="/images/preview_images/solveit_image.jpg">
         </div>
 
         <div class="a_desc">
@@ -151,7 +151,7 @@ if($_SESSION['connected'] == "true"){
 
       <div class="a_box">
         <div class="prevw_img">
-          <img src="/images/preview_images/solveit_image.JPG">
+          <img src="/images/preview_images/solveit_image.jpg">
         </div>
 
         <div class="a_desc">

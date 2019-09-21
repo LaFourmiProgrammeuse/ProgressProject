@@ -54,13 +54,17 @@
          </div>
      </div>
 
-     <div id="body_content"> <!-- div permettant a section de prendre toute la place de la page et ainsi au footer d'être placer au bas de la page. -->
-         <header>
-             <div id="top">
-                 <h1>Profile</h1>
-                 <a href="/home.php" title="Return to ProgrammingAnts">Return to ProgrammingAnts</a>
-             </div>
-         </header>
+<div id="body_content"> <!-- div permettant a section de prendre toute la place de la page et ainsi au footer d'être placer au bas de la page. -->
+
+<!-- HEADER -->
+
+<?php require "/home/programmpk/www/src/header/header.php"; ?>
+
+<!-- SECTION -->
+
+<h1>Profile</h1>
+<a href="/home.php" title="Return to ProgrammingAnts">Return to ProgrammingAnts</a>
+
 
          <section>
              <div id="aside_nav">

@@ -137,7 +137,7 @@ if($_SESSION['connected'] == "true"){
 
       <div class="a_box">
         <div class="prevw_img">
-          <img src="/images/preview_images/solveit_image.jpg">
+          <img src="/images/preview_images/coming_soon.jpg">
         </div>
 
         <div class="a_desc">
@@ -151,7 +151,7 @@ if($_SESSION['connected'] == "true"){
 
       <div class="a_box">
         <div class="prevw_img">
-          <img src="/images/preview_images/solveit_image.jpg">
+          <img src="/images/preview_images/coming_soon.jpg">
         </div>
 
         <div class="a_desc">
@@ -174,7 +174,7 @@ if($_SESSION['connected'] == "true"){
       </p>
 
       <div id="social_meds">
-        <img id="l_inst" src="/images/icons/articles/instagram.png" />
+        <img id="l_inst" src="/images/logos/instagram.svg" />
         <a href="https://www.instagram.com/programming_ants/">@PROG-ANTS</a>
       </div>
     </div>

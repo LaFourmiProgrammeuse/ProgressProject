@@ -91,15 +91,15 @@ function DesactivateSmallResolutionMode(){
 }
 
 
-    /* EVENT */
+    /* EVENTS */
 
 //WINDOW EVENT
 function window_resized(){
 
-    console.log(window.innerWidth);
+    //console.log(window.innerWidth);
 
     //Si l'utilisateur a une petite résolution, on arrange le code (déplacement et ajout d'attribut) afin d'adapter le site
-    if(window.innerWidth < 1024){
+    if(window.innerWidth <= 1024){
 
         if(small_resolution_mode == false){
             small_resolution_mode = true;

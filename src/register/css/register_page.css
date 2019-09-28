@@ -43,7 +43,7 @@ header {
 }
 
 #h_elements {
-  width: 30%;
+  width: 65%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -57,7 +57,7 @@ header {
 	color: #2b2b2b;
   font-family: 'Roboto', sans-serif;
 	font-weight: 700;
-  font-size: 1.45vw;
+  font-size: 1.55vw;
 	letter-spacing: 1.5px;
   padding-bottom: 10px;
   border-bottom: 1.5px solid #eeeeee;
@@ -71,7 +71,7 @@ header {
 	margin-top: auto;
   margin-bottom: auto;
   margin-left: 5px;
-  width: 0.90vw;
+  width: 1.2vw;
 }
 
 #infb {
@@ -292,15 +292,15 @@ top: 50%;
     }
 
     #infa h2{
-        font-size: 3vw;
+        font-size: 3.8vw;
     }
 
     #infb h3{
-        font-size: 2.40vw;
+        font-size: 3vw;
     }
 
     #send{
-        font-size: 2.2vw;
+        font-size: 2.5vw;
     }
 
     #checkbox_text{
@@ -319,7 +319,11 @@ top: 50%;
         min-height: 82vh;
     }
 
-    .return{
-        width: 2.8vw;
+    #return{
+        width: 3.5vw;
+    }
+
+    input {
+        font-size: 1.7vw;
     }
 }

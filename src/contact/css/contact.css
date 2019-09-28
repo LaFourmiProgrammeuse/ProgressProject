@@ -1,0 +1,88 @@
+p, h2{
+	margin: 0;
+}
+
+body {
+	position: relative;
+	background-color: white;
+	margin: 0;
+	padding: 0;
+}
+
+#body_content{ /* Inclus le header mais pas le footer */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+
+
+/* ---- particles.js container ---- */
+
+#particles-frame {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 75px); /* On retire la hauteur du header */
+  background-color: #16a085;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+    margin-top: 75px;
+}
+
+#central_container {
+    width: 50%;
+    margin: auto;
+    background-color: white;
+    z-index: 4;
+    border-radius: 25px;
+    padding: 30px;
+    text-align: center;
+}
+
+.groupa {
+    margin-bottom: 20px;
+}
+
+.groupa h2 {
+    margin-bottom: 7px;
+}
+
+.answer_time {
+    margin-top: 9px;
+}
+
+.show_mail {
+    margin-top: 12px;
+}
+
+.groupb {
+
+}
+
+.groupb h2 {
+    margin-bottom: 7px;
+}
+
+.pull_request {
+    margin-top: 9px;
+}
+
+.btn_bugreport_show_popup {
+    margin-top: 12px;
+}
+
+
+/* All smalls resolutions */
+@media screen and (max-width: 1024px){
+
+    #particles-frame {
+        margin-top: 93px;
+    }
+}

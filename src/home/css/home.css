@@ -511,6 +511,10 @@ tbody {
     	border: 1.5px solid #C3C3C3;
     }
 
+    #search {
+        width: 246px;
+    }
+
 
 
     /* FLEX, ORDER, DISPLAY */

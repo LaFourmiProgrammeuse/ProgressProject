@@ -1,6 +1,26 @@
 <?php
     //On replace les '&' par des 'and' pour pouvoir mettre l'ensemble des arguments que reçois la page dans le paramètre redirection_path que recoit les pages login et register
     $current_page_path = str_replace("&", "and", $_SERVER['REQUEST_URI']);
+
+    if($_SESSION['connected'] == "true"){
+
+        $username = $_SESSION['username'];
+
+        try{
+            //On initialise une connexion avec la bdd
+            $bdd = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
+
+        }catch(Exception $e){
+            die('Erreur : ' . $e);
+
+        }
+
+        $qprepare = $bdd->prepare("SELECT profile_image_name FROM users WHERE username=?");
+        $qprepare->execute(array($username));
+
+        $profile_image_name = $qprepare->fetch()["profile_image_name"];
+        $profile_image_url = "/images/user_image/" . $profile_image_name;
+    }
 ?>
 
 

@@ -1,3 +1,12 @@
+<?php
+
+//Ne pas mettre de code html avant cette ligne !
+require '/home/programmpk/www/src/php_for_all/session_control.php';
+include "/home/programmpk/www/src/language/language.php";
+
+IncrementVisitorCounter();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>

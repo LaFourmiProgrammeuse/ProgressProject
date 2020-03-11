@@ -28,6 +28,8 @@ IncrementVisitorCounter();
     <meta charset="utf-8"/>
     <title><?php echo _("Home");?></title>
 
+    <!--<link rel="icon" type="image/x-icon" href="/images/icons/favicon.png" />-->
+
     <!-- Google Analytics -->
     <?php include "/home/programmpk/www/src/analytic_tools/google_analytics.html"; ?>
 

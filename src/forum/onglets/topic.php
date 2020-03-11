@@ -1,7 +1,7 @@
 <?php
 
 try{
-    $bdd = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
+    $db = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
 }
 catch(Exception $e){
     die('Erreur : ' . $e->getMessage());
@@ -17,7 +17,7 @@ $n_posts = 0;
 
 
 //On récupère les posts dans la bdd
-$qprepare = $bdd->prepare("SELECT id, post_index, post_content, post_title, author, date_of_publication, n_like, n_dislike FROM posts WHERE topic=? ORDER BY post_index");
+$qprepare = $db->prepare("SELECT id, post_index, post_content, post_title, author, date_of_publication, n_like, n_dislike FROM posts WHERE topic=? ORDER BY post_index");
 $qprepare->execute(array(intval($topic_id)));
 
 while($qrep = $qprepare->fetch(PDO::FETCH_NAMED)){
@@ -46,7 +46,7 @@ while($qrep = $qprepare->fetch(PDO::FETCH_NAMED)){
 
 
 		//On recupère les données de l'utilisateur
-		$qprepare_2 = $bdd->prepare('SELECT like_received, number_message_sent, registered_date, last_activity, rank FROM users WHERE username=?');
+		$qprepare_2 = $db->prepare('SELECT like_received, number_message_sent, registered_date, last_activity, rank FROM users WHERE username=?');
 		$qprepare_2->execute(array($qrep['author']));
 
 		$qrep_2 = $qprepare_2->fetch(PDO::FETCH_NAMED);
@@ -127,7 +127,7 @@ while($qrep = $qprepare->fetch(PDO::FETCH_NAMED)){
 		}
 
         //On récupère le rang principal de l'auteur
-        $qprepare = $bdd->prepare("SELECT rank_name FROM ranks WHERE id=?");
+        $qprepare = $db->prepare("SELECT rank_name FROM ranks WHERE id=?");
         $qprepare->execute(array($author_rank));
 
         $author_rank_name = $qprepare->fetch()['rank_name'];
@@ -140,7 +140,7 @@ while($qrep = $qprepare->fetch(PDO::FETCH_NAMED)){
 }
 
 //On récupère des informations sur le topic
-$qprepare_3 = $bdd->prepare("SELECT number_views, topic_title, topic_subtitle, forum_id FROM topics WHERE id=?");
+$qprepare_3 = $db->prepare("SELECT number_views, topic_title, topic_subtitle, forum_id FROM topics WHERE id=?");
 $qprepare_3->execute(array($topic_id));
 
 $qrep_3 = $qprepare_3->fetch(PDO::FETCH_NAMED);
@@ -152,11 +152,11 @@ $forum_id = $qrep_3['forum_id'];
 //On incrémente le compteur de vue dans la base de données pour ce topic
 $n_views_topic = intval($qrep_3['number_views'])+1;
 
-$qprepare_4 = $bdd->prepare("UPDATE topics SET number_views=? WHERE id=?");
+$qprepare_4 = $db->prepare("UPDATE topics SET number_views=? WHERE id=?");
 $qprepare_4->execute(array($n_views_topic, $topic_id));
 
 //On récupère le nom et la catégorie du forum
-$qprepare_5 = $bdd->prepare("SELECT name, forum_type FROM forums WHERE id=?");
+$qprepare_5 = $db->prepare("SELECT name, forum_type FROM forums WHERE id=?");
 $qprepare_5->execute(array($forum_id));
 
 $qrep_5 = $qprepare_5->fetch(PDO::FETCH_NAMED);

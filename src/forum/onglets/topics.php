@@ -14,7 +14,16 @@ $n_no_pinned_topic_beginner = ($topic_no_pinned_page-1)*$n_topics_per_page;
 
 $forum_id = $_GET['forum_id'];
 
-$qprepare = $bdd->prepare("SELECT name, number_topics FROM forums WHERE id=?");
+try{
+    //On initialise une connexion avec la bdd
+    $db = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
+
+}catch(Exception $e){
+    die('Erreur : ' . $e);
+
+}
+
+$qprepare = $db->prepare("SELECT name, number_topics FROM forums WHERE id=?");
 $qprepare->execute(array($forum_id));
 
 $qrep = $qprepare->fetch();
@@ -26,7 +35,7 @@ $list_pinned_topics = array();
 
 
     //On cherche la categorie du topic
-    $qprepare = $bdd->prepare("SELECT forum_type FROM forums WHERE id=?");
+    $qprepare = $db->prepare("SELECT forum_type FROM forums WHERE id=?");
     $qprepare->execute(array($forum_id));
 
     $forum_category = $qprepare->fetch()[0];
@@ -37,14 +46,14 @@ $list_pinned_topics = array();
 
 
     //Récuperation du nombre de topic épinglé et non épinglé
-    $qprepare_6 = $bdd->prepare("SELECT id FROM topics WHERE pinned=0 && forum_id=?");
+    $qprepare_6 = $db->prepare("SELECT id FROM topics WHERE pinned=0 && forum_id=?");
     $qprepare_6->execute(array($forum_id));
 
     $qrep_6 = $qprepare_6->fetch();
     $n_of_page_no_pinned_topic = ceil($qprepare_6->rowCount()/$n_topics_per_page);
 
 
-    $qprepare_7 = $bdd->prepare("SELECT id FROM topics WHERE pinned=1 && forum_id=?");
+    $qprepare_7 = $db->prepare("SELECT id FROM topics WHERE pinned=1 && forum_id=?");
     $qprepare_7->execute(array($forum_id));
 
     $qrep_7 = $qprepare_7->fetch();
@@ -53,11 +62,11 @@ $list_pinned_topics = array();
 
 
     //Recup des informations sur les topics non épinglés du forum
-    $qprepare_2 = $bdd->prepare("SELECT id, author, topic_title, last_activity, number_posts, number_views FROM topics WHERE forum_id=? && pinned=0 ORDER BY last_activity DESC LIMIT " . $n_no_pinned_topic_beginner . ", " . $n_topics_per_page);
+    $qprepare_2 = $db->prepare("SELECT id, author, topic_title, last_activity, number_posts, number_views FROM topics WHERE forum_id=? && pinned=0 ORDER BY last_activity DESC LIMIT " . $n_no_pinned_topic_beginner . ", " . $n_topics_per_page);
     $qprepare_2->execute(array($forum_id/*, $n_no_pinned_topic_beginner*//*, $n_topics_per_page*/));
 
     //Recup des informations sur les topics épinglés du forum
-    $qprepare_4 = $bdd->prepare("SELECT id, author, topic_title, last_activity, pinned, number_posts, number_views FROM topics WHERE forum_id=? && pinned=1 ORDER BY last_activity DESC LIMIT " . $n_pinned_topic_beginner . ", " . $n_topics_per_page);
+    $qprepare_4 = $db->prepare("SELECT id, author, topic_title, last_activity, pinned, number_posts, number_views FROM topics WHERE forum_id=? && pinned=1 ORDER BY last_activity DESC LIMIT " . $n_pinned_topic_beginner . ", " . $n_topics_per_page);
     $qprepare_4->execute(array($forum_id/*, $n_pinned_topic_beginner, $n_topics_per_page*/));
 
 
@@ -70,7 +79,7 @@ while($qrep_2 = $qprepare_2->fetch(PDO::FETCH_NAMED)){
 
     $has_topic = true;
 
-    $qprepare_3 = $bdd->prepare("SELECT author, date_of_publication FROM posts WHERE topic=? ORDER BY date_of_publication DESC LIMIT 1");
+    $qprepare_3 = $db->prepare("SELECT author, date_of_publication FROM posts WHERE topic=? ORDER BY date_of_publication DESC LIMIT 1");
     $qprepare_3->execute(array($qrep_2['id']));
     $qrep_3 = $qprepare_3->fetch(PDO::FETCH_NAMED);
 
@@ -132,7 +141,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
 
     $has_topic_pinned = true;
 
-    $qprepare_5 = $bdd->prepare("SELECT author, date_of_publication FROM posts WHERE topic=? ORDER BY date_of_publication DESC LIMIT 1");
+    $qprepare_5 = $db->prepare("SELECT author, date_of_publication FROM posts WHERE topic=? ORDER BY date_of_publication DESC LIMIT 1");
     $qprepare_5->execute(array($qrep_4['id']));
     $qrep_5 = $qprepare_5->fetch(PDO::FETCH_NAMED);
 

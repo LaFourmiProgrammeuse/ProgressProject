@@ -49,19 +49,19 @@ $forums_forum_functioning = array();
 $logo_forum_dir_path = "/images/topic_icons/";
 
 try{
-    $bdd = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
+    $db = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
 }
 catch(Exception $e){
     die('Erreur : ' . $e->getMessage());
 }
 
-$qprepare = $bdd->prepare("SELECT name, forum_type FROM forums");
+$qprepare = $db->prepare("SELECT name, forum_type FROM forums");
 $qprepare->execute();
 
 //On récupère les informations pour chaque forums
 while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
 
-    $qprepare_2 = $bdd->prepare("SELECT forum_desc, last_active_topic, number_posts, number_topics, logo_name FROM forums WHERE name=?");
+    $qprepare_2 = $db->prepare("SELECT forum_desc, last_active_topic, number_posts, number_topics, logo_name FROM forums WHERE name=?");
     $qprepare_2->execute(array($forum['name']));
 
     $forum_information = $qprepare_2->fetch(PDO::FETCH_ASSOC);
@@ -69,7 +69,7 @@ while($forum = $qprepare->fetch(PDO::FETCH_ASSOC)){
     //Si le forum n'est pas vide on recup les informations du dernier topic actif
     if(intval($forum_information['last_active_topic']) != -1){
 
-        $qprepare_3 = $bdd->prepare("SELECT last_activity, topic_title FROM topics WHERE id=?");
+        $qprepare_3 = $db->prepare("SELECT last_activity, topic_title FROM topics WHERE id=?");
         $qprepare_3->execute(array($forum_information['last_active_topic']));
 
         $last_topic_information = $qprepare_3->fetch(PDO::FETCH_ASSOC);

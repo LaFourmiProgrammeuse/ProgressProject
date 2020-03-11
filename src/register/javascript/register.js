@@ -23,7 +23,7 @@ var form_already_sent = false;
 function $_GET(param) {
 	var vars = {};
 	window.location.href.replace( location.hash, '' ).replace(
-		/[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+		/[?&]+([^=&]+)=?([^&]*)?/gi,
 		function( m, key, value ) { // callback
 			vars[key] = value !== undefined ? value : '';
 		}
@@ -349,6 +349,7 @@ function isValidMail(mail){
 }
 
 
+
     /* VALIDATION */
 
 
@@ -485,6 +486,12 @@ function EmailValidation(){
 function Validation(){
 
     if(NicknameValidation() == true && PassValidation() == true && PassConfirmValidation() == true && EmailValidation() == true){
+
+        if(nickname_use_now == true){
+            $("#message_error_bad_filled").show();
+            return false;
+        }
+
         return true;
     }
     else{
@@ -492,16 +499,79 @@ function Validation(){
     }
 }
 
+function Send(){
+
+    if(Validation()){
+
+        if(form_already_sent == true){
+            return;
+        }
+
+        form_already_sent = true;
+
+        $("form").submit();
+    }
+    else{
+        $("#message_error_nickname").hide();
+        $("#message_error_confirmation_password").hide();
+        $("#message_error_password").hide();
+        $("#message_error_email").hide();
+
+        $("#message_error_bad_filled").show();
+    }
+}
+
+
+
+
+
+
     /* EVENTS */
 
-    /* -change pour gerer le copier coller
-       -click pour gerer le retour depuis
-       un autre champ
-       -keyup pour gerer le changement de
-       texte
-       -mouseup pour gerer la croix de
-       delete
+    /* - change pour gérer le copier coller
+       - click pour gérer le retour depuis
+         un autre champ
+       - keyup pour gérer le changement de
+         texte
+       - mouseup pour gérer la croix de
+         delete
+       - keypress pour gérer la pression de la touche entrée
     */
+
+
+function NicknameFieldKeyPressed(e){
+
+    if( e.which == 13 ){  //ENTER
+        $("#nickname").blur();
+        Send();
+    }
+}
+
+function PassFieldKeyPressed(e){
+
+    if( e.which == 13 ){
+        $("#pass").blur();
+        Send();
+    }
+}
+
+function PassConfirmFieldKeyPressed(e){
+
+    if( e.which == 13 ){
+        $("#pass_confirm").blur();
+        Send();
+    }
+}
+
+function EmailFieldKeyPressed(e){
+
+    if( e.which == 13 ){
+        $("#email").blur();
+        Send();
+    }
+}
+
+
 
 $(document).ready(function(){
 
@@ -533,12 +603,6 @@ $("#nickname").keyup(function(){
 
     nickname_old_value = $("#nickname").val();
 
-    /* A l'issue de cette fonction quelque
-       que soit le résultat final la fonction
-       Show_Nickname_Error sera executer avec
-       comme param le resultatde cette requete
-       Http */
-
         requestValidationNickname();
 
 });
@@ -559,13 +623,13 @@ $("#nickname").mouseup(function(){
 
 $("#nickname").click(function(){
 
-   /* A l'issue de cette fonction quelque
-      que soit le résultat final la fonction
-      Show_Nickname_Error sera executer avec
-      comme param le resultatde cette requete
-      Http */
-
        requestValidationNickname();
+
+});
+
+$("#nickname").keypress(function(e){
+
+    NicknameFieldKeyPressed(e);
 
 });
 
@@ -585,6 +649,12 @@ $("#pass").click(function(){
 
 });
 
+$("#pass").keypress(function(e){
+
+    PassFieldKeyPressed(e);
+
+});
+
 
 /* CONFIRMATION PASSWORD INPUT */
 $("#pass_confirm").keyup(function(){
@@ -597,6 +667,12 @@ $("#pass_confirm").keyup(function(){
 $("#pass_confirm").click(function(){
 
     Show_Pass_Confirm_Error();
+
+});
+
+$("#pass_confirm").keypress(function(e){
+
+    PassConfirmFieldKeyPressed(e);
 
 });
 
@@ -640,33 +716,16 @@ $("#email").click(function(){
 
 });
 
+$("#email").keypress(function(e){
+
+    EmailFieldKeyPressed(e);
+
+});
+
 
 /* BUTTON SEND */
 $("#send").click(function(){
-
-    if(nickname_use_now == true){
-        $("#message_error_bad_filled").show();
-        return;
-    }
-
-    if(Validation()){
-
-        if(form_already_sent == true){
-            return;
-        }
-
-        form_already_sent = true;
-
-        $("form").submit();
-    }
-    else{
-        $("#message_error_nickname").hide();
-        $("#message_error_confirmation_password").hide();
-        $("#message_error_password").hide();
-        $("#message_error_email").hide();
-
-        $("#message_error_bad_filled").show();
-    }
+    Send();
 });
 
 });

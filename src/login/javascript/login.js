@@ -128,6 +128,31 @@ function Validation(){
     }
 }
 
+function Send(){
+
+    if(Validation()){
+        requestLoginCredentials();
+    }else{
+        $("#message_error_bad_filled").show();
+    }
+}
+
+function NicknameFieldKeyPressed(e){
+
+    if( e.which == 13 ){  //ENTER
+        $("#nickname").blur();
+        Send();
+    }
+}
+
+function PassFieldKeyPressed(e){
+
+    if( e.which == 13 ){
+        $("#pass").blur();
+        Send();
+    }
+}
+
 $(document).ready(function(){
 
     $("#message_error_bad_filled").hide();
@@ -135,14 +160,20 @@ $(document).ready(function(){
 
         /* EVENT */
 
+    $("#nickname").keypress(function(e){
+
+        NicknameFieldKeyPressed(e);
+
+    });
+
+    $("#pass").keypress(function(e){
+
+        PassFieldKeyPressed(e);
+
+    });
+
     $("#send").click(function(){
-
-        if(Validation()){
-            requestLoginCredentials();
-        }else{
-            $("#message_error_bad_filled").show();
-        }
-
+        Send();
     });
 
 });

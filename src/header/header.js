@@ -169,10 +169,6 @@ $(document).ready(function(){
         $("#modal_warning_no_content").css("display", "block");
     });
 
-    $(".nav_element_contact").click(function(){
-       $("#modal_warning_no_content").css("display", "block");
-    });
-
     $("#modal_warning_no_content .modal_content").click(function(e){
         e.stopPropagation();
     });

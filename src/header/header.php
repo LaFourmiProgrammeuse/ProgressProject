@@ -41,9 +41,9 @@
         <!-- Menu de navigation +1024px -->
         <div class="hr_high_resolution">
             <div class="nav_element nav_element_forum"><a href="/forum.php"><?php echo _("Forum"); ?> </a></div>
+            <div class="nav_element nav_element_contact"><a href="/contact.php"><?php echo _("Contact"); ?> </a></div>
             <div class="nav_element nav_element_devblog"><a href="#"><?php echo _("DevBlog"); ?> </a></div>
             <div class="nav_element nav_element_about"><a href="#"><?php echo _("About"); ?> </a></div>
-            <div class="nav_element nav_element_contact"><a href="#"><?php echo _("Contact"); ?> </a></div>
         </div>
     </div>
 

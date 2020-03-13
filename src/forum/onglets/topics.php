@@ -328,7 +328,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
               }
             ?>
 
-            <img class="arrow_left" src="/images/arrows/a_left.png" />
+            <img class="arrow_left" src="/images/icons/articles/slider/sldr_arw_left.svg" />
               <?php
                 echo "</a>";
               ?>
@@ -363,7 +363,7 @@ while($qrep_4 = $qprepare_4->fetch(PDO::FETCH_NAMED)){
               }
             ?>
 
-            <img class="arrow_right" src="/images/arrows/a_right.png" />
+            <img class="arrow_right" src="/images/icons/articles/slider/sldr_arw_right.svg" />
               <?php
                 echo "</a>";
               ?>

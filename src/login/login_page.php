@@ -34,9 +34,9 @@ if(isset($_GET['redirection_path']))
 					<div id="h_elements">
 						<div id="infa">
 							<h2>Log In to Programming Ants</h2>
-							<a href="/home.php" title="Return to the homepage"><img id="return" src="/images/icons/others/return.svg"></a>
+							<a href="<?php echo $_GET["redirection_path"]; ?>" title="Return to the homepage"><img id="return" src="/images/icons/others/return.svg"></a>
 						</div>
-						<div id="infb"><h3>If you are not registered yet, <a href="/register.php" id="register_go" title="Sign up page">click here</a> to join us !</h3></div>
+						<div id="infb"><h3>If you are not registered yet, <a href="/register.php?redirection_path=<?php echo $_GET["redirection_path"]; ?>" id="register_go" title="Sign up page">click here</a> to join us !</h3></div>
 					</div>
 				</header>
 

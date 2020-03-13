@@ -31,9 +31,9 @@ IncrementVisitorCounter();
             <div id="h_elements">
                 <div id="infa">
                     <h2>Sign Up to Programming Ants</h2>
-                    <a href="/home.php" title="Return to the homepage"><img id="return" src="/images/icons/others/return.svg"></a>
+                    <a href="<?php echo $_GET["redirection_path"]; ?>" title="Return to the homepage"><img id="return" src="/images/icons/others/return.svg"></a>
                 </div>
-                <div id="infb"><h3>If you already have an existing account, <a href="/login.php" id="login_go" title="Log In page">click here</a> to log in !</h3></div>
+                <div id="infb"><h3>If you already have an existing account, <a href="/login.php?redirection_path=<?php echo $_GET["redirection_path"]; ?>" id="login_go" title="Log In page">click here</a> to log in !</h3></div>
             </div>
         </header>
 

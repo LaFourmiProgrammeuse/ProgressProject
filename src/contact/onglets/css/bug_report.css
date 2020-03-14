@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600|Roboto:300,300i,400,400i,500,500i,700&display=swap');
+
+.title {
+    margin-bottom: 10px;
+    font-size: 1.5vw;
+}
+
+.topic {
+    margin-bottom: 6px;
+}
+
+.topic p {
+    margin-bottom: 6px;
+}
+
+.topic input {
+    width: 250px;
+}
+
+.type {
+    margin-bottom: 20px;
+}
+
+.type p {
+    margin-bottom: 5px;
+}
+
+.type select {
+    width: 250px;
+}
+
+.bug_description {
+    width: 100%;
+}
+
+.bug_description p {
+    margin-bottom: 5px;
+}
+
+.bug_description textarea {
+    width: 70%;
+    height: 140px;
+}
+
+#bttn_send {
+    margin-top: 10px;
+    width: 150px;
+}
+
+/* MEDIA QUERIES */
+
+/* MQ FOR MEDIUM RESOLUTIONS */
+@media screen and (min-width: 1025px) and (max-width: 1379px){
+
+    /* FONT SIZE */
+
+    .title {
+        font-size: 1.90vw;
+    }
+
+    .topic p {
+        font-size: 1.4vw;
+    }
+
+    .type p {
+        font-size: 1.4vw;
+    }
+
+    .bug_description p {
+        font-size: 1.4vw;
+    }
+}
+
+/* MQ FOR SMALL RESOLUTIONS */
+@media screen and (max-width: 1024px){
+
+    /* FONT SIZE */
+
+    .title {
+        font-size: 2.4vw;
+    }
+
+    .topic p {
+        font-size: 1.9vw;
+    }
+
+    .type p {
+        font-size: 1.9vw;
+    }
+
+    .bug_description p {
+        font-size: 1.9vw;
+    }
+
+}

@@ -9,6 +9,22 @@ IncrementVisitorCounter();
 ini_set("display_errors", 1);
 ini_set('error_log', dirname(__file__) . '../log_server.txt');
 
+//On ouvre une connection avec la bdd (utilisée dans les onglets php)
+try{
+    $db = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
+}
+catch(Exception $e){
+    die('Erreur : ' . $e->getMessage());
+}
+
+$username = $_SESSION['username'];
+
+$qprepare = $db->prepare("SELECT profile_image_name FROM users WHERE username=?");
+$qprepare->execute(array($username));
+
+$profile_image_name = $qprepare->fetch()["profile_image_name"];
+$profile_image_url = "/images/user_image/" . $profile_image_name;
+
 ?>
 
 <!DOCTYPE html>

@@ -1,26 +1,6 @@
 <?php
     //On replace les '&' par des 'and' pour pouvoir mettre l'ensemble des arguments que reçois la page dans le paramètre redirection_path que recoit les pages login et register
     $current_page_path = str_replace("&", "and", $_SERVER['REQUEST_URI']);
-
-    if($_SESSION['connected'] == "true"){
-
-        $username = $_SESSION['username'];
-
-        try{
-            //On initialise une connexion avec la bdd
-            $bdd = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
-
-        }catch(Exception $e){
-            die('Erreur : ' . $e);
-
-        }
-
-        $qprepare = $bdd->prepare("SELECT profile_image_name FROM users WHERE username=?");
-        $qprepare->execute(array($username));
-
-        $profile_image_name = $qprepare->fetch()["profile_image_name"];
-        $profile_image_url = "/images/user_image/" . $profile_image_name;
-    }
 ?>
 
 
@@ -72,9 +52,9 @@
 
         <div class="hr_vertical_menu" id="hr_vertical_menu">
             <div class="nav_element nav_element_forum"><a href="/forum.php"><?php echo _("Forum"); ?> </a></div>
+            <div class="nav_element nav_element_contact"><a href="/contact.php"><?php echo _("Contact"); ?> </a></div>
             <div class="nav_element nav_element_devblog"><a href="#"><?php echo _("DevBlog"); ?> </a></div>
             <div class="nav_element nav_element_about"><a href="#"><?php echo _("About"); ?> </a></div>
-            <div class="nav_element nav_element_contact"><a href="#"><?php echo _("Contact"); ?> </a></div>
             <div class="separator"></div>
         </div>
     </div>

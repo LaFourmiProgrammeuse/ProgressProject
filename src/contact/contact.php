@@ -21,6 +21,8 @@ IncrementVisitorCounter();
     <script type="text/javascript" src="/src/framework_javascript/particles.js"></script>
     <script type="text/javascript" src="/src/contact/javascript/contact.js"></script>
 
+    
+
 </head>
 <body>
 
@@ -33,10 +35,17 @@ IncrementVisitorCounter();
 
     <div id="central_container">
 
+        <?php
+            if(isset($_GET["onglet"]) && $_GET["onglet"] == "bug_report"){
+                require "/home/programmpk/www/src/contact/onglets/bug_report.php";
+            }
+            else{
+        ?>
+
         <div class="groupa">
             <h2>For contact us</h2>
 
-            <p>If you have a question, an information to send us or an idea to improve the site, you can contact us by email or by private message on instagram. </p>
+            <p>If you have a question, an information to send us or an idea to improve the site, you can contact us by email or by private message on <a href="https://www.instagram.com/prog_ants/">instagram. </a></p>
             <p class="answer_time">There is no defined response time but we try to respond quickly</p>
 
             <div class="show_mail">
@@ -52,10 +61,11 @@ IncrementVisitorCounter();
             <h2>Bug report</h2>
 
             <p>If during your browsing you encounter a malfunction you can report it to us here by filling out the form. This will allow us to adjust it and improve the site.</p>
-            <p class="pull_request">You can propose a solution to a bug or suggest improving a feature in the form of code on github</p>
+            <p class="pull_request">You can propose a solution to a bug or suggest improving a feature in the form of code on <a href="https://github.com/LaFourmiProgrammeuse/ProgressProject">github</a></p>
 
-            <button class="btn_bugreport_show_popup">Report a bug</button>
+            <a class="link_bug_report" href="/contact.php?onglet=bug_report"><button class="btn_bugreport_show_form">Report a bug</button></a>
         </div>
+        <?php } ?>
     </div>
 
     <?php require "../footer.php"; ?>

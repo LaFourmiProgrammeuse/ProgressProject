@@ -19,13 +19,34 @@ ini_set('error_log', dirname(__file__) . '/src/log_server.txt');
 error_reporting(E_ALL);
 
 IncrementVisitorCounter();
+
+if($_SESSION['connected'] == "true"){
+
+    try{
+        //On initialise une connexion avec la bdd
+        $db = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
+
+    }catch(Exception $e){
+        die('Erreur : ' . $e);
+
+    }
+
+    $username = $_SESSION['username'];
+
+    $qprepare = $db->prepare("SELECT profile_image_name FROM users WHERE username=?");
+    $qprepare->execute(array($username));
+
+    $profile_image_name = $qprepare->fetch()["profile_image_name"];
+    $profile_image_url = "/images/user_image/" . $profile_image_name;
+}
+
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 
-    <meta charset="utf-8"/>
+    <meta charset="utf-8"/> 
     <title><?php echo _("Home");?></title>
 
     <!--<link rel="icon" type="image/x-icon" href="/images/icons/favicon.png" />-->

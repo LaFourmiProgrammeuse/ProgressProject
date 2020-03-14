@@ -1,5 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600|Roboto:300,300i,400,400i,500,500i,700&display=swap');
+
 p, h2{
 	margin: 0;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+    font-family: "Roboto", sans-serif;
+    color: #2b2b2b;
 }
 
 body {
@@ -18,6 +29,16 @@ body {
 canvas {
   display: block;
   vertical-align: bottom;
+}
+
+button {
+    background-color: #e74c3c;
+    border: 1px #e74c3c solid;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1vw;
 }
 
 
@@ -52,6 +73,11 @@ canvas {
 
 .groupa h2 {
     margin-bottom: 7px;
+    font-size: 1.65vw;
+}
+
+.groupa p {
+    font-size: 1.2vw;
 }
 
 .answer_time {
@@ -68,21 +94,106 @@ canvas {
 
 .groupb h2 {
     margin-bottom: 7px;
+    font-size: 1.65vw;
+}
+
+.groupb p {
+    font-size: 1.2vw;
 }
 
 .pull_request {
     margin-top: 9px;
 }
 
-.btn_bugreport_show_popup {
+.btn_bugreport_show_form {
     margin-top: 12px;
 }
 
 
-/* All smalls resolutions */
+
+
+    /* MEDIA QUERIES */
+
+/* MQ FOR MEDIUM RESOLUTIONS */
+@media screen and (min-width: 1025px) and (max-width: 1379px){
+
+    #central_container {
+        width: 60%;
+    }
+
+    /* FONT SIZE */
+
+    .groupa h2 {
+        font-size: 1.9vw;
+    }
+
+    .groupb h2 {
+        font-size: 1.9vw;
+    }
+
+    .groupa p {
+        font-size: 1.45vw;
+    }
+
+    .groupb p {
+        font-size: 1.45vw;
+    }
+
+    button {
+        font-size: 1.35vw;
+    }
+
+}
+
+/* MQ FOR SMALL RESOLUTIONS */
 @media screen and (max-width: 1024px){
 
     #particles-frame {
         margin-top: 93px;
+        height: calc(100% - 93px);
+    }
+
+    #central_container {
+        width: 75%;
+    }
+
+    /* FONT SIZE */
+
+    .groupa h2 {
+        font-size: 2.55vw;
+    }
+
+    .groupb h2 {
+        font-size: 2.55vw;
+    }
+
+    .groupa p {
+        font-size: 1.75vw;
+    }
+
+    .groupb p {
+        font-size: 1.75vw;
+    }
+
+    button {
+        font-size: 2vw;
+    }
+
+    /* MARGIN, PADDING */
+
+    .groupa {
+        margin-bottom: 50px;
+    }
+
+    .show_mail {
+        margin-top: 18px;
+    }
+
+    .btn_bugreport_show_form {
+        margin-top: 18px;
+    }
+
+    #central_container {
+        padding: 36px;
     }
 }

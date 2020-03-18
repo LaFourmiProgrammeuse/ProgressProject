@@ -1,10 +1,10 @@
 <?php
-  $content_name = $_GET['content_name'];
-    $extension = $_GET['content_extension'];
+  $content_name = strip_tags($_GET['content_name']);
+    $extension = strip_tags($_GET['content_extension']);
 
     try{
         //On initialise une connexion avec la bdd
-        $bdd = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
+        $db = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
 
     }catch(Exception $e){
         die('Erreur : ' . $e);
@@ -14,7 +14,7 @@
     $l_extention_available = array();
     $l_resolution_available = array();
 
-    $qprepare = $bdd->prepare("SELECT extension, w_resolution, h_resolution FROM contents WHERE name=?");
+    $qprepare = $db->prepare("SELECT extension, w_resolution, h_resolution FROM contents WHERE name=?");
     $qprepare->execute(array($content_name));
 
     while($qanswer = $qprepare->fetch()){
@@ -38,7 +38,7 @@
     $w_resolution = $resolution_exploded[0];
     $h_resolution = $resolution_exploded[1];
 
-    $qprepare_2 = $bdd->prepare("SELECT folder_path FROM contents WHERE name=? && extension=? && w_resolution=? && h_resolution=?");
+    $qprepare_2 = $db->prepare("SELECT folder_path FROM contents WHERE name=? && extension=? && w_resolution=? && h_resolution=?");
     $qprepare_2->execute(array($content_name, $extension, $w_resolution, $h_resolution));
 
     $central_image_folder = $qprepare_2->fetch()[0];

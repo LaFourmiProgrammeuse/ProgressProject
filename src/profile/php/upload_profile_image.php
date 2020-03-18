@@ -11,8 +11,12 @@ if(!isset($_POST['image_url']) || !isset($_POST['file_name']) || !isset($_POST['
     exit;
 }
 
+$username = strip_tags($_POST['username']);
+$image_url = strip_tags($_POST['image_url']);
+$file_name = strip_tags($_POST['file_name']);
+
 //On decode l'image
-$image_encoded_with_h = $_POST['image_url'];
+$image_encoded_with_h = $image_url;
 $image_encoded_without_h = explode(",", $image_encoded_with_h)[1];
 
 $image_encoded_without_h = str_replace(' ','+',$image_encoded_without_h);
@@ -33,7 +37,7 @@ try{
 
 //on supprime l'ancienne photo de profile de l'user si il en avait une
 $qprepare = $bdd->prepare('SELECT profile_image_name FROM users WHERE username=:username');
-$qprepare->execute(array("username" => $_POST['username']));
+$qprepare->execute(array("username" => $username));
 
 $qrep = $qprepare->fetch(PDO::FETCH_NUM);
 
@@ -45,7 +49,7 @@ if($qrep[0] != "" || $qrep[0] != "Default_profile_image.png"){
 
 
 //on place la nouvelle image de profile dans le dossier images
-if(!$file_image_uploaded = fopen(($folder_image_path.$_POST['file_name']), "w")){
+if(!$file_image_uploaded = fopen(($folder_image_path . $file_name), "w")){
     echo "Echec de la création de la nouvelle image \n";
 }
 else{
@@ -61,6 +65,6 @@ echo ($folder_image_path . $_POST['file_name']);
 
 //on entre dans la bbd le nom de la nouvelle photo de profil
 $qprepare = $bdd->prepare('UPDATE users SET profile_image_name=? WHERE username=?');
-$qprepare->execute(array($_POST['file_name'], $_POST['username']));
+$qprepare->execute(array($file_name, $username));
 
  ?>

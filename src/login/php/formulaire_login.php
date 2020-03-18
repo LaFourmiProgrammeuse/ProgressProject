@@ -5,8 +5,8 @@ require '/home/programmpk/www/src/php_for_all/log_function.php';
 
 $file_log_path = "/home/programmpk/www/src/log_server.txt";
 
-$username = $_POST["nickname"];
-$password = $_POST["pass"];
+$username = strip_tags($_POST["nickname"]);
+$password = strip_tags($_POST["pass"]);
 
 if($username != "" || $password != ""){
 

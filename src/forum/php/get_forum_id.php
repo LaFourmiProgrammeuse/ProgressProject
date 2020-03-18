@@ -14,7 +14,7 @@ if(!isset($_POST['forum_name'])){
 	exit;
 }
 
-$forum_name = $_POST['forum_name'];
+$forum_name = strip_tags($_POST['forum_name']);
 
 $qprepare = $bdd->prepare("SELECT id FROM forums WHERE name=?");
 $qprepare->execute(array($forum_name));

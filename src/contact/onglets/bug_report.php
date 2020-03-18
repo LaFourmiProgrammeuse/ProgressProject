@@ -7,7 +7,7 @@
     </div>
     <div class="form_frame">
 
-        <form method="post">
+        <form method="post" action="/src/contact/php/form_bug_report.php">
 
             <div class="topic">
                 <p>Topic</p>
@@ -15,16 +15,14 @@
             </div>
             <div class="type">
                 <p>Type</p>
-                <select>
+                <select name="type">
                     <option>Functioning bug</option>
                     <option>Graphical bug</option>
                 </select>
             </div>
             <div class="bug_description">
             <p>Description</p>
-                <textarea>
-
-                </textarea>
+                <textarea name="description"></textarea>
             </div>
             <button id="bttn_send">Send</button>
         </form>

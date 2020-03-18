@@ -4,8 +4,8 @@
 
     if(isset($_POST['username']) && isset($_POST['password'])){
 
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+        $username = strip_tags($_POST['username']);
+        $password = strip_tags($_POST['password']);
 
         try{
             $bdd = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');

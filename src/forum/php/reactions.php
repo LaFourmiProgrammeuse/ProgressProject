@@ -3,23 +3,23 @@
 header("Content-Type: plain/text");
 
 try{
-    $bdd = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
+    $db = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
 }
 catch(Exception $e){
     die('Erreur : ' . $e->getMessage());
 }
 
-$author_reaction = $_POST['author'];
-$object_type = $_POST['object_type'];
-$action_type = $_POST['action_type'];
+$author_reaction = strip_tags($_POST['author']);
+$object_type = strip_tags($_POST['object_type']);
+$action_type = strip_tags($_POST['action_type']);
 
 
 //En fonction du type d'objet sur lequel l'utilisateur a régis on traite pas de la même façon
 if($object_type == "post"){
 
-    $post_id = $_POST["post_id"];
+    $post_id = strip_tags($_POST["post_id"]);
 
-    $qprepare = $bdd->prepare("SELECT n_like, n_dislike, author FROM posts WHERE id=?");
+    $qprepare = $db->prepare("SELECT n_like, n_dislike, author FROM posts WHERE id=?");
     $qprepare->execute(array($post_id));
 
     $qrep = $qprepare->fetch();
@@ -30,7 +30,7 @@ if($object_type == "post"){
     $n_dislike = intval($qrep["n_dislike"]);
 
     //On regarde si l'utilisateur a déja réagis à ce post
-    $qprepare = $bdd->prepare("SELECT type FROM reactions WHERE author=? && object=? && object_id=?");
+    $qprepare = $db->prepare("SELECT type FROM reactions WHERE author=? && object=? && object_id=?");
     $qprepare->execute(array($author_reaction, $object_type, $post_id));
 
     if($qrep = $qprepare->fetch()){
@@ -51,7 +51,7 @@ if($object_type == "post"){
                 }
 
                 //Si le post a été liké et ne l'était pas déjà, on ajoute 1 like à l'utilisateur qui a vu son post liké
-                $qprepare = $bdd->prepare("UPDATE users SET like_received=like_received+1 WHERE username=?");
+                $qprepare = $db->prepare("UPDATE users SET like_received=like_received+1 WHERE username=?");
                 $qprepare->execute(array($author_post));
             }
         }
@@ -67,7 +67,7 @@ if($object_type == "post"){
                 }
 
                 //On retire 1 like à l'utilisateur qui avait son post liké
-                $qprepare = $bdd->prepare("UPDATE users SET like_received=like_received-1 WHERE username=?");
+                $qprepare = $db->prepare("UPDATE users SET like_received=like_received-1 WHERE username=?");
                 $qprepare->execute(array($author_post));
             }
             else if($qrep["type"] == "dislike"){
@@ -77,7 +77,7 @@ if($object_type == "post"){
         }
 
         //On modifie la réaction de l'utilisateur sur ce post
-        $qprepare = $bdd->prepare("UPDATE reactions SET type=? WHERE object=? && object_id=? && author=?");
+        $qprepare = $db->prepare("UPDATE reactions SET type=? WHERE object=? && object_id=? && author=?");
         $qprepare->execute(array($action_type, $object_type, $post_id, $author_reaction));
 
     }
@@ -90,7 +90,7 @@ if($object_type == "post"){
             $n_like++;
 
             //On ajoute 1 like à l'utilisateur qui a vu son post liké
-            $qprepare = $bdd->prepare("UPDATE users SET n_like=n_like+1 WHERE username=?");
+            $qprepare = $db->prepare("UPDATE users SET n_like=n_like+1 WHERE username=?");
             $qprepare->execute(array($author_post));
         }
         else if($action_type == "dislike"){
@@ -101,13 +101,13 @@ if($object_type == "post"){
         }
 
         //On ajoute la réaction à ce post de l'utilisateur
-        $qprepare = $bdd->prepare("INSERT INTO reactions (type, object, object_id, author) VALUES (?, 'post', ?, ?)");
+        $qprepare = $db->prepare("INSERT INTO reactions (type, object, object_id, author) VALUES (?, 'post', ?, ?)");
         $qprepare->execute(array($action_type, $post_id, $author_reaction));
     }
 
 
     //On actualise le nombre de réaction qu'a reçu ce post
-    $qprepare = $bdd->prepare("UPDATE posts SET n_like=?, n_dislike=? WHERE id=?");
+    $qprepare = $db->prepare("UPDATE posts SET n_like=?, n_dislike=? WHERE id=?");
     $qprepare->execute(array($n_like, $n_dislike, $post_id));
 
 
@@ -122,23 +122,23 @@ if($object_type == "post"){
 }
 else if($object_type == "topic"){
 
-    $topic_id = $_POST['topic_id'];
+    $topic_id = strip_tags($_POST['topic_id']);
 
     if($action_type == "folow"){
 
-        $qprepare = $bdd->prepare("SELECT id FROM reactions WHERE type=? && object=? && object_id=? && author=?");
+        $qprepare = $db->prepare("SELECT id FROM reactions WHERE type=? && object=? && object_id=? && author=?");
         $qprepare->execute(array($action_type, $object_type, $topic_id, $author_reaction));
 
         if($qprepare->fetch()){
             $topic_folowed = "false";
 
-            $qprepare = $bdd->prepare("DELETE FROM reactions WHERE type=? && object=? && object_id=? && author=?");
+            $qprepare = $db->prepare("DELETE FROM reactions WHERE type=? && object=? && object_id=? && author=?");
             $qprepare->execute(array($action_type, $object_type, $topic_id, $author_reaction));
         }
         else{
             $topic_folowed = "true";
 
-           $qprepare = $bdd->prepare("INSERT INTO reactions (type, object, object_id, author) VALUES (?, ?, ?, ?)");
+           $qprepare = $db->prepare("INSERT INTO reactions (type, object, object_id, author) VALUES (?, ?, ?, ?)");
            $qprepare->execute(array($action_type, $object_type, $topic_id, $author_reaction));
         }
 

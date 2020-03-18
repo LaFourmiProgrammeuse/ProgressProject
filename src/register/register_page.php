@@ -5,6 +5,11 @@ require '/home/programmpk/www/src/php_for_all/session_control.php';
 include "/home/programmpk/www/src/language/language.php";
 
 IncrementVisitorCounter();
+
+$redirection_path = strip_tags($_GET['redirection_path']);
+
+if(isset($_GET['redirection_path']))
+    $_SESSION["redirection_path_after_connection"] = str_replace("and", "&", $redirection_path);
 ?>
 
 <!DOCTYPE html>

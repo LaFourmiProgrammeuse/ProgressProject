@@ -8,7 +8,7 @@
         exit;
     }
 
-    $username = $_POST['username'];
+    $username = strip_tags($_POST['username']);
     $information_needed = explode(",", $_POST['information_needed']);
 
     try{

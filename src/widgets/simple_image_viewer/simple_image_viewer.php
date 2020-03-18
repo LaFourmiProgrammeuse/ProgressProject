@@ -2,12 +2,12 @@
 
     header("Content-Type: text/html");
 
-    $index = intval($_POST['index']);
-    $n_images_to_show = intval($_POST['n_images_to_show']);
+    $index = intval(strip_tags($_POST['index']));
+    $n_images_to_show = intval(strip_tags($_POST['n_images_to_show']));
 
-    $download_content_name = $_POST["download_content_name"];
-    $download_content_extension = $_POST["download_content_extension"];
-    $download_content_resolution = $_POST["download_content_resolution"]; //Résolution stocké sous la forme 1920-1080
+    $download_content_name = strip_tags($_POST["download_content_name"]);
+    $download_content_extension = strip_tags($_POST["download_content_extension"]);
+    $download_content_resolution = strip_tags($_POST["download_content_resolution"]); //Résolution stocké sous la forme 1920-1080
 
     $image_folder_path = array();
 
@@ -48,7 +48,7 @@
     $link_for_download_img_3 = "/src/content/download_content.php?content_name=" . $download_content_name[$img_3_index] . "&content_extension=" . $download_content_extension[$img_3_index] . "&content_resolution=" . $download_content_resolution[$img_3_index];
 
     try{
-        $bdd = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
+        $db = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
     }
     catch(Exception $e){
         die('Erreur : ' . $e->getMessage());
@@ -57,7 +57,7 @@
     for($i = 0; $i < sizeof($download_content_name); $i++){
 
         //A partir des caractéristique de l'image on recupere le chemin du dossier ou elle est stoché
-        $qprepare = $bdd->prepare("SELECT folder_path FROM contents WHERE name=? && extension=? && w_resolution=? && h_resolution=?");
+        $qprepare = $db->prepare("SELECT folder_path FROM contents WHERE name=? && extension=? && w_resolution=? && h_resolution=?");
         $qprepare->execute(array($download_content_name[$i], $download_content_extension[$i], $download_content_w_resolution[$i], $download_content_h_resolution[$i]));
 
         $folder_path = $qprepare->fetch(PDO::FETCH_NUM)[0];

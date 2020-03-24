@@ -5,9 +5,9 @@
     $index = intval(strip_tags($_POST['index']));
     $n_images_to_show = intval(strip_tags($_POST['n_images_to_show']));
 
-    $download_content_name = strip_tags($_POST["download_content_name"]);
-    $download_content_extension = strip_tags($_POST["download_content_extension"]);
-    $download_content_resolution = strip_tags($_POST["download_content_resolution"]); //Résolution stocké sous la forme 1920-1080
+    $download_content_name = $_POST["download_content_name"];
+    $download_content_extension = $_POST["download_content_extension"];
+    $download_content_resolution = $_POST["download_content_resolution"]; //Résolution stocké sous la forme 1920-1080
 
     $image_folder_path = array();
 

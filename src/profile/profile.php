@@ -7,11 +7,178 @@
     IncrementVisitorCounter();
 
     if($_SESSION['connected'] == 'false'){
-        header ("Location: /home.php");
+        header ("Location: /login.php?redirection_path=/forum.php");
         exit();
     }
 
- ?>
+if($_GET["view_mode"] == "edit"){
+   $view_mode = 1;
+}
+else{
+    $view_mode = 0;
+}
+
+$username = $_SESSION["username"];
+
+try{
+    //On initialise une connexion avec la bdd
+    $db = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
+
+}catch(Exception $e){
+    die('Erreur : ' . $e);
+
+}
+
+$qprepare = $db->prepare("SELECT password, mail, rank, registered_date, last_activity, date_of_birth, biography, contribution_level, contribution_xp FROM users WHERE username=?");
+$qprepare->execute(array($username));
+
+$qrep = $qprepare->fetch(PDO::FETCH_NAMED);
+
+//On formate les informations
+$l_user_informations["password"] = $qrep["password"];
+$l_user_informations["mail"] = $qrep["mail"];
+
+if($qrep["rank"] == "1"){
+    $l_user_informations["rank"] = "Founder";
+}
+else if($qrep["rank"] == "4"){
+    $l_user_informations["rank"] = "Member";
+}
+
+if($qrep["registered_date"] != ""){
+
+    $registered_date = date_create($qrep["registered_date"]);
+
+    $day = $registered_date->format("j");
+    $month = $registered_date->format("F");
+    $year = $registered_date->format("Y");
+
+    $registered_date_str = $month . ", " . $day . " of " . $year;
+    $l_user_informations["registered_date"] = $registered_date_str;
+}
+else{
+    $l_user_informations["registered_date"] = "";
+}
+
+if($qrep["last_activity"] != "0000-00-00"){
+
+    $last_activity_date = date_create($qrep["last_activity"]);
+    $now_date = date_create("now");
+
+    $date_diff = $last_activity_date->diff($now_date);
+
+    $second_diff = intval($date_diff->format("%s"));
+    $minute_diff = intval($date_diff->format("%i"));
+    $hour_diff = intval($date_diff->format("%h"));
+    $day_diff = intval($date_diff->format("%d"));
+    $month_diff = intval($date_diff->format("%m"));
+    $year_diff = intval($date_diff->format("%y"));
+
+    if($year_diff >= 1){
+        if($year_diff == 1){
+            $l_user_informations["last_activity"] = "1 year ago";
+        }
+        else{
+            $l_user_informations["last_activity"] = $year_diff . " years ago";
+        }
+    }
+
+    else if($month_diff >= 1){
+        if($month_diff == 1){
+            $l_user_informations["last_activity"] = "1 month ago";
+        }
+        else{
+            $l_user_informations["last_activity"] = $year_diff . " months ago";
+        }
+    }
+
+    else if($day_diff >= 1){
+        if($day_diff == 1){
+            $l_user_informations["last_activity"] = "1 day ago";
+        }
+        else{
+            $l_user_informations["last_activity"] = $day_diff . " days ago";
+        }
+    }
+
+    else if($hour_diff >= 1){
+        if($hour_diff == 1){
+            $l_user_informations["last_activity"] = "1 hour ago";
+        }
+        else{
+            $l_user_informations["last_activity"] = $hour_diff . " hours ago";
+        }
+    }
+
+    else if($minute_diff >= 1){
+        if($minute_diff == 1){
+            $l_user_informations["last_activity"] = "1 minute ago";
+        }
+        else{
+            $l_user_informations["last_activity"] = $minute_diff . " minutes ago";
+        }
+    }
+
+    else if($second_diff >= 1){
+        if($second_diff == 1){
+            $l_user_informations["last_activity"] = "1 second ago";
+        }
+        else{
+            $l_user_informations["last_activity"] = $second_diff . " seconds ago";
+        }
+    }
+
+}
+else{
+    $l_user_informations["last_activity"] = "none";
+}
+
+
+
+if($qrep["date_of_birth"] != ""){
+
+    $date_of_birth = date_create($qrep["date_of_birth"]);
+
+    $day = $date_of_birth->format("j");
+    $month = $date_of_birth->format("F");
+    $year = $date_of_birth->format("Y");
+
+    $date_of_birth_str = $month . ", " . $day . " of " . $year;
+    $l_user_informations["date_of_birth"] = $date_of_birth_str;
+}
+else{
+    $l_user_informations["date_of_birth"] = "";
+}
+
+if($l_user_informations["biography"] != ""){
+    $l_user_informations["biography"] = $qrep["biography"];
+}
+else{
+    $l_user_informations["biography"] = "No biography...";
+}
+
+
+
+
+$l_user_informations["contribution_level"] = $qrep["contribution_level"];
+
+$qprepare_2 = $db->prepare("SELECT xp_min, xp_max, name FROM contribution_levels WHERE id=?");
+$qprepare_2->execute(array($l_user_informations["contribution_level"]));
+
+$qrep_2 = $qprepare_2->fetch(PDO::FETCH_NAMED);
+
+$contribution_level_xp_min = $qrep_2["xp_min"];
+$contribution_level_xp_max = $qrep_2["xp_max"];
+$contribution_level_name = $qrep_2["name"];
+
+$l_user_informations["total_contribution_xp"] = $qrep["contribution_xp"];
+
+$contribution_level_xp = $contribution_level_xp_max - $contribution_level_xp_min;   //Nombre d'xp pour passer ce level
+$user_contribution_xp_for_this_level = $l_user_informations["total_contribution_xp"] - $contribution_level_xp_min;
+
+$contribution_level_progression = floor(($user_contribution_xp_for_this_level/$contribution_level_xp)*100);
+
+?>
 
  <!DOCTYPE html>
  <html>
@@ -48,12 +215,6 @@
          </div>
      </div>
 
-     <div class="modal_background" id="modal_profile_friend">
-         <div class="modal_content">
-             <h2>Futur profil d'un amis</h2>
-         </div>
-     </div>
-
 <div id="body_content"> <!-- div permettant a section de prendre toute la place de la page et ainsi au footer d'être placer au bas de la page. -->
 
 <!-- HEADER -->
@@ -62,71 +223,112 @@
 
 <!-- SECTION -->
 
-<h1>Profile</h1>
-<a href="/home.php" title="Return to ProgrammingAnts">Return to ProgrammingAnts</a>
-
-
          <section>
-             <div id="aside_nav">
-                 <ul>
-                     <li class="nav_element" id="nav_element_overview"><h3>Overview</h3></li>
-                     <li class="nav_element" id="nav_element_profile"><h3>Statistics</h3></li>
-                     <li class="nav_element" id="nav_element_account"><h3>Account</h3></li>
-                     <li class="nav_element" id="nav_element_other"><h3>Other</h3></li>
-                     <li class="nav_element" id="nav_element_signout"><img src="/images/sign_out.png" title="Sign Out" /></li>
-                 </ul>
-             </div>
+            <div id="central_part">
+                <div class="header">
+                    <h1>Profile</h1>
+                    <div class="link_modify_profile">
+                        <a href="/profile.php?view_mode=edit"><i><h3>Modify profile</h3></i></a>
+                    </div>
+                </div>
 
-             <div id="user_informations1">
-                 <div id="user_img_frame">
-                     <img src="/images/no_user_image.png" id="user_img"/>
-                 </div>
+                <div class="groupa">
+                    <div class="user_img_frame">
+                        <img src="/images/no_user_image.png"/>
+                    </div>
 
-                 <div id="username" align="center">
-                     <h3>Pseudo</h3>
-                 </div>
+                    <div class="username" align="center">
+                        <h4><?php echo $_SESSION["username"]; ?></h4>
+                    </div>
 
-                 <div id="user_rank">
-                     <h3>Rank</h3>
-                 </div>
+                    <div class="user_rank">
+                        <h4><?php echo $l_user_informations["rank"]; ?></h4>
+                    </div>
 
-                 <div id="user_stats_forum">
-                     <h4>Your stats</h4>
-                     <ul>
-                         <li><h5>Last activity : <span class="stats_forum_value" id="last_activity_value"></span></h5></li>
-                         <li><h5>Registered the : <span class="stats_forum_value" id="registered_date_value"></span></h5></li>
-                         <li><h5>Messages : <span class="stats_forum_value" id="number_message_sent_value"></span></h5></li>
-                         <li><h5>Liked : <span class="stats_forum_value" id="number_liked_received_value"></span></h5></li>
-                     </ul>
-                 </div>
+                    <div class="level">
+                        <div class="progress_bar_box">
+                            <div class="progress_bar" style="<?php echo "width: " . $contribution_level_progression . "%;"; ?>"></div>
+                            <div class="progress_percent"><?php echo $contribution_level_progression; ?>%</div>
+                            <div class="experience">
+                                <p>Experience | <?php echo $l_user_informations["total_contribution_xp"]  . "/" . $contribution_level_xp_max; ?></p>
+                            </div>
+                        </div>
+                        <p class="rank">Level <?php echo $l_user_informations["contribution_level"] . " : " . $contribution_level_name; ?></p>
+                    </div>
+                </div>
 
-                 <div id="friends">
-                     <h4>Your Friends (<span id="number_friend"></span>)</h4>
-                     <div class="friend_1">
-                         <img class="friend_image" src="/images/no_user_image.png" />
-                         <h5 class="friend_name">Amis 1</h5>
-                         <a class="friend_profile_link">See more...</a>
-                     </div>
+                <div class="groupb">
 
-                     <div class="friend_2">
-                         <img class="friend_image" src="/images/no_user_image.png" />
-                         <h5 class="friend_name">Amis 2</h5>
-                         <a class="friend_profile_link">See more...</a>
-                     </div>
+                    <div class="b_box about">
+                        <div class="h_b_box">
+                            <h3>About</h3>
+                        </div>
+                        <div class="body_b_box">
 
-                     <img src="/images/next.jpg" id="next_friend_page"/>
-                     <img src="/images/previous.jpg" id="previous_friend_page"/>
-                 </div>
-             </div>
+                            <?php if($view_mode == 0){ ?>
+                            <div class="biography">
+                                <h4><?php echo $l_user_informations["biography"]; ?></h4>
+                            </div>
+                            <div class="birth_date">
+                                <h4>Date of birth : <span class="value"><?php if($l_user_informations["biography"] != "") { echo $l_user_informations["date_of_birth"]; } ?></span></h4>
+                            </div>
+                            <?php } ?>
 
-             <div id="onglet_frame">
-                 <img class="ajax_loader" id="onglet_ajax_loader" src="/images/ajax-loader_2.gif" />
-             </div>
+                            <?php if($view_mode == 1){ ?>
+                            <div class="biography">
+                                <textarea></textarea>
+                            </div>
+                            <?php } ?>
+
+                        </div>
+                    </div>
+
+                    <div class="b_box confidentiality">
+                        <div class="h_b_box">
+                            <h3>Confidentiality</h3>
+                        </div>
+                        <div class="body_b_box">
+
+                            <?php if($view_mode == 0){ ?>
+                            <div class="password">
+                                <h4>Password : <input type="password" disabled value="<?php echo $l_user_informations["password"]; ?>" /></h4>
+                            </div>
+                            <div class="mail">
+                                <h4>E-mail adress : <span class="value"><?php echo $l_user_informations["mail"]; ?></span></h4>
+                            </div>
+                            <?php } ?>
+
+                        </div>
+                    </div>
+
+                    <div class="b_box account_informations">
+                        <div class="h_b_box">
+                            <h3>Account informations</h3>
+                        </div>
+                        <div class="body_b_box">
+
+                            <?php if($view_mode == 0){ ?>
+                            <div class="registration_date">
+                                <h4>Registration date : <span class="value"><?php echo $l_user_informations["registered_date"]; ?></span></h4>
+                            </div>
+                            <div class="last_activity">
+                                <h4>Last activity : <span class="value"><?php echo $l_user_informations["last_activity"]; ?></span></h4>
+                            </div>
+                            <?php } ?>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
          </section>
-
-         <?php
-         require "/home/programmpk/www/src/footer.php";
-         ?>
      </div>
+
+    <?php require "/home/programmpk/www/src/footer.php"; ?>
+
  </body>
  </html>

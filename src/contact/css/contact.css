@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600|Roboto:300,300i,400,400i,500,500i,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,600&display=swap');
 
 p, h2{
 	margin: 0;
@@ -68,7 +69,7 @@ button {
 }
 
 .groupa {
-    margin-bottom: 20px;
+    margin-bottom: 38px;
 }
 
 .groupa h2 {
@@ -85,7 +86,38 @@ button {
 }
 
 .show_mail {
-    margin-top: 12px;
+    margin-top: 25px;
+}
+
+.show_mail .mail {
+    text-align: center;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.show_mail .mail a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 0.95vw;
+    color: #424242;
+    border-top: 2px solid #424242;
+    border-bottom: 2px solid #424242;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.show_mail .mail:hover a {
+    color: #c1558b;
+    border-top: 2px solid #c1558b;
+    border-bottom: 2px solid #c1558b;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .groupb {
@@ -106,7 +138,7 @@ button {
 }
 
 .btn_bugreport_show_form {
-    margin-top: 12px;
+    margin-top: 25px;
 }
 
 
@@ -143,6 +175,10 @@ button {
         font-size: 1.35vw;
     }
 
+    .show_mail .mail a {
+        font-size: 1.2vw;
+    }
+
 }
 
 /* MQ FOR SMALL RESOLUTIONS */
@@ -177,6 +213,10 @@ button {
 
     button {
         font-size: 2vw;
+    }
+
+    .show_mail .mail a {
+        font-size: 1.5vw;
     }
 
     /* MARGIN, PADDING */

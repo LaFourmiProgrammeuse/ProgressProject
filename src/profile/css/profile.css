@@ -4,7 +4,7 @@
 a {
 	text-decoration: none;
 }
-p, h1, h2, h3 {
+p, h1, h2, h3, h4 {
 	margin: 0;
 }
 
@@ -17,10 +17,134 @@ body {
 #body_content{
   display: flex;
   flex-direction: column;
+  min-height: calc(100vh - 70px);
 }
 
 /* HEADER */
 
 header {
-  
+
+}
+
+#central_part {
+    width: 65%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#modal_drag_and_drop_img {
+    display: none;
+}
+
+#central_part .header h1 {
+    font-family: "Roboto", sans-serif;
+}
+
+.link_modify_profile {
+    width: 100%;
+    text-align: right;
+}
+
+.user_img_frame img {
+    border-radius: 50%;
+    width: 160px;
+    border: 2px #7f8c8d solid;
+}
+
+.groupa {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.groupb {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.level .progress_bar_box {
+    border: 1px solid #b2bec3;
+    height: 33px;
+    overflow: hidden;
+    background-color: #f1f2f6;
+}
+
+.level .progress_bar {
+    height: 99%;
+    top: 0px;
+    left: 0px;
+    position: relative;
+    background-color: #74b9ff;
+}
+.level .progress_bar_box .experience {
+    position: relative;
+    top: -46px;
+    text-align: left;
+    margin-left: 10px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.8vw;
+}
+
+.level .progress_bar_box .progress_percent {
+    text-align: center;
+    position: relative;
+    top: -26px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.8vw;
+}
+
+.level .rank {
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 3px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.8vw;
+}
+
+.groupb h3 {
+    font-size: 1.35vw;
+    font-family: "Roboto", sans-serif;
+}
+
+.user_rank {
+    margin-bottom: 15px;
+    font-size: 1.05vw;
+}
+
+.user_img_frame {
+    margin-bottom: 15px;
+}
+
+.username {
+    margin-bottom: 3px;
+    font-size: 1.4vw;
+    font-family: "Roboto", sans-serif;
+}
+
+.b_box {
+    margin-bottom: 25px
+}
+
+.body_b_box {
+    margin-left: 20px;
+    margin-top: 13px;
+}
+
+.body_b_box div {
+    margin-bottom: 3px;
+}
+
+.body_b_box h4 {
+    font-size: 0.9vw;
+    font-family: "Open Sans", sans-serif;
+}
+
+.b_box {
+    border: 1px solid #b2bec3;
+    border-radius: 6px;
+    padding: 20px;
 }

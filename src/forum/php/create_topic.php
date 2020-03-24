@@ -2,14 +2,14 @@
 
 	require "/home/programmpk/www/src/php_for_all/session_control.php";
 
-    //On vérifie que l'on récupère toute les informations (pas de champ vide)
-    if($_POST['topic_title'] == "" || $_POST['topic_subtitle'] == "" || $_POST['first_post_content'] == "") {
-        header("Location: /forum.php");
+    if($_SESSION['connected'] == "false"){
+        header("Location: /login.php?redirection_path=/forum.php");
         exit();
     }
 
-    if($_SESSION['connected'] == "false"){
-        header("Location: /login.php?redirection_path=/forum.php");
+    //On vérifie que l'on récupère toute les informations (pas de champ vide)
+    if($_POST['topic_title'] == "" || $_POST['topic_subtitle'] == "" || $_POST['first_post_content'] == "") {
+        header("Location: /forum.php");
         exit();
     }
 

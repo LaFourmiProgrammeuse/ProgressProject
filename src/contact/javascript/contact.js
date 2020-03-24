@@ -5,7 +5,7 @@ function answerShowMail(data){
         return;
 
     $(".btn_show_mail").hide();
-    $(".show_mail .mail").text(data);
+    $(".show_mail .mail").html("<a href='mailto:"+data+"'>"+data+"</a>");
 
 }
 
@@ -38,6 +38,10 @@ $(document).ready(function(){
         grecaptcha.execute('6LdPWrQUAAAAABdiTBF5vWQ7OlFWXdqC6-87C9ns', {action: 'login'}).then(function(token) {
               requestShowMail(token);
         });
+    });
+
+    $(window).resize(function(){
+        //console.log($(window).width());
     });
 
 });

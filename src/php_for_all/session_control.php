@@ -43,7 +43,7 @@ function IncrementVisitorCounter(){
 
 }
 
-$timeout = 360; //Temps avant destruction d'une session en seconde
+$timeout = 1200; //Temps avant destruction d'une session en seconde
 
 session_start();
 

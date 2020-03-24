@@ -1,5 +1,5 @@
 <?php
-  $content_name = strip_tags($_GET['content_name']);
+    $content_name = strip_tags($_GET['content_name']);
     $extension = strip_tags($_GET['content_extension']);
 
     try{

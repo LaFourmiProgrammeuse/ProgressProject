@@ -21,7 +21,7 @@ IncrementVisitorCounter();
     <script type="text/javascript" src="/src/framework_javascript/particles.js"></script>
     <script type="text/javascript" src="/src/contact/javascript/contact.js"></script>
 
-    
+
 
 </head>
 <body>
@@ -36,7 +36,7 @@ IncrementVisitorCounter();
     <div id="central_container">
 
         <?php
-            if(isset($_GET["onglet"]) && $_GET["onglet"] == "bug_report"){
+            if($_GET["onglet"] == "bug_report"){
                 require "/home/programmpk/www/src/contact/onglets/bug_report.php";
             }
             else{

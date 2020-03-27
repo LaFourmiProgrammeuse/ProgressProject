@@ -2,8 +2,10 @@
 
 	require "/home/programmpk/www/src/php_for_all/session_control.php";
 
+    $redirection_path_to_this_page = base64_encode("/forum.php?forum_part=new_topic");
+
     if($_SESSION['connected'] == "false"){
-        header("Location: /login.php?redirection_path=/forum.php");
+        header("Location: /login.php?redirection_path=" . $redirection_path_to_this_page);
         exit();
     }
 

@@ -3,20 +3,22 @@
     require "/home/programmpk/www/src/php_for_all/session_control.php";
 
     //On vérifie que l'on récupère toute les informations (pas de champ vide)
-    if(!isset($_POST['post_content']) || !isset($_POST['post_topic'])){
+    if($_POST['post_content'] == "" || $_POST['post_topic'] == ""){
         header("Location: /forum.php");
         exit();
     }
 
-    if($_SESSION['connected'] == 'false'){
-        header("Location: /login.php");
-        exit();
-    }
-
-	$author = $_SESSION['username'];
+    $author = $_SESSION['username'];
 	$post_content = strip_tags($_POST['post_content']);
 	$post_topic = strip_tags($_POST['post_topic']);
 	$post_title = ""; //Récupéré ensuite dans la bdd
+
+    $redirection_path_to_this_page = base64_encode(("/forum.php?forum_part=topic&topic_id=" . $post_topic));
+
+    if($_SESSION['connected'] == 'false'){
+        header("Location: /login.php?redirection_path=" . $redirection_path_to_this_page);
+        exit();
+    }
 
 
 	try{

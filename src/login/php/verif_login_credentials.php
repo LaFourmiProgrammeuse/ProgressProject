@@ -14,24 +14,19 @@
             die('Erreur : ' . $e->getMessage());
         }
 
-        $qprepare = $bdd->prepare("SELECT username FROM users WHERE username=? && password=?");
-        $qprepare->execute(array($username, $password));
+        $qprepare = $bdd->prepare("SELECT password FROM users WHERE username=?");
+        $qprepare->execute(array($username));
 
-        if(!$qrep = $qprepare->fetch(PDO::FETCH_NUM)){
+        $qrep = $qprepare->fetch(PDO::FETCH_ASSOC);
 
-            //La requete mysql n'a rien renvoyer
-            echo "false";
+        $hash = $qrep["password"];
+        if(password_verify($password, $hash)){
+            echo "true";
         }
         else{
-
-            //La requete mysql a renvoyer l'identifiant
-            if($qrep[0] == $username){
-                echo "true";
-            }
-            else{
-                echo "false";
-            }
+            echo "false";
         }
+
     }
     else{
         echo "Error";

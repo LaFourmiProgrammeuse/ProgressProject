@@ -1,24 +1,22 @@
 <?php
 
-    //Ne pas mettre de code html avant cette ligne !
-    require '/home/programmpk/www/src/php_for_all/session_control.php';
-    include "/home/programmpk/www/src/language/language.php";
+//Ne pas mettre de code html avant cette ligne !
+require '/home/programmpk/www/src/php_for_all/session_control.php';
+include "/home/programmpk/www/src/language/language.php";
 
-    IncrementVisitorCounter();
+IncrementVisitorCounter();
 
-    if($_SESSION['connected'] == 'false'){
-        header ("Location: /login.php?redirection_path=/forum.php");
-        exit();
-    }
+if($_SESSION['connected'] == 'false'){
+    header ("Location: /login.php?redirection_path=/forum.php");
+    exit();
+}
 
 if($_GET["view_mode"] == "edit"){
-   $view_mode = 1;
+    $view_mode = 1;
 }
 else{
     $view_mode = 0;
 }
-
-$username = $_SESSION["username"];
 
 try{
     //On initialise une connexion avec la bdd
@@ -28,6 +26,16 @@ try{
     die('Erreur : ' . $e);
 
 }
+
+$username = $_SESSION["username"];
+
+//On fabrique le chemin de la photo de profile de l'utilisateur
+$qprepare = $db->prepare("SELECT profile_image_name FROM users WHERE username=?");
+$qprepare->execute(array($username));
+
+$profile_image_name = $qprepare->fetch()["profile_image_name"];
+$profile_image_url = "/images/user_image/" . $profile_image_name;
+
 
 $qprepare = $db->prepare("SELECT password, mail, rank, registered_date, last_activity, date_of_birth, biography, contribution_level, contribution_xp FROM users WHERE username=?");
 $qprepare->execute(array($username));
@@ -180,50 +188,50 @@ $contribution_level_progression = floor(($user_contribution_xp_for_this_level/$c
 
 ?>
 
- <!DOCTYPE html>
- <html>
- <head>
+<!DOCTYPE html>
+<html>
+<head>
 
-     <!-- Google Analytics -->
-     <?php include "/home/programmpk/www/src/analytic_tools/google_analytics.html"; ?>
+    <!-- Google Analytics -->
+    <?php include "/home/programmpk/www/src/analytic_tools/google_analytics.html"; ?>
 
-     <link rel="stylesheet" type="text/css" href="/src/profile/css/profile.css">
-     <meta charset="utf-8">
-     <title>Profile ProgAnts</title>
+    <link rel="stylesheet" type="text/css" href="/src/profile/css/profile.css">
+    <meta charset="utf-8">
+    <title>Profile ProgAnts</title>
 
-     <script type="text/javascript" src="/src/framework_javascript/jquery.js"></script>
-     <script type="text/javascript" src="/src/profile/javascript/profile.js"></script>
-     <script type="text/javascript" src ="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
- </head>
+    <script type="text/javascript" src="/src/framework_javascript/jquery.js"></script>
+    <script type="text/javascript" src="/src/profile/javascript/profile.js"></script>
+    <script type="text/javascript" src ="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+</head>
 
- <body>
+<body>
 
-     <div class="modal_background" id="modal_drag_and_drop_img">
-         <div class="modal_content">
-             <h2>Upload your new profile image</h2>
-             <p>Click anywhere to close this window</p>
+    <div class="modal_background" id="modal_drag_and_drop_img">
+        <div class="modal_content">
+            <h2>Upload your new profile image</h2>
+            <p>Click anywhere to close this window</p>
 
-             <form method="post" action="">
-                 <div id="drop_zone_profile_img"></div>
-                 <input type="file" id="input_img_to_upload" name="image" />
-                 <div id="how_to_upload_image"><label for="input_img_to_upload">Choose a file</label> or drag it here !</div>
-                 <div class="upload_error">Error</div>
-                 <div class="uploading_message">Uploading...</div>
-                 <div class="file_wait_upload"></div>
-                 <button type="button" class="button_upload">Upload Image</button>
-             </form>
-         </div>
-     </div>
+            <form method="post" action="">
+                <div id="drop_zone_profile_img"></div>
+                <input type="file" id="input_img_to_upload" name="image" />
+                <div id="how_to_upload_image"><label for="input_img_to_upload">Choose a file</label> or drag it here !</div>
+                <div class="upload_error">Error</div>
+                <div class="uploading_message">Uploading...</div>
+                <div class="file_wait_upload"></div>
+                <button type="button" class="button_upload">Upload Image</button>
+            </form>
+        </div>
+    </div>
 
-<div id="body_content"> <!-- div permettant a section de prendre toute la place de la page et ainsi au footer d'être placer au bas de la page. -->
+    <div id="body_content"> <!-- div permettant a section de prendre toute la place de la page et ainsi au footer d'être placer au bas de la page. -->
 
-<!-- HEADER -->
+        <!-- HEADER -->
 
-<?php require "/home/programmpk/www/src/header/header.php"; ?>
+        <?php require "/home/programmpk/www/src/header/header.php"; ?>
 
-<!-- SECTION -->
+        <!-- SECTION -->
 
-         <section>
+        <section>
             <div id="central_part">
                 <div class="header">
                     <h1>Profile</h1>
@@ -266,18 +274,18 @@ $contribution_level_progression = floor(($user_contribution_xp_for_this_level/$c
                         <div class="body_b_box">
 
                             <?php if($view_mode == 0){ ?>
-                            <div class="biography">
-                                <h4><?php echo $l_user_informations["biography"]; ?></h4>
-                            </div>
-                            <div class="birth_date">
-                                <h4>Date of birth : <span class="value"><?php if($l_user_informations["biography"] != "") { echo $l_user_informations["date_of_birth"]; } ?></span></h4>
-                            </div>
+                                <div class="biography">
+                                    <h4><?php echo $l_user_informations["biography"]; ?></h4>
+                                </div>
+                                <div class="birth_date">
+                                    <h4>Date of birth : <span class="value"><?php if($l_user_informations["biography"] != "") { echo $l_user_informations["date_of_birth"]; } ?></span></h4>
+                                </div>
                             <?php } ?>
 
                             <?php if($view_mode == 1){ ?>
-                            <div class="biography">
-                                <textarea></textarea>
-                            </div>
+                                <div class="biography">
+                                    <textarea></textarea>
+                                </div>
                             <?php } ?>
 
                         </div>
@@ -290,12 +298,12 @@ $contribution_level_progression = floor(($user_contribution_xp_for_this_level/$c
                         <div class="body_b_box">
 
                             <?php if($view_mode == 0){ ?>
-                            <div class="password">
-                                <h4>Password : <input type="password" disabled value="<?php echo $l_user_informations["password"]; ?>" /></h4>
-                            </div>
-                            <div class="mail">
-                                <h4>E-mail adress : <span class="value"><?php echo $l_user_informations["mail"]; ?></span></h4>
-                            </div>
+                                <div class="password">
+                                    <h4>Password : <input type="password" disabled value="<?php echo $l_user_informations["password"]; ?>" /></h4>
+                                </div>
+                                <div class="mail">
+                                    <h4>E-mail adress : <span class="value"><?php echo $l_user_informations["mail"]; ?></span></h4>
+                                </div>
                             <?php } ?>
 
                         </div>
@@ -308,12 +316,12 @@ $contribution_level_progression = floor(($user_contribution_xp_for_this_level/$c
                         <div class="body_b_box">
 
                             <?php if($view_mode == 0){ ?>
-                            <div class="registration_date">
-                                <h4>Registration date : <span class="value"><?php echo $l_user_informations["registered_date"]; ?></span></h4>
-                            </div>
-                            <div class="last_activity">
-                                <h4>Last activity : <span class="value"><?php echo $l_user_informations["last_activity"]; ?></span></h4>
-                            </div>
+                                <div class="registration_date">
+                                    <h4>Registration date : <span class="value"><?php echo $l_user_informations["registered_date"]; ?></span></h4>
+                                </div>
+                                <div class="last_activity">
+                                    <h4>Last activity : <span class="value"><?php echo $l_user_informations["last_activity"]; ?></span></h4>
+                                </div>
                             <?php } ?>
 
                         </div>
@@ -325,10 +333,10 @@ $contribution_level_progression = floor(($user_contribution_xp_for_this_level/$c
 
 
 
-         </section>
-     </div>
+        </section>
+    </div>
 
     <?php require "/home/programmpk/www/src/footer.php"; ?>
 
- </body>
- </html>
+</body>
+</html>

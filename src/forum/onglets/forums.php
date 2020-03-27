@@ -2,42 +2,55 @@
 
 function formatTimeFromLastActivity($time_from_publication){
 
-    if(intval($time_from_publication->format("%m")) >= 1){
-      if(intval($time_from_publication->format("%m")) != 1){
-        $time_from_publication_str = "about " . intval($time_from_publication->format("%m")) . " months ago..." ;
-    }else{
-        $time_from_publication_str = "about 1 month ago..." ;
+    if(intval($time_from_publication->format("%y")) >= 1){
+        if(intval($time_from_publication->format("%y")) != 1){
+            $time_from_publication_str = "about " . intval($time_from_publication->format("%y")) . " years ago..." ;
+        }else{
+            $time_from_publication_str = "about 1 year ago..." ;
+        }
     }
-}
-else if(intval($time_from_publication->format("%d")) >= 1){
-  if(intval($time_from_publication->format("%d")) != 1){
-    $time_from_publication_str = "about " . intval($time_from_publication->format("%d")) . " days ago..." ;
-}else{
-    $time_from_publication_str = "about 1 day ago..." ;
-}
-}
-else if(intval($time_from_publication->format("%h")) >= 1){
-  if(intval($time_from_publication->format("%h")) != 1){
-    $time_from_publication_str = "about " . intval($time_from_publication->format("%h")) . " hours ago..." ;
-}else{
-    $time_from_publication_str = "about 1 hour ago..." ;
-}
-}
-else if(intval($time_from_publication->format("%i")) >= 1){
-  if(intval($time_from_publication->format("%i")) != 1){
-    $time_from_publication_str = "about " . intval($time_from_publication->format("%i")) . " minutes ago..." ;
-}else{
-    $time_from_publication_str = "about 1 minute ago..." ;
-}
-}
-else if(intval($time_from_publication->format("%s")) >= 1){
-  if(intval($time_from_publication->format("%s")) != 1){
-    $time_from_publication_str = "about " . intval($time_from_publication->format("%s")) . " seconds ago..." ;
-}else{
-    $time_from_publication_str = "about 1 second ago..." ;
-}
-}
-return $time_from_publication_str;
+
+    else if(intval($time_from_publication->format("%m")) >= 1){
+        if(intval($time_from_publication->format("%m")) != 1){
+            $time_from_publication_str = "about " . intval($time_from_publication->format("%m")) . " months ago..." ;
+        }else{
+            $time_from_publication_str = "about 1 month ago..." ;
+        }
+    }
+
+    else if(intval($time_from_publication->format("%d")) >= 1){
+        if(intval($time_from_publication->format("%d")) != 1){
+            $time_from_publication_str = "about " . intval($time_from_publication->format("%d")) . " days ago..." ;
+        }else{
+            $time_from_publication_str = "about 1 day ago..." ;
+        }
+    }
+
+    else if(intval($time_from_publication->format("%h")) >= 1){
+        if(intval($time_from_publication->format("%h")) != 1){
+            $time_from_publication_str = "about " . intval($time_from_publication->format("%h")) . " hours ago..." ;
+        }else{
+            $time_from_publication_str = "about 1 hour ago..." ;
+        }
+    }
+
+    else if(intval($time_from_publication->format("%i")) >= 1){
+        if(intval($time_from_publication->format("%i")) != 1){
+            $time_from_publication_str = "about " . intval($time_from_publication->format("%i")) . " minutes ago..." ;
+        }else{
+            $time_from_publication_str = "about 1 minute ago..." ;
+        }
+    }
+
+    else if(intval($time_from_publication->format("%s")) >= 1){
+        if(intval($time_from_publication->format("%s")) != 1){
+            $time_from_publication_str = "about " . intval($time_from_publication->format("%s")) . " seconds ago..." ;
+        }else{
+            $time_from_publication_str = "about 1 second ago..." ;
+        }
+    }
+
+    return $time_from_publication_str;
 }
 
     // On récupère le nom des forums par catégorie

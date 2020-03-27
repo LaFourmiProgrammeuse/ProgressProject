@@ -1,10 +1,12 @@
 <?php
 
+$redirection_path_to_this_page = base64("/contact.php?onglet=bug_report");
+
 //Ne pas mettre de code html avant cette ligne !
 require '/home/programmpk/www/src/php_for_all/session_control.php';
 
 if($_SESSION["connected"] == "false"){
-    header("Location: /src/login/login_page.php?redirection_path=contact.php");
+    header("Location: /src/login/login_page.php?redirection_path=" . $redirection_path_to_this_page);
     exit();
 }
 

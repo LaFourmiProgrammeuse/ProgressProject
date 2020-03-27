@@ -16,9 +16,10 @@
 
     session_destroy();
 
-
-    if($_GET['redirection_path'] != ""){
-        header(('Location: ' . str_replace("and", "&", strip_tags($_GET['redirection_path']))));
+    $redirection_path_b64 = strip_tags($_GET['redirection_path']);
+    $redirection_path = base64_decode($redirection_path_b64);
+    if($redirection_path != ""){
+        header('Location: ' . $redirection_path);
     }
     else{
         header('Location: /home.php');

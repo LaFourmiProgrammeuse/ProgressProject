@@ -6,10 +6,11 @@ include "/home/programmpk/www/src/language/language.php";
 
 IncrementVisitorCounter();
 
-$redirection_path = strip_tags($_GET['redirection_path']);
+$redirection_path_b64 = strip_tags($_GET['redirection_path']);
+$redirection_path = base64_decode($redirection_path);;
 
 if(isset($_GET['redirection_path']))
-    $_SESSION["redirection_path_after_connection"] = str_replace("and", "&", $redirection_path);
+    $_SESSION["redirection_path_after_connection"] = $redirection_path;
 ?>
 
 <!DOCTYPE html>
@@ -36,9 +37,9 @@ if(isset($_GET['redirection_path']))
             <div id="h_elements">
                 <div id="infa">
                     <h2>Sign Up to Programming Ants</h2>
-                    <a href="<?php echo $_GET["redirection_path"]; ?>" title="Return to the homepage"><img id="return" src="/images/icons/others/return.svg"></a>
+                    <a href="/home.php" title="Return to the homepage"><img id="return" src="/images/icons/others/return.svg"></a>
                 </div>
-                <div id="infb"><h3>If you already have an existing account, <a href="/login.php?redirection_path=<?php echo $_GET["redirection_path"]; ?>" id="login_go" title="Log In page">click here</a> to log in !</h3></div>
+                <div id="infb"><h3>If you already have an existing account, <a href="/login.php?redirection_path=<?php echo $redirection_path_b64; ?>" id="login_go" title="Log In page">click here</a> to log in !</h3></div>
             </div>
         </header>
 

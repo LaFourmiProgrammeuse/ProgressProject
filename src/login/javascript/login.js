@@ -70,8 +70,6 @@ function requestLoginCredentials(){
     var username = $("#nickname").val();
     var password = $("#pass").val();
 
-    console.log("requestValidationNickname : "+nickname+pass);
-
     if(xhr && xhr.readyState != 0){
         return;
     }

@@ -1,6 +1,6 @@
 <?php
     //On replace les '&' par des 'and' pour pouvoir mettre l'ensemble des arguments que reçois la page dans le paramètre redirection_path que recoit les pages login et register
-    $current_page_path = str_replace("&", "and", $_SERVER['REQUEST_URI']);
+    $current_page_path = base64_encode($_SERVER['REQUEST_URI']);
 ?>
 
 

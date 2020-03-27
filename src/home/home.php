@@ -46,7 +46,7 @@ if($_SESSION['connected'] == "true"){
 <html>
 <head>
 
-    <meta charset="utf-8"/> 
+    <meta charset="utf-8"/>
     <title><?php echo _("Home");?></title>
 
     <!--<link rel="icon" type="image/x-icon" href="/images/icons/favicon.png" />-->

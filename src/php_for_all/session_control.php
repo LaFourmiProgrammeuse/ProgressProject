@@ -43,7 +43,7 @@ function IncrementVisitorCounter(){
 
 }
 
-$timeout = 1200; //Temps avant destruction d'une session en seconde
+$timeout = 5; //Temps avant destruction d'une session en seconde
 
 session_start();
 
@@ -69,38 +69,24 @@ if(isset($_SESSION['timeout'])){
         //On la reconstruit
         session_start();
 
-        //On recrée la page donc on reset donc le temps a 0;
+        //On recrée la page donc on reset donc le temps à 0;
         $_SESSION['timeout'] = time();
 
         if(isset($_COOKIE['username']) && isset($_COOKIE['password'])){
 
             $_SESSION['username'] = $_COOKIE['username'];
-            $_SESSION['password'] = $_COOKIE['password'];
 
-            time();
-
-            $qprepared = $db->prepare("SELECT stay_connected FROM users WHERE username = :username && password = :password");
-            $qprepared->execute(array('username' => $_COOKIE['username'], 'password' => $_COOKIE['password']));
+            $qprepared = $db->prepare("SELECT stay_connected, password FROM users WHERE username = :username");
+            $qprepared->execute(array('username' => $_COOKIE['username']));
 
             if($qprepared){
 
-                time();
                 $qrep = $qprepared->fetch();
 
-                if($qrep['stay_connected'] == '0'){
-
-                    $_SESSION['connected'] = 'false';
-                    time();
-
-                }else if($qrep['stay_connected'] == '1'){
-
+                if($qrep['stay_connected'] == '1' && password_verify($_COOKIE['password'], $qrep["password"])){
                     $_SESSION['connected'] = 'true';
-
-                }
-                else{
-
+                }else{
                     $_SESSION['connected'] = 'false';
-
                 }
 
             }else{
@@ -129,26 +115,16 @@ if(isset($_SESSION['timeout'])){
     if(isset($_COOKIE['username']) AND isset($_COOKIE['password'])){
 
         $_SESSION['username'] = $_COOKIE['username'];
-        $_SESSION['password'] = $_COOKIE['password'];
 
-        $qprepared = $db->prepare("SELECT keep_connected, username FROM users WHERE username = :username && password = :password");
-        $qprepared->execute(array('username' => $_COOKIE['username'], 'password' => $_COOKIE['password']));
+        $qprepared = $db->prepare("SELECT stay_connected, username, password FROM users WHERE username = :username");
+        $qprepared->execute(array('username' => $_COOKIE['username']));
 
         if($qprepared){
 
-            //On met dans la db la derniere ip avec laquelle il vient de charger la page
-            //$qprepared_2 = $db->prepare("UPDATE users SET");
-
             $qrep = $qprepared->fetch();
 
-            if($qrep['stay_connected'] == '0'){
-
-                $_SESSION['connected'] = 'false';
-
-            }else if($qrep['stay_connected'] == '1'){
-
+            if($qrep['stay_connected'] == '1' && password_verify($_COOKIE['password'], $qrep["password"])){
                 $_SESSION['connected'] = 'true';
-
             }else{
                 $_SESSION['connected'] = 'false';
             }

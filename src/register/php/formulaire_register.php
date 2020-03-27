@@ -1,7 +1,5 @@
 <?php
 
-var_dump(debug_backtrace());
-
 require '/home/programmpk/www/src/php_for_all/session_control.php';
 require '/home/programmpk/www/src/php_for_all/log_function.php';
 
@@ -11,28 +9,19 @@ $username = strip_tags($_POST['nickname']);
 $password = strip_tags($_POST['pass']);
 $email = strip_tags($_POST['email']);
 
-if($username != "" || $password != "" || $email != ""){
+if($username == "" || $password == "" || $email == "")
+    return;
 
-    if(isset($_COOKIE['identifiant']) && isset($_COOKIE['mdp'])){
+$pwd_hashed = password_hash($pwd, PASSWORD_DEFAULT);;
 
-        setcookie('username',  $username, time() + 365*24*3600, "/");
-        setcookie('password', $password, time() + 365*24*3600, "/");
-
-        echo 'Tout les cookies existent';
-    }
-    else{
-
-        setcookie('username',  $username, time() + 365*24*3600, "/");
-        setcookie('password',  $password, time() + 365*24*3600, "/");
-
-        echo 'Un ou plusieurs cookie(s) n\'existent pas !';
-    }
+setcookie('username',  $username, time() + 365*24*3600, "/");
+setcookie('password', $pwd_hashed, time() + 365*24*3600, "/");
 
     try{
 
         /* PART BDD REGISTRATION */
 
-        $bdd = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
+        $db = new PDO('mysql:host=programmpkroot.mysql.db;dbname=programmpkroot;charset=utf8', 'programmpkroot', 'BddProgAnts15');
 
     }
     catch(Exception $e){
@@ -43,9 +32,9 @@ if($username != "" || $password != "" || $email != ""){
     $registered_date = date("Y-m-d");
     $user_ip = GetIp();
 
-    $qprepare = $bdd->prepare('INSERT INTO users (username, password, mail, stay_connected, registered_date, profile_image_name, last_ip_used) VALUES (:username, :password, :mail, :stay_connected, :registered_date, :profile_image_name, :user_ip)');
+    $qprepare = $db->prepare('INSERT INTO users (username, password, mail, stay_connected, registered_date, profile_image_name, last_ip_used) VALUES (:username, :password, :mail, :stay_connected, :registered_date, :profile_image_name, :user_ip)');
 
-    if($qprepare->execute(array('username' => $username, 'password' => $password, 'mail' => $email, 'stay_connected' => '1', 'registered_date' => $registered_date, 'profile_image_name' => 'Default_profile_image.png', 'user_ip' => $user_ip))){
+    if($qprepare->execute(array('username' => $username, 'password' => $pwd_hashed, 'mail' => $email, 'stay_connected' => '1', 'registered_date' => $registered_date, 'profile_image_name' => 'Default_profile_image.png', 'user_ip' => $user_ip))){
         echo "Requête mysql avec succès !";
         log_server($username . " enregistré avec succès !", $file_log_path);
     }else{
@@ -54,12 +43,11 @@ if($username != "" || $password != "" || $email != ""){
     }
 
     //On incrémente le nombre d'inscrit dans la bdd
-    $qprepare = $bdd->prepare("UPDATE divers SET n_user_registered=n_user_registered+1");
+    $qprepare = $db->prepare("UPDATE divers SET n_user_registered=n_user_registered+1");
     $qprepare->execute();
 
     $_SESSION['connected'] = 'true';
     $_SESSION['username'] = $username;
-    $_SESSION['password'] = $password;
 
 
     //On envoie le mail aux devs
@@ -92,5 +80,5 @@ if($username != "" || $password != "" || $email != ""){
     else{
         header('Location: /home.php');
     }
-}
+
 ?>

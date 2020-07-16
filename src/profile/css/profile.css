@@ -32,7 +32,7 @@ header {
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 70px;
 }
 
 #modal_drag_and_drop_img {
@@ -50,7 +50,7 @@ header {
 
 .user_img_frame img {
     border-radius: 50%;
-    width: 160px;
+    width: 180px;
     border: 2px #7f8c8d solid;
 }
 
@@ -80,7 +80,7 @@ header {
 }
 .level .progress_bar_box .experience {
     position: relative;
-    top: -46px;
+    top: -47px;
     text-align: left;
     margin-left: 10px;
     color: white;
@@ -91,7 +91,7 @@ header {
 .level .progress_bar_box .progress_percent {
     text-align: center;
     position: relative;
-    top: -26px;
+    top: -27px;
     color: white;
     font-family: "Roboto", sans-serif;
     font-size: 0.8vw;

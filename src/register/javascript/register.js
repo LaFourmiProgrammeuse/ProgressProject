@@ -125,18 +125,18 @@ function Show_Nickname_Error(nickname_use_now){
 
         var nickname_value = $("#nickname").val();
         if(nickname_value.length < nickname_character_needed){
-            error = error+"<li>-> the nickname must be at least 6 characters !</li>";
+            error = error+"<li>The nickname must be at least 6 characters !</li>";
         }
         else if(nickname_value.length > nickname_character_max){
-            error = error+"<li>-> the nickname must be at max 11 characters !</li>";
+            error = error+"<li>The nickname must be at max 11 characters !</li>";
         }
         if(!hasSpecialCharacter(nickname_value, 0)){
-            error = error+"<li>-> the nickname can't be composed by special characters !</li>";
+            error = error+"<li>The nickname can't be composed by special characters !</li>";
         } console.log("Show_Nickname_Error : "+nickname_use_now);
 
         if(nickname_use_now == true){
 
-            error = error+"<li>-> the nickname is already used !</li>";
+            error = error+"<li>The nickname is already used !</li>";
         }
 
         error = error+"</ul>";
@@ -166,10 +166,10 @@ function Show_Pass_Error(){
 
         var pass_value = $("#pass").val();
         if(pass_value.length < pass_character_needed){
-            error = error+"<li>-> the password must be at least 8 characters !</li>";
+            error = error+"<li>The password must be at least 8 characters !</li>";
         }
         if(!hasSpecialCharacter(pass_value, pass_special_character_needed)){
-            error = error+"<li>-> the password must be at least 2 specials characters ! (as : &, @, #, *, $)</li>";
+            error = error+"<li>The password must be at least 2 specials characters ! (as : &, @, #, *, $)</li>";
         }
 
         error = error+"</ul>";
@@ -198,7 +198,7 @@ function Show_Pass_Confirm_Error(){
 
         var confirmation_password_value = $("#pass_confirm").val();
         if($("#pass").val() != confirmation_password_value){
-            error = error+"<li>-> the confirmation password does not match the password !</li>";
+            error = error+"<li>The confirmation password does not match the password !</li>";
         }
 
         error = error+"</ul>";
@@ -227,7 +227,7 @@ function Show_Email_Error(){
         var error = "The email is not valid because :<br/><ul>";
 
         if(mail_use_now == false){
-            error+="<li>-> the format of the email is incorrect !</li>";
+            error+="<li>The format of the email is incorrect !</li>";
         }
 
         $("#message_error_email p").html(error);
@@ -307,45 +307,9 @@ function hasNumber(string, number_to_found){
 
 function isValidMail(mail){
 
-    var arobase = false;
-    var point = false;
+    var reg_exp = new RegExp("^(([^<>()[]\\.,;:s@]+(.[^<>()[]\\.,;:s@]+)*)|(.+))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$");
 
-    for(var i = 0; i < mail.length; i++){
-
-        if(mail[i] == '@'){
-
-            if(arobase == true){
-                return false;
-            }
-            else{
-                arobase = true;
-                continue;
-            }
-        }
-        else if(mail[i] == '.'){
-
-            if(arobase == true){
-                point = true;
-                continue;
-            }
-        }
-
-        for(var e = 0; e < character_alphanumeric.length; e++){
-
-            if(mail[i] == character_alphanumeric[e] || mail[i] == '.'){
-                break;
-            }
-            else if(e == (character_alphanumeric.length-1)){
-                return false;
-            }
-        }
-    }
-
-    if(arobase == false || point == false){
-        return false;
-    }
-
-    return true;
+    return reg_exp.test(mail);
 }
 
 
@@ -456,7 +420,6 @@ function EmailValidation(){
 
     if(email_value.length == 0){
 
-        console.log("1");
         $("#validation_email").css("visibility", "hidden");
 
         return false;
@@ -464,7 +427,6 @@ function EmailValidation(){
     }
     else if(!isValidMail(email_value)){
 
-        console.log("2");
         $("#validation_email").attr("src", "/images/wrong.png");
         $("#validation_email").css("visibility", "visible");
 
@@ -473,7 +435,6 @@ function EmailValidation(){
     }
     else{
 
-        console.log("3");
         $("#validation_email").attr("src", "/images/check.png");
         $("#validation_email").css("visibility", "visible");
 

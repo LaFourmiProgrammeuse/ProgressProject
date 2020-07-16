@@ -37,13 +37,21 @@ $profile_image_name = $qprepare->fetch()["profile_image_name"];
 $profile_image_url = "/images/user_image/" . $profile_image_name;
 
 
-$qprepare = $db->prepare("SELECT password, mail, rank, registered_date, last_activity, date_of_birth, biography, contribution_level, contribution_xp FROM users WHERE username=?");
+//On récupère les informations de l'utilisateur
+$qprepare = $db->prepare("SELECT password, password_length, mail, rank, registered_date, last_activity, date_of_birth, biography, contribution_level, contribution_xp FROM users WHERE username=?");
 $qprepare->execute(array($username));
 
 $qrep = $qprepare->fetch(PDO::FETCH_NAMED);
 
 //On formate les informations
 $l_user_informations["password"] = $qrep["password"];
+
+$password_length = intval($qrep["password_length"]);
+for($i = 0; $i <= $password_length; $i++){
+    $password_length_str = $password_length_str . "a";
+}
+$l_user_informations["password_length_str"] = $password_length_str;
+
 $l_user_informations["mail"] = $qrep["mail"];
 
 if($qrep["rank"] == "1"){
@@ -68,7 +76,7 @@ else{
     $l_user_informations["registered_date"] = "";
 }
 
-if($qrep["last_activity"] != "0000-00-00"){
+if($qrep["last_activity"] != ""){
 
     $last_activity_date = date_create($qrep["last_activity"]);
     $now_date = date_create("now");
@@ -277,9 +285,11 @@ $contribution_level_progression = floor(($user_contribution_xp_for_this_level/$c
                                 <div class="biography">
                                     <h4><?php echo $l_user_informations["biography"]; ?></h4>
                                 </div>
-                                <div class="birth_date">
-                                    <h4>Date of birth : <span class="value"><?php if($l_user_informations["biography"] != "") { echo $l_user_informations["date_of_birth"]; } ?></span></h4>
-                                </div>
+                                <?php if($l_user_informations["date_of_birth"] != "") { ?>
+                                    <div class="birth_date">
+                                        <h4>Date of birth : <span class="value"><?php echo $l_user_informations["date_of_birth"]; ?></span></h4>
+                                    </div>
+                                <?php } ?>
                             <?php } ?>
 
                             <?php if($view_mode == 1){ ?>
@@ -299,7 +309,7 @@ $contribution_level_progression = floor(($user_contribution_xp_for_this_level/$c
 
                             <?php if($view_mode == 0){ ?>
                                 <div class="password">
-                                    <h4>Password : <input type="password" disabled value="<?php echo $l_user_informations["password"]; ?>" /></h4>
+                                    <h4>Password : <input type="password" disabled value="<?php echo $l_user_informations["password_length_str"]; ?>" /></h4>
                                 </div>
                                 <div class="mail">
                                     <h4>E-mail adress : <span class="value"><?php echo $l_user_informations["mail"]; ?></span></h4>
